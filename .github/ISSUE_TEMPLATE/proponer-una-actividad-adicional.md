@@ -2,7 +2,7 @@
 name: Proponer una actividad adicional
 about: Proponer una actividad complementaria a las actuales en R.LTWB.
 title: ''
-labels: ''
+labels: documentation, enhancement
 assignees: ''
 
 ---
