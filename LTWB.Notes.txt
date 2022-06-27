@@ -10,6 +10,12 @@ Clone local directory D:\R.LTWB.wiki
 
 ✓✕
 
+Tasks
+	Hydrology repositories in GitHub.
+	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
+	Python script for flow direction conversion HEC-HMS to ArcGIS.
+
+
 Referencias
 
 	Cálculo de la evapotranspiración usando el método de la FAO-56 Penman-Monteith
@@ -24,4 +30,5 @@ Referencias
 	Elevation Modeling - the differences between DTM, DSM & DEM
 	https://support.plexearth.com/hc/en-us/articles/4642425453201-Elevation-Modeling-the-differences-between-DTM-DSM-DEM#:~:text=The%20main%20difference%20between%20the,features%20on%20the%20earth's%20surface.
 	
-	
+	Open Source Python Packages in Hydrology
+	https://github.com/raoulcollenteur/Python-Hydrology-Tools
