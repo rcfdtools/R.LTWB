@@ -17,6 +17,20 @@ Tasks
 
 Calcular longitud serie CNE_IDEAM.shp en años LAnoSerie = ([FECHA_SUSP]-[FECHA_INST])/365
 
+import datetime
+def long_annos_serie(fecha_instalacion, fecha_suspension):
+    if fecha_suspension:
+        return 1
+    else:
+        return 0
+
+from datetime import datetime
+def long_annos_serie(fecha_instalacion, fecha_suspension):
+    if fecha_suspension:
+        return (datetime.strptime(fecha_suspension, '%Y-%m-%d') - datetime.strptime(fecha_instalacion, '%Y-%m-%d')) / 365
+    else:
+        return ("2021-12-31" - fecha_instalacion) / 365
+
 
 
 Referencias
