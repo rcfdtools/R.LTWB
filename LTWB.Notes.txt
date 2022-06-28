@@ -15,6 +15,9 @@ Tasks
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
 	Python script for flow direction conversion HEC-HMS to ArcGIS.
 
+Calcular longitud serie CNE_IDEAM.shp en años LAnoSerie = ([FECHA_SUSP]-[FECHA_INST])/365
+
+
 
 Referencias
 
