@@ -11,7 +11,8 @@ Clone local directory D:\R.LTWB.wiki
 ✓✕
 
 Tasks
-	Hydrology repositories in GitHub.
+	Duration and dates.
+	Create a table with the variables by any station category.
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
 	Python script for flow direction conversion HEC-HMS to ArcGIS.
 
