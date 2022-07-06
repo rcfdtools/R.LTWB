@@ -1,0 +1,11 @@
+https://github.com/rcfdtools/R.LTWB
+
+Escalas
+
+	Mapa nivel nacional area y zonas hidrográficas
+	ZonaHidrografica2013.png
+	1:7.000.000
+
+	Mapa caso de estudio zona hidrografica 28
+	CaseStudy.png
+	1:1.250.000
