@@ -8,12 +8,15 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la Red de Estaciones terrestres Hidroclomatológicas del Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM. A nivel particular se estudiará a detalle la zona hidrográfica 28 denominada Cesar que hace parte del área hidrográfica principal 2 correspondiente a Magdalena - Cauca.
 
-> Estudiantes que requieran certificación, desarrollan casos de estudio individuales asignados para una zona hidrográfica específica.  
+> Estudiantes que aplican para curso con certificación desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
 
 #### Red de estaciones
 
 El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia, adscrito al [Ministerio de Medio Ambiente - Minambiente](https://www.minambiente.gov.co/), es la entidad nacional encargada registrar y mantener la información hidrometeorológica del país, incluida la localización y clasificación de la red de estaciones que hace parte del [Catálogo Nacional de Estaciones - CNE](http://bart.ideam.gov.co/cneideam/CNE_IDEAM.xls). A través del servicio de [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion) o a través del portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del IDEAM desde la pestaña _Recursos_, personas naturales o jurídicas, pueden obtener no solamente los catálogos, sino también las capas geográficas y los registros discretos registrados en cada estación. 
+
+En la actividad 
+
 
 #### Zonificación hidrográfica de Colombia 
 
