@@ -26,7 +26,7 @@ El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http
 
 > Debido a que es necesario incluir diferentes estaciones al rededor de la zona hidrográgica en estudio para garantizar la extensión espacial de los mapas interpolados para cada variable climatológica a analizar, en la sección 3 de este curso se presenta el proceso detallado de selección espacial de estaciones.
 
-![CNE_IDEAM_ZE.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CNE_IDEAM_ZE.png)
+![CNE_IDEAM.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CNE_IDEAM.png)
 
 
 #### Zonificación hidrográfica de Colombia 
