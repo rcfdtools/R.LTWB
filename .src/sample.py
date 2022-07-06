@@ -2,7 +2,6 @@ from datetime import datetime
 
 # Basic date difference sample
 #import dateutil.utils
-
 installation_date = '1972-09-14'
 suspension_date = '2019-07-02'
 diff_date = datetime.strptime(suspension_date, '%Y-%m-%d') - datetime.strptime(installation_date, '%Y-%m-%d')
