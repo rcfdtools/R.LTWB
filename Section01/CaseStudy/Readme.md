@@ -1,5 +1,5 @@
 ## Caso de estudio  
-Keywords: `IDEAM` `Weather` `Zona hidrogeográfica`
+Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station`
 
 Definición de la zona de estudio para la aplicación de la metodología y el desarrollo de las diferentes secciones y actividades.
 
