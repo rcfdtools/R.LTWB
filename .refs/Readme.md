@@ -6,6 +6,7 @@ Esta carpeta contiene los archivos de documentos y artículos de uso libre desca
 
 > Documentos descargados localmente en formato Adobe Acrobat son identificados mediante un enlace de descarga como `.pdf`
 
-| Archivo local | Referencia y enlace público                                                                                                                                                  |
-|---|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Archivo local                                                                        | Referencia y enlace público                                                                                                                                                 |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [book_0.1.0.pdf](https://github.com/rcfdtools/R.LTWB/blob/main/.refs/book_0.1.0.pdf) | [Python in Hydrology by Mr. Sat Kumar Tomer](https://code.google.com/archive/p/python-in-hydrology/downloads)  [GitHub](https://github.com/livingworld/Python-in-Hydrology) |
+| [Definiciones CNE.pdf]()                                                                         | [Definiciones del catálogo nacional de estaciones del IDEAM](http://www.ideam.gov.co/documents/10182/557765/Definiciones+CNE.pdf)                                                                                                              |
