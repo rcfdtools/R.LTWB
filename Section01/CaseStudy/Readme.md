@@ -95,7 +95,7 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (2 hora)
+* Creado por r.cfdtools@gmail.com (2.5 horas)
 
 
 ### Compatibilidad
@@ -106,9 +106,9 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 ### Control de versiones
 
 
-| Versión      | Descripción                                                 |
-|--------------|-------------------------------------------------------------|
-| v.2022.07.06 | Versión inicial con definición general del caso de estudio. |
+| Versión      | Descripción                                                                       |
+|--------------|-----------------------------------------------------------------------------------|
+| v.2022.07.06 | Versión inicial con definición general del caso de estudio y mapas de referencia. |
 
 
 ### Licencia, cláusulas y condiciones de uso
