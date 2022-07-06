@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.GISPython/blob/main/.icons/R.GISPython.svg" width="300px">
+  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg" width="300px">
   <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG. Long-term water balance</b> by r.cfdtools@gmail.com<br><br>  
 </div>
 
