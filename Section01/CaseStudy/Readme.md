@@ -107,3 +107,7 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 |------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
+
+Notas a pie
+[^1]: http://www.ideam.gov.co/web/agua/zonificacion-hidrografica
+[^2]: http://documentacion.ideam.gov.co/openbiblio/bvirtual/022655/MEMORIASMAPAZONIFICACIONHIDROGRAFICA.pdf
