@@ -9,3 +9,7 @@ Escalas
 	Mapa caso de estudio zona hidrografica 28
 	CaseStudy.png
 	1:1.250.000
+	
+	Mapa localización estaciones hidrometeorológicas
+	CNE_IDEAM.png
+	1:1.500.000
