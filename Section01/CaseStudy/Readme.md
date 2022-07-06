@@ -8,7 +8,7 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 ### Alcance
 
-Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la Red de Estaciones terrestres Hidroclomatológicas del Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM. A nivel particular se estudiará a detalle la zona hidrográfica 28 denominada Cesar que hace parte del área hidrográfica principal 2 correspondiente a Magdalena - Cauca que se compone de las siguientes subzonas.
+Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la Red de Estaciones terrestres Hidroclomatológicas del Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia. A nivel particular se estudiará a detalle la zona hidrográfica 28 denominada Cesar que hace parte del área hidrográfica principal 2 correspondiente a Magdalena - Cauca que se compone de las siguientes subzonas:
 
 | SZH  | Subzona Hidrográfica |
 |------|----------------------|
@@ -25,6 +25,8 @@ Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term w
 El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia, adscrito al [Ministerio de Medio Ambiente - Minambiente](https://www.minambiente.gov.co/), es la entidad nacional encargada registrar y mantener la información hidrometeorológica del país, incluida la localización y clasificación de la red de estaciones que hace parte del [Catálogo Nacional de Estaciones - CNE](http://bart.ideam.gov.co/cneideam/CNE_IDEAM.xls). A través del servicio de [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion) o a través del portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del IDEAM desde la pestaña _Recursos_, personas naturales o jurídicas, pueden obtener no solamente los catálogos, sino también las capas geográficas y los registros discretos registrados en cada estación. 
 
 > Debido a que es necesario incluir diferentes estaciones al rededor de la zona hidrográgica en estudio para garantizar la extensión espacial de los mapas interpolados para cada variable climatológica a analizar, en la sección 3 de este curso se presenta el proceso detallado de selección espacial de estaciones.
+
+![CaseStudy.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CNE_IDEAM_ZE.png)
 
 
 #### Zonificación hidrográfica de Colombia 
@@ -98,7 +100,7 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 
 ### Compatibilidad
 
-* Las herramientas computacionales requeridas, librerías, complementos y sus versiones específicas son especificadas en cada actividad del curso.
+* Las herramientas computacionales requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
 
 
 ### Control de versiones
@@ -119,6 +121,5 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
 
-Notas a pie
 [^1]: http://www.ideam.gov.co/web/agua/zonificacion-hidrografica
 [^2]: http://documentacion.ideam.gov.co/openbiblio/bvirtual/022655/MEMORIASMAPAZONIFICACIONHIDROGRAFICA.pdf
