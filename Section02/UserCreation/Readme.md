@@ -3,6 +3,13 @@ Keywords: `NASA` `EarthData`
 
 Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.
 
+
+### Objetivos
+
+* Crear cuentas de usuario para la descarga de datos climatológicos satelitales y modelos de terreno.
+* Verificar la activación de las cuentas de usuario.
+
+
 ### Procedimiento
 
 Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda crear una cuenta de correo electrónico de [Google](https://mail.google.com/) que podrá utilizar para crear posteriormente una cuenta en [GitHub](https://github.com/) y clonar el contenido completo de este curso, incluidos los paquetes de datos, scripts y documentación oficial.
@@ -15,3 +22,4 @@ Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda cre
 
 ![CaseStudy.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData2.png)
 
+3. 
