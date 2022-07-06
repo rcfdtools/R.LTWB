@@ -8,9 +8,16 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 ### Alcance
 
-Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la Red de Estaciones terrestres Hidroclomatológicas del Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM. A nivel particular se estudiará a detalle la zona hidrográfica 28 denominada Cesar que hace parte del área hidrográfica principal 2 correspondiente a Magdalena - Cauca.
+Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la Red de Estaciones terrestres Hidroclomatológicas del Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM. A nivel particular se estudiará a detalle la zona hidrográfica 28 denominada Cesar que hace parte del área hidrográfica principal 2 correspondiente a Magdalena - Cauca que se compone de las siguientes subzonas.
 
-> Estudiantes que aplican para curso con certificación desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
+| SZH  | Subzona Hidrográfica |
+|------|----------------------|
+| 2801 | Alto Cesar           |
+| 2802 | Medio Cesar          |
+| 2804 | Río Ariguaní         |
+| 2805 | Bajo Cesar           |
+
+> Estudiantes que aplicaron para curso con certificación desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
 
 #### Red de estaciones
