@@ -1,8 +1,6 @@
 ### Referencias
 
-Esta carpeta contiene documentos, artículos y enlaces de referencia relacionados con el contenido general de este repositorio. Dentro de cada actividad pueden existir carpetas de referencias específicas.
+Esta carpeta contiene los archivos de documentos y artículos de uso libre descargados y citados en la documentación de referencia de la sección Wiki o en las diferentes actividades del curso. [Consulta las referencias aquí](https://github.com/rcfdtools/R.LTWB/wiki/Referencias).
 
-Acrobat files
 
-* Python in hydrology by Mr. Sat Kumar Tomer: [Google Code, ](https://code.google.com/archive/p/python-in-hydrology/downloads)[GitHub, ](https://github.com/livingworld/Python-in-Hydrology)[.pdf](https://github.com/rcfdtools/R.LTWB/blob/main/.refs/book_0.1.0.pdf)
 
