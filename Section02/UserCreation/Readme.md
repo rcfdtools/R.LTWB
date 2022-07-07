@@ -62,7 +62,7 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 
 ### Compatibilidad
 
-* La creación de cuenta NASA EarthData puede ser realizada desde cualquier navegador de Internet Actualizado.
+* La creación de cuenta NASA EarthData puede ser realizada desde cualquier navegador de Internet actualizado.
 
 
 ### Control de versiones
