@@ -31,7 +31,7 @@ El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http
 
 > En la ilustración CNE_IDEAM corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y CNE_IDEAM_ZE corresponde al grupo de estaciones prototipo en la zona de estudio.
 
-#### Zonificación hidrográfica de Colombia 
+#### Zonificación hidrográfica de Colombia
 
 La zonificación hidrográfica de Colombia desde el punto de vista hidrológico, tiene sus inicios en el HIMAT mediante la Resolución 0337 del 1978, la cual establece que el país está conformado por cinco Áreas hidrográficas (1-Caribe, 2- Magdalena - Cauca, 3- Orinoco, 4- Amazonas y 5-Pacífico) que a su vez están divididas en Zonas Hidrográficas y subdivididas en Subzonas Hidrográficas. En ese entonces, el propósito de la zonificación fue de adoptar un sistema de codificación para estaciones Hidrometerológicas. Posteriormente, el IDEAM introduce esta zonificación para otros fines, tales como estudios y análisis hidrológicos relacionados con los informes ambientales, p.ej, el Índice de Aridez, el Escurrimiento y el Rendimiento Hídrico.[^1]
 
@@ -94,6 +94,44 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 
 > En el presente análisis no se han incluido resultados para la ZH - zona hidrográfica 57, correspondiente a las Islas del Pacífico, debido a que la capa geográfica SZH - subzonas hidrográficas no contiene el polígono de delimitación. 
 
+### Delimitación de la zona de estudio con ArcGIS
+
+El proceso de delimitación se realiza a partir de la cobertura de Subzonas hidrográficas de Colombia, este mapa representa las unidades de análisis para el ordenamiento ambiental de territorio definidas por el IDEAM en convenio con el Instituto Geográfico Agustín Codazzi (IGAC), a escala 1:500.000. [^3]
+
+Procedimiento:
+
+1. Ingrese al portal http://www.ideam.gov.co/en/capas-geo y en el cuadro de búsqueda escriba _Zonificación Hidrográfica_, observará que a 2022.07.07 existen dos versiones de la capa de zonificación correspondientes al año 2010 y 2013. Realice la descarga del archivo de formas Shapefile del año 2013, consulte sus metadatos y el catálogo de objetos disponible.
+
+![ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ZonificacionHidrograficaDescarga.png)
+
+Catálogo de objetos en Subzonas [^4]
+| Nombre       | Alias          | Definición                                                                   | Tipo de dato |
+|--------------|----------------|------------------------------------------------------------------------------|--------------|
+| OBJECTID     | OBJECTID       | Identificador de objeto geográfico.                                          | Texto        |
+| Shape        | Shape          | Tipo de geometría.                                                           | Geometría    |
+| COD_AH       | Código Area    | Código del Area hidrográfica a la que corresponde.                           | Entero       |
+| COD_ZH       | Código Zona    | Código de la Zona hidrográfica a la que corresponde.                         | Entero       |
+| COD_SZH      | Código Subzona | Código de Subzona hidrográfica a la que corresponde.                         | Entero       |
+| NOM_AH       | Nombre Área    | Nombre del área hidrográfica a la que corresponde. Dominio Área Hidográfica. | Texto        |
+| NOM_ZH       | Nombre Zona    | Nombre de la zona hidrográfica a la que corresponde.                         | Texto        |
+| NOM_SZH      | Nombre Subzona | Nombre de la Subzona hidrográfica a la que corresponde.                      | Texto        |
+| Shape_Length | Shape_Length   | Perímetro en las unidades del sistema de referencia espacial.                | Entero       |
+| Shape_Area   | Shape_Area     | Área en las unidades del sistema de referencia espacial.                     | Entero       |
+| RULEID       | RULEID         | Id único asignado por el sistema a la representación gráfica.                | Entero       |
+| Override     | Override       | Representación gráfica.                                                      | Blob         |
+
+2. Descomprima solo los datos contenidos en la carpeta `/shape` dentro de la carpeta `D:\R.LTWB\.shp`
+
+3. En ArcGIS, cree un mapa nuevo en blanco y agregar el mapa de Subzonas Hidrográficas.
+
+
+
+4. 
+
+
+
+
+
 
 ### Autores
 
@@ -125,3 +163,5 @@ _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repo
 
 [^1]: http://www.ideam.gov.co/web/agua/zonificacion-hidrografica
 [^2]: http://documentacion.ideam.gov.co/openbiblio/bvirtual/022655/MEMORIASMAPAZONIFICACIONHIDROGRAFICA.pdf
+[^3]: http://geoservicios.ideam.gov.co/geonetwork/srv/eng/catalog.search#/metadata/7696695f-ae9c-4780-a6d0-d3cd1808819a
+[^4]: http://geoservicios.ideam.gov.co/CatalogoObjetos/queryByUUID?uuid=bcd645c9-0f11-4770-926e-1e1fdfbf5ce6
