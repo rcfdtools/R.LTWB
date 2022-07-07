@@ -29,7 +29,7 @@ El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http
 
 ![CNE_IDEAM.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CNE_IDEAM.png)
 
-> En la ilustración CNE_IDEAM corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y CNE_IDEAM_ZE corresponde al grupo de estaciones prototipo a emplear en la zona de estudio.
+> En la ilustración CNE_IDEAM corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y CNE_IDEAM_ZE corresponde al grupo de estaciones prototipo en la zona de estudio.
 
 #### Zonificación hidrográfica de Colombia 
 
