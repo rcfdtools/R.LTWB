@@ -45,4 +45,8 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 ![NASAEarthData4.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData4.png)
 ![NASAEarthData5.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData5.png)
 
-4. L
+4. Ingrese a su cuenta de correo y verifique su cuenta de correo dando clic en el enlace de verificación, automáticamente será redirigido a la ventana de acceso de Eathdata Login. Ingrese su nombre de usuario y contraseña y realice el ingreso. En la ventana principal del sericio podrá encontrar información relacionada con el perfil, opciones para actualización de datos, aplicaciones, grupos y generadores de Tokens para aplicaciones integradas.
+
+![NASAEarthData6.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData6.png)
+![NASAEarthData7.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData7.png)
+![NASAEarthData8.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData8.png)
