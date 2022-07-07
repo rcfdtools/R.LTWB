@@ -102,7 +102,7 @@ Procedimiento:
 
 1. Ingrese al portal http://www.ideam.gov.co/en/capas-geo y en el cuadro de búsqueda escriba _Zonificación Hidrográfica_, observará que a 2022.07.07 existen dos versiones de la capa de zonificación correspondientes al año 2010 y 2013. Realice la descarga del archivo de formas Shapefile del año 2013, consulte sus metadatos y el catálogo de objetos disponible.
 
-![ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ZonificacionHidrograficaDescarga.png)
+![IDEAMZonificacionHidrograficaDescarga.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/IDEAMZonificacionHidrograficaDescarga.png)
 
 Catálogo de objetos en Subzonas [^4]
 | Nombre       | Alias          | Definición                                                                   | Tipo de dato |
@@ -122,12 +122,25 @@ Catálogo de objetos en Subzonas [^4]
 
 2. Descomprima solo los datos contenidos en la carpeta `/shape` dentro de la carpeta `D:\R.LTWB\.shp`
 
-3. En ArcGIS, cree un mapa nuevo en blanco y agregar el mapa de Subzonas Hidrográficas.
+3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta `D:\R.LTWB\.Map`
 
+![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
+4. A partir de las Subzonas Hidrográficas, filtre los polígonos de correspondientes al caso de estudio, p.ej. los de la Subzona 28 correspondiente a Cesar.
 
-4. 
+![ArcGISDesktop10.2.2ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
+5. Utilizando la herramienta `Dissolve` disponible en el menú `Geoprocessing`, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral. Nombrar como `ZonaEstudio.shp`. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
+
+![ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
+
+6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
+
+> La versión de ArcGIS for Desktop no incluye el sistema de proyección del origen único nacional CTM12 o 9377 por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección inluído `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
+
+![ArcGISDesktop10.2.2CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
+
+7. En la tabla de atributos de la capa geográfica `ZonaEstudio.shp`, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km y cree un campo de texto con longitud de 55 caracteres nombrándolo como ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH. Rotule indicando la zona, área y perímetro utilizando la siguiente expresión:
 
 
 
