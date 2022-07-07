@@ -1,8 +1,9 @@
 ## Creación de usuario NASA Earthdata 
 Keywords: `NASA` `EarthData`
 
-Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.
+Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.[^1]
 
+![UserCreation.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/UserCreation.png)
 
 ### Objetivos
 
@@ -81,3 +82,5 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 |------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
+
+[^1]: Logo NASA tomado de https://www.pngwing.com/
