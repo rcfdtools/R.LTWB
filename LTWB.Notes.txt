@@ -11,7 +11,13 @@ Clone local directory D:\R.LTWB.wiki
 ✓✕
 
 Pending tasks
+	Study case goals.
+	CRS system CTM12.
+	Hydrological scales: mundial, regional, zonal, local, punctual.
+	Recalculate stations elevation.
 	Series hypothetical duration and time-window evaluation.
 	Create a table with the variables by any station category.
+	Thermic levels evaluation.
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
 	Python script for flow direction conversion HEC-HMS to ArcGIS.
+	Table with hydrological parameters per categories

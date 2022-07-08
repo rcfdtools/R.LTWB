@@ -1,0 +1,3 @@
+## Archivos temporales
+
+Esta carpeta contiene archivos temporales generados en procesos intermedios y su contenido puede ser eliminado.

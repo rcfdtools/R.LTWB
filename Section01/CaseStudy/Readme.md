@@ -5,7 +5,13 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 ![CaseStudy.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudy.png)
 
-> En la ilustración COD_ZH corresponde al código de la Zona Hidrográfica.
+> En la ilustración, `COD_ZH` corresponde al código de la Zona Hidrográfica.
+
+
+### Objetivos
+
+*
+
 
 ### Alcance
 
@@ -138,7 +144,7 @@ Catálogo de objetos en Subzonas [^4]
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
 
-> La versión de ArcGIS for Desktop no incluye el sistema de proyección del origen único nacional CTM12 o 9377 por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección inluído `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
+> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluye el sistema de proyección del origen único nacional CTM12 o 9377 por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección inluído `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
 
 ![ArcGISDesktop10.2.2CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
 

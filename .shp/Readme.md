@@ -1,4 +1,4 @@
-### Archivos de formas geométricas Shapefile
+## Archivos de formas geométricas Shapefile
 
 Esta carpeta contiene los vectores base utilizados para el caso de estudio.
 
