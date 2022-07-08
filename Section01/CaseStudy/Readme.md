@@ -136,7 +136,7 @@ Catálogo de objetos en Subzonas [^4]
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
-4. A partir de las Subzonas Hidrográficas, filtre los polígonos del caso de estudio correspondientes a la Subzona 28 - Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar y Río Ariguaní. Expresión `"COD_ZH" = 28`. Cambie la simbología de representación a relleno color gris al 20%.
+4. A partir de las Subzonas Hidrográficas y utilizando la expresión `"COD_ZH" = 28`, filtre los polígonos del caso de estudio correspondientes a la Subzona 28 - Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar y Río Ariguaní. Cambie la simbología de representación a relleno color gris al 20%.
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
@@ -154,7 +154,7 @@ En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector 
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
 
-> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá obtener el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta _\.ProjectionFile_ de este repositorio se encuentran diferentes archivos de proyección incluido el _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
+> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá obtener el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta _[.ProjectionFile](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)_ de este repositorio se encuentran diferentes archivos de proyección incluido el _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
 
 Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
 ```
@@ -188,11 +188,11 @@ En QGIS (p. ej. en la versión 3.26.0), oprima la combinación de teclas `Ctrl+S
 7. En la tabla de atributos de la capa geográfica _ZonaEstudio.shp_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
 
 > En ArcGIS, nuevos campos pueden ser creados desde las propiedades de la tabla de atributos utilizando la opción _Add Field_. 
-> Para el cálculo del área y perímetros, de clic derecho en la cabecera de los campos y selecciona la opción _Calculate Geometry_.
+> Para el cálculo del área y perímetros, de clic derecho en la cabecera de los campos y seleccione la opción _Calculate Geometry_.
 
 ![ArcGISDesktop10.2.2ZonaEstudioAddField.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioAddField.png)
 
-Rotule indicando la zona, área y perímetro utilizando la siguiente expresión: 
+Rotule indicando la zona, área y perímetro utilizando las siguientes expresiones: 
 
 * Parser VBScript: `[ZH] &VbNewLine& "Área, km²: " & round( [Akm2], 2) &VbNewLine& "Perímetro, km: " & round( [Pkm], 2)`
 * Parser Python ArcGIS for Desktop: `[ZH] + "\nArea, km2: " +  [Akm2]  + "\nPerimetro, km: " + [Pkm]`
@@ -203,15 +203,19 @@ Rotule indicando la zona, área y perímetro utilizando la siguiente expresión:
 En QGIS, nuevos campos de atributos pueden ser creados directamente desde las opciones del _Field Calculator_, p. ej. para el cálculo del área en km² se crea el campo Akm2 y se calcula la geometría con la expresión `$area / (1000*1000)`. Para el perímetro utilizar la expresión `$perimeter / 1000`.
 
 ![QGIS3.26.0ZonaEstudioAddField.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioAddField.png)
+
+Ejemplo de rotulación en QGIS.
 ![QGIS3.26.0ZonaEstudioLabel.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
 
-8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono correspondiente a la extensión regular del polígono disuelto para la zona de estudio. Nombrar como _\.shp\ZonaEstudioEnvelope.shp_. Cree los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule utilizando estos 3 campos.
+8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono correspondiente a la extensión regular del polígono disuelto para la zona de estudio. Nombrar como _ZonaEstudioEnvelope.shp_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
 
 ![ArcGISDesktop10.2.2ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
-En QGIS, el proceso de obtención del polígono perimetral se realiza utilizando la herramienta _Vector geometry - Bounding boxes_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl+Alt+T` o desde la barra de menús _Processing_.
+En QGIS, el proceso de obtención del polígono perimetral se realiza con la herramienta _Vector geometry - Bounding boxes_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl+Alt+T` o desde la barra de menús _Processing_.
 
 ![QGIS3.26.0ZonaEstudioBoundingBoxes.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioBoundingBoxes.png)
+
+Ahora dispone de un polígono que podrá utilizar como máscara de selección para la obtención de información satelital o para la selección de estaciones dentro de la zona de estudio.
 
 
 ### Autores
