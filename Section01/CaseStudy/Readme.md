@@ -147,7 +147,7 @@ En QGIS, el filtrado se realiza a través de la ventana de propiedades de la cap
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
-En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector geometry - Dissolve_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl-Alt-T` o desde la barra de menús _Processing_.
+En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector geometry - Dissolve_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl+Alt+T` o desde la barra de menús _Processing_.
 
 ![QGIS3.26.0ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Dissolve.png)
 
@@ -155,7 +155,7 @@ En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector 
 
 > La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá obtener el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección incluido el `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
 
-Parámetros del archivo de proyección orígen único nacional [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
+Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
 ```
 MAGNA_Colombia_Origen_Unico
 Authority: Custom
@@ -178,10 +178,16 @@ Datum: D_MAGNA
     Inverse Flattening: 298.257222101
 ```
 
-
 ![ArcGISDesktop10.2.2CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
 
-7. En la tabla de atributos de la capa geográfica `ZonaEstudio.shp`, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km y cree un campo de texto con longitud de 55 caracteres nombrándolo como ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH. Rotule indicando la zona, área y perímetro utilizando la siguiente expresión:
+En QGIS (p. ej. en la versión 3.26.0), oprima la combinación de teclas `Ctrl+Shift+P` para acceder a la ventana de propiedades del proyecto y en la ventana _CRS_ ingrese en la casilla de filtro o búsqueda el valor 9377, correspondiente al sistema de referencia de coordenadas MAGNA-SIRGAS / Origen-Nacional. Seleccione y de clic en _Apply_ y _Ok_.
+
+![QGIS3.26.0CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0CRS9377.png)
+
+7. En la tabla de atributos de la capa geográfica _ZonaEstudio.shp_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km y cree un campo de texto con longitud de 55 caracteres nombrándolo como ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH. Rotule indicando la zona, área y perímetro utilizando la siguiente expresión: 
+
+
+
 
 
 
