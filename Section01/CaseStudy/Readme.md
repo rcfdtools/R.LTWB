@@ -155,8 +155,9 @@ En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector 
 
 > La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá obtener el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección incluido el `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
 
-Parámetros del archivo de proyección orígen único nacional [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
-`MAGNA_Colombia_Origen_Unico
+Parámetros del archivo de proyección orígen único nacional [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)  
+```
+MAGNA_Colombia_Origen_Unico
 Authority: Custom
 
 Projection: Transverse_Mercator
@@ -174,7 +175,8 @@ Datum: D_MAGNA
   Spheroid: GRS_1980
     Semimajor Axis: 6378137.0
     Semiminor Axis: 6356752.314140356
-    Inverse Flattening: 298.257222101`
+    Inverse Flattening: 298.257222101
+```
 
 
 ![ArcGISDesktop10.2.2CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
