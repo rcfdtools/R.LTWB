@@ -143,12 +143,13 @@ En QGIS, el filtrado se realiza a través de la ventana de propiedades de la cap
 
 ![QGIS3.26.0ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Query.png)
 
-
 5. Utilizando la herramienta `Dissolve` disponible en el menú `Geoprocessing`, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario seleccionar ningún campo de disolución). Nombrar como `ZonaEstudio.shp`. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
-En QGIS, el proceso de disolución se realiza
+En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector geometry - Dissolve_ del Processing Toolbox que se carga oprimiendo la combinación de teclas Ctrl-Alt-T o desde la barra de menús Processing.
+
+![QGIS3.26.0ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Dissolve.png)
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
 
