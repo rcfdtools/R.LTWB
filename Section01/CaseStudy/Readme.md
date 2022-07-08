@@ -15,6 +15,7 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 * Crear el polígono regular del dominio espacial que envuelve la zona de estudio.
 * Calcular el área y perímetro de la zona de estudio y su dominio.
 
+> El polígono regular permitirá en actividades posteriores del curso, realizar la descarga de información satelital y seleccionar las estaciones hidroclimatológicas de la zona de estudio. 
 
 ### Requerimientos
 
@@ -199,7 +200,7 @@ Rotule indicando la zona, área y perímetro utilizando la siguiente expresión:
 
 ![ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png)
 
-En QGIS, nuevos campos de atributos pueden ser creados directamente desde las opciones del _Field Calculator_, p. ej. para el cálculo del área en km² se crea el campo Akm2 y se calcula la geometría con la expresión `$area / (1000*1000)`
+En QGIS, nuevos campos de atributos pueden ser creados directamente desde las opciones del _Field Calculator_, p. ej. para el cálculo del área en km² se crea el campo Akm2 y se calcula la geometría con la expresión `$area / (1000*1000)`. Para el perímetro utilizar la expresión `$perimeter / 1000`.
 
 ![QGIS3.26.0ZonaEstudioAddField.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioAddField.png)
 ![QGIS3.26.0ZonaEstudioLabel.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
@@ -208,11 +209,14 @@ En QGIS, nuevos campos de atributos pueden ser creados directamente desde las op
 
 ![ArcGISDesktop10.2.2ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
+En QGIS, el proceso de obtención del polígono perimetral se realiza utilizando la herramienta _Vector geometry - Bounding boxes_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl+Alt+T` o desde la barra de menús _Processing_.
+
+![QGIS3.26.0ZonaEstudioBoundingBoxes.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioBoundingBoxes.png)
 
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (2.5 horas)
+* Creado por r.cfdtools@gmail.com (7 horas)
 
 
 ### Compatibilidad
@@ -223,10 +227,10 @@ En QGIS, nuevos campos de atributos pueden ser creados directamente desde las op
 ### Control de versiones
 
 
-| Versión       | Descripción                                                                                 |
-|---------------|---------------------------------------------------------------------------------------------|
-| v.2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.           |
-| v.2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando herramientas SIG. |
+| Versión       | Descripción                                                                              |
+|---------------|------------------------------------------------------------------------------------------|
+| v.2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.        |
+| v.2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS y QGIS. |
 
 
 ### Licencia, cláusulas y condiciones de uso
