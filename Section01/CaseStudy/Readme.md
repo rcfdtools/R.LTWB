@@ -1,5 +1,5 @@
 ## Caso de estudio  
-Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature Envelope to Polygon` `Add Field` `Field Calculator` 
+Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature Envelope to Polygon` `Add Field` `Field Calculator` `Bounding boxes`
 
 Definición de la zona de estudio para la aplicación de la metodología y el desarrollo de las diferentes secciones y actividades.
 
@@ -13,7 +13,7 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 * Estudiar la estructura general de la zonificación hidrográfica de Colombia.
 * Crear una capa geográfica que delimite la zona geográfica de estudio.
 * Crear el polígono regular del dominio espacial que envuelve la zona de estudio.
-* Calcular el área y perímetro de la zona de estudio y su dominio.
+* Calcular el área y perímetro de la zona de estudio y su dominio espacial.
 
 > El polígono regular permitirá en actividades posteriores del curso, realizar la descarga de información satelital y seleccionar las estaciones hidroclimatológicas de la zona de estudio. 
 
@@ -130,7 +130,7 @@ Catálogo de objetos en Subzonas [^4]
 | RULEID       | RULEID         | Id único asignado por el sistema a la representación gráfica.                | Entero       |
 | Override     | Override       | Representación gráfica.                                                      | Blob         |
 
-2. Descomprima solo los datos contenidos en la carpeta _/Shape_ dentro de la carpeta _D:\R.LTWB\.shp_
+2. Descomprima solo los datos contenidos en la carpeta _\Shape_ dentro de la carpeta _D:\R.LTWB\\.shp_
 
 3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta _D:\R.LTWB\.Map_
 
