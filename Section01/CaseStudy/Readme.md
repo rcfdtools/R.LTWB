@@ -5,12 +5,12 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 ![CaseStudy.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudy.png)
 
-> En la ilustración, `COD_ZH` corresponde al código de la Zona Hidrográfica.
+> En la ilustración, _COD_ZH_ corresponde al código de la Zona Hidrográfica.
 
 
 ### Objetivos
 
-* Estudiar la estructura general de la Zonificación hidrográfica de Colombia.
+* Estudiar la estructura general de la zonificación hidrográfica de Colombia.
 * Crear una capa geográfica que delimite la zona geográfica de estudio.
 * Crear el polígono regular del dominio espacial que envuelve la zona de estudio.
 * Calcular el área y perímetro de la zona de estudio y su dominio.
@@ -25,7 +25,7 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 ### Alcance
 
-Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la Red de Estaciones terrestres Hidroclomatológicas del Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia. A nivel particular se estudiará a detalle la zona hidrográfica 28 denominada Cesar que hace parte del área hidrográfica principal 2, correspondiente a Magdalena - Cauca que se compone de las siguientes subzonas:
+Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la red de estaciones terrestres hidroclimatológicas del [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia](http://www.ideam.gov.co/). A nivel particular se estudiará a detalle la zona hidrográfica 28, denominada _Cesar_ que hace parte del área hidrográfica principal 2, correspondiente a _Magdalena - Cauca_ que se compone de las siguientes subzonas:
 
 | SZH  | Subzona Hidrográfica |
 |------|----------------------|
@@ -34,20 +34,10 @@ Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term w
 | 2804 | Río Ariguaní         |
 | 2805 | Bajo Cesar           |
 
-> Estudiantes que aplicaron para curso con certificación desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
+> Estudiantes que aplicaron para curso certificado, desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
 
-#### Red de estaciones
-
-El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia, adscrito al [Ministerio de Medio Ambiente - Minambiente](https://www.minambiente.gov.co/), es la entidad nacional encargada registrar y mantener la información hidrometeorológica del país, incluida la localización y clasificación de la red de estaciones que hace parte del [Catálogo Nacional de Estaciones - CNE](http://bart.ideam.gov.co/cneideam/CNE_IDEAM.xls). A través del servicio de [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion) o a través del portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del IDEAM desde la pestaña _Recursos_, personas naturales o jurídicas, pueden obtener no solamente los catálogos, sino también las capas geográficas y los registros discretos registrados en cada estación. 
-
-> Debido a que es necesario incluir diferentes estaciones alcrededor de la zona hidrográgica de estudio para garantizar la extensión espacial de los mapas interpolados para cada variable climatológica requerida, en esta actividad no se especifica el listado de las estaciones a utilizar y en la sección 3 de este curso se presenta el proceso detallado de selección espacial de estas estaciones.
-
-![CNE_IDEAM.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CNE_IDEAM.png)
-
-> En la ilustración CNE_IDEAM corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y CNE_IDEAM_ZE corresponde al grupo de estaciones prototipo en la zona de estudio.
-
-#### Zonificación hidrográfica de Colombia
+### Zonificación hidrográfica de Colombia
 
 La zonificación hidrográfica de Colombia desde el punto de vista hidrológico, tiene sus inicios en el HIMAT mediante la Resolución 0337 del 1978, la cual establece que el país está conformado por cinco Áreas hidrográficas (1-Caribe, 2- Magdalena - Cauca, 3- Orinoco, 4- Amazonas y 5-Pacífico) que a su vez están divididas en Zonas Hidrográficas y subdivididas en Subzonas Hidrográficas. En ese entonces, el propósito de la zonificación fue de adoptar un sistema de codificación para estaciones Hidrometerológicas. Posteriormente, el IDEAM introduce esta zonificación para otros fines, tales como estudios y análisis hidrológicos relacionados con los informes ambientales, p.ej, el Índice de Aridez, el Escurrimiento y el Rendimiento Hídrico.[^1]
 
@@ -111,7 +101,7 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 > En el presente análisis no se han incluido resultados para la ZH - zona hidrográfica 57, correspondiente a las Islas del Pacífico, debido a que la capa geográfica SZH - subzonas hidrográficas no contiene el polígono de delimitación. 
 
 
-### Delimitación de la zona de estudio con ArcGIS
+### Delimitación de la zona de estudio
 
 El proceso de delimitación se realiza a partir de la cobertura de Subzonas hidrográficas de Colombia, este mapa representa las unidades de análisis para el ordenamiento ambiental de territorio definidas por el IDEAM en convenio con el Instituto Geográfico Agustín Codazzi (IGAC), a escala 1:500.000. [^3]
 
@@ -139,15 +129,20 @@ Catálogo de objetos en Subzonas [^4]
 | RULEID       | RULEID         | Id único asignado por el sistema a la representación gráfica.                | Entero       |
 | Override     | Override       | Representación gráfica.                                                      | Blob         |
 
-2. Descomprima solo los datos contenidos en la carpeta `/shape` dentro de la carpeta `D:\R.LTWB\.shp`
+2. Descomprima solo los datos contenidos en la carpeta `/Shape` dentro de la carpeta `D:\R.LTWB\.shp`
 
 3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta `D:\R.LTWB\.Map`
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
-4. A partir de las Subzonas Hidrográficas, filtre los polígonos de correspondientes al caso de estudio, p.ej. los de la Subzona 28 correspondiente a Cesar.
+4. A partir de las Subzonas Hidrográficas, filtre los polígonos de correspondientes al caso de estudio, p.ej. los de la Subzona 28 correspondiente a Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar yRío Ariguaní.
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
+
+> En QGIS, el filtrado se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
+
+![QGIS3.26.0ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Query.png)
+
 
 5. Utilizando la herramienta `Dissolve` disponible en el menú `Geoprocessing`, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral. Nombrar como `ZonaEstudio.shp`. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
 
@@ -178,9 +173,10 @@ Catálogo de objetos en Subzonas [^4]
 ### Control de versiones
 
 
-| Versión      | Descripción                                                                       |
-|--------------|-----------------------------------------------------------------------------------|
-| v.2022.07.06 | Versión inicial con definición general del caso de estudio y mapas de referencia. |
+| Versión       | Descripción                                                                                 |
+|---------------|---------------------------------------------------------------------------------------------|
+| v.2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.           |
+| v.2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando herramientas SIG. |
 
 
 ### Licencia, cláusulas y condiciones de uso
