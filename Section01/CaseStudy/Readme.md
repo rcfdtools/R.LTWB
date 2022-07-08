@@ -14,6 +14,7 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 * Crear una capa geográfica que delimite la zona geográfica de estudio.
 * Crear el polígono regular del dominio espacial que envuelve la zona de estudio.
 * Calcular el área y perímetro de la zona de estudio y su dominio espacial.
+* Definir el sistema de proyección de coordenadas a utilizar en los mapas y capas geográficas.
 
 > El polígono regular permitirá en actividades posteriores del curso, realizar la descarga de información satelital y seleccionar las estaciones hidroclimatológicas de la zona de estudio. 
 
