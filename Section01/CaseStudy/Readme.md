@@ -135,18 +135,20 @@ Catálogo de objetos en Subzonas [^4]
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
-4. A partir de las Subzonas Hidrográficas, filtre los polígonos de correspondientes al caso de estudio, p.ej. los de la Subzona 28 correspondiente a Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar yRío Ariguaní.
+4. A partir de las Subzonas Hidrográficas, filtre los polígonos del caso de estudio correspondientes a la Subzona 28 - Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar y Río Ariguaní. Expresión `"COD_ZH" = 28`. Cambie la simbología de representación a relleno color gris al 20%.
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
-> En QGIS, el filtrado se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
+En QGIS, el filtrado se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
 
 ![QGIS3.26.0ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Query.png)
 
 
-5. Utilizando la herramienta `Dissolve` disponible en el menú `Geoprocessing`, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral. Nombrar como `ZonaEstudio.shp`. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
+5. Utilizando la herramienta `Dissolve` disponible en el menú `Geoprocessing`, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario seleccionar ningún campo de disolución). Nombrar como `ZonaEstudio.shp`. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
+
+En QGIS, el proceso de disolución se realiza
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
 
