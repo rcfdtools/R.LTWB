@@ -1,5 +1,5 @@
 ## Caso de estudio  
-Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station`
+Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `Dissolve` `Feature Envelope to Polygon`
 
 Definición de la zona de estudio para la aplicación de la metodología y el desarrollo de las diferentes secciones y actividades.
 
@@ -10,7 +10,17 @@ Definición de la zona de estudio para la aplicación de la metodología y el de
 
 ### Objetivos
 
-*
+* Estudiar la estructura general de la Zonificación hidrográfica de Colombia.
+* Crear una capa geográfica que delimite la zona geográfica de estudio.
+* Crear el polígono regular del dominio espacial que envuelve la zona de estudio.
+* Calcular el área y perímetro de la zona de estudio y su dominio.
+
+
+### Requerimientos
+
+* ArcGIS for Desktop 10+
+* ArcGIS Pro (opcional)
+* QGIS 3+ (opcional)
 
 
 ### Alcance
@@ -99,6 +109,7 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 | 5   | Pacífico          | 57  | Islas del Pacífico                 |
 
 > En el presente análisis no se han incluido resultados para la ZH - zona hidrográfica 57, correspondiente a las Islas del Pacífico, debido a que la capa geográfica SZH - subzonas hidrográficas no contiene el polígono de delimitación. 
+
 
 ### Delimitación de la zona de estudio con ArcGIS
 
