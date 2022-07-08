@@ -1,5 +1,5 @@
 ## Caso de estudio  
-Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `Dissolve` `Feature Envelope to Polygon`
+Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `Dissolve` `Feature Envelope to Polygon` `ArcGIS` `QGIS`
 
 Definición de la zona de estudio para la aplicación de la metodología y el desarrollo de las diferentes secciones y actividades.
 
@@ -109,7 +109,7 @@ Procedimiento:
 
 1. Ingrese al portal http://www.ideam.gov.co/en/capas-geo y en el cuadro de búsqueda escriba _Zonificación Hidrográfica_, observará que a 2022.07.07 existen dos versiones de la capa de zonificación correspondientes al año 2010 y 2013. Realice la descarga del archivo de formas Shapefile del año 2013, consulte sus metadatos y el catálogo de objetos disponible.
 
-> La descarga permite obtener el archivo comprimido `Zonificacion_Hidrografica_2013.zip` que contiene la capa geográfica en formato Shapefile, un mapa de muestra en formato .pdf, la ficha de representación gráfica y otros elementos complementarios. 
+> La descarga permite obtener el archivo comprimido _Zonificacion_Hidrografica_2013.zip_ que contiene la capa geográfica en formato Shapefile, un mapa de muestra en formato .pdf, la ficha de representación gráfica y otros elementos complementarios. 
 
 ![IDEAMZonificacionHidrograficaDescarga.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/IDEAMZonificacionHidrograficaDescarga.png)
 
@@ -129,9 +129,9 @@ Catálogo de objetos en Subzonas [^4]
 | RULEID       | RULEID         | Id único asignado por el sistema a la representación gráfica.                | Entero       |
 | Override     | Override       | Representación gráfica.                                                      | Blob         |
 
-2. Descomprima solo los datos contenidos en la carpeta `/Shape` dentro de la carpeta `D:\R.LTWB\.shp`
+2. Descomprima solo los datos contenidos en la carpeta _/Shape_ dentro de la carpeta _D:\R.LTWB\.shp_
 
-3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta `D:\R.LTWB\.Map`
+3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta _D:\R.LTWB\.Map_
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
@@ -143,17 +143,39 @@ En QGIS, el filtrado se realiza a través de la ventana de propiedades de la cap
 
 ![QGIS3.26.0ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Query.png)
 
-5. Utilizando la herramienta `Dissolve` disponible en el menú `Geoprocessing`, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario seleccionar ningún campo de disolución). Nombrar como `ZonaEstudio.shp`. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
+5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario seleccionar ningún campo de disolución). Nombrar como _ZonaEstudio.shp_. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
-En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector geometry - Dissolve_ del Processing Toolbox que se carga oprimiendo la combinación de teclas Ctrl-Alt-T o desde la barra de menús Processing.
+En QGIS, el proceso de disolución se realiza utilizando la herramienta _Vector geometry - Dissolve_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl-Alt-T` o desde la barra de menús _Processing_.
 
 ![QGIS3.26.0ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Dissolve.png)
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
 
-> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluye el sistema de proyección del origen único nacional CTM12 o 9377 por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección inluído `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
+> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá obtener el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta `\.ProjectionFile` de este repositorio se encuentran diferentes archivos de proyección incluido el `MAGNA_OrigenNacional.prj` correspondiente al CRS requerido.
+
+Parámetros del archivo de proyección orígen único nacional [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
+`MAGNA_Colombia_Origen_Unico
+Authority: Custom
+
+Projection: Transverse_Mercator
+False_Easting: 5000000.0
+False_Northing: 2000000.0
+Central_Meridian: -73.0
+Scale_Factor: 0.9992
+Latitude_Of_Origin: 4.0
+Linear Unit: Meter (1.0)
+
+Geographic Coordinate System: GCS_MAGNA
+Angular Unit: Degree (0.0174532925199433)
+Prime Meridian: Greenwich (0.0)
+Datum: D_MAGNA
+  Spheroid: GRS_1980
+    Semimajor Axis: 6378137.0
+    Semiminor Axis: 6356752.314140356
+    Inverse Flattening: 298.257222101`
+
 
 ![ArcGISDesktop10.2.2CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
 
