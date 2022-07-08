@@ -1,5 +1,5 @@
 ## Caso de estudio  
-Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `Dissolve` `Feature Envelope to Polygon` `ArcGIS` `QGIS`
+Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature Envelope to Polygon` `Add Field` `Field Calculator` 
 
 Definición de la zona de estudio para la aplicación de la metodología y el desarrollo de las diferentes secciones y actividades.
 
@@ -203,6 +203,11 @@ En QGIS, nuevos campos de atributos pueden ser creados directamente desde las op
 
 ![QGIS3.26.0ZonaEstudioAddField.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioAddField.png)
 ![QGIS3.26.0ZonaEstudioLabel.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
+
+8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono correspondiente a la extensión regular del polígono disuelto para la zona de estudio. Nombrar como _\.shp\ZonaEstudioEnvelope.shp_. Cree los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule utilizando estos 3 campos.
+
+![ArcGISDesktop10.2.2ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
+
 
 
 ### Autores
