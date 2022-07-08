@@ -130,9 +130,9 @@ Catálogo de objetos en Subzonas [^4]
 | RULEID       | RULEID         | Id único asignado por el sistema a la representación gráfica.                | Entero       |
 | Override     | Override       | Representación gráfica.                                                      | Blob         |
 
-2. Descomprima solo los datos contenidos en la carpeta _\Shape_ dentro de la carpeta _\.shp_ localizada en _D:\R.LTWB_
+2. Descomprima solo los datos contenidos en la carpeta _\Shape_ del comprimido obtenido, dentro de la carpeta _.shp_ localizada en _D:\R.LTWB_
 
-3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta _D:\R.LTWB\.Map_
+3. En ArcGIS, cree un mapa nuevo en blanco y agregue el mapa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas. Guarde el mapa como CaseStudy.mxd en la carpeta _.Map_ localizada en _D:\R.LTWB_
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
