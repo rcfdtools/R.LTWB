@@ -4,7 +4,7 @@ Esta carpeta contiene los mapas de documento creados en aplicaciones SIG, como:
 
 * .mxd: mapa de ArcGIS for Desktop
 * .sxd: escena de  ArcGIS for Desktop
-* .aprx: mapa de ArcGIS Pro, localizado directamente dentro una carpeta nombrada como `ArcGISPro`
+* .aprx: mapa de ArcGIS Pro, localizado directamente dentro una carpeta nombrada como _ArcGISPro_
 * .qgz: mapa de QGIS
 
 
