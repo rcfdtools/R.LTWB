@@ -8,7 +8,8 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 ### Objetivos
 
-* Descargar las imágenes del mosaico de terreno para la zona de estudio.
+* Descargar manualmente las imágenes del mosaico de terreno para la zona de estudio.
+* Descargar automáticamente imágenes desde la consola Cygwin a través del script download.sh de Earthdata.
 * Cargar y visualizar las imágenes en herramientas GIS.
 * Visualizar perfiles de terreno.
 
@@ -101,11 +102,13 @@ Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la r
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
 * `'D:/R.LTWB/.src/download.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
 
+En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
+
 ![Cygwin64Commands.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/Cygwin64Commands.png)
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem_
 
-Archivo [donwload.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/download.sh)
+Archivo [donwload.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/download.sh) de Earthdata
 ```
 #!/bin/bash
 
@@ -242,7 +245,7 @@ EDSCEOF
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (xxx horas)
+* Creado por r.cfdtools@gmail.com (6 horas)
 
 
 ### Referencias
@@ -261,13 +264,12 @@ EDSCEOF
 * Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de visualización 3D.
 
 
-
 ### Control de versiones
 
 
-| Versión      | Descripción      |
-|--------------|------------------|
-| 2022.07.09   | Versión inicial. |
+| Versión      | Descripción                                                                                                          |
+|--------------|----------------------------------------------------------------------------------------------------------------------|
+| 2022.07.09   | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
 
 
 ### Licencia, cláusulas y condiciones de uso
@@ -280,4 +282,4 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
 
-[^1]: Tomado de la documentación de https://search.earthdata.nasa.gov/ 
+[^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
