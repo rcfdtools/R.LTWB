@@ -196,15 +196,45 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
-En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISPro. Automáticamente serán creados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta _D:\R.LTWB_.
+En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISPro. Automáticamente serán creados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección _Folders_, realice la conexión a la carpeta _D:\R.LTWB_.
 
 ![ArcGISPro3.0.0NewMapProject.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0NewMapProject.png)
 
-Agregue la capa de Subzonas Hidrográficas y simbolice por categorías de valores únicos o _Unique Values_ a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas,
+Agregue la capa de Subzonas Hidrográficas y simbolice por categorías de valores únicos o _Unique Values_ a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas.
 
 ![ArcGISPro3.0.0ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013.png)
 
+Para el filtrado, desde las propiedades de la capa seleccione la pestaña _Definition Query_ y ensamble la expresión de filtrado o ingrese la instrucción SQL `COD_ZH = 28`.
 
+![ArcGISPro3.0.0ZonaHidrografica2013Query.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Query.png)
+
+La disolución de los polígonos para la creación de la zona de estudio se realiza desde el panel de herramientas _Geoprocessing - Data Management Tools - Generalization - Dissolve_ que puede ser lanzado desde el menú _Analysis_ seleccionando la opción _Tools_.
+
+![ArcGISPro3.0.0ZonaHidrografica2013Dissolve.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Dissolve.png)
+
+Para cambiar el sistema de proyección de coordenadas, en las propiedades del mapa _Map_ de la tabla de contenidos _Contents_, seleccione la pestaña _Coordinate Systems_ y en la caja de búsqueda ingrese 103599 correspondiente a MAGNA-SIRGAS CMT12.
+
+![ArcGISPro3.0.0CRS103599.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0CRS103599.png)
+
+Para la creación de campos de atributo, abra la tabla de atributos y de clic en la opción Add, agregue los campos Akm2, Pkm y ZH.
+
+![ArcGISPro3.0.0ZonaEstudioAddField.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioAddField.png)
+
+Calcule la geometría de los campos numéricos y asigne el nombre de la zona en el campo ZH utilizando el texto 'ZH 2 - Cesar' sobre Python 3 como _Expression Type_.
+
+![ArcGISPro3.0.0ZonaEstudioCalculateGeometry.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioCalculateGeometry.png)
+
+Para la rotulación compuesta, utilice cualquiera de las siguientes instrucciones:
+
+* Parser VBScript: `[ZH] &VbNewLine& "Área, km²: " & round( [Akm2], 2) &VbNewLine& "Perímetro, km: " & round( [Pkm], 2)`
+* Parser Python: `[ZH] + "\nArea, km2: " +  [Akm2]  + "\nPerimetro, km: " + [Pkm]`
+* Parser Arcade: `$feature.ZH + '\nÁrea, km²: ' + Round($feature.Akm2, 2) + '\nPerímetro, km: : ' + Round($feature.Pkm, 2)`
+
+![ArcGISPro3.0.0ZonaEstudioLabelArcade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioLabelArcade.png)
+
+Utilizando la herramienta _Data Management Tools / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nombrelo como _ZonaEstudioEnvelope.shp_. 
+
+![ArcGISPro3.0.0ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelope.png)
 
 
 #### Instrucciones en QGIS (3.26.0)
@@ -221,13 +251,13 @@ Para cambiar el sistema de proyección, oprima la combinación de teclas `Ctrl+S
 
 ![QGIS3.26.0CRS9377.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0CRS9377.png)
 
-La rotulación compuesta indicando la zona, área y perímetro se realiza con la siguiente expresión: `concat("ZH",  '\nÁrea, km²: ', round("Akm2",2), '\nPerímetro, km: ', round("Pkm", 2))`
-
-![QGIS3.26.0ZonaEstudioLabel.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
-
 Nuevos campos de atributos pueden ser creados directamente desde las opciones del _Field Calculator_, p. ej. para el cálculo del área en km² se crea el campo Akm2 y se calcula la geometría con la expresión `$area / (1000*1000)`. Para el perímetro utilizar la expresión `$perimeter / 1000`.
 
 ![QGIS3.26.0ZonaEstudioAddField.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioAddField.png)
+
+La rotulación compuesta indicando la zona, área y perímetro se realiza con la siguiente expresión: `concat("ZH",  '\nÁrea, km²: ', round("Akm2",2), '\nPerímetro, km: ', round("Pkm", 2))`
+
+![QGIS3.26.0ZonaEstudioLabel.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
 
 El proceso de obtención del polígono perimetral se realiza con la herramienta _Vector geometry - Bounding boxes_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas `Ctrl+Alt+T` o desde la barra de menús _Processing_.
 
