@@ -30,13 +30,13 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 3. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
-| Método    | Descripción                                                                                                                                                                                            |
-|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Polygon   | Acercarse a la zona requerida y mediante clics definir un polígono de delimitación.                                                                                                                    |
-| Rectangle | Especificando las esquinas SW y NE en valores de latitud y longitud en grados decimales. Por ejemplo, para el Departamento del Cesar en Colombia deberá ingresar SW: 7,-75 NE: 11,-72.                 |
-| Point     | Coordenada de un punto indicando la latitud y longitud en grados decimales referenciados en el sistema de proyección de coordenadas WGS84 o dando clic en pantalla.                                    |
-| Circle    | Especificando un punto central y el radio de aferencia. En pantalla se puede realizar manualmente localizando el puntero cerca a la localización requerida y clic definiendo manualmente el radio.     |
-| File      | Permite seleccionar un archivo que contenga el o los polígonos que delimiten la zona de estudio. Los formatos admisibles son ESRI Shapefile, Keyhole Markup Languaje (.kml or .kmz), GeoJSON y GeoRSS. |
+| Método    | Descripción                                                                                                                                                                                                        |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Polygon   | Acercarse a la zona requerida y mediante clics definir un polígono de delimitación.                                                                                                                                |
+| Rectangle | Cree un rectángulo especificando las esquinas SW y NE en valores de latitud y longitud en grados decimales, p. ej. para el Departamento del Cesar en Colombia deberá ingresar SW: 7,-75 NE: 11,-72.                |
+| Point     | Coordenada de un punto indicando la latitud y longitud en grados decimales referenciados en el sistema de proyección de coordenadas WGS84 o dando clic en pantalla.                                                |
+| Circle    | Circunferencia especificando un punto central y el radio de aferencia. En pantalla se puede realizar manualmente localizando el puntero cerca a la localización requerida y clic definiendo manualmente el radio. |
+| File      | Permite seleccionar un archivo que contenga el o los polígonos que delimiten la zona de estudio. Los formatos admisibles son ESRI Shapefile, Keyhole Markup Languaje (.kml or .kmz), GeoJSON y GeoRSS.             |
 
 Para 
 
