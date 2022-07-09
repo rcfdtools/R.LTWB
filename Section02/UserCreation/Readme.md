@@ -70,7 +70,7 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 
 | Versión      | Descripción                           |
 |--------------|---------------------------------------|
-| v.2022.07.07 | Creación de cuenta en NASA EarthData. |
+| 2022.07.07 | Creación de cuenta en NASA EarthData. |
 
 
 ### Licencia, cláusulas y condiciones de uso

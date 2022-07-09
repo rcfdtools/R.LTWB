@@ -280,11 +280,11 @@ Ahora dispone de un polígono que podrá utilizar como máscara de selección pa
 ### Control de versiones
 
 
-| Versión       | Descripción                                                                                          |
-|---------------|------------------------------------------------------------------------------------------------------|
-| v.2022.07.09  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                |
-| v.2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. |
-| v.2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.                    |
+| Versión      | Descripción                                                                                          |
+|--------------|------------------------------------------------------------------------------------------------------|
+| 2022.07.09   | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                |
+| 2022.07.08   | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. |
+| 2022.07.06   | Versión inicial con definición general del caso de estudio y mapas de referencia.                    |
 
 
 ### Licencia, cláusulas y condiciones de uso
