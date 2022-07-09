@@ -196,7 +196,7 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
-En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\.map_ y nómbrelo como ArcGISPro. Automáticamente serán creados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta _D:\R.LTWB_.
+En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISPro. Automáticamente serán creados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta _D:\R.LTWB_.
 
 ![ArcGISPro3.0.0NewMapProject.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0NewMapProject.png)
 
