@@ -19,7 +19,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * ArcGIS Pro (opcional)
 * QGIS 3+ (opcional)
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
-* [Polígono envolvente que delimita la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy).
+* [Polígono envolvente que delimita la zona de estudio, ](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [.shp](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
 
 ### Procedimiento de descarga
