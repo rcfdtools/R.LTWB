@@ -1,7 +1,7 @@
 ## Caso de estudio  
 Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature Envelope to Polygon` `Add Field` `Field Calculator` `Bounding boxes`
 
-Definición de la zona de estudio para la aplicación de la metodología y el desarrollo de las diferentes secciones y actividades.
+Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en los diferentes mapas y capas geográficas.
 
 ![CaseStudy.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudy.png)
 
@@ -103,7 +103,9 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 > En el presente análisis no se han incluido resultados para la ZH - zona hidrográfica 57, correspondiente a las Islas del Pacífico, debido a que la capa geográfica SZH - subzonas hidrográficas no contiene el polígono de delimitación. 
 
 
-### Delimitación de la zona de estudio en ArcGIS for Desktop (10.2.2)
+### Delimitación de la zona de estudio
+
+#### Instrucciones en ArcGIS for Desktop (10.2.2)
 
 El proceso de delimitación se realiza a partir de la cobertura de Subzonas hidrográficas de Colombia, este mapa representa las unidades de análisis para el ordenamiento ambiental de territorio definidas por el IDEAM en convenio con el Instituto Geográfico Agustín Codazzi (IGAC), a escala 1:500.000. [^3]
 
@@ -192,7 +194,7 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 ![ArcGISDesktop10.2.2ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
 
-### Instrucciones en ArcGIS Pro (3.0.0)
+#### Instrucciones en ArcGIS Pro (3.0.0)
 
 En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\.map_ y nómbrelo como ArcGISPro. Automáticamente serán creados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta _D:\R.LTWB_.
 
@@ -201,7 +203,7 @@ En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\.map_ y n�
 ![ArcGISPro3.0.0ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013.png)
 
 
-### Instrucciones en QGIS (3.26.0)
+#### Instrucciones en QGIS (3.26.0)
 
 El filtrado de entidades se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
 
