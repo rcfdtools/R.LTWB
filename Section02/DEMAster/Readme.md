@@ -62,7 +62,7 @@ Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la su
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos _dem.tif correspondientes a los archivos GeoTIFF del modelo digital de elevación. 
 
-Listado de enlaces obtenidos
+Listado de enlaces obtenidos  
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N09W074_dem.tif
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N09W074_num.tif
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N08W075_dem.tif
@@ -86,12 +86,15 @@ Listado de enlaces obtenidos
 
 Copie los archivos descargados en la carpeta _.dem_ del directorio _D:\R.LTWB_
 
-Descarga mediante Script [^1]
+6. Descarga mediante shell script .sh con Cygwin [^1]
 
-Linux: You must first make the script an executable by running the line 'chmod 777 download.sh' from the command line. After that is complete, the file can be executed by typing './download.sh'. For a detailed walk through of this process, please reference this How To guide.
+> Linux: You must first make the script an executable by running the line 'chmod 777 download.sh' from the command line. After that is complete, the file can be executed by typing './download.sh'. For a detailed walk through of this process, please reference this How To guide.
 
-Windows: The file can be executed within Windows by first installing a Unix-like command line utility such as Cygwin. After installing Cygwin (or a similar utility), run the line 'chmod 777 download.sh' from the utility's command line, and then execute by typing './download.sh'.
+> Windows: The file can be executed within Windows by first installing a Unix-like command line utility such as Cygwin. After installing Cygwin (or a similar utility), run the line 'chmod 777 download.sh' from the utility's command line, and then execute by typing './download.sh'.
 
+Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la ruta _C:\cygwin64_
+
+Archivo [donwload.sh]()
 ```
 #!/bin/bash
 
