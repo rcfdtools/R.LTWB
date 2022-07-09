@@ -19,7 +19,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * ArcGIS for Desktop 10+
 * ArcGIS Pro (opcional)
 * QGIS 3+ (opcional)
-* [Cygwin for Windows](https://www.cygwin.com/)
+* [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
 * Polígono envolvente que delimita la zona de estudio. [[Ver clase]](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [[Shapefile]](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).
 
