@@ -1,7 +1,5 @@
-## Caso de estudio 
-(Case study)
-
-Keywords: `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature Envelope to Polygon` `Add Field` `Field Calculator` `Bounding boxes`
+## Caso de estudio  
+Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature Envelope to Polygon` `Add Field` `Field Calculator` `Bounding boxes`
 
 Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en los diferentes mapas y capas geográficas.
 
