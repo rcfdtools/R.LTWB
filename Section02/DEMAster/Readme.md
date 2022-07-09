@@ -19,6 +19,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * ArcGIS for Desktop 10+
 * ArcGIS Pro (opcional)
 * QGIS 3+ (opcional)
+* [Cygwin for Windows](https://www.cygwin.com/)
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
 * Polígono envolvente que delimita la zona de estudio. [[Ver clase]](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [[Shapefile]](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).
 
@@ -62,6 +63,8 @@ Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la su
 ![EarthdataSearchDirectDownload.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchDirectDownload.png)
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos _dem.tif correspondientes a los archivos GeoTIFF del modelo digital de elevación. 
+
+> Los archivos _num.tif corresponden a validación y marcación de celdas ajustadas y no son requeridos para el ensamble del mosaico del modelo de elevación.
 
 Listado de enlaces obtenidos  
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N09W074_dem.tif
