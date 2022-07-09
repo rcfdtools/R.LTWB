@@ -2,8 +2,8 @@
 
 GREP_OPTIONS=''
 
-cookiejar=$(mktemp cookies.XXXXXXXXXX)
-netrc=$(mktemp netrc.XXXXXXXXXX)
+cookiejar=$(mktemp cookies.XXX) #Original was XXXXXXXXXX
+netrc=$(mktemp netrc.XXX)
 chmod 0600 "$cookiejar" "$netrc"
 function finish {
   rm -rf "$cookiejar" "$netrc"

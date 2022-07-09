@@ -88,20 +88,31 @@ Copie los archivos descargados en la carpeta _.dem_ del directorio _D:\R.LTWB_
 
 6. Descarga mediante shell script .sh con Cygwin [^1]
 
+Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata .dem a .dem1 y cree una carpeta nueva vacía con el nombre .dem.
+
 > Linux: You must first make the script an executable by running the line 'chmod 777 download.sh' from the command line. After that is complete, the file can be executed by typing './download.sh'. For a detailed walk through of this process, please reference this How To guide.
 
 > Windows: The file can be executed within Windows by first installing a Unix-like command line utility such as Cygwin. After installing Cygwin (or a similar utility), run the line 'chmod 777 download.sh' from the utility's command line, and then execute by typing './download.sh'.
 
-Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la ruta _C:\cygwin64_
+Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la ruta _C:\cygwin64_. Ejecute la aplicación _Cygwin64 Terminal_ e ingrese los siguientes comandos:
 
-Archivo [donwload.sh]()
+* `chmod 777 'D:/R.LTWB/.src/download.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
+* `cd 'D:/R.LTWB/.dem'` para ingresar al directorio de modelos digitales de elevación.
+* `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
+* `'D:/R.LTWB/.src/download.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
+
+![Cygwin64Commands.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/Cygwin64Commands.png)
+
+Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem_
+
+Archivo [donwload.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/download.sh)
 ```
 #!/bin/bash
 
 GREP_OPTIONS=''
 
-cookiejar=$(mktemp cookies.XXXXXXXXXX)
-netrc=$(mktemp netrc.XXXXXXXXXX)
+cookiejar=$(mktemp cookies.XXX) #Original was XXXXXXXXXX
+netrc=$(mktemp netrc.XXX)
 chmod 0600 "$cookiejar" "$netrc"
 function finish {
   rm -rf "$cookiejar" "$netrc"
