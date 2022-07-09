@@ -269,7 +269,7 @@ Ahora dispone de un polígono que podrá utilizar como máscara de selección pa
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (7 horas)
+* Creado por r.cfdtools@gmail.com (8.5 horas)
 
 
 ### Compatibilidad
@@ -280,10 +280,11 @@ Ahora dispone de un polígono que podrá utilizar como máscara de selección pa
 ### Control de versiones
 
 
-| Versión       | Descripción                                                                              |
-|---------------|------------------------------------------------------------------------------------------|
-| v.2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.        |
-| v.2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS y QGIS. |
+| Versión       | Descripción                                                                                          |
+|---------------|------------------------------------------------------------------------------------------------------|
+| v.2022.07.09  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                |
+| v.2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. |
+| v.2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.                    |
 
 
 ### Licencia, cláusulas y condiciones de uso
