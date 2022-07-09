@@ -189,7 +189,7 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 
 ![ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png)
 
-8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nombrelo como _ZonaEstudioEnvelope.shp_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
+8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _ZonaEstudioEnvelope.shp_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
 
 ![ArcGISDesktop10.2.2ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
@@ -232,7 +232,7 @@ Para la rotulación compuesta, utilice cualquiera de las siguientes instruccione
 
 ![ArcGISPro3.0.0ZonaEstudioLabelArcade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioLabelArcade.png)
 
-Utilizando la herramienta _Data Management Tools / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nombrelo como _ZonaEstudioEnvelope.shp_. 
+Utilizando la herramienta _Data Management Tools / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio. 
 
 ![ArcGISPro3.0.0ZonaEstudioEnvelope.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelope.png)
 
