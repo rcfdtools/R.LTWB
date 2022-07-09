@@ -30,19 +30,31 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 3. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
-| Método    | Descripción                                                                                                                                                                                                        |
-|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Polygon   | Acercarse a la zona requerida y mediante clics definir un polígono de delimitación.                                                                                                                                |
-| Rectangle | Cree un rectángulo especificando las esquinas SW y NE en valores de latitud y longitud en grados decimales, p. ej. para el Departamento del Cesar en Colombia deberá ingresar SW: 7,-75 NE: 11,-72.                |
-| Point     | Coordenada de un punto indicando la latitud y longitud en grados decimales referenciados en el sistema de proyección de coordenadas WGS84 o dando clic en pantalla.                                                |
-| Circle    | Circunferencia especificando un punto central y el radio de aferencia. En pantalla se puede realizar manualmente localizando el puntero cerca a la localización requerida y clic definiendo manualmente el radio. |
-| File      | Permite seleccionar un archivo que contenga el o los polígonos que delimiten la zona de estudio. Los formatos admisibles son ESRI Shapefile, Keyhole Markup Languaje (.kml or .kmz), GeoJSON y GeoRSS.             |
+| Método    | Descripción                                                                                                                                                                                                            |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Polygon   | Acercarse a la zona requerida y mediante clics definir un polígono de delimitación.                                                                                                                                    |
+| Rectangle | Cree un rectángulo especificando las esquinas SW y NE en valores de latitud y longitud en grados decimales, p. ej. para el Departamento del Cesar en Colombia deberá ingresar SW: 7,-75 NE: 11,-72.                    |
+| Point     | Coordenada de un punto indicando la latitud y longitud en grados decimales referenciados en el sistema de proyección de coordenadas WGS84 o dando clic en pantalla.                                                    |
+| Circle    | Circunferencia especificando un punto central y el radio de aferencia. En pantalla se puede realizar manualmente localizando el puntero cerca a la localización requerida y clic definiendo manualmente el radio.      |
+| File      | Permite seleccionar un archivo comprimido .zip que contenga el o los polígonos que delimiten la zona de estudio. Los formatos admisibles son ESRI Shapefile, Keyhole Markup Languaje (.kml or .kmz), GeoJSON y GeoRSS. |
 
-Para 
+Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. Este archivo de formas tiene embebido el sistema de coordenadas geográfico GCS_MAGNA que puede ser interpretado directamente por Earthdata.
 
-En la casilla de búsqueda ingresar ASTER ó ASTER Global Digital Elevation Model V003.
+> Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto y nombrando como ZonaEstudioEnvelopeWGS84.shp
 
-Para nuestro ejercicio realizar la búsqueda a partir de la opción rectangle especificando las coordenadas SW: 7,-75 NE: 11,-72 pero restando internamente un 0.1 grados alrededor del rectángulo. SW: 7.1,-74.9 NE: 10.9,-72.1. Lo anterior para seleccionar únicamente las cuadriculas internas de la zona de estudio. Opcionalmente podrá realizar la descarga de cualquier zona de interés.
+Para el caso de estudio, utilizaremos el método File para definir la máscara de selección de elementos a descargar.
+
+![EarthdataSearchByShapefile.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchByShapefile.png)
+
+> Para búsquedas a partir de la opción rectangle especificando las coordenadas, p. ej. SW: 7,-75 NE: 11,-72 se resta internamente 0.1 grados alrededor del rectángulo SW: 7.1,-74.9 NE: 10.9,-72.1. Lo anterior para seleccionar únicamente las cuadriculas internas.
+
+4. En la casilla de búsqueda ingresar ASTER ó ASTER Global Digital Elevation Model V003.
+
+
+
+
+
+
 
 Verifique en el mapa de previsualización, que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos.
 
