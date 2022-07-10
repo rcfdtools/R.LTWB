@@ -266,13 +266,11 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISDesktop10.2.2MosaicSymbology.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
-
-
-
-4. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla.
+4. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _ZonaEstudio.shp_ y establezca la altura base a partir del DEM.
 
 ![ArcSceneDesktop10.2.2Scene3D.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
+![ArcSceneDesktop10.2.2Scene3DVerticalExaggeration.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3DVerticalExaggeration.png)
 
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
