@@ -266,7 +266,11 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISDesktop10.2.2MosaicSymbology.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
-4. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _ZonaEstudio.shp_ y establezca la altura base a partir del DEM.
+4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono ZonaEstudioEnvelope.shp y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
+
+![ArcGISDesktop10.2.2ProfileGraph.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2ProfileGraph.png)
+
+5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _ZonaEstudio.shp_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
 
 ![ArcSceneDesktop10.2.2Scene3D.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
