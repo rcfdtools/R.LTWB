@@ -3,7 +3,7 @@ Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthda
 
 Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra.[^1]
 
-A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la v3 no presenta problemas de sobre-elevaciones debidas a nubes.
+A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
 
 
 ### Objetivos
@@ -12,7 +12,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
-* Visualizar perfiles de terreno.
+* Visualizar perfiles de elevación.
 * Crear representaciones 3D.
 
 
@@ -42,7 +42,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 | Circle    | Circunferencia especificando un punto central y el radio de aferencia. En pantalla se puede realizar manualmente localizando el puntero cerca a la localización requerida y clic definiendo manualmente el radio.      |
 | File      | Permite seleccionar un archivo comprimido .zip que contenga el o los polígonos que delimiten la zona de estudio. Los formatos admisibles son ESRI Shapefile, Keyhole Markup Languaje (.kml or .kmz), GeoJSON y GeoRSS. |
 
-Para el caso de estudio, utilizaremos el método File para definir la máscara de selección de elementos a descargar.
+Para el caso de estudio, utilizaremos el método _File_ para definir la máscara de selección de elementos a descargar.
 
 Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. Este archivo de formas tiene embebido el sistema de coordenadas geográfico GCS_MAGNA que puede ser interpretado directamente por Earthdata.
 
@@ -246,12 +246,12 @@ EDSCEOF
 
 ![ArcGISDesktop10.2.2LoadResolution.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2LoadResolution.png)
 
-2. Utilizando la herramienta _ArcToolBox / Data Management Tools / Raster / Raster Dataset / Mosaic to New Raster_, cree el mosaico de terreno a partir de las 9 imágenes seleccionando y arrastrando las imágenes desde la tabla de contenido, establezca los siguientes parámetros:
+2. Utilizando la herramienta _ArcToolBox / Data Management Tools / Raster / Raster Dataset / Mosaic to New Raster_, cree el mosaico de terreno a partir de las 9 imágenes, seleccionando y arrastrando las imágenes desde la tabla de contenido hacia la herramienta de mosaico, establezca los siguientes parámetros:
 
 * Output Location: D:\R.LTWB\.dem\ASTER
 * Raster Dataset Name with Extension: ASTGTMV003Mosaic.tif
 * Spatial Reference for Raster (optional): MAGNA_Colombia_CTM12
-* Pixel Type: 32_BIT_FLOAT
+* Pixel Type: 32_BIT_FLOAT (para conservar valores numéricos enteros puede utilizar 32_BIT_SIGNED)
 * Number of Bands: 1
 
 > No es necesario establecer el Cellsize debido a que el valor equivalente en metros será recalculado automáticamente a partir de la resolución original de las imágenes. Por tratarse de imágenes sin superposición, no es necesario modificar el operador y el modo de color del mosaico resultante.
