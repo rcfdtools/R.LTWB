@@ -293,7 +293,9 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
+4. En el menú _Map_ y el a sección _Layer_, seleccione la opción Elevation Source Layer. Seleccione el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
+![ArcGISPro3.0.0ElevationSourceLayer.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
 
 
 #### Instrucciones en QGIS (3.26.0)
