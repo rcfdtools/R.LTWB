@@ -1,5 +1,5 @@
-## Descarga de modelo digital de elevación - DEM - NASA ASTER GDEM v2, v3 (30m)
-Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata`
+## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
+Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view`
 
 Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra.
 
@@ -89,6 +89,8 @@ Listado de enlaces obtenidos
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N10W074_num.tif
 
 Copie los archivos descargados en la carpeta _.dem/_ del directorio _D:\R.LTWB_
+
+> Tenga en cuenta que las imágenes obtenidas utilizan el sistema de referencia espacial geográfico GCS_WGS_1984 y que las elevaciones de cada celda o pixel corresponden a valores enteros en metros.
 
 6. Descarga mediante shell script .sh con Cygwin [^1]
 
@@ -238,8 +240,29 @@ EDSCEOF
 
 #### Instrucciones en ArcGIS for Desktop (10.2.2)
 
-Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12.
+1. Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido como MAGNA_Colombia_CTM12. Desde las propiedades de cualquier imagen verifique su resolución, podrá observar que corresponde a 0.00027777778 x 0.00027777778 grados decimales debido a que el Datum es D_WGS_1984. 
 
+![ArcGISDesktop10.2.2LoadResolution.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2LoadResolution.png)
+
+2. Utilizando la herramienta _ArcToolBox / Data Management Tools / Raster / Raster Dataset / Mosaic to New Raster_, cree el mosaico de terreno a partir de las 9 imágenes seleccionando y arrastrando las imágenes desde la tabla de contenido, establezca los siguientes parámetros:
+
+* Output Location: D:\R.LTWB\.dem\ASTER
+* Raster Dataset Name with Extension: ASTGTMV003Mosaic.tif
+* Spatial Reference for Raster (optional): MAGNA_Colombia_CTM12
+* Pixel Type: 32_BIT_FLOAT
+* Number of Bands: 1
+
+> No es necesario establecer el Cellsize debido a que el valor equivalente en metros será recalculado automáticamente a partir de la resolución original de las imágenes. Por tratarse de imágenes sin superposición, no es necesario modificar el operador y el modo de color del mosaico resultante.
+
+![ArcGISDesktop10.2.2MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRaster.png)
+
+Una vez finalice el ensamble del mosaico, este será cargado automáticamente al proyecto. Verifique que la imagen resultante utilice el sistema de referencia espacial MAGNA_Colombia_CTM12 y que la resolución de las celdas se encuentre en metros con valores aproximados de 30.68464585 x 30.68464585 metros. Los valores de elevación se encuentran entre el rango de -84 a 5687 m.s.n.m.
+
+![ArcGISDesktop10.2.2MosaicToNewRasterResolution.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
+
+3. Simbolice el mosaico de terreno de forma ajustada _Stretched_ con efecto de sombreado o _Hillshade_ con Z:1 por tipo _Histogram Equalize_ e invirtiendo la rampa de color Negro a blanco. 
+
+![ArcGISDesktop10.2.2MosaicSymbology.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
