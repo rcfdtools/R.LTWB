@@ -313,9 +313,10 @@ Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imáge
 ### Control de versiones
 
 
-| Versión      | Descripción                                                                                                          |
-|--------------|----------------------------------------------------------------------------------------------------------------------|
-| 2022.07.09   | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
+| Versión    | Descripción                                                                                                          |
+|------------|----------------------------------------------------------------------------------------------------------------------|
+| 2022.07.10 | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2).               |
+| 2022.07.09 | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
 
 
 ### Licencia, cláusulas y condiciones de uso
