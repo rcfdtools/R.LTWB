@@ -264,6 +264,10 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISDesktop10.2.2MosaicSymbology.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
+4. En ArcScene, agregue la grilla ASTGTMV003Mosaic.tif, simbolice como falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla.
+
+
+
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
