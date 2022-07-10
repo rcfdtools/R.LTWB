@@ -3,7 +3,7 @@ Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthda
 
 Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra.[^1]
 
-A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la v3 no presenta los problemas de sobre elevaciones debida a nubes.
+A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la v3 no presenta problemas de sobre-elevaciones debidas a nubes.
 
 
 ### Objetivos
@@ -11,17 +11,19 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * Descargar manualmente imágenes de terreno para la zona de estudio.
 * Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
+* Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 * Visualizar perfiles de terreno.
+* Crear representaciones 3D.
 
 
 ### Requerimientos
 
-* ArcGIS for Desktop 10+
+* ArcGIS for Desktop 10+ (opcional)
 * ArcGIS Pro 2+ (opcional)
 * QGIS 3+ (opcional)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
-* Polígono envolvente que delimita la zona de estudio. [[Ver clase]](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [[Shapefile]](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).
+* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [[Shapefile]](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).
 
 
 ### Procedimiento de descarga
