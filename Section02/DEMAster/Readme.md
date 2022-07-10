@@ -309,7 +309,7 @@ En la ventana de propiedades, seleccione en el panel izquierdo _Tools_ y en _Den
 
 ![ArcGISPro3.0.0LineNotesSetup.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesSetup.png)
 
-En el panel de creación de entidades, seleccione la opción Line y trace una línea en el sentido NW - SE del recuadro de la zona de estudio. La finalización de la línea de muestreo tomará algunos segundos debido a que corresponde a una línea 3D con múltiples nodos de acuerdo a la distancia indicada. En el menú _Edit_, de clic en _Save_ para terminar la edición de la capa.
+En el panel de creación de entidades, seleccione la opción _Line_ y trace una línea en el sentido NW - SE del recuadro de la zona de estudio. La finalización de la línea de muestreo tomará algunos segundos debido a que corresponde a una línea 3D con múltiples nodos de acuerdo a la distancia indicada. En el menú _Edit_, de clic en _Save_ para terminar la edición de la capa.
 
 ![ArcGISPro3.0.0LineNotesCreate.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesCreate.png)
 
@@ -317,11 +317,11 @@ Con la línea seleccionada, en el panel _Contents_ ubicado a la izquierda, de cl
 
 ![ArcGISPro3.0.0LineNotesProfileGraph.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesProfileGraph.png)
 
-6. Para representación 3D, en el menú _Insert_ y en el panel _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
+6. Para representación 3D, en el menú _Insert_ y en la sección _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
 
-En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_. y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
+En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_ y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
-En la tabla de contenido o Contents, seleccione Ground en Elevation Surfaces, luego en el menú Elevation Surface Layer ingrese en el panel Drawing, 20 como Vertical Exaggeration. 
+En la tabla de contenido o Contents, seleccione Ground en Elevation Surfaces, luego en el menú Elevation Surface Layer ingrese en el panel Drawing un valor de 20 como Vertical Exaggeration. 
 
 Rote la escena utilizando el clic sostenido de la rueda del mouse. Cambie la simbología primaria del DEM a _Shaded Relief_ y agregue el polígono de la zona de estudio.
 
