@@ -260,12 +260,18 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISDesktop10.2.2MosaicToNewRasterResolution.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
 
+> Debido a que el tamaño del archivo de mosaico es superior a 100MB, se han creado dos archivos comprimidos en _.dem/ASTER_ denominados como ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
+
 3. Simbolice el mosaico de terreno de forma ajustada _Stretched_ con efecto de sombreado o _Hillshade_ con Z:1 por tipo _Histogram Equalize_ e invirtiendo la rampa de color Negro a blanco. 
 
 ![ArcGISDesktop10.2.2MosaicSymbology.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
-4. En ArcScene, agregue la grilla ASTGTMV003Mosaic.tif, simbolice como falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla.
 
+
+
+4. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla.
+
+![ArcSceneDesktop10.2.2Scene3D.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
 
 
