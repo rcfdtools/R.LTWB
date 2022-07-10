@@ -321,7 +321,7 @@ Con la línea seleccionada, en el panel _Contents_ ubicado a la izquierda, de cl
 
 En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_ y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
-En la tabla de contenido o Contents, seleccione Ground en Elevation Surfaces, luego en el menú Elevation Surface Layer ingrese en el panel Drawing un valor de 20 como Vertical Exaggeration. 
+En la tabla de contenido o _Contents_, seleccione _Ground_ en _Elevation Surfaces_, luego en el menú _Elevation Surface Layer_ ingrese en el panel _Drawing_ un valor de 20 como _Vertical Exaggeration_. 
 
 Rote la escena utilizando el clic sostenido de la rueda del mouse. Cambie la simbología primaria del DEM a _Shaded Relief_ y agregue el polígono de la zona de estudio.
 
