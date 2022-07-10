@@ -1,5 +1,5 @@
 # Ignore files for push...
-# Large files over 100MB can be compress in 95MB file parts.
+# Large files over 100MB have be compress in 95MB file parts.
 
 # General exclusions
 #.gitignore
