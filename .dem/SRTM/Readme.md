@@ -1,0 +1,1 @@
+## DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m) files
