@@ -1,7 +1,7 @@
 ## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
 Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view`
 
-Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra.
+Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra.[^1]
 
 A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la v3 no presenta los problemas de sobre elevaciones debida a nubes.
 
@@ -92,7 +92,7 @@ Copie los archivos descargados en la carpeta _.dem/_ del directorio _D:\R.LTWB_
 
 > Tenga en cuenta que las imágenes obtenidas utilizan el sistema de referencia espacial geográfico GCS_WGS_1984 y que las elevaciones de cada celda o pixel corresponden a valores enteros en metros.
 
-6. Descarga mediante shell script .sh con Cygwin [^1]
+6. Descarga mediante shell script .sh con Cygwin [^2]
 
 Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata de .dem a .dem1 y cree una carpeta nueva vacía con el nombre .dem.
 
@@ -294,7 +294,6 @@ Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imáge
 
 ### Referencias
 
-* Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012.
 * https://doi.org/10.5067/ASTER/ASTGTM.003
 * https://lpdaac.usgs.gov
 * https://asterweb.jpl.nasa.gov/
@@ -329,4 +328,5 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
 
-[^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
+[^1]: Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012. 
+[^2]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
