@@ -291,7 +291,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 3. Simbolice el mosaico en modo de relieve sombreado o _Shaded Relief_ con _Z Scale Factor en 2_.
 
-![ArcGISPro3.0.0Shaded Relief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0Shaded Relief.png)
+![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
 
 
