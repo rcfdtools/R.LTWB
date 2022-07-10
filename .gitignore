@@ -12,8 +12,7 @@ venv/
 # Large file
 .dem/ASTER/ASTGTMV003Mosaic.tif
 .dem/ASTER/ASTGTMV003Mosaic.tif*
-.dem/ASTGTMV003MosaicArcGISPro.tif
-.dem/ASTGTMV003MosaicArcGISPro.tif*
+.dem/ASTER/STGTMV003MosaicArcGISPro.*
 
 
 # Some samples
