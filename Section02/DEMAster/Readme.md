@@ -293,9 +293,22 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
-4. En el menú _Map_ y el a sección _Layer_, seleccione la opción Elevation Source Layer. Seleccione el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
+4. En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_. y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
 ![ArcGISPro3.0.0ElevationSourceLayer.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
+
+5. Para visualizar perfiles, 
+
+
+5. Para representación 3D, en el menú _Insert_ y en el panel _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
+
+En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_. y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
+
+En la tabla de contenido o Contents, seleccione Ground en Elevation Surfaces, luego en el menú Elevation Surface Layer ingrese en el panel Drawing, 20 como Vertical Exaggeration. 
+
+Rote la escena utilizando el clic sostenido de la rueda del mouse. Cambie la simbología primaria del DEM a _Shaded Relief_ y agregue el polígono de la zona de estudio.
+
+![ArcGISPro3.0.0Scene3D.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0Scene3D.png)
 
 
 #### Instrucciones en QGIS (3.26.0)
