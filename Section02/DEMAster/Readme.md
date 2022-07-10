@@ -8,16 +8,16 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 ### Objetivos
 
-* Descargar manualmente las imágenes del mosaico de terreno para la zona de estudio.
-* Descargar automáticamente imágenes desde la consola Cygwin a través del script download.sh de Earthdata.
-* Cargar y visualizar las imágenes en herramientas GIS.
+* Descargar manualmente imágenes de terreno para la zona de estudio.
+* Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
+* Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Visualizar perfiles de terreno.
 
 
 ### Requerimientos
 
 * ArcGIS for Desktop 10+
-* ArcGIS Pro (opcional)
+* ArcGIS Pro 2+ (opcional)
 * QGIS 3+ (opcional)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
@@ -64,7 +64,9 @@ Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la su
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos _dem.tif correspondientes a los archivos GeoTIFF del modelo digital de elevación. 
 
-> Los archivos _num.tif corresponden a validación y marcación de celdas ajustadas y no son requeridos para el ensamble del mosaico del modelo de elevación.
+> Los archivos _num.tif corresponden a validación y marcación de celdas ajustadas y no son requeridos para el ensamble del mosaico del modelo digital de elevación.
+
+![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchDirectDownloadLink.png)
 
 Listado de enlaces obtenidos  
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N09W074_dem.tif
@@ -86,13 +88,11 @@ Listado de enlaces obtenidos
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N10W074_dem.tif
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N10W074_num.tif
 
-![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchDirectDownloadLink.png)
-
-Copie los archivos descargados en la carpeta _.dem_ del directorio _D:\R.LTWB_
+Copie los archivos descargados en la carpeta _.dem/_ del directorio _D:\R.LTWB_
 
 6. Descarga mediante shell script .sh con Cygwin [^1]
 
-Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata .dem a .dem1 y cree una carpeta nueva vacía con el nombre .dem.
+Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata de .dem a .dem1 y cree una carpeta nueva vacía con el nombre .dem.
 
 > Linux: You must first make the script an executable by running the line 'chmod 777 download.sh' from the command line. After that is complete, the file can be executed by typing './download.sh'. For a detailed walk through of this process, please reference this How To guide.
 
@@ -233,17 +233,23 @@ EDSCEOF
 > Modificando el listado de hiperenlaces contenido al final del script download.sh en la sección _fetch_urls_, podrá ingresar los cuadrantes requeridos para cualquier zona del mundo y realizar la descarga masiva de estos archivos.
 
 
-### Visualización y representación 3D
+### Creación de mosaico, visualización y representación 3D
 
 
 #### Instrucciones en ArcGIS for Desktop (10.2.2)
 
+Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12.
+
+
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
+
+Abra el mapa ArcGISPro.aprx localizado en la carpeta _.map\ArcGISPro_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
 
 #### Instrucciones en QGIS (3.26.0)
 
+Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador _EPSG: 9377_.
 
 
 ### Autores
@@ -265,6 +271,8 @@ EDSCEOF
 ### Compatibilidad
 
 * Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de visualización 3D.
+* Para la descarga puede utilizar cualquier navegador de Internet actualizado.
+* Descargas mediante script pueden ser realizadas en Linux, subsistemas de Linux para Windows o desde terminales emuladoras como Cygwin.
 
 
 ### Control de versiones

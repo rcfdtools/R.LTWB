@@ -133,7 +133,7 @@ Catálogo de objetos en Subzonas [^4]
 
 2. Descomprima solo los datos contenidos en la carpeta _\Shape_ del comprimido obtenido, dentro de la carpeta _.shp_ localizada en _D:\R.LTWB_
 
-3. Cree un mapa nuevo en blanco y agregue la capa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos o _Unique Values_ a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas, guarde el mapa como _CaseStudy.mxd_ en la carpeta _.Map_ localizada en _D:\R.LTWB_
+3. Cree un mapa nuevo en blanco y agregue la capa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos o _Unique Values_ a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas, guarde el mapa como _R.LTWB.mxd_ en la carpeta _.Map_ localizada en _D:\R.LTWB_
 
 ![ArcGISDesktop10.2.2ZonaHidrografica2013.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
@@ -238,6 +238,8 @@ Utilizando la herramienta _Data Management Tools / Features / Feature Envelope t
 
 
 #### Instrucciones en QGIS (3.26.0)
+
+Cree un mapa de proyecto, agregue la capa Zonificacion_hidrografica_2013.shp y guarde en la carpeta _.map_ como _R.LTWB.qgz_
 
 El filtrado de entidades se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
 

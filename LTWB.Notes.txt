@@ -11,6 +11,8 @@ Clone local directory D:\R.LTWB.wiki
 ✓✕
 
 Pending tasks
+    Remove personal name from all the ArcGIS Pro screenshots.
+    Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, punctual.
 	Recalculate stations elevation.
 	Series hypothetical duration and time-window evaluation.
