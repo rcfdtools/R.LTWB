@@ -258,11 +258,11 @@ EDSCEOF
 
 ![ArcGISDesktop10.2.2MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRaster.png)
 
-Una vez finalice el ensamble del mosaico, este será cargado automáticamente al proyecto. Verifique que la imagen resultante utilice el sistema de referencia espacial MAGNA_Colombia_CTM12 y que la resolución de las celdas se encuentre en metros con valores aproximados de 30.68464585 x 30.68464585 metros. Los valores de elevación se encuentran entre el rango de -84 a 5687 m.s.n.m.
+Una vez finalice el ensamble del mosaico, este será cargado automáticamente al proyecto. Verifique que la imagen resultante utilice el sistema de referencia espacial MAGNA_Colombia_CTM12 y que la resolución de las celdas se encuentre en metros con valores aproximados de 30.68464585 x 30.68464585 metros. Para el mosaico creado, los valores de elevación se encuentran entre el rango de -84 a 5687 m.s.n.m.
 
 ![ArcGISDesktop10.2.2MosaicToNewRasterResolution.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
 
-> Debido a que el tamaño del archivo de mosaico es superior a 100MB, se han creado dos archivos comprimidos en _.dem/ASTER_ denominados como ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
+> Debido a que el tamaño del archivo de mosaico es superior a 100MB, se han creado dos archivos comprimidos en _.dem/ASTER_ denominados ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
 
 3. Simbolice el mosaico de terreno de forma ajustada _Stretched_ con efecto de sombreado o _Hillshade_ con Z:1 por tipo _Histogram Equalize_ e invirtiendo la rampa de color Negro a blanco. 
 
