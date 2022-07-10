@@ -1,5 +1,5 @@
 ## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
-Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view`
+Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes`
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
@@ -295,7 +295,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
-4. En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_. y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
+4. En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_ y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
 ![ArcGISPro3.0.0ElevationSourceLayer.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
 
@@ -335,7 +335,7 @@ Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imáge
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (6 horas)
+* Creado por r.cfdtools@gmail.com (12.5 horas)
 
 
 ### Referencias
@@ -362,7 +362,7 @@ Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imáge
 
 | Versión    | Descripción                                                                                                          |
 |------------|----------------------------------------------------------------------------------------------------------------------|
-| 2022.07.10 | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2).               |
+| 2022.07.10 | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  |
 | 2022.07.09 | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
 
 
