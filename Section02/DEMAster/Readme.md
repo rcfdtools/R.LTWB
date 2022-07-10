@@ -297,10 +297,25 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISPro3.0.0ElevationSourceLayer.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
 
-5. Para visualizar perfiles, 
+5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente se cargará una nueva capa denominada Line Notes.
 
+Seleccione la capa _Line Notes_, de clic en el menú _Edit_ y establezca en la sección _Elevation Mode - Surface_ y _Ground_.
 
-5. Para representación 3D, en el menú _Insert_ y en el panel _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
+De clic en _Create_ y en el panel derecho de clic derecho sobre _Line Notes_ y seleccione _Properties_.
+
+En la ventana de propiedades, seleccione en el panel izquierdo _Tools_ y en _Densify Lines_ establezca 30 metros para que al dibujar la línea de muestreo se obtengan valores en cada pixel del MDE. Recuerde que el modelo digital de elevación tiene una resolución aproximada de 30 metros.
+
+![ArcGISPro3.0.0LineNotesSetup.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesSetup.png)
+
+En el panel de creación de entidades, seleccione la opción Line y trace una línea en el sentido NW - SE del recuadro de la zona de estudio. La finalización de la línea de muestreo tomará algunos segundos debido a que corresponde a una línea 3D con múltiples nodos de acuerdo a la distancia indicada. En el menú _Edit_, de clic en _Save_ para terminar la edición de la capa.
+
+![ArcGISPro3.0.0LineNotesCreate.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesCreate.png)
+
+Con la línea seleccionada, en el panel _Contents_ ubicado a la izquierda, de clic derecho sobre la capa _Line Notes_, seleccione la opción _Create Chart - Profile Graph_.
+
+![ArcGISPro3.0.0LineNotesProfileGraph.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesProfileGraph.png)
+
+6. Para representación 3D, en el menú _Insert_ y en el panel _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
 
 En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_. y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
@@ -326,6 +341,8 @@ Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imáge
 * https://doi.org/10.5067/ASTER/ASTGTM.003
 * https://lpdaac.usgs.gov
 * https://asterweb.jpl.nasa.gov/
+* https://pro.arcgis.com/en/pro-app/2.8/help/mapping/navigation/profile-viewing.htm
+* https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/elevation-surfaces.htm
 * [ASTER Global Water Bodies Database NetCDF V001](https://search.earthdata.nasa.gov/search/granules?p=C1575734501-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
