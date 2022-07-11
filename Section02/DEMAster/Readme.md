@@ -372,7 +372,7 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (12.5 horas)
+* Creado por r.cfdtools@gmail.com (15.5 horas)
 
 
 ### Referencias
@@ -399,10 +399,11 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 ### Control de versiones
 
 
-| Versión    | Descripción                                                                                                          |
-|------------|----------------------------------------------------------------------------------------------------------------------|
-| 2022.07.10 | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  |
-| 2022.07.09 | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
+| Versión     | Descripción                                                                                                          |
+|-------------|----------------------------------------------------------------------------------------------------------------------|
+| 2022.07.11 | Creación de mosaico, visualización y representación 3D - Instrucciones en QGIS.                                      |
+| 2022.07.10  | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  |
+| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
 
 
 ### Licencia, cláusulas y condiciones de uso
