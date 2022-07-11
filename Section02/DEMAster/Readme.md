@@ -23,6 +23,8 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * ArcGIS for Desktop 10+ (opcional)
 * ArcGIS Pro 2+ (opcional)
 * QGIS 3+ (opcional)
+* QGIS - Complemento: Profile tool
+* QGIS - Complemento: QGis2threejs
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [[Shapefile]](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).
@@ -358,6 +360,15 @@ En el panel _Layers_, seleccione el modelo de elevación _ASTGTMV003MosaicQGIS.t
 
 ![QGIS3.26.0ProfileTool.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0ProfileTool.png)
 
+Para la representación 3D instale el complemento QGis2threejs.
+
+![QGIS3.26.0QGis2threejsInstall.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0QGis2threejsInstall.png)
+
+En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM correspondiente al modelo de terreno _ASTGTMV003MosaicQGIS.tif_, observará que el modelo
+3D no permite visualizar las variaciones de la altura. En el menú _Scene_ seleccione _Scene Settings_ y defina _Z exaggereation en 20_.
+
+![QGIS3.26.0QGis2threejsScene.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0QGis2threejsScene.png)
+
 
 ### Autores
 
@@ -372,6 +383,7 @@ En el panel _Layers_, seleccione el modelo de elevación _ASTGTMV003MosaicQGIS.t
 * https://pro.arcgis.com/en/pro-app/2.8/help/mapping/navigation/profile-viewing.htm
 * https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/elevation-surfaces.htm
 * https://www.qgistutorials.com/en/docs/3/raster_mosaicing_and_clipping.html
+* [Using the Profile Tool plugin in QGIS](https://www.youtube.com/watch?v=UD0Oumv5y1w)
 * [ASTER Global Water Bodies Database NetCDF V001](https://search.earthdata.nasa.gov/search/granules?p=C1575734501-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
