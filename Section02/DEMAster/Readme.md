@@ -348,8 +348,15 @@ Luego de cargar la grilla podrá observar que los el rango de valores de la gril
 
 ![QGIS3.26.0RasterLayerStatistics.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0RasterLayerStatistics.png)
 
-
 > En QGIS, el tamaño del archivo de la grilla Merged puede ser considerable mayor al obtenido mediante ArcGIS.
+
+Para la visualización de perfiles de muestreo, en el menú _Plugins_ seleccione _Manage and Install Plugins..._, en la caja de búsqueda ingrese _Profile tool_ e instale esta herramienta.
+
+![QGIS3.26.0ProfileToolInstall.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0ProfileToolInstall.png)
+
+En el panel _Layers_, seleccione el modelo de elevación _ASTGTMV003MosaicQGIS.tif_ y en el _Profile tool_ de clic en _Add Layer_, luego cree una línea temporal en el sentido NW - SE del recuadro de la zona de estudio.
+
+![QGIS3.26.0ProfileTool.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0ProfileTool.png)
 
 
 ### Autores
