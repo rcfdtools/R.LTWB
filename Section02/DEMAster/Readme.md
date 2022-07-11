@@ -332,10 +332,11 @@ Rote la escena utilizando el clic sostenido de la rueda del mouse. Cambie la sim
 
 Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador _EPSG: 9377_.
 
-En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Mosaic_ y seleccione la opción _i.image.mosaic_ disponible en _Imagery_ de _GRASS_. Desde la opción _Input rasters_, seleccione las 9 imágenes cargadas en el mapa y de clic en Run. No es necesario definir un nombre de archivo de salida en _Mosaic raster_ debido a que primero crearemos un archivo temporal que luego podrá ser exportado y reproyectado al sistema de coordenadas proyectado requerido. Simbolice con efecto _Hillshade_.
+En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Mosaic_ y seleccione la opción _i.image.mosaic_ disponible en _Imagery_ de _GRASS_. Desde la opción _Input rasters_, seleccione las 9 imágenes cargadas en el mapa y de clic en Run. No es necesario definir un nombre de archivo de salida en _Mosaic raster_ debido a que primero crearemos un archivo temporal denominado _Mosaic Raster_ que luego podrá ser exportado y reproyectado al sistema de coordenadas proyectado requerido. Simbolice con efecto _Hillshade_.
 
 ![QGIS3.26.0Mosaic.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0Mosaic.png)
 
+Desde el panel de Layers, de clic en la capa temporal _Mosaic Raster_ y exporte en la carpeta _./dem/ASTER_ la imagen de mosaico como _ASTGTMV003MosaicQGIS.tif_ asignando el EPSG 9377.
 
 
 
@@ -351,6 +352,7 @@ En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Mosaic_ y seleccione
 * https://asterweb.jpl.nasa.gov/
 * https://pro.arcgis.com/en/pro-app/2.8/help/mapping/navigation/profile-viewing.htm
 * https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/elevation-surfaces.htm
+* https://www.qgistutorials.com/en/docs/3/raster_mosaicing_and_clipping.html
 * [ASTER Global Water Bodies Database NetCDF V001](https://search.earthdata.nasa.gov/search/granules?p=C1575734501-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
