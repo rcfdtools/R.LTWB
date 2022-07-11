@@ -15,6 +15,8 @@ venv/
 .dem/ASTER/ASTGTMV003Mosaic.tif*
 .dem/ASTER/ASTGTMV003MosaicArcGISPro.tif
 .dem/ASTER/ASTGTMV003MosaicArcGISPro.tif*
+.dem/ASTER/ASTGTMV003MosaicQGIS.tif
+.dem/ASTER/ASTGTMV003MosaicQGIS.tif*
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files

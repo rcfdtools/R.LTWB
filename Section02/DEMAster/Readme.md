@@ -1,5 +1,5 @@
 ## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
-Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes`
+Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics`
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
@@ -253,7 +253,7 @@ EDSCEOF
 * Output Location: D:\R.LTWB\.dem\ASTER
 * Raster Dataset Name with Extension: ASTGTMV003Mosaic.tif
 * Spatial Reference for Raster (optional): MAGNA_Colombia_CTM12
-* Pixel Type: 32_BIT_FLOAT (para conservar valores numéricos enteros puede utilizar 32_BIT_SIGNED)
+* Pixel Type: 32_BIT_FLOAT (para conservar valores numéricos enteros puede utilizar el tipo original 16_BIT)
 * Number of Bands: 1
 
 > No es necesario establecer el Cellsize debido a que el valor equivalente en metros será recalculado automáticamente a partir de la resolución original de las imágenes. Por tratarse de imágenes sin superposición, no es necesario modificar el operador y el modo de color del mosaico resultante.
@@ -265,6 +265,8 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 ![ArcGISDesktop10.2.2MosaicToNewRasterResolution.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
 
 > Debido a que el tamaño del archivo de mosaico es superior a 100MB, se han creado dos archivos comprimidos en _.dem/ASTER_ denominados ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
+
+> El rango de elevaciones de la imagen de mosaico puede no coincidir en la representación con el rango de valores de las imágenes originales, para recalcular los estadísticos de una grilla en _ArcCatalog_ de clic en la imagen y seleccione  la opción _Calculate Statistics_.
 
 3. Simbolice el mosaico de terreno de forma ajustada _Stretched_ con efecto de sombreado o _Hillshade_ con Z:1 por tipo _Histogram Equalize_ e invirtiendo la rampa de color Negro a blanco. 
 
@@ -332,12 +334,22 @@ Rote la escena utilizando el clic sostenido de la rueda del mouse. Cambie la sim
 
 Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador _EPSG: 9377_.
 
-En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Mosaic_ y seleccione la opción _i.image.mosaic_ disponible en _Imagery_ de _GRASS_. Desde la opción _Input rasters_, seleccione las 9 imágenes cargadas en el mapa y de clic en Run. No es necesario definir un nombre de archivo de salida en _Mosaic raster_ debido a que primero crearemos un archivo temporal denominado _Mosaic Raster_ que luego podrá ser exportado y reproyectado al sistema de coordenadas proyectado requerido. Simbolice con efecto _Hillshade_.
+En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Merge_ y seleccione la opción _Merge_ disponible en _Raster miscellaneous_ de _GDAL_. Desde la opción _Input rasters_, seleccione las 9 imágenes cargadas en el mapa, establezca en tipo _Int16_ correspondiente a valores enteros como en las imágenes originales y de clic en Run. No es necesario definir un nombre de archivo de salida en _Merged_ debido a que primero crearemos un archivo temporal denominado _Merged_ que luego podrá ser exportado y reproyectado al sistema de coordenadas proyectado requerido.
 
-![QGIS3.26.0Mosaic.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0Mosaic.png)
+![QGIS3.26.0Merge.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0Merge.png)
 
-Desde el panel de Layers, de clic en la capa temporal _Mosaic Raster_ y exporte en la carpeta _./dem/ASTER_ la imagen de mosaico como _ASTGTMV003MosaicQGIS.tif_ asignando el EPSG 9377.
+Desde el panel de Layers, de clic derecho en la capa temporal _Merged_ y exporte en la carpeta _./dem/ASTER_ la imagen de mosaico como _ASTGTMV003MosaicQGIS.tif_ asignando el EPSG 9377.
 
+> En QGIS, el tamaño regular de las celdas originales de 30.68464585 metros obtenido de la conversión de grados a metros por el cambio del sistema de coordenadas no se mantiene, se recomienda ingresar un valor idéntico de resolución horizontal y vertical. Considerar que para el desarrollo del balance hidrológico de largo plazo, el tamaño de las celdas debe ser verificado y establecido en función de los valores obtenidos en la grilla.
+
+![QGIS3.26.0MergeExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeExport.png)
+
+Luego de cargar la grilla podrá observar que los el rango de valores de la grilla resultante inicia en cero, lo cual visualmente no es correcto debido a que en las imágenes originales existen valores de -84 metros. Lo anterior debido a que es necesario recalcular los estadísticos de la grilla, para ello utilizar la opción _Raster layer statistics_ disponible en el _Processing Toolbox_ dentro del grupo de herramientas _Raster analysis_. 
+
+![QGIS3.26.0RasterLayerStatistics.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0RasterLayerStatistics.png)
+
+
+> En QGIS, el tamaño del archivo de la grilla Merged puede ser considerable mayor al obtenido mediante ArcGIS.
 
 
 ### Autores
