@@ -13,7 +13,7 @@ venv/
 .dem/ASTER/ASTGTMV003Mosaic.tif
 .dem/ASTER/ASTGTMV003Mosaic.tif*
 .dem/ASTER/ASTGTMV003MosaicArcGISPro.tif
-.dem/ASTER/ASTGTMV003MosaicArcGISPro*.*
+.dem/ASTER/ASTGTMV003MosaicArcGISPro.tif*
 
 
 # Some samples
