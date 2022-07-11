@@ -332,6 +332,12 @@ Rote la escena utilizando el clic sostenido de la rueda del mouse. Cambie la sim
 
 Abra el mapa _R.LTWB.qgz_ localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador _EPSG: 9377_.
 
+En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Mosaic_ y seleccione la opción _i.image.mosaic_ disponible en _Imagery_ de _GRASS_. Desde la opción _Input rasters_, seleccione las 9 imágenes cargadas en el mapa y de clic en Run. No es necesario definir un nombre de archivo de salida en _Mosaic raster_ debido a que primero crearemos un archivo temporal que luego podrá ser exportado y reproyectado al sistema de coordenadas proyectado requerido. Simbolice con efecto _Hillshade_.
+
+![QGIS3.26.0Mosaic.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0Mosaic.png)
+
+
+
 
 ### Autores
 
