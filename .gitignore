@@ -2,7 +2,6 @@
 # Large files over 100MB have be compress in 95MB file parts.
 # r.cfdtools advice: when you create large files, they can appear in the Commit to main panel, after exclude the files here in .gitignore, you can move the large files to another directory and then make a Push. After the Push be done, you can move back the large files to the original folder.
 
-
 # General exclusions
 #.gitignore
 .idea/

@@ -299,7 +299,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISPro3.0.0ElevationSourceLayer.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
 
-5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente se cargará una nueva capa denominada Line Notes.
+5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente se cargará una nueva capa denominada _Line Notes_.
 
 Seleccione la capa _Line Notes_, de clic en el menú _Edit_ y establezca en la sección _Elevation Mode - Surface_ y _Ground_.
 
