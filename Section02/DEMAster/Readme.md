@@ -375,7 +375,14 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 
 ### Sombreado de colinas - Hillshade
 
-A través de la generación del Hillshade, se crea un mapa de relieve sombreado simplificado teniendo en cuenta el ángulo de la fuente de iluminación y sombras. Es utilizado frecuentemente para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos.
+A través de la herramienta Hillshade, se crea un mapa de relieve sombreado simplificado teniendo en cuenta el ángulo de la fuente de iluminación y sombras que es frecuentemente utilizado para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos. Si bien las herramientas SIG disponen de simbologías de representación al vuelo para falso Hillshade, la creación de este mapa es útil debido a que la grilla resultante es ligera y con valores discretos enteros de celdas entre 0 y 254 o 0 y 255 dependiendo de la herramienta SIG utilizada para su creación.
+
+> Para la generación correcta del mapa de sombreado de colinas es necesario que el mapa utilice un sistema de coordenadas proyectado, para el caso de estudio utilizar MAGNA origen único nacional.
+
+En ArcGIS for Desktop, el mapa de sombreado puede ser creado con la herramienta _Spatial Analyst_ o _3D Analyst_ / Surface / Hillshade. Los parámetros requeridos son la grilla de mosaico, el azimuth y la altitud de la posición del sol en grados. Nombre el mapa como ASTGTMV003MosaicHillshade.tif
+
+![ArcGISDesktop10.2.2MosaicHillshade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicHillshade.png)
+
 
 
 
