@@ -1,5 +1,5 @@
 ## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
-Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics`
+Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
@@ -16,6 +16,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 * Visualizar perfiles de elevación.
 * Crear representaciones 3D.
+* Crear mapas de sombreado de colinas - Hillshade
 
 
 ### Requerimientos
