@@ -101,7 +101,7 @@ Copie los archivos descargados en la carpeta _.dem/ASTER_ del directorio _D:\R.L
 
 > Tenga en cuenta que las imágenes obtenidas utilizan el sistema de referencia espacial geográfico GCS_WGS_1984 y que las elevaciones de cada celda o pixel corresponden a valores enteros en metros.
 
-5. Descarga mediante shell script .sh con Cygwin [^]
+5. Descarga mediante shell script .sh con Cygwin [^1]
 
 Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata de .dem/ASTER a .dem/ASTER1 y cree una carpeta nueva vacía con el nombre .dem/ASTER.
 
@@ -375,7 +375,7 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 
 ### Sombreado de colinas - Hillshade
 
-A través de la generación del Hillshade, se crea un mapa de relieve sombreado teniendo en cuenta el ángulo de la fuente de iluminación y sombras. Es utilizado frecuentemente para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos.
+A través de la generación del Hillshade, se crea un mapa de relieve sombreado simplificado teniendo en cuenta el ángulo de la fuente de iluminación y sombras. Es utilizado frecuentemente para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos.
 
 
 
