@@ -383,11 +383,13 @@ En ArcGIS for Desktop, el mapa de sombreado puede ser creado con la herramienta 
 
 ![ArcGISDesktop10.2.2MosaicHillshade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicHillshade.png)
 
-En ArcGIS Pro, el mapa de sombreado puede ser creado con la herramienta _Spatial Analyst Tools_ o _3D Analyst_ / Surface / Hillshade. Los parámetros requeridos son los mismos requeridos por ArcGIS for Desktop. Nombre el mapa como ASTGTMV003MosaicArcGISProHillshade.tif
+En ArcGIS Pro, el mapa de sombreado puede es creado con la herramienta _Spatial Analyst Tools_ o _3D Analyst_ / Surface / Hillshade. Los parámetros requeridos son los mismos requeridos por ArcGIS for Desktop. Nombre el mapa como ASTGTMV003MosaicArcGISProHillshade.tif
 
 ![ArcGISPro3.0.0MosaicHillshade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0MosaicHillshade.png)
 
+En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Toolbox / Raster terrain analysis / Hillshade_ o también con GDAL. AL igual que en ArcGIS, los parámetros son el azimut o ángulo horizontal y el ángulo vertical. Generar solo temporalmente y no guardar en disco.
 
+![QGIS3.26.0MergeHillshade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeHillshade.png)
 
 
 ### Autores
@@ -419,10 +421,9 @@ En ArcGIS Pro, el mapa de sombreado puede ser creado con la herramienta _Spatial
 
 ### Control de versiones
 
-
 | Versión     | Descripción                                                                                                          | Dedicación, hr |
 |-------------|----------------------------------------------------------------------------------------------------------------------|----------------|
-| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                |                |
+| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                | 1              |
 | 2022.07.11  | Creación de mosaico, visualización y representación 3D - Instrucciones en QGIS.                                      | 3              |
 | 2022.07.10  | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  | 5              |
 | 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. | 7.5            |
