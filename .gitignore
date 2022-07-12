@@ -19,6 +19,8 @@ venv/
 .dem/ASTER/ASTGTMV003MosaicQGIS.tif*
 .dem/ASTER/ASTGTMV003MosaicHillshade.tif
 .dem/ASTER/ASTGTMV003MosaicHillshade.tif*
+.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif
+.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif*
 
 
 # Some samples
