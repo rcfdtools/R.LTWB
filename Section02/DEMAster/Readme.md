@@ -241,8 +241,9 @@ EDSCEOF
 > Modificando el listado de hiperenlaces contenido al final del script download.sh en la sección _fetch_urls_, podrá ingresar los cuadrantes requeridos para cualquier zona del mundo y realizar la descarga masiva de estos archivos.
 
 
-### Creación de mosaico, visualización y representación 3D
+### Creación y reproyección de mosaicos, visualización y representación 3D
 
+Luego de los procesos de obtención de las imágenes satelitales, es necesaria la construcción de un mosaico único a partir de las imágenes individuales obtenidas para cada modelo de terreno. El balance hidrológico de largo plazo podrá ser realizado utilizando diferentes modelos de terreno y permitirá comparar la oferta hídrica obtenida utilizando diferentes superficies.
 
 #### Instrucciones en ArcGIS for Desktop (10.2.2)
 
@@ -369,10 +370,17 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 
 ![QGIS3.26.0QGis2threejsScene.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0QGis2threejsScene.png)
 
+### Sombreado de colinas - Hillshade
+
+A través de la generación del Hillshade, se crea un mapa de relieve sombreado teniendo en cuenta el ángulo de la fuente de iluminación y sombras. Es utilizado frecuentemente para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos.
+
+
+
+
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (15.5 horas)
+* Creado por r.cfdtools@gmail.com
 
 
 ### Referencias
@@ -399,11 +407,12 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 ### Control de versiones
 
 
-| Versión     | Descripción                                                                                                          |
-|-------------|----------------------------------------------------------------------------------------------------------------------|
-| 2022.07.11 | Creación de mosaico, visualización y representación 3D - Instrucciones en QGIS.                                      |
-| 2022.07.10  | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  |
-| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. |
+| Versión     | Descripción                                                                                                          | Dedicación, hr |
+|-------------|----------------------------------------------------------------------------------------------------------------------|----------------|
+| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                |                |
+| 2022.07.11  | Creación de mosaico, visualización y representación 3D - Instrucciones en QGIS.                                      | 3              |
+| 2022.07.10  | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  | 5              |
+| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. | 7.5            |
 
 
 ### Licencia, cláusulas y condiciones de uso
