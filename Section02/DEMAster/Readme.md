@@ -3,9 +3,9 @@ Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthda
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
-Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o pixeles con variaciones cada 1 metro.[^1]
+Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o pixeles con variaciones cada 1 metro.
 
-A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
+A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo, como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
 
 
 ### Objetivos
@@ -19,6 +19,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * Crear mapas de sombreado de colinas - Hillshade
 
 > La resolución aproximada de los modelos digitales de elevación obtenidos desde el servicio NASA Earthdata es de 30 metros.
+
 
 ### Requerimientos
 
@@ -100,7 +101,7 @@ Copie los archivos descargados en la carpeta _.dem/_ del directorio _D:\R.LTWB_
 
 > Tenga en cuenta que las imágenes obtenidas utilizan el sistema de referencia espacial geográfico GCS_WGS_1984 y que las elevaciones de cada celda o pixel corresponden a valores enteros en metros.
 
-6. Descarga mediante shell script .sh con Cygwin [^2]
+6. Descarga mediante shell script .sh con Cygwin [^]
 
 Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata de .dem a .dem1 y cree una carpeta nueva vacía con el nombre .dem.
 
@@ -397,6 +398,7 @@ A través de la generación del Hillshade, se crea un mapa de relieve sombreado 
 * [ASTER Global Water Bodies Database NetCDF V001](https://search.earthdata.nasa.gov/search/granules?p=C1575734501-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
+* Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012.
 
 
 ### Compatibilidad
@@ -426,6 +428,5 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 |------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
-
-[^1]: Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012. 
-[^2]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
+ 
+[^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
