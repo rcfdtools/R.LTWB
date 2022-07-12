@@ -3,7 +3,7 @@ Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthda
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
-Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra.[^1]
+Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o pixeles con variaciones cada 1 metro.[^1]
 
 A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo. Como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
 
@@ -18,6 +18,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * Crear representaciones 3D.
 * Crear mapas de sombreado de colinas - Hillshade
 
+> La resolución aproximada de los modelos digitales de elevación obtenidos desde el servicio NASA Earthdata es de 30 metros.
 
 ### Requerimientos
 
