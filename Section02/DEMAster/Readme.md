@@ -18,7 +18,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * Crear representaciones 3D.
 * Crear mapas de sombreado de colinas - Hillshade
 
-> La resolución aproximada de los modelos digitales de elevación obtenidos desde el servicio NASA Earthdata es de 30 metros.
+> La resolución aproximada de los modelos digitales de elevación ASTER versión 3 obtenidos desde el servicio NASA Earthdata es de 30 metros.
 
 
 ### Requerimientos
