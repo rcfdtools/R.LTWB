@@ -391,6 +391,8 @@ En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Too
 
 ![QGIS3.26.0MergeHillshade.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeHillshade.png)
 
+En este momento ya dispone de una grilla integrada de elevación que cubre toda la zona de estudio y un mapa de representación de colinas.
+
 
 ### Autores
 
