@@ -436,7 +436,7 @@ En este momento ya dispone de una grilla integrada de elevación ASTER que cubre
 R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License).
 
 
-| [Actividad anterior]() | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]()  |
+| [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)  |
 |------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_

@@ -264,8 +264,8 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 
 | Versión     | Descripción                                                       | Dedicación, hr |
 |-------------|-------------------------------------------------------------------|----------------|
-| 2022.07.13  | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | 2h            |
-| 2022.07.12  | Versión inicial con descarga manual y con script.                 | 1h             |
+| 2022.07.13  | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | 2              |
+| 2022.07.12  | Versión inicial con descarga manual y con script.                 | 1              |
 
 
 ### Licencia, cláusulas y condiciones de uso
@@ -273,7 +273,7 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License).
 
 
-| [Actividad anterior]() | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]()  |
+| [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]()  |
 |------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_

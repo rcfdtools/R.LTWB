@@ -2,6 +2,13 @@
 
 En esta actividad se listan los requerimientos académicos y computacionales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las herramientas requeridas.
 
+
+### Objetivos
+
+* Instalar y configurar las herramientas computacionales requeridas para el desarrollo del caso de estudio.
+* Establecer los requerimientos académicos mínimos y listar algunos recursos complementarios para la nivelación de conocimientos.
+
+
 ### Requerimientos computacionales
 
 * ArcGIS for Desktop 10+ (opcional)
@@ -23,6 +30,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Conocimientos básicos en hidrología
 * Conocimientos básicos en programación usando Python
 
+
 ### Configuración del sistema operativo
 
 
@@ -37,3 +45,38 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Instalación y configuración de Python con entornos virtuales
 
+
+
+
+### Autores
+
+* Creado por r.cfdtools@gmail.com
+
+
+### Referencias
+
+* 
+
+
+### Compatibilidad
+
+* 
+
+
+### Control de versiones
+
+| Versión     | Descripción                                             | Dedicación, hr |
+|-------------|---------------------------------------------------------|----------------|
+| 2022.07.13  | Versión inicial con lista preliminar de requerimientos. | 0.5          |
+
+
+
+### Licencia, cláusulas y condiciones de uso
+
+R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License).
+
+
+| [Actividad anterior]() | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)  |
+|------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
+
+_¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
