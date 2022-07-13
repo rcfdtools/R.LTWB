@@ -55,7 +55,7 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 ![NASAEarthData7.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData7.png)
 ![NASAEarthData8.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData8.png)
 
-5. Su cuenta ha sido creada, validada y esta lista para ser utilizada en el buscador de Earthdata.
+Su cuenta ha sido creada, validada y esta lista para ser utilizada en el buscador de Earthdata.
 
 
 ### Autores
