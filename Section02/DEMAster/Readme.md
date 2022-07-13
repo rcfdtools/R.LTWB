@@ -1,5 +1,5 @@
 ## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
-Keywords: `NASA` `jpl` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
+Keywords: `NASA` `jpl` `ASTER` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
@@ -59,7 +59,7 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 > Para búsquedas a partir de la opción rectangle especificando las coordenadas, p. ej. SW: 7,-75 NE: 11,-72 se resta internamente 0.1 grados alrededor del rectángulo SW: 7.1,-74.9 NE: 10.9,-72.1. Lo anterior para seleccionar únicamente las cuadrículas internas.
 
-3. En la casilla de búsqueda ingresar _ASTER_ ó _ASTER Global Digital Elevation Model V003_. Para la zona de estudio, es necesario descargar 9 cuadrículas.
+3. En la casilla de búsqueda ingresar _ASTER Global Digital Elevation Model V003_. Para la zona de estudio, es necesario descargar 9 cuadrículas.
 
 Como puede observar, las cuadrículas son ortogonales y no contienen traslapos debido a que corresponde a un modelo ya procesado y recortado. Para la zona de estudio, la información del modelo digital de elevación ha sido obtenida, procesada e integrada desde 2000.03.01 hasta 2013.11.30.
 
@@ -111,10 +111,10 @@ Con el propósito de realizar la descarga desde la consola de comandos a través
 
 Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la ruta _C:\cygwin64_ y ejecute la aplicación _Cygwin64 Terminal_ e ingrese los siguientes comandos:
 
-* `chmod 777 'D:/R.LTWB/.src/download.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
+* `chmod 777 'D:/R.LTWB/.src/downloadASTER.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
 * `cd 'D:/R.LTWB/.dem/ASTER'` para ingresar al directorio ASTER de modelos digitales de elevación.
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
-* `'D:/R.LTWB/.src/download.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
+* `'D:/R.LTWB/.src/downloadASTER.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
@@ -122,7 +122,7 @@ En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/ASTER_
 
-Shell script [donwload.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/download.sh) de Earthdata
+Shell script [donwloadASTER.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/downloadASTER.sh) de Earthdata
 ```
 #!/bin/bash
 
