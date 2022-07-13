@@ -60,7 +60,7 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 
 ### Autores
 
-* Creado por r.cfdtools@gmail.com (1.5 horas)
+* Creado por r.cfdtools@gmail.com
 
 
 ### Compatibilidad
@@ -71,9 +71,9 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 ### Control de versiones
 
 
-| Versión      | Descripción                           |
-|--------------|---------------------------------------|
-| 2022.07.07 | Creación de cuenta en NASA EarthData. |
+| Versión     | Descripción                           | Dedicación, hr |
+|-------------|---------------------------------------|----------------|
+| 2022.07.07  | Creación de cuenta en NASA EarthData. | 1.5            |
 
 
 ### Licencia, cláusulas y condiciones de uso
