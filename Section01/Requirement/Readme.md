@@ -6,7 +6,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 ### Objetivos
 
 * Instalar y configurar las herramientas computacionales requeridas para el desarrollo del caso de estudio.
-* Establecer los requerimientos académicos mínimos y listar algunos recursos complementarios para la nivelación de conocimientos.
+* Establecer los requisitos académicos mínimos y listar algunos recursos complementarios para su nivelación.
 
 
 ### Requerimientos computacionales
@@ -24,7 +24,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Cuenta de usuario en [Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) de la NASA.
 
 
-### Requerimientos académicos
+### Requisitos académicos
 
 * Conocimientos básicos en sistemas de información geográfica
 * Conocimientos básicos en hidrología
