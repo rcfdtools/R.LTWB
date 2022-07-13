@@ -24,7 +24,7 @@ Especificaciones técnicas y modos de captura
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 
-> La resolución aproximada de los modelos digitales de elevación ALOS PALSAR en modo FBS es de 30 y 90 metros.
+> La resolución aproximada de los modelos digitales de elevación ALOS PALSAR en modo FBS es de 12.5 metros.
 
 > Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
@@ -59,38 +59,69 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
-![EarthdataSearchByShapefile.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchByShapefile.png)
+![EarthdataSearchByShapefile.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchByShapefile.png)
 
 > Para búsquedas a partir de la opción rectangle especificando las coordenadas, p. ej. SW: 7,-75 NE: 11,-72 se resta internamente 0.1 grados alrededor del rectángulo SW: 7.1,-74.9 NE: 10.9,-72.1. Lo anterior para seleccionar únicamente las cuadrículas internas.
 
-3. En la casilla de búsqueda ingresar **NASA Shuttle Radar Topography Mission Global 1 arc second V003** para descargas en resolución de 30 metros o **NASA Shuttle Radar Topography Mission Global 3 arc second V003** para descargas en resolución de 90 metros. Para la zona de estudio, es necesario descargar 9 cuadrículas.
+3. En la casilla de búsqueda ingresar **ALOS_PALSAR_RTC_HIGH_RES** para descargas en resolución de 12.5 metros. Para la zona de estudio, es necesario descargar 38 cuadrículas.
 
-Como puede observar, las cuadrículas son ortogonales y no contienen traslapos debido a que corresponde a un modelo ya procesado y recortado. Para la zona de estudio, la información del modelo digital de elevación ha sido obtenida, procesada e integrada desde 2000.02.11 hasta 2000.02.21.
+En el panel izquierdo, definir el rango de fechas requerido, para la zona de estudio utilizaremos las últimas trayectorias obtenidas entre el 01 de enero y el 22 de marzo de 2011.
 
-![EarthdataSearchResults.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchResults.png)
+Como puede observar, las cuadrículas no son ortogonales y contienen traslapos debido a que corresponde a un modelo no integrado y recortado por cuadrantes de 1 grado. 
+
+![EarthdataSearchResults.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchResults.png)
 
 Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11km x 111.11km de superficie.
 
-4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 9 archivos requeridos que tienen un peso aproximado de 100.9 MB y de clic en _Done_ y _Download Data_.
+4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 38 archivos requeridos que tienen un peso aproximado de 8.8 GB (222 MB por archivo comprimido y 71 MB para cada archivo .dem.tif aproximadamente) y de clic en _Done_ y _Download Data_.
 
-![EarthdataSearchDirectDownload.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownload.png)
+![EarthdataSearchDirectDownload.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownload.png)
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos .zip correspondientes a los archivos [.hgt](https://gdal.org/drivers/raster/srtmhgt.html) del modelo digital de elevación. 
 
-![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownloadLink.png)
+![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownloadLink.png)
 
 Listado de enlaces obtenidos  
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W074.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N08W075.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N08W074.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N10W074.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N10W073.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W073.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N08W073.SRTMGL1.hgt.zip
-* https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N10W075.SRTMGL1.hgt.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0170_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0160_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0150_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0190_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0180_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0170_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0160_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0190_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0180_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0170_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0160_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0150_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0190_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0190_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0180_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0170_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0160_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0150_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26731_FBS_F3440_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26702_FBS_F3430_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0190_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0180_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0170_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0160_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0190_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0180_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0170_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0160_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0150_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0200_RT1.zip
+* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0190_RT1.zip
 
-Descomprima los archivos .zip descargados en la carpeta _.dem/SRTM_ del directorio _D:\R.LTWB_
+De los archivos .zip obtenidos, descomprima las imágenes con terminación _.dem.tif_ en la carpeta _.dem/ALOS_ del directorio _D:\R.LTWB_
 
 > Tenga en cuenta que las imágenes obtenidas utilizan el sistema de referencia espacial geográfico GCS_WGS_1984 y que las elevaciones de cada celda o pixel corresponden a valores enteros en metros.
 
@@ -102,16 +133,18 @@ Descomprima los archivos .zip descargados en la carpeta _.dem/SRTM_ del director
 
 Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la ruta _C:\cygwin64_ y ejecute la aplicación _Cygwin64 Terminal_ e ingrese los siguientes comandos:
 
-* `chmod 777 'D:/R.LTWB/.src/downloadSRTM.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
-* `cd 'D:/R.LTWB/.dem/SRTM'` para ingresar al directorio ASTER de modelos digitales de elevación.
+* `chmod 777 'D:/R.LTWB/.src/downloadALOS.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
+* `cd 'D:/R.LTWB/.dem/ALOS'` para ingresar al directorio ASTER de modelos digitales de elevación.
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
-* `'D:/R.LTWB/.src/downloadSRTM.sh'` para ejecutar _downloadSRTM.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem/SRTM_
+* `'D:/R.LTWB/.src/downloadALOS.sh'` para ejecutar _downloadALOS.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem/ALOS_
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
-Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/SRTM_
+![Cygwin64Commands.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/Cygwin64Commands.png)
 
-Shell script [downloadSRTM.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/downloadSRTM.sh) de Earthdata
+Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/ALOS_
+
+Shell script [downloadALOS.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/downloadALOS.sh) de Earthdata
 ```
 #!/bin/bash
 
@@ -142,14 +175,14 @@ exit_with_error() {
     echo
     echo $1
     echo
-    echo "https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip"
+    echo "https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip"
     echo
     exit 1
 }
 
 prompt_credentials
   detect_app_approval() {
-    approved=`curl -s -b "$cookiejar" -c "$cookiejar" -L --max-redirs 5 --netrc-file "$netrc" https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip -w %{http_code} | tail  -1`
+    approved=`curl -s -b "$cookiejar" -c "$cookiejar" -L --max-redirs 5 --netrc-file "$netrc" https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip -w %{http_code} | tail  -1`
     if [ "$approved" -ne "302" ]; then
         # User didn't approve the app. Direct users to approve the app in URS
         exit_with_error "Please ensure that you have authorized the remote application by visiting the link below "
@@ -158,7 +191,7 @@ prompt_credentials
 
 setup_auth_curl() {
     # Firstly, check if it require URS authentication
-    status=$(curl -s -z "$(date)" -w %{http_code} https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip | tail -1)
+    status=$(curl -s -z "$(date)" -w %{http_code} https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip | tail -1)
     if [[ "$status" -ne "200" && "$status" -ne "304" ]]; then
         # URS authentication is required. Now further check if the application/remote service is approved.
         detect_app_approval
@@ -210,15 +243,44 @@ fetch_urls() {
 }
 
 fetch_urls <<'EDSCEOF'
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W074.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N08W075.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N08W074.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N10W074.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N10W073.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W073.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N08W073.SRTMGL1.hgt.zip
-https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N10W075.SRTMGL1.hgt.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0170_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0160_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0150_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0190_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0180_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0170_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0160_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0190_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0180_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0170_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0160_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0150_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0190_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0190_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0180_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0170_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0160_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0150_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26731_FBS_F3440_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26702_FBS_F3430_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0190_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0180_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0170_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0160_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0190_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0180_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0170_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0160_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0150_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0200_RT1.zip
+https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0190_RT1.zip
 EDSCEOF
 ```
 > Modificando el listado de hiperenlaces contenido al final del script download.sh en la sección _fetch_urls_, podrá ingresar los cuadrantes requeridos para cualquier zona del mundo y realizar la descarga masiva de estos archivos.
@@ -254,14 +316,9 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 
 ### Referencias
 
-* https://gdal.org/drivers/raster/srtmhgt.html
-* https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1.003
-* https://lpdaac.usgs.gov
-* https://www2.jpl.nasa.gov/srtm/index.html
-* https://asterweb.jpl.nasa.gov/gdem.asp
-* [NASA Shuttle Radar Topography Mission Global 3 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C204582037-LPDAAC_ECS)
-* [NASA Shuttle Radar Topography Mission Global 3 arc second V003](https://search.earthdata.nasa.gov/search/granules?p=C204582034-LPDAAC_ECS)
-* [NASA Shuttle Radar Topography Mission Global 1 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C1000000260-LPDAAC_ECS)
+[ALOS_PALSAR_LEVEL1.0](https://search.earthdata.nasa.gov/search/granules?p=C1206485320-ASF)
+[ALOS_PALSAR_LEVEL1.1](https://search.earthdata.nasa.gov/search/granules?p=C1206485527-ASF)
+[ALOS_PALSAR_RTC_LOW_RES](https://search.earthdata.nasa.gov/search/granules?p=C1206487217-ASF)
 
 
 ### Compatibilidad
@@ -273,10 +330,9 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 
 ### Control de versiones
 
-| Versión     | Descripción                                                       | Dedicación, hr |
-|-------------|-------------------------------------------------------------------|----------------|
-| 2022.07.13  | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | 2              |
-| 2022.07.12  | Versión inicial con descarga manual y con script.                 | 1              |
+| Versión     | Descripción                                                                                                         | Dedicación, hr |
+|-------------|---------------------------------------------------------------------------------------------------------------------|----------------|
+| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. |               |
 
 
 ### Licencia, cláusulas y condiciones de uso

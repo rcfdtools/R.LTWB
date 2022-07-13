@@ -97,7 +97,7 @@ Listado de enlaces obtenidos
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N10W074_dem.tif
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N10W074_num.tif
 
-Copie los archivos descargados en la carpeta _.dem/ASTER_ del directorio _D:\R.LTWB_
+Copie los archivos con terminación _dem.tif_ en la carpeta _.dem/ASTER_ del directorio _D:\R.LTWB_
 
 > Tenga en cuenta que las imágenes obtenidas utilizan el sistema de referencia espacial geográfico GCS_WGS_1984 y que las elevaciones de cada celda o pixel corresponden a valores enteros en metros.
 
