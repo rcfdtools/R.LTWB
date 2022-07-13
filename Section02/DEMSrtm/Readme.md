@@ -234,7 +234,7 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 ![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
-En este momento ya dispone de una grilla integrada de elevación que cubre toda la zona de estudio y un mapa de representación de colinas.
+En este momento ya dispone de una grilla integrada de elevación SRTM que cubre toda la zona de estudio.
 
 
 ### Autores
@@ -264,7 +264,7 @@ En este momento ya dispone de una grilla integrada de elevación que cubre toda 
 
 | Versión     | Descripción                                         | Dedicación, hr |
 |-------------|-----------------------------------------------------|----------------|
-| 2022.07.13  | Creación de mosaico - Instrucciones en ArcGIS Pro.  | 1h             |
+| 2022.07.13  | Creación de mosaico - Instrucciones en ArcGIS Pro.  | 2h            |
 | 2022.07.12  | Versión inicial con descarga manual y con script.   | 1h             |
 
 
