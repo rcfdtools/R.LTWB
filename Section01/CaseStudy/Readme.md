@@ -278,8 +278,6 @@ Ahora dispone de un polígono que podrá utilizar como máscara de selección pa
 
 * Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de geoprocesamiento para disolución de polígonos y creación de polígonos envolventes.
 
-> Las herramientas computacionales requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
-
 
 ### Control de versiones
 

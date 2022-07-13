@@ -9,7 +9,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Establecer los requisitos académicos mínimos y listar algunos recursos complementarios para su nivelación.
 
 
-### Requerimientos computacionales
+### Requerimientos computacionales generales
 
 * ArcGIS for Desktop 10+ (opcional)
 * ArcGIS Pro 2+ (opcional)
@@ -18,6 +18,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * QGIS - Complemento: QGis2threejs
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 
+> Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
 
 ### Servicios y plataformas
 
