@@ -1,4 +1,4 @@
-## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m)
+    ## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m)
 Keywords: `NASA` `jpl` `SRTM` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMSrtm.png)
@@ -12,11 +12,11 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 * Descargar manualmente imágenes de terreno para la zona de estudio.
 * Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
-* Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
+* Crear y reproyectar el mosaico de terreno a partir de imágenes individuales obtenidas.
 
 > La resolución aproximada de los modelos digitales de elevación SRTM versión 3 es de 30 y 90 metros.
 
-> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y crear mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, diríjase a la clase [Descarga y procesamiento de modelos digitales de elevación ASTER](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
+> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y crear mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
 
 ### Requerimientos
@@ -86,8 +86,6 @@ Descomprima los archivos .zip descargados en la carpeta _.dem/SRTM_ del director
 
 5. Descarga mediante shell script .sh con Cygwin [^1]
 
-Con el propósito de realizar la descarga desde la consola de comandos a través de un script .sh, renombre la carpeta que contiene los archivos descargados manualmente desde Earthdata de .dem/SRTM a .dem/SRTM1 y cree una carpeta nueva vacía con el nombre .dem/SRTM.
-
 > Earthdata directions for Linux: You must first make the script an executable by running the line 'chmod 777 download.sh' from the command line. After that is complete, the file can be executed by typing './download.sh'. For a detailed walk through of this process, please reference this How To guide.
 
 > Earthdata directions for Windows: The file can be executed within Windows by first installing a Unix-like command line utility such as Cygwin. After installing Cygwin (or a similar utility), run the line 'chmod 777 download.sh' from the utility's command line, and then execute by typing './download.sh'.
@@ -97,7 +95,7 @@ Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la r
 * `chmod 777 'D:/R.LTWB/.src/downloadSRTM.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
 * `cd 'D:/R.LTWB/.dem/SRTM'` para ingresar al directorio ASTER de modelos digitales de elevación.
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
-* `'D:/R.LTWB/.src/downloadSRTM.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
+* `'D:/R.LTWB/.src/downloadSRTM.sh'` para ejecutar _downloadSRTM.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
@@ -222,51 +220,19 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 > Para conocer como realizar este procedimiento en ArcGIS for Desktop y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
 
-**Instrucciones en ArcGIS Pro (3.0.0)**
+#### Instrucciones en ArcGIS Pro (3.0.0)
 
-1. Abra el mapa ArcGISPro.aprx localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
+1. Abra el mapa ArcGISPro.aprx localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación SRTM v3 y agrupe como _DEM SRTM v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
-![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
+![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
-2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes. Nombre como _ASTGTMV003MosaicArcGISPro.tif_.
+2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes. Nombre como _SRTMV003MosaicArcGISPro.tif_.
 
-![ArcGISPro3.0.0MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
+![ArcGISPro3.0.0MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
 3. Simbolice el mosaico en modo de relieve sombreado o _Shaded Relief_ con _Z Scale Factor en 2_.
 
-![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
-
-4. En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_ y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
-
-![ArcGISPro3.0.0ElevationSourceLayer.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
-
-5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente se cargará una nueva capa denominada _Line Notes_.
-
-Seleccione la capa _Line Notes_, de clic en el menú _Edit_ y establezca en la sección _Elevation Mode - Surface_ y _Ground_.
-
-De clic en _Create_ y en el panel derecho de clic derecho sobre _Line Notes_ y seleccione _Properties_.
-
-En la ventana de propiedades, seleccione en el panel izquierdo _Tools_ y en _Densify Lines_ establezca 30 metros para que al dibujar la línea de muestreo se obtengan valores en cada pixel del MDE. Recuerde que el modelo digital de elevación tiene una resolución aproximada de 30 metros.
-
-![ArcGISPro3.0.0LineNotesSetup.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesSetup.png)
-
-En el panel de creación de entidades, seleccione la opción _Line_ y trace una línea en el sentido NW - SE del recuadro de la zona de estudio. La finalización de la línea de muestreo tomará algunos segundos debido a que corresponde a una línea 3D con múltiples nodos de acuerdo a la distancia de densificación indicada. En el menú _Edit_, de clic en _Save_ para terminar la edición de la capa.
-
-![ArcGISPro3.0.0LineNotesCreate.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesCreate.png)
-
-Con la línea seleccionada, en el panel _Contents_ ubicado a la izquierda, de clic derecho sobre la capa _Line Notes_, seleccione la opción _Create Chart - Profile Graph_.
-
-![ArcGISPro3.0.0LineNotesProfileGraph.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesProfileGraph.png)
-
-6. Para representación 3D, en el menú _Insert_ y en la sección _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
-
-En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_ y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_ como superficie de la escena.
-
-En la tabla de contenido o _Contents_, seleccione _Ground_ en _Elevation Surfaces_, luego en el menú _Elevation Surface Layer_ ingrese en el panel _Drawing_ un valor de 20 como _Vertical Exaggeration_. 
-
-Rote la escena utilizando clic sostenido de la rueda del mouse. Cambie la simbología primaria del DEM a _Shaded Relief_ y agregue el polígono de la zona de estudio.
-
-![ArcGISPro3.0.0Scene3D.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0Scene3D.png)
+![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
 En este momento ya dispone de una grilla integrada de elevación que cubre toda la zona de estudio y un mapa de representación de colinas.
 
@@ -278,13 +244,6 @@ En este momento ya dispone de una grilla integrada de elevación que cubre toda 
 
 ### Referencias
 
-* https://doi.org/10.5067/ASTER/ASTGTM.003
-* https://lpdaac.usgs.gov
-* https://asterweb.jpl.nasa.gov/
-* https://pro.arcgis.com/en/pro-app/2.8/help/mapping/navigation/profile-viewing.htm
-* https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/elevation-surfaces.htm
-* https://www.qgistutorials.com/en/docs/3/raster_mosaicing_and_clipping.html
-* [Using the Profile Tool plugin in QGIS](https://www.youtube.com/watch?v=UD0Oumv5y1w)
 * https://gdal.org/drivers/raster/srtmhgt.html
 * https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1.003
 * https://lpdaac.usgs.gov
@@ -296,16 +255,17 @@ En este momento ya dispone de una grilla integrada de elevación que cubre toda 
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de visualización 3D.
+* Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas para la creación de mosaicos o unión de imagenes.
 * Para la descarga puede utilizar cualquier navegador de Internet actualizado.
 * Descargas mediante script pueden ser realizadas en Linux, subsistemas de Linux para Windows o desde terminales emuladoras como Cygwin.
 
 
 ### Control de versiones
 
-| Versión    | Descripción                                                 | Dedicación, hr |
-|------------|-------------------------------------------------------------|----------------|
-| 2022.07.12 | Versión inicial con descarga manual y Creación de mosaico.  |             |
+| Versión     | Descripción                                         | Dedicación, hr |
+|-------------|-----------------------------------------------------|----------------|
+| 2022.07.13  | Creación de mosaico - Instrucciones en ArcGIS Pro.  | 1h             |
+| 2022.07.12  | Versión inicial con descarga manual y con script.   | 1h             |
 
 
 ### Licencia, cláusulas y condiciones de uso
