@@ -114,7 +114,7 @@ Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la r
 * `chmod 777 'D:/R.LTWB/.src/downloadASTER.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
 * `cd 'D:/R.LTWB/.dem/ASTER'` para ingresar al directorio ASTER de modelos digitales de elevación.
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
-* `'D:/R.LTWB/.src/downloadASTER.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
+* `'D:/R.LTWB/.src/downloadASTER.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem/ASTER_
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
@@ -291,7 +291,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
-1. Abra el mapa ArcGISPro.aprx localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
+1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
 ![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 

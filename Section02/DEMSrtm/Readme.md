@@ -95,7 +95,7 @@ Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la r
 * `chmod 777 'D:/R.LTWB/.src/downloadSRTM.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
 * `cd 'D:/R.LTWB/.dem/SRTM'` para ingresar al directorio ASTER de modelos digitales de elevación.
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
-* `'D:/R.LTWB/.src/downloadSRTM.sh'` para ejecutar _downloadSRTM.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem_
+* `'D:/R.LTWB/.src/downloadSRTM.sh'` para ejecutar _downloadSRTM.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem/SRTM_
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
@@ -222,7 +222,7 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
-1. Abra el mapa ArcGISPro.aprx localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación SRTM v3 y agrupe como _DEM SRTM v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
+1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación SRTM v3 y agrupe como _DEM SRTM v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
 ![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
@@ -250,12 +250,12 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 * https://www2.jpl.nasa.gov/srtm/index.html
 * [NASA Shuttle Radar Topography Mission Global 3 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C204582037-LPDAAC_ECS)
 * [NASA Shuttle Radar Topography Mission Global 3 arc second V003](https://search.earthdata.nasa.gov/search/granules?p=C204582034-LPDAAC_ECS)
-* [NASA Shuttle Radar Topography Mission Global 1 arc second number V003](NASA Shuttle Radar Topography Mission Global 1 arc second number V003)
+* [NASA Shuttle Radar Topography Mission Global 1 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C1000000260-LPDAAC_ECS)
 
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas para la creación de mosaicos o unión de imagenes.
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para la creación de mosaicos o unión de imágenes.
 * Para la descarga puede utilizar cualquier navegador de Internet actualizado.
 * Descargas mediante script pueden ser realizadas en Linux, subsistemas de Linux para Windows o desde terminales emuladoras como Cygwin.
 

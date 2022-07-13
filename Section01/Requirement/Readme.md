@@ -23,3 +23,17 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Conocimientos básicos en hidrología
 * Conocimientos básicos en programación usando Python
 
+### Configuración del sistema operativo
+
+
+### Instalación y configuración de ArcGIS for Desktop
+
+
+### Instalación y configuración de ArcGIS Pro
+
+
+### Instalación y configuración de QGIS
+
+
+### Instalación y configuración de Python con entornos virtuales
+
