@@ -1,11 +1,21 @@
-## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m)
-Keywords: `NASA` `SRTM` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
+## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5m)
+Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
-![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/DEMSrtm.png)
+![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/DEMAlos.png)
 
-Shuttle Radar Topography Mission (SRTM), dispone de mapas topográficos de alta resolución para uso público desde el año 2015 y pueden ser utilizados para la creación de los mapas de dirección y acumulación de flujo.
+ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
-A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encuentra disponible para descarga por el servidor EarthData de la NASA, buscar como "NASA Shuttle Radar Topography Mission Global 1 arc second V003".
+Especificaciones técnicas y modos de captura  
+| Detail             | Fine Resolution   | Fine Resolution   | ScanSAR           | Polarimetric      |
+|--------------------|-------------------|-------------------|-------------------|-------------------|
+| Beam Mode          | FBS, DSN          | FBD               | WB1, WB2          | PLR               |
+| Center Frequency   | L-Band (1.27 GHz) | L-Band (1.27 GHz) | L-Band (1.27 GHz) | L-Band (1.27 GHz) |
+| Polarization       | HH or VV          | HH+HV or VV+VH    | HH or VV          | HH+HV+VV+VH       |
+| Spatial Resolution | 10 m              | 20 m              | 100 m             | 30 m              |
+| Swath Width        | 70 km             | 70 km             | 250-350 km        | 30 km             |
+| Off-Nadir Angle    | 34.3° (default)   | 34.3° (default)   | 27.1° (default)   | 21.5° (default)   |
+
+> PALSAR no realiza captura de información por encima de la latitud 87.8° norte y 75.9° sur cuando el ángulo off-nadir es 41.5°.
 
 ### Objetivos
 
@@ -14,7 +24,7 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 
-> La resolución aproximada de los modelos digitales de elevación SRTM versión 3 es de 30 y 90 metros.
+> La resolución aproximada de los modelos digitales de elevación ALOS PALSAR en modo FBS es de 30 y 90 metros.
 
 > Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
@@ -279,4 +289,4 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 
 _¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
  
-[^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
+[^1]: https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/
