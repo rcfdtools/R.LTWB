@@ -12,11 +12,11 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 * Descargar manualmente imágenes de terreno para la zona de estudio.
 * Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
-* Crear y reproyectar el mosaico de terreno a partir de imágenes individuales obtenidas.
+* Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 
 > La resolución aproximada de los modelos digitales de elevación SRTM versión 3 es de 30 y 90 metros.
 
-> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y crear mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
+> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
 
 ### Requerimientos
