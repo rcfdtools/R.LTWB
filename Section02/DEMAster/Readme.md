@@ -37,7 +37,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
-> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_. [(Ver instrucciones detalladas.)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation)
+> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas.)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation)
 
 2. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
@@ -59,7 +59,7 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 > Para búsquedas a partir de la opción rectangle especificando las coordenadas, p. ej. SW: 7,-75 NE: 11,-72 se resta internamente 0.1 grados alrededor del rectángulo SW: 7.1,-74.9 NE: 10.9,-72.1. Lo anterior para seleccionar únicamente las cuadrículas internas.
 
-3. En la casilla de búsqueda ingresar _ASTER Global Digital Elevation Model V003_. Para la zona de estudio, es necesario descargar 9 cuadrículas.
+3. En la casilla de búsqueda ingresar **ASTER Global Digital Elevation Model V003**. Para la zona de estudio, es necesario descargar 9 cuadrículas.
 
 Como puede observar, las cuadrículas son ortogonales y no contienen traslapos debido a que corresponde a un modelo ya procesado y recortado. Para la zona de estudio, la información del modelo digital de elevación ha sido obtenida, procesada e integrada desde 2000.03.01 hasta 2013.11.30.
 
