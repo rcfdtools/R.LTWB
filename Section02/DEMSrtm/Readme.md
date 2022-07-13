@@ -1,5 +1,5 @@
-    ## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m)
-Keywords: `NASA` `jpl` `SRTM` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
+## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m)
+Keywords: `NASA` `SRTM` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
 ![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMSrtm.png)
 
