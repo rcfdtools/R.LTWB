@@ -423,12 +423,12 @@ En este momento ya dispone de una grilla integrada de elevación ASTER que cubre
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                          | Dedicación, hr |
-|-------------|----------------------------------------------------------------------------------------------------------------------|----------------|
-| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                | 1              |
-| 2022.07.11  | Creación de mosaico, visualización y representación 3D - Instrucciones en QGIS.                                      | 3              |
-| 2022.07.10  | Creación de mosaico, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro.  | 5              |
-| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata. | 7.5            |
+| Versión     | Descripción                                                                                                                       | Dedicación, hr |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------|----------------|
+| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                             | 1              |
+| 2022.07.11  | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en QGIS.                                     | 3              |
+| 2022.07.10  | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro. | 5              |
+| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata.              | 7.5            |
 
 
 ### Licencia, cláusulas y condiciones de uso
