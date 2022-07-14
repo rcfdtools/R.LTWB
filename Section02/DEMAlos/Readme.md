@@ -332,7 +332,7 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 
 | Versión     | Descripción                                                                                                         | Dedicación, hr |
 |-------------|---------------------------------------------------------------------------------------------------------------------|----------------|
-| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. |               |
+| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | 3              |
 
 
 ### Licencia, cláusulas y condiciones de uso
