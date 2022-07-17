@@ -1,5 +1,3 @@
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
 <div align="center">
   <br>
   <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg" width="250px">
@@ -25,4 +23,4 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) |
 |------------------------|
 
-_¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en_ <a class="github-button" href="https://github.com/rcfdtools" data-show-count="true" aria-label="Follow @rcfdtools on GitHub">Follow @rcfdtools</a>
+_¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón [Follow](https://github.com/rcfdtools)_
