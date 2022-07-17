@@ -7,15 +7,17 @@
 
 ## GitHub reference clone file
 
-Hydrology course  
+En esta carpeta encontrará una copia de la carpeta clonada de diferentes repositorios utilizados como referencia.  
+
+Hydrology course (2022.07.15)  
 https://github.com/bikasbhattarai/Course-work-and-data-analysis  
 File: Course-work-and-data-analysis-master.zip  
 
-Engineering Hydrology Notebooks  
+Engineering Hydrology Notebooks (2022.07.15)  
 https://github.com/dankovacek/Engineering_Hydrology_Notebooks  
 File: Engineering_Hydrology_Notebooks-main.zip  
 
-Python in Hydrology  
+Python in Hydrology (2022.07.15)
 https://github.com/livingworld/Python-in-Hydrology  
 File: Python-in-Hydrology-master.zip  
 
