@@ -7,17 +7,17 @@
 
 ## GitHub reference clone file
 
-Hydrology course
-https://github.com/bikasbhattarai/Course-work-and-data-analysis
-File: Course-work-and-data-analysis-master.zip
+Hydrology course  
+https://github.com/bikasbhattarai/Course-work-and-data-analysis  
+File: Course-work-and-data-analysis-master.zip  
 
-Engineering Hydrology Notebooks
-https://github.com/dankovacek/Engineering_Hydrology_Notebooks
-File: Engineering_Hydrology_Notebooks-main.zip
+Engineering Hydrology Notebooks  
+https://github.com/dankovacek/Engineering_Hydrology_Notebooks  
+File: Engineering_Hydrology_Notebooks-main.zip  
 
-Python in Hydrology
-https://github.com/livingworld/Python-in-Hydrology
-File: Python-in-Hydrology-master.zip
+Python in Hydrology  
+https://github.com/livingworld/Python-in-Hydrology  
+File: Python-in-Hydrology-master.zip  
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
