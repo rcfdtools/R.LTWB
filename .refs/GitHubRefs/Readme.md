@@ -9,17 +9,11 @@
 
 En esta carpeta encontrará una copia de la carpeta clonada de diferentes repositorios utilizados como referencia.  
 
-Hydrology course (2022.07.15)  
-https://github.com/bikasbhattarai/Course-work-and-data-analysis  
-File: Course-work-and-data-analysis-master.zip  
-
-Engineering Hydrology Notebooks (2022.07.15)  
-https://github.com/dankovacek/Engineering_Hydrology_Notebooks  
-File: Engineering_Hydrology_Notebooks-main.zip  
-
-Python in Hydrology (2022.07.15)
-https://github.com/livingworld/Python-in-Hydrology  
-File: Python-in-Hydrology-master.zip  
+| Repositorio                                  | Enlace                                                          | Archivo                                  |
+|----------------------------------------------|-----------------------------------------------------------------|------------------------------------------|
+| Hydrology course (2022.07.15)                | https://github.com/bikasbhattarai/Course-work-and-data-analysis | Course-work-and-data-analysis-master.zip |
+| Engineering Hydrology Notebooks (2022.07.15) | https://github.com/dankovacek/Engineering_Hydrology_Notebooks   | Engineering_Hydrology_Notebooks-main.zip |
+| Python in Hydrology (2022.07.15)             | https://github.com/livingworld/Python-in-Hydrology              | Python-in-Hydrology-master.zip           |
 
 > Consulte la licencia de uso particular de cada repositorio clonado directamente en cada enlace.
 
