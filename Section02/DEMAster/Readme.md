@@ -295,7 +295,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
-2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes. Nombre como _ASTGTMV003MosaicArcGISPro.tif_.
+2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _ASTGTMV003MosaicArcGISPro.tif_.
 
 ![ArcGISPro3.0.0MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
