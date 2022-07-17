@@ -1,7 +1,7 @@
 ## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5m)
 Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
-![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/DEMAlos.png)
+![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/DEMAlos.png)
 
 ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
