@@ -19,6 +19,7 @@ Python in Hydrology
 https://github.com/livingworld/Python-in-Hydrology  
 File: Python-in-Hydrology-master.zip  
 
+> Consulte la licencia de uso particular de cada repositorio clonado directamente en cada enlace.
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
