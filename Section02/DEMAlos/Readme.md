@@ -65,15 +65,17 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 3. En la casilla de búsqueda ingresar **ALOS_PALSAR_RTC_HIGH_RES** para descargas en resolución de 12.5 metros. Para la zona de estudio, es necesario descargar 38 cuadrículas.
 
-En el panel izquierdo, definir el rango de fechas requerido, para la zona de estudio utilizaremos las últimas trayectorias obtenidas entre el 01 de enero y el 22 de marzo de 2011.
+En el panel izquierdo, definir el rango de fechas requerido, para la zona de estudio utilizaremos las últimas trayectorias obtenidas entre el 10 de febrero y el 22 de marzo de 2011.
 
-Como puede observar, las cuadrículas no son ortogonales y contienen traslapos debido a que corresponde a un modelo no integrado y recortado por cuadrantes de 1 grado. 
+Como puede observar, las cuadrículas contienen traslapos debido a que corresponde a un modelo no integrado y recortado por cuadrantes de 1 grado. 
 
 ![EarthdataSearchResults.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchResults.png)
 
 Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11km x 111.11km de superficie.
 
-4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 38 archivos requeridos que tienen un peso aproximado de 8.8 GB (222 MB por archivo comprimido y 71 MB para cada archivo .dem.tif aproximadamente) y de clic en _Done_ y _Download Data_.
+4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 23 archivos requeridos que tienen un peso aproximado de 5.3 GB (222 MB por archivo comprimido y 71 MB para cada archivo .dem.tif aproximadamente) y de clic en _Done_ y _Download Data_.
+
+> Para la zona de estudio utilizaremos las 18 imágenes más recientes correspondientes a las secuencias ALPSRP27381, ALPSRP27308, ALPSRP27133, ALPSRP26885.
 
 ![EarthdataSearchDirectDownload.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownload.png)
 
@@ -85,7 +87,6 @@ Listado de enlaces obtenidos
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0170_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0160_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0150_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0200_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0190_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0180_RT1.zip
@@ -96,30 +97,11 @@ Listado de enlaces obtenidos
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0180_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0170_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0160_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0150_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0200_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0190_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0200_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0190_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0180_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0170_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0160_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0150_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26731_FBS_F3440_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26702_FBS_F3430_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0200_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0190_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0180_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0170_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0160_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0200_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0190_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0180_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0170_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0160_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0150_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0200_RT1.zip
-* https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0190_RT1.zip
 
 De los archivos .zip obtenidos, descomprima las imágenes con terminación _.dem.tif_ en la carpeta _.dem/ALOS_ del directorio _D:\R.LTWB_
 
@@ -246,7 +228,6 @@ fetch_urls <<'EDSCEOF'
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0170_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0160_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0150_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0200_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0190_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27308_FBS_F0180_RT1.zip
@@ -257,30 +238,11 @@ https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0190_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0180_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0170_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0160_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27133_FBS_F0150_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0200_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27060_FBS_F0190_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0200_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0190_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0180_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0170_RT1.zip
 https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0160_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26885_FBS_F0150_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26731_FBS_F3440_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26702_FBS_F3430_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0200_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0190_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0180_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0170_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26637_FBS_F0160_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0200_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0190_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0180_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0170_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0160_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26462_FBS_F0150_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0200_RT1.zip
-https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_26389_FBS_F0190_RT1.zip
 EDSCEOF
 ```
 > Modificando el listado de hiperenlaces contenido al final del script download.sh en la sección _fetch_urls_, podrá ingresar los cuadrantes requeridos para cualquier zona del mundo y realizar la descarga masiva de estos archivos.

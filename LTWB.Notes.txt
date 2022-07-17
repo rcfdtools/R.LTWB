@@ -12,6 +12,7 @@ Clone local directory D:\R.LTWB.wiki
 
 Pending tasks
     Remove personal name from all the ArcGIS Pro screenshots.
+    Check Visual Studio Code integration with GitHUB.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, punctual.
 	Recalculate stations elevation.
@@ -22,3 +23,13 @@ Pending tasks
 	Python script for flow direction conversion HEC-HMS to ArcGIS.
 	Table with hydrological parameters per categories.
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+
+
+
+
+ALOS_PALSAR_RTC_HIGH_RES
+
+General update.
+
+DEM SRTM update.
+ArcGIS Pro processing.
