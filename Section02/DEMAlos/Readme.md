@@ -308,6 +308,6 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 | [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]()  |
 |------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
 
-_¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐_
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
  
 [^1]: https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/
