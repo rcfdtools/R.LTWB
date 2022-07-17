@@ -11,9 +11,8 @@ Esta carpeta contiene la iconografía general de este repositorio.
 
 | Icono                                                                                   | Descripción                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------|
-| [Cygwin.png]https://www.pngwing.com/)                                                   | [Cygwin shell terminal](https://www.cygwin.com/)           |
+| [Cygwin.png](https://www.pngwing.com/)                                                  | [Cygwin shell terminal](https://www.cygwin.com/)           |
 | [NASA.png](https://www.pngwing.com/)                                                    | [NASA](https://www.nasa.gov/)                              |
-| [LTWB_Corner.png](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/LTWB_Corner.png) | R.LTWB logo, creación propia.                              |
 | [LTWB_Corner.png](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/LTWB_Corner.png) | R.LTWB texto esquina superior derecha, creación propia.    |
 | [LTWB_Corner.svg](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg)      | R.LTWB vector logo, creación propia.                       |
 | [LTWB_Corner.cdr](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.cdr)      | R.LTWB vector logo fuente CorelDraw 2021, creación propia. |
