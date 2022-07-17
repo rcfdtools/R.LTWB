@@ -83,7 +83,7 @@ En la ventana de descarga de clic derecho y seleccione la opción _Open link in 
 
 ![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownloadLink.png)
 
-Listado de enlaces obtenidos  
+Listado de enlaces requeridos  
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0170_RT1.zip
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0160_RT1.zip
@@ -256,11 +256,13 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
-1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación SRTM v3 y agrupe como _DEM SRTM v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
+1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 18 imágenes del modelo de elevación ALOS PALSAR y agrupe como _ALOS PALSAR_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
-![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
+![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
-2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes. Nombre como _SRTMV003MosaicArcGISPro.tif_.
+2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _APFBSRT1MosaicArcGISPro.tif_.
+
+> Debido a que las imágenes utilizadas se traslapan, en la herramienta de geoprocesamiento _Mosaic to New Raster_ es necesario seleccionar el operador de mosaico `Mean` para obtener el promedio de las elevaciones en cada celda.
 
 ![ArcGISPro3.0.0MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
@@ -268,7 +270,7 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 ![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
-En este momento ya dispone de una grilla integrada de elevación SRTM que cubre toda la zona de estudio.
+En este momento ya dispone de una grilla integrada de elevación ALOS PALSAR que cubre toda la zona de estudio.
 
 
 ### Autores
