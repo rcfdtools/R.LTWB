@@ -21,6 +21,6 @@ R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusul
 
 
 | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) |
-|------------------------|
+|----------------------------------------------------|
 
-_¡Encontraste útil este microcontenido!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
