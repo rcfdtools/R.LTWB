@@ -15,12 +15,9 @@ Esta carpeta contiene las grillas base y grillas producidas en el desarrollo del
 | [SRTM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/SRTM)   | ASTGTMV003Mosaic.tif         | Mosaico modelo digital de elevación ASTER v3c comprimido como SRTMV003MosaicArcGISPro.part1.rar, SRTMV003MosaicArcGISPro.part2.rar                                                                                                          | [Ir](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)  |
 
 
-### Licencia, cláusulas y condiciones de uso
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
-R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License).
-
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) |
 |----------------------------------------------------|
-
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._

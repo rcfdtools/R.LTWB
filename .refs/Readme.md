@@ -21,12 +21,9 @@ Esta carpeta contiene los archivos de documentos y artículos de uso libre desca
 | [EDA by Andrew D.pdf](https://github.com/rcfdtools/R.LTWB/blob/main/.refs/EDA%20by%20Andrew%20D.pdf)                                     | [Exploratory Data Analysis in Python — A Step-by-Step Process](https://towardsdatascience.com/exploratory-data-analysis-in-python-a-step-by-step-process-d0dfa6bf94ee)                                                                                                                                                                                    |
 
 
-### Licencia, cláusulas y condiciones de uso
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
-R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License).
-
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) |
 |----------------------------------------------------|
-
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
