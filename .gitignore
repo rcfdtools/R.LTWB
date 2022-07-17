@@ -1,6 +1,9 @@
 # Ignore files for push...
+
+# General advice
+# Before put large files over 100MB, you have to include the path and name here on .gitignore.
+# Alert: when you create large files they can appear into the Commit main panel for push and the GitHub server can get you an error and stop the file load and the push. You can drop de commit, exlude de files or move large files to another directory and then make a Push. After the Push be done, you can move back the large files to the original folder. Before made a commit drop is recommended get a copy of your local repository for prevent data lost.
 # Large files over 100MB have be compress in 95MB file parts.
-# r.cfdtools advice: when you create large files, they can appear in the Commit to main panel, after exclude the files here in .gitignore, you can move the large files to another directory and then make a Push. After the Push be done, you can move back the large files to the original folder.
 
 # General exclusions
 #.gitignore
