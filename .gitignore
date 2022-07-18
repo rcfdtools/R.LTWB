@@ -7,6 +7,7 @@
 
 # General exclusions
 #.gitignore
+.git/
 .idea/
 venv/
 .temp/HECHMS_v0/
