@@ -1,7 +1,7 @@
 ## Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
-Keywords: `IGAC` `GDB` `1:250000`
+Keywords: `IGAC` `GDB` `1:100000` `Pairwise Clip` `Clip`
 
-![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB25k/Screenshot/GDB25k.png)
+![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/GDB25k.png)
 
 Para los procesos de reacondicionamiento del modelo de terreno que garantice el flujo de todas las celdas del modelo hacia las celdas específicas de la red de drenaje, es necesaria la descarga y complementación de las líneas de drenaje pertenecientes a la zona de estudio.
 
@@ -17,27 +17,31 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 
 ### Requerimientos
 
-* ArcGIS Pro 2+
+* ArcGIS for Desktop 10+ (opcional)
+* ArcGIS Pro 2+ (opcional)
+* QGIS 3+ (opcional)
 
 
 ### Procedimiento de descarga
 
-1. Ingrese al portal https://www.colombiaenmapas.gov.co/, en temática seleccione _Cartografía Básica_ y busque _Base de datos vectorial básica. Colombia. Escala 1:100.000_  de año 2022. En la parte inferior del _Detalle del Servicio_ seleccione en _Formato de descarga_ `Geodatabase` y de clic en _Descargar_, automáticamente iniciará la descarga a través de una orden de servicio. La GDB comprimida tiene un tamaño aproximado de 665 MB.
+1. Ingrese al portal https://www.colombiaenmapas.gov.co/, en temática seleccione _Cartografía Básica_ y busque _Base de datos vectorial básica. Colombia. Escala 1:100.000_ del año 2022. En la parte inferior del _Detalle del Servicio_ seleccione en _Formato de descarga_ `Geodatabase` y de clic en _Descargar_, automáticamente iniciará la descarga a través de una orden de servicio. La GDB comprimida tiene un tamaño aproximado de 665 MB.
 
-![IGACGDB100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB25k/Screenshot/IGACGDB100k.png)
+![IGACGDB100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACGDB100k.png)
 
-2. Descomprima la base de datos geográfica en la carpeta de descargas, cree un mapa nuevo en blanco en ArcGIS for Desktop o en ArcGIS Pro, agregue el mapa base _World Light Gray Canvas Base_ y desde el dataset `Superficies_Agua`, agregue la capa `Drenaje_Sencillo`.
+2. Descomprima la base de datos geográfica en la carpeta de descargas, abra el mapa D:\R.LTWB\.map\R.LTWB.mxd de ArcGIS for Desktop o D:\R.LTWB\.map\ArcGISPro\ArcGISPro.aprx de ArcGIS Pro, agregue el mapa base _World Light Gray Canvas Base_ y desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Sencillo_. Podrá observar que la capa se simboliza automáticamente en drenajes _Permanentes_ e _Intermitentes_ a partir del dominio _Estado_Drenaje_. La versión descargada contiene 426964 entidades para todo el territorio nacional.
 
-![IGACDrenajeSencillo100k.png]https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB25k/Screenshot/IGACDrenajeSencillo100k.png)
+![IGACDrenajeSencillo100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100k.png)
 
-3. Utilizando la herramienta de geoprocesamiento _Clip_ recorte la clase de entidad _Drenaje_Sencillo_ en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre Drenaje_Sencillo.shp. La versión descargada contiene xxxx entidades para todo el territorio nacional y xxxx tramos dentro de la zona de estudio.
+3. Utilizando la herramienta de geoprocesamiento _Clip_ recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _DrenajeSencilloIGAC100kZE.shp_. Para el recorte utilice el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
 
-![IGACDrenajeSencillo100kExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB25k/Screenshot/IGACDrenajeSencillo100kExport.png)
+> En ArcGIS Pro puede utilizar también la herramienta _Pairwise Clip_ que contiene funcionalidades extendidas de la herramienta _Clip_.
+
+![IGACDrenajeSencillo100kExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEClip.png)
 
 > Para el desarrollo del caso de estudio no se ha utilizado la digitalización de la Base de datos vectorial básica - Colombia a Escala 1:25.000 del año 2018 debido a que aún no se encuentran todas las planchas del país digitalizadas y almacenadas en la GDB disponible para descarga como se muestra en la siguiente imagen.
 
 Información disponible a escala 1:25k
-![IGACGDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB25k/Screenshot/IGACGDB25k.png)
+![IGACGDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACGDB25k.png)
 
 Catálogo de objetos en Drenaje_Sencillo para capa en formato Shapefile
 
