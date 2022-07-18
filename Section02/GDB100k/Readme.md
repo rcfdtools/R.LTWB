@@ -1,7 +1,7 @@
 ## Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
 Keywords: `IGAC` `GDB` `1:100000` `Pairwise Clip` `Clip`
 
-![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/GDB25k.png)
+![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/GDB25k.png)
 
 Para los procesos de reacondicionamiento del modelo de terreno que garantice el flujo de todas las celdas del modelo hacia las celdas específicas de la red de drenaje, es necesaria la descarga y complementación de las líneas de drenaje pertenecientes a la zona de estudio.
 
