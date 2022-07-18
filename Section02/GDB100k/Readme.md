@@ -71,7 +71,7 @@ Estado de drenajes - Subtipos
 | 5101               | Permanente   | 
 | 5102               | Intermitente |
 
-4. Desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Doble_ y con la herramienta _Clip_ realice el recorte hasta el polígono envolvente de la zona de estudio y nombre como _DrenajeDobleIGAC100kZE.shp_
+4. Desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Doble_ y con la herramienta _Clip_ realice el recorte hasta el polígono envolvente de la zona de estudio y nombre como _DrenajeDobleIGAC100kZE.shp_. Para el caso de estudio y la versión descargada hemos obtenido 61 polígonos.
 
 > Los drenajes dobles corresponden a superficies de agua digitalizadas como polígonos y son requeridos para completar la red de drenajes sencillos que será utilizada en el reacondicionamiento del modelo digital de elevación. 
 
@@ -89,7 +89,23 @@ Estado de drenajes - Subtipos
 
 ![IGACDrenajeDoble100kZECenterlineExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeDoble100kZECenterlineExport.png)
 
-7. Realice la unión de la capa de drenajes sencillos y las líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Merge_ y nombre la capa como _DrenajeSencilloIGAC100kZEMerge.shp_.  
+7. Realice la unión de la capa de drenajes sencillos y las líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Data Management Tools / Merge_ y nombre la capa como _DrenajeSencilloIGAC100kZEMerge.shp_.
+
+![IGACDrenajeSencillo100kZEMerge.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEMerge.png)
+
+> En ArcGIS for Desktop utilice la herramienta _Merge_ disponible en el menú _Geoprocessing_.
+
+> En QGIS utilice la herramienta xxxxxxxxxxxxxxxxx. 
+
+8. Utilizando el editor geográfico, conecte o extienda manualmente las líneas de drenajes sencillos hasta el eje central de los drenajes dobles. 
+
+En la tabla de contenido de clic en List By Selection y únicamente active la capa _DrenajeSencilloIGAC100kZEMerge.shp_. Para facilitar la edición, en la visualización utilice como referencia de localización los tramos principales de la capa _DrenajeDobleIGAC100kZECenterline.shp_ 
+
+![IGACDrenajeSencillo100kZEListBySelection.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEListBySelection.png)
+
+En ArcGIS Pro, seleccione en la tabla de contenidos o _Contents_ la capa _DrenajeSencilloIGAC100kZEMerge.shp_ y en el Menú _Edit_ de clic en _Modify_ y seleccione la opción .
+
+
 
 
 7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes.
