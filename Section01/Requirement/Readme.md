@@ -51,7 +51,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Autores
 
-* Creado por @rcfdtools
+* Creado por [rcfdtools](https://github.com/rcfdtools)
 
 
 ### Referencias
