@@ -47,13 +47,6 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 ### Instalación y configuración de Python con entornos virtuales
 
 
-
-
-### Autores
-
-* Creado por [rcfdtools](https://github.com/rcfdtools)
-
-
 ### Referencias
 
 * 
@@ -66,9 +59,9 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Control de versiones
 
-| Versión     | Descripción                                             | Autor                                      | Dedicación, hr |
-|-------------|---------------------------------------------------------|--------------------------------------------|:--------------:|
-| 2022.07.13  | Versión inicial con lista preliminar de requerimientos. | [rcfdtools](https://github.com/rcfdtools)  |      0.5       |
+| Versión     | Descripción                                              | Autor                                      | Dedicación, hr |
+|-------------|:---------------------------------------------------------|--------------------------------------------|:--------------:|
+| 2022.07.13  | Versión inicial con lista preliminar de requerimientos.  | [rcfdtools](https://github.com/rcfdtools)  |      0.5       |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
