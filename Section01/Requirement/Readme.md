@@ -59,7 +59,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Control de versiones
 
-| Versión     | Descripción                                              | Autor                                      | Dedicación, hr |
+| Versión     | Descripción                                              | Autor                                      | Tiempo, hr |
 |-------------|:---------------------------------------------------------|--------------------------------------------|:--------------:|
 | 2022.07.13  | Versión inicial con lista preliminar de requerimientos.  | [rcfdtools](https://github.com/rcfdtools)  |      0.5       |
 
