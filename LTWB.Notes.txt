@@ -14,7 +14,7 @@ Pending tasks
     Remove personal name from all the ArcGIS Pro screenshots.
     Check Visual Studio Code integration with GitHUB.
     Map layout with Hydrological zones and granules.
-	Hydrological scales: mundial, regional, zonal, local, punctual.
+	Hydrological scales: mundial, regional, zonal, local, puntual.
 	Recalculate stations elevation.
 	Series hypothetical duration and time-window evaluation.
 	Create a table with the variables by any station category.
@@ -22,14 +22,9 @@ Pending tasks
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
 	Python script for flow direction conversion HEC-HMS to ArcGIS.
 	Table with hydrological parameters per categories.
+	Correlation test for weather variables.
+	Stations density.
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
 
-
-
-ALOS_PALSAR_RTC_HIGH_RES
-
 General update.
-
-DEM SRTM update.
-ArcGIS Pro processing.

@@ -51,7 +51,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Autores
 
-* Creado por [rcfdtools](https://github.com/rcfdtools)
+* Creado por @rcfdtools
 
 
 ### Referencias
@@ -68,7 +68,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 | Versión     | Descripción                                             | Dedicación, hr |
 |-------------|---------------------------------------------------------|----------------|
-| 2022.07.13  | Versión inicial con lista preliminar de requerimientos. | 0.5          |
+| 2022.07.13  | Versión inicial con lista preliminar de requerimientos. | 0.5            |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
