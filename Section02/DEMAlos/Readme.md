@@ -273,11 +273,6 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 En este momento ya dispone de una grilla integrada de elevación ALOS PALSAR que cubre toda la zona de estudio.
 
 
-### Autores
-
-* Creado por r.cfdtools@gmail.com
-
-
 ### Referencias
 
 * [ALOS_PALSAR_LEVEL1.0](https://search.earthdata.nasa.gov/search/granules?p=C1206485320-ASF)
@@ -294,10 +289,10 @@ En este momento ya dispone de una grilla integrada de elevación ALOS PALSAR que
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                          | Dedicación, hr |
-|-------------|----------------------------------------------------------------------------------------------------------------------|----------------|
-| 2022.07.17  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro.  | 2              |
-| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro.  | 3              |
+| Versión     | Descripción                                                                                                          | Autor                                      | Horas |
+|-------------|:---------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.17  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro.  | [rcfdtools](https://github.com/rcfdtools)  |   3   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._

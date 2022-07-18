@@ -394,11 +394,6 @@ En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Too
 En este momento ya dispone de una grilla integrada de elevación ASTER que cubre toda la zona de estudio y un mapa de representación de colinas.
 
 
-### Autores
-
-* Creado por r.cfdtools@gmail.com
-
-
 ### Referencias
 
 * https://doi.org/10.5067/ASTER/ASTGTM.003
@@ -423,12 +418,12 @@ En este momento ya dispone de una grilla integrada de elevación ASTER que cubre
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                                       | Dedicación, hr |
-|-------------|-----------------------------------------------------------------------------------------------------------------------------------|----------------|
-| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                             | 1              |
-| 2022.07.11  | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en QGIS.                                     | 3              |
-| 2022.07.10  | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro. | 5              |
-| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata.              | 7.5            |
+| Versión     | Descripción                                                                                                                       | Autor                                     | Horas |
+|-------------|:----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.07.12  | Creación de mapa de sombreado de colinas - Hillshade.                                                                             | [rcfdtools](https://github.com/rcfdtools) |   1   |
+| 2022.07.11  | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en QGIS.                                     | [rcfdtools](https://github.com/rcfdtools) |   3   |
+| 2022.07.10  | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools) |   5   |
+| 2022.07.09  | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata.              | [rcfdtools](https://github.com/rcfdtools) |  7.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
