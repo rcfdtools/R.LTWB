@@ -118,7 +118,7 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 ![IGACDrenajeSencillo100kZELoop.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZELoop.png)
 
-7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes.
+7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, p. ej. en el casco urbano de Valledupar.
 
 
 ### Referencias
@@ -140,9 +140,9 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 ### Control de versiones
 
-| Versión     | Descripción                                                             | Autor                                      | Horas |
-|-------------|:------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.17  | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000. | [rcfdtools](https://github.com/rcfdtools)  |  x   |
+| Versión     | Descripción                                                               | Autor                                      | Horas |
+|-------------|:--------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.17  | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000, . | [rcfdtools](https://github.com/rcfdtools)  |  x   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
