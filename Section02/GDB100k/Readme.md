@@ -89,7 +89,7 @@ Estado de drenajes - Subtipos
 
 ![IGACDrenajeDoble100kZECenterlineExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeDoble100kZECenterlineExport.png)
 
-7. Realice la unión de la capa de drenajes sencillos y líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Merge_ y nombre la capa como _DrenajeSencilloIGAC100kZEMerge.shp_.  
+7. Realice la unión de la capa de drenajes sencillos y las líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Merge_ y nombre la capa como _DrenajeSencilloIGAC100kZEMerge.shp_.  
 
 
 7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes.
