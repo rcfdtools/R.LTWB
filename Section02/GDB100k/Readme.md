@@ -15,6 +15,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * Conocer el catálogo de objetos de la clase de entidad Drenaje_Sencillo del IGAC.
 * Conocer los subtipos asociados al dominio de estados de drenaje del IGAC.
 * Completar las redes de drenaje por ausencia de planchas catastrales.
+* Extender los tramos de drenajes sencillos hasta el eje central de drenajes dobles.
 
 
 ### Requerimientos
@@ -99,14 +100,23 @@ Estado de drenajes - Subtipos
 
 8. Utilizando el editor geográfico, conecte o extienda manualmente las líneas de drenajes sencillos hasta el eje central de los drenajes dobles. 
 
+> La extensión y conectividad de los tramos de drenajes sencillos hasta el eje central de los tramos de drenajes dobles es vital para garantizar que la acumulación de flujo por los cauces principales se realice de forma correcta. 
+
 En la tabla de contenido de clic en List By Selection y únicamente active la capa _DrenajeSencilloIGAC100kZEMerge.shp_. Para facilitar la edición, en la visualización utilice como referencia de localización los tramos principales de la capa _DrenajeDobleIGAC100kZECenterline.shp_ 
 
 ![IGACDrenajeSencillo100kZEListBySelection.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEListBySelection.png)
 
-En ArcGIS Pro, seleccione en la tabla de contenidos o _Contents_ la capa _DrenajeSencilloIGAC100kZEMerge.shp_ y en el Menú _Edit_ de clic en _Modify_ y seleccione la opción .
+En ArcGIS Pro, seleccione en la tabla de contenidos o _Contents_ la capa _DrenajeSencilloIGAC100kZEMerge.shp_ y en el Menú _Edit_ de clic en _Modify_ y seleccione la opción _Extend or Trim_. 
 
+![IGACDrenajeSencillo100kZEExtend.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEExtend.png)
 
+Extienda una a una las líneas laterales hasta el drenaje principal y conecte manualmente los tramos iniciales a través de la edición de los vértices. Rotule la capa utilizando el campo _NOMBRE_GEO_. Verifique y realice este procedimiento sobre toda la red y al finalizar de clic en el menú _Edit / Save_.
 
+![IGACDrenajeSencillo100kZEExtend1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEExtend1.png)
+
+> Tenga en cuenta que pueden existir bucles en la red de drenaje correspondientes a tramos que se interconectan entre sí. Esto puede causar errores en los procesos de acumulación de flujo por lo que es conveniente evaluar a partir de imágenes satelitales, cuál es el tramo dominante y proceder manualmente a editar y a abrir estos bucles.  
+
+![IGACDrenajeSencillo100kZELoop.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZELoop.png)
 
 7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes.
 
