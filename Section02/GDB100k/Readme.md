@@ -12,6 +12,8 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 
 * Descargar la GDB IGAC a escala 1:100.000
 * Identificar las redes de drenaje de la zona de estudio.
+* Conocer el catálogo de objetos de la clase de entidad Drenaje_Sencillo del IGAC.
+* Conocer los subtipos asociados al dominio de estados de drenaje del IGAC.
 * Completar las redes de drenaje por ausencia de planchas catastrales.
 
 
@@ -32,9 +34,11 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 
 ![IGACDrenajeSencillo100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100k.png)
 
-3. Utilizando la herramienta de geoprocesamiento _Clip_ recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _DrenajeSencilloIGAC100kZE.shp_. Para el recorte utilice el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
+3. Utilizando la herramienta de geoprocesamiento _Clip_ recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _DrenajeSencilloIGAC100kZE.shp_. Para el recorte, use como máscara el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
 
 > En ArcGIS Pro puede utilizar también la herramienta _Pairwise Clip_ que contiene funcionalidades extendidas de la herramienta _Clip_.
+
+> En QGIS, utilice la herramienta _Processing Toolbox / Vector overlay / Clip_. 
 
 ![IGACDrenajeSencillo100kExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACDrenajeSencillo100kZEClip.png)
 
@@ -67,7 +71,7 @@ Estado de drenajes - Subtipos
 | 5101               | Permanente   | 
 | 5102               | Intermitente |
 
-4. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de los drenajes.
+4. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes.
 
 
 ### Referencias
