@@ -20,9 +20,9 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 
 ### Requerimientos
 
-* ArcGIS for Desktop 10+ (opcional)
-* ArcGIS Pro (opcional)
-* QGIS 3+ (opcional)
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
+* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
+* [QGIS 3+](https://qgis.org/) (opcional)
 
 
 ### Alcance

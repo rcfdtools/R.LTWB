@@ -23,11 +23,11 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 ### Requerimientos
 
-* ArcGIS for Desktop 10+ (opcional)
-* ArcGIS Pro 2+ (opcional)
-* QGIS 3+ (opcional)
-* QGIS - Complemento: Profile tool
-* QGIS - Complemento: QGis2threejs
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
+* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
+* [QGIS 3+](https://qgis.org/) (opcional)
+* QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
+* QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario [NASA Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation).
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [(.shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).

@@ -20,9 +20,9 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 
 ### Requerimientos
 
-* ArcGIS for Desktop 10+ (opcional)
-* ArcGIS Pro 2+ (opcional)
-* QGIS 3+ (opcional)
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
+* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
+* [QGIS 3+](https://qgis.org/) (opcional)
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) [(.shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp).
 
 

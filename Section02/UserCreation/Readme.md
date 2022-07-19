@@ -14,6 +14,11 @@ Para la descarga de los modelos de terreno y la información climatológica obte
 * Verificar la activación de las cuentas de usuario.
 
 
+### Requerimientos
+
+* Cualquier navegador actualizado de Internet
+
+
 ### Procedimiento
 
 Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda crear una cuenta de correo electrónico de [Google](https://mail.google.com/) que podrá utilizar para crear posteriormente una cuenta en [GitHub](https://github.com/) y clonar el contenido completo de este curso, incluidos los paquetes de datos, scripts y documentación oficial.
