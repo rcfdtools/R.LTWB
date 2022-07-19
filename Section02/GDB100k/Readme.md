@@ -26,7 +26,9 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * Polígono envolvente que delimita la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)
 
 
-### Procedimiento de descarga
+### Procedimiento general
+
+Para la obtención de la red de drenaje definitiva que será utilizada para el reacondicionamiento del modelo de terreno, es necesario descargar los vectores disponibles en la base de datos nacional del IGAC de Colombia, luego recortar los drenajes hasta el límite de la zona de estudio, integrar los drenajes y completar los vectores faltantes como se describe en el siguiente diagrama:
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Graph/GDB100k.png" width="900px"><br>
