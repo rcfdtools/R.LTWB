@@ -179,7 +179,7 @@ En este momento ya dispone de la red de drenaje que será utilizada para la rect
 
 | Versión    | Descripción                                                                                                                                                                                                                                                          | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.18 | Identificación de bucles, digitalización de tramos faltantes                                                                                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
+| 2022.07.18 | Identificación de bucles, digitalización de tramos faltantes, actualización general de ilustraciones.                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
 | 2022.07.17 | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000, extracción de drenajes sencillos y dobles de la zona de estudio, obtención de líneas centrales en drenajes dobles, integración, edición y conexión de tramos laterales a cauces principales. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
 
 
