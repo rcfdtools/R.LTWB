@@ -150,7 +150,7 @@ Ejemplo localización 2
 ![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
 
 Ejemplo localización 3
-![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
+![ArcGISPro3.0.0IGACCreateFeature3.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature3.png)
 
 > En la digitalización IGAC, las redes digitalizadas sobre zonas mineras a cielo abierto corresponden a la condición natural predominante antes del inicio de la operación. Para el caso de estudio consideraremos que el balance hidrológico de largo plazo corresponde a la condición natural de la red de drenaje.
 
