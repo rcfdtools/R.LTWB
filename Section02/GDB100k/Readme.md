@@ -14,8 +14,8 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * Identificar las redes de drenaje de la zona de estudio.
 * Conocer el catálogo de objetos de la clase de entidad Drenaje_Sencillo del IGAC.
 * Conocer los subtipos asociados al dominio de estados de drenaje del IGAC.
-* Completar las redes de drenaje por ausencia de planchas catastrales.
 * Extender los tramos de drenajes sencillos hasta el eje central de drenajes dobles.
+* Completar redes de drenaje por ausencia de digitalización.
 
 
 ### Requerimientos
@@ -127,20 +127,31 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 ![ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png)
 
-7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
+7. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
 
-| #   | Coordenadas geográficas   | Descripción                                      |
-|-----|:--------------------------|--------------------------------------------------| 
-| 1   | 74.0525387°W 10.0341833°N | Drenaje en zona de cultivo                       |
-| 2   | 73.6459877°W 9.5544233°N  | Conexión de drenaje sobre cuerpo de agua léntico |
+| #   | Coordenadas geográficas   | Descripción                                      | Google Maps                                                 | 
+|-----|:--------------------------|--------------------------------------------------|-------------------------------------------------------------| 
+| 1   | 74.0525387°W 10.0341833°N | Drenaje en zona de cultivo                       | [Ver](http://maps.google.com/maps?q=10.0341833,-74.0525387) |
+| 2   | 73.6459877°W 9.5544233°N  | Conexión de drenaje sobre cuerpo de agua léntico | [Ver](http://maps.google.com/maps?q=9.5544233,-73.6459877)  |
+| 3   | 73.4706062°W 9.6966152°N  | Red de drenaje natural sobre zona minera         | [Ver](http://maps.google.com/maps?q=9.6966152,-73.4706062)  |
+| 4   | 73.4916086°W 9.7628290°N  | Red de drenaje natural sobre zona minera         | [Ver](http://maps.google.com/maps?q=9.7628290,-73.4916086)  |
+| 5   | 73.4926365°W 9.5579971°N  | Red de drenaje natural sobre zona minera         | [Ver](http://maps.google.com/maps?q=9.5579971,-73.4926365)  |
+| 6   | 73.6128227°W 9.3748515°N  | Conexión de drenaje sobre cuerpo de agua léntico | [Ver](http://maps.google.com/maps?q=9.3748515,-73.6128227)  |
 
-Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior.
+Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior. Verifique y complete la red de drenaje en las localizaciones mostradas anteriormente y sobre toda la red de drenaje dentro de la zona de estudio.
 
-Ejemplo 1
+Ejemplo localización 1
 ![ArcGISPro3.0.0IGACCreateFeature1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature1.png)
 
-Ejemplo 2
+Ejemplo localización 2
 ![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
+
+Ejemplo localización 3
+![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
+
+> En la digitalización IGAC, las redes digitalizadas sobre zonas mineras a cielo abierto corresponden a la condición natural predominante antes del inicio de la operación. Para el caso de estudio consideraremos que el balance hidrológico de largo plazo corresponde a la condición natural de la red de drenaje.
+
+En este momento ya dispone de la red de drenaje que sera utilizada para la rectificación del modelo de terreno.
 
 
 ### Referencias
