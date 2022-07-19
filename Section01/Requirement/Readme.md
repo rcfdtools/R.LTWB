@@ -16,6 +16,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [QGIS 3+](https://qgis.org/) (opcional)
 * QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
+* QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 
 > Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.

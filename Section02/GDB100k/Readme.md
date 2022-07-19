@@ -23,6 +23,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
+* QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
 * Polígono envolvente que delimita la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)
 
 
@@ -89,6 +90,8 @@ Estado de drenajes - Subtipos
 
 ![ArcGISPro3.0.0IGACDrenajeDoble100kZECenterline.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterline.png)
 
+> Para la obtención de líneas centrales en QGIS, instale el plugin _HCMGIS_, seleccione el drenaje doble y desde la barra de menús despliegue las opciones de _HCMGIS / Geometry Processing / Skeleton Medial Axis_. 
+
 6. Exporte la clase de entidad de líneas centrales de drenajes dobles a un archivo shapefile dentro de la carpeta _.shp_ nombrándolo como _DrenajeDobleIGAC100kZECenterline.shp_, verifique que las líneas conectoras desde los drenajes sencillos hasta la línea central se encuentren a lo largo de toda la red. Podrá observar que no todas las conexiones laterales a los cuerpos dobles han sido trazadas.
 
 ![ArcGISPro3.0.0IGACDrenajeDoble100kZECenterlineExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterlineExport.png)
@@ -127,7 +130,7 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 ![ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png)
 
-7. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
+9. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
 
 | #   | Coordenadas geográficas   | Descripción                                      | Google Maps                                                 | 
 |-----|:--------------------------|--------------------------------------------------|-------------------------------------------------------------| 
@@ -151,7 +154,7 @@ Ejemplo localización 3
 
 > En la digitalización IGAC, las redes digitalizadas sobre zonas mineras a cielo abierto corresponden a la condición natural predominante antes del inicio de la operación. Para el caso de estudio consideraremos que el balance hidrológico de largo plazo corresponde a la condición natural de la red de drenaje.
 
-En este momento ya dispone de la red de drenaje que sera utilizada para la rectificación del modelo de terreno.
+En este momento ya dispone de la red de drenaje que será utilizada para la rectificación del modelo de terreno.
 
 
 ### Referencias
@@ -163,6 +166,7 @@ En este momento ya dispone de la red de drenaje que sera utilizada para la recti
 * http://sites.tufts.edu/gis/files/2013/11/Watershed-and-Drainage-Delineation-by-Pour-Point.pdf
 * https://gisrsstudy.com/drainage-density-arcgis/
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/topographic-production/polygon-to-centerline.htm
+* [Línea central de un polígono en QGIS](https://www.youtube.com/watch?v=aVWnMI-QdSs)
 
 
 ### Compatibilidad
@@ -173,9 +177,10 @@ En este momento ya dispone de la red de drenaje que sera utilizada para la recti
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                                                                                                                                                                           | Autor                                      | Horas |
-|-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.17  | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000, extracción de drenajes sencillos y dobles de la zona de estudio, obtención de líneas centrales en drenajes dobles, integración, edición y conexión de tramos laterales a cauces principales.  | [rcfdtools](https://github.com/rcfdtools)  |   5   |
+| Versión    | Descripción                                                                                                                                                                                                                                                          | Autor                                      | Horas |
+|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.18 | Identificación de bucles, digitalización de tramos faltantes                                                                                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
+| 2022.07.17 | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000, extracción de drenajes sencillos y dobles de la zona de estudio, obtención de líneas centrales en drenajes dobles, integración, edición y conexión de tramos laterales a cauces principales. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
