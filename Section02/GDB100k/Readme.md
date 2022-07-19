@@ -138,14 +138,14 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 9. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
 
-| #   | Coordenadas geográficas   | Descripción                                      | Google Maps                                                 | 
-|-----|:--------------------------|--------------------------------------------------|-------------------------------------------------------------| 
-| 1   | 74.0525387°W 10.0341833°N | Drenaje en zona de cultivo                       | [Ver](http://maps.google.com/maps?q=10.0341833,-74.0525387) |
-| 2   | 73.6459877°W 9.5544233°N  | Conexión de drenaje sobre cuerpo de agua léntico | [Ver](http://maps.google.com/maps?q=9.5544233,-73.6459877)  |
-| 3   | 73.4706062°W 9.6966152°N  | Red de drenaje natural sobre zona minera         | [Ver](http://maps.google.com/maps?q=9.6966152,-73.4706062)  |
-| 4   | 73.4916086°W 9.7628290°N  | Red de drenaje natural sobre zona minera         | [Ver](http://maps.google.com/maps?q=9.7628290,-73.4916086)  |
-| 5   | 73.4926365°W 9.5579971°N  | Red de drenaje natural sobre zona minera         | [Ver](http://maps.google.com/maps?q=9.5579971,-73.4926365)  |
-| 6   | 73.6128227°W 9.3748515°N  | Conexión de drenaje sobre cuerpo de agua léntico | [Ver](http://maps.google.com/maps?q=9.3748515,-73.6128227)  |
+| #   | Coordenadas geográficas   | Descripción                                       |                          Google Maps                          | 
+|-----|:--------------------------|:--------------------------------------------------|:-------------------------------------------------------------:| 
+| 1   | 74.0525387°W 10.0341833°N | Drenaje en zona de cultivo                        |  [Ver](http://maps.google.com/maps?q=10.0341833,-74.0525387)  |
+| 2   | 73.6459877°W 9.5544233°N  | Conexión de drenaje sobre cuerpo de agua léntico  |  [Ver](http://maps.google.com/maps?q=9.5544233,-73.6459877)   |
+| 3   | 73.4706062°W 9.6966152°N  | Red de drenaje natural sobre zona minera          |  [Ver](http://maps.google.com/maps?q=9.6966152,-73.4706062)   |
+| 4   | 73.4916086°W 9.7628290°N  | Red de drenaje natural sobre zona minera          |  [Ver](http://maps.google.com/maps?q=9.7628290,-73.4916086)   |
+| 5   | 73.4926365°W 9.5579971°N  | Red de drenaje natural sobre zona minera          |  [Ver](http://maps.google.com/maps?q=9.5579971,-73.4926365)   |
+| 6   | 73.6128227°W 9.3748515°N  | Conexión de drenaje sobre cuerpo de agua léntico  |  [Ver](http://maps.google.com/maps?q=9.3748515,-73.6128227)   |
 
 Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior. Verifique y complete la red de drenaje en las localizaciones mostradas anteriormente y sobre toda la red de drenaje dentro de la zona de estudio.
 
