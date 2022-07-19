@@ -101,6 +101,10 @@ Estado de drenajes - Subtipos
 
 > En QGIS utilice la herramienta _Processing Toolbox / Vector general / Merge vector layers_. 
 
+En la base de datos geográfica del IGAC pueden existir elementos adicionales como canales sencillos, canales dobles, madreviejas y raudales rápidos que pueden ser o no incorporados a la red de drenaje. Para el caso de estudio no incluiremos estos vectores debido a que p. ej. como en el caso de los canales sencillos, intersecan transversalmente varios drenajes.
+
+![ArcGISPro3.0.0IGACCanalSencillo100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCanalSencillo100k.png)
+
 8. Utilizando el editor geográfico de ArcGIS Pro, ArcGIS for Desktop o QGIS, conecte o extienda manualmente las líneas de drenajes sencillos hasta el eje central de los drenajes dobles. 
 
 > La extensión y conectividad de los tramos de drenajes sencillos hasta el eje central de los tramos de drenajes dobles es vital para garantizar que la acumulación de flujo por los cauces principales se realice de forma correcta. 
@@ -117,11 +121,24 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 ![ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend1.png)
 
-> Tenga en cuenta que pueden existir bucles en la red de drenaje correspondientes a tramos que se interconectan entre sí. Esto puede causar errores en los procesos de acumulación de flujo, por lo que es conveniente evaluar a partir de imágenes satelitales, cuál es el tramo dominante y proceder manualmente a editar y a abrir estos bucles.  
+> Tenga en cuenta que pueden existir bucles en la red de drenaje correspondientes a tramos que se interconectan entre sí. Esto puede causar errores en los procesos de acumulación de flujo, por lo que es conveniente evaluar a partir de imágenes satelitales, cuál es el tramo dominante y proceder manualmente a editar y a abrir estos bucles.
+
+> En cuerpos de agua como ciénagas, embalses, humedales, jaguey, lagunas, madreviejas, manglares, morichales, pantanos y otros cuerpos de agua, pueden presentarse discontinuidades en la red de drenaje, es recomendable agregar estos elementos al mapa para realizar la conexión de los drenajes sobre los cuerpos a los drenajes inmediatamente aguas abajo.    
 
 ![ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png)
 
-7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, p. ej. en el casco urbano de Valledupar.
+7. Visualmente, identifique las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
+
+| #   | Coordenadas geográficas   | Descripción                                      |
+|-----|:--------------------------|--------------------------------------------------| 
+| 1   | 74.0525387°W 10.0341833°N | Drenaje en zona de cultivo                       |
+| 2   | 73.6459877°W 9.5544233°N  | Conexión de drenaje sobre cuerpo de agua léntico |
+
+Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior.
+
+![ArcGISPro3.0.0IGACCreateFeature1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature1.png)
+
+![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
 
 
 ### Referencias
