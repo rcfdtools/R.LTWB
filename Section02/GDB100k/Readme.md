@@ -7,8 +7,8 @@ Para los procesos de reacondicionamiento del modelo de terreno que garantice el 
 
 Los drenajes corresponden al flujo de agua superficial que depende de la precipitación pluvial y/o afloramiento de aguas subterráneas y van a desembocar en otra corriente, en una laguna o en el mar. Los drenajes dispersos son aquellos que no desembocan en otro cuerpo de agua, o desaparecen al ser no fotointerpretables, por ejemplo en corrientes subterráneas.[^1]
 
-<div align="center"><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Graph/GDB100k.png" width="640px"></div>
-Convenciones del diagrama: Base de datos geográfica GDB en azul, Clase de entidad en gris, Geoproceso en verde y Proceso manual en amarillo.
+<div align="center"><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Graph/GDB100k.png" width="800px"></div>
+Convenciones del diagrama: Base de datos geográfica GDB en azul, Clase de entidad en gris, Geo-proceso en verde y Proceso manual en amarillo.
 
 ### Objetivos
 
