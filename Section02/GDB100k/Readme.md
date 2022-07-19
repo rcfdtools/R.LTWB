@@ -136,8 +136,10 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior.
 
+Ejemplo 1
 ![ArcGISPro3.0.0IGACCreateFeature1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature1.png)
 
+Ejemplo 2
 ![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
 
 
