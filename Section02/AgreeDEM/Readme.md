@@ -27,12 +27,14 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [Modelo digital de elevación ALOS PALSAR 12.5m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
 
 
-### Procedimiento general con HEC-HMS
+### Procedimiento general
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Graph/AgreeDEMFlowchart.png" width="80%"><br>
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
+
+### Recorte de grillas de elevación con ArcGIS Pro
 
 1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree una aferencia al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
@@ -64,7 +66,10 @@ ALOS PALSAR de la zona de estudio
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.APFBSRT1MosaicArcGISProZE.png)
 
-3. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
+
+### Reacondicionamiento de grillas de elevación con HEC-HMS
+
+1. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
 
 > Antes de iniciar este procedimiento, se recomienda cerrar las herramientas GIS y demás aplicaciones que consuman masivamente recursos de su sistema operativo y equipo. 
 
@@ -74,15 +79,15 @@ Automáticamente, obtendrá una carpeta con la estructura de directorios y archi
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProjectStructure.png)
 
-4. En el menú _Components – Create Component – Basin Model_, cree el modelo de cuencas, nombrar como _BasinALOS_.
+2. En el menú _Components – Create Component – Basin Model_, cree el modelo de cuencas, nombrar como _BasinALOS_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateBasinModel.png)
 
-5. En la tabla de contenido localizada a la izquierda, seleccione _HECHMS – Basin Models – BasinALOS_, luego en el menú _GIS – Coordinate System_ seleccione el sistema de proyección de coordenadas _MAGNA_OrigenNacional.prj_ localizado en el directorio _D:\R.LTWB\\.ProjectionFile_.
+3. En la tabla de contenido localizada a la izquierda, seleccione _HECHMS – Basin Models – BasinALOS_, luego en el menú _GIS – Coordinate System_ seleccione el sistema de proyección de coordenadas _MAGNA_OrigenNacional.prj_ localizado en el directorio _D:\R.LTWB\\.ProjectionFile_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CoordinateSystem.png)
 
-6. En el menú _Components – Create Component – Terrain Data_, cree el terreno a partir del modelo digital de elevación - DEM a partir del DEM ALOS PALSAR denominado _APFBSRT1MosaicArcGISProClip.tif_ localizado en la carpeta _D:\R.LTWB\.dem\ALOS_ seleccionando unidades verticales en metros, nombrar como TerrainALOS. **************
+4. En el menú _Components – Create Component – Terrain Data_, cree el terreno a partir del modelo digital de elevación - DEM a partir del DEM ALOS PALSAR denominado _APFBSRT1MosaicArcGISProClip.tif_ localizado en la carpeta _D:\R.LTWB\.dem\ALOS_ seleccionando unidades verticales en metros, nombrar como TerrainALOS. **************
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData1.png)
 
@@ -94,13 +99,13 @@ Automáticamente el archivo _APFBSRT1MosaicArcGISPro.tif_ sera copiado con el no
 
 > Para reducir la extensión del DEM, este puede ser recortado utilizando la herramienta _Clip_ de ArcGIS hasta el límite de la envolvente de la zona de estudio denominada '\\.shp\ZonaEstudioEnvelope.shp' 
 
-7. En la tabla de contenido, seleccione _HECHMS – Basin Models – Basin 1_ y en la parte inferior asocie el terreno creado al modelo de cuencas. 
+5. En la tabla de contenido, seleccione _HECHMS – Basin Models – Basin 1_ y en la parte inferior asocie el terreno creado al modelo de cuencas. 
 
 > Este proceso puede tardar algunos segundos debido a la extensión del DEM y a su resolución.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData4.png)
 
-8. En el menú _GIS_, seleccione la opción _Terrain Reconditioning_. El primer paso (Step 1) permite crear paredes perimetrales de confinamiento utilizando el borde de una cuenca previamente digitalizada, dar clic en _Next >_. 
+6. En el menú _GIS_, seleccione la opción _Terrain Reconditioning_. El primer paso (Step 1) permite crear paredes perimetrales de confinamiento utilizando el borde de una cuenca previamente digitalizada, dar clic en _Next >_. 
 
 > Para el caso de estudio no ejecutaremos la generación de paredes perimetrales a partir de la zona de estudio correspondiente a la zona hidrográfica 28 - Cesar, debido a que realizaremos el cálculo de los caudales medios de largo plazo sobre todo el modelo. 
 
@@ -120,7 +125,7 @@ A través del monitor de procesos _Processes_ del administrador de tareas o _Tas
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2b.png)
 
-9. En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en el DEM.
+7. En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en el DEM.
 
 
 Realice este mismo procedimiento para los modelos digitales de elevación ASTER GDEM y SRTM. 
