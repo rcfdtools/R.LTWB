@@ -38,6 +38,12 @@ Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term w
 
 > Estudiantes que aplicaron para curso certificado, desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
+Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo a su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
+
+<div align="center">
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudyFlowchart.png" width="80%"><br>
+<sub>Convenciones del diagrama: Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.</sub><br><br>
+</div>
 
 ### Zonificación hidrográfica de Colombia
 
