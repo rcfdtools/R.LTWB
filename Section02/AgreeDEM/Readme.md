@@ -52,33 +52,46 @@ Automáticamente el archivo _APFBSRT1MosaicArcGISPro.tif_ sera copiado con el no
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData3.png)
 
+5. En la tabla de contenido, seleccione _HECHMS – Basin Models – Basin 1_ y en la parte inferior asocie el terreno creado al modelo de cuencas. 
 
+> Este proceso puede tardar algunos segundos debido a la extensión del DEM y a su resolución.
 
-5. En la tabla de contenido, seleccione HECHMS_v0 – Basin Models – Basin 1 y en la parte inferior, asocie el terreno creado al modelo de cuencas.
-6. En el menú GIS – Terrain Reconditioning…, el primer paso se utiliza para crear paredes perimetrales de confinamiento utilizando el borde de una cuenca previamente digitalizada, el segundo paso permite modificar el terreno incrustando los drenajes; defina el número de celdas aferentes (p.ej, 5), la profundidad de suavizado lateral (p.ej, 10) y la profundidad de incrustación en el cauce (p.ej, 1000 para garantizar que en el paso de relleno de sumideros se mantenga la localización de las celdas correspondientes a los drenajes marcados), luego seleccione la red de drenaje en formato Shapefile. El modelo de terreno será almacenado en el directorio …\HECHMS_v0\gis\Basin_1
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData4.png)
 
+6. En el menú _GIS_, seleccione la opción _Terrain Reconditioning_. El primer paso (Step 1) permite crear paredes perimetrales de confinamiento utilizando el borde de una cuenca previamente digitalizada, dar clic en _Next >_. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/IGACGDB100k.png)
+> Para el caso de estudio no ejecutaremos la generación de paredes perimetrales a partir de la zona de estudio correspondiente a la zona hidrográfica 28 - Cesar, debido a que realizaremos el cálculo de los caudales medios de largo plazo sobre todo el modelo. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep1.png)
+
+El segundo paso (Step 2) permite modificar el terreno incrustando los drenajes, para ello seleccione la red de drenaje en formato Shapefile denominada _DrenajeSencilloIGAC100kZEMerge.shp_ localizada en _D:\R.LTWB\\.shp_, defina el número de celdas aferentes o _Smooth drop cell buffer_ (p.ej, 5), la profundidad de suavizado lateral o _Smooth drop height_ (p.ej, 10) y la profundidad de incrustación en el cauce o _Sharp drop height_ (p.ej, 1000 para garantizar que en el relleno de sumideros se mantenga la localización de las celdas correspondientes a los drenajes marcados), de clic en _Next >_. El modelo de terreno será almacenado en el directorio …\HECHMS_v0\gis\Basin_1
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2.png)
+
+Espere hasta que el proceso se complete.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep3.png)
+
+> Al igual que en la asociación y visualización en pantalla, este proceso puede tardar algunos minutos debido a la extensión del DEM y a su resolución.
 
 En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
 
 
 ### Referencias
 
-* 
+* https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu
 
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para de digitalización con opciones de encajado o snapping.
-* 
+* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior o en HEC-GeoHMS sobre ArcGIS 10.2.2. Se recomienda su creación utilizando la versión standalone.
 
 
 ### Control de versiones
 
 | Versión    | Descripción     | Autor                                      | Horas |
 |------------|:----------------|--------------------------------------------|:-----:|
-| 2022.07.20 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   0   |
+| 2022.07.20 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._

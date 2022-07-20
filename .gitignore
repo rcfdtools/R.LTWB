@@ -2,7 +2,7 @@
 
 # General advice
 # Before put large files over 100MB, you have to include the path and name here on .gitignore.
-# Alert: when you create large files they can appear into the Commit main panel for push and the GitHub server can get you an error and stop the file load and the push. You can drop de commit, exlude de files or move large files to another directory and then make a Push. After the Push be done, you can move back the large files to the original folder. Before made a commit drop is recommended get a copy of your local repository for prevent data lost.
+# Alert: when you create large files them can appear into the Commit main panel for push and the GitHub server can get you an error and stop the file load and the push. You can drop the commit, rename the files after the inclusion here on .gitignore or move the large files to another directory and then make a Push. After the Push be done, you can move back the large files to the original folder. Before made a commit drop is recommended get a copy of your local repository for prevent data lost.
 # Large files over 100MB have be compress in 95MB file parts.
 
 # General exclusions
@@ -29,6 +29,7 @@ venv/
 .dem/ALOS/APFBSRT1MosaicArcGISPro.tif
 .dem/ALOS/APFBSRT1MosaicArcGISPro.tif*
 HECHMS/terrain/
+HECHMS/gis/
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
