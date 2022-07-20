@@ -52,6 +52,11 @@ Utilizando la herramienta _Geoprocessing / Data Management Tools / Features / Fe
 | SRTM        | SRTMV003MosaicArcGISPro.tif   | SRTMV003MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\SRTM  |
 | ALOS PALSAR | APFBSRT1MosaicArcGISPro.tif   | APFBSRT1MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\ALOS  |
 
+ASTER GDEM de la zona de estudio
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0ASTGTMV003MosaicArcGISProZE.png)
+
+SRTM de la zona de estudio
 
 
 3. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
