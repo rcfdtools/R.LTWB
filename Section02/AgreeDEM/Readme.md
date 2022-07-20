@@ -113,8 +113,6 @@ Automáticamente los archivos _ASTGTMV003MosaicArcGISProZE.tif_, _SRTMV003Mosaic
 
 El segundo paso (Step 2) permite modificar el terreno incrustando los drenajes, para ello seleccione la red de drenaje en formato Shapefile denominada _DrenajeSencilloIGAC100kZEMerge.shp_ localizada en _D:\R.LTWB\\.shp_, defina el número de celdas aferentes o _Smooth drop cell buffer_ (p. ej. 5), la profundidad de suavizado lateral o _Smooth drop height_ (p. ej. 10) y la profundidad de incrustación en el cauce o _Sharp drop height_ (p. ej. 1000 para garantizar que en el relleno de sumideros se mantenga la localización de las celdas correspondientes a los drenajes marcados), de clic en _Next >_. 
 
-Repita el procedimiento anterior para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
-
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2.png)
 
 Espere hasta que el proceso se complete.
@@ -122,6 +120,8 @@ Espere hasta que el proceso se complete.
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2a.png)
 
 > Al igual que en la asociación y visualización en pantalla, este proceso puede tardar varios minutos debido a la extensión del DEM y a su resolución.
+
+Repita el procedimiento anterior para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
 
 A través del monitor de procesos _Processes_ del administrador de tareas o _Task Manager_ de su sistema operativo, verifique que se esté ejecutando el proceso _OpenJDK Platform binary_ de HEC-HMS. Este proceso requiere de mínimo 8GB de memoria RAM para modelos de terrenos como los utilizados en el caso de estudio.
 
@@ -142,7 +142,7 @@ En este momento ya dispone de la grilla de terreno reacondicionada requerida par
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior o en HEC-GeoHMS sobre ArcGIS 10.2.2. Se recomienda su creación utilizando la versión standalone.
+* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior o en HEC-GeoHMS sobre ArcGIS 10.2.2. Se recomienda su creación utilizando la versión standalone debido a que contiene controles de excepción de errores y volcado en celdas nulas.
 
 
 ### Control de versiones
