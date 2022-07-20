@@ -10,6 +10,20 @@ Basin: BasinALOS
      Filename: BasinALOS.basin
      Description: 
      Last Modified Date: 20 July 2022
-     Last Modified Time: 18:51:04
+     Last Modified Time: 18:51
+End:
+
+Basin: BasinASTER
+     Filename: BasinASTER.basin
+     Description: 
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 20:24:25
+End:
+
+Basin: BasinSRTM
+     Filename: BasinSRTM.basin
+     Description: 
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 20:24:38
 End:
 

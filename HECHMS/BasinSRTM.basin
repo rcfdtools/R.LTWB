@@ -1,0 +1,48 @@
+Basin: BasinSRTM
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 20:24:38
+     Version: 4.9
+     Filepath Separator: \
+     Unit System: Metric
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Compute Local Flow At Junctions: No
+     Unregulated Output Required: No
+
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Basin Layer Properties:
+End:
+
+Basin Spatial Properties:
+     Coordinate System: PROJCS["MAGNA_Colombia_Origen_Unico",GEOGCS["MAGNA-SIRGAS",DATUM["Marco_Geocentrico_Nacional_de_Referencia",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6686"]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",4],PARAMETER["central_meridian",-73],PARAMETER["scale_factor",0.9992],PARAMETER["false_easting",5000000],PARAMETER["false_northing",2000000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+End:
+
+Basin Schematic Properties:
+     Last View N: NaN
+     Last View S: NaN
+     Last View W: NaN
+     Last View E: NaN
+     Maximum View N: NaN
+     Maximum View S: NaN
+     Maximum View W: NaN
+     Maximum View E: NaN
+     Extent Method: Manual
+     Buffer: 0
+     Draw Icons: Yes
+     Draw Icon Labels: Name
+     Draw Map Objects: No
+     Draw Gridlines: No
+     Draw Flow Direction: No
+     Draw HillShade Layer: Yes
+     Draw Elevation Layer: Yes
+     Elevation Layer Color Palette: Gray Scale
+     Ignore Elevation Color Ramp Scale: No
+     Use Interpolated Color Ramp for Elevation Layer: Yes
+     Color Ramp Opacity Level for Elevation Layer: 33.0
+     Fix Element Locations: No
+     Fix Hydrologic Order: No
+End:

@@ -79,27 +79,25 @@ Automáticamente, obtendrá una carpeta con la estructura de directorios y archi
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProjectStructure.png)
 
-2. En el menú _Components – Create Component – Basin Model_, cree el modelo de cuencas, nombrar como _BasinALOS_.
+2. En el menú _Components – Create Component – Basin Model_, cree 3 modelos de cuencas y nombrelos como como _BasinASTER_, _BasinSRTM_, y _BasinALOS_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateBasinModel.png)
 
-3. En la tabla de contenido localizada a la izquierda, seleccione _HECHMS – Basin Models – BasinALOS_, luego en el menú _GIS – Coordinate System_ seleccione el sistema de proyección de coordenadas _MAGNA_OrigenNacional.prj_ localizado en el directorio _D:\R.LTWB\\.ProjectionFile_.
+3. En la tabla de contenido localizada a la izquierda, seleccione _HECHMS – Basin Models – BasinASTER_, luego en el menú _GIS – Coordinate System_ seleccione el sistema de proyección de coordenadas _MAGNA_OrigenNacional.prj_ localizado en el directorio _D:\R.LTWB\\.ProjectionFile_. Repita este procedimiento para los demás modelos de cuenca.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CoordinateSystem.png)
 
-4. En el menú _Components – Create Component – Terrain Data_, cree el terreno a partir del modelo digital de elevación - DEM a partir del DEM ALOS PALSAR denominado _APFBSRT1MosaicArcGISProClip.tif_ localizado en la carpeta _D:\R.LTWB\.dem\ALOS_ seleccionando unidades verticales en metros, nombrar como TerrainALOS. **************
+4. En el menú _Components – Create Component – Terrain Data_, cree los terreno a partir de los modelos digitales de elevación - DEM recortados anteriormente hasta el límite de la zona de estudio localizados en las carpetas _D:\R.LTWB\\.dem\ASTER_, _D:\R.LTWB\\.dem\SRTM_ y _D:\R.LTWB\\.dem\ALOS_ seleccionando unidades verticales en metros, nombrar como _TerrainASTER_, _TerrainSRTM_ y _TerrainALOS_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData1.png)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData2.png)
 
-Automáticamente el archivo _APFBSRT1MosaicArcGISPro.tif_ sera copiado con el nombre _Terrain_1.elevation.tif_ en la carpeta _D:\R.LTWB\HECHMS\terrain_
+Automáticamente los archivos _ASTGTMV003MosaicArcGISProZE.tif_, _SRTMV003MosaicArcGISProZE.tif_ y _APFBSRT1MosaicArcGISProZE.tif_ serán copiados con los nombres _TerrainASTER.elevation.tif_, _TerrainSRTM.elevation.tif_ y _TerrainALOS.elevation.tif_ en la carpeta _D:\R.LTWB\HECHMS\terrain_
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData3.png)
 
-> Para reducir la extensión del DEM, este puede ser recortado utilizando la herramienta _Clip_ de ArcGIS hasta el límite de la envolvente de la zona de estudio denominada '\\.shp\ZonaEstudioEnvelope.shp' 
-
-5. En la tabla de contenido, seleccione _HECHMS – Basin Models – Basin 1_ y en la parte inferior asocie el terreno creado al modelo de cuencas. 
+5. En la tabla de contenido, seleccione _HECHMS – Basin Models – BasinASTER_ y en la parte inferior asocie el terreno creado al modelo de cuencas. Repita este procedimiento para los modelos de elevación SRTM y ALOS.
 
 > Este proceso puede tardar algunos segundos debido a la extensión del DEM y a su resolución.
 
