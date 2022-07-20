@@ -8,7 +8,8 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 
 ### Objetivos
 
-* 
+* Crear el proyecto HEC-HMS para el procesamiento del modelo de terreno.
+* Reacondicionar el modelo de terreno incrustando la red de drenaje. 
 
 
 ### Requerimientos
@@ -16,7 +17,8 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
+* [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/)
+* [Red de drenaje](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) de la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip).
 
 
 ### Procedimiento general con HEC-HMS
