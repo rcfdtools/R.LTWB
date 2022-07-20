@@ -437,6 +437,6 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 | [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)  |
-|------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------------------------|
 
 [^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
