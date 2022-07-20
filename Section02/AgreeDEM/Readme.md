@@ -147,9 +147,9 @@ En este momento ya dispone de la grilla de terreno reacondicionada requerida par
 
 ### Control de versiones
 
-| Versión    | Descripción     | Autor                                      | Horas |
-|------------|:----------------|--------------------------------------------|:-----:|
-| 2022.07.20 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| Versión    | Descripción                                                                                                                                                                                                                                | Autor                                      | Horas |
+|------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.20 | Versión inicial con creación de polígono buffer a envolvente zona de estudio, recorte de grillas de terreno, creación de modelo HEC-HMS, creación de modelos de cuencas, asociación de modelos de terreno, reacondicionamiento ASTER GDEM. | [rcfdtools](https://github.com/rcfdtools)  |  6.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
@@ -158,5 +158,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]() |
 |---------------------------------------------------------------------------------------|----------------------------------------------------|-------------------------|
-
-[^1]: 
+ 
