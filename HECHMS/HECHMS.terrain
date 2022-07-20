@@ -1,0 +1,28 @@
+Terrain Data Manager: HECHMS
+     Version: 4.9
+     Filepath Separator: \
+End:
+
+Terrain Data: TerrainASTER
+     Description: 
+     Elevation File Name: terrain\TerrainASTER.elevation.tif
+     Vertical Units: Meters
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 20:34:03
+End:
+
+Terrain Data: TerrainSRTM
+     Description: 
+     Elevation File Name: terrain\TerrainSRTM.elevation.tif
+     Vertical Units: Meters
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 20:37:29
+End:
+
+Terrain Data: TerrainALOS
+     Description: 
+     Elevation File Name: terrain\TerrainALOS.elevation.tif
+     Vertical Units: Meters
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 20:38:00
+End:
