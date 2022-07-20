@@ -39,6 +39,11 @@ Especificaciones técnicas y modos de captura
 
 ### Procedimiento de descarga
 
+<div align="center">
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Graph/DEMAlosFlowchart.png" width="70%"><br>
+<sub>Convenciones del diagrama: Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales. </sub><br><br>
+</div>
+
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
 > Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation)
