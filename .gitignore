@@ -30,6 +30,12 @@ venv/
 .dem/ALOS/APFBSRT1MosaicArcGISPro.tif*
 HECHMS/terrain/
 HECHMS/gis/
+.dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif
+.dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif*
+.dem/SRTM/SRTMV003MosaicArcGISProZE.tif
+.dem/SRTM/SRTMV003MosaicArcGISProZE.tif*
+.dem/ALOS/APFBSRT1MosaicArcGISProZE.tif
+.dem/ALOS/APFBSRT1MosaicArcGISProZE.tif*
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files

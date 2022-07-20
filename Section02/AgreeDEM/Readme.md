@@ -1,5 +1,5 @@
 ## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
-Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon`
+Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon` `Raster Clip`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/AgreeDEM.png)
 
@@ -34,19 +34,23 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Buffer_, cree una aferencia al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioEnvelopeBufferDEM.shp_.
+1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree una aferencia al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
 > La aferencia garantiza que el posterior recorte de los DEM incluya todas las celdas perimetrales dentro de la zona de estudio.
-> 
-> Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0ZonaEstudioBufferDEM.png)
 
-Utilizando la herramienta _Geoprocessing / Data Management Tools / Envelope_, obtenga el polígono regular sin esquinas redondeadas que será utilizado para recortar los modelos digitales de elevación. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioEnvelopeBufferDEM.shp_.
+Utilizando la herramienta _Geoprocessing / Data Management Tools / Features / Feature Envelope To Polygon_, obtenga el polígono regular sin esquinas redondeadas que será utilizado para recortar los modelos digitales de elevación. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioEnvelopeBufferDEM.shp_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelopeBufferDEM.png)
 
-2. Utilizando la herramienta _Clip_, recorte las grillas de terreno hasta el buffer del polígono envolvente de la zona de estudio.
+2. Utilizando la herramienta _Geoprocessing / Raster / Raster Processing / Clip Raster_, recorte las grillas de terreno hasta el buffer del polígono envolvente de la zona de estudio _ZonaEstudioEnvelopeBufferDEM.shp_ asignando los nombres indicados en la siguiente tabla:
+
+| MDE         | Grilla mosaico descargada     | Grilla mosaico recortada        | Carpeta              |
+|-------------|-------------------------------|---------------------------------|----------------------|
+| ASTER GDEM  | ASTGTMV003MosaicArcGISPro.tif | ASTGTMV003MosaicArcGISProZE.tif | D:\R.LTWB\.dem\ASTER | 
+| SRTM        | SRTMV003MosaicArcGISPro.tif   | SRTMV003MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\SRTM  |
+| ALOS PALSAR | APFBSRT1MosaicArcGISPro.tif   | APFBSRT1MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\ALOS  |
 
 
 
