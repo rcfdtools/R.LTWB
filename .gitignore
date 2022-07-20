@@ -28,7 +28,7 @@ venv/
 .dem/SRTM/SRTMV003MosaicArcGISPro.tif*
 .dem/ALOS/APFBSRT1MosaicArcGISPro.tif
 .dem/ALOS/APFBSRT1MosaicArcGISPro.tif*
-
+HECHMS/terrain/
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files

@@ -1,0 +1,15 @@
+Project: HECHMS
+     Description: https://github.com/rcfdtools/R.LTWB
+     Version: 4.9
+     Filepath Separator: \
+     DSS File Name: HECHMS.dss
+     Time Zone ID: America/Bogota
+End:
+
+Basin: Basin 1
+     Filename: Basin_1.basin
+     Description: 
+     Last Modified Date: 20 July 2022
+     Last Modified Time: 15:02:27
+End:
+

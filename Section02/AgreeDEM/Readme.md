@@ -16,7 +16,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* HEC-HMS 4.9+
+* [HEC-HMS](https://www.hec.usace.army.mil/software/hec-hms/) 4.9+
 
 
 ### Procedimiento general con HEC-HMS
@@ -42,9 +42,18 @@ Automáticamente, obtendrá una carpeta con la estructura de directorios y archi
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CoordinateSystem.png)
 
+4. En el menú _Components – Create Component – Terrain Data_, cree el terreno a partir del modelo digital de elevación - DEM a partir del DEM ALOS PALSAR denominado _APFBSRT1MosaicArcGISPro.tif_ localizado en la carpeta _D:\R.LTWB\.dem\ALOS_ seleccionando unidades verticales en metros, nombrar como Terrain 1.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData1.png)
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData2.png)
+
+Automáticamente el archivo _APFBSRT1MosaicArcGISPro.tif_ sera copiado con el nombre _Terrain_1.elevation.tif_ en la carpeta _D:\R.LTWB\HECHMS\terrain_
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData3.png)
 
 
-4. En el menú Components – Create Component – Terrain Data…, cree el terreno a partir del modelo digital de elevación - DEM seleccionando unidades verticales en metros, nombrar como Terrain 1.
+
 5. En la tabla de contenido, seleccione HECHMS_v0 – Basin Models – Basin 1 y en la parte inferior, asocie el terreno creado al modelo de cuencas.
 6. En el menú GIS – Terrain Reconditioning…, el primer paso se utiliza para crear paredes perimetrales de confinamiento utilizando el borde de una cuenca previamente digitalizada, el segundo paso permite modificar el terreno incrustando los drenajes; defina el número de celdas aferentes (p.ej, 5), la profundidad de suavizado lateral (p.ej, 10) y la profundidad de incrustación en el cauce (p.ej, 1000 para garantizar que en el paso de relleno de sumideros se mantenga la localización de las celdas correspondientes a los drenajes marcados), luego seleccione la red de drenaje en formato Shapefile. El modelo de terreno será almacenado en el directorio …\HECHMS_v0\gis\Basin_1
 
