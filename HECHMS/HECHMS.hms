@@ -6,10 +6,10 @@ Project: HECHMS
      Time Zone ID: America/Bogota
 End:
 
-Basin: Basin 1
-     Filename: Basin_1.basin
+Basin: BasinALOS
+     Filename: BasinALOS.basin
      Description: 
      Last Modified Date: 20 July 2022
-     Last Modified Time: 15:02:27
+     Last Modified Time: 18:51:04
 End:
 
