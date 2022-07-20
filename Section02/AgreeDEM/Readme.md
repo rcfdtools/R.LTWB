@@ -123,7 +123,7 @@ Espere hasta que el proceso se complete.
 
 Repita el procedimiento anterior para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
 
-A través del monitor de procesos _Processes_ del administrador de tareas o _Task Manager_ de su sistema operativo, verifique que se esté ejecutando el proceso _OpenJDK Platform binary_ de HEC-HMS. Este proceso requiere de mínimo 8GB de memoria RAM para modelos de terrenos como los utilizados en el caso de estudio.
+A través del monitor de procesos o _Processes_ del administrador de tareas o _Task Manager_ de su sistema operativo, verifique que se esté ejecutando el proceso _OpenJDK Platform binary_ de HEC-HMS. Este proceso requiere de mínimo 8GB de memoria RAM para modelos de terrenos como los utilizados en el caso de estudio.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2b.png)
 

@@ -1,7 +1,7 @@
 ## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5m)
 Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
-![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/DEMAlos.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/DEMAlos.png)
 
 ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
@@ -66,7 +66,7 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
-![EarthdataSearchByShapefile.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchByShapefile.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchByShapefile.png)
 
 3. En la casilla de búsqueda ingresar **ALOS_PALSAR_RTC_HIGH_RES** para descargas en resolución de 12.5 metros. Para la zona de estudio se obtendrán 23 imágenes.
 
@@ -74,7 +74,7 @@ En el panel izquierdo, definir el rango de fechas requerido, para la zona de est
 
 Como podrá observar, al localizarse sobre el mapa y desplazar el puntero sobre la imagen, las cuadrículas contienen traslapos debido a que corresponde a un modelo no integrado y recortado por cuadrantes de 1 grado. 
 
-![EarthdataSearchResults.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchResults.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchResults.png)
 
 Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11km x 111.11km de superficie.
 
@@ -82,11 +82,11 @@ Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la su
 
 > Para la zona de estudio utilizaremos las 18 imágenes más recientes correspondientes a las secuencias ALPSRP27381, ALPSRP27308, ALPSRP27133, ALPSRP26885.
 
-![EarthdataSearchDirectDownload.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownload.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownload.png)
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos .zip correspondientes a los archivos comprimidos del modelo digital de elevación. 
 
-![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownloadLink.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchDirectDownloadLink.png)
 
 Listado de enlaces requeridos  
 * https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27381_FBS_F0180_RT1.zip
@@ -127,7 +127,7 @@ Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la r
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
-![Cygwin64Commands.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/Cygwin64Commands.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/Cygwin64Commands.png)
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/ALOS_
 
@@ -263,17 +263,17 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 18 imágenes del modelo de elevación ALOS PALSAR y agrupe como _ALOS PALSAR_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
-![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
 2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _APFBSRT1MosaicArcGISPro.tif_. Para la zona de estudio, el archivo de mosaico tendrá un tamaño aproximado de 412MB.
 
 > Debido a que las imágenes utilizadas se traslapan, en la herramienta de geoprocesamiento _Mosaic to New Raster_ es necesario seleccionar el operador de mosaico `Mean` para obtener el promedio de las elevaciones en cada celda.
 
-![ArcGISPro3.0.0MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
 3. Simbolice el mosaico en modo de relieve sombreado o _Shaded Relief_ con _Z Scale Factor en 2_.
 
-![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
 En este momento ya dispone de una grilla integrada de elevación ALOS PALSAR que cubre toda la zona de estudio.
 

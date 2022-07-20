@@ -1,7 +1,7 @@
 ## Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
 Keywords: `IGAC` `GDB` `1:100000` `Pairwise Clip` `Clip` `Polygon to Centerline` `Merge` `HCMGIS` `Skeleton Medial Axis` `Edit` `Extend`
 
-![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/GDB25k.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/GDB25k.png)
 
 Para los procesos de reacondicionamiento del modelo de terreno que garantice el flujo de todas las celdas del modelo hacia celdas específicas de la red de drenaje, es necesaria la descarga y complementación de las líneas de drenaje pertenecientes a la zona de estudio.
 
@@ -37,11 +37,11 @@ Para la obtención de la red de drenaje definitiva que será utilizada para el r
 
 1. Ingrese al portal https://www.colombiaenmapas.gov.co/, en temática seleccione _Cartografía Básica_ y busque _Base de datos vectorial básica. Colombia. Escala 1:100.000_ del año 2022. En la parte inferior del _Detalle del Servicio_ seleccione en _Formato de descarga Geodatabase_ y de clic en _Descargar_, automáticamente iniciará la descarga a través de una orden de servicio. La GDB comprimida tiene un tamaño aproximado de 665 MB.
 
-![IGACGDB100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACGDB100k.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/IGACGDB100k.png)
 
 2. Descomprima la base de datos geográfica en la carpeta de descargas de su equipo, luego, abra el mapa _D:\R.LTWB\.map\R.LTWB.mxd_ de ArcGIS for Desktop o _D:\R.LTWB\.map\ArcGISPro\ArcGISPro.aprx_ de ArcGIS Pro, agregue el mapa base _World Light Gray Canvas Base_ y desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Sencillo_. Podrá observar que la capa se simboliza automáticamente en drenajes _Permanentes_ e _Intermitentes_ a partir del dominio _Estado_Drenaje_. La versión descargada contiene 426964 entidades para todo el territorio nacional.
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100k.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100k.png)
 
 > Tenga en cuenta que los drenajes restituídos pueden no estar actualizados de acuerdo a las condiciones particulares de la zona de estudio evaluada. Se recomienda verificar con imágenes satelitales recientes, la correspondencia entre las redes de drenaje digitalizadas por el IGAC y las redes de drenajes visibles en imágenes. Por ejemplo, en la zona de explotación minera a cielo abierto del Departamento del Cesar en Colombia, los drenajes sobre los polígonos de concesión pueden no corresponder a las condiciones actuales debido a realineamiento de cauces.
 
@@ -51,12 +51,12 @@ Para la obtención de la red de drenaje definitiva que será utilizada para el r
 >
 > En QGIS, utilice la herramienta _Processing Toolbox / Vector overlay / Clip_. 
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100kZEClip.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEClip.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEClip.png)
 
 > Para el desarrollo del caso de estudio no se ha utilizado la digitalización de la Base de datos vectorial básica - Colombia a Escala 1:25.000 del año 2018 debido a que aún no se encuentran todas las planchas del país digitalizadas y almacenadas en la GDB disponible para descarga como se muestra en la siguiente imagen.
 
 Información disponible a escala 1:25k
-![ArcGISDesktop10.2.2IGACGDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISDesktop10.2.2IGACGDB25k.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISDesktop10.2.2IGACGDB25k.png)
 
 Catálogo de objetos en Drenaje_Sencillo para capa en formato Shapefile
 
@@ -86,7 +86,7 @@ Estado de drenajes - Subtipos
 
 > Los drenajes dobles corresponden a superficies de agua digitalizadas como polígonos y son requeridos para completar la red de drenajes sencillos que será utilizada en el reacondicionamiento del modelo digital de elevación. 
 
- ![ArcGISPro3.0.0IGACDrenajeDoble100kZEClip.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZEClip.png)
+ ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZEClip.png)
 
 5. A partir de los polígonos de los drenajes dobles y utilizando la herramienta de geoprocesamiento _Topographic Production Tools / Polygon to Centerline_ de ArcGIS Pro, cree las líneas centrales que demarcan cada drenaje sencillo y nombre la capa resultante como _DrenajeDobleIGAC100kZECenterline_ dentro de la GDB de ArcGIS Pro y seleccione en _Connecting Features_ la capa correspondiente a los drenajes sencillos de la zona de estudio, denominada previamente como _DrenajeSencilloIGAC100kZE.shp_ para obtener líneas conectoras desde los drenajes sencillos hasta las líneas centrales.
 
@@ -94,17 +94,17 @@ Estado de drenajes - Subtipos
 >
 > Para conocer como realizar este procedimiento en ArcGIS for Desktop, [clic aquí](https://support.esri.com/en/technical-article/000012414). El procedimiento consiste en convertir primero los polígonos a líneas utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Polygon to Line_, luego eliminar los extremos que confinan cada polígono y finalmente con la herramienta _ArcToolBox / Cartography Tools / Generalization / Collapse Dual Lines To Centerline_ obtener una line central a lo largo de las lineas paralelas externas que delimitan cada drenaje doble.
 
-![ArcGISPro3.0.0IGACDrenajeDoble100kZECenterline.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterline.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterline.png)
 
 > Para la obtención de líneas centrales en QGIS, instale el plugin _HCMGIS_, seleccione el drenaje doble y desde la barra de menús despliegue las opciones de _HCMGIS / Geometry Processing / Skeleton Medial Axis_. 
 
 6. Exporte la clase de entidad de líneas centrales de drenajes dobles a un archivo shapefile dentro de la carpeta _.shp_ nombrándolo como _DrenajeDobleIGAC100kZECenterline.shp_, verifique que las líneas conectoras desde los drenajes sencillos hasta la línea central se encuentren a lo largo de toda la red. Podrá observar que no todas las conexiones laterales a los cuerpos dobles han sido trazadas.
 
-![ArcGISPro3.0.0IGACDrenajeDoble100kZECenterlineExport.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterlineExport.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterlineExport.png)
 
 7. Realice la unión de la capa de drenajes sencillos y las líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Data Management Tools / Merge_ y nombre la capa como _DrenajeSencilloIGAC100kZEMerge.shp_.
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100kZEMerge.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEMerge.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEMerge.png)
 
 > En ArcGIS for Desktop utilice la herramienta _Merge_ disponible en el menú _Geoprocessing_.
 >
@@ -112,7 +112,7 @@ Estado de drenajes - Subtipos
 
 En la base de datos geográfica del IGAC pueden existir elementos adicionales como canales sencillos, canales dobles, madreviejas y raudales rápidos que pueden ser o no incorporados a la red de drenaje. Para el caso de estudio no incluiremos estos vectores debido a que p. ej. como en el caso de los canales sencillos, intersecan transversalmente varios drenajes.
 
-![ArcGISPro3.0.0IGACCanalSencillo100k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCanalSencillo100k.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCanalSencillo100k.png)
 
 8. Utilizando el editor geográfico de ArcGIS Pro, ArcGIS for Desktop o QGIS, conecte o extienda manualmente las líneas de drenajes sencillos hasta el eje central de los drenajes dobles. 
 
@@ -120,21 +120,21 @@ En la base de datos geográfica del IGAC pueden existir elementos adicionales co
 
 En la tabla de contenido de clic en List By Selection y únicamente active la capa _DrenajeSencilloIGAC100kZEMerge.shp_. Para facilitar la edición, en la visualización utilice como referencia de localización los tramos principales de la capa _DrenajeDobleIGAC100kZECenterline.shp_ 
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100kZEListBySelection.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEListBySelection.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEListBySelection.png)
 
 En ArcGIS Pro, seleccione en la tabla de contenidos o _Contents_ la capa _DrenajeSencilloIGAC100kZEMerge.shp_ y en el Menú _Edit_ de clic en _Modify_ y seleccione la opción _Extend or Trim_. 
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend.png)
 
 Extienda una a una las líneas laterales hasta el drenaje principal y conecte manualmente los tramos iniciales a través de la edición de los vértices. Rotule la capa utilizando el campo _NOMBRE_GEO_. Verifique y realice este procedimiento sobre toda la red y al finalizar de clic en el menú _Edit / Save_.
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend1.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEExtend1.png)
 
 > Tenga en cuenta que pueden existir bucles en la red de drenaje correspondientes a tramos que se interconectan entre sí. Esto puede causar errores en los procesos de acumulación de flujo, por lo que es conveniente evaluar a partir de imágenes satelitales, cuál es el tramo dominante y proceder manualmente a editar y a abrir estos bucles.
 >
 > En cuerpos de agua como ciénagas, embalses, humedales, jaguey, lagunas, madreviejas, manglares, morichales, pantanos y otros cuerpos de agua, pueden presentarse discontinuidades en la red de drenaje, es recomendable agregar estos elementos al mapa para realizar la conexión de los drenajes sobre los cuerpos a los drenajes inmediatamente aguas abajo.    
 
-![ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZELoop.png)
 
 9. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
 
@@ -150,13 +150,13 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior. Verifique y complete la red de drenaje en las localizaciones mostradas anteriormente y sobre toda la red de drenaje dentro de la zona de estudio.
 
 Ejemplo localización 1
-![ArcGISPro3.0.0IGACCreateFeature1.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature1.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature1.png)
 
 Ejemplo localización 2
-![ArcGISPro3.0.0IGACCreateFeature2.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature2.png)
 
 Ejemplo localización 3
-![ArcGISPro3.0.0IGACCreateFeature3.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature3.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACCreateFeature3.png)
 
 > En la digitalización IGAC, las redes digitalizadas sobre zonas mineras a cielo abierto corresponden a la condición natural predominante antes del inicio de la operación. Para el caso de estudio consideraremos que el balance hidrológico de largo plazo corresponde a la condición natural de la red de drenaje.
 

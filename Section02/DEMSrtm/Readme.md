@@ -1,7 +1,7 @@
 ## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30m), SRTM v3.0 3 arcsec (90m)
 Keywords: `NASA` `SRTM` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
-![DEMAster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/DEMSrtm.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/DEMSrtm.png)
 
 Shuttle Radar Topography Mission (SRTM), dispone de mapas topográficos de alta resolución para uso público desde el año 2015 y pueden ser utilizados para la creación de los mapas de dirección y acumulación de flujo.
 
@@ -56,23 +56,23 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
-![EarthdataSearchByShapefile.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchByShapefile.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchByShapefile.png)
 
 3. En la casilla de búsqueda ingresar **NASA Shuttle Radar Topography Mission Global 1 arc second V003** para descargas en resolución de 30 metros o **NASA Shuttle Radar Topography Mission Global 3 arc second V003** para descargas en resolución de 90 metros. Para la zona de estudio, es necesario descargar 9 cuadrículas.
 
 Como puede observar, las cuadrículas son ortogonales y no contienen traslapos debido a que corresponde a un modelo ya procesado y recortado. Para la zona de estudio, la información del modelo digital de elevación ha sido obtenida, procesada e integrada desde 2000.02.11 hasta 2000.02.21.
 
-![EarthdataSearchResults.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchResults.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchResults.png)
 
 Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11km x 111.11km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 9 archivos requeridos que tienen un peso aproximado de 100.9 MB y de clic en _Done_ y _Download Data_.
 
-![EarthdataSearchDirectDownload.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownload.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownload.png)
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos .zip correspondientes a los archivos [.hgt](https://gdal.org/drivers/raster/srtmhgt.html) del modelo digital de elevación. 
 
-![EarthdataSearchDirectDownloadLink.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownloadLink.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownloadLink.png)
 
 Listado de enlaces obtenidos  
 * https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip
@@ -229,15 +229,15 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación SRTM v3 y agrupe como _DEM SRTM v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
-![ArcGISPro3.0.0LoadCoordinates.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
 2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _SRTMV003MosaicArcGISPro.tif_.
 
-![ArcGISPro3.0.0MosaicToNewRaster.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
 3. Simbolice el mosaico en modo de relieve sombreado o _Shaded Relief_ con _Z Scale Factor en 2_.
 
-![ArcGISPro3.0.0ShadedRelief.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
 En este momento ya dispone de una grilla integrada de elevación SRTM que cubre toda la zona de estudio.
 
