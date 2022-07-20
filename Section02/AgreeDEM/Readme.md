@@ -58,6 +58,11 @@ ASTER GDEM de la zona de estudio
 
 SRTM de la zona de estudio
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.SRTMV003MosaicArcGISProZE.png)
+
+ALOS PALSAR de la zona de estudio
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.APFBSRT1MosaicArcGISProZE.png)
 
 3. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
 
