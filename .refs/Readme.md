@@ -1,10 +1,3 @@
-<div align="center">
-  <br>
-  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg" width="250px">
-  <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
-</div>
-
-
 ## Referencias
 
 Esta carpeta contiene los archivos de documentos y artículos de uso libre descargados y citados en la documentación general de referencia de la sección Wiki o en las referencias particulares de las diferentes actividades del curso. Consulta el listado de referencias globales [aquí.](https://github.com/rcfdtools/R.LTWB/wiki/Referencias) 

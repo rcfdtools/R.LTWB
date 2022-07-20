@@ -1,9 +1,3 @@
-<div align="center">
-  <br>
-  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg" width="250px">
-  <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
-</div>
-
 ## Archivos de modelos digitales de elevación DEM
 
 Esta carpeta contiene las grillas base y grillas producidas en el desarrollo del caso de estudio.

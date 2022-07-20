@@ -1,9 +1,3 @@
-<div align="center">
-  <br>
-  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg" width="250px">
-  <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
-</div>
-
 ## Datasets
 
 Esta carpeta contiene los datos base utilizados para el caso de estudio.
