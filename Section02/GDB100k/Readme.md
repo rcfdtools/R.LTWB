@@ -31,7 +31,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 Para la obtención de la red de drenaje definitiva que será utilizada para el reacondicionamiento del modelo de terreno necesario para el desarrollo del balance, es necesario descargar los vectores disponibles en la base de datos nacional del IGAC de Colombia, luego recortar los drenajes hasta el límite de la zona de estudio, integrar los drenajes y completar los vectores faltantes como se describe en el siguiente diagrama:
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Graph/GDB100k.png" width="90%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Graph/GDB100k.png" width="80%"><br>
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.</sub><br><br>
 </div>
 
