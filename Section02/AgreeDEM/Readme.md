@@ -54,6 +54,8 @@ Automáticamente el archivo _APFBSRT1MosaicArcGISPro.tif_ sera copiado con el no
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData3.png)
 
+> Para reducir la extensión del DEM, este puede ser recortado utilizando la herramienta _Clip_ de ArcGIS hasta el límite de la envolvente de la zona de estudio denominada '\\.shp\ZonaEstudioEnvelope.shp' 
+
 5. En la tabla de contenido, seleccione _HECHMS – Basin Models – Basin 1_ y en la parte inferior asocie el terreno creado al modelo de cuencas. 
 
 > Este proceso puede tardar algunos segundos debido a la extensión del DEM y a su resolución.
@@ -75,6 +77,15 @@ Espere hasta que el proceso se complete.
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2a.png)
 
 > Al igual que en la asociación y visualización en pantalla, este proceso puede tardar algunos minutos debido a la extensión del DEM y a su resolución.
+
+A través del monitor de procesos _Processes_ del administrador de tareas o _Task Maneger_ de su sistema operativo, verifique que se esté ejecutando el proceso _OpenJDK Platform binary_ de HEC-HMS. Este proceso requiere de mínimo 8GB de memoria RAM para modelos de terrenos como el utilizado en el caso de estudio.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2b.png)
+
+7. En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en DEM.
+
+
+Realice este mismo procedimiento para los modelos digitales de elevación ASTER GDEM y SRTM. 
 
 En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
 
