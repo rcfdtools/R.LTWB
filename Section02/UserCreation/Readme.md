@@ -76,9 +76,10 @@ Su cuenta ha sido creada, validada y esta lista para ser utilizada en el buscado
 ### Control de versiones
 
 
-| Versión     | Descripción                                            | Autor                                      | Horas |
-|-------------|:-------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.07  | Versión inicial creación de cuenta en NASA EarthData.  | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
+| Versión     | Descripción                                           | Autor                                      | Horas |
+|-------------|:------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.20  | Inclusión de diagrama de procesos.                    | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.07  | Versión inicial creación de cuenta en NASA EarthData. | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._

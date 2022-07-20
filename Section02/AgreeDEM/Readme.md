@@ -16,7 +16,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [HEC-HMS](https://www.hec.usace.army.mil/software/hec-hms/) 4.9+
+* [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
 
 
 ### Procedimiento general con HEC-HMS
@@ -70,7 +70,7 @@ El segundo paso (Step 2) permite modificar el terreno incrustando los drenajes, 
 
 Espere hasta que el proceso se complete.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep3.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2a.png)
 
 > Al igual que en la asociación y visualización en pantalla, este proceso puede tardar algunos minutos debido a la extensión del DEM y a su resolución.
 

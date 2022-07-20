@@ -265,6 +265,7 @@ En este momento ya dispone de una grilla integrada de elevación SRTM que cubre 
 
 | Versión     | Descripción                                                       | Autor                                      | Horas |
 |-------------|:------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.20  | Inclusión de diagrama de procesos.                                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2022.07.13  | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.07.12  | Versión inicial con descarga manual y con script.                 | [rcfdtools](https://github.com/rcfdtools)  |   1   |
 

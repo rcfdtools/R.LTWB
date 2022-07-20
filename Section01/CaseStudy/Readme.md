@@ -282,11 +282,12 @@ Ahora dispone de un polígono que podrá utilizar como máscara de selección pa
 
 ### Control de versiones
 
-| Versión      | Descripción                                                                                           | Autor                                      | Horas |
-|--------------|:------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.09   | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                 | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.08   | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS.  | [rcfdtools](https://github.com/rcfdtools)  |  2.5  | 
-| 2022.07.06   | Versión inicial con definición general del caso de estudio y mapas de referencia.                     | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| Versión     | Descripción                                                                                          | Autor                                      | Horas |
+|-------------|:-----------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.20  | Inclusión de diagrama de procesos.                                                                   | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.09  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. | [rcfdtools](https://github.com/rcfdtools)  |  2.5  | 
+| 2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.                    | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._

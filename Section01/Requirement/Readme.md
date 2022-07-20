@@ -18,7 +18,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
-* [HEC-HMS](https://www.hec.usace.army.mil/software/hec-hms/) 4.9+
+* [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
 
 > Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
 

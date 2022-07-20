@@ -294,10 +294,11 @@ En este momento ya dispone de una grilla integrada de elevación ALOS PALSAR que
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                          | Autor                                      | Horas |
-|-------------|:---------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.17  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro.  | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| Versión     | Descripción                                                                                                         | Autor                                      | Horas |
+|-------------|:--------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.20  | Inclusión de diagrama de procesos.                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.17  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
