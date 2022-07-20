@@ -36,7 +36,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 
 ### Recorte de grillas de elevación con ArcGIS Pro
 
-1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree una aferencia al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
+1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
 > La aferencia garantiza que el posterior recorte de los DEM incluya todas las celdas perimetrales dentro de la zona de estudio.
 
@@ -54,24 +54,24 @@ Utilizando la herramienta _Geoprocessing / Data Management Tools / Features / Fe
 | SRTM        | SRTMV003MosaicArcGISPro.tif   | SRTMV003MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\SRTM  |
 | ALOS PALSAR | APFBSRT1MosaicArcGISPro.tif   | APFBSRT1MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\ALOS  |
 
-ASTER GDEM de la zona de estudio
+ASTER GDEM de la zona de estudio (59 MB aprox.)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0ASTGTMV003MosaicArcGISProZE.png)
 
-SRTM de la zona de estudio
+SRTM de la zona de estudio (58 MB aprox.)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.SRTMV003MosaicArcGISProZE.png)
 
-ALOS PALSAR de la zona de estudio
+ALOS PALSAR de la zona de estudio (288 MB aprox.)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.APFBSRT1MosaicArcGISProZE.png)
 
 
 ### Reacondicionamiento de grillas de elevación con HEC-HMS
 
-1. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
+> Antes de iniciar este procedimiento, se recomienda cerrar las herramientas GIS y demás aplicaciones que consuman masivamente recursos de su sistema operativo y equipo.
 
-> Antes de iniciar este procedimiento, se recomienda cerrar las herramientas GIS y demás aplicaciones que consuman masivamente recursos de su sistema operativo y equipo. 
+1. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProject.png)
 
