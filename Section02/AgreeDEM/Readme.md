@@ -61,11 +61,11 @@ ASTER GDEM de la zona de estudio (59 MB aprox.)
 
 SRTM de la zona de estudio (58 MB aprox.)
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.SRTMV003MosaicArcGISProZE.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0SRTMV003MosaicArcGISProZE.png)
 
 ALOS PALSAR de la zona de estudio (288 MB aprox.)
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.APFBSRT1MosaicArcGISProZE.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0APFBSRT1MosaicArcGISProZE.png)
 
 > El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
 > 
@@ -213,13 +213,27 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif
 > Para conocer como realizar la visualización de perfiles en ArcGIS Pro y QGIS, [clic aquí]().
 
 
+#### Reacondicionamiento de modelos digitales de elevación DEM con ArcGIS Pro
+
+El reacondicionamiento de terreno ArcGIS Pro puede ser realizado con la herramienta _Geoprocessing / Arc Hydro Tools Pro / Terrain Processing / DEM Reconditioning_ a través del complemento _Arc Hydro Tools for Pro_ que puede ser obtenido desde http://downloads.esri.com/archydro/archydro/setup/Pro/. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0ArcHydroToolsPro.png)
+
+Para el reacondicionamiento, primero deberá convertir la red de drenaje en una grilla ráster con la herramienta _Geoprocessing / Conversion Tools / To Raster / Feature to Raster_ definiendo la menor resolución de las grillas de terreno que corresponde a 12.5 metros. [^1]
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0FeatureToRaster.png)
+
+Reacondicionamiento.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0DEMReconditioning.png)
+
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con QGIS
 
-El reacondicionamiento de terreno a través de QGIS puede ser realizado con la herramienta _Processing Toolbox / GRASS / Raster / r.carve_ que convierte los vectores que conforman la red de drenaje de un archivo Shapefile a una grilla raster extrayendo para cada celda o pixel el valor de la elevación del DEM y luego a partir de la definición del ancho de los drenajes y la definición de la profundidad adicional por debajo del terreno, se obtiene la grilla ajustada.[^1]
+El reacondicionamiento de terreno con QGIS puede ser realizado con la herramienta _Processing Toolbox / GRASS / Raster / r.carve_ que convierte los vectores que conforman la red de drenaje de un archivo Shapefile a una grilla raster extrayendo para cada celda o pixel el valor de la elevación del DEM y luego a partir de la definición del ancho de los drenajes y la definición de la profundidad adicional por debajo del terreno, se obtiene la grilla ajustada.[^2]
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/QGIS3.26.0DEMBurning.png)
 
-En este momento ya dispone de las grillas de terreno reacondicionadas requerida para el relleno de sumideros.
+En este momento ya dispone de grillas de terreno reacondicionadas requeridas para el relleno de sumideros.
 
 
 ### Referencias
@@ -234,9 +248,10 @@ En este momento ya dispone de las grillas de terreno reacondicionadas requerida 
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                                                | Autor                                      | Horas |
-|------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.20 | Versión inicial con creación de polígono buffer a envolvente zona de estudio, recorte de grillas de terreno, creación de modelo HEC-HMS, creación de modelos de cuencas, asociación de modelos de terreno, reacondicionamiento ASTER GDEM. | [rcfdtools](https://github.com/rcfdtools)  |  6.5  |
+| Versión     | Descripción                                                                                                                                                                                                                                | Autor                                      | Horas |
+|-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.21  | Reacondicionamiento de grillas ASTER, SRTM y ALOS con HEC-GeoHMS. Visualización de perfiles con 3D Analyst sobre ArcGIS for Desktop. Documentación general de la actividad.                                                                | [rcfdtools](https://github.com/rcfdtools)  | 5.5  |
+| 2022.07.20  | Versión inicial con creación de polígono buffer a envolvente zona de estudio, recorte de grillas de terreno, creación de modelo HEC-HMS, creación de modelos de cuencas, asociación de modelos de terreno, reacondicionamiento ASTER GDEM. | [rcfdtools](https://github.com/rcfdtools)  |  6.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
@@ -247,3 +262,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 |---------------------------------------------------------------------------------------|----------------------------------------------------|-------------------------|
  
 :[^1]Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
+:[^2]Arc Hydro Tools for ArcGIS Pro http://downloads.esri.com/archydro/archydro/setup/Pro/
