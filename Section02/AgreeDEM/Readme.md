@@ -1,5 +1,5 @@
 ## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
-Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon` `Raster Clip` `HEC-HMS` `HEC-GeoHMS`
+Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon` `Raster Clip` `HEC-HMS` `HEC-GeoHMS` `Arc Hydro Tools Pro` `Feature to Raster`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/AgreeDEM.png)
 
@@ -219,7 +219,7 @@ El reacondicionamiento de terreno ArcGIS Pro puede ser realizado con la herramie
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0ArcHydroToolsPro.png)
 
-Para el reacondicionamiento, primero deberá convertir la red de drenaje en una grilla ráster con la herramienta _Geoprocessing / Conversion Tools / To Raster / Feature to Raster_ definiendo la menor resolución de las grillas de terreno que corresponde a 12.5 metros. [^1]
+Para el reacondicionamiento, primero deberá convertir la red de drenaje en una grilla ráster con la herramienta _Geoprocessing / Conversion Tools / To Raster / Feature to Raster_ definiendo la menor resolución de las grillas de terreno que corresponde a 12.5 metros.[^1]
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0FeatureToRaster.png)
 
@@ -243,7 +243,7 @@ En este momento ya dispone de grillas de terreno reacondicionadas requeridas par
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior o en HEC-GeoHMS sobre ArcGIS 10.2.2. 
+* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior, en HEC-GeoHMS sobre ArcGIS 10.2.2 y en QGIS. 
 
 
 ### Control de versiones
@@ -261,5 +261,5 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]() |
 |---------------------------------------------------------------------------------------|----------------------------------------------------|-------------------------|
  
-:[^1]Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
-:[^2]Arc Hydro Tools for ArcGIS Pro http://downloads.esri.com/archydro/archydro/setup/Pro/
+[^1]: Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
+[^2]: Arc Hydro Tools for ArcGIS Pro http://downloads.esri.com/archydro/archydro/setup/Pro/
