@@ -67,6 +67,10 @@ ALOS PALSAR de la zona de estudio (288 MB aprox.)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.APFBSRT1MosaicArcGISProZE.png)
 
+> El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
+> 
+> El procedimiento anterior puede ser ejecutado en QGIS con las herramientas _Processing Toolbox / Vector geometry / Buffer_ y _Processing Toolbox / Vector geometry / Bounding boxes_.  
+
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-HMS
 
@@ -137,7 +141,7 @@ Opcional: repita el procedimiento anterior en HEC-HMS para los modelos de cuenca
 Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en ArcGIS for Desktop a través de la herramienta HEC-GeoHMS o desde Arc Hydro Tools.
 
 
-#### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS
+#### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
 
 1. En Microsoft Windows, cree una carpeta nueva y nombre como _HECGeoHMS_ en la ruta _D:\R.LTWB_.
 
@@ -202,12 +206,17 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningError.png)
 
+7. En ArcGIS for Desktop, cargue y visualice las grillas reacondicionadas, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en los DEM.
 
 
-En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en el DEM.
 
 
-En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
+#### Reacondicionamiento de modelos digitales de elevación DEM con QGIS
+
+El reacondicionamiento de terreno a través de QGIS puede ser realizado con la herramienta _Processing Toolbox / GRASS / Raster / r.carve_ que convierte los vectores que conforman la red de drenaje de un archivo Shapefile a una grilla raster extrayendo para cada celda o pixel el valor de la elevación del DEM y luego a partir de la definición del ancho de los drenajes y la definición de la profundidad adicional por debajo del terreno, se obtiene la grilla ajustada.[^1]
+
+
+En este momento ya dispone de las grillas de terreno reacondicionadas requerida para el relleno de sumideros.
 
 
 ### Referencias
@@ -234,3 +243,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [Actividad siguiente]() |
 |---------------------------------------------------------------------------------------|----------------------------------------------------|-------------------------|
  
+:[^1]Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
