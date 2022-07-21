@@ -150,7 +150,7 @@ Grilla obtenida localizada en _D:\R.LTWB\HECHMS\gis\BasinASTER_
 
 Opcional: repita el procedimiento anterior en HEC-HMS para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
 
-> Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en _ArcGIS for Desktop_ a través de la herramienta HEC-GeoHMS o desde Arc Hydro Tools.
+> Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en _ArcGIS for Desktop_ a través de la herramienta _HEC-GeoHMS_ o desde _Arc Hydro Tools_ para ArcGIS.
 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
@@ -173,7 +173,7 @@ En la ventana de edición de permisos, de clic en el botón _Add..._, busque su 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2ExportData.png)
 
-> Para garantizar el correcto procesamiento del modelo reacondicionado es indispensable eliminar los atributos de la capa vectorial de drenajes conservando y recalculando únicamente la longitud en el campo SHAPE_Leng.
+> Opcional, para simplificar el procesamiento del modelo reacondicionado puede eliminar los atributos de la capa vectorial de drenajes conservando y recalculando únicamente la longitud en el campo SHAPE_Leng.
 
 Abra la tabla de atributos de DrenajeSencilloIGAC100kZEMergeNoAttrib.shp y dando clic derecho en la cabecera de cada campo de atributos, elimine los atributos a excepción de _SHAPE_Leng_.
 
@@ -195,7 +195,7 @@ Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red ut
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSToolbar.png)
 
-6. En la barra de herramientas _HEC-GeoHMS_ de clic en el menú _Preprocessing_ y seleccione la opción _DEM Reconditioning_. Reacondicione las grilla DEM utilizando los parámetros definidos en la siguiente ilustración y nombre cada grilla resultante como ASTERAgreeDEM.tif, SRTMAgreeDEM.tif y ALOSAgreeDEM.tif. Guarde las grillas en la carpeta _D:\R.LTWB\HECGeoHMS\Layers\_
+6. En la barra de herramientas _HEC-GeoHMS_ de clic en el menú _Preprocessing_ y seleccione la opción _DEM Reconditioning_. Reacondicione las grillas DEM utilizando los parámetros definidos en la siguiente ilustración y nombre cada grilla resultante como ASTERAgreeDEM.tif, SRTMAgreeDEM.tif y ALOSAgreeDEM.tif. Guarde las grillas en la carpeta _D:\R.LTWB\HECGeoHMS\Layers\_
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningParameters.png)
 
@@ -213,16 +213,16 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif (7 minutos con 21 segu
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog2.png)
 
 > En caso de que el proceso de ejecución devuelva error de escritura en memoria y no permita generar las grillas, cree en la raíz del disco una copia de la carpeta _D:\R.LTWB\HECGeoHMS_, reinicie su equipo y ejecute el readoncicionamiento desde esta localización.
-> 
-> Si el error persiste, cree un nuevo usuario local tipo Administrador en su sistema operativo, cierre la sesión actual e inicie sesión con el nuevo usuario, luego ejecute el reacondicionamiento de terreno. Generalmente, el error se presenta por inconsistencia en los permisos de escritura de usuario en los directorios de la unidad local y estos permisos son generados nuevamente cuando se crea un nuevo usuario Administrador.  
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningError.png)
+
+> Si el error persiste, cree un nuevo usuario local tipo Administrador en su sistema operativo, cierre la sesión actual e inicie sesión con el nuevo usuario, luego ejecute el reacondicionamiento de terreno. Generalmente, el error se presenta por inconsistencia en los permisos de escritura de usuario en los directorios de la unidad local y estos permisos son generados nuevamente cuando se crea un nuevo usuario Administrador.  
 
 7. En ArcGIS for Desktop, cargue y visualice las grillas reacondicionadas y con la barra de herramientas 3D Analyst, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en los DEM.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2DEMReconditioning3DAnalystProfile.png)
 
-> Para conocer como realizar la visualización de perfiles en ArcGIS Pro y QGIS, [clic aquí]().
+> Para conocer como realizar la visualización de perfiles en ArcGIS Pro y QGIS, [clic aquí](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con ArcGIS Pro

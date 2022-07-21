@@ -14,7 +14,7 @@ https://github.com/uecijg-ceh
 ✓✕
 
 Pending tasks
-    Requirements links.
+    https://github.com/rcfdtools/R.LTWB/discussions/7
     Fix R.TeachingResearchGuide/wiki/License.
     Remove personal name from all the ArcGIS Pro screenshots.
     Check Visual Studio Code integration with GitHUB.
