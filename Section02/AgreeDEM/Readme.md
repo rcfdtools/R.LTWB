@@ -88,11 +88,11 @@ Especificaciones de las grillas recortadas de la zona de estudio, referencia esp
 
 > Antes de iniciar este procedimiento, se recomienda cerrar las herramientas GIS y demás aplicaciones que consuman masivamente recursos de su sistema operativo y equipo.
 
-1. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta _D:\R.LTWB\_.
+1. En HEC-HMS, cree un proyecto nuevo en blanco definiendo _Metric_ en el sistema de unidades por defecto, guardar como _HECHMS_ en la carpeta D:\R.LTWB\.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProject.png)
 
-Automáticamente, obtendrá una carpeta con la estructura de directorios y archivos requeridos por este modelo que para la versión 4.9 contendrá:
+Automáticamente, obtendrá una carpeta con la estructura de directorios y archivos requeridos por este modelo, que para la versión 4.9 contendrá:
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProjectStructure.png)
 
@@ -150,7 +150,7 @@ Grilla obtenida localizada en _D:\R.LTWB\HECHMS\gis\BasinASTER_
 
 Opcional: repita el procedimiento anterior en HEC-HMS para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
 
-Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en ArcGIS for Desktop a través de la herramienta HEC-GeoHMS o desde Arc Hydro Tools.
+> Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en ArcGIS for Desktop a través de la herramienta HEC-GeoHMS o desde Arc Hydro Tools.
 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
