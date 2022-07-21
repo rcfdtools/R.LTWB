@@ -17,8 +17,10 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
+* [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
+* [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 
 > Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
 

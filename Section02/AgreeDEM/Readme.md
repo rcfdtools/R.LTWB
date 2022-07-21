@@ -1,5 +1,5 @@
 ## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
-Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon` `Raster Clip` `HEC-HMS` `HEC-GeoHMS` `Arc Hydro Tools Pro` `Feature to Raster`
+Keywords: `DEM` `AgreeDEM` `DEM Reconditioning` `DEM burning` `Buffer` `Feature Envelope To Polygon` `Raster Clip` `HEC-HMS` `HEC-GeoHMS` `Arc Hydro Tools Pro` `Feature to Raster`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/AgreeDEM.png)
 
@@ -9,9 +9,11 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 ### Objetivos
 
 * Crear un polígono aferente a la envolvente de la zona de estudio.
-* Recortar los modelos digitales de elevación DEM apartir del polígono buffer de la zona de estudio.
-* Crear el proyecto HEC-HMS para el procesamiento del modelo de terreno.
-* Reacondicionar el modelo de terreno incrustando la red de drenaje. 
+* Recortar los modelos digitales de elevación DEM a partir del polígono buffer de la zona de estudio.
+* Crear un proyecto HEC-HMS para el procesamiento del modelo de terreno.
+* Reacondicionar los modelos digitales de elevación DEM incrustando la red de drenaje.
+* Utilizar diferentes herramientas de reacondicionamiento.
+* Visualizar perfiles de terreno reacondicionados.
 
 
 ### Requerimientos
@@ -21,6 +23,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/)
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
+* [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
 * Polígono envolvente que delimita la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)
 * [Red de drenaje](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) de la zona de estudio, [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip).
 * [Modelo digital de elevación ASTER GDEM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
@@ -239,6 +242,7 @@ En este momento ya dispone de grillas de terreno reacondicionadas requeridas par
 ### Referencias
 
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu
+* https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
 
 
 ### Compatibilidad
