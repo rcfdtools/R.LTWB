@@ -1,5 +1,5 @@
 ## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
-Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon` `Raster Clip`
+Keywords: `DEM` `AgreeDEM` `Buffer` `Feature Envelope To Polygon` `Raster Clip` `HEC-HMS` `HEC-GeoHMS`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/AgreeDEM.png)
 
@@ -20,6 +20,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/)
+* [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * Polígono envolvente que delimita la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)
 * [Red de drenaje](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) de la zona de estudio, [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip).
 * [Modelo digital de elevación ASTER GDEM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
@@ -34,7 +35,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-#### Recorte de grillas de elevación con ArcGIS Pro
+#### Recorte de modelos digitales de elevación DEM con ArcGIS Pro
 
 1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
@@ -67,7 +68,7 @@ ALOS PALSAR de la zona de estudio (288 MB aprox.)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.APFBSRT1MosaicArcGISProZE.png)
 
 
-#### Reacondicionamiento de grillas de elevación con HEC-HMS
+#### Reacondicionamiento de modelos digitales de elevación DEM con HEC-HMS
 
 > Antes de iniciar este procedimiento, se recomienda cerrar las herramientas GIS y demás aplicaciones que consuman masivamente recursos de su sistema operativo y equipo.
 
@@ -79,7 +80,7 @@ Automáticamente, obtendrá una carpeta con la estructura de directorios y archi
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProjectStructure.png)
 
-2. En el menú _Components – Create Component – Basin Model_, cree 3 modelos de cuencas y nombrelos como como _BasinASTER_, _BasinSRTM_, y _BasinALOS_.
+2. En el menú _Components – Create Component – Basin Model_, cree 3 modelos de cuencas y nómbrelos como como _BasinASTER_, _BasinSRTM_, y _BasinALOS_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateBasinModel.png)
 
@@ -115,22 +116,40 @@ El segundo paso (Step 2) permite modificar el terreno incrustando los drenajes, 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2.png)
 
-Espere hasta que el proceso se complete.
+> Espere hasta que el proceso se complete, para la grilla de terreno _ASTGTMV003MosaicArcGISProZE.tif_ y la red _DrenajeSencilloIGAC100kZEMerge.shp_ este proceso en HEC-HMS requiere de aproximadamente 10 horas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2a.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep3.png)
 
 > Al igual que en la asociación y visualización en pantalla, este proceso puede tardar varios minutos debido a la extensión del DEM y a su resolución.
 
-Repita el procedimiento anterior para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
-
 A través del monitor de procesos o _Processes_ del administrador de tareas o _Task Manager_ de su sistema operativo, verifique que se esté ejecutando el proceso _OpenJDK Platform binary_ de HEC-HMS. Este proceso requiere de mínimo 8GB de memoria RAM para modelos de terrenos como los utilizados en el caso de estudio.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep2b.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/Windows11TaskManagerProcesses.png)
+
+Reacondicionamiento completado.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep4.png)
+
+Opcional: repita el procedimiento anterior en HEC-HMS para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
+
+Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en ArcGIS for Desktop a través de la herramienta HEC-GeoHMS o desde Arc Hydro Tools.
+
+
+#### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS
+
+1. En Microsoft Windows, cree una carpeta nueva y nombre como _HECGeoHMS_ en la ruta _D:\R.LTWB_.
+
+2. En ArcGIS for Desktop 10.2.2, cree un mapa nuevo en blanco, guarde como _HECGeoHMS.mxd_ en la carpeta _D:\R.LTWB\HECGeoHMS_ y asigne el sistema de proyección de coordenadas
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2NewMap.png)
+
+3. 
+
+
 
 7. En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en el DEM.
 
 
-Realice este mismo procedimiento para los modelos digitales de elevación ASTER GDEM y SRTM. 
+
 
 En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
 
@@ -142,7 +161,7 @@ En este momento ya dispone de la grilla de terreno reacondicionada requerida par
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior o en HEC-GeoHMS sobre ArcGIS 10.2.2. Se recomienda su creación utilizando la versión standalone debido a que contiene controles de excepción de errores y volcado en celdas nulas.
+* Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior o en HEC-GeoHMS sobre ArcGIS 10.2.2. 
 
 
 ### Control de versiones

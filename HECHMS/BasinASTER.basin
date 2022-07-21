@@ -16,8 +16,13 @@ End:
 
 Basin Layer Properties:
      Base Layer:
-          Name: Terrain
+          Name: Reconditioned Terrain
           Layer shown: Yes
+          Properties Filename: maps\reconditioned0746012022022.xml
+     End Layer:
+     Base Layer:
+          Name: Terrain
+          Layer shown: No
           Properties Filename: maps\elevation1941152012022.xml
      End Layer:
 End:
