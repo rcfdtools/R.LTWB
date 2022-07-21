@@ -206,8 +206,11 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningError.png)
 
-7. En ArcGIS for Desktop, cargue y visualice las grillas reacondicionadas, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en los DEM.
+7. En ArcGIS for Desktop, cargue y visualice las grillas reacondicionadas y con la barra de herramientas 3D Analyst, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en los DEM.
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2DEMReconditioning3DAnalystProfile.png)
+
+> Para conocer como realizar la visualización de perfiles en ArcGIS Pro y QGIS, [clic aquí]().
 
 
 

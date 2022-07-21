@@ -15,27 +15,27 @@ venv/
 
 # Large files exclusions
 .dem/ASTER/ASTGTMV003Mosaic.tif
-.dem/ASTER/ASTGTMV003Mosaic.tif*
+.dem/ASTER/ASTGTMV003Mosaic.tif.*
 .dem/ASTER/ASTGTMV003MosaicArcGISPro.tif
-.dem/ASTER/ASTGTMV003MosaicArcGISPro.tif*
+.dem/ASTER/ASTGTMV003MosaicArcGISPro.tif.*
 .dem/ASTER/ASTGTMV003MosaicQGIS.tif
-.dem/ASTER/ASTGTMV003MosaicQGIS.tif*
+.dem/ASTER/ASTGTMV003MosaicQGIS.tif.*
 .dem/ASTER/ASTGTMV003MosaicHillshade.tif
-.dem/ASTER/ASTGTMV003MosaicHillshade.tif*
+.dem/ASTER/ASTGTMV003MosaicHillshade.tif.*
 .dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif
-.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif*
+.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif.*
 .dem/SRTM/SRTMV003MosaicArcGISPro.tif
-.dem/SRTM/SRTMV003MosaicArcGISPro.tif*
+.dem/SRTM/SRTMV003MosaicArcGISPro.tif.*
 .dem/ALOS/APFBSRT1MosaicArcGISPro.tif
-.dem/ALOS/APFBSRT1MosaicArcGISPro.tif*
+.dem/ALOS/APFBSRT1MosaicArcGISPro.tif.*
 HECHMS/terrain/
 HECHMS/gis/
 .dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif
-.dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif*
+.dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif.*
 .dem/SRTM/SRTMV003MosaicArcGISProZE.tif
-.dem/SRTM/SRTMV003MosaicArcGISProZE.tif*
+.dem/SRTM/SRTMV003MosaicArcGISProZE.tif.*
 .dem/ALOS/APFBSRT1MosaicArcGISProZE.tif
-.dem/ALOS/APFBSRT1MosaicArcGISProZE.tif*
+.dem/ALOS/APFBSRT1MosaicArcGISProZE.tif.*
 #HECGeoHMS/Layers/
 HECGeoHMS/Layers/ALOSAgreeDEM.tif
 HECGeoHMS/Layers/ALOSAgreeDEM.tif.*
