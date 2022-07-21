@@ -199,16 +199,16 @@ Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red ut
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningParameters.png)
 
-Resultados en ventana de ejecución para ASTERAgreeDEM.tif
+Resultados en ventana de ejecución para ASTERAgreeDEM.tif (1 minuto con 21 segundos)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningASTERLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningASTERLog2.png)
 
-Resultados en ventana de ejecución para SRTMAgreeDEM.tif
+Resultados en ventana de ejecución para SRTMAgreeDEM.tif (1 minuto con 12 segundos)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningSRTMLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningSRTMLog2.png)
 
-Resultados en ventana de ejecución para ALOSAgreeDEM.tif
+Resultados en ventana de ejecución para ALOSAgreeDEM.tif (7 minutos con 21 segundos)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog2.png)
 
