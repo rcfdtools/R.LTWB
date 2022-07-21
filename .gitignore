@@ -36,7 +36,7 @@ HECHMS/gis/
 .dem/SRTM/SRTMV003MosaicArcGISProZE.tif*
 .dem/ALOS/APFBSRT1MosaicArcGISProZE.tif
 .dem/ALOS/APFBSRT1MosaicArcGISProZE.tif*
-HECGeoHMS/Layers/
+#HECGeoHMS/Layers/
 HECGeoHMS/Layers/ALOSAgreeDEM.tif
 HECGeoHMS/Layers/ALOSAgreeDEM.tif.*
 HECGeoHMS/Layers/ASTERAgreeDEM.tif
