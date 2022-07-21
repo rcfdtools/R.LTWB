@@ -3,14 +3,14 @@ Keywords: `DEM` `AgreeDEM` `DEM Reconditioning` `DEM burning` `Buffer` `Feature 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/AgreeDEM.png)
 
-Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar el terreno incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
+Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar los modelos digitales de elevación DEM incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
 
 
 ### Objetivos
 
 * Crear un polígono aferente a la envolvente de la zona de estudio.
 * Recortar los modelos digitales de elevación DEM a partir del polígono buffer de la zona de estudio.
-* Crear un proyecto HEC-HMS para el procesamiento del modelo de terreno.
+* Crear un proyecto HEC-HMS para el procesamiento de modelos digitales de elevación DEM.
 * Reacondicionar los modelos digitales de elevación DEM incrustando la red de drenaje.
 * Utilizar diferentes herramientas de reacondicionamiento.
 * Visualizar perfiles de terreno reacondicionados.
@@ -38,9 +38,10 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
+
 #### Recorte de modelos digitales de elevación DEM con ArcGIS Pro
 
-1. En ArcGIS Pro y utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer es creado con esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
+1. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer contiene esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
 > La aferencia garantiza que el posterior recorte de los DEM incluya todas las celdas perimetrales dentro de la zona de estudio.
 
@@ -70,9 +71,17 @@ ALOS PALSAR de la zona de estudio (288 MB aprox.)
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISPro3.0.0APFBSRT1MosaicArcGISProZE.png)
 
+Especificaciones de las grillas recortadas de la zona de estudio, referencia espacial MAGNA_SIRGAS_CMT12:
+
+| MDE         | Grilla mosaico recortada        | Resolución, m | Columnas | Filas | Area, km² |
+|-------------|---------------------------------|---------------|----------|-------|-----------|
+| ASTER GDEM  | ASTGTMV003MosaicArcGISProZE.tif | 30.68464585   | 5408     | 8221  | 41860.42  |
+| SRTM        | SRTMV003MosaicArcGISProZE.tif   | 30.68464585   | 5408     | 8221  | 41860.42  |
+| ALOS PALSAR | APFBSRT1MosaicArcGISProZE.tif   | 12.5          | 13274    | 20179 | 41852.51  |
+
 > El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
 > 
-> El procedimiento anterior puede ser ejecutado en QGIS con las herramientas _Processing Toolbox / Vector geometry / Buffer_ y _Processing Toolbox / Vector geometry / Bounding boxes_.  
+> También puede ser ejecutado en QGIS con las herramientas _Processing Toolbox / Vector geometry / Buffer_ y _Processing Toolbox / Vector geometry / Bounding boxes_.  
 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-HMS
