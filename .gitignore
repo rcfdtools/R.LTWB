@@ -36,6 +36,7 @@ HECHMS/gis/
 .dem/SRTM/SRTMV003MosaicArcGISProZE.tif*
 .dem/ALOS/APFBSRT1MosaicArcGISProZE.tif
 .dem/ALOS/APFBSRT1MosaicArcGISProZE.tif*
+HECHMS/Layers/
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
