@@ -138,17 +138,40 @@ Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS re
 
 1. En Microsoft Windows, cree una carpeta nueva y nombre como _HECGeoHMS_ en la ruta _D:\R.LTWB_.
 
-2. En ArcGIS for Desktop 10.2.2, cree un mapa nuevo en blanco, guarde como _HECGeoHMS.mxd_ en la carpeta _D:\R.LTWB\HECGeoHMS_ y asigne el sistema de proyección de coordenadas
+> Para garantizar el correcto procesamiento del modelo reacondicionado en indispensable establecer permisos de lectura y escritura sobre la carpeta _HECGeoHMS_ a su usuario local. Desde el explorador de archivos de clic derecho sobre la carpeta _HECGeoHMS_, seleccione propiedades u oprima <kbd>Alt</kbd>+<kbd>Enter</kbd>. En la ventana de propiedades, seleccione la pestaña _Security_, de clic en el botón _Edit_
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/Windows11FolderProperties.png)
+
+En la ventana de edición de permisos, de clic en el botón _Add..._, busque su cuenta de usuario y establezca permisos completos sobre el directorio.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/Windows11FolderPropertiesSecurity.png)
+
+2. En ArcGIS for Desktop 10.2.2, cree un mapa nuevo en blanco, guarde como _HECGeoHMS.mxd_ en la carpeta _D:\R.LTWB\HECGeoHMS_ y asigne el sistema de proyección de coordenadas _MAGNA_Colombia_CTM12_ disponible en la carpeta _D:\R.LTWB\\.ProjectionFile_ como _MAGNA_OrigenNacional.prj_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2NewMap.png)
 
-3. 
+3. Agregue al mapa la red de drenaje _D:\R.LTWB\\.shp\DrenajeSencilloIGAC100kZEMerge.shp_, dando clic derecho en la capa exporte la red de drenaje en la carpeta _.shp_ como _DrenajeSencilloIGAC100kZEMergeNoAttrib.shp_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2ExportData.png)
+
+> Para garantizar el correcto procesamiento del modelo reacondicionado es indispensable eliminar los atributos de la capa vectorial de drenajes conservando y recalculando únicamente la longitud en el campo SHAPE_Leng.
+
+Abra la tabla de atributos de DrenajeSencilloIGAC100kZEMergeNoAttrib.shp y dando clic derecho en la cabecera de cada campo de atributos, elimine los atributos a excepción de _SHAPE_Leng_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2DeleteField.png)
+
+En el campo _SHAPE_Leng_, dando clic en la cabecera y seleccionando la opción _Calculate Geometry_ recalcule la longitud geométrica en metros de cada entidad.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2CalculateGeometry.png)
+
+Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red utilizada en la zona de estudio. Clic derecho en la cabecera del campo _SHAPE_Leng_ y seleccione _Statistics_. Podrá observar que la red de drenaje a incrustar en el terreno tiene una longitud de 42968 km.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2FieldStatistics.png)
 
 
 
-7. En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en el DEM.
 
-
+En ArcGIS Pro, ArcGIS for Desktop o QGIS, cargue y visualice la grilla reacondicionada, cree perfiles de visualización alrededor de algunos drenajes para comprender el proceso de incrustación de la red de drenaje en el DEM.
 
 
 En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
