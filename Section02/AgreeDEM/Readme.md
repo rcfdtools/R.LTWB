@@ -129,6 +129,9 @@ A través del monitor de procesos o _Processes_ del administrador de tareas o _T
 Reacondicionamiento completado.
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep4.png)
 
+Grilla obtenida localizada en _D:\R.LTWB\HECHMS\gis\BasinASTER_
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainReconditioningStep5.png)
+
 Opcional: repita el procedimiento anterior en HEC-HMS para los modelos de cuenca _BasinSRTM_ y _BasinALOS_. Los modelos de terreno serán almacenados en los directorios _\HECHMS\gis\BasinASTER_, _\HECHMS\gis\BasinSRTM_ y _\HECHMS\gis\BasinALOS_. 
 
 Debido a que los algoritmos y motor de cálculo del componente GIS de HEC-HMS requieren de varias horas para completar los procesos de reacondicionamiento en modelos digitales de elevación de gran tamaño, se recomienda realizar este procedimiento en ArcGIS for Desktop a través de la herramienta HEC-GeoHMS o desde Arc Hydro Tools.
@@ -168,6 +171,30 @@ Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red ut
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2FieldStatistics.png)
 
+4. Desde las subcarpetas contenidas en _D:\R.LTWB\\.dem_, cargue al mapa las grillas recortadas hasta el límite de la zona de estudio ASTGTMV003MosaicArcGISProZE.tif, SRTMV003MosaicArcGISProZE.tif y APFBSRT1MosaicArcGISProZE.tif. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2LoadDEMGrids.png)
+
+5. Desde el menú _Customize / Toolbars_ active la barra denominada _HEC-GeoHMS_
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSToolbar.png)
+
+6. En la barra de herramientas _HEC-GeoHMS_ de clic en el menú _Preprocessing_ y seleccione la opción _DEM Reconditioning_. Reacondicione las grilla DEM utilizando los parámetros definidos en la siguiente ilustración y nombre cada grilla resultante como ASTERAgreeDEM.tif, SRTMAgreeDEM.tif y ALOSAgreeDEM.tif. Guarde las grillas en la carpeta _D:\R.LTWB\HECGeoHMS\Layers\_
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningParameters)
+
+Resultados en ventana de ejecución para ASTERAgreeDEM.tif
+
+
+Resultados en ventana de ejecución para SRTMAgreeDEM.tif
+
+
+Resultados en ventana de ejecución para ALOSAgreeDEM.tif
+
+
+> En caso de que el proceso de ejecución devuelva error de escritura en memoria y no permita generar las grillas, cree en la raíz del disco una copia de la carpeta _D:\R.LTWB\HECGeoHMS_, reinicie su equipo y ejecute el readoncicionamiento desde esta localización. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningError.png)
 
 
 
