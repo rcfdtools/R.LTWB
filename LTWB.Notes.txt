@@ -31,5 +31,8 @@ Pending tasks
 	Stations density.
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
+Marckdown emojis
+	https://github.com/ikatyang/emoji-cheat-sheet
+	https://gist.github.com/rxaviers/7360908
 
 General update.
