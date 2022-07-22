@@ -24,9 +24,9 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * DEM ASTER GDEM 30m recortado hasta el límite de la zona de estudio: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/.dem)
 * DEM SRTM 30m recortado hasta el límite de la zona de estudio: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/.dem)
 * DEM ALOS PALSAR 12.5m recortado hasta el límite de la zona de estudio: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/.dem)
-* DEM ASTER GDEM 30m reacondicionado y recortado hasta el límite de la zona de estudio: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
-* DEM SRTM 30m reacondicionado recortado hasta el límite de la zona de estudio: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
-* DEM ALOS PALSAR 12.5m reacondicionado recortado hasta el límite de la zona de estudio: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* DEM ASTER GDEM 30m reacondicionado: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* DEM SRTM 30m reacondicionado: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* DEM ALOS PALSAR 12.5m reacondicionado: [:page_facing_up:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) [:open_file_folder:](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
 
 
 ### Procedimiento general
