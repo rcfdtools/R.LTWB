@@ -11,7 +11,7 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 ### Objetivos
 
 * Rellenar los sumideros del modelo digital de elevación reacondicionado para garantizar que la escorrentía de todo el modelo hidrológico fluya hacia los puntos de control más aguas abajo.
-* Identificar y cuantificar sumideros a través de la diferencia de elevaciones del DEM original y el DEM rellenado.
+* Identificar y cuantificar sumideros a través de la diferencia de elevaciones del DEM original y DEM rellenado.
 * Utilizar diferentes herramientas de relleno de sumideros.
 * Visualizar y comparar perfiles de modelos digitales de elevación con y sin relleno de sumideros.
 
@@ -21,12 +21,12 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Modelo digital de elevación ASTER GDEM 30m recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
-* [Modelo digital de elevación SRTM 30m recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
-* [Modelo digital de elevación ALOS PALSAR 12.5m recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
-* [Modelo digital de elevación ASTER GDEM 30m reacondicionado y recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
-* [Modelo digital de elevación SRTM 30m reacondicionado recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
-* [Modelo digital de elevación ALOS PALSAR 12.5m reacondicionado recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* [DEM ASTER GDEM 30m recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM), [(Grid)](https://github.com/rcfdtools/R.LTWB/tree/main/.dem)
+* [DEM SRTM 30m recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
+* [DEM ALOS PALSAR 12.5m recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
+* [DEM ASTER GDEM 30m reacondicionado y recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* [DEM SRTM 30m reacondicionado recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* [DEM ALOS PALSAR 12.5m reacondicionado recortado hasta el límite de la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
 
 
 ### Procedimiento general
