@@ -28,9 +28,9 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * DEM SRTM 30m reacondicionado
 * DEM ALOS PALSAR 12.5m reacondicionado
 
-:page_facing_up: Aprende a recortar y reacondicionar las grillas DEM [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM).  
-:open_file_folder: Descarga las grillas DEM recortadas [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).  
-:open_file_folder: Descarga las grillas DEM reacondicionadas [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers).    
+:page_facing_up: Aprende a recortar y reacondicionar grillas DEM [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM).  
+:open_file_folder: Descargar grillas DEM recortadas [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).  
+:open_file_folder: Descargar grillas DEM reacondicionadas [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers).    
 
 
 ### Procedimiento general

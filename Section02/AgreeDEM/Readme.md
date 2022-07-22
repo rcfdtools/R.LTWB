@@ -30,6 +30,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [Modelo digital de elevación SRTM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
 * [Modelo digital de elevación ALOS PALSAR 12.5m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
 
+:open_file_folder: Descargar grillas DEM en mosaico [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).
 
 ### Procedimiento general
 
