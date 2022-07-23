@@ -99,9 +99,9 @@ Como puede observar en la gráfica y en la tabla de atributos, se han rellenado 
 HEC-HMS grilla de resultados con localización de sumideros
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/HECHMS4.9PreprocessingSinksLocations.png)
 
-> **Actividad complementaria**: utilizando diferentes herramientas, cree mapas de relleno de sumideros a partir de la grilla reacondicionada ASTER GDEM y a través de un análisis de diferencias de elevación obtenido con la calculadora ráster, compare, analice y explique las diferencias encontradas.
-
 En este momento dispone de la grilla de relleno de sumideros requerida para la marcación de direcciones de flujo.
+
+> **Actividad complementaria**: utilizando diferentes herramientas, cree mapas de relleno de sumideros a partir de la grilla reacondicionada ASTER GDEM y a través de un análisis de diferencias de elevación obtenido con la calculadora ráster, compare, analice y explique las diferencias encontradas.
 
 
 ### Referencias
