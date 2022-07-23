@@ -64,11 +64,17 @@ Resultados ventana de ejecución grillas SRTM (dt: 01h06'35")
 
 | Los valores de cotas mínimas pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
 
-3. Utilizando algebra de mapas, calcule la diferencia entre el mapa de relleno de sumideros y el mapa reacondicionado para conocer la localización específica de las zonas rellenadas. Ejecute ArcToolBox / Spatial Analyst Tools / Map Algebra / Raster Calculator e ingrese la expresión `"ASTERFil.tif"-"ASTERAgreeDEM.tif"`, guarde la grilla resultante como _D:\R.LTWB\HECGeoHMS\Layers\ASTERSinkLocations.tif_ 
+3. Utilizando algebra de mapas, calcule la diferencia entre el mapa de relleno de sumideros y el mapa reacondicionado para conocer la localización específica de las zonas rellenadas entre 1 y 50 metros. Ejecute ArcToolBox / Spatial Analyst Tools / Map Algebra / Raster Calculator e ingrese la expresión `Con(("ASTERFil.tif"-"ASTERAgreeDEM.tif">0)  & ("ASTERFil.tif"-"ASTERAgreeDEM.tif"<=50) ,"ASTERFil.tif" - "ASTERAgreeDEM.tif")`, guarde la grilla resultante como _D:\R.LTWB\HECGeoHMS\Layers\ASTERSinkLocations.tif_ 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2RasterCalculator.png)
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2RasterCalculatorLog.png)
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERSinkLocations.png)
+
+Visualice la tabla de atributos de la grilla [ASTERSinkLocations.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERSinkLocations.rar) que contiene valores discretos contables de 0 a 1051 metros de diferencia de elevación y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERSinkLocationsGraph.png)
 
 Opcional: repita este procedimiento para los modelos digitales de elevación SRTM y ALOS.
 
@@ -94,6 +100,7 @@ En este momento dispone de grillas de relleno de sumideros requeridas para la ma
 
 * https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/fill.htm
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/fill.htm
+* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm
 
 
 ### Compatibilidad
