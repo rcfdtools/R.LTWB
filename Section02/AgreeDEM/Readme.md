@@ -74,11 +74,11 @@ ALOS PALSAR de la zona de estudio (288 MB aprox.)
 
 Especificaciones de las grillas recortadas de la zona de estudio, referencia espacial MAGNA_SIRGAS_CMT12:
 
-| MDE         | Grilla mosaico recortada        | Resolución, m | Columnas | Filas | Area, km² |
-|-------------|---------------------------------|---------------|----------|-------|-----------|
-| ASTER GDEM  | ASTGTMV003MosaicArcGISProZE.tif | 30.68464585   | 5408     | 8221  | 41860.42  |
-| SRTM        | SRTMV003MosaicArcGISProZE.tif   | 30.68464585   | 5408     | 8221  | 41860.42  |
-| ALOS PALSAR | APFBSRT1MosaicArcGISProZE.tif   | 12.5          | 13274    | 20179 | 41852.51  |
+| MDE         | Grilla mosaico recortada        | Resolución, m | Columnas | Filas | Area, km² | Cota mínima, m | Cota máxima, m |
+|-------------|---------------------------------|---------------|----------|-------|-----------|----------------|----------------|
+| ASTER GDEM  | ASTGTMV003MosaicArcGISProZE.tif | 30.68464585   | 5408     | 8221  | 41860.42  | 0              | 5687           |
+| SRTM        | SRTMV003MosaicArcGISProZE.tif   | 30.68464585   | 5408     | 8221  | 41860.42  | -46            | 5696           |
+| ALOS PALSAR | APFBSRT1MosaicArcGISProZE.tif   | 12.5          | 13274    | 20179 | 41852.51  | -48            | 5709           |
 
 > El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
 > 
@@ -200,18 +200,24 @@ Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red ut
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningParameters.png)
 
-Resultados en ventana de ejecución para ASTERAgreeDEM.tif (1 minuto con 21 segundos)
+Resultados en ventana de ejecución para ASTERAgreeDEM.tif (dt: 01'21")
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningASTERLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningASTERLog2.png)
 
-Resultados en ventana de ejecución para SRTMAgreeDEM.tif (1 minuto con 12 segundos)
+Resultados en ventana de ejecución para SRTMAgreeDEM.tif (dt: 01'12")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningSRTMLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningSRTMLog2.png)
 
-Resultados en ventana de ejecución para ALOSAgreeDEM.tif (7 minutos con 21 segundos)
+Resultados en ventana de ejecución para ALOSAgreeDEM.tif (dt: 07'21")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog2.png)
+
+| MDE reacondicionado | Cota mínima, m | Cota máxima, m |
+|---------------------|----------------|----------------|
+| ASTERAgreeDEM.tif   | -1006          | 5687           |
+| SRTMAgreeDEM.tif    | -1044          | 5696           |
+| ALOSAgreeDEM.tif    | -1046          | 5709           |
 
 > En caso de que el proceso de ejecución devuelva error de escritura en memoria y no permita generar las grillas, cree en la raíz del disco una copia de la carpeta _D:\R.LTWB\HECGeoHMS_, reinicie su equipo y ejecute el readoncicionamiento desde esta localización.
 

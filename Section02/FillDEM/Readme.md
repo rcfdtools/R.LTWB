@@ -46,21 +46,28 @@ El relleno de sumideros puede ser realizado con Spatial Analyst Tools de ArcGIS 
 
 1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM), este mapa contiene las grillas DEM reacondicionadas. En caso de que este creando un mapa nuevo, cargue directamente las grillas contenidas en el directorio  _D:\R.LTWB\HECGeoHMS\Layers_. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_ y seleccione la opción _Fill Sinks_. 
 
-Realice el procedimiento de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los siguientes nombres en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_:
-
-| MDE reacondicionado | Relleno de sumideros | 
-|---------------------|----------------------|
-| ASTERAgreeDEM.tif   | ASTERFil.tif        | 
-| SRTMAgreeDEM.tif    | SRTMFil.tif         |
-| ALOSAgreeDEM.tif    | ALOSFil.tif         |
+Realice el procedimiento de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los nombres ASTERFil.tif, SRTMFil.tif y ALOSFil.tif en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_:
 
 Parámetros de entrada para relleno de sumideros para grillas reacondicionada ASTER
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTER.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERParameters.png)
 
 Resultados ventana de ejecución grillas ASTER (03'34")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTER.png)
 
+Resultados ventana de ejecución grillas SRTM (XX'XX")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMSRTMLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMSRTM.png)
 
+Resultados ventana de ejecución grillas SRTM (XX'XX")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOSLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOS.png)
+
+| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m  | Cota máxima, m |
+|---------------------|----------------|----------------|----------------------|-----------------|----------------|
+| ASTERAgreeDEM.tif   | -1006          | 5687           | ASTERFil.tif         | 0               | 5687           |
+| SRTMAgreeDEM.tif    | -1044          | 5696           | SRTMFil.tif          | 0               | 5687           |
+| ALOSAgreeDEM.tif    | -1046          | 5709           | ALOSFil.tif          | 0               | 5687           |
 
 En este momento ya dispone de la grilla de relleno de sumideros requerida para la marcación de direcciones de flujo.
 
