@@ -16,8 +16,18 @@ End:
 
 Basin Layer Properties:
      Base Layer:
-          Name: Terrain
+          Name: Sink Locations
           Layer shown: Yes
+          Properties Filename: maps\sinklocs1432092042022.xml
+     End Layer:
+     Base Layer:
+          Name: Sink Fill
+          Layer shown: No
+          Properties Filename: maps\sinkfill1432092042022.xml
+     End Layer:
+     Base Layer:
+          Name: Terrain
+          Layer shown: No
           Properties Filename: maps\elevation0045152012022.xml
      End Layer:
 End:
