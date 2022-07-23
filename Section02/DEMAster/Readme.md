@@ -58,7 +58,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 Para el caso de estudio, utilizaremos el método _File_ para definir la máscara de selección de elementos a descargar.
 
-Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. Este archivo de formas tiene embebido el sistema de coordenadas geográfico GCS_MAGNA que puede ser interpretado directamente por Earthdata.
+Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
@@ -283,11 +283,11 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
-4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono ZonaEstudioEnvelope.shp y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
+4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip) y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2ProfileGraph.png)
 
-5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _ZonaEstudio.shp_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
+5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
@@ -397,6 +397,8 @@ En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Too
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeHillshade.png)
 
 En este momento ya dispone de una grilla integrada de elevación ASTER que cubre toda la zona de estudio y un mapa de representación de colinas.
+
+:open_file_folder: Descarga: [ASTGTMV003Mosaic.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [ASTGTMV003Mosaic.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part2.rar)
 
 
 ### Referencias

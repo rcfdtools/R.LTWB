@@ -149,7 +149,7 @@ Catálogo de objetos en Subzonas [^4]
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
-5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _ZonaEstudio.shp_. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
+5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
@@ -181,7 +181,7 @@ Datum: D_MAGNA
 ```
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
 
-7. En la tabla de atributos de la capa geográfica _ZonaEstudio.shp_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
+7. En la tabla de atributos de la capa geográfica _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
 
 > En ArcGIS, nuevos campos pueden ser creados desde las propiedades de la tabla de atributos utilizando la opción _Add Field_. 
 > Para el cálculo del área y perímetros, de clic derecho en la cabecera de los campos y seleccione la opción _Calculate Geometry_.
@@ -195,7 +195,7 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png)
 
-8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _ZonaEstudioEnvelope.shp_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
+8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _[ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
@@ -245,7 +245,7 @@ Utilizando la herramienta _Data Management Tools / Features / Feature Envelope t
 
 #### Instrucciones en QGIS (3.26.0)
 
-Cree un mapa de proyecto, agregue la capa Zonificacion_hidrografica_2013.shp y guarde en la carpeta _.map_ como _R.LTWB.qgz_
+Cree un mapa de proyecto, agregue la capa [Zonificacion_hidrografica_2013.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/Zonificacion_Hidrografica_2013.zip) y guarde en la carpeta _.map_ como _R.LTWB.qgz_
 
 El filtrado de entidades se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
 
