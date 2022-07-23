@@ -30,7 +30,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [Modelo digital de elevación SRTM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
 * [Modelo digital de elevación ALOS PALSAR 12.5m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
 
-:open_file_folder: Descargar grillas DEM en mosaico [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).
+:open_file_folder: Descargar mosaicos grillas DEM [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).
 
 ### Procedimiento general
 
@@ -74,11 +74,11 @@ ALOS PALSAR de la zona de estudio (288 MB aprox.)
 
 Especificaciones de las grillas recortadas de la zona de estudio, referencia espacial MAGNA_SIRGAS_CMT12:
 
-| MDE         | Grilla mosaico recortada        | Resolución, m | Columnas | Filas | Area, km² | Cota mínima, m | Cota máxima, m |
-|-------------|---------------------------------|---------------|----------|-------|-----------|----------------|----------------|
-| ASTER GDEM  | ASTGTMV003MosaicArcGISProZE.tif | 30.68464585   | 5408     | 8221  | 41860.42  | 0              | 5687           |
-| SRTM        | SRTMV003MosaicArcGISProZE.tif   | 30.68464585   | 5408     | 8221  | 41860.42  | -46            | 5696           |
-| ALOS PALSAR | APFBSRT1MosaicArcGISProZE.tif   | 12.5          | 13274    | 20179 | 41852.51  | -48            | 5709           |
+| MDE                                                                    | Grilla mosaico recortada        | Resolución, m | Columnas | Filas | Area, km² | Cota mínima, m | Cota máxima, m | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                                                                                                |
+|------------------------------------------------------------------------|---------------------------------|---------------|----------|-------|-----------|----------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ASTER GDEM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/ASTER) | ASTGTMV003MosaicArcGISProZE.tif | 30.68464585   | 5408     | 8221  | 41860.42  | 0              | 5687           | [ASTGTMV003MosaicArcGISProZE.rar](ASTGTMV003MosaicArcGISProZE.rar)                                                                                                                                                                                                                                                                                                                                          |
+| [SRTM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/SRTM)        | SRTMV003MosaicArcGISProZE.tif   | 30.68464585   | 5408     | 8221  | 41860.42  | -46            | 5696           | [SRTMV003MosaicArcGISProZE.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISProZE.rar)                                                                                                                                                                                                                                                                                      |
+| [ALOS PALSAR](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/ALOS) | APFBSRT1MosaicArcGISProZE.tif   | 12.5          | 13274    | 20179 | 41852.51  | -48            | 5709           | [APFBSRT1MosaicArcGISProZE.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part1.rar), [APFBSRT1MosaicArcGISProZE.part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part2.rar), [APFBSRT1MosaicArcGISProZE.part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part3.rar)  |
 
 > El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
 > 
@@ -213,11 +213,11 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif (dt: 07'21")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog2.png)
 
-| MDE reacondicionado | Cota mínima, m | Cota máxima, m |
-|---------------------|----------------|----------------|
-| ASTERAgreeDEM.tif   | -1006          | 5687           |
-| SRTMAgreeDEM.tif    | -1044          | 5696           |
-| ALOSAgreeDEM.tif    | -1046          | 5709           |
+| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                                       |
+|---------------------|----------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ASTERAgreeDEM.tif   | -1006          | 5687           | [ASTERAgreeDEM.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERAgreeDEM.rar)                                                                                                                                                                                                                                              |
+| SRTMAgreeDEM.tif    | -1044          | 5696           | [SRTMAgreeDEM.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMAgreeDEM.rar)                                                                                                                                                                                                                                                |
+| ALOSAgreeDEM.tif    | -1046          | 5709           | [ALOSAgreeDEM.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSAgreeDEM.part1.rar), [ALOSAgreeDEM.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSAgreeDEM.part2.rar), [ALOSAgreeDEM.part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSAgreeDEM.part3.rar)  |
 
 > En caso de que el proceso de ejecución devuelva error de escritura en memoria y no permita generar las grillas, cree en la raíz del disco una copia de la carpeta _D:\R.LTWB\HECGeoHMS_, reinicie su equipo y ejecute el readoncicionamiento desde esta localización.
 
