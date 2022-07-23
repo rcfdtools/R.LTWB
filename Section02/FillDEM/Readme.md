@@ -1,9 +1,9 @@
 ##  Relleno de sumideros o depresiones de modelos digitales de elevación – Fill Sinks – FIL
-Keywords: `Fill DEM`
+Keywords: `Fill DEM` `Map Algebra` `Raster Calculator` `Spatial Analyst Tools` `Arc Hydro Tools`
 
 ![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/FillDEM.png)
 
-Cuando una celda se encuentra rodeada por celdas de mayor elevación la escorrentía es retenida y no fluye. El relleno de sumideros eleva estas celdas utilizando como referencia los valores en altura de las celdas circundantes, garantizando que las celdas de la superficie del terreno drenen hacia una localización más baja.
+Cuando una celda se encuentra rodeada por celdas de mayor elevación, la escorrentía es retenida y no fluye. El relleno de sumideros eleva estas celdas utilizando como referencia los valores en altura de las celdas circundantes, garantizando que las celdas de la superficie del terreno drenen hacia una localización más baja.
 
 Los modelos digitales de elevación obtenidos a partir de información satelital contienen información relacionada a la superficie terrestre (Digital Surface model – DSM, cubiertas de construcciones, línea superior del canopy en vegetación) y no a las elevaciones más bajas en el terreno. Es por ello por lo que al ejecutar el procedimiento de relleno de sumideros se pueden identificar múltiples localizaciones y áreas que pueden producir encharcamiento interrumpiendo el drenaje continuo a largo plazo.
 
@@ -11,8 +11,8 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 ### Objetivos
 
 * Rellenar los sumideros del modelo digital de elevación reacondicionado para garantizar que la escorrentía de todo el modelo hidrológico fluya hacia los puntos de control más aguas abajo.
-* Identificar y cuantificar sumideros a través de la diferencia de elevaciones del DEM original y DEM rellenado.
-* Utilizar diferentes herramientas de relleno de sumideros.
+* Identificar y cuantificar sumideros a través de la diferencia de elevaciones del DEM rellenado y DEM original.
+* Conocer diferentes herramientas para relleno de sumideros.
 * Visualizar y comparar perfiles de modelos digitales de elevación con y sin relleno de sumideros.
 
 
@@ -79,6 +79,12 @@ Visualice la tabla de atributos de la grilla [ASTERSinkLocations.tif](https://gi
 Como puede observar en la gráfica y en la tabla de atributos, se han rellenado 1.265.842 celdas 1 metro por encima de su elevación original, 823.059 celdas 2 metros por encima su elevación original y al sumar el total de celdas rellenadas hasta una diferencia de 50 metros se cuentan 4.020.911 celdas.
 
 Opcional: repita este procedimiento para los modelos digitales de elevación SRTM y ALOS.
+
+4. Utilizando la barra de herramienta 3D Analyst, cree y visualice perfiles de terreno con y sin relleno de sumideros.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2ProfileView.png)
+
+En este momento dispone de grillas de terreno reacondicionadas y con sumideros rellenados para identificar las direcciones de drenaje.
 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con otras herramientas
