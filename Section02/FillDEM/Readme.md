@@ -21,16 +21,7 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* DEM ASTER GDEM 30m recortado hasta el límite de la zona de estudio
-* DEM SRTM 30m recortado hasta el límite de la zona de estudio
-* DEM ALOS PALSAR 12.5m recortado hasta el límite de la zona de estudio
-* DEM ASTER GDEM 30m reacondicionado
-* DEM SRTM 30m reacondicionado
-* DEM ALOS PALSAR 12.5m reacondicionado
-
-:page_facing_up: [Aprender a recortar y reacondicionar grillas DEM](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM).  
-:open_file_folder: [Descargar grillas DEM recortadas](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).  
-:open_file_folder: [Descargar grillas DEM reacondicionadas](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers).    
+* :open_file_folder: [Grillas DEM ASTER GDEM 30m, SRTM 30m y ALOS PALSAR 12.5m reacondicionadas](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers) hasta el límite de la zona de estudio. [Aprender a recortar y reacondicionar grillas DEM](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM).  
 
 
 ### Procedimiento general
