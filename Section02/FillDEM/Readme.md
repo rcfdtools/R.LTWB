@@ -11,15 +11,15 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 ### Objetivos
 
 * Rellenar los sumideros del modelo digital de elevación reacondicionado para garantizar que la escorrentía de todo el modelo hidrológico fluya hacia los puntos de control más aguas abajo.
-* Identificar y cuantificar sumideros a través de la diferencia de elevaciones del DEM rellenado y DEM original.
+* Identificar, cuantificar y graficar sumideros a través de la diferencia de elevaciones del DEM rellenado y DEM original.
 * Conocer diferentes herramientas para relleno de sumideros.
 * Visualizar y comparar perfiles de modelos digitales de elevación con y sin relleno de sumideros.
 
 
 ### Requerimientos
 
-* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
-* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
+* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [Grillas DEM ASTER GDEM 30m, SRTM 30m y ALOS PALSAR 12.5m reacondicionadas](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
 
@@ -27,7 +27,7 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Graph/FillDEMFlowchart.png" width="45%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Graph/FillDEMFlowchart.png" width="55%"><br>
 <sub>Convenciones del diagrama: Clases de entidad y grillas en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
