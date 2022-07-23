@@ -396,9 +396,7 @@ En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Too
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeHillshade.png)
 
-En este momento ya dispone de una grilla integrada de elevación ASTER que cubre toda la zona de estudio y un mapa de representación de colinas.
-
-:open_file_folder: Descarga: [ASTGTMV003Mosaic.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [ASTGTMV003Mosaic.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part2.rar)
+En este momento ya dispone de una grilla integrada de elevación ASTER que cubre toda la zona de estudio y un mapa de representación de colinas. :open_file_folder: Descargar: [ASTGTMV003Mosaic.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [ASTGTMV003Mosaic.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part2.rar)
 
 
 ### Referencias
