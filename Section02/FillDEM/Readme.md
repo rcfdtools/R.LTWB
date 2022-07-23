@@ -116,9 +116,9 @@ En este momento dispone de grillas de relleno de sumideros requeridas para la ma
 
 ### Control de versiones
 
-| Versión     | Descripción                                                          | Autor                                      | Horas |
-|-------------|:---------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.23  | Versión inicial con relleno de sumideros para DEM ASTER, SRTM y ALOS | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| Versión     | Descripción                                                                                                                                                                   | Autor                                      | Horas |
+|-------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.23  | Versión inicial con relleno de sumideros para DEM ASTER, SRTM y ALOS. Cálculo de diferencias de elevación para identificación de zonas rellenadas, visualización de perfiles. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
