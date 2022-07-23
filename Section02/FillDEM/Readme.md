@@ -1,5 +1,5 @@
 ##  Relleno de sumideros – Fill Sinks – FIL
-Keywords: `DEM` `Fill DEM`
+Keywords: `Fill DEM`
 
 ![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/FillDEM.png)
 
@@ -28,9 +28,9 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * DEM SRTM 30m reacondicionado
 * DEM ALOS PALSAR 12.5m reacondicionado
 
-:page_facing_up: Aprende a recortar y reacondicionar grillas DEM [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM).  
-:open_file_folder: Descargar grillas DEM recortadas [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).  
-:open_file_folder: Descargar grillas DEM reacondicionadas [aquí](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers).    
+:page_facing_up: [Aprender a recortar y reacondicionar grillas DEM](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM).  
+:open_file_folder: [Descargar grillas DEM recortadas](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).  
+:open_file_folder: [Descargar grillas DEM reacondicionadas](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers).    
 
 
 ### Procedimiento general
@@ -40,7 +40,11 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. xxx
+El relleno de sumideros puede ser realizado en ArcGIS for Desktop con Spatial Analyst Tools, HEC-GeoHMS sobre ArcGIS 10.2.2, Arc Hydro Tools sobre ArcGIS 10.2.2, ArcGIS Pro, Arc Hydro Tools sobre ArcGIS Pro y en QGIS. 
+
+#### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
+
+1. En ArcGIS for Desktop, abra el mapa D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM). Este mapa contiene las grillas DEM reacondicionadas, en caso de que este creando un mapa nuevo, cargue directamente las grillas contenidas en el directorio  D:\R.LTWB\HECGeoHMS\Layers
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/IGACGDB100k.png)
 
