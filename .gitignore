@@ -43,7 +43,12 @@ HECGeoHMS/Layers/ASTERAgreeDEM.tif
 HECGeoHMS/Layers/ASTERAgreeDEM.tif.*
 HECGeoHMS/Layers/SRTMAgreeDEM.tif
 HECGeoHMS/Layers/SRTMAgreeDEM.tif.*
-
+HECGeoHMS/Layers/ASTERFil.tif
+HECGeoHMS/Layers/ASTERFil.tif.*
+HECGeoHMS/Layers/SRTMFil.tif
+HECGeoHMS/Layers/SRTMFil.tif.*
+HECGeoHMS/Layers/ALOSFil.tif
+HECGeoHMS/Layers/ALOSFil.tif.*
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files

@@ -40,13 +40,27 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-El relleno de sumideros puede ser realizado en ArcGIS for Desktop con Spatial Analyst Tools, HEC-GeoHMS sobre ArcGIS 10.2.2, Arc Hydro Tools sobre ArcGIS 10.2.2, ArcGIS Pro, Arc Hydro Tools sobre ArcGIS Pro y en QGIS. 
+El relleno de sumideros puede ser realizado con Spatial Analyst Tools de ArcGIS for Desktop, HEC-GeoHMS sobre ArcGIS 10.2.2 a través de Arc Hydro Tools, Spatial Analyst de ArcGIS Pro, Arc Hydro Tools sobre ArcGIS Pro, QGIS, HEC-HMS a través del menú GIS y otras herramientas y librerías.
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM). Este mapa contiene las grillas DEM reacondicionadas, en caso de que este creando un mapa nuevo, cargue directamente las grillas contenidas en el directorio  D:\R.LTWB\HECGeoHMS\Layers
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM), este mapa contiene las grillas DEM reacondicionadas. En caso de que este creando un mapa nuevo, cargue directamente las grillas contenidas en el directorio  _D:\R.LTWB\HECGeoHMS\Layers_. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_ y seleccione la opción _Fill Sinks_. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/IGACGDB100k.png)
+Realice el procedimiento de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los siguientes nombres en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_:
+
+| MDE reacondicionado | Relleno de sumideros | 
+|---------------------|----------------------|
+| ASTERAgreeDEM.tif   | ASTERFil.tif        | 
+| SRTMAgreeDEM.tif    | SRTMFil.tif         |
+| ALOSAgreeDEM.tif    | ALOSFil.tif         |
+
+Parámetros de entrada para relleno de sumideros para grillas reacondicionada ASTER
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTER.png)
+
+Resultados ventana de ejecución grillas ASTER (03'34")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTER.png)
+
+
 
 En este momento ya dispone de la grilla de relleno de sumideros requerida para la marcación de direcciones de flujo.
 
