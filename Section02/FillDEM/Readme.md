@@ -51,11 +51,11 @@ El relleno de sumideros puede ser realizado con Spatial Analyst Tools de ArcGIS 
 Parámetros de entrada para relleno de sumideros para grillas reacondicionada ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERParameters.png)
 
-Resultados ventana de ejecución grillas ASTER (03'34")
+Resultados ventana de ejecución grillas ASTER (dt: 03'34")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTER.png)
 
-Resultados ventana de ejecución grillas SRTM (XX'XX")
+Resultados ventana de ejecución grillas SRTM (dt: 03'33")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMSRTMLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMSRTM.png)
 
@@ -63,14 +63,28 @@ Resultados ventana de ejecución grillas SRTM (XX'XX")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOS.png)
 
-| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m  | Cota máxima, m |
-|---------------------|----------------|----------------|----------------------|-----------------|----------------|
-| ASTERAgreeDEM.tif   | -1006          | 5687           | ASTERFil.tif         | 0               | 5687           |
-| SRTMAgreeDEM.tif    | -1044          | 5696           | SRTMFil.tif          | 0               | 5687           |
-| ALOSAgreeDEM.tif    | -1046          | 5709           | ALOSFil.tif          | 0               | 5687           |
+| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m | Cota máxima, m | :open_file_folder: Descargar                                        |
+|---------------------|----------------|----------------|----------------------|----------------|----------------|---------------------------------------------------------------------|
+| ASTERAgreeDEM.tif   | -1006          | 5687           | ASTERFil.tif         | 0              | 5687           | [ASTERFil.rar]()                                                    |
+| SRTMAgreeDEM.tif    | -1044          | 5696           | SRTMFil.tif          | -4             | 5696           | [SRTMFil.rar]()                                                     |
+| ALOSAgreeDEM.tif    | -1046          | 5709           | ALOSFil.tif          | 0              | 5687           | [ALOSFil.part1.rar](), [ALOSFil.part2.rar](), [ALOSFil.part3.rar]() |
 
-En este momento ya dispone de la grilla de relleno de sumideros requerida para la marcación de direcciones de flujo.
+| Los valores de cota mínima pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
 
+#### Reacondicionamiento de modelos digitales de elevación DEM con otras herramientas
+
+| Herramienta                                | Procedimiento |
+|--------------------------------------------|---------------|
+| ArcGIS for Desktop / Spatial Analyst Tools |               |
+| ArcGIS 10.2.2 / Arc Hydro Tools            |               |
+| ArcGIS 10.2.2 / Arc Hydro Tools            |               |
+| ArcGIS Pro / Spatial Analyst               |               |
+| ArcGIS Pro / Arc Hydro Tools               |               |
+| HEC-HMS                                    |               |
+| QGIS                                       |               |
+
+
+En este momento dispone de grillas de relleno de sumideros requeridas para la marcación de direcciones de flujo.
 
 ### Referencias
 
