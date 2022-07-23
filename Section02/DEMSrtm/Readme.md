@@ -239,7 +239,7 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
-En este momento dispone de grillas integradas de elevación SRTM que cubre toda la zona de estudio.
+En este momento dispone de la grilla integrada de elevación SRTM que cubre toda la zona de estudio.
 
 | Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                                                   |
 |:-------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

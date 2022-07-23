@@ -275,7 +275,11 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
-En este momento ya dispone de una grilla integrada de elevación ALOS PALSAR que cubre toda la zona de estudio.
+En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cubre toda la zona de estudio.
+
+| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ArcGIS Pro / mosaic            | [APFBSRT1MosaicArcGISPro.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part1.rar), [APFBSRT1MosaicArcGISPro.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part2.rar), [APFBSRT1MosaicArcGISPro.part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part3.rar), [APFBSRT1MosaicArcGISPro.part4.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part4.rar), [APFBSRT1MosaicArcGISPro.part5.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part5.rar), |
 
 
 ### Referencias
