@@ -56,13 +56,21 @@ Resultados ventana de ejecución grillas SRTM (dt: 01h06'35")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOS.png)
 
-| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m | Cota máxima, m | :open_file_folder: Descargar                                        |
-|---------------------|----------------|----------------|----------------------|----------------|----------------|---------------------------------------------------------------------|
-| ASTERAgreeDEM.tif   | -1006          | 5687           | ASTERFil.tif         | 0              | 5687           | [ASTERFil.rar]()                                                    |
-| SRTMAgreeDEM.tif    | -1044          | 5696           | SRTMFil.tif          | -4             | 5696           | [SRTMFil.rar]()                                                     |
-| ALOSAgreeDEM.tif    | -1046          | 5709           | ALOSFil.tif          | 0              | 5687           | [ALOSFil.part1.rar](), [ALOSFil.part2.rar](), [ALOSFil.part3.rar]() |
+| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m | Cota máxima, m | :open_file_folder: Descargar                                                                                                                                                                                                                                                                                         |
+|---------------------|----------------|----------------|----------------------|----------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ASTERAgreeDEM.tif   | -1006          | 5687           | ASTERFil.tif         | 0              | 5687           | [ASTERFil.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFil.rar)                                                                                                                                                                                                                          |
+| SRTMAgreeDEM.tif    | -1044          | 5696           | SRTMFil.tif          | -4             | 5696           | [SRTMFil.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFil.rar)                                                                                                                                                                                                                            |
+| ALOSAgreeDEM.tif    | -1046          | 5709           | ALOSFil.tif          | 0              | 5687           | [ALOSFil.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFil.part1.rar), [ALOSFil.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFil.part2.rar), [ALOSFil.part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFil.part3.rar)  |
 
-| Los valores de cota mínima pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
+| Los valores de cotas mínimas pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
+
+3. Utilizando algebra de mapas, calcule la diferencia entre el mapa de relleno de sumideros y el mapa reacondicionado para conocer la localización específica de las zonas rellenadas. Ejecute ArcToolBox / Spatial Analyst Tools / Map Algebra / Raster Calculator e ingrese la expresión `"ASTERFil.tif"-"ASTERAgreeDEM.tif"`, guarde la grilla resultante como _D:\R.LTWB\HECGeoHMS\Layers\ASTERSinkLocations.tif_ 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2RasterCalculator.png)
+
+
+
+Opcional: repita este procedimiento para los modelos digitales de elevación SRTM y ALOS.
 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con otras herramientas

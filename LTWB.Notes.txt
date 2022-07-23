@@ -28,7 +28,7 @@ Pending tasks
 	Python script for flow direction conversion HEC-HMS to ArcGIS.
 	Table with hydrological parameters per categories.
 	Correlation test for weather variables.
-	At the end of each activities show a table with all the created files.
+	At the end of each class show a table with all the created files.
 	Stations density.
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 

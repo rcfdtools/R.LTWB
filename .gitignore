@@ -49,6 +49,9 @@ HECGeoHMS/Layers/SRTMFil.tif
 HECGeoHMS/Layers/SRTMFil.tif.*
 HECGeoHMS/Layers/ALOSFil.tif
 HECGeoHMS/Layers/ALOSFil.tif.*
+HECGeoHMS/Layers/ASTERSinkLocations.tif
+HECGeoHMS/Layers/ASTERSinkLocations.tif.*
+
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
