@@ -1,4 +1,4 @@
-##  Relleno de sumideros – Fill Sinks – FIL
+##  Relleno de sumideros o depresiones de modelos digitales de elevación – Fill Sinks – FIL
 Keywords: `Fill DEM`
 
 ![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/FillDEM.png)
@@ -48,6 +48,8 @@ El relleno de sumideros puede ser realizado con Spatial Analyst Tools de ArcGIS 
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_ y seleccione la opción _Fill Sinks_ y realice el procedimiento de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los nombres ASTERFil.tif, SRTMFil.tif y ALOSFil.tif en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_
 
+En esta herramienta puede establecer el límite de relleno con la opción _Fill Threshold_ y delimitar la zona a ser rellenada con la selección de un polígono mediante _Input Deranged Polygon Feature Class_.
+
 Parámetros de entrada para relleno de sumideros para grillas reacondicionada ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERParameters.png)
 
@@ -71,36 +73,37 @@ Resultados ventana de ejecución grillas SRTM (XX'XX")
 
 | Los valores de cota mínima pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
 
+
 #### Reacondicionamiento de modelos digitales de elevación DEM con otras herramientas
 
-| Herramienta                                | Procedimiento |
-|--------------------------------------------|---------------|
-| ArcGIS for Desktop / Spatial Analyst Tools |               |
-| ArcGIS 10.2.2 / Arc Hydro Tools            |               |
-| ArcGIS 10.2.2 / Arc Hydro Tools            |               |
-| ArcGIS Pro / Spatial Analyst               |               |
-| ArcGIS Pro / Arc Hydro Tools               |               |
-| HEC-HMS                                    |               |
-| QGIS                                       |               |
-
+| Herramienta                                                                                                                      | Procedimiento                                                                                                                                                                                                                                                                                                                                                     |
+|----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ArcGIS for Desktop / Spatial Analyst Tools](https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/fill.htm) |                                                                                                                                                                                                                                                                                                                                                                   |
+| ArcGIS 10.2.2 / Arc Hydro Tools                                                                                                  | El procedimiento es el mismo presentado en esta actividad a través de HEC-GeoHMS debido a que esta herramienta utiliza Arc Hydro Tools.                                                                                                                                                                                                                           |
+| [ArcGIS Pro / Spatial Analyst](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/fill.htm)                 | En el panel _Geoprocessing_, busque la caja de herramientas _Spatial Analyst Tools / Hydrology_ y seleccione la herramienta _Fill_. Seleccione la grilla de entrada, asigne un nombre de la grilla de salida y opcionalmente ingrese el valor _Z limit_ correspondiente a la máxima diferencia de elevación entre la celda de terreno y la celda rellenada.       |
+| ArcGIS Pro / Arc Hydro Tools Pro                                                                                                 | En el panel _Geoprocessing_, busque la caja de herramientas _Arc Hydro Tools Pro / Terrain Preprocessing_ y seleccione la herramienta _Fill Sinks_. En esta herramienta puede establecer el límite de relleno con la opción _Fill Threshold_ y delimitar la zona a ser rellenada con la selección de un polígono mediante _Input Deranged Polygon Feature Class_. |
+| HEC-HMS                                                                                                                          | En el panel lateral seleccione en _Basin Models_ el modelo de cuenca creado, luego en el menú _GIS_ seleccione la opción _Preprocessing Sinks_.                                                                                                                                                                                                                   |
+| QGIS                                                                                                                             | En el _Processing Toolbox_ busque el grupo de herramientas _SAGA / Terrain Analysis_ y ejecute cualquiera de los 3 métodos disponibles: _Fill Sinks (Planchon/Darboux, 2001), Fill Sinks (Wang & Lui) o Fill Sinks XXL (Wang & Lui)_                                                                                                                              |
 
 En este momento dispone de grillas de relleno de sumideros requeridas para la marcación de direcciones de flujo.
 
+
 ### Referencias
 
-* 
+* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/fill.htm
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/fill.htm
 
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada en ArcGIS for Desktop, HEC-GeoHMS sobre ArcGIS 10.2.2, Arc Hydro Tools sobre ArcGIS 10.2.2, ArcGIS Pro, Arc Hydro Tools sobre ArcGIS Pro y en QGIS.
+* Se recomienda desarrollar el relleno de sumideros - Fil con el mismo grupo de herramientas donde se desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.  
  
 
 ### Control de versiones
 
-| Versión    | Descripción     | Autor                                      | Horas |
-|------------|:----------------|--------------------------------------------|:-----:|
-| 2022.07.22 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   0   |
+| Versión     | Descripción                                                          | Autor                                      | Horas |
+|-------------|:---------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.23  | Versión inicial con relleno de sumideros para DEM ASTER, SRTM y ALOS | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
@@ -108,5 +111,4 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 | [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente]()  |
-|---------------------------------------------------------------------------------------|----------------------------------------------------|--------------------------------------------------------------------------|--------------------------|
-[^1]: 
+|----------------------------------------------------------------------------------------|----------------------------------------------------|--------------------------------------------------------------------------|--------------------------|
