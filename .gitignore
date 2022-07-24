@@ -8,9 +8,9 @@
 # General exclusions
 #.gitignore
 .git/
+.github/
 .idea/
 venv/
-.temp/HECHMS_v0/
 #.refs/GitHubRefs/
 
 # Large files exclusions
