@@ -9,7 +9,7 @@ _**Licencia, cláusulas y condiciones de uso:**  R.LTWB es de uso libre para fin
 
 **Ayuda y soporte:** a través de la pestaña _[Discussions](https://github.com/rcfdtools/R.LTWB/discussions)_ localizada en la parte superior de esta ventana, podrás encontrar y participar en los [_anuncios o noticias_](https://github.com/rcfdtools/R.LTWB/discussions/categories/announcements) publicados, enviarnos tus [_ideas_](https://github.com/rcfdtools/R.LTWB/discussions/categories/ideas) para actividades complementarias, participar en preguntas, respuestas y consultas específicas [_Q&A_](https://github.com/rcfdtools/R.LTWB/discussions/categories/q-a) y realizar [_publicaciones o consultas generales_](https://github.com/rcfdtools/R.LTWB/discussions/categories/general).
 
-_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+_¡Encontraste útil este curso!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
 | [Empezar a aprender](https://github.com/rcfdtools/R.LTWB/wiki) |
 |----------------------------------------------------------------|
