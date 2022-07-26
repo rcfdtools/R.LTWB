@@ -3,13 +3,14 @@ Keywords: `FDR DEM` `Flow direction` `Map Algebra` `Raster Calculator` `Spatial 
 
 ![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/FdrDEM.png)
 
-Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros FIL. Esta capa es utilizada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas. El algoritmo de cálculo da como resultado ocho direcciones posibles en cada celda.
+Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
 
 
 ### Objetivos
 
 * Crear y validar el mapa de direcciones de flujo.
 * A partir de la tabla de atributos de direcciones, crear un gráfico de conteo para evaluar la dirección predominante del flujo.
+* Homologar mapas de direcciones de flujo a través de la calculadora ráster.
 
 
 ### Requerimientos
@@ -24,19 +25,19 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 
 Existen diferentes codificaciones para la marcación de direcciones de flujo que dependen principalmente de la herramienta utilizada.
 
-| Orientación | ArcGIS* | HidroSIG 4.0 | MapWindow 4.5 | QGIS | HEC-HMS GIS | Homologador |
-|-------------|---------|--------------|---------------|------|-------------|-------------|
-| Este        | 1       | 6            | 1             | 2    |             | 20          |
-| Sureste     | 2       | 3            | 8             | 3    |             | 21          |
-| Sur         | 4       | 2            | 7             | 4    |             | 22          |
-| Suroeste    | 8       | 1            | 6             | 5    |             | 23          |
-| Oeste       | 16      | 4            | 5             | 6    |             | 24          |
-| Noroeste    | 32      | 7            | 4             | 7    |             | 25          |
-| Norte       | 64      | 8            | 3             | 0    |             | 26          |
-| Nordeste    | 128     | 9            | 2             | 1    |             | 27          |
+| Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 | QGIS | HEC-HMS  | Homologador  |
+|:-----------:|:------:|:------------:|:-------------:|:----:|:--------:|:------------:|
+|    Este     |   1    |      6       |       1       |  2   |          |      20      |
+|   Sureste   |   2    |      3       |       8       |  3   |          |      21      |
+|     Sur     |   4    |      2       |       7       |  4   |          |      22      |
+|  Suroeste   |   8    |      1       |       6       |  5   |          |      23      |
+|    Oeste    |   16   |      4       |       5       |  6   |          |      24      |
+|  Noroeste   |   32   |      7       |       4       |  7   |          |      25      |
+|    Norte    |   64   |      8       |       3       |  0   |          |      26      |
+|  Nordeste   |  128   |      9       |       2       |  1   |          |      27      |
 
-* Aplica para ArcGIS for Desktop y ArcGIS Pro.
-
+> Las direcciones de flujo en ArcGIS for Desktop y ArcGIS Pro son idénticas y no requieren de homologación.
+>
 > Cuando se crea el mapa de direcciones de flujo, p. ej. en QGIS, y el proceso posterior de acumulación se va a realizar en ArcGIS, es necesario realizar la conversión y homologación de las direcciones de flujo a la herramienta requerida utilizando un proceso intermedio de cambio de variable, debido a que no se puede homologar directamente, p. ej. la dirección 1 - nordeste de QGIS a la dirección 1 - este de ArcGIS. Igual sucede con las direcciones 2, 4 y 8.
 
 
