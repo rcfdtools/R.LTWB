@@ -38,7 +38,7 @@ Existen diferentes codificaciones para la marcación de direcciones de flujo que
 
 > Las direcciones de flujo en ArcGIS for Desktop y ArcGIS Pro son idénticas y no requieren de homologación.
 >
-> Cuando se crea el mapa de direcciones de flujo, p. ej. en QGIS, y el proceso posterior de acumulación se va a realizar en ArcGIS, es necesario realizar la conversión y homologación de las direcciones de flujo a la herramienta requerida utilizando un proceso intermedio de cambio de variable, lo anterior debido a que no se puede homologar por directamente, p. ej. la dirección 1 - nordeste de QGIS a la dirección 1 - este de ArcGIS. Igual sucede con las direcciones 2, 4 y 8.
+> Cuando se crea el mapa de direcciones de flujo, p. ej. en QGIS, y el proceso posterior de acumulación va a ser realizado en ArcGIS, es necesario realizar la conversión y recodificación de las direcciones de flujo a la herramienta requerida utilizando un proceso intermedio de cambio de variable, lo anterior debido a que no se puede homologar directamente, p. ej. la dirección 1 - nordeste de QGIS a la dirección 1 - este de ArcGIS. Igual sucede con las direcciones 2, 4 y 8.
 > 
 > La columna rcfdtools contiene los valores de homologación a utilizar para recodificar un mapa FDR.
 
