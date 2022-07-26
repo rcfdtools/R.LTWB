@@ -51,6 +51,12 @@ HECGeoHMS/Layers/ALOSFil.tif
 HECGeoHMS/Layers/ALOSFil.tif.*
 HECGeoHMS/Layers/ASTERSinkLocations.tif
 HECGeoHMS/Layers/ASTERSinkLocations.tif.*
+HECGeoHMS/Layers/ASTERFdr.tif
+HECGeoHMS/Layers/ASTERFdr.tif.*
+HECGeoHMS/Layers/SRTMFdr.tif
+HECGeoHMS/Layers/SRTMFdr.tif.*
+HECGeoHMS/Layers/ALOSFdr.tif
+HECGeoHMS/Layers/ALOSFdr.tif.*
 
 
 # Some samples
