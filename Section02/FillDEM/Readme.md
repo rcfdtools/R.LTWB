@@ -56,7 +56,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 01h06'35")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMALOS.png)
 
-| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m | Cota máxima, m | Descargar Fil :open_file_folder:                                                                                                                                                                                                                                                            |
+| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m | Cota máxima, m | Descargar FIL :open_file_folder:                                                                                                                                                                                                                                                            |
 |:-------------------:|:--------------:|:--------------:|:--------------------:|:--------------:|:--------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  ASTERAgreeDEM.tif  |     -1006      |     5687       |     ASTERFil.tif     |       0        |      5687      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFil.rar)                                                                                                                                                                                                         |
 |  SRTMAgreeDEM.tif   |     -1044      |      5696      |     SRTMFil.tif      |       -4       |      5696      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFil.rar)                                                                                                                                                                                                          |
@@ -99,7 +99,7 @@ Como puede observar en la gráfica y en la tabla de atributos, se han rellenado 
 HEC-HMS grilla de resultados con localización de sumideros
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/HECHMS4.9PreprocessingSinksLocations.png)
 
-En este momento dispone de la grilla de relleno de sumideros requerida para la marcación de direcciones de flujo.
+En este momento dispone de las grillas de relleno de sumideros requeridas para la marcación de direcciones de flujo.
 
 > **Actividad complementaria**: utilizando diferentes herramientas, cree mapas de relleno de sumideros a partir de la grilla reacondicionada ASTER GDEM y a través de un análisis de diferencias de elevación obtenido con la calculadora ráster, compare, analice y explique las diferencias encontradas.
 
