@@ -113,7 +113,7 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 | DINF   | The D-Infinity (DINF) flow method, described by Tarboton (1997), determines flow direction as the steepest downward slope on eight triangular facets formed in a 3x3 pixel window centered on the pixel of interest. Flow direction output is a floating point raster represented as a single angle in degrees, progressing counterclockwise from 0 (due east) to 360 (again due east). |
 
 
-### Recodificación de direcciones de flujo con algebra de mapas
+### Recodificación de direcciones de flujo con algebra de mapas de ArcGIS
 
 Para recodificar el mapa FDR en formato ArcGIS a QGIS 3, primero convierta a formato rcfdtools con la siguiente expresión:
 
@@ -123,11 +123,11 @@ Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](https:
 Con("ASTERFdr.tif"==1,20,Con("ASTERFdr.tif"==2,21,Con("ASTERFdr.tif"==4,22,Con("ASTERFdr.tif"==8,23,Con("ASTERFdr.tif"==16,24,Con("ASTERFdr.tif"==32,25,Con("ASTERFdr.tif"==64,26,Con("ASTERFdr.tif"==128,27,255))))))))
 ```
 
+> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdr.tif" por el nombre de la grilla FDR requerida.
+
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftools.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsMap.png)
-
-> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdr.tif" por el nombre de la grilla FDR requerida.
 
 Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrQGIS.rar)
 
@@ -135,11 +135,11 @@ Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](https://gith
 Con("ASTERFdrrcfdtools.tif"==20,2,Con("ASTERFdrrcfdtools.tif"==21,3,Con("ASTERFdrrcfdtools.tif"==22,4,Con("ASTERFdrrcfdtools.tif"==23,5,Con("ASTERFdrrcfdtools.tif"==24,6,Con("ASTERFdrrcfdtools.tif"==25,7,Con("ASTERFdrrcfdtools.tif"==26,0,Con("ASTERFdrrcfdtools.tif"==27,1,255))))))))
 ```
 
+> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdrrcfdtools.tif" por el nombre de la grilla FDR requerida.
+
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Log.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Map.png)
-
-> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdrrcfdtools.tif" por el nombre de la grilla FDR requerida.
 
 En este momento dispone de grillas de direcciones para acumulación de flujo sobre todo el modelo digital de elevación.
 
@@ -163,7 +163,7 @@ En este momento dispone de grillas de direcciones para acumulación de flujo sob
 
 | Versión     | Descripción                                                            | Autor                                      | Horas |
 |-------------|:-----------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS.  | [rcfdtools](https://github.com/rcfdtools)  |   5   |
+| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS.  | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
