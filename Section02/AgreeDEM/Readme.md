@@ -252,7 +252,7 @@ El reacondicionamiento de terreno con QGIS puede ser realizado con la herramient
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/QGIS3.26.0DEMBurning.png)
 
-En este momento dispone de grillas de terreno reacondicionadas requeridas para el relleno de sumideros.
+En este momento dispone de grillas de terreno reacondicionadas para relleno de sumideros.
 
 
 ### Referencias
