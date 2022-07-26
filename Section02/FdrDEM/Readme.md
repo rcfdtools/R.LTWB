@@ -61,48 +61,37 @@ La marcación de direcciones de flujo puede ser realizado con Spatial Analyst To
 Parámetros de entrada para direcciones de flujo ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERParameters.png)
 
-Resultados ventana de ejecución grilla ASTER (dt: 03'34")
+Resultados ventana de ejecución grilla ASTER (dt: 01'11")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTER.png)
 
-Resultados ventana de ejecución grilla SRTM (dt: 03'33")
+Resultados ventana de ejecución grilla SRTM (dt: 01'12")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMSRTMLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMSRTM.png)
 
-Resultados ventana de ejecución grilla ALOS (dt: 01h06'35")
+Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOS.png)
 
-| MDE reacondicionado | Cota mínima, m | Cota máxima, m | Relleno de sumideros | Cota mínima, m | Cota máxima, m | Descargar Fil :open_file_folder:                                                                                                                                                                                                                                                            |
-|:-------------------:|:--------------:|:--------------:|:--------------------:|:--------------:|:--------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  ASTERAgreeDEM.tif  |     -1006      |     5687       |     ASTERFil.tif     |       0        |      5687      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFil.rar)                                                                                                                                                                                                         |
-|  SRTMAgreeDEM.tif   |     -1044      |      5696      |     SRTMFil.tif      |       -4       |      5696      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFil.rar)                                                                                                                                                                                                          |
-|  ALOSAgreeDEM.tif   |     -1046      |      5709      |     ALOSFil.tif      |       0        |      5687      | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFil.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFil.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFil.part3.rar) |
+> Para saber si las grillas FDR han sido creadas correctamente, en la simbología de representación desplegada en la tabla de atributos, únicamente deben ser visibles las direcciones 1, 2, 4, 8, 16, 32, 64, 128 y 255 que corresponde a celdas sin dirección. En caso de que aparezcan números consecutivos 1, 2, 3, 4... hasta 255, deberá revisar y volver a generar el mapa de relleno de sumideros debido a que existen múltiples zonas con depresiones o sifones que no drenan sobre la superficie del modelo de elevación a una localización más baja.
 
-| Los valores de cotas mínimas pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
+| Direcciones de flujo | Descargar FDR :open_file_folder:                                                    |
+|:--------------------:|:------------------------------------------------------------------------------------|
+|     ASTERFdr.tif     | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) |
+|     SRTMFdr.tif      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFdr.rar)  |
+|     ALOSFdr.tif      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFdr.rar)  |
 
-3. Utilizando algebra de mapas, calcule la diferencia entre el mapa de relleno de sumideros y el mapa reacondicionado para conocer la localización específica de las zonas rellenadas entre 1 y 50 metros. Ejecute _ArcToolBox / Spatial Analyst Tools / Map Algebra / Raster Calculator_ e ingrese la expresión `Con(("ASTERFil.tif"-"ASTERAgreeDEM.tif">0)  & ("ASTERFil.tif"-"ASTERAgreeDEM.tif"<=50) ,"ASTERFil.tif" - "ASTERAgreeDEM.tif")`, guarde la grilla resultante como _D:\R.LTWB\HECGeoHMS\Layers\ASTERSinkLocations.tif_ 
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2RasterCalculator.png)
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2RasterCalculatorLog.png)
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERSinkLocations.png)
-
-4. Visualice la tabla de atributos de la grilla [ASTERSinkLocations.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERSinkLocations.rar) que contiene valores discretos contables de 1 a 50 metros de diferencia de elevación y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
+3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERSinkLocationsGraph.png)
 
-Como puede observar en la gráfica y en la tabla de atributos, se han rellenado p. ej. 1.265.842 celdas 1 metro por encima de su elevación original, 823.059 celdas 2 metros por encima su elevación original y al sumar el total de celdas rellenadas hasta una diferencia de 50 metros se cuentan 4.020.911 celdas.
+Como puede observar en la gráfica y en la tabla de atributos, la dirección dominante es 16 - Oeste con 7571807 celdas.
 
 > Opcional: repita este procedimiento para los modelos digitales de elevación SRTM y ALOS.
 
-5. Utilizando la barra de herramienta 3D Analyst, cree y visualice perfiles de terreno con y sin relleno de sumideros.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/ArcGISDesktop10.2.2ProfileView.png)
 
 
-#### Reacondicionamiento de modelos digitales de elevación DEM con otras herramientas
+#### Direcciones de flujo - FDR con otras herramientas
 
 | Herramienta                                                                                                                     | Procedimiento                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
