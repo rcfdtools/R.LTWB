@@ -122,7 +122,7 @@ En este momento dispone de las grillas de direcciones requeridas para la acumula
 
 ### Compatibilidad
 
-* Se recomienda desarrollar la marcación de direcciones de drenaje con el mismo grupo de herramientas donde se desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.  
+* Se recomienda desarrollar la marcación de direcciones de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.  
  
 
 ### Control de versiones
@@ -136,5 +136,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/10) | [Actividad siguiente]()  |
-|---------------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|--------------------------|
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/10) | [Siguiente]() |
+|-----------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|---------------|
