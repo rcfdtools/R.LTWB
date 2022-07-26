@@ -161,9 +161,9 @@ En este momento dispone de grillas de direcciones para acumulación de flujo sob
 
 ### Control de versiones
 
-| Versión     | Descripción                                                            | Autor                                      | Horas |
-|-------------|:-----------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS.  | [rcfdtools](https://github.com/rcfdtools)  |   7   |
+| Versión     | Descripción                                                                                                                           | Autor                                      | Horas |
+|-------------|:--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS. Algebra de mapas para recodificación FDR. Diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
