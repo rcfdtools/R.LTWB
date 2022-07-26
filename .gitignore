@@ -57,6 +57,10 @@ HECGeoHMS/Layers/SRTMFdr.tif
 HECGeoHMS/Layers/SRTMFdr.tif.*
 HECGeoHMS/Layers/ALOSFdr.tif
 HECGeoHMS/Layers/ALOSFdr.tif.*
+HECGeoHMS/Layers/ASTERFdrrcfdtools.tif
+HECGeoHMS/Layers/ASTERFdrrcfdtools.tif.*
+HECGeoHMS/Layers/ASTERFdrQGIS.tif
+HECGeoHMS/Layers/ASTERFdrQGIS.tif.*
 
 
 # Some samples

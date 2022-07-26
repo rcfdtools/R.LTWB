@@ -109,6 +109,7 @@ En este momento dispone de las grillas de relleno de sumideros requeridas para l
 * https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/fill.htm
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/fill.htm
 * https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm
+* https://desktop.arcgis.com/en/arcmap/latest/extensions/spatial-analyst/map-algebra/what-is-map-algebra.htm
 
 
 ### Compatibilidad
