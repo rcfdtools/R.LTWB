@@ -117,10 +117,13 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 
 Para recodificar el mapa FDR en formato ArcGIS a QGIS 3, primero convierta a formato rcfdtools con la siguiente expresión:
 
-Conversión de ArcGIS a rcfdtools
+Conversión de ArcGIS a rcfdtools (dt: 00'06.33")
 ```
 Con("ASTERFdr.tif"==1,20,Con("ASTERFdr.tif"==2,21,Con("ASTERFdr.tif"==4,22,Con("ASTERFdr.tif"==8,23,Con("ASTERFdr.tif"==16,24,Con("ASTERFdr.tif"==32,25,Con("ASTERFdr.tif"==64,26,Con("ASTERFdr.tif"==128,27,255))))))))
 ```
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftools.png)
+
 
 Conversión de rcfdtools a QGIS3
 ```
