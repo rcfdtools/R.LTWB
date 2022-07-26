@@ -33,3 +33,4 @@ Pending tasks
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
 General update.
+_Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas relacionadas con esta actividad._
