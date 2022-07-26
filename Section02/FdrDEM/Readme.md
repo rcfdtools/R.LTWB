@@ -25,6 +25,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 
 Existen diferentes codificaciones para la marcación de direcciones de flujo que dependen principalmente de la herramienta utilizada.
 
+<div align="center">
 | Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 | QGIS | HEC-HMS  | Homologador  |
 |:-----------:|:------:|:------------:|:-------------:|:----:|:--------:|:------------:|
 |    Este     |   1    |      6       |       1       |  2   |          |      20      |
@@ -35,11 +36,11 @@ Existen diferentes codificaciones para la marcación de direcciones de flujo que
 |  Noroeste   |   32   |      7       |       4       |  7   |          |      25      |
 |    Norte    |   64   |      8       |       3       |  0   |          |      26      |
 |  Nordeste   |  128   |      9       |       2       |  1   |          |      27      |
+</div>
 
 > Las direcciones de flujo en ArcGIS for Desktop y ArcGIS Pro son idénticas y no requieren de homologación.
 >
-> Cuando se crea el mapa de direcciones de flujo, p. ej. en QGIS, y el proceso posterior de acumulación se va a realizar en ArcGIS, es necesario realizar la conversión y homologación de las direcciones de flujo a la herramienta requerida utilizando un proceso intermedio de cambio de variable, debido a que no se puede homologar directamente, p. ej. la dirección 1 - nordeste de QGIS a la dirección 1 - este de ArcGIS. Igual sucede con las direcciones 2, 4 y 8.
-
+> Cuando se crea el mapa de direcciones de flujo, p. ej. en QGIS, y el proceso posterior de acumulación se va a realizar en ArcGIS, es necesario realizar la conversión y homologación de las direcciones de flujo a la herramienta requerida utilizando un proceso intermedio de cambio de variable, lo anterior debido a que no se puede homologar por directamente, p. ej. la dirección 1 - nordeste de QGIS a la dirección 1 - este de ArcGIS. Igual sucede con las direcciones 2, 4 y 8.
 
 
 ### Procedimiento general
