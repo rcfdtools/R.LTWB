@@ -25,16 +25,16 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 
 Existen diferentes codificaciones para la marcación de direcciones de flujo que dependen principalmente de la herramienta utilizada.
 
-| Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 | QGIS | HEC-HMS  | Homologador  |
-|:-----------:|:------:|:------------:|:-------------:|:----:|:--------:|:------------:|
-|    Este     |   1    |      6       |       1       |  2   |          |      20      |
-|   Sureste   |   2    |      3       |       8       |  3   |          |      21      |
-|     Sur     |   4    |      2       |       7       |  4   |          |      22      |
-|  Suroeste   |   8    |      1       |       6       |  5   |          |      23      |
-|    Oeste    |   16   |      4       |       5       |  6   |          |      24      |
-|  Noroeste   |   32   |      7       |       4       |  7   |          |      25      |
-|    Norte    |   64   |      8       |       3       |  0   |          |      26      |
-|  Nordeste   |  128   |      9       |       2       |  1   |          |      27      |
+| Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 | QGIS 3.0 | QGIS 2.6 | Homologador  |
+|:-----------:|:------:|:------------:|:-------------:|:--------:|:--------:|:------------:|
+|    Este     |   1    |      6       |       1       |    2     |    1     |      20      |
+|   Sureste   |   2    |      3       |       8       |    3     |    8     |      21      |
+|     Sur     |   4    |      2       |       7       |    4     |    7     |      22      |
+|  Suroeste   |   8    |      1       |       6       |    5     |    6     |      23      |
+|    Oeste    |   16   |      4       |       5       |    6     |    5     |      24      |
+|  Noroeste   |   32   |      7       |       4       |    7     |    4     |      25      |
+|    Norte    |   64   |      8       |       3       |    0     |    3     |      26      |
+|  Nordeste   |  128   |      9       |       2       |    1     |    2     |      27      |
 
 > Las direcciones de flujo en ArcGIS for Desktop y ArcGIS Pro son idénticas y no requieren de homologación.
 >
@@ -90,7 +90,6 @@ Como puede observar en la gráfica y en la tabla de atributos, la dirección dom
 > Opcional: repita este procedimiento para los modelos digitales de elevación SRTM y ALOS.
 
 
-
 #### Direcciones de flujo - FDR con otras herramientas
 
 | Herramienta                                                                                                                     | Procedimiento                                                                                                                                                                                                                                                                                                                                                     |
@@ -102,24 +101,19 @@ Como puede observar en la gráfica y en la tabla de atributos, la dirección dom
 | [HEC-HMS](https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu)                          | En el panel lateral seleccione en _Basin Models_ el modelo de cuenca creado, luego en el menú _GIS_ seleccione la opción _Preprocessing Sinks_. Luego de la ejecución, HEC-HMS genera automáticamente dos grillas de resultados, la primera con el DEM rellenado y la segunda con las localizaciones y profundidades específicas de las zonas rellenadas.         |
 | [QGIS](https://saga-gis.sourceforge.io/saga_tool_doc/2.1.4/ta_preprocessor_3.html)                                              | En el _Processing Toolbox_ busque el grupo de herramientas _SAGA / Terrain Analysis_ y ejecute cualquiera de los 3 métodos disponibles: _Fill Sinks (Planchon/Darboux, 2001), Fill Sinks (Wang & Lui) o Fill Sinks XXL (Wang & Lui)_                                                                                                                              |
 
-HEC-HMS grilla de resultados con localización de sumideros
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/HECHMS4.9PreprocessingSinksLocations.png)
-
-En este momento dispone de la grilla de relleno de sumideros requerida para la marcación de direcciones de flujo.
-
-> **Actividad complementaria**: utilizando diferentes herramientas, cree mapas de relleno de sumideros a partir de la grilla reacondicionada ASTER GDEM y a través de un análisis de diferencias de elevación obtenido con la calculadora ráster, compare, analice y explique las diferencias encontradas.
+En este momento dispone de la grilla de direcciones requerida para la acumulación de flujo sobre todo el modelo digital de elevación.
 
 
 ### Referencias
 
-* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/fill.htm
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/fill.htm
-* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm
+* https://pro.arcgis.com/en/pro-app/latest/help/analysis/raster-functions/flow-direction-raster-function.htm
+* https://acolita.com/direccion-del-drenaje-en-qgis-3/
+* https://docs.qgis.org/2.6/en/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.html
 
 
 ### Compatibilidad
 
-* Se recomienda desarrollar el relleno de sumideros - Fil con el mismo grupo de herramientas donde se desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.  
+* Se recomienda desarrollar la marcación de direcciones de drenaje con el mismo grupo de herramientas donde se desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.  
  
 
 ### Control de versiones
