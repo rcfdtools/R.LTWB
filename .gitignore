@@ -62,6 +62,10 @@ HECGeoHMS/Layers/ASTERFdrrcfdtools.tif.*
 HECGeoHMS/Layers/ASTERFdrQGIS.tif
 HECGeoHMS/Layers/ASTERFdrQGIS.tif.*
 
+Eclude all Compiled Python Files
+*.pyc
+Eclude all TIFF world file
+*.tfw
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
