@@ -66,6 +66,7 @@ Eclude all Compiled Python Files
 *.pyc
 Eclude all TIFF world file
 *.tfw
+*.ovr
 *__pycache__*
 
 # Some samples
