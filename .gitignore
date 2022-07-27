@@ -12,6 +12,13 @@
 .idea/
 venv/
 #.refs/GitHubRefs/
+*.ovr
+*.lock
+*__pycache__*
+Eclude all Compiled Python Files
+*.pyc
+Eclude all TIFF world file
+*.tfw
 
 # Large files exclusions
 .dem/ASTER/ASTGTMV003Mosaic.tif
@@ -62,12 +69,7 @@ HECGeoHMS/Layers/ASTERFdrrcfdtools.tif.*
 HECGeoHMS/Layers/ASTERFdrQGIS.tif
 HECGeoHMS/Layers/ASTERFdrQGIS.tif.*
 
-Eclude all Compiled Python Files
-*.pyc
-Eclude all TIFF world file
-*.tfw
-*.ovr
-*__pycache__*
+
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
