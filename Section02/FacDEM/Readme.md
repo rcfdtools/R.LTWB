@@ -17,7 +17,7 @@ Esta grilla calcula para una celda dada, el número de celdas de drenaje aguas a
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
+* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book::page_facing_up:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
 
 
 ### Procedimiento general
@@ -53,13 +53,17 @@ Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
 
-> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (High : 2.73951e+007 celdas) y SRTM sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros.  
+> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (2.73951e+007 celdas) y SRTM (xxxxxxx) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor debido a que su resolución es de 12.5 x 12.5 metros.   
 
 |    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
 | ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar) |
 | SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)  |
 | ALOSFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.rar)  |
+
+3. Busque e identifique la localización de la celda con el máximo número de celdas acumuladas, active la red de drenaje e identifique visualmente la cuenca hidrográfica a la cual pertenece. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos asignando como valor de corte el 95% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los pixeles o celdas que se encuentran próximos a la zona de máxima acululación.
+
+
 
 
 #### Direcciones de flujo - FDR con otras herramientas
