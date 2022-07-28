@@ -1,5 +1,5 @@
 ##  Acumulación de Flujo - FAC
-Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data`
+Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data` `Extract Multi Values to Points`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/FacDEM.png)
 
@@ -68,7 +68,7 @@ Parámetros para representación
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
 
-4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas y área de aportación en km² a partir de la grilla de acumulación ASTER 
+4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas a partir de la grilla de acumulación ASTER 
 
 | Punto | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                  |
 |:-----:|------------|----------|---------------|---------------|:-----------------------|
@@ -87,7 +87,7 @@ Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, n
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
 
-En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando clic derecho en la tabla, seleccione la opción _Display XY Data_ seleccionado en `X Field` el campo de atributos `CX, m` y en `Y Field` el campo de atributos `CY, m`. El sistema de proyección definido para el mapa es _MAGNA_Colombia_CTM12_.
+En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando clic derecho en la tabla, seleccione la opción _Display XY Data_ seleccionado en `X Field` el campo de atributos `CXm` y en `Y Field` el campo de atributos `CYm`. El sistema de proyección definido para el mapa es _MAGNA_Colombia_CTM12_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
@@ -96,7 +96,31 @@ Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
+Utilizando la herramienta _ArcToolsBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _FacDEMTablaMuestra.shp_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
+
+> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a localizaciones específicas sobre la red de drenaje principal.
+
+En la tabla de atributos de la capa _FacDEMTablaMuestra.shp_ verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
+
+5. A partir de la tabla de puntos de muestreo y los valores de celdas acumuladas, calcule el área de aportación en km² y rotule cada punto indicando el número de punto, nombre de la corriente, total de celdas acumuladas y área de aportación.
+
+Desde las propiedades de la tabla de atributos de _FacDEMTablaMuestra.shp_, cree un campo de atributos numérico doble y nombre como Akm2.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2AddField.png)
+
+Desde la cabecera de la columna de atributos _Akm2_ y seleccionado la opción _Field Calculator_, calcule el área de aportación utilizando la expresión VB Script `[ASTERFac] * 30.68464585 * 30.68464585 / 1000000` donde 30.68464585 corresponde al tamaño de cada celda y 1000000 corresponde al valor de conversión de m² a km².
+
+> Este cálculo puede también ser realizado con la expresión Python `!ASTERFac! * 30.68464585 * 30.68464585 / 1000000`
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2FieldCalculator.png)
+
+Rotule con la expresión VB Script `[Punto] &" - "& [Cauce] &VBNewline& "FAC: " & [ASTERFac] &VBNewline& "A, km²: "  & Round( [Akm2] ,2)`
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2Label.png)
 
 > **Actividad complementaria**: realice el procedimiento de lectura de celdas en puntos de muestreo y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. 
 
