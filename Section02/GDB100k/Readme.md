@@ -139,8 +139,8 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 9. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
 
-| #   | Coordenadas geográficas   | Descripción                                      |                          Google Maps                          | 
-|-----|:--------------------------|:-------------------------------------------------|:-------------------------------------------------------------:| 
+| #   | Coordenadas geográficas   | Descripción                                      |                          Google Maps                          |
+|-----|:--------------------------|:-------------------------------------------------|:-------------------------------------------------------------:|
 | 1   | 74.0525387°W 10.0341833°N | Drenaje a borde de vía en zona de cultivo.       |  [Ver](http://maps.google.com/maps?q=10.0341833,-74.0525387)  |
 | 2   | 73.6459877°W 9.5544233°N  | Conexión de drenaje sobre cuerpo de agua léntico |  [Ver](http://maps.google.com/maps?q=9.5544233,-73.6459877)   |
 | 3   | 73.4706062°W 9.6966152°N  | Red de drenaje natural sobre zona minera         |  [Ver](http://maps.google.com/maps?q=9.6966152,-73.4706062)   |
