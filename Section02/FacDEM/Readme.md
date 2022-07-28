@@ -1,4 +1,4 @@
-##  Acumulación de Flujo - FAC :colombia:
+##  Acumulación de Flujo - FAC
 Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/FacDEM.png)
@@ -49,11 +49,11 @@ Resultados ventana de ejecución grilla SRTM (dt: 06'03")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTMLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTM.png)
 
-Resultados ventana de ejecución grilla ALOS (dt: 09'08")
+Resultados ventana de ejecución grilla ALOS (dt: 42'13")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
 
-> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (2.73951e+007 celdas) y SRTM (xxxxxxx) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor debido a que su resolución es de 12.5 x 12.5 metros.   
+> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (27,395,096 celdas) y SRTM (2.73973e+007 celdas) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor (1.33956e+008) debido a que su resolución es de 12.5 x 12.5 metros.   
 
 |    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
@@ -61,7 +61,19 @@ Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 | SRTMFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)  |
 | ALOSFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.rar)  |
 
-3. Busque e identifique la localización de la celda con el máximo número de celdas acumuladas, active la red de drenaje e identifique visualmente la cuenca hidrográfica a la cual pertenece. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos asignando como valor de corte el 95% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los pixeles o celdas que se encuentran próximos a la zona de máxima acululación.
+3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y el Río Calenturitas, entre otros.
+
+Parámetros para representación  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassified.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
+
+4. Para los puntos indicados en la siguiente tabla, calcule el total de celdas acumuladas y área de aportación en km² para la grilla de acumulación ASTER 
+
+| Punto | Latitud° | Longitud° | CX, m | CY, m | Afluente |
+|-------|----------|-----------|-------|-------|----------|
+| 1 | 
+
 
 
 
