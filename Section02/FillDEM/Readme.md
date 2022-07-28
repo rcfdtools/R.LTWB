@@ -1,7 +1,7 @@
 ##  Relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL
 Keywords: `Fill DEM` `Map Algebra` `Raster Calculator` `Spatial Analyst Tools` `Arc Hydro Tools`
 
-![GDB25k.png](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/FillDEM.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FillDEM/Screenshot/FillDEM.png)
 
 Cuando una celda se encuentra rodeada por celdas de mayor elevación, la escorrentía es retenida y no fluye. El relleno de sumideros eleva estas celdas utilizando como referencia los valores en altura de las celdas circundantes, garantizando que las celdas de la superficie del terreno drenen hacia una localización más baja.
 
