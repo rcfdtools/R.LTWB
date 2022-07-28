@@ -3,7 +3,7 @@ Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/FacDEM.png)
 
-Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje aguas arriba en una celda dada puede calcularse multiplicando el valor de acumulación por el área de cada celda.
+Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje puede calcularse multiplicando el valor de acumulación por el área de cada celda.
 
 
 ### Objetivos
