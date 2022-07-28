@@ -152,6 +152,7 @@ En este momento dispone de grillas de direcciones para acumulación de flujo sob
 * https://docs.qgis.org/2.6/en/docs/user_manual/processing_algs/taudem/basic_grid_analysis_tools/d8flowdirections.html
 * https://desktop.arcgis.com/en/arcmap/latest/extensions/spatial-analyst/map-algebra/what-is-map-algebra.htm
 * https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/conditional-evaluation-with-con.htm
+* https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
 
 
 ### Compatibilidad
