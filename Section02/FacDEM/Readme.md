@@ -45,7 +45,7 @@ Resultados ventana de ejecución grilla ASTER (dt: 05'5")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTER.png)
 
-Resultados ventana de ejecución grilla SRTM (dt: 01'12")
+Resultados ventana de ejecución grilla SRTM (dt: 06'03")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTMLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTM.png)
 
