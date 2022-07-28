@@ -8,8 +8,8 @@ Esta grilla representa para una celda dada, el número de celdas acumuladas agua
 
 ### Objetivos
 
-* Crear y validar el mapa de acumulación de flujo o celdas.
-* Calcular el área de aportación en diferentes localizaciones y para diferentes modelos digitales de elevación DEM.
+* Crear y validar el mapa de acumulación de flujo o acumulación celdas.
+* Calcular el número de celdas y el área de aportación en diferentes localizaciones de muestreo y para diferentes modelos digitales de elevación DEM.
 
 
 ### Requerimientos
@@ -53,7 +53,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'13")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
 
-> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (27,395,096 celdas) y SRTM (2.73973e+007 celdas) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor (1.33956e+008) debido a que su resolución es de 12.5 x 12.5 metros.   
+> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (27,395,096 celdas) y SRTM (27,397,288 celdas) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor (133,955,792) debido a que su resolución es de 12.5 x 12.5 metros.   
 
 |    Grilla    | Descargar :open_file_folder:                                                                                                                                                                                                                                                                      |
 |:------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
