@@ -61,7 +61,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'13")
 | SRTMFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                                                                                                                |
 | ALOSFac.tif  | [part1.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part03.rar)  |
 
-3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y el Río Calenturitas, entre otros.
+3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y Río Calenturitas, entre otros.
 
 Parámetros para representación  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassified.png)  
@@ -83,7 +83,7 @@ Parámetros para representación
 |   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal        | 
 |  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes  | 
 
-Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _D:\R.LTWB\\.datasets_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
+Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](https://github.com/rcfdtools/R.LTWB/tree/main/.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
 
@@ -92,17 +92,17 @@ En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando cl
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
 
-Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_ y nombre como _FacDEMTablaMuestra.shp_. Clic derecho en la capa de eventos, _Data  / Export Data_.
+Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _[D:\R.LTWB\\.shp](https://github.com/rcfdtools/R.LTWB/tree/main/.shp)_ y nombre como _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_. Clic derecho en la capa de eventos, _Data  / Export Data_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
-Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _FacDEMTablaMuestra.shp_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
+Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
 
-> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a localizaciones específicas sobre la red de drenaje principal.
+> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a las mismas localizaciones específicas sobre la red de drenaje principal.
 
-En la tabla de atributos de la capa _FacDEMTablaMuestra.shp_ verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
+En la tabla de atributos de la capa _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_, verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
 
@@ -122,7 +122,7 @@ Rotule con la expresión VB Script `[Punto] &" - "& [Cauce] &VBNewline& "FAC: " 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2Label.png)
 
-> **Actividad complementaria**: realice el procedimiento de lectura de celdas en puntos de muestreo y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. 
+> **Actividad complementaria**: realice el procedimiento de lectura de celdas en puntos de muestreo y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. Para esta actividad es necesario crear 2 hojas adicionales en el libro de Microsoft Excel y modificar las coordenadas específicas para cada grilla de acumulación.
 
 
 #### Acumulaciones de flujo - FDR con otras herramientas
