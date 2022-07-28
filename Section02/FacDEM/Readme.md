@@ -17,7 +17,7 @@ Esta grilla calcula para una celda dada, el número de celdas de drenaje aguas a
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[(Aprender.)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
+* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
 
 
 ### Procedimiento general
@@ -33,12 +33,15 @@ La acumulación de flujo o de celdas  puede ser realizada con Spatial Analyst To
 
 1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [direcciones de flujo](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM) que contiene las grillas FDR. En caso de que este generando un mapa nuevo, cargue directamente las grillas FDR contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_ y seleccione la opción _Flow Accumulation_ y realice el procedimiento de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFac.tif, SRTMFac.tif y ALOSFac.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\.
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_ y seleccione la opción _Flow Accumulation_ y realice el procedimiento de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFac.tif, SRTMFac.tif y ALOSFac.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. Simbolice por visualización ajustada o _Stretched_ con una rampa de colores múltiple que contenga un color blanco o claro al inicio y el tipo _Histogram Equalize_.
 
 Parámetros de entrada para acumulaciones de flujo ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERParameters.png)
 
-Resultados ventana de ejecución grilla ASTER (dt: 01'11")
+Parámetros para representación
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbology.png)
+
+Resultados ventana de ejecución grilla ASTER (dt: 05'5")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTER.png)
 
@@ -50,21 +53,13 @@ Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
 
-> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas de los modelos digitales de elevación ASTER y SRTM sean similares debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30 x 30 metros.  
+> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (High : 2.73951e+007 celdas) y SRTM sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros.  
 
-|    Grilla    |                          Descargar :open_file_folder:                               |
+|    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
-| ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) |
-| SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFdr.rar)  |
-| ALOSFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFdr.rar)  |
-
-3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERGraph.png)
-
-Como puede observar en la gráfica y en la tabla de atributos, la dirección dominante en la grilla ASTER es 16 - Oeste con 7571807 celdas, similar a lo que ocurre en las grillas SRTM y ALOS en las que la dirección predominante también es 16.  
-
-> Opcional: repita este procedimiento para los modelos digitales de elevación SRTM y ALOS.
+| ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar) |
+| SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)  |
+| ALOSFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.rar)  |
 
 
 #### Direcciones de flujo - FDR con otras herramientas
@@ -78,44 +73,7 @@ Como puede observar en la gráfica y en la tabla de atributos, la dirección dom
 | [HEC-HMS](https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu)                                     | En el panel lateral seleccione en _Basin Models_ el modelo de cuenca creado, luego en el menú _GIS_ seleccione la opción _Preprocessing Drainage_. Este procedimiento crea automáticamente las grillas de direcciones y acumulaciones de flujo.                                                                                                                                                                                                                                             |
 | [QGIS 3](https://acolita.com/direccion-del-drenaje-en-qgis-3/)                                                                             | En el _Processing Toolbox_ busque el grupo de herramientas _SAGA / Terrain Analysis_ y ejecute _Fill Sinks (Wang & Lui)_ que además de rellenas las depresiones permite generar el mapa de direcciones de flujo.                                                                                                                                                                                                                                                                            |
 
-Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
-
-| Método | Descripción                                                                                                                                                                                                                                                                                                                                                                             |
-|--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D8     | The D8 flow option models flow direction from each pixel to its steepest downslope neighbor. All of the flow is directed to this steepest neighbor. The output of the D8 direction type is an integer raster whose values range from 1 to 255.                                                                                                                                          |
-| MFD    | The Multiple Flow Direction (MFD) algorithm, described by Qin (2007), partitions flow from a pixel to all downslope neighbors. A flow-partition exponent is created from an adaptive approach based on local terrain conditions and is used to determine the fraction of flow draining to each downslope neighbor.                                                                      |
-| DINF   | The D-Infinity (DINF) flow method, described by Tarboton (1997), determines flow direction as the steepest downward slope on eight triangular facets formed in a 3x3 pixel window centered on the pixel of interest. Flow direction output is a floating point raster represented as a single angle in degrees, progressing counterclockwise from 0 (due east) to 360 (again due east). |
-
-
-### Recodificación de direcciones de flujo con algebra de mapas de ArcGIS
-
-Para recodificar el mapa FDR en formato ArcGIS a QGIS 3, primero convierta a formato rcfdtools con la siguiente expresión:
-
-Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrrcfdtools.rar)
-
-```
-Con("ASTERFdr.tif"==1,20,Con("ASTERFdr.tif"==2,21,Con("ASTERFdr.tif"==4,22,Con("ASTERFdr.tif"==8,23,Con("ASTERFdr.tif"==16,24,Con("ASTERFdr.tif"==32,25,Con("ASTERFdr.tif"==64,26,Con("ASTERFdr.tif"==128,27,255))))))))
-```
-
-> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdr.tif" por el nombre de la grilla FDR requerida.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftools.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsMap.png)
-
-Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrQGIS.rar)
-
-```
-Con("ASTERFdrrcfdtools.tif"==20,2,Con("ASTERFdrrcfdtools.tif"==21,3,Con("ASTERFdrrcfdtools.tif"==22,4,Con("ASTERFdrrcfdtools.tif"==23,5,Con("ASTERFdrrcfdtools.tif"==24,6,Con("ASTERFdrrcfdtools.tif"==25,7,Con("ASTERFdrrcfdtools.tif"==26,0,Con("ASTERFdrrcfdtools.tif"==27,1,255))))))))
-```
-
-> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdrrcfdtools.tif" por el nombre de la grilla FDR requerida.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Log.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Map.png)
-
-En este momento dispone de grillas de direcciones para acumulación de flujo sobre todo el modelo digital de elevación.
+En este momento dispone de grillas de acumulación de flujo para obtener las celdas de los drenajes sobre todo el modelo digital de elevación.
 
 
 ### Referencias
