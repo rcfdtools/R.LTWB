@@ -17,7 +17,7 @@ Esta grilla calcula para una celda dada, el número de celdas de drenaje aguas a
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
+* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
 
 
 ### Procedimiento general
@@ -38,7 +38,7 @@ La acumulación de flujo o de celdas  puede ser realizada con Spatial Analyst To
 Parámetros de entrada para acumulaciones de flujo ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERParameters.png)
 
-Parámetros para representación
+Parámetros para representación  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbology.png)
 
 Resultados ventana de ejecución grilla ASTER (dt: 05'5")
