@@ -55,11 +55,11 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'13")
 
 > Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (27,395,096 celdas) y SRTM (2.73973e+007 celdas) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor (1.33956e+008) debido a que su resolución es de 12.5 x 12.5 metros.   
 
-|    Grilla    |                            Descargar :open_file_folder:                             |
-|:------------:|:-----------------------------------------------------------------------------------:|
-| ASTERFac.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar) |
-| SRTMFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)  |
-| ALOSFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.rar)  |
+|    Grilla    | Descargar :open_file_folder:                                                                                                                                                                                                                                                                      |
+|:------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ASTERFac.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar)                                                                                                                                                                                                               |
+| SRTMFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                                                                                                                |
+| ALOSFac.tif  | [part1.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part03.rar)  |
 
 3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y el Río Calenturitas, entre otros.
 
@@ -70,20 +70,20 @@ Parámetros para representación
 
 4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas y área de aportación en km² a partir de la grilla de acumulación ASTER 
 
-| Punto | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                 |
-|:-----:|------------|----------|---------------|---------------|-----------------------|
-|   1   | -73.495997 | 9.739959 | 4,945,619.369 | 2,634,320.170 | Arroyo El Zorro       | 
-|   2   | -73.629875 | 9.640873 | 4,930,920.356 | 2,623,393.212 | Río Calenturitas      | 
-|   3   | -73.652359 | 9.544518 | 4,928,434.259 | 2,612,748.342 | Arroyo Paraluz        | 
-|   4   | -73.650659 | 9.542860 | 4,928,620.410 | 2,612,564.806 | Arroyo Garrapata      | 
-|   5   | -73.539101 | 9.533601 | 4,940,857.437 | 2,611,520.364 | Arroyo San Antonio    | 
-|   6   | -73.577029 | 9.520474 | 4,936,693.99  | 2,610,076.265 | Arroyo Muñoz          | 
-|   7   | -73.615767 | 9.727540 | 4,932,485.021 | 2,632,969.119 | Río Sicarare          | 
-|   8   | -73.619967 | 9.273051 | 4,931,934.757 | 2,582,738.857 | Arroyo San Pedro      | 
-|   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal       | 
-|  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes | 
+| Punto | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                  |
+|:-----:|------------|----------|---------------|---------------|:-----------------------|
+|   1   | -73.495997 | 9.739959 | 4,945,619.369 | 2,634,320.170 | Arroyo El Zorro        | 
+|   2   | -73.629875 | 9.640873 | 4,930,920.356 | 2,623,393.212 | Río Calenturitas       | 
+|   3   | -73.652359 | 9.544518 | 4,928,434.259 | 2,612,748.342 | Arroyo Paraluz         | 
+|   4   | -73.650659 | 9.542860 | 4,928,620.410 | 2,612,564.806 | Arroyo Garrapata       | 
+|   5   | -73.539101 | 9.533601 | 4,940,857.437 | 2,611,520.364 | Arroyo San Antonio     | 
+|   6   | -73.577029 | 9.520474 | 4,936,693.99  | 2,610,076.265 | Arroyo Muñoz           | 
+|   7   | -73.615767 | 9.727540 | 4,932,485.021 | 2,632,969.119 | Río Sicarare           | 
+|   8   | -73.619967 | 9.273051 | 4,931,934.757 | 2,582,738.857 | Arroyo San Pedro       | 
+|   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal        | 
+|  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes  | 
 
-Cree un archivo separa
+Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel y nombre la hoja como _TablaMuestra_ y el libro como _FacDEMTablaMuestra.xlsx_.
 
 
 > **Actividad complementaria**: realice el procedimiento de lectura de celdas acumuladas y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. 
