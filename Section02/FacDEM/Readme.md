@@ -17,7 +17,7 @@ Esta grilla calcula para una celda dada, el número de celdas de drenaje aguas a
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book::page_facing_up:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
+* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:large_blue_circle:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
 
 
 ### Procedimiento general
