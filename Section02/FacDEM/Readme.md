@@ -68,17 +68,28 @@ Parámetros para representación
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
 
-4. Para los puntos indicados en la siguiente tabla, calcule el total de celdas acumuladas y área de aportación en km² para la grilla de acumulación ASTER 
+4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas y área de aportación en km² a partir de la grilla de acumulación ASTER 
 
-| Punto | Latitud° | Longitud° | CX, m | CY, m | Afluente |
-|-------|----------|-----------|-------|-------|----------|
-| 1 | 
+| Punto | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                 |
+|:-----:|------------|----------|---------------|---------------|-----------------------|
+|   1   | -73.495997 | 9.739959 | 4,945,619.369 | 2,634,320.170 | Arroyo El Zorro       | 
+|   2   | -73.629875 | 9.640873 | 4,930,920.356 | 2,623,393.212 | Río Calenturitas      | 
+|   3   | -73.652359 | 9.544518 | 4,928,434.259 | 2,612,748.342 | Arroyo Paraluz        | 
+|   4   | -73.650659 | 9.542860 | 4,928,620.410 | 2,612,564.806 | Arroyo Garrapata      | 
+|   5   | -73.539101 | 9.533601 | 4,940,857.437 | 2,611,520.364 | Arroyo San Antonio    | 
+|   6   | -73.577029 | 9.520474 | 4,936,693.99  | 2,610,076.265 | Arroyo Muñoz          | 
+|   7   | -73.615767 | 9.727540 | 4,932,485.021 | 2,632,969.119 | Río Sicarare          | 
+|   8   | -73.619967 | 9.273051 | 4,931,934.757 | 2,582,738.857 | Arroyo San Pedro      | 
+|   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal       | 
+|  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes | 
+
+Cree un archivo separa
 
 
+> **Actividad complementaria**: realice el procedimiento de lectura de celdas acumuladas y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. 
 
 
-
-#### Direcciones de flujo - FDR con otras herramientas
+#### Acumulaciones de flujo - FDR con otras herramientas
 
 | Herramienta                                                                                                                                | Procedimiento                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
