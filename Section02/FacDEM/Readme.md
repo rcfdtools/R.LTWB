@@ -1,5 +1,5 @@
 ##  Acumulación de Flujo - FAC
-Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools`
+Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/FacDEM.png)
 
@@ -83,14 +83,22 @@ Parámetros para representación
 |   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal        | 
 |  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes  | 
 
-Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _FacDEMTablaMuestra.xlsx_ en la carpeta _D:\R.LTWB\\.datasets_.
+Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _D:\R.LTWB\\.datasets_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
 
+En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando clic derecho en la tabla, seleccione la opción _Display XY Data_ seleccionado en `X Field` el campo de atributos `CX, m` y en `Y Field` el campo de atributos `CY, m`. El sistema de proyección definido para el mapa es _MAGNA_Colombia_CTM12_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
+
+Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_ y nombre como _FacDEMTablaMuestra.shp_. Clic derecho en la capa de eventos, _Data  / Export Data_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
 
 
-> **Actividad complementaria**: realice el procedimiento de lectura de celdas acumuladas y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. 
+> **Actividad complementaria**: realice el procedimiento de lectura de celdas en puntos de muestreo y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. 
 
 
 #### Acumulaciones de flujo - FDR con otras herramientas
