@@ -55,11 +55,15 @@ Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 
 > Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (2.73951e+007 celdas) y SRTM (xxxxxxx) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor debido a que su resolución es de 12.5 x 12.5 metros.   
 
+<div align="center">
+
 |    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
-| ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar) |
-| SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)  |
-| ALOSFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.rar)  |
+| ASTERFac.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar) |
+| SRTMFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)  |
+| ALOSFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.rar)  |
+
+</div>
 
 3. Busque e identifique la localización de la celda con el máximo número de celdas acumuladas, active la red de drenaje e identifique visualmente la cuenca hidrográfica a la cual pertenece. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos asignando como valor de corte el 95% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los pixeles o celdas que se encuentran próximos a la zona de máxima acululación.
 
