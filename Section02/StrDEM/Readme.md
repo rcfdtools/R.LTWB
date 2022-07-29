@@ -107,25 +107,30 @@ Resultados ventana de ejecución grilla ALOS con 72210 nodos (dt: 00'35.67")
 
 5. Para cada red de puntos característicos, elimine los nodos duplicados utilizando el siguiente procedimiento:
 
-Abra la tabla de atributos de ASTERStrNode.shp y agregue 2 campos de atributos numéricos dobles y nómbrelos como CX, CY.
+Abra la tabla de atributos de _ASTERStrNode.shp_ y agregue 2 campos de atributos numéricos dobles y nómbrelos como `CX`, `CY`.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2AddField.png)
 
-Desde las cabeceras de los campos de atributos CX y CY, calcule la geometría de los puntos y obtenga las propiedades `X Coordinate of Point` y `Y Coordinate of Point` a partir del _CRS MAGNA Colombia CMT12_.
+Desde las cabeceras de los campos de atributos `CX` y `CY`, calcule la geometría de los puntos y obtenga las propiedades `X Coordinate of Point` y `Y Coordinate of Point` a partir del _CRS MAGNA Colombia CMT12_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2CalculateGeometry.png)
 
-Repita el procedimiento anterior para las redes de puntos SRTMStrNode.shp y ALOSStrNode.shp
+> En QGIS 3, el procedimiento de eliminación de elementos duplicados puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple que en ArcGIS debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente, sin embargo, es necesario crear una nueva capa geográfica. El proceso de eliminación homologable a _Delete Identical_ de ArcGIS puede ser realizado en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
 
-> En QGIS 3, el procedimiento de eliminación de elementos duplicados que puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente. Este procedimiento crea una nueva capa geográfica. El proceso de eliminación homologable a Delete Identical de ArcGIS se realiza en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
+Utilizando la herramienta _ArcToolBox / Data Management Tools / General / Delete Identical_, elimine los nodos repetidos en cada una de las capas vectoriales generadas previamente. Este procedimiento realiza la eliminación sobre la misma capa a partir de los valores duplicados en los campos `CX` y `CY`.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalParameters.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalStrDEMASTER.png)
+
+Repita el procedimiento anterior para las redes de puntos SRTMStrNode.shp y ALOSStrNode.shp
 
 Resultados obtenidos
 
-| Nodos característicos | Nodos con duplicados | Nodos finales | Descargar :open_file_folder:  |
-|:---------------------:|:--------------------:|:-------------:|:-----------------------------:|
-|   ASTERStrNode.shp    |        65554         |               |             .rar              | 
-|    SRTMStrNode.shp    |        65688         |               |             .rar              | 
-|    ALOSStrNode.shp    |        72210         |               |             .rar              | 
+| Nodos característicos | Total nodos  | Total duplicados | Nodos finales |  Descargar :open_file_folder:  |
+|:---------------------:|:------------:|:----------------:|:-------------:|:------------------------------:|
+|   ASTERStrNode.shp    |    65554     |      36429       |     30125     |              .rar              | 
+|    SRTMStrNode.shp    |    65688     |      36046       |     29622     |              .rar              | 
+|    ALOSStrNode.shp    |    72210     |      40132       |     32078     |              .rar              | 
 
 
 
