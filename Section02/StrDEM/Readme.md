@@ -1,4 +1,4 @@
-##  Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
+## Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
 Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro Tools` `Extract Multi Values to Points` `Raster to Polyline` `Add Field` `Geometry Calculator`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/StrDEM.png)
