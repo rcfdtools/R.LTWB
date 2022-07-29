@@ -1,5 +1,5 @@
 ## Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
-Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro Tools` `Extract Multi Values to Points` `Raster to Polyline` `Add Field` `Geometry Calculator`
+Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro Tools` `Extract Multi Values to Points` `Raster to Polyline` `Add Field` `Geometry Calculator` `Delete Identical`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/StrDEM.png)
 
@@ -12,8 +12,9 @@ Es importante tener en cuenta que algunos de los tramos obtenidos, corresponder�
 
 * Marcar las celdas o pixeles correspondientes a cada cuenca de drenaje para un área determinada.
 * Convertir el mapa binarizado en un red de drenaje vectorizada.
-* Obtener los puntos de inicio y confluencia de la red obtenida.
-* Para cada punto obtenido obtener el total de celdas acumuladas y calcular las áreas de aportación. 
+* Obtener los puntos de inicio y confluencia característicos de toda la red obtenida.
+* Eliminar nodos duplicados.
+* Para cada punto característico obtener el total de celdas acumuladas y calcular las áreas de aportación. 
 
 
 ### Requerimientos
