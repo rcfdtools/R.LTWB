@@ -1,5 +1,5 @@
-##  Demarcación de drenajes – Stream Definition - STR
-Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro Tools` `Extract Multi Values to Points` `Raster to Polyline`
+##  Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
+Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro Tools` `Extract Multi Values to Points` `Raster to Polyline` `Add Field` `Geometry Calculator`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/StrDEM.png)
 
@@ -58,11 +58,11 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
 
 > Como puede observar en las ilustraciones, para las áreas de aportación definidas se han marcado múltiples celdas de drenaje en localizaciones similares a las de los vectores utilizados para el reacondicionamiento del terreno. 
 
-|    Grilla    | Descargar :open_file_folder:                                                          |
-|:------------:|:--------------------------------------------------------------------------------------|
-| ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERStr.rar)   |
-| SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar)    |
-| ALOSStr.tif  | [.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar)  |
+|    Grilla    |                            Descargar :open_file_folder:                             |
+|:------------:|:-----------------------------------------------------------------------------------:|
+| ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERStr.rar) |
+| SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar)  |
+| ALOSStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar)  |
 
 3. Convierta las grillas de demarcación de drenajes a vectores con la herramienta _ArcToolBox / Conversion Tools / From Raster / Raster to Polyline_, nombre como _ASTERStr.shp_, _SRTMStr.shp_ y _ALOSStr.shp_ en la carpeta _D:\R.LTWB\\.shp_. Desactive la casilla _Simplify polylines_ para obtener líneas detalladas sobre cada celda horizontal, vertical y diagonal. Automáticamente, esta herramienta genera tramos de drenaje independientes manteniendo la correspondencia en los puntos de unión de afluentes.
 
@@ -101,11 +101,38 @@ Resultados ventana de ejecución grilla ALOS con 72210 nodos (dt: 00'35.67")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMALOS.png)
 
-> Debido a la alta densidad de la red de nodos, es posible que en escalas reducidas no se visualicen completamente los puntos en pantalla. Visualizar con ArcGIS Pro o con QGIS.
+> Debido a la alta densidad de la red de nodos, es posible que en escalas reducidas no se visualicen completamente los puntos en pantalla en ArcGIS for Desktop. Visualizar con ArcGIS Pro o con QGIS.
 >
 > Los nodos obtenidos en los puntos finales de los tramos de drenaje que confluyen en una misma localización estarán duplicados y en la misma localización obtendremos también un nodo adicional correspondiente al punto inicial del tramo aguas abajo de la unión. En las confluencias solo se requiere de 1 nodo para la lectura de los valores de celdas acumuladas y los posteriores procesos de lectura de caudal medio de largo plazo que desarrollaremos en este curso.
 
-5. Elimine los nodos duplicados.
+5. Para cada red de puntos característicos, elimine los nodos duplicados utilizando el siguiente procedimiento:
+
+Abra la tabla de atributos de ASTERStrNode.shp y agregue 2 campos de atributos numéricos dobles y nómbrelos como CX, CY.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2AddField.png)
+
+Desde las cabeceras de los campos de atributos CX y CY, calcule la geometría de los puntos y obtenga las propiedades `X Coordinate of Point` y `Y Coordinate of Point` a partir del _CRS MAGNA Colombia CMT12_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2CalculateGeometry.png)
+
+Repita el procedimiento anterior para las redes de puntos SRTMStrNode.shp y ALOSStrNode.shp
+
+> En QGIS 3, el procedimiento de eliminación de elementos duplicados que puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente. Este procedimiento crea una nueva capa geográfica. El proceso de eliminación homologable a Delete Identical de ArcGIS se realiza en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
+
+Resultados obtenidos
+
+| Nodos característicos | Nodos con duplicados | Nodos finales | Descargar :open_file_folder:  |
+|:---------------------:|:--------------------:|:-------------:|:-----------------------------:|
+|   ASTERStrNode.shp    |        65554         |               |             .rar              | 
+|    SRTMStrNode.shp    |        65688         |               |             .rar              | 
+|    ALOSStrNode.shp    |        72210         |               |             .rar              | 
+
+
+
+
+
+
+
 
 
 
@@ -149,30 +176,17 @@ Rotule con la expresión VB Script `[Punto] &" - "& [Cauce] &VBNewline& "FAC: " 
 | [ArcGIS Pro / Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)                                                 | En el panel _Geoprocessing_, busque la caja de herramientas _Arc Hydro Tools Pro / Terrain Preprocessing_ y seleccione la herramienta _Flow Accumulation_. Seleccione la grilla de entrada y asigne un nombre a la grilla de salida.                                                                                                                                                                                                                                                                                                                                |
 | [HEC-HMS](https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu)                                     | En el panel lateral seleccione en _Basin Models_ el modelo de cuenca creado, luego en el menú _GIS_ seleccione la opción _Preprocessing Drainage_. Este procedimiento crea automáticamente las grillas de direcciones y acumulaciones de flujo.                                                                                                                                                                                                                                                                                                                     |
 | [QGIS 3](https://acolita.com/direccion-del-drenaje-en-qgis-3/)                                                                             | En el _Processing Toolbox_ busque el grupo de herramientas _SAGA / Terrain Analysis_ y ejecute _Fill Sinks (Wang & Lui)_ que además de rellenas las depresiones permite generar el mapa de direcciones de flujo y el mapa de acumulación.                                                                                                                                                                                                                                                                                                                           |
-
-Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
-
-| Método | Descripción                                                                                                                                                                                                                                                                                                                                                                             |
-|--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D8     | The D8 flow option models flow direction from each pixel to its steepest downslope neighbor. All of the flow is directed to this steepest neighbor. The output of the D8 direction type is an integer raster whose values range from 1 to 255.                                                                                                                                          |
-| MFD    | The Multiple Flow Direction (MFD) algorithm, described by Qin (2007), partitions flow from a pixel to all downslope neighbors. A flow-partition exponent is created from an adaptive approach based on local terrain conditions and is used to determine the fraction of flow draining to each downslope neighbor.                                                                      |
-| DINF   | The D-Infinity (DINF) flow method, described by Tarboton (1997), determines flow direction as the steepest downward slope on eight triangular facets formed in a 3x3 pixel window centered on the pixel of interest. Flow direction output is a floating point raster represented as a single angle in degrees, progressing counterclockwise from 0 (due east) to 360 (again due east). |
-
-> La herramienta _Spatial Analyst Tools / Hydrology / Flow Accumulation_ será utilizada en la sección 5 de este curso para la realización del balance hidrológico de largo plazo distribuido debido a que permite incluir una grilla de pesos que corresponderá al potencial de escurrimiento obtenido de la diferencia entre la precipitación y la evaporación.
-
 En este momento dispone de grillas de acumulación de flujo para obtener las celdas de los drenajes sobre los diferentes modelos digitales de elevación.
 
 
 ### Referencias
 
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-accumulation.htm
-* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/flow-accumulation.htm
-* https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
+* https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html
 
 
 ### Compatibilidad
 
-* Se recomienda desarrollar la acumulación de celdas con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las acumulaciones con las mismas herramientas _Terrain Processing_.  
+* Se recomienda desarrollar la demarcación de celdas de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si la grilla de acumulación fué generada directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las celdas marcadas STR con las mismas herramientas.  
  
 
 ### Control de versiones
