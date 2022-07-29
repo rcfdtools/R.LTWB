@@ -38,32 +38,31 @@ La demarcación de drenajes a partir de un área de aportación definida puede s
 
 1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [acumulaciones de flujo](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres ASTERStr.tif, SRTMStr.tif y ALOSStr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. 
-
-Como criterio de área de aportación utilice 1 km², que para modelos ASTER corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 m.
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres ASTERStr.tif, SRTMStr.tif y ALOSStr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. Como criterio de área de aportación utilice p. ej. 1 km², que para modelos ASTER y SRTM corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 metros y para el modelo ALOS PALSAR corresponderá a 6400 celdas de aportación ya que su resolución es de 12.5 metros. Para la representación en pantalla, use la red de drenaje vectorial como fondo.
 
 Parámetros de entrada para demarcación de drenajes ASTER
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERParameters.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMASTERParameters.png)
 
-Resultados ventana de ejecución grilla ASTER (dt: 05'5")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTER.png)
+Resultados ventana de ejecución grilla ASTER (dt: 00'05.82")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMASTERLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMASTER.png)
 
-Resultados ventana de ejecución grilla SRTM (dt: 06'03")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTMLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTM.png)
+Resultados ventana de ejecución grilla SRTM (dt: 00'05.72")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMSRTMLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMSRTM.png)
 
-Resultados ventana de ejecución grilla ALOS (dt: 42'13")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
+Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMALOSParameters.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMALOSLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMALOS.png)
 
-> Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (27,395,096 celdas) y SRTM (27,397,288 celdas) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor (133,955,792) debido a que su resolución es de 12.5 x 12.5 metros.   
+> Como puede observar en las ilustraciones, para las áreas de aportación definidas se han marcado múltiples celdas de drenaje en localizaciones similares a las de los vectores utilizados para el reacondicionamiento del terreno. 
 
 |    Grilla    | Descargar :open_file_folder:                                                                                                                                                                                                                                                                      |
 |:------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ASTERFac.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar)                                                                                                                                                                                                               |
-| SRTMFac.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                                                                                                                |
-| ALOSFac.tif  | [part1.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part03.rar)  |
+| ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar)                                                                                                                                                                                                               |
+| SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                                                                                                                |
+| ALOSStr.tif  | [part1.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part03.rar)  |
 
 3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y Río Calenturitas, entre otros.
 
