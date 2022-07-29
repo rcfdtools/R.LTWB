@@ -126,11 +126,11 @@ Repita el procedimiento anterior para las redes de puntos SRTMStrNode.shp y ALOS
 
 Resultados obtenidos
 
-| Nodos característicos | Total nodos  | Total duplicados | Nodos finales |  Descargar :open_file_folder:  |
-|:---------------------:|:------------:|:----------------:|:-------------:|:------------------------------:|
-|   ASTERStrNode.shp    |    65554     |      36429       |     30125     |              .rar              | 
-|    SRTMStrNode.shp    |    65688     |      36046       |     29622     |              .rar              | 
-|    ALOSStrNode.shp    |    72210     |      40132       |     32078     |              .rar              | 
+|                        Polilíneas Str :open_file_folder:                        |                              Nodos Str :open_file_folder:                               | Total nodos | Total duplicados | Nodos finales |
+|:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|:-----------:|:----------------:|:-------------:|
+| [ASTERStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/asterstr.zip) | [ASTERStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ASTERStrNode.zip) |    65554    |      36429       |     30125     | 
+|  [SRTMStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/srtmstr.zip)  |  [SRTMStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/SRTMStrNode.zip)  |    65688    |      36046       |     29622     | 
+|  [ALOSStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/alosstr.zip)  |  [ALOSStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ALOSStrNode.zip)  |    72210    |      40132       |     32078     | 
 
 
 
