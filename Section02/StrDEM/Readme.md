@@ -101,6 +101,8 @@ Resultados ventana de ejecución grilla ALOS con 72210 nodos (dt: 00'35.67")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMALOS.png)
 
+> Los nodos iniciales de cada tramo de drenaje son requeridos debido a que aguas arriba de estos nodos existen múltiples celdas que son acumuladas hasta el pixel o celda identificado a partir del cual se conforma la escorrentía para el área característica de aportación establecida. 
+> 
 > Debido a la alta densidad de la red de nodos, es posible que en escalas reducidas no se visualicen completamente los puntos en pantalla en ArcGIS for Desktop. Visualizar con ArcGIS Pro o con QGIS.
 >
 > Los nodos obtenidos en los puntos finales de los tramos de drenaje que confluyen en una misma localización estarán duplicados y en la misma localización obtendremos también un nodo adicional correspondiente al punto inicial del tramo aguas abajo de la unión. En las confluencias solo se requiere de 1 nodo para la lectura de los valores de celdas acumuladas y los posteriores procesos de lectura de caudal medio de largo plazo que desarrollaremos en este curso.
@@ -146,31 +148,39 @@ Repita el procedimiento anterior para los puntos contenidos en _ALOSStrNode.shp_
 
 > Como observa en las 3 ilustraciones anteriores, la localización de los nodos con el mayor número de celdas acumuladas no corresponde a la misma zona geográfica debido a que las elevaciones en los 3 modelos DEM iniciales no son idénticas.
 
+7. A partir de las tablas de puntos característicos de la red de drenaje y los valores de celdas acumuladas, calcule el área de aportación para cada nodo en km² y rotule cada punto indicando el total de celdas acumuladas y área de aportación.
 
+Desde las propiedades de la tabla de atributos de _ASTERStrNode.shp, SRTMStrNode.shp y ALOSStrNode.shp_, cree un campo de atributos numérico doble y nombre como `Akm2`.
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2AddFieldArea.png)
 
+Desde la cabecera de la columna de atributos _Akm2_ y seleccionado la opción _Field Calculator_, calcule el área de aportación utilizando las expresiones VB Script:
 
-
-5. A partir de la tabla de puntos de muestreo y los valores de celdas acumuladas, calcule el área de aportación en km² y rotule cada punto indicando el número de punto, nombre de la corriente, total de celdas acumuladas y área de aportación.
-
-Desde las propiedades de la tabla de atributos de _FacDEMTablaMuestra.shp_, cree un campo de atributos numérico doble y nombre como _Akm2_.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2AddField.png)
-
-Desde la cabecera de la columna de atributos _Akm2_ y seleccionado la opción _Field Calculator_, calcule el área de aportación utilizando la expresión VB Script `[ASTERFac] * 30.68464585 * 30.68464585 / 1000000` donde 30.68464585 corresponde al tamaño de cada celda y 1000000 corresponde al valor de conversión de m² a km².
-
+* `[ASTERFac] * 30.68464585 * 30.68464585 / 1000000` donde 30.68464585 corresponde al tamaño de cada celda y 1000000 corresponde al valor de conversión de m² a km².
+* `[SRTMFac] * 30.68464585 * 30.68464585 / 1000000` donde 30.68464585 corresponde al tamaño de cada celda y 1000000 corresponde al valor de conversión de m² a km².
+* `[ALOSFac] * 12.5 * 12.5 / 1000000` donde 12.5 corresponde al tamaño de cada celda y 1000000 corresponde al valor de conversión de m² a km².
+ 
 > Este cálculo puede también ser realizado con la expresión Python `!ASTERFac! * 30.68464585 * 30.68464585 / 1000000`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FieldCalculator.png)
 
-Rotule con la expresión VB Script `[Punto] &" - "& [Cauce] &VBNewline& "FAC: " & [ASTERFac] &VBNewline& "A, km²: "  & Round( [Akm2] ,2)`
+Rotule con las expresiones VB Script:
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2Label.png)
+* `"FAC: " & [ASTERFac] &VBNewline& "A, km²: "  & Round( [Akm2] ,2)`
+* `"FAC: " & [SRTMFac] &VBNewline& "A, km²: "  & Round( [Akm2] ,2)`
+* `"FAC: " & [ALOSFac] &VBNewline& "A, km²: "  & Round( [Akm2] ,2)`
 
-> **Actividad complementaria**: realice el procedimiento de lectura de celdas en puntos de muestreo y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. Para esta actividad es necesario crear 2 hojas adicionales en el libro de Microsoft Excel y modificar las coordenadas específicas para cada grilla de acumulación.
+Áreas de aportación por nodo para acumulaciones ASTER
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2LabelASTERStrNode.png)
+
+Áreas de aportación por nodo para acumulaciones SRTM
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2LabelSRTMStrNode.png)
+
+Áreas de aportación por nodo para acumulaciones ALOS
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2LabelALOSStrNode.png)
 
 
-#### Acumulaciones de flujo - FDR con otras herramientas
+#### Demarcación de drenajes - SRT con otras herramientas
 
 | Herramienta                                                                                                                                | Procedimiento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
