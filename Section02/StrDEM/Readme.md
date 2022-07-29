@@ -1,9 +1,9 @@
 ##  Demarcación de drenajes – Stream Definition - STR
-Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data` `Extract Multi Values to Points`
+Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro Tools` `Extract Multi Values to Points` `Raster to Polyline`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/StrDEM.png)
 
-A partir de las grillas de acumulación de flujo, se puede identificar cuáles celdas confluyen hacia cada drenaje; para ello, se especifica el área de aportación p. ej. de 1 o 4 km² o el número equivalente de celdas en función de su resolución y considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel.
+A partir de grillas de acumulación de flujo, se puede identificar cuáles celdas confluyen hacia cada drenaje; para ello, se especifica el área de aportación p. ej. de 1 o 4 km² o el número equivalente de celdas en función de su resolución y considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel.
 
 Es importante tener en cuenta que algunos de los tramos obtenidos, corresponderán a áreas de aportación inferiores al valor de aportación definido, específicamente en cuencas intermedias o cuencas de tránsito entre dos puntos de unión próximos.
 
@@ -21,7 +21,7 @@ Es importante tener en cuenta que algunos de los tramos obtenidos, corresponder�
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de acumulaciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM)
+* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM)
 
 
 ### Procedimiento general
@@ -64,9 +64,48 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
 | SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar)    |
 | ALOSStr.tif  | [.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar)  |
 
-3. Convierta las grillas de demarcación de drenajes a vectores.
+3. Convierta las grillas de demarcación de drenajes a vectores con la herramienta _ArcToolBox / Conversion Tools / From Raster / Raster to Polyline_, nombre como _ASTERStr.shp_, _SRTMStr.shp_ y _ALOSStr.shp_ en la carpeta _D:\R.LTWB\\.shp_. Desactive la casilla _Simplify polylines_ para obtener líneas detalladas sobre cada celda horizontal, vertical y diagonal. Automáticamente, esta herramienta genera tramos de drenaje independientes manteniendo la correspondencia en los puntos de unión de afluentes.
 
-> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, 
+Parámetros de entrada para la conversión a polilínea en grilla ASTER
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMASTERParameters.png)
+
+Resultados ventana de ejecución grilla ASTER (dt: 03'20")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMASTERLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMASTER.png)
+
+Resultados ventana de ejecución grilla SRTM (dt: 04'39")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMSRTMLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMSRTM.png)
+
+Resultados ventana de ejecución grilla ALOS (dt: 06'52")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMALOSLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMALOS.png)
+
+> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, son localizadas a lo largo y en la diagonal de los pixeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
+
+4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _ASTERStrNode.shp_, _SRTMStrNode.shp_ y _ALOSStrNode.shp_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
+
+Parámetros de entrada para la obtención de nodos característicos en grilla ASTER
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMASTERParameters.png)
+
+Resultados ventana de ejecución grilla ASTER con 65554 nodos (dt: 00'29.82")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMASTERLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMASTER.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISPro3.0.0FeatureVerticesToPointsStrDEMASTER.png)
+
+Resultados ventana de ejecución grilla SRTM con 65688 nodos (dt: 00'18.80")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMSRTMLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMSRTM.png)
+
+Resultados ventana de ejecución grilla ALOS con 72210 nodos (dt: 00'35.67")
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMALOSLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMALOS.png)
+
+> Debido a la alta densidad de la red de nodos, es posible que en escalas reducidas no se visualicen completamente los puntos en pantalla. Visualizar con ArcGIS Pro o con QGIS.
+>
+> Los nodos obtenidos en los puntos finales de los tramos de drenaje que confluyen en una misma localización estarán duplicados y en la misma localización obtendremos también un nodo adicional correspondiente al punto inicial del tramo aguas abajo de la unión. En las confluencias solo se requiere de 1 nodo para la lectura de los valores de celdas acumuladas y los posteriores procesos de lectura de caudal medio de largo plazo que desarrollaremos en este curso.
+
+5. Elimine los nodos duplicados.
 
 
 
