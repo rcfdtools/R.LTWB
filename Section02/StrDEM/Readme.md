@@ -122,7 +122,7 @@ Utilizando la herramienta _ArcToolBox / Data Management Tools / General / Delete
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalParameters.png)  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalStrDEMASTER.png)
 
-Repita el procedimiento anterior para las redes de puntos SRTMStrNode.shp y ALOSStrNode.shp
+Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y ALOSStrNode.shp
 
 Resultados obtenidos
 
