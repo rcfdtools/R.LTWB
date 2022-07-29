@@ -58,46 +58,18 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
 
 > Como puede observar en las ilustraciones, para las áreas de aportación definidas se han marcado múltiples celdas de drenaje en localizaciones similares a las de los vectores utilizados para el reacondicionamiento del terreno. 
 
-|    Grilla    | Descargar :open_file_folder:                                                                                                                                                                                                                                                                      |
-|:------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFac.rar)                                                                                                                                                                                                               |
-| SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                                                                                                                |
-| ALOSStr.tif  | [part1.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFac.part03.rar)  |
+|    Grilla    | Descargar :open_file_folder:                                                          |
+|:------------:|:--------------------------------------------------------------------------------------|
+| ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERStr.rar)   |
+| SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar)    |
+| ALOSStr.tif  | [.rar, ](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar)  |
 
-3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y Río Calenturitas, entre otros.
+3. Convierta las grillas de demarcación de drenajes a vectores.
 
-Parámetros para representación  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassified.png)  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
+> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, 
 
-4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas a partir de la grilla de acumulación ASTER 
 
-| Punto | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                  |
-|:-----:|------------|----------|---------------|---------------|:-----------------------|
-|   1   | -73.495997 | 9.739959 | 4,945,619.369 | 2,634,320.170 | Arroyo El Zorro        | 
-|   2   | -73.629875 | 9.640873 | 4,930,920.356 | 2,623,393.212 | Río Calenturitas       | 
-|   3   | -73.652359 | 9.544518 | 4,928,434.259 | 2,612,748.342 | Arroyo Paraluz         | 
-|   4   | -73.650659 | 9.542860 | 4,928,620.410 | 2,612,564.806 | Arroyo Garrapata       | 
-|   5   | -73.539101 | 9.533601 | 4,940,857.437 | 2,611,520.364 | Arroyo San Antonio     | 
-|   6   | -73.577029 | 9.520474 | 4,936,693.99  | 2,610,076.265 | Arroyo Muñoz           | 
-|   7   | -73.615767 | 9.727540 | 4,932,485.021 | 2,632,969.119 | Río Sicarare           | 
-|   8   | -73.619967 | 9.273051 | 4,931,934.757 | 2,582,738.857 | Arroyo San Pedro       | 
-|   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal        | 
-|  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes  | 
 
-Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](https://github.com/rcfdtools/R.LTWB/tree/main/.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
-
-En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando clic derecho en la tabla, seleccione la opción _Display XY Data_ seleccionado en `X Field` el campo de atributos `CXm` y en `Y Field` el campo de atributos `CYm`. El sistema de proyección definido para el mapa es _MAGNA_Colombia_CTM12_.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
-
-Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _[D:\R.LTWB\\.shp](https://github.com/rcfdtools/R.LTWB/tree/main/.shp)_ y nombre como _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_. Clic derecho en la capa de eventos, _Data  / Export Data_.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
 Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
 
