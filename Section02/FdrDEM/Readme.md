@@ -57,7 +57,7 @@ La estimación de direcciones de flujo puede ser realizada con Spatial Analyst T
 
 1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [relleno de sumideros](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_ y seleccione la opción _Flow Direction_ y realice el procedimiento de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFdr.tif, SRTMFdr.tif y ALOSFdr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\.
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Direction_ y cree la grilla de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFdr.tif, SRTMFdr.tif y ALOSFdr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\.
 
 > En esta herramienta puede establecer el límite del mapa de direcciones con la opción _Input Outer Wall Polygon_.
 

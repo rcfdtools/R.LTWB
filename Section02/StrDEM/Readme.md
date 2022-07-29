@@ -1,15 +1,19 @@
-##  Acumulación de Flujo - FAC
-Keywords: `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data` `Extract Multi Values to Points`
+##  Demarcación de drenajes – Stream Definition - STR
+Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data` `Extract Multi Values to Points`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/FacDEM.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/StrDEM.png)
 
-Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje puede calcularse multiplicando el valor de acumulación por el área de cada celda.
+A partir de las grillas de acumulación de flujo, se puede identificar cuáles celdas confluyen hacia cada drenaje; para ello, se especifica el área de aportación p. ej. de 1 o 4 km² o el número equivalente de celdas en función de su resolución y considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel.
+
+Es importante tener en cuenta que algunos de los tramos obtenidos, corresponderán a áreas de aportación inferiores al valor de aportación definido, específicamente en cuencas intermedias o cuencas de tránsito entre dos puntos de unión próximos.
 
 
 ### Objetivos
 
-* Crear y validar el mapa de acumulación de flujo o acumulación celdas.
-* Calcular el número de celdas y el área de aportación en diferentes localizaciones de muestreo y para diferentes modelos digitales de elevación DEM.
+* Marcar las celdas o pixeles correspondientes a cada cuenca de drenaje para un área determinada.
+* Convertir el mapa binarizado en un red de drenaje vectorizada.
+* Obtener los puntos de inicio y confluencia de la red obtenida.
+* Para cada punto obtenido obtener el total de celdas acumuladas y calcular las áreas de aportación. 
 
 
 ### Requerimientos
@@ -17,41 +21,41 @@ Esta grilla representa para una celda dada, el número de celdas acumuladas agua
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
+* [Grillas de acumulaciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM)
 
 
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Graph/FacDEMFlowchart.png" width="65%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Graph/StrDEMFlowchart.png" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-La acumulación de flujo o de celdas puede ser realizada con Spatial Analyst Tools de ArcGIS for Desktop, HEC-GeoHMS sobre ArcGIS 10.2.2 a través de Arc Hydro Tools, Spatial Analyst de ArcGIS Pro, Arc Hydro Tools sobre ArcGIS Pro, QGIS, HEC-HMS a través del menú GIS y otras herramientas y librerías.
+La demarcación de drenajes a partir de un área de aportación definida puede ser realizada con HEC-GeoHMS sobre ArcGIS 10.2.2 a través de Arc Hydro Tools, Arc Hydro Tools sobre ArcGIS Pro, XXXXXXXXQGIS y HEC-HMS a través del menú GIS.
 
-#### Acumulación de flujo con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [direcciones de flujo](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM) que contiene las grillas FDR. En caso de que este generando un mapa nuevo, cargue directamente las grillas FDR contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
+#### Demarcación de drenajes con HEC-GeoHMS sobre ArcGIS for Desktop
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Accumulation_ y cree la grilla de acumulación de flujo en formato GeoTIFF para los 3 modelos digitales de direcciones de flujo y asigne los nombres ASTERFac.tif, SRTMFac.tif y ALOSFac.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. Simbolice por visualización ajustada o _Stretched_ con una rampa de colores múltiple que contenga un color blanco o claro al inicio y el tipo _Histogram Equalize_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [acumulaciones de flujo](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
 
-Parámetros de entrada para acumulaciones de flujo ASTER
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERParameters.png)
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres ASTERStr.tif, SRTMStr.tif y ALOSStr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. 
 
-Parámetros para representación  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbology.png)
+Como criterio de área de aportación utilice 1 km², que para modelos ASTER corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 m.
+
+Parámetros de entrada para demarcación de drenajes ASTER
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERParameters.png)
 
 Resultados ventana de ejecución grilla ASTER (dt: 05'5")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTER.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTER.png)
 
 Resultados ventana de ejecución grilla SRTM (dt: 06'03")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTMLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTM.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTMLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMSRTM.png)
 
 Resultados ventana de ejecución grilla ALOS (dt: 42'13")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOSLog.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMALOS.png)
 
 > Para saber si las grillas FAC han sido creadas correctamente, en la simbología de representación verifique que el máximo número de celdas acumuladas de los modelos digitales de elevación ASTER (27,395,096 celdas) y SRTM (27,397,288 celdas) sea similar debido a que su resolución es aproximadamente la misma y corresponde a celdas de 30.68464585 x  30.68464585 metros. Para los modelos ALOS, el número máximo de celdas acumuladas es mayor (133,955,792) debido a que su resolución es de 12.5 x 12.5 metros.   
 
@@ -64,9 +68,9 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'13")
 3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y Río Calenturitas, entre otros.
 
 Parámetros para representación  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassified.png)  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassified.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
 
 4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas a partir de la grilla de acumulación ASTER 
 
@@ -85,42 +89,42 @@ Parámetros para representación
 
 Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](https://github.com/rcfdtools/R.LTWB/tree/main/.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
 
 En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando clic derecho en la tabla, seleccione la opción _Display XY Data_ seleccionado en `X Field` el campo de atributos `CXm` y en `Y Field` el campo de atributos `CYm`. El sistema de proyección definido para el mapa es _MAGNA_Colombia_CTM12_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
 
 Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _[D:\R.LTWB\\.shp](https://github.com/rcfdtools/R.LTWB/tree/main/.shp)_ y nombre como _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_. Clic derecho en la capa de eventos, _Data  / Export Data_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
 Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
 
 > La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a las mismas localizaciones específicas sobre la red de drenaje principal.
 
 En la tabla de atributos de la capa _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_, verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
 
 5. A partir de la tabla de puntos de muestreo y los valores de celdas acumuladas, calcule el área de aportación en km² y rotule cada punto indicando el número de punto, nombre de la corriente, total de celdas acumuladas y área de aportación.
 
 Desde las propiedades de la tabla de atributos de _FacDEMTablaMuestra.shp_, cree un campo de atributos numérico doble y nombre como _Akm2_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2AddField.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2AddField.png)
 
 Desde la cabecera de la columna de atributos _Akm2_ y seleccionado la opción _Field Calculator_, calcule el área de aportación utilizando la expresión VB Script `[ASTERFac] * 30.68464585 * 30.68464585 / 1000000` donde 30.68464585 corresponde al tamaño de cada celda y 1000000 corresponde al valor de conversión de m² a km².
 
 > Este cálculo puede también ser realizado con la expresión Python `!ASTERFac! * 30.68464585 * 30.68464585 / 1000000`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2FieldCalculator.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FieldCalculator.png)
 
 Rotule con la expresión VB Script `[Punto] &" - "& [Cauce] &VBNewline& "FAC: " & [ASTERFac] &VBNewline& "A, km²: "  & Round( [Akm2] ,2)`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2Label.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2Label.png)
 
 > **Actividad complementaria**: realice el procedimiento de lectura de celdas en puntos de muestreo y calcule las áreas acumuladas utilizando las grillas de acumulación SRTM y ALOS. Para esta actividad es necesario crear 2 hojas adicionales en el libro de Microsoft Excel y modificar las coordenadas específicas para cada grilla de acumulación.
 

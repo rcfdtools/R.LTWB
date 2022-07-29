@@ -74,7 +74,12 @@ HECGeoHMS/Layers/SRTMFac.tif
 HECGeoHMS/Layers/SRTMFac.tif.*
 HECGeoHMS/Layers/ALOSFac.tif
 HECGeoHMS/Layers/ALOSFac.tif.*
-
+HECGeoHMS/Layers/ASTERStr.tif
+HECGeoHMS/Layers/ASTERStr.tif.*
+HECGeoHMS/Layers/SRTMStr.tif
+HECGeoHMS/Layers/SRTMStr.tif.*
+HECGeoHMS/Layers/ALOSStr.tif
+HECGeoHMS/Layers/ALOSStr.tif.*
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
