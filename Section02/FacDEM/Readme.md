@@ -70,18 +70,18 @@ Parámetros para representación
 
 4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas a partir de la grilla de acumulación ASTER 
 
-| Punto | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                  |
-|:-----:|------------|----------|---------------|---------------|:-----------------------|
-|   1   | -73.495997 | 9.739959 | 4,945,619.369 | 2,634,320.170 | Arroyo El Zorro        | 
-|   2   | -73.629875 | 9.640873 | 4,930,920.356 | 2,623,393.212 | Río Calenturitas       | 
-|   3   | -73.652359 | 9.544518 | 4,928,434.259 | 2,612,748.342 | Arroyo Paraluz         | 
-|   4   | -73.650659 | 9.542860 | 4,928,620.410 | 2,612,564.806 | Arroyo Garrapata       | 
-|   5   | -73.539101 | 9.533601 | 4,940,857.437 | 2,611,520.364 | Arroyo San Antonio     | 
-|   6   | -73.577029 | 9.520474 | 4,936,693.99  | 2,610,076.265 | Arroyo Muñoz           | 
-|   7   | -73.615767 | 9.727540 | 4,932,485.021 | 2,632,969.119 | Río Sicarare           | 
-|   8   | -73.619967 | 9.273051 | 4,931,934.757 | 2,582,738.857 | Arroyo San Pedro       | 
-|   9   | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal        | 
-|  10   | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes  | 
+| Punto ASTER | Longitud°  | Latitud° | CX, m         | CY, m         | Cauce                  |
+|:-----------:|------------|----------|---------------|---------------|:-----------------------|
+|      1      | -73.495997 | 9.739959 | 4,945,619.369 | 2,634,320.170 | Arroyo El Zorro        | 
+|      2      | -73.629875 | 9.640873 | 4,930,920.356 | 2,623,393.212 | Río Calenturitas       | 
+|      3      | -73.652359 | 9.544518 | 4,928,434.259 | 2,612,748.342 | Arroyo Paraluz         | 
+|      4      | -73.650659 | 9.542860 | 4,928,620.410 | 2,612,564.806 | Arroyo Garrapata       | 
+|      5      | -73.539101 | 9.533601 | 4,940,857.437 | 2,611,520.364 | Arroyo San Antonio     | 
+|      6      | -73.577029 | 9.520474 | 4,936,693.99  | 2,610,076.265 | Arroyo Muñoz           | 
+|      7      | -73.615767 | 9.727540 | 4,932,485.021 | 2,632,969.119 | Río Sicarare           | 
+|      8      | -73.619967 | 9.273051 | 4,931,934.757 | 2,582,738.857 | Arroyo San Pedro       | 
+|      9      | -73.627105 | 9.199749 | 4,931,136.826 | 2,574,638.888 | Quebrada Guadal        | 
+|     10      | -73.660001 | 9.154681 | 4,927,515.195 | 2,569,664.402 | Arroyo Quiebradientes  | 
 
 Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](https://github.com/rcfdtools/R.LTWB/tree/main/.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
 
@@ -96,11 +96,11 @@ Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
-Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
+Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
 
-> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a las mismas localizaciones específicas sobre la red de drenaje principal.
+> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas sobre una misma capa de puntos, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a las mismas localizaciones específicas sobre la red de drenaje principal.
 
 En la tabla de atributos de la capa _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_, verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
 

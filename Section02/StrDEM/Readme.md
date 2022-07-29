@@ -132,25 +132,24 @@ Resultados obtenidos
 |  [SRTMStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/srtmstr.zip)  |  [SRTMStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/SRTMStrNode.zip)  |    65688    |      36046       |     29622     | 
 |  [ALOSStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/alosstr.zip)  |  [ALOSStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ALOSStrNode.zip)  |    72210    |      40132       |     32078     | 
 
-
-
-
-
-
-
-
-
-
-
-Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga los el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
-
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
-
-> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a las mismas localizaciones específicas sobre la red de drenaje principal.
-
-En la tabla de atributos de la capa _[FacDEMTablaMuestra.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/FacDEMTablaMuestra.zip)_, verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
+6. Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas en capa de nodos _ASTERStrNode.shp_ a partir del mapa _ASTERFac.tif_. Luego de finalizada su ejecución, en la tabla de atributos de la capa de puntos _ASTERStrNode.shp_ encontrará una nueva columna de atributos con el total de celdas acumuladas denominada `ASTERFac`. Ordene descendentemente el campo `ASTERFac` y seleccione y visualice los 10 nodos con mayores acumulaciones, 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
+
+> La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas sobre una misma capa de puntos, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas de cada capa de puntos. 
+
+Repita el procedimiento anterior para los puntos contenidos en _SRTMStrNode.shp_ utilizando la grilla de acumulación _SRTMFac.tif_.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsSRTMFac.png)
+
+Repita el procedimiento anterior para los puntos contenidos en _ALOSStrNode.shp_ utilizando la grilla de acumulación _ALOSFac.tif_.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsALOSFac.png)
+
+> Como observa en las 3 ilustraciones anteriores, la localización de los nodos con el mayor número de celdas acumuladas no corresponde a la misma zona geográfica debido a que las elevaciones en los 3 modelos DEM iniciales no son idénticas.
+
+
+
+
+
 
 5. A partir de la tabla de puntos de muestreo y los valores de celdas acumuladas, calcule el área de aportación en km² y rotule cada punto indicando el número de punto, nombre de la corriente, total de celdas acumuladas y área de aportación.
 
