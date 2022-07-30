@@ -5,6 +5,8 @@ Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell script .sh` `Earthdata` 
 
 ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
+<div align="center">
+
 Especificaciones técnicas y modos de captura  
 | Detail             | Fine Resolution   | Fine Resolution   | ScanSAR           | Polarimetric      |
 |--------------------|-------------------|-------------------|-------------------|-------------------|
@@ -14,6 +16,8 @@ Especificaciones técnicas y modos de captura
 | Spatial Resolution | 10 m              | 20 m              | 100 m             | 30 m              |
 | Swath Width        | 70 km             | 70 km             | 250-350 km        | 30 km             |
 | Off-Nadir Angle    | 34.3° (default)   | 34.3° (default)   | 27.1° (default)   | 21.5° (default)   |
+
+</div>
 
 > PALSAR no realiza captura de información por encima de la latitud 87.8° norte y 75.9° sur cuando el ángulo off-nadir es 41.5°.
 
@@ -277,10 +281,13 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cubre toda la zona de estudio.
 
+<div align="center">
+
 | Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ArcGIS Pro / mosaic            | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part3.rar), [part4.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part4.rar), [part5.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part5.rar), |
 
+</div>
 
 ### Referencias
 
