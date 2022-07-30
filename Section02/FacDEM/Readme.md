@@ -22,7 +22,7 @@ Esta grilla representa para una celda dada, el número de celdas acumuladas agua
 > El libro de cálculo [FacDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/FacDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo de cálculo y conversión de áreas a partir de la resolución específica de una grilla DEM y el número de celdas acumuladas. 
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/MicrosoftExcel365FacDEM.png" width="50%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/MicrosoftExcel365FacDEM.png" width="55%"><br>
 </div>
 
 
