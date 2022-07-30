@@ -25,6 +25,8 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 
 Existen diferentes codificaciones para la marcación de direcciones de flujo que dependen principalmente de la herramienta utilizada.
 
+<div align="center">
+
 | Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 | QGIS 3.0 | QGIS 2.6 | rcfdtools |
 |:-----------:|:------:|:------------:|:-------------:|:--------:|:--------:|:---------:|
 |    Este     |   1    |      6       |       1       |    2     |    1     |    20     |
@@ -36,6 +38,8 @@ Existen diferentes codificaciones para la marcación de direcciones de flujo que
 |    Norte    |   64   |      8       |       3       |    0     |    3     |    26     |
 |  Nordeste   |  128   |      9       |       2       |    1     |    2     |    27     |
 |  No drena   |  255   |              |               |          |          |    255    |
+
+</div>
 
 > Las direcciones de flujo en ArcGIS for Desktop y ArcGIS Pro son idénticas y no requieren de homologación.
 >
