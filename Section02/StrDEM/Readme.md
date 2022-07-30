@@ -127,9 +127,7 @@ Utilizando la herramienta _ArcToolBox / Data Management Tools / General / Delete
 
 > En QGIS 3, el procedimiento de eliminación de elementos duplicados puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple que en ArcGIS debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente, sin embargo, es necesario crear una nueva capa geográfica. El proceso de eliminación homologable a _Delete Identical_ de ArcGIS puede ser realizado en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
 
-Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y ALOSStrNode.shp
-
-Resultados obtenidos
+Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y ALOSStrNode.shp. Resultados obtenidos:  
 
 |                        Polilíneas Str :open_file_folder:                        |                              Nodos Str :open_file_folder:                               | Total nodos | Total duplicados | Nodos finales |
 |:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|:-----------:|:----------------:|:-------------:|
