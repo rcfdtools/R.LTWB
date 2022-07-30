@@ -26,7 +26,7 @@ A partir de las grillas de acumulación de flujo, se pueden identificar las celd
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365StrDEM.png" width="65%">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365StrDEMGraph.png" width="65%"><br><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365StrDEMGraph.png" width="65%"><br>
 </div>
 
 
