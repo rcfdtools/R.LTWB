@@ -82,11 +82,15 @@ Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 
 > Para saber si las grillas FDR han sido creadas correctamente, en la simbología de representación desplegada en la tabla de atributos, únicamente deben ser visibles las direcciones 1, 2, 4, 8, 16, 32, 64, 128 y 255 que corresponde a celdas sin dirección. En caso de que aparezcan números consecutivos 1, 2, 3, 4... hasta 255, deberá revisar y volver a generar el mapa de relleno de sumideros debido a que existen múltiples zonas con depresiones o sifones que no drenan sobre la superficie del modelo de elevación a una localización más baja.
 
+<div align="center">
+
 |    Grilla    |               Descargar :open_file_folder:                                          |
 |:------------:|:-----------------------------------------------------------------------------------:|
 | ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) |
 | SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFdr.rar)  |
 | ALOSFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFdr.rar)  |
+
+</div>
 
 3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
 
@@ -136,7 +140,7 @@ Con("ASTERFdr.tif"==1,20,Con("ASTERFdr.tif"==2,21,Con("ASTERFdr.tif"==4,22,Con("
 Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrQGIS.rar)
 
 ```
-Con("ASTERFdrrcfdtools.tif"==20,2,Con("ASTERFdrrcfdtools.tif"==21,3,Con("ASTERFdrrcfdtools.tif"==22,4,Con("ASTERFdrrcfdtools.tif"==23,5,Con("ASTERFdrrcfdtools.tif"==24,6,Con("ASTERFdrrcfdtools.tif"==25,7,Con("ASTERFdrrcfdtools.tif"==26,0,Con("ASTERFdrrcfdtools.tif"==27,1,255))))))))
+Con("ASTERFdrrcfdtools.tif"==20, 2, Con("ASTERFdrrcfdtools.tif"==21, 3, Con("ASTERFdrrcfdtools.tif"==22, 4, Con("ASTERFdrrcfdtools.tif"==23, 5, Con("ASTERFdrrcfdtools.tif"==24, 6, Con("ASTERFdrrcfdtools.tif"==25, 7, Con("ASTERFdrrcfdtools.tif"==26, 0, Con("ASTERFdrrcfdtools.tif"==27, 1, 255))))))))
 ```
 
 > Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdrrcfdtools.tif" por el nombre de la grilla FDR requerida.
