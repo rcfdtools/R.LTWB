@@ -1,4 +1,4 @@
-##  Acumulación de Flujo - FAC
+##  Acumulación de Flujo - Flow Accumulation - FAC
 Keywords: `FAC DEM` `Flow accumulation` `Flow direction` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data` `Extract Multi Values to Points`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/Screenshot/FacDEM.png)
@@ -18,6 +18,8 @@ Esta grilla representa para una celda dada, el número de celdas acumuladas agua
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [Grillas de direcciones de Flujo – Flow Direction – FDR. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FdrDEM)
+
+> El libro de cálculo [FacDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FacDEM/FacDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo de cálculo y conversión de áreas a partir de la resolución específica de una grilla DEM y el número de celdas acumuladas. 
 
 
 ### Procedimiento general

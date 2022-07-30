@@ -20,6 +20,8 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
 
+> El libro de cálculo [FdrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo con diferentes codificaciones. 
+
 
 ### Direcciones de flujo FDR en diferentes herramientas
 
@@ -128,7 +130,7 @@ Para recodificar el mapa FDR en formato ArcGIS a QGIS 3, primero convierta a for
 Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrrcfdtools.rar)
 
 ```
-Con("ASTERFdr.tif"==1,20,Con("ASTERFdr.tif"==2,21,Con("ASTERFdr.tif"==4,22,Con("ASTERFdr.tif"==8,23,Con("ASTERFdr.tif"==16,24,Con("ASTERFdr.tif"==32,25,Con("ASTERFdr.tif"==64,26,Con("ASTERFdr.tif"==128,27,255))))))))
+Con("ASTERFdr.tif"==1, 20, Con("ASTERFdr.tif"==2, 21, Con("ASTERFdr.tif"==4, 22, Con("ASTERFdr.tif"==8, 23, Con("ASTERFdr.tif"==16, 24, Con("ASTERFdr.tif"==32, 25, Con("ASTERFdr.tif"==64, 26, Con("ASTERFdr.tif"==128, 27, 255))))))))
 ```
 
 > Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdr.tif" por el nombre de la grilla FDR requerida.
