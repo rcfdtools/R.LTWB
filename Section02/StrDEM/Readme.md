@@ -3,7 +3,7 @@ Keywords: `STR DEM` `Stream definition` `FAC DEM` `Flow accumulation` `Arc Hydro
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/StrDEM.png)
 
-A partir de grillas de acumulación de flujo, se puede identificar cuáles celdas confluyen hacia cada drenaje; para ello, se especifica el área de aportación p. ej. de 1 o 4 km² o el número equivalente de celdas en función de su resolución y considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel.
+A partir de las grillas de acumulación de flujo, se pueden identificar las celdas que hacen parte de la red de drenaje principal, para ello se especifica el área de aportación p. ej. de 1 o 4 km² o el número equivalente de celdas en función de su resolución, considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel.
 
 Es importante tener en cuenta que algunos de los tramos obtenidos, corresponderán a áreas de aportación inferiores al valor de aportación definido, específicamente en cuencas intermedias o cuencas de tránsito entre dos puntos de unión próximos.
 
@@ -57,13 +57,17 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMALOS.png)
 
-> Como puede observar en las ilustraciones, para las áreas de aportación definidas se han marcado múltiples celdas de drenaje en localizaciones similares a las de los vectores utilizados para el reacondicionamiento del terreno. 
+> Como puede observar en las ilustraciones, para las áreas de aportación definidas se han marcado múltiples celdas de drenaje en localizaciones similares a las de los vectores utilizados para el reacondicionamiento del terreno, excepto en algunas zonas donde se presentan bucles en la red de drenaje original con la que se realizó el reacondicionamiento del modelo digital de elevación. 
 
 |    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
 | ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERStr.rar) |
 | SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar)  |
 | ALOSStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar)  |
+
+> El procedimiento de identificación y marcación de las celdas que igualan o exceden el valor del área de aportación definido, puede ser realizado manualmente en cualquier herramienta GIS a través de la calculadora ráster utilizando la grilla de acumulación y por medio de un condicional, p. ej. para la grilla ASTER, la expresión a utilizar es `Con("ASTERFac.tif">=1062,1)` donde 1062 corresponde al número de celdas necesarias para obtener un área de aportación de 1 km² para una grilla con resolución de 30.68464585 metros.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterCalculatorStrDEMASTER.png)
 
 3. Convierta las grillas de demarcación de drenajes a vectores con la herramienta _ArcToolBox / Conversion Tools / From Raster / Raster to Polyline_, nombre como _ASTERStr.shp_, _SRTMStr.shp_ y _ALOSStr.shp_ en la carpeta _D:\R.LTWB\\.shp_. Desactive la casilla _Simplify polylines_ para obtener líneas detalladas sobre cada celda horizontal, vertical y diagonal. Automáticamente, esta herramienta genera tramos de drenaje independientes manteniendo la correspondencia en los puntos de unión de afluentes.
 
