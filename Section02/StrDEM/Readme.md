@@ -24,7 +24,9 @@ A partir de las grillas de acumulación de flujo, se pueden identificar las celd
 
 > El libro de cálculo [StrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/StrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo del número de celdas requeridas y subcuencas obtenidas para diferentes áreas de aportación en función del área de una cuenca principal y la resolución específica de una grilla DEM. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365StrDEM.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365StrDEM.png)  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/MicrosoftExcel365StrDEMGraph.png)
+
 
 ### Procedimiento general
 
