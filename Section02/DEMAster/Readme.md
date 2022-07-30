@@ -398,14 +398,17 @@ En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Too
 
 En este momento dispone de grillas integradas de elevación ASTER que cubren toda la zona de estudio y mapas de representación de colinas hillshade. 
 
-| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                  |
-|:-------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS for Desktop / mosaic    | [ASTGTMV003Mosaic.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [ASTGTMV003Mosaic.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part2.rar)                                                                          |
-| ArcGIS for Desktop / hillshade | [ASTGTMV003MosaicHillshade.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicHillshade.part1.rar), [ASTGTMV003MosaicHillshade.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicHillshade.part2.rar)                                      |
-| ArcGIS Pro / mosaic            | [ASTGTMV003MosaicArcGISPro.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISPro.part1.rar), [ASTGTMV003MosaicArcGISPro.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISPro.part2.rar)                                      |
-| ArcGIS Pro / hillshade         | [ASTGTMV003MosaicArcGISProHillshade.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part1.rar), [ASTGTMV003MosaicArcGISProHillshade.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part2.rar)  |
-| QGIS                           | [ASTGTMV003MosaicQGIS.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicQGIS.rar)                                                                                                                                                                                                 |
+<div align="center">
 
+| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                           |
+|:-------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ArcGIS for Desktop / mosaic    | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part2.rar)                                     |
+| ArcGIS for Desktop / hillshade | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicHillshade.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicHillshade.part2.rar)                   |
+| ArcGIS Pro / mosaic            | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISPro.part2.rar)                   |
+| ArcGIS Pro / hillshade         | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part2.rar) |
+| QGIS                           | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicQGIS.rar)                                                                                                                                              |
+
+</div>
 
 ### Referencias
 
