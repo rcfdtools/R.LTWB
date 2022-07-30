@@ -14,7 +14,7 @@ https://github.com/uecijg-ceh
 ✓✕
 
 Pending tasks
-    https://github.com/rcfdtools/R.LTWB/discussions/7
+    Add keywords relate with FIL, FDR y FAC
     Fix R.TeachingResearchGuide/wiki/License.
     Remove personal name from all the ArcGIS Pro screenshots.
     Check Visual Studio Code integration with GitHUB.
