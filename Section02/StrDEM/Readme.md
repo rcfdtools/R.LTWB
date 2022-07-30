@@ -199,7 +199,7 @@ Rotule con las expresiones VB Script:
 Ejemplo de raster calculator sobre QGIS  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/QGIS3.26.0RasterCalculatorStrDEMASTER.png)
 
-En este momento dispone de grillas de demarcación de drenajes, líneas de drenajes y puntos característicos de la red con número de celdas convergentes y áreas de aportación para la posterior lectura de los valores de caudal medio y cálculo de isorendimientos. 
+En este momento dispone de grillas de demarcación de drenajes, líneas de drenajes y puntos característicos de la red con el total de celdas convergentes y las áreas de aportación para la posterior lectura de los valores de caudal medio y cálculo de isorendimientos. 
 
 
 ### Referencias
