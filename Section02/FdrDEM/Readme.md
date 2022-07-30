@@ -20,7 +20,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
 
-> El libro de cálculo [FdrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo con diferentes codificaciones. 
+> El libro de cálculo [FdrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
 
 
 ### Direcciones de flujo FDR en diferentes herramientas
