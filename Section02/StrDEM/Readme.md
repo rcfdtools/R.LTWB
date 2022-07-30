@@ -86,7 +86,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 06'52")
 
 > A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, son localizadas a lo largo y en la diagonal de los pixeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
 
-4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _ASTERStrNode.shp_, _SRTMStrNode.shp_ y _ALOSStrNode.shp_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
+4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _[ASTERStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ASTERStrNode.zip)_, _[SRTMStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/SRTMStrNode.zip)_ y _[ALOSStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ALOSStrNode.zip)_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
 
 Parámetros de entrada para la obtención de nodos característicos en grilla ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMASTERParameters.png)
@@ -120,12 +120,12 @@ Desde las cabeceras de los campos de atributos `CX` y `CY`, calcule la geometrí
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2CalculateGeometry.png)
 
-> En QGIS 3, el procedimiento de eliminación de elementos duplicados puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple que en ArcGIS debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente, sin embargo, es necesario crear una nueva capa geográfica. El proceso de eliminación homologable a _Delete Identical_ de ArcGIS puede ser realizado en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
-
 Utilizando la herramienta _ArcToolBox / Data Management Tools / General / Delete Identical_, elimine los nodos repetidos en cada una de las capas vectoriales generadas previamente. Este procedimiento realiza la eliminación sobre la misma capa a partir de los valores duplicados en los campos `CX` y `CY`.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalParameters.png)  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalStrDEMASTER.png)
+
+> En QGIS 3, el procedimiento de eliminación de elementos duplicados puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple que en ArcGIS debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente, sin embargo, es necesario crear una nueva capa geográfica. El proceso de eliminación homologable a _Delete Identical_ de ArcGIS puede ser realizado en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
 
 Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y ALOSStrNode.shp
 
