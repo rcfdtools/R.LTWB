@@ -139,6 +139,8 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 
 9. Visualmente, identifique y digitalice las zonas geográficas en las que no se encuentra completa la digitalización de drenajes, por ejemplo en:
 
+<div align="center">
+
 | #   | Coordenadas geográficas   | Descripción                                      |                          Google Maps                          |
 |-----|:--------------------------|:-------------------------------------------------|:-------------------------------------------------------------:|
 | 1   | 74.0525387°W 10.0341833°N | Drenaje a borde de vía en zona de cultivo.       |  [Ver](http://maps.google.com/maps?q=10.0341833,-74.0525387)  |
@@ -147,6 +149,8 @@ Extienda una a una las líneas laterales hasta el drenaje principal y conecte ma
 | 4   | 73.4916086°W 9.7628290°N  | Red de drenaje natural sobre zona minera         |  [Ver](http://maps.google.com/maps?q=9.7628290,-73.4916086)   |
 | 5   | 73.4926365°W 9.5579971°N  | Red de drenaje natural sobre zona minera         |  [Ver](http://maps.google.com/maps?q=9.5579971,-73.4926365)   |
 | 6   | 73.6128227°W 9.3748515°N  | Conexión de drenaje sobre cuerpo de agua léntico |  [Ver](http://maps.google.com/maps?q=9.3748515,-73.6128227)   |
+
+</div>
 
 Utilice la herramienta _Go To XY_ disponible en el menú _Map_ y el panel _Navigate_ de ArcGIS Pro, luego desde el menú _Edit_ cree los elementos faltantes en la red digitalizando a escala 1:1500 o inferior. Verifique y complete la red de drenaje en las localizaciones mostradas anteriormente y sobre toda la red de drenaje dentro de la zona de estudio.
 
@@ -162,6 +166,17 @@ Ejemplo localización 3
 > En la digitalización IGAC, las redes digitalizadas sobre zonas mineras a cielo abierto corresponden a la condición natural predominante antes del inicio de la operación. Para el caso de estudio consideraremos que el balance hidrológico de largo plazo corresponde a la condición natural de la red de drenaje.
 
 En este momento ya dispone de la red de drenaje que será utilizada para la rectificación del modelo de terreno.
+
+<div align="center">
+
+| Shapefile                            | Descargar :open_file_folder:                                                                    |
+|:-------------------------------------|:------------------------------------------------------------------------------------------------|
+| DrenajeSencilloIGAC100kZE.shp        | [.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZE.zip)        |
+| DrenajeDobleIGAC100kZE.shp           | [.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeDobleIGAC100kZE.zip)           |
+| DrenajeDobleIGAC100kZECenterline.shp | [.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeDobleIGAC100kZECenterline.zip) |
+| DrenajeSencilloIGAC100kZEMerge.shp   | [.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)   |
+
+</div>
 
 
 ### Referencias
