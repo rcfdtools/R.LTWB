@@ -54,11 +54,15 @@ Utilizando la herramienta _Geoprocessing / Data Management Tools / Features / Fe
 
 2. Utilizando la herramienta _Geoprocessing / Raster / Raster Processing / Clip Raster_, recorte las grillas de terreno hasta el buffer del polígono envolvente de la zona de estudio _ZonaEstudioEnvelopeBufferDEM.shp_ asignando los nombres indicados en la siguiente tabla:
 
+<div align="center">
+
 | MDE         | Grilla mosaico                | Grilla mosaico recortada        | Carpeta              |
 |:------------|:------------------------------|:--------------------------------|:---------------------|
 | ASTER GDEM  | ASTGTMV003MosaicArcGISPro.tif | ASTGTMV003MosaicArcGISProZE.tif | D:\R.LTWB\.dem\ASTER | 
 | SRTM        | SRTMV003MosaicArcGISPro.tif   | SRTMV003MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\SRTM  |
 | ALOS PALSAR | APFBSRT1MosaicArcGISPro.tif   | APFBSRT1MosaicArcGISProZE.tif   | D:\R.LTWB\.dem\ALOS  |
+
+</div>
 
 ASTER GDEM de la zona de estudio (59 MB aprox.)
 
@@ -213,11 +217,15 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif (dt: 07'21")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningALOSLog2.png)
 
+<div align="center">
+
 | MDE reacondicionado | Cota mínima, m | Cota máxima, m | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                |
 |---------------------|----------------|----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ASTERAgreeDEM.tif   | -1006          | 5687           | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERAgreeDEM.rar)                                                                                                                                                                                                                    |
 | SRTMAgreeDEM.tif    | -1044          | 5696           | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMAgreeDEM.rar)                                                                                                                                                                                                                     |
 | ALOSAgreeDEM.tif    | -1046          | 5709           | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSAgreeDEM.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSAgreeDEM.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSAgreeDEM.part3.rar)  |
+
+</div>
 
 > En caso de que el proceso de ejecución devuelva error de escritura en memoria y no permita generar las grillas, cree en la raíz del disco una copia de la carpeta _D:\R.LTWB\HECGeoHMS_, reinicie su equipo y ejecute el readoncicionamiento desde esta localización.
 
