@@ -10,7 +10,7 @@
 En esta sección se presenta la introducción y fundamentos generales, el caso de estudio y los requerimientos generales para el desarrollo de las diferentes actividades prácticas.
 
 
-R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [_clic aquí_](https://github.com/rcfdtools/R.LTWB/wiki/License).
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
