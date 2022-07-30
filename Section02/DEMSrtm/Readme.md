@@ -241,10 +241,13 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 En este momento dispone de la grilla integrada de elevación SRTM que cubre toda la zona de estudio.
 
-| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                                                   |
-|:-------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS Pro / mosaic            | [SRTMV003MosaicArcGISPro.part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISPro.part1.rar), [SRTMV003MosaicArcGISPro.part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISPro.part2.rar) |
+<div align="center">
 
+| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                    |
+|:-------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ArcGIS Pro / mosaic            | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISPro.part2.rar)  |
+
+</div>
 
 ### Referencias
 
