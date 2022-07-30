@@ -10,7 +10,7 @@ Es importante tener en cuenta que algunos de los tramos obtenidos, corresponder�
 
 ### Objetivos
 
-* Marcar las celdas o pixeles correspondientes a cada cuenca de drenaje para un área determinada.
+* Marcar las celdas o pixeles correspondientes a cada cuenca de drenaje para un área de aportación determinada.
 * Convertir el mapa binarizado en un red de drenaje vectorizada.
 * Obtener los puntos de inicio y confluencia característicos de toda la red obtenida.
 * Eliminar nodos duplicados.
@@ -147,7 +147,7 @@ Repita el procedimiento anterior para los puntos contenidos en _SRTMStrNode.shp_
 Repita el procedimiento anterior para los puntos contenidos en _ALOSStrNode.shp_ utilizando la grilla de acumulación _ALOSFac.tif_.
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsALOSFac.png)
 
-> Como observa en las 3 ilustraciones anteriores, la localización de los nodos con el mayor número de celdas acumuladas no corresponde a la misma zona geográfica debido a que las elevaciones en los 3 modelos DEM iniciales no son idénticas.
+> Como observa en las 3 ilustraciones anteriores, la localización de los nodos con el mayor número de celdas acumuladas no corresponde a la misma zona geográfica debido a que las elevaciones en los 3 modelos DEM iniciales no son idénticas y también debido a los bucles presentes en la red de drenaje.
 
 7. A partir de las tablas de puntos característicos de la red de drenaje y los valores de celdas acumuladas, calcule el área de aportación para cada nodo en km² y rotule cada punto indicando el total de celdas acumuladas y área de aportación.
 
@@ -198,6 +198,8 @@ En este momento dispone de grillas de demarcación de drenajes, líneas de drena
 ### Referencias
 
 * https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html
+* https://desktop.arcgis.com/en/arcmap/10.4/tools/spatial-analyst-toolbox/identifying-stream-networks.htm
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/identifying-stream-networks.htm
 
 
 ### Compatibilidad
