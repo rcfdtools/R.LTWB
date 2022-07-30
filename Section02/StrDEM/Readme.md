@@ -215,6 +215,7 @@ En este momento dispone de grillas de demarcación de drenajes, líneas de drena
 
 | Versión    | Descripción                                                                                                                                                                                                                                                                       | Autor                                      | Horas |
 |------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.30 | Finalización documentación versión inicial. Procedimiento demarcación de drenajes - SRT con otras herramientas. Diagrama de procesos.                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.07.29 | Versión inicial demarcación de drenajes para áreas de aportación de 1km² para acumulaciones de flujo DEM ASTER, SRTM y ALOS. Conversión de celdas a vectores de drenaje y obtención de puntos característicos con lectura de valores acumulados y cálculo de áreas de aportación. | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 
 
