@@ -64,11 +64,15 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
 
 > Como puede observar en las ilustraciones, para las áreas de aportación definidas se han marcado múltiples celdas de drenaje en localizaciones similares a las de los vectores utilizados para el reacondicionamiento del terreno, excepto en algunas zonas donde existen bucles en la red de drenaje original con la que se realizó el reacondicionamiento del modelo digital de elevación. 
 
+<div align="center">
+
 |    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
 | ASTERStr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERStr.rar) |
 | SRTMStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar)  |
 | ALOSStr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar)  |
+
+</div>
 
 > El procedimiento de identificación y marcación de las celdas que igualan o exceden el valor del área de aportación definido, puede ser realizado manualmente en cualquier herramienta GIS a través de la calculadora ráster, utilizando como entrada la grilla de acumulación y definiendo un condicional. Por ejemplo, para la grilla ASTER la expresión a usar es `Con("ASTERFac.tif">=1062,1)` donde 1062 corresponde al número de celdas necesarias para obtener un área de aportación de 1 km² para una grilla con resolución de 30.68464585 metros (1062 = 1000000 m² / (30.68464585m * 30.68464585m)).
 
@@ -136,11 +140,15 @@ Utilizando la herramienta _ArcToolBox / Data Management Tools / General / Delete
 
 Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y ALOSStrNode.shp. Resultados obtenidos:  
 
+<div align="center">
+
 |                        Polilíneas Str :open_file_folder:                        |                              Nodos Str :open_file_folder:                               | Total nodos | Total duplicados | Nodos finales |
 |:-------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|:-----------:|:----------------:|:-------------:|
 | [ASTERStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/asterstr.zip) | [ASTERStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ASTERStrNode.zip) |    65554    |      36429       |     30125     | 
 |  [SRTMStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/srtmstr.zip)  |  [SRTMStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/SRTMStrNode.zip)  |    65688    |      36046       |     29622     | 
 |  [ALOSStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/alosstr.zip)  |  [ALOSStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ALOSStrNode.zip)  |    72210    |      40132       |     32078     | 
+
+</div>
 
 6. Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas en capa de nodos _ASTERStrNode.shp_ a partir del mapa _ASTERFac.tif_. Luego de finalizada su ejecución, en la tabla de atributos de la capa de puntos _ASTERStrNode.shp_ encontrará una nueva columna de atributos con el total de celdas acumuladas denominada `ASTERFac`. Ordene descendentemente el campo `ASTERFac` y seleccione y visualice los 10 nodos con mayores acumulaciones, 
 
