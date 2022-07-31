@@ -18,7 +18,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)
+* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM)
 
 > El libro de cálculo [FdrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
 
