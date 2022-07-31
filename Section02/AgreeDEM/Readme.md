@@ -26,9 +26,9 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
 * Polígono envolvente que delimita la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)
 * [Red de drenaje](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k) de la zona de estudio, [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip).
-* [Modelo digital de elevación ASTER GDEM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
-* [Modelo digital de elevación SRTM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
-* [Modelo digital de elevación ALOS PALSAR 12.5m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
+* [:mortar_board:Modelo digital de elevación ASTER GDEM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
+* [:mortar_board:Modelo digital de elevación SRTM 30m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
+* [:mortar_board:Modelo digital de elevación ALOS PALSAR 12.5m](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
 
 :open_file_folder: [Descargar mosaicos grillas DEM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).
 
