@@ -169,5 +169,26 @@ Como puede observar en la ilustración, dentro de la zona de estudio existen mú
 5. 
 
 
+
+### Referencias
+
+* http://dhime.ideam.gov.co/atencionciudadano/
+
+
+### Control de versiones
+
+| Versión    | Descripción                                                                              | Autor                                      | Horas |
+|------------|:-----------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos.  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+
+
+
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/StrDEM)  | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/999) | [Siguiente]() |
+|-----------------------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------------|---------------|
+
 [^1]: http://dhime.ideam.gov.co/atencionciudadano/
 [^2]: https://pro.arcgis.com/en/pro-app/latest/help/data/excel/prepare-to-work-with-excel-in-arcgis-pro.htm
