@@ -20,7 +20,7 @@ A partir de las grillas de acumulación de flujo, se pueden identificar las celd
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM)
+* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM)
 
 > El libro de cálculo [StrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/StrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo del número de celdas requeridas y subcuencas obtenidas para diferentes áreas de aportación en función del área de una cuenca principal y la resolución específica de una grilla DEM. 
 
