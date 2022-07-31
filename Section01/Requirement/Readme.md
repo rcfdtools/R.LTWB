@@ -22,6 +22,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
+* [Microsoft Office 64 bits](https://aka.ms/office-install) 
 
 > Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
 
