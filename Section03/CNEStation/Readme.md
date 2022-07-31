@@ -1,5 +1,5 @@
 ## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
-Keywords: `IDEAM` `Weather Station`
+Keywords: `IDEAM` `Weather Station` `Display XY Data`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStation.png)
 
@@ -146,6 +146,7 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 1. Ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones en formato Microsoft Excel y Shapefile, el Catálogo nacional de otras entidades y el Glosario de variables. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion). Copiar los archivos de Microsoft Excel _[CNE_IDEAM.xls]()_ y _[CNE_OE.xls]()_ en el directorio _D:\R.LTWB\\.datasets_, copiar y descomprimir el archivo [CNE_IDEAM.zip]() que contiene los puntos de localización de las estaciones en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/DHIMERecursos.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/IDEAMSolicitudInformacion.png)
 
 2. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISProSection03. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
@@ -155,9 +156,16 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEMap.png)
 
-4. Desde la carpeta _.datasets_, agregue el archivo _CNE_OE.xls_ que contiene la localización de las estaciones de otras estaciones del catálogo nacional de Colombia. 
+> Tenga en cuenca que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE contiene integrado este sistema. En cuanto al número de estaciones, para la versión descargada a 20220731, el CNE se compone de 4476 estaciones.
+
+4. Desde la carpeta _.datasets_, agregue el archivo _CNE_OE.xls_ que contiene la localización de estaciones de otras entidades de Colombia y abra la tabla de atributos, podrá observar que a fecha 20220731 la tabla contiene 4620 registros. Dando clic derecho en la tabla y seleccionando la opción _Display XY Data_, cree una tabla de eventos geográficos para representar la localización de estas estaciones. Utilice el sistema de coordenadas _GCS_WGS_1984_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEOEDisplayXYData.png)
+
+Como puede observar en la ilustración, dentro de la zona de estudio existen múltiples estaciones del catálogo de otras entidades. 
 
 > Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del Driver de Microsoft Access Database Engine[^2] que puede ser descargado desde https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920
+
 
 
 
