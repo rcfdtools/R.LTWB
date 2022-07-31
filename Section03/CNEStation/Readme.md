@@ -19,7 +19,7 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Zona de estudio - disolución de los polígonos de la zona hidrográfica 28 - Cesar. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
+* [Zona de estudio - disolución de polígonos zona hidrográfica 28 - Cesar. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 * [Zona de estudio - envolvente regular de los polígonos de la zona hidrográfica 28 - Cesar. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:blue_book:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 
 > xxxxxxxxxxxxxxDebido a que es necesario incluir diferentes estaciones al rededor de la zona hidrográgica de estudio para garantizar la extensión espacial de los mapas interpolados para cada variable climatológica requerida, en esta actividad no se especifica el listado de las estaciones a utilizar y en la sección 3 de este curso se presenta el proceso detallado de selección espacial de estas estaciones.
@@ -166,7 +166,7 @@ Como puede observar en la ilustración, dentro de la zona de estudio existen mú
 
 > Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del Driver de Microsoft Access Database Engine[^2] que puede ser descargado desde https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920
 
-
+5. 
 
 
 [^1]: http://dhime.ideam.gov.co/atencionciudadano/
