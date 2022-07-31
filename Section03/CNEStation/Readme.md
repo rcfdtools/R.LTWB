@@ -103,6 +103,8 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 ### Arreglos de datos para clasificación de estaciones por pisos térmicos
 
 
+<div align="center">
+
 #### Cortes convencionales
 
 | Valor de corte | Etiqueta                        |
@@ -125,6 +127,8 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 | 4700           | Extremadamente Frio, 6°C>T>0°C, <=4700meter |
 | 99999          | Nival, T<0°C, >4700meter                    |
 
+</div>
+
 
 ### Procedimiento general
 
@@ -135,6 +139,8 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 
 1. Ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones en formato Microsoft Excel y Shapefile, el Catálogo nacional de otras entidades y el Glosario de variables. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion).
 
+<div align="center">
+
 Tabla de descripción del nivel de aprobación[^1]
 
 | Código | Novel de aprobación |
@@ -142,6 +148,8 @@ Tabla de descripción del nivel de aprobación[^1]
 |  900   |     Preliminar      |
 |  1100  |     EN revisión     |
 |  1200  |     Definitivo      |
+
+</div>
 
 > La información validada o definitiva al encontrarse certificada, ha surtido el proceso de validación técnica necesaria que garantiza la calidad del dato y determina la oficialidad de la información que podrá ser utilizada para toma de decisiones.
 
