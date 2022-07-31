@@ -30,7 +30,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario [NASA Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation).
-* Polígono envolvente que delimita la [zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy), [(shp)](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)
+* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 
 
 ### Procedimiento de descarga
