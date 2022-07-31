@@ -24,7 +24,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/)
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
-* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.shp)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
+* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 * [Red de drenaje de la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k).
 * Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
 * Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
