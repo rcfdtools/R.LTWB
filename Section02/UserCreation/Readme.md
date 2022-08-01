@@ -25,7 +25,7 @@ Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda cre
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Graph/UserCreationEarthdataFlowchart.png" width="60%"><br>
-<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 1. Ingresar al servicio web [Eathdata](https://search.earthdata.nasa.gov) de la NASA y dar clic en [Earthdata login](https://d53njncz5taqi.cloudfront.net/login?ee=prod&state=https%3A%2F%2Fsearch.earthdata.nasa.gov%2Fsearch). 
