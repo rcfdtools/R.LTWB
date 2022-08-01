@@ -10,7 +10,7 @@
 	<![CDATA[
 		.st1 {fill:#f2f2f2;stroke:#4c85f4;stroke-width:1.5}
 		.st2 {fill:#4c85f4;fill-opacity:1;stroke:#4c85f4;stroke-opacity:1;stroke-width:0.37313432835821}
-		.st3 {fill:#000000;font-family:Segoe UI Light;font-size:0.75em}
+		.st3 {fill:#000000;font-family:Segoe UI;font-size:0.75em}
 		.st4 {fill:#f2f2f2;stroke:#fbbc0e;stroke-width:1.5}
 		.st5 {fill:#fbbc0e;fill-opacity:1;stroke:#fbbc0e;stroke-opacity:1;stroke-width:0.37313432835821}
 		.st6 {marker-end:url(#mrkr6-16);stroke:#7f7f7f;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
@@ -79,7 +79,7 @@
 			<path d="M9.96 319.11 L131.77 319.11 A9.96047 9.96047 -180 0 0 141.73 309.15 L141.73 306.4 A9.96047 9.96047 -180 0 0
 						 131.77 296.44 L9.96 296.44 A9.96047 9.96047 -180 0 0 -0 306.4 L0 309.15 A9.96047 9.96047 -180 0 0 9.96 319.11
 						 Z" class="st1"/>
-			<text x="24.5" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Zonificación hidrográfica</text>		</g>
+			<text x="21.72" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Zonificación hidrográfica</text>		</g>
 		<g id="shape84-6" v:mID="84" v:groupContext="shape" transform="translate(156.868,-253.466)">
 			<title>Rounded Rectangle.84</title>
 			<desc>Cargar clases de entidad</desc>
@@ -101,7 +101,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st4"/>
-			<text x="24.53" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Cargar clases de entidad</text>		</g>
+			<text x="22.29" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Cargar clases de entidad</text>		</g>
 		<g id="shape85-11" v:mID="85" v:groupContext="shape" v:layerMember="0" transform="translate(220.648,-288.453)">
 			<title>Dynamic connector.85</title>
 			<v:userDefs>
@@ -130,7 +130,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st4"/>
-			<text x="24.98" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Filtrar por area hid. - AH</text>		</g>
+			<text x="22.88" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Filtrar por area hid. - AH</text>		</g>
 		<g id="shape87-21" v:mID="87" v:groupContext="shape" v:layerMember="0" transform="translate(156.822,-231.68)">
 			<title>Dynamic connector.87</title>
 			<v:userDefs>
@@ -160,7 +160,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st4"/>
-			<text x="24.21" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Filtrar por zona hid. - ZH</text>		</g>
+			<text x="22.21" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Filtrar por zona hid. - ZH</text>		</g>
 		<g id="shape89-31" v:mID="89" v:groupContext="shape" transform="translate(156.822,-150.871)">
 			<title>Rounded Rectangle.89</title>
 			<desc>Dissolve</desc>
@@ -182,7 +182,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st9"/>
-			<text x="55.66" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Dissolve</text>		</g>
+			<text x="54.57" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Dissolve</text>		</g>
 		<g id="shape90-36" v:mID="90" v:groupContext="shape" transform="translate(303.798,-185.96)">
 			<title>Rounded Rectangle.90</title>
 			<desc>Filtrar por subzona hid. - SZH</desc>
@@ -204,7 +204,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st4"/>
-			<text x="15.3" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Filtrar por subzona hid. - SZH</text>		</g>
+			<text x="12.71" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Filtrar por subzona hid. - SZH</text>		</g>
 		<g id="shape91-40" v:mID="91" v:groupContext="shape" v:layerMember="0" transform="translate(220.602,-221.576)">
 			<title>Dynamic connector.91</title>
 			<v:userDefs>
@@ -263,7 +263,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st1"/>
-			<text x="40.16" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Zona de estudio</text>		</g>
+			<text x="38.65" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Zona de estudio</text>		</g>
 		<g id="shape99-69" v:mID="99" v:groupContext="shape" transform="translate(156.733,-80.7132)">
 			<title>Rounded Rectangle.99</title>
 			<desc>Asignar CRS proyectado al mapa</desc>
@@ -285,7 +285,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st4"/>
-			<text x="9.01" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Asignar CRS proyectado al mapa</text>		</g>
+			<text x="6.08" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Asignar CRS proyectado al mapa</text>		</g>
 		<g id="shape101-73" v:mID="101" v:groupContext="shape" v:layerMember="0" transform="translate(234.731,-151.934)">
 			<title>Dynamic connector.101</title>
 			<v:userDefs>
@@ -316,7 +316,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st9"/>
-			<text x="16.62" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Feature Envelope to Polygon</text>		</g>
+			<text x="13.86" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Feature Envelope to Polygon</text>		</g>
 		<g id="shape105-82" v:mID="105" v:groupContext="shape" v:layerMember="0" transform="translate(220.513,-81.4219)">
 			<title>Dynamic connector.105</title>
 			<v:userDefs>
@@ -352,7 +352,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st1"/>
-			<text x="21.69" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Zona de estudio envelope</text>		</g>
+			<text x="19.28" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Zona de estudio envelope</text>		</g>
 		<g id="shape133-96" v:mID="133" v:groupContext="shape" v:layerMember="0" transform="translate(220.513,-116.855)">
 			<title>Dynamic connector.133</title>
 			<v:userDefs>
@@ -381,7 +381,7 @@
 			<v:textRect cx="70.8661" cy="307.776" width="141.74" height="22.6772"/>
 			<path d="M11.34 319.11 L130.39 319.11 A11.3384 11.3384 -180 0 0 141.73 307.78 A11.3384 11.3384 -180 0 0 130.39 296.44
 						 L11.34 296.44 A11.3384 11.3384 -180 0 0 0 307.78 A11.3384 11.3384 -180 0 0 11.34 319.11 Z" class="st4"/>
-			<text x="17.15" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Analizar catálogo de objetos</text>		</g>
+			<text x="14.37" y="310.48" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Analizar catálogo de objetos</text>		</g>
 		<g id="shape136-105" v:mID="136" v:groupContext="shape" v:layerMember="0" transform="translate(234.798,-255.328)">
 			<title>Dynamic connector.136</title>
 			<v:userDefs>
