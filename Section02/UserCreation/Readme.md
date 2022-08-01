@@ -24,7 +24,7 @@ Para la descarga de los modelos de terreno y la información climatológica obte
 Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda crear una cuenta de correo electrónico de [Google](https://mail.google.com/) que podrá utilizar para crear posteriormente una cuenta en [GitHub](https://github.com/) y clonar el contenido completo de este curso, incluidos los paquetes de datos, scripts y documentación oficial.
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Graph/UserCreationEarthdataFlowchart.png" width="60%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Graph/UserCreationEarthdataFlowchart.svg" width="60%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

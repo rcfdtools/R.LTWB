@@ -36,7 +36,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 ### Procedimiento de descarga
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Graph/DEMAsterFlowchart.png" width="70%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Graph/DEMAsterFlowchart.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

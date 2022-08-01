@@ -33,7 +33,7 @@ A partir de las grillas de acumulación de flujo, se pueden identificar las celd
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Graph/StrDEMFlowchart.png" width="65%"><br>
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Graph/StrDEMFlowchart.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
