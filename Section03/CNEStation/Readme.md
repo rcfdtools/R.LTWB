@@ -172,12 +172,19 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelopeExtent.png)
 
-Ancho (este - oeste ): -72.808322° - -74.315834° =  1.507512°  
-Alto (norte - sur): 10.940833° - 8.662500° = 2.278333°  
-Menor dimensión: ancho 1.507512°  
-1/20 menor dimensión: 0.0753756°
+* Ancho (este - oeste ): -72.808322° - -74.315834° =  1.507512°  
+* Alto (norte - sur): 10.940833° - 8.662500° = 2.278333°  
+* Menor dimensión: ancho 1.507512°  
+* 1/20 menor dimensión: 0.0753756°
 
 > La relación 1/20 dependerá de la densidad de las estaciones en la zona de frontera del polígono envolvente. Si existen pocas estaciones, se recomienda disminuir esta relación, p. ej. 1/10 o menos y si por contrario, la red es muy densa, aumentar la relación a 1/30 o más.
+
+6. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente a la zona de estudio utilizando la relación 1/20 de la dimensión más corta correspondiente a 0.0753756°. Nombrar como _ZonaEstudioBufferStation.shp_ en la carpeta _.shp_. Como puede observar, las esquinas obtenidas son redondeadas y debido a que este polígono únicamente será usado para seleccionar las estaciones de la zona de estudio y no para recortar los MDE o mapas interpolados, no es necesario generar un polígono envolvente.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioBufferStation.png)
+
+7. Desde le menú _Map / Selection / Select By Location_, 
+
 
 
 Seleccione por localización, todas aquellas 
