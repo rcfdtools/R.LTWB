@@ -148,7 +148,7 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/DHIMERecursos.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/IDEAMSolicitudInformacion.png)
 
-2. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISProSection03. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
+2. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection03.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0NewMapProject.png)
 
@@ -162,11 +162,16 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEOEDisplayXYData.png)
 
-Como puede observar en la ilustración, dentro de la zona de estudio existen múltiples estaciones del catálogo de otras entidades. 
+Como puede observar en la ilustración, en el polígono envolvente de la zona de estudio existen múltiples estaciones del catálogo nacional del IDEAM y de otras entidades. 
 
 > Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del Driver de Microsoft Access Database Engine[^2] que puede ser descargado desde https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920
 
-5. 
+5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando por ejemplo 1/10 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
+
+
+
+
+Seleccione por localización, todas aquellas 
 
 
 
@@ -177,9 +182,10 @@ Como puede observar en la ilustración, dentro de la zona de estudio existen mú
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                              | Autor                                      | Horas |
-|------------|:-----------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos.  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| Versión    | Descripción                                                                             | Autor                                      | Horas |
+|------------|:----------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.02 | xxx                                                                                     | [rcfdtools](https://github.com/rcfdtools)  |  xx   |
+| 2022.07.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 
