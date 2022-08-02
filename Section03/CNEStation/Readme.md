@@ -172,10 +172,10 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelopeExtent.png)
 
-* Ancho (este - oeste ): -72.808322° - -74.315834° =  1.507512°  
-* Alto (norte - sur): 10.940833° - 8.662500° = 2.278333°  
-* Menor dimensión: ancho 1.507512°  
-* 1/20 menor dimensión: 0.0753756°
+* Ancho (este - oeste ) = -72.808322° - -74.315834° =  1.507512°  
+* Alto (norte - sur) = 10.940833° - 8.662500° = 2.278333°  
+* Menor dimensión = ancho 1.507512°  
+* 1/20 menor dimensión = 0.0753756°
 
 > La relación 1/20 dependerá de la densidad de las estaciones en la zona de frontera del polígono envolvente. Si existen pocas estaciones, se recomienda disminuir esta relación, p. ej. 1/10 o menos y si por contrario, la red es muy densa, aumentar la relación a 1/30 o más.
 
