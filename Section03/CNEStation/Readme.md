@@ -166,11 +166,18 @@ Como puede observar en la ilustración, en el polígono envolvente de la zona de
 
 > Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del Driver de Microsoft Access Database Engine[^2] que puede ser descargado desde https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920
 
-5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando por ejemplo 1/10 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
+5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando p. ej. 1/20 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
 
-Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic derecho en la tabla de contenido y seleccionar _Properties_, ir a la pestaña _Source_ y ampliar la información de _Extent_. Para esta capa los límites
+Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic derecho en la tabla de contenido y _Properties_, ir a la pestaña _Source_ y ampliar la información de _Extent_. Para esta capa los límites geográficos expresados en grados decimales son: norte 10.940833°, sur 8.662500°, oeste -74.315834° y este -72.808322°.  
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelopeExtent.png)
+
+Ancho (este - oeste ): -72.808322° - -74.315834° =  1.507512°  
+Alto (norte - sur): 10.940833° - 8.662500° = 2.278333°  
+Menor dimensión: ancho 1.507512°  
+1/20 menor dimensión: 0.0753756°
+
+> La relación 1/20 dependerá de la densidad de las estaciones en la zona de frontera del polígono envolvente. Si existen pocas estaciones, se recomienda disminuir esta relación, p. ej. 1/10 o menos y si por contrario, la red es muy densa, aumentar la relación a 1/30 o más.
 
 
 Seleccione por localización, todas aquellas 
