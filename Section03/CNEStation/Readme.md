@@ -56,6 +56,48 @@ Tomados directamente del archivo [CNE_IDEAM.xls](http://bart.ideam.gov.co/cneide
 > 
 > Los atributos del catálogo nacional de estaciones y de otras entidades son equivalentes. Catálogos exportados a archivos de formas Shapefile utilizan máximo 10 caracteres en la definición de atributos.
 
+En la siguiente tabla (versión borrador) desarrollada por [rcfdtools](https://github.com/rcfdtools), se presentan los tipos de observaciones que son realizadas por las estaciones dependiendo de su categoría.
+
+| Observación / Categoría                        | AM  | CO  | CP  | LG  | LM  | MG  | ME  | PG  | PM  | RS  | SP  | SS  |
+|------------------------------------------------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+| Precipitación                                  | ✓   | ✓   | ✓   |     |     |     |     | ✓   | ✓   |     | ✓   | ✓   |
+| Temperatura del aire cerca al suelo            | ✓   | ✓   | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
+| Temperatura máxima del aire a 2 metros         | ✓   | ✓   | ✓   |     |     |     |     |     |     |     |     |     |
+| Temperatura mínima del aire a 2 metros         | ✓   | ✓   | ✓   |     |     |     |     |     |     |     |     |     |
+| Humedad del aire                               | ✓   | ✓   | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
+| Temperatura del suelo a varias profundidades   | ✓   |     |     |     |     |     |     |     |     |     |     |     |
+| Tanque evaporación (no siempre)                |     | ✓   | ✓   |     |     |     |     |     |     |     |     |     |
+| Heliógrafo (no siempre)                        |     | ✓   |     |     |     |     |     |     |     |     |     |     |
+| Anenómetro (no siempre)                        |     | ✓   |     |     |     |     |     |     |     |     |     |     |
+| Viento - Dirección                             | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
+| Viento - Velocidad                             | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
+| Radiación                                      | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
+| Brillo solar                                   | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
+| Evaporación                                    | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
+| Temperatura extrema del tanque de evaporación  | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
+| Nubosidad - Octas                              | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
+| Fenómenos especiales                           | ✓   |     | ✓   |     |     |     | ✓   |     |     |     | ✓   | ✓   |
+| Nivel lámina agua                              |     |     |     | ✓   | ✓   | ✓   |     |     |     |     |     |     |
+| Temperatura del agua                           |     |     |     |     |     | ✓   |     |     |     |     |     |     |
+| Salinidad agua marina                          |     |     |     |     |     | ✓   |     |     |     |     |     |     |
+| Heladas                                        |     |     |     |     |     |     | ✓   |     |     |     |     |     |
+| Temperatura del aire en capa alta de atmósfera |     |     |     |     |     |     |     |     |     | ✓   |     |     |
+| Presión en capa alta de atmósfera              |     |     |     |     |     |     |     |     |     | ✓   |     |     |
+| Humedad relativa en capa alta de atmósfera     |     |     |     |     |     |     |     |     |     | ✓   |     |     |
+| Viento - Dirección en capa alta de atmósfera   |     |     |     |     |     |     |     |     |     | ✓   |     |     |
+| Viento - Velocidad en capa alta de atmósfera   |     |     |     |     |     |     |     |     |     | ✓   |     |     |
+| Presión atmosférica cercana al suelo           |     |     |     |     |     |     |     |     |     |     | ✓   | ✓   |
+| Nubosidad - Tipo                               |     |     |     |     |     |     |     |     |     |     | ✓   |     |
+| Nubosidad - Altura de nubes                    |     |     |     |     |     |     |     |     |     |     | ✓   |     |
+| Visibilidad                                    |     |     |     |     |     |     |     |     |     |     | ✓   | ✓   |
+| Humedad - Características                      |     |     |     |     |     |     |     |     |     |     | ✓   |     |
+| Temperaturas extremas                          |     |     |     |     |     |     |     |     |     |     | ✓   |     |
+| Nubosidad - Capas significativas               |     |     |     |     |     |     |     |     |     |     | ✓   |     |
+| Viento - Recorrido                             | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
+| Secuencia fenómenos atmosféricos               |     |     |     |     |     |     |     |     |     |     | ✓   | ✓   |
+| Tiempo atmosférico                             |     |     |     |     |     |     |     |     |     |     |     | ✓   |
+| Estado del suelo                               |     |     |     |     |     |     |     |     |     |     |     | ✓   |
+
 
 ### Definiciones generales del catálogo nacional de estaciones
 

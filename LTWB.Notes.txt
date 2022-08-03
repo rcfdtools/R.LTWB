@@ -36,27 +36,3 @@ _Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas 
 
 <div align="center">
 </div>
-
-P: precipitación
-T aire: temperatura del aire
-T max2: temperatura máxima del aire a 2 metros
-T min2: temperatura mínima del aire a 2 metros
-Hum: humedad
-T profv: temperatura a varias profundidades en el suelo
-
-
-AM: estación Agrometeorológica
-CO: estación Climatológica Ordinaria
-CP: estación Climatológica Principal
-LM: estación Limnigráfica
-LG: estación Limnimétrica
-MG: estación Mareográfica
-ME: estación meteorológica especial
-PG: estación Pluviográfica
-PM: estación Pluviométrica
-RS: estación Radio Sonda
-SP: estación Sinóptica Principal
-SS: estación Sinóptica Secundaria
-
-
-
