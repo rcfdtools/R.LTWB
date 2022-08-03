@@ -437,14 +437,14 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL: `LYearSTW >= 10 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal')`
 
-| Longitud hipotética<br>en años >= | Estaciones<br>encontradas | Cubrimiento                    | Ilustración                                                                                                               |
-|:---------------------------------:|:-------------------------:|:-------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-|                10                 |            139            | Sobre toda la zona de estudio  | ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain10.png) |
-|                15                 |                           |                                |                                                                                                                           |
-|                20                 |                           |                                |                                                                                                                           |
-|                25                 |                           |                                |                                                                                                                           |
-|                30                 |                           |                                |                                                                                                                           |
-|                35                 |                           |                                |                                                                                                                           |
+| Longitud hipotética<br>en años >= | Estaciones<br>encontradas | Ilustración                                                                                                                                               |
+|:---------------------------------:|:-------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------|
+|                10                 |            139            | Sobre toda la zona de estudio<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain10.png) |
+|                15                 |                           |                                                                                                                                                            |
+|                20                 |                           |                                                                                                                                                            |
+|                25                 |                           |                                                                                                                                                            |
+|                30                 |                           |                                                                                                                                                            |
+|                35                 |                           |                                                                                                                                                            |
 
 
 
