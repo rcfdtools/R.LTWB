@@ -256,9 +256,14 @@ LYearS:
 len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 ```
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPython.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPython.png)
+
 > La variable booleana `is_python3` es utilizada para definir la versión de Python desde la cual se hace el llamado del Script.
 > 
 > Python 2 sobre ArcGIS for Desktop transfiere como texto las variables FECHA_INST y FECHA_SUSP en formato unicode, es por ello que deben ser convertidas a formato de fecha para poder calcular la diferencia en días. Cuando en la tabla de atributos las fechas son almacenadas como cadenas de texto, puede definir la variable `is_python3 = False` para realizar el cálculo de diferencias en Python 2 o 3.
+
+
 
 
 

@@ -156,4 +156,20 @@ def len_years_serie(installation_date, suspension_date):
         diff_date = suspension_date - installation_date
     else:
         diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220803" Time="064344">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
     return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process></lineage></DataProperties></Esri></metadata>
