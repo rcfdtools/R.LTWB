@@ -385,8 +385,7 @@ Simbolice las estaciones por categoría a partir del campo `CATEGORIA` para las 
 
 ### Identificación de estaciones con datos de precipitación
 
-
-
+  
 
 ### Referencias
 
@@ -397,7 +396,8 @@ Simbolice las estaciones por categoría a partir del campo `CATEGORIA` para las 
 
 | Versión    | Descripción                                                                                                                                                                                                                                                                                                                                  | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.02 | Definición de longitud de aferencia a partir de la menor dimensión horizontal o vertical, creación de buffer, selección de estaciones por localización, exportación de estaciones IDEAM y otras entidades, unión de estaciones en capa única, calculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
+| 2022.07.03 | Cálculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro.                                                                                                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)  |   6   |
+| 2022.07.02 | Definición de longitud de aferencia a partir de la menor dimensión horizontal o vertical, creación de buffer, selección de estaciones por localización, exportación de estaciones IDEAM y otras entidades, unión de estaciones en capa única, cálculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 | 2022.07.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos.                                                                                                                                                                                                                                                      | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
