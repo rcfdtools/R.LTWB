@@ -210,7 +210,7 @@ En la siguiente tabla (versión borrador) desarrollada por [rcfdtools](https://g
 
 Como puede observar en la ilustración, en el polígono envolvente de la zona de estudio existen múltiples estaciones del catálogo nacional del IDEAM y de otras entidades. 
 
-> Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del Driver de Microsoft Access Database Engine[^2] que puede ser descargado desde https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920
+> Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920)[^2].
 
 
 ### Creación del polígono para selección de estaciones
@@ -431,8 +431,23 @@ Simbolice las estaciones por categoría a partir del campo `CATEGORIA` para las 
 
 ### Identificación de estaciones con datos de precipitación
 
+Las longitudes hipotéticas de registros en estaciones evaluadas previamente, corresponden a diferentes categorías. En el caso específico de la precipitación, los registros pueden ser obtenidos de estaciones Agrometeorológicas, Climatológicas Ordinarias, Climatológicas Principales, Pluviográficas, Pluviométricas, Sinópticas Principales y Sinópticas Secundarias.
 
-  
+Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 10, 15, 20, 25, 30, 35 años y para las categorías indicadas.
+
+Expresión SQL: `LYearSTW >= 10 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal')`
+
+| Longitud hipotética<br>en años >= | Estaciones<br>encontradas | Cubrimiento                    | Ilustración                                                                                                               |
+|:---------------------------------:|:-------------------------:|:-------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+|                10                 |            139            | Sobre toda la zona de estudio  | ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain10.png) |
+|                15                 |                           |                                |                                                                                                                           |
+|                20                 |                           |                                |                                                                                                                           |
+|                25                 |                           |                                |                                                                                                                           |
+|                30                 |                           |                                |                                                                                                                           |
+|                35                 |                           |                                |                                                                                                                           |
+
+
+
 
 ### Referencias
 
