@@ -92,9 +92,12 @@ En la siguiente tabla (versión borrador) desarrollada por [rcfdtools](https://g
 | Temperatura del suelo a varias profundidades   | ✓   |     |     |     |     |     |     |     |     |     |     |     |
 | Temperatura del agua                           |     |     |     |     |     | ✓   |     |     |     |     |     |     |
 | Temperaturas extremas                          |     |     |     |     |     |     |     |     |     |     | ✓   |     |
+| Evaporación                                    | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
+| Brillo solar                                   | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
+| Radiación solar                                | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
 | Humedad del aire cerca al suelo                | ✓   | ✓   | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
-| Humedad - Características                      |     |     |     |     |     |     |     |     |     |     | ✓   |     |
 | Humedad relativa en capa alta de atmósfera     |     |     |     |     |     |     |     |     |     | ✓   |     |     |
+| Humedad - Características                      |     |     |     |     |     |     |     |     |     |     | ✓   |     |
 | Viento - Dirección                             | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
 | Viento - Velocidad                             | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
 | Viento - Recorrido                             | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
@@ -102,20 +105,17 @@ En la siguiente tabla (versión borrador) desarrollada por [rcfdtools](https://g
 | Viento - Velocidad en capa alta de atmósfera   |     |     |     |     |     |     |     |     |     | ✓   |     |     |
 | Presión en capa alta de atmósfera              |     |     |     |     |     |     |     |     |     | ✓   |     |     |
 | Presión atmosférica cercana al suelo           |     |     |     |     |     |     |     |     |     |     | ✓   | ✓   |
-| Radiación                                      | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
-| Brillo solar                                   | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
-| Evaporación                                    | ✓   |     | ✓   |     |     |     |     |     |     |     |     |     |
 | Nubosidad - Octas                              | ✓   |     | ✓   |     |     |     |     |     |     |     | ✓   | ✓   |
 | Nubosidad - Tipo                               |     |     |     |     |     |     |     |     |     |     | ✓   |     |
 | Nubosidad - Altura de nubes                    |     |     |     |     |     |     |     |     |     |     | ✓   |     |
 | Nubosidad - Capas significativas               |     |     |     |     |     |     |     |     |     |     | ✓   |     |
-| Nivel lámina agua                              |     |     |     | ✓   | ✓   | ✓   |     |     |     |     |     |     |
-| Salinidad agua marina                          |     |     |     |     |     | ✓   |     |     |     |     |     |     |
-| Heladas                                        |     |     |     |     |     |     | ✓   |     |     |     |     |     |
 | Visibilidad                                    |     |     |     |     |     |     |     |     |     |     | ✓   | ✓   |
+| Nivel lámina agua                              |     |     |     | ✓   | ✓   | ✓   |     |     |     |     |     |     |
+| Heladas                                        |     |     |     |     |     |     | ✓   |     |     |     |     |     |
 | Secuencia fenómenos atmosféricos               |     |     |     |     |     |     |     |     |     |     | ✓   | ✓   |
 | Tiempo atmosférico                             |     |     |     |     |     |     |     |     |     |     |     | ✓   |
 | Estado del suelo                               |     |     |     |     |     |     |     |     |     |     |     | ✓   |
+| Salinidad agua marina                          |     |     |     |     |     | ✓   |     |     |     |     |     |     |
 | Fenómenos especiales                           | ✓   |     | ✓   |     |     |     | ✓   |     |     |     | ✓   | ✓   |
 | Tanque evaporación (no siempre)                |     | ✓   | ✓   |     |     |     |     |     |     |     |     |     |
 | Heliógrafo (no siempre)                        |     | ✓   |     |     |     |     |     |     |     |     |     |     |
