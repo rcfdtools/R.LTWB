@@ -11,6 +11,7 @@
 .github/
 .idea/
 venv/
+Lib/
 #.refs/GitHubRefs/
 *.ovr
 *.lock

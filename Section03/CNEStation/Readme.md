@@ -106,7 +106,7 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 | Código | Novel de aprobación |
 |:------:|:-------------------:|
 |  900   |     Preliminar      |
-|  1100  |     EN revisión     |
+|  1100  |     En revisión     |
 |  1200  |     Definitivo      |
 
 > La información validada o definitiva al encontrarse certificada, ha surtido el proceso de validación técnica necesaria que garantiza la calidad del dato y determina la oficialidad de la información que podrá ser utilizada para toma de decisiones. Para el desarrollo del caso de estudio, usaremos la información IDEAM en todos los niveles de aprobación disponibles.
@@ -197,11 +197,66 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNE_OE_ZEExportFeatures.png)  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEZEExportFeaturesMap.png)
 
-9. Con la herramienta _Geoprocessing / Data Management Tools / General / Merge_, combine los archivos de formas _CNE_IDEAM_ZE.shp_ y _CNE_OE_ZE.shp_ en un único archivo y nombre como _[CNE_IDEAM_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)_. La red de estaciones contendrá en total 440 estaciones (315 IDEAM + 125 otras entidades).
+9. Con la herramienta _Geoprocessing / Data Management Tools / General / Merge_, combine los archivos de formas _CNE_IDEAM_ZE.shp_ y _CNE_OE_ZE.shp_ en un único archivo y nombre como _[CNE_IDEAM_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)_. Asegúrese de marcar la casilla `Add source information to output` para obtener el campo de atributos `MERGE_SRC` que describe la capa fuente y de clic en la opción _Reset_ ubicada a la derecha de `Field Map` . La red de estaciones contendrá en total 440 estaciones (315 IDEAM + 125 otras entidades).
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNE_IDEAM_OE_ZEMerge.png)
 
+10. Una vez obtenida la red de estaciones integrada sobre la zona de estudio, es necesario estudiar la longitud hipotética de las series a partir de las fechas de instalación y suspensión registradas en el catálogo. 
 
+> Este procedimiento es importante debido a que para la descarga de las series de datos registradas en las estaciones, es necesario primero conocer la homogeneidad en las longitudes hipotética de los registros que deberían tener las estaciones a partir de su fecha de puesta en operación y recolección de datos. Por ejemplo, si la mayoría de las estaciones tienen un registro continuo y actual de al menos 20 años y en las estaciones de la zona de estudio existen estaciones recientes o antiguas suspendidas con registros cortos (p. ej. 5 años), se podrían descartar estas estaciones del análisis, siempre y cuando no correspondan a estaciones en la zona de frontera geográfica de la zona en estudio.
+
+En la capa _CNE_IDEAM_OE_ZE.shp_, crear los siguientes campos de atributos:
+
+| Campo    | Tipo           | Descripción                                                                                 |
+|:---------|:---------------|---------------------------------------------------------------------------------------------|
+| LYearS   | Numérico doble | Campo para longitud hipotética de serie a partir de las fechas de instalación y suspensión. |
+| LYearSTW | Numérico doble | Campo para longitud hipotética de serie a partir de una ventana de tiempo definida.         |
+
+En la tabla de atributos dar clic en el botón _Field: Add_ y desde el modo de edición agregar los campos indicados, luego desde el Menú superior _Fields_, dar clic en _Save_. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0AddField.png)
+
+> En ArcGIS for Desktop, desde las propiedades de la tabla de atributos seleccionar la opción _Add Field_.
+
+El cálculo del campo `LYearS` puede ser realizado dando clic en la cabecera del campo y seleccionando la opción _Calculate Field_ utilizando la instrucción Python 3 `(!FECHA_INST!-!FECHA_SUSP!)/365`, sin embargo, no podrá ser aplicada a estaciones que se encuentran suspendidas debido a que el campo fecha de suspensión contendrá valores nulos, por lo que Python devolverá un error y no realizará el cálculo solicitado.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSError.png)
+
+> En ArcGIS for Desktop puede usar la expresión VBScript `( [FECHA_SUSP] - [FECHA_INST] )/365`.
+
+Configuración regional requerida: en el _Panel de Control / Region_, establezca el formato de fechas cortas como d/MM/yyyy.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/Windows11ControlPanlRegionFormat.png)
+
+Para realizar correctamente este cálculo, es necesario considerar la fecha final de los registros de las estaciones que se encuentran en operación, para este ejemplo, la fecha de corte corresponde al último día del año inmediatamente anterior correspondiente a 2021.12.31 considerando que para el análisis climatológico, únicamente utilizaremos datos de años hidrologicamente completos. La longitud de series en años usando Python a través de Calculate Field para el campo LYearS, puede ser realizada a través de Code Block utilizando las siguientes instrucciones:
+
+Pre-Logic Script Code para Python 2 y 3 sobre ArcGIS for Desktop y ArcGIS Pro con campos: 
+```
+from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365
+```
+
+LYearS:
+```
+len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
+```
+
+> La variable booleana `is_python3` es utilizada para definir la versión de Python a utilizar.
 
 
 

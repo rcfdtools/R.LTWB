@@ -1,4 +1,43 @@
 from datetime import datetime
+installation_date = '14/09/1972'
+#installation_date = ''
+#suspension_date = '02/07/2019'
+suspension_date = ''
+tw_end_date = '31/12/2021' # Time window end
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    diff_date = datetime.strptime(suspension_date, '%d/%m/%Y') - datetime.strptime(installation_date, '%d/%m/%Y')
+    return float(diff_date.days)/365
+
+print(len_years_serie(installation_date, suspension_date))
+
+'''
+
+# Basic date difference sample over Python 3
+installation_date = datetime.strptime('14/09/1972', '%d/%m/%Y')
+#installation_date = ''
+suspension_date = datetime.strptime('02/07/2019', '%d/%m/%Y')
+#suspension_date = ''
+tw_end_date = datetime.strptime('31/12/2021', '%d/%m/%Y') # Time window end
+is_python3 = True # Insert False for Python 2
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, '%d/%m/%Y') - datetime.strptime(installation_date, '%d/%m/%Y')
+    print('diff_date: %s\n' %(diff_date)+
+          'Type: %s' %(type(diff_date)))
+    return float(diff_date.days)/365
+print('len_years_serie: %f' %(len_years_serie(installation_date, suspension_date)))
+
 
 # Basic date difference sample
 #import dateutil.utils
@@ -69,3 +108,4 @@ print('\nBasic date difference sample with full date end time window cut\n'
       'Serie full length, years: %f\n' %len_years_serie(installation_date,suspension_date)[0]+
       'Serie time-window length, years: %f' %len_years_serie(installation_date,suspension_date)[1])
 
+'''

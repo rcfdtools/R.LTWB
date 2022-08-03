@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: martes, 2 de agosto de 2022 11:09:34 a. m.</msg><msg code="539" type="100">ERROR 000539: Traceback (most recent call last):
+  File "&lt;expression&gt;", line 1, in &lt;module&gt;
+  File "&lt;string&gt;", line 5, in len_years_serie
+TypeError: an integer is required (got type datetime.datetime)
+</msg><msg code="-2147467259" type="100">Failed to execute (CalculateField).</msg><msg code="0" type="3">Failed at martes, 2 de agosto de 2022 11:09:34 a. m. (Elapsed Time: 0.05 seconds)</msg></messages>
