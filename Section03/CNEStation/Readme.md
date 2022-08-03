@@ -1,12 +1,12 @@
 ## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
-Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Select By Location`
+Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Select By Location` `Python`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStation.png)
 
 Luego de la definición del caso de estudio realizada en la Sección 1, es necesario identificar la red de estaciones terrestres que serán utilizadas para el estudio de las diferentes variables hidroclimatológicas en la zona estudio.                                                                                                                                                      
 
 > En la ilustración, _CNE_IDEAM_ corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y _CNE_IDEAM_ZE_ corresponde al grupo de estaciones prototipo en la zona de estudio.
- 
+
 
 ### Objetivos
 
@@ -21,8 +21,6 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [Polígono que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
-
-> xxxxxxxxxxxxxxDebido a que es necesario incluir diferentes estaciones al rededor de la zona hidrográgica de estudio para garantizar la extensión espacial de los mapas interpolados para cada variable climatológica requerida, en esta actividad no se especifica el listado de las estaciones a utilizar y en la sección 3 de este curso se presenta el proceso detallado de selección espacial de estas estaciones.
 
 El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia, adscrito al [Ministerio de Medio Ambiente - Minambiente](https://www.minambiente.gov.co/), es la entidad nacional encargada registrar y mantener la información hidrometeorológica del país, incluida la localización y clasificación de la red de estaciones que hace parte del [Catálogo Nacional de Estaciones - CNE](http://bart.ideam.gov.co/cneideam/CNE_IDEAM.xls). A través del servicio de [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion) o a través del portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del IDEAM desde la pestaña _Recursos_, personas naturales o jurídicas, pueden obtener no solamente los catálogos, sino también las capas geográficas y los registros discretos registrados en cada estación.
 
@@ -370,6 +368,10 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 De clic derecho en la cabecera del campo `LYearSTW` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico y una gráfica con las longitudes hipotéticas en años para cada estación dentro de la ventana de tiempo establecida. Como puede observar, la media de las longitudes hipotéticas es de 29.8 años con una desviación estándar de 16.1 años. Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras del histograma a partir de la media, obtendrá 174 de 263 estaciones con registros iguales o superiores a 29.5 años de registro y podrá observar simultáneamente su localización dentro y al rededor de la zona de estudio.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWStatistics.png)
+
+Simbolice las estaciones por categoría a partir del campo `CATEGORIA` para las estaciones con longitudes hipotéticas dentro de la ventana de tiempo establecida y cree una gráfica de barras por categoría, podrá observar que el mayor número de estaciones corresponde a la categoría Pluviométricas.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0BarGraphCategoria.png)
 
 
 ### Referencias
