@@ -3,7 +3,7 @@ Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Select By Locati
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStation.png)
 
-Luego de la definición del caso de estudio realizada en la Sección 1, es necesario identificar la red de estaciones terrestres que serán utilizadas para el estudio de las diferentes variables hidroclimatológicas en la zona estudio.                                                                                                                                                      
+Luego de la definición del caso de estudio realizada en la Sección 1, es necesario identificar la red de estaciones terrestres que serán utilizadas para el estudio de las diferentes variables hidroclimatológicas en la zona estudio.                       
 
 > En la ilustración, _CNE_IDEAM_ corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y _CNE_IDEAM_ZE_ corresponde al grupo de estaciones prototipo en la zona de estudio.
 
@@ -136,7 +136,7 @@ Tomado de [Anexo 2 - Definiciones CNE](http://www.ideam.gov.co/documents/10182/5
 | 99999          | Nival, T<0°C, >4700meter                    |
 
 
-### Procedimiento general
+### Procedimiento general descarga del catálogo nacional de estaciones CNE
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStationFlowchart.png" width="65%"><br>
@@ -166,6 +166,9 @@ Como puede observar en la ilustración, en el polígono envolvente de la zona de
 
 > Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del Driver de Microsoft Access Database Engine[^2] que puede ser descargado desde https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920
 
+
+### Creación del polígono de selección de estaciones
+
 5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando p. ej. 1/20 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
 
 Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic derecho en la tabla de contenido y _Properties_, ir a la pestaña _Source_ y ampliar la información de _Extent_. Para esta capa los límites geográficos expresados en grados decimales son: norte 10.940833°, sur 8.662500°, oeste -74.315834° y este -72.808322°.  
@@ -183,6 +186,9 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioBufferStation.png)
 
+
+### Selección y exportación de estaciones dentro y al rededor de la zona de estudio
+
 7. Desde el menú _Map / Selection / Select By Location_, seleccione todas aquellas estaciones del catálogo nacional de estaciones y de otras entidades que se intersecan con la zona de estudio. Para la zona de estudio y la versión descargada de los catálogos, se han seleccionado 315 estaciones del CNE y 125 de otras entidades.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0SelectByLocation.png)
@@ -198,6 +204,9 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 9. Con la herramienta _Geoprocessing / Data Management Tools / General / Merge_, combine los archivos de formas _CNE_IDEAM_ZE.shp_ y _CNE_OE_ZE.shp_ en un único archivo y nombre como _[CNE_IDEAM_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)_. Asegúrese de marcar la casilla `Add source information to output` para obtener el campo de atributos `MERGE_SRC` que describe la capa fuente y de clic en la opción _Reset_ ubicada a la derecha de `Field Map` . La red de estaciones contendrá en total 440 estaciones (315 IDEAM + 125 otras entidades).
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNE_IDEAM_OE_ZEMerge.png)
+
+
+### Estudio de longitud hipotética de series
 
 10. Una vez obtenida la red de estaciones integrada sobre la zona de estudio, es necesario estudiar la longitud hipotética de las series a partir de las fechas de instalación y suspensión registradas en el catálogo. 
 
@@ -372,6 +381,11 @@ De clic derecho en la cabecera del campo `LYearSTW` y seleccione la opción _Sta
 Simbolice las estaciones por categoría a partir del campo `CATEGORIA` para las estaciones con longitudes hipotéticas dentro de la ventana de tiempo establecida y cree una gráfica de barras por categoría, podrá observar que el mayor número de estaciones corresponde a la categoría Pluviométricas.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0BarGraphCategoria.png)
+
+
+### Identificación de estaciones con datos de precipitación
+
+
 
 
 ### Referencias
