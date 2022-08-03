@@ -230,7 +230,7 @@ Configuración regional requerida: en el _Panel de Control / Region_, establezca
 
 Para realizar correctamente este cálculo, es necesario considerar la fecha final de los registros de las estaciones que se encuentran en operación, para este ejemplo, la fecha de corte corresponde al último día del año inmediatamente anterior correspondiente a 2021.12.31 considerando que para el análisis climatológico, únicamente utilizaremos datos de años hidrologicamente completos. La longitud de series en años usando Python a través de Calculate Field para el campo LYearS, puede ser realizada a través de Code Block utilizando las siguientes instrucciones:
 
-Pre-Logic Script Code para Python 2 y 3 sobre ArcGIS for Desktop y ArcGIS Pro: 
+Pre-Logic Script Code para Python 2 sobre ArcGIS for Desktop y Python 3 sobre ArcGIS Pro: 
 ```
 from datetime import datetime
 date_format = '%d/%m/%Y'
@@ -256,9 +256,9 @@ LYearS:
 len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 ```
 
-> La variable booleana `is_python3` es utilizada para definir la versión de Python a utilizar.
+> La variable booleana `is_python3` es utilizada para definir la versión de Python desde la cual se hace el llamado del Script.
 > 
-> Python 2 sobre ArcGIS for Desktop transfiere las variables FECHA_INST y FECHA_SUSP en formato unicode como texto, es por ello que deben ser convertidas a formato de fecha para poder calcular la diferencia en días. Cuando en la tabla de atributos las fechas son almacenadas como cadenas de texto, puede definir la variable `is_python3 = False` para realizar el cálculo de diferencias sobre Python 2 o 3.
+> Python 2 sobre ArcGIS for Desktop transfiere como texto las variables FECHA_INST y FECHA_SUSP en formato unicode, es por ello que deben ser convertidas a formato de fecha para poder calcular la diferencia en días. Cuando en la tabla de atributos las fechas son almacenadas como cadenas de texto, puede definir la variable `is_python3 = False` para realizar el cálculo de diferencias en Python 2 o 3.
 
 
 
@@ -269,10 +269,10 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                             | Autor                                      | Horas |
-|------------|:----------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.02 | xxx                                                                                     | [rcfdtools](https://github.com/rcfdtools)  |  xx   |
-| 2022.07.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos. | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| Versión    | Descripción                                                                                                                                                                                                                                                                                                                                  | Autor                                      | Horas |
+|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.07.02 | Definición de longitud de aferencia a partir de la menor dimensión horizontal o vertical, creación de buffer, selección de estaciones por localización, exportación de estaciones IDEAM y otras entidades, unión de estaciones en capa única, calculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
+| 2022.07.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos.                                                                                                                                                                                                                                                      | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 
