@@ -218,6 +218,8 @@ En la tabla de atributos dar clic en el botón _Field: Add_ y desde el modo de e
 
 > En ArcGIS for Desktop, desde las propiedades de la tabla de atributos seleccionar la opción _Add Field_.
 
+**Cálculo del campo LYears**
+
 El cálculo del campo `LYearS` puede ser realizado dando clic en la cabecera del campo y seleccionando la opción _Calculate Field_ utilizando la instrucción Python 3 `(!FECHA_INST!-!FECHA_SUSP!)/365`, sin embargo, no podrá ser aplicada a estaciones que se encuentran suspendidas debido a que el campo fecha de suspensión contendrá valores nulos, por lo que Python devolverá un error y no realizará el cálculo solicitado.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSError.png)
@@ -257,7 +259,11 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 ```
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPython.png)
+
+En ArcGIS for Desktop pudede dar clic derecho sobre la cabecera del campo `LYearS` y seleccionar la opción _Field Calculator_ o desde _ArcToolBox /  Data Management Tools / Fields / Calculate Field_.
+
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPython.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPythonA.png)
 
 > La variable booleana `is_python3` es utilizada para definir la versión de Python desde la cual se hace el llamado del Script.
 > 
@@ -266,6 +272,12 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 De clic derecho en la cabecera del campo `LYearS` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico de las longitudes hipotéticas en años para cada estación. Como puede observar, la media de las longitudes es de 24.8 años con una alta desviación estándar correspondiente a 22.6 años.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSStatistics.png)
+
+
+**Cálculo del campo LYearsTW**
+
+Para realizar el cálculo de las longitudes hipotéticas de las series a partir de una ventana de tiempo definida, xxxxxxxx
+
 
 
 
