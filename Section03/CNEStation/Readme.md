@@ -218,7 +218,7 @@ En la tabla de atributos dar clic en el botón _Field: Add_ y desde el modo de e
 
 > En ArcGIS for Desktop, desde las propiedades de la tabla de atributos seleccionar la opción _Add Field_.
 
-**Cálculo del campo LYears**
+**Cálculo independiente del campo LYears**
 
 El cálculo del campo `LYearS` puede ser realizado dando clic en la cabecera del campo y seleccionando la opción _Calculate Field_ utilizando la instrucción Python 3 `(!FECHA_INST!-!FECHA_SUSP!)/365`, sin embargo, no podrá ser aplicada a estaciones que se encuentran suspendidas debido a que el campo fecha de suspensión contendrá valores nulos, por lo que Python devolverá un error y no realizará el cálculo solicitado.
 
@@ -269,17 +269,107 @@ En ArcGIS for Desktop pudede dar clic derecho sobre la cabecera del campo `LYear
 > 
 > Python 2 sobre ArcGIS for Desktop transfiere como texto las variables FECHA_INST y FECHA_SUSP en formato unicode, es por ello que deben ser convertidas a formato de fecha para poder calcular la diferencia en días. Cuando en la tabla de atributos las fechas son almacenadas como cadenas de texto, puede definir la variable `is_python3 = False` para realizar el cálculo de diferencias en Python 2 o 3.
 
-De clic derecho en la cabecera del campo `LYearS` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico de las longitudes hipotéticas en años para cada estación. Como puede observar, la media de las longitudes es de 24.8 años con una alta desviación estándar correspondiente a 22.6 años.
+De clic derecho en la cabecera del campo `LYearS` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico y una gráfca con las longitudes hipotéticas en años para cada estación. Como puede observar, la media de las longitudes es de 24.8 años con una alta desviación estándar correspondiente a 22.6 años y múltiples estaciones tienen registros cortos de menos de 10 años.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSStatistics.png)
 
+Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras correspondientes a los valores de la media y superiores, obtendrá que 158 estaciones contienen longitudes hipotéticas iguales o superiores a 38.3 años dentro y al rededor de la zona de estudio.    
 
-**Cálculo del campo LYearsTW**
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSStatisticsA.png)
 
-Para realizar el cálculo de las longitudes hipotéticas de las series a partir de una ventana de tiempo definida, xxxxxxxx
+**Cálculo simultáneo de campos LYears y LYearsTW**
 
+Para realizar el cálculo de longitudes hipotéticas de series a partir de una ventana de tiempo definida, p. ej. del 01/01/1980 al 31/12/2021 correspondiente a 42.027397 años, utilizar el siguiente código.
 
+Pre-Logic Script Code para Python 2 sobre ArcGIS for Desktop: 
+```
+from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_start_date = '01/01/1980' # Time-window start. Use '' for set 01/01/1900
+tw_end_date = '31/12/2021' # Time-window end. Use '' for use the current date and prevent over-time wrong suspension dates
+if not tw_start_date: tw_start_date = '01/01/1900'
+if not tw_end_date: tw_end_date = str(datetime.today().date())
+def len_years_serie(installation_date, suspension_date):
+    if installation_date:
+        if datetime.strptime(installation_date, date_format) <= datetime.strptime(tw_start_date, date_format):
+            tw_installation_date = tw_start_date
+        else:
+            tw_installation_date = installation_date
+        if suspension_date:
+            if datetime.strptime(suspension_date, date_format) >= datetime.strptime(tw_end_date, date_format):
+                tw_suspension_date = tw_end_date
+            else:
+                tw_suspension_date = suspension_date
+            diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+            tw_diff_date = datetime.strptime(tw_suspension_date, date_format) - datetime.strptime(tw_installation_date, date_format)
+        else:
+            diff_date = datetime.strptime(tw_end_date, date_format) - datetime.strptime(installation_date, date_format)
+            tw_diff_date = datetime.strptime(tw_end_date, date_format) - datetime.strptime(tw_installation_date, date_format)
+        diff_date = float(diff_date.days)/365
+        tw_diff_date = float(tw_diff_date.days)/365
+        if diff_date < 0: diff_date = 0
+        if tw_diff_date < 0: tw_diff_date = 0
+    else:
+        diff_date = 0
+        tw_diff_date = 0
+    return diff_date, tw_diff_date # First value is complete length. Second value is time window length
+```
 
+Pre-Logic Script Code para Python 3 sobre ArcGIS Pro: 
+```
+from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_start_date = datetime.strptime('01/01/1980', date_format)# Time-window start. Use '' for set 01/01/1900
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time-window end. Use '' for use the current date and prevent over-time wrong suspension dates
+if not tw_start_date: tw_start_date = datetime.strptime('01/01/1900', date_format)
+if not tw_end_date: tw_end_date = str(datetime.today().date())
+def len_years_serie(installation_date, suspension_date):
+    if installation_date:
+        if installation_date <= tw_start_date:
+            tw_installation_date = tw_start_date
+        else:
+            tw_installation_date = installation_date
+        if suspension_date:
+            if suspension_date >= tw_end_date:
+                tw_suspension_date = tw_end_date
+            else:
+                tw_suspension_date = suspension_date
+            diff_date = suspension_date - installation_date
+            tw_diff_date = tw_suspension_date - tw_installation_date
+        else:
+            diff_date = tw_end_date - installation_date
+            tw_diff_date = tw_end_date - tw_installation_date
+        diff_date = float(diff_date.days)/365
+        tw_diff_date = float(tw_diff_date.days)/365
+        if diff_date < 0: diff_date = 0
+        if tw_diff_date < 0: tw_diff_date = 0
+    else:
+        diff_date = 0
+        tw_diff_date = 0
+    return diff_date, tw_diff_date # First value is complete length. Second value is time window length
+```
+
+LYearS:
+```
+len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[0]
+```
+
+LYearSTW:
+```
+len_years_serie( !FECHA_INST! , !FECHA_SUSP! )[1]
+```
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSTWPython.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPythonA.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSTWPython.png)
+
+Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a cero `LYearSTW > 0`.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWDefinitionQuery.png)
+
+De clic derecho en la cabecera del campo `LYearSTW` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico y una gráfica con las longitudes hipotéticas en años para cada estación dentro de la ventana de tiempo establecida. Como puede observar, la media de las longitudes hipotéticas es de 29.8 años con una desviación estándar de 16.1 años. Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras del histograma a partir de la media, obtendrá 174 de 263 estaciones con registros iguales o superiores a 29.5 años de registro y podrá observar simultáneamente su localización dentro y al rededor de la zona de estudio.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWStatistics.png)
 
 
 ### Referencias
