@@ -230,7 +230,7 @@ Configuración regional requerida: en el _Panel de Control / Region_, establezca
 
 Para realizar correctamente este cálculo, es necesario considerar la fecha final de los registros de las estaciones que se encuentran en operación, para este ejemplo, la fecha de corte corresponde al último día del año inmediatamente anterior correspondiente a 2021.12.31 considerando que para el análisis climatológico, únicamente utilizaremos datos de años hidrologicamente completos. La longitud de series en años usando Python a través de Calculate Field para el campo LYearS, puede ser realizada a través de Code Block utilizando las siguientes instrucciones:
 
-Pre-Logic Script Code para Python 2 y 3 sobre ArcGIS for Desktop y ArcGIS Pro con campos: 
+Pre-Logic Script Code para Python 2 y 3 sobre ArcGIS for Desktop y ArcGIS Pro: 
 ```
 from datetime import datetime
 date_format = '%d/%m/%Y'
@@ -257,6 +257,8 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 ```
 
 > La variable booleana `is_python3` es utilizada para definir la versión de Python a utilizar.
+> 
+> Python 2 sobre ArcGIS for Desktop transfiere las variables FECHA_INST y FECHA_SUSP en formato unicode como texto, es por ello que deben ser convertidas a formato de fecha para poder calcular la diferencia en días. Cuando en la tabla de atributos las fechas son almacenadas como cadenas de texto, puede definir la variable `is_python3 = False` para realizar el cálculo de diferencias sobre Python 2 o 3.
 
 
 
