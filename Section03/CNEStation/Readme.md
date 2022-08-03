@@ -356,7 +356,7 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[0]
 
 LYearSTW:
 ```
-len_years_serie( !FECHA_INST! , !FECHA_SUSP! )[1]
+len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[1]
 ```
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSTWPython.png)
