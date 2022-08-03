@@ -263,6 +263,9 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 > 
 > Python 2 sobre ArcGIS for Desktop transfiere como texto las variables FECHA_INST y FECHA_SUSP en formato unicode, es por ello que deben ser convertidas a formato de fecha para poder calcular la diferencia en días. Cuando en la tabla de atributos las fechas son almacenadas como cadenas de texto, puede definir la variable `is_python3 = False` para realizar el cálculo de diferencias en Python 2 o 3.
 
+De clic derecho en la cabecera del campo `LYearS` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico de las longitudes hipotéticas en años para cada estación. Como puede observar, la media de las longitudes es de 24.8 años con una alta desviación estándar correspondiente a 22.6 años.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSStatistics.png)
 
 
 
