@@ -545,18 +545,22 @@ Simboloce las estaciones por categorías y cree un gráfico de barras que repres
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
 
+Utilizando la herramienta Table to Table, exporte xxxxxxxxxxxxxxxx
+
 
 ### Solución de errores:lady_beetle:
 
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto.](https://github.com/rcfdtools/R.LTWB/discussions/13) 
 
 
-### Actividades complementarias a ser desarrolladas por el estudiante:student:
+### Actividades complementarias:student:
 
-| Actividad  | Alcance                                                                                                                                                                                                                                                                           |
-|:----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1      | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS.                                                                                                                                                                                                | 
-|     2      | Siguiendo el procedimiento presentado en esta clase, realice un análisis detallado de longitud hipotética de series para estaciones que realizan observaciones de brillo solar, radiación solar, humedad del aire cerca al suelo, parámetros relacionados con viento y nubosidad. | 
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf.
+
+| Actividad  | Alcance                                                                                                                                                                                                                                                                            |
+|:----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1      | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS.                                                                                                                                                                                                 | 
+|     2      | Siguiendo el procedimiento presentado en esta clase, realice un análisis detallado de longitud hipotética de series para estaciones que realizan observaciones de brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. | 
 
 
 ### Referencias
