@@ -461,7 +461,7 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL: `CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Sinóptica Principal', 'Sinóptica Secundaria')`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQuery.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQuery1.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 5 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
 

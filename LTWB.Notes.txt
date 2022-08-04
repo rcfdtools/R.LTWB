@@ -14,6 +14,8 @@ https://github.com/uecijg-ceh
 ✓✕
 
 Pending tasks
+    Recalculo de elevación en estaciones para los diferentes DEM
+    Evaluación de estaciones por pisos térmicos.
     Fix R.TeachingResearchGuide/wiki/License.
     Remove personal name from all the ArcGIS Pro screenshots.
     Check Visual Studio Code integration with GitHUB.
