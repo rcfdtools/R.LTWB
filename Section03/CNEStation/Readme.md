@@ -467,9 +467,9 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Sinóptica Principal', 'Sinóptica Secundaria')`
 
-| Series >= 10 años                                                                                                                                                                                                                                                                                                                      |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 42<br>Media: 23.8 años<br>Mínimo: 5 años<br>Máximo: 42 años!<br>Desv. Est.: 15.7 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAir5.png) |
+| Series >= 5 años                                                                                                                                                                                                                                                                                                                      |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 42<br>Media: 23.8 años<br>Mínimo: 5 años<br>Máximo: 42 años!<br>Desv. Est.: 15.7 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAir5.png) |
 
 Como observa, existen dentro y al rededor de la zona de estudio tan solo 42 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
@@ -488,9 +488,9 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal')`
 
-| Series >= 10 años                                                                                                                                                                                                                                                                                                                     |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 41<br>Media: 24.2 años<br>Mínimo: 5 años<br>Máximo: 42 años!<br>Desv. Est.: 15.6 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporation5.png) |
+| Series >= 5 años                                                                                                                                                                                                                                                                                                                   |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 41<br>Media: 24.2 años<br>Mínimo: 5 años<br>Máximo: 42 años!<br>Desv. Est.: 15.6 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporation5.png) |
 
 Como observa, existen dentro y al rededor de la zona de estudio tan solo 41 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
