@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="es"><Esri><CreaDate>20220802</CreaDate><CreaTime>20321300</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>FALSE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="203213">CalculateField "CNE_IDEAM_OE_ZE " LYearS 0 "Python 3" "from datetime import datetime
+tw_end_date = datetime.strptime('31/12/2021', '%d/%m/%Y') # Time window end
+
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    diff_date = suspension_date - installation_date
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="203302">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time window end
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    diff_date = suspension_date - installation_date
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="204029">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time window end
+is_python3 = True
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="204036">CalculateField "CNE_IDEAM_OE_ZE " LYearS 0 "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time window end
+is_python3 = True
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="204053">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time window end
+is_python3 = True
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="205422">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="205428">CalculateField "CNE_IDEAM_OE_ZE " LYearS 0 "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="205434">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="205709">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="205714">CalculateField "CNE_IDEAM_OE_ZE " LYearS 0 "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220802" Time="205717">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220803" Time="064344">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!) "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_end_date = '31/12/2021' # Time window end
+is_python3 = True # True for Python 3, False for Python2
+if is_python3:
+    tw_end_date = datetime.strptime(tw_end_date, date_format)
+def len_years_serie(installation_date, suspension_date):
+    if not installation_date:
+        installation_date = tw_end_date
+        suspension_date = tw_end_date
+    if not suspension_date:
+        suspension_date = tw_end_date
+    if is_python3:
+        diff_date = suspension_date - installation_date
+    else:
+        diff_date = datetime.strptime(suspension_date, date_format) - datetime.strptime(installation_date, date_format)
+    return float(diff_date.days)/365" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220803" Time="075327">CalculateField "CNE_IDEAM_OE_ZE " LYearSTW len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[1] "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_start_date = datetime.strptime('01/01/1980', date_format)# Time-window start. Use '' for set 01/01/1900
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time-window end. Use '' for use the current date and prevent over-time wrong suspension dates
+if not tw_start_date: tw_start_date = datetime.strptime('01/01/1900', date_format)
+if not tw_end_date: tw_end_date = str(datetime.today().date())
+def len_years_serie(installation_date, suspension_date):
+    if installation_date:
+        if installation_date &lt;= tw_start_date:
+            tw_installation_date = tw_start_date
+        else:
+            tw_installation_date = installation_date
+        if suspension_date:
+            if suspension_date &gt;= tw_end_date:
+                tw_suspension_date = tw_end_date
+            else:
+                tw_suspension_date = suspension_date
+            diff_date = suspension_date - installation_date
+            tw_diff_date = tw_suspension_date - tw_installation_date
+        else:
+            diff_date = tw_end_date - installation_date
+            tw_diff_date = tw_end_date - tw_installation_date
+        diff_date = float(diff_date.days)/365
+        tw_diff_date = float(tw_diff_date.days)/365
+        if diff_date &lt; 0: diff_date = 0
+        if tw_diff_date &lt; 0: tw_diff_date = 0
+    else:
+        diff_date = 0
+        tw_diff_date = 0
+    return diff_date, tw_diff_date # First value is complete length. Second value is time window length" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220803" Time="075939">CalculateField "CNE_IDEAM_OE_ZE " LYearSTW len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[1] "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_start_date = datetime.strptime('01/01/1980', date_format)# Time-window start. Use '' for set 01/01/1900
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time-window end. Use '' for use the current date and prevent over-time wrong suspension dates
+if not tw_start_date: tw_start_date = datetime.strptime('01/01/1900', date_format)
+if not tw_end_date: tw_end_date = str(datetime.today().date())
+def len_years_serie(installation_date, suspension_date):
+    if installation_date:
+        if installation_date &lt;= tw_start_date:
+            tw_installation_date = tw_start_date
+        else:
+            tw_installation_date = installation_date
+        if suspension_date:
+            if suspension_date &gt;= tw_end_date:
+                tw_suspension_date = tw_end_date
+            else:
+                tw_suspension_date = suspension_date
+            diff_date = suspension_date - installation_date
+            tw_diff_date = tw_suspension_date - tw_installation_date
+        else:
+            diff_date = tw_end_date - installation_date
+            tw_diff_date = tw_end_date - tw_installation_date
+        diff_date = float(diff_date.days)/365
+        tw_diff_date = float(tw_diff_date.days)/365
+        if diff_date &lt; 0: diff_date = 0
+        if tw_diff_date &lt; 0: tw_diff_date = 0
+    else:
+        diff_date = 0
+        tw_diff_date = 0
+    return diff_date, tw_diff_date # First value is complete length. Second value is time window length" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220803" Time="080043">CalculateField "CNE_IDEAM_OE_ZE " LYearS len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[0] "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_start_date = datetime.strptime('01/01/1980', date_format)# Time-window start. Use '' for set 01/01/1900
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time-window end. Use '' for use the current date and prevent over-time wrong suspension dates
+if not tw_start_date: tw_start_date = datetime.strptime('01/01/1900', date_format)
+if not tw_end_date: tw_end_date = str(datetime.today().date())
+def len_years_serie(installation_date, suspension_date):
+    if installation_date:
+        if installation_date &lt;= tw_start_date:
+            tw_installation_date = tw_start_date
+        else:
+            tw_installation_date = installation_date
+        if suspension_date:
+            if suspension_date &gt;= tw_end_date:
+                tw_suspension_date = tw_end_date
+            else:
+                tw_suspension_date = suspension_date
+            diff_date = suspension_date - installation_date
+            tw_diff_date = tw_suspension_date - tw_installation_date
+        else:
+            diff_date = tw_end_date - installation_date
+            tw_diff_date = tw_end_date - tw_installation_date
+        diff_date = float(diff_date.days)/365
+        tw_diff_date = float(tw_diff_date.days)/365
+        if diff_date &lt; 0: diff_date = 0
+        if tw_diff_date &lt; 0: tw_diff_date = 0
+    else:
+        diff_date = 0
+        tw_diff_date = 0
+    return diff_date, tw_diff_date # First value is complete length. Second value is time window length" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220803" Time="080138">CalculateField "CNE_IDEAM_OE_ZE " LYearSTW len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[1] "Python 3" "from datetime import datetime
+date_format = '%d/%m/%Y'
+tw_start_date = datetime.strptime('01/01/1980', date_format)# Time-window start. Use '' for set 01/01/1900
+tw_end_date = datetime.strptime('31/12/2021', date_format) # Time-window end. Use '' for use the current date and prevent over-time wrong suspension dates
+if not tw_start_date: tw_start_date = datetime.strptime('01/01/1900', date_format)
+if not tw_end_date: tw_end_date = str(datetime.today().date())
+def len_years_serie(installation_date, suspension_date):
+    if installation_date:
+        if installation_date &lt;= tw_start_date:
+            tw_installation_date = tw_start_date
+        else:
+            tw_installation_date = installation_date
+        if suspension_date:
+            if suspension_date &gt;= tw_end_date:
+                tw_suspension_date = tw_end_date
+            else:
+                tw_suspension_date = suspension_date
+            diff_date = suspension_date - installation_date
+            tw_diff_date = tw_suspension_date - tw_installation_date
+        else:
+            diff_date = tw_end_date - installation_date
+            tw_diff_date = tw_end_date - tw_installation_date
+        diff_date = float(diff_date.days)/365
+        tw_diff_date = float(tw_diff_date.days)/365
+        if diff_date &lt; 0: diff_date = 0
+        if tw_diff_date &lt; 0: tw_diff_date = 0
+    else:
+        diff_date = 0
+        tw_diff_date = 0
+    return diff_date, tw_diff_date # First value is complete length. Second value is time window length" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Conversion Tools.tbx\TableToTable" Date="20220804" Time="175141">TableToTable "CNE_IDEAM_OE_ZE " D:\R.LTWB\.datasets CNE_IDEAM_OE_ZE_Precipitacion.dbf # "DEPARTAMEN "DEPARTAMEN" true true false 254 Text 0 0,First,#,CNE_IDEAM_OE_ZE,DEPARTAMEN,0,254;MUNICIPIO "MUNICIPIO" true true false 254 Text 0 0,First,#,CNE_IDEAM_OE_ZE,MUNICIPIO,0,254;CODIGO "CODIGO" true true false 254 Text 0 0,First,#,CNE_IDEAM_OE_ZE,CODIGO,0,254;nombre "nombre" true true false 254 Text 0 0,First,#,CNE_IDEAM_OE_ZE,nombre,0,254;FECHA_INST "FECHA_INST" true true false 8 Date 0 0,First,#,CNE_IDEAM_OE_ZE,FECHA_INST,-1,-1;FECHA_SUSP "FECHA_SUSP" true true false 8 Date 0 0,First,#,CNE_IDEAM_OE_ZE,FECHA_SUSP,-1,-1;LYearS "LYearS" true true false 19 Double 0 0,First,#,CNE_IDEAM_OE_ZE,LYearS,-1,-1;LYearSTW "LYearSTW" true true false 19 Double 0 0,First,#,CNE_IDEAM_OE_ZE,LYearSTW,-1,-1" #</Process></lineage><itemProps><itemName Sync="TRUE">CNE_IDEAM_OE_ZE_Precipitacion</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize><itemLocation><linkage Sync="TRUE">file://\\ADMIN\D$\R.LTWB\.datasets\CNE_IDEAM_OE_ZE_Precipitacion.dbf</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation></itemProps></DataProperties><SyncDate>20220804</SyncDate><SyncTime>17514000</SyncTime><ModDate>20220804</ModDate><ModTime>17514000</ModTime></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 10 Version 10.0 (Build 22622) ; Esri ArcGIS 13.0.0.36056</envirDesc><dataLang><languageCode value="spa" Sync="TRUE"></languageCode><countryCode value="COL" Sync="TRUE"></countryCode></dataLang><idCitation><resTitle Sync="TRUE">CNE_IDEAM_OE_ZE_Precipitacion</resTitle><presForm><PresFormCd value="011" Sync="TRUE"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd value="003" Sync="TRUE"></SpatRepTypCd></spatRpType></dataIdInfo><mdLang><languageCode value="spa" Sync="TRUE"></languageCode><countryCode value="COL" Sync="TRUE"></countryCode></mdLang><mdChar><CharSetCd value="004" Sync="TRUE"></CharSetCd></mdChar><distInfo><distFormat><formatName Sync="TRUE">dBASE Table</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo><mdHrLv><ScopeCd value="007" Sync="TRUE"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><eainfo><detailed Name="CNE_IDEAM_OE_ZE_Precipitacion"><enttyp><enttypl Sync="TRUE">CNE_IDEAM_OE_ZE_Precipitacion</enttypl><enttypt Sync="TRUE">Table</enttypt><enttypc Sync="TRUE">0</enttypc></enttyp><attr><attrlabl Sync="TRUE">OID</attrlabl><attalias Sync="TRUE">OID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">DEPARTAMEN</attrlabl><attalias Sync="TRUE">DEPARTAMEN</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">MUNICIPIO</attrlabl><attalias Sync="TRUE">MUNICIPIO</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">CODIGO</attrlabl><attalias Sync="TRUE">CODIGO</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">nombre</attrlabl><attalias Sync="TRUE">nombre</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">254</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">FECHA_INST</attrlabl><attalias Sync="TRUE">FECHA_INST</attalias><attrtype Sync="TRUE">Date</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">FECHA_SUSP</attrlabl><attalias Sync="TRUE">FECHA_SUSP</attalias><attrtype Sync="TRUE">Date</attrtype><attwidth Sync="TRUE">8</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">LYearS</attrlabl><attalias Sync="TRUE">LYearS</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl Sync="TRUE">LYearSTW</attrlabl><attalias Sync="TRUE">LYearSTW</attalias><attrtype Sync="TRUE">Double</attrtype><attwidth Sync="TRUE">19</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed></eainfo><mdDateSt Sync="TRUE">20220804</mdDateSt></metadata>

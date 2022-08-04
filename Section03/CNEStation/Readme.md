@@ -465,6 +465,12 @@ Simboloce las estaciones por categorías y cree un gráfico de barras que repres
 
 Para el desarrollo del caso de estudio, utilizaremos las estaciones con registros de precipitación cuyas longitudes hipotéticas sean >= a 10 años que mayoritariamente se encuentran en el último rango de cortes naturales con valores superiores a 26.649315 años. En actividades posteriores analizaremos el traslapo entre las series reales y evaluaremos que estaciones requerirán ser completadas y/o extendidas.
 
+Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 139 estaciones obtenidas incluyendo únicamente los siguientes atributos: DEPARTAMENT, MUNICIPIO, CODIGO, nombre, FECHA_INST, FECHA_SUSP, LYearS y LYearSTW. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_Precipitacion.dbf. Esta tablas será utilizada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainTableToTable.png)
+
+
+
 
 ### Identificación de estaciones con datos de temperatura del aire cerca al suelo
 
@@ -486,13 +492,13 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrome
 
 Como observa, existen dentro y al rededor de la zona de estudio tan solo 42 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
-> Es importante considerar que existen estaciones sobre y alrededor de la zona de estudio, sin embargo, un factor importante a considerar es el rango de elevaciones de las estaciones debido a la alta correlación que existe entre estos dos parámetros.
+> Es importante considerar que existen estaciones sobre y alrededor de la zona de estudio, sin embargo, un factor importante a considerar es el rango de elevaciones de las estaciones debido a la alta correlación que existe entre estos la temperatura del aire y la elevación.
 
-Representando las estaciones por símbolos graduados, podrá observar que el rango disponible de elevaciones a partir del campo `altitud` registrado por el IDEAM corresponde a valores entre 18 y 2256 m.s.n.m. y en la Serranía del Perijá al este de la zona de estudio, las elevaciones de terreno son mayores. De las 42 estaciones disponibles, tan solo 1 se encuentra por encima de los 2000 m.s.n.m.
+Represente las estaciones por símbolos graduados a partir de la elevación, podrá observar que el rango disponible de elevaciones a partir del campo `altitud` registrado por el IDEAM, corresponde a valores entre 18 y 2256 m.s.n.m. y en la Serranía del Perijá al este de la zona de estudio, las elevaciones de terreno son mayores. De las 42 estaciones disponibles, tan solo 1 se encuentra por encima de los 2000 m.s.n.m.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryElevation.png)
 
-Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
+Simbolice las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryCategoryGraph.png)
 
