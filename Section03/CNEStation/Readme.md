@@ -533,7 +533,7 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Limnim
 
 Como observa, existen dentro y al rededor de la zona de estudio 65 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 51 tienen longitudes por encima de la media.
 
-Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
+Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que las estaciones limnimétricas y limnigráficas poseen registros extensos.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
 
