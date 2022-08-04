@@ -465,11 +465,9 @@ Simboloce las estaciones por categorías y cree un gráfico de barras que repres
 
 Para el desarrollo del caso de estudio, utilizaremos las estaciones con registros de precipitación cuyas longitudes hipotéticas sean >= a 10 años que mayoritariamente se encuentran en el último rango de cortes naturales con valores superiores a 26.649315 años. En actividades posteriores analizaremos el traslapo entre las series reales y evaluaremos que estaciones requerirán ser completadas y/o extendidas.
 
-Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 139 estaciones obtenidas incluyendo únicamente los siguientes atributos: DEPARTAMENT, MUNICIPIO, CODIGO, nombre, FECHA_INST, FECHA_SUSP, LYearS y LYearSTW. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_Precipitacion.dbf. Esta tablas será utilizada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
+Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 139 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_Precipitacion.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainTableToTable.png)
-
-
 
 
 ### Identificación de estaciones con datos de temperatura del aire cerca al suelo
@@ -502,6 +500,10 @@ Simbolice las estaciones por categorías y cree un gráfico de barras que repres
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryCategoryGraph.png)
 
+Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 42 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_TemperaturaAire.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirTableToTable.png)
+
 
 ### Identificación de estaciones con datos de evaporación potencial
 
@@ -526,6 +528,10 @@ Como observa, existen dentro y al rededor de la zona de estudio tan solo 41 esta
 Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporationQueryCategoryGraph.png)
+
+Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 41 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_Evaporacion.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporationTableToTable.png)
 
 
 ### Identificación de estaciones con datos de nivel de lámina de agua en ríos
@@ -552,7 +558,9 @@ Simboloce las estaciones por categorías y cree un gráfico de barras que repres
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
 
-Utilizando la herramienta Table to Table, exporte xxxxxxxxxxxxxxxx
+Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 65 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_NivelCaudal.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelTableToTable.png)
 
 
 ### Solución de errores:lady_beetle:
