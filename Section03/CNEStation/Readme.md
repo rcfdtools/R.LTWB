@@ -435,11 +435,13 @@ Las longitudes hipotéticas de registros en estaciones evaluadas previamente, co
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre las estaciones de las categorías indicadas y represente por símbolos graduados en 3 clases por cortes naturales a partir de las longitudes hipotéticas de series dentro de la ventana de tiempo calculadas en el campo `LYearSTW`. Visualice a escala 1:2,250,000 (en monitores FHD 1920 x 1080p). Podrá observar que para las categorías indicadas se obtienen 325 estaciones.
 
+Expresión SQL: `CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal', 'Sinóptica Secundaria')`
+
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainQuery1.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 10, 15, 20, 25, 30, 35 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
 
-Expresión SQL para series >= 10 años : `LYearSTW >= 10 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal')`
+Expresión SQL para series >= 10 años : `LYearSTW >= 10 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal', 'Sinóptica Secundaria')`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainQueryCategory.png)
 
@@ -448,11 +450,31 @@ Expresión SQL para series >= 10 años : `LYearSTW >= 10 And CATEGORIA IN ('Agro
 | Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 139<br>Media: 37.1 años<br>Mínimo: 10.3 años<br>Máximo: 42 años!<br>Desv. Est.: 9 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain10.png)    | Longitud hipotética en años >= 15<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 132<br>Media: 38.4 años<br>Mínimo: 15 años<br>Máximo: 42 años!<br>Desv. Est.: 7.1 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain15.png) | Longitud hipotética en años >= 20<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 124<br>Media: 39.8 años<br>Mínimo: 22.1 años<br>Máximo: 42 años!<br>Desv. Est.: 4.6 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain20.png)  |
 | Longitud hipotética en años >= 25<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 119<br>Media: 40.5 años<br>Mínimo: 26.6 años<br>Máximo: 42 años!<br>Desv. Est.: 3.17 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain25.png) | Longitud hipotética en años >= 30<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 116<br>Media: 40.8 años<br>Mínimo: 30.5 años<br>Máximo: 42 años!<br>Desv. Est.: 2.54 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain30.png)   | Longitud hipotética en años >= 35<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 109<br>Media: 41.3 años<br>Mínimo: 35.1 años<br>Máximo: 42 años!<br>Desv. Est.: 1.58 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain35.png) |
 
-Para el desarrollo del caso de estudio, utilizaremos las estaciones con datos de precipitación cuyas longitudes hipotéticas sean >= a 10 años. En actividades posteriores analizaremos el traslapo entre las series reales y evaluaremos que estaciones requerirán ser completadas y/o extendidas.
+Para el desarrollo del caso de estudio, utilizaremos las estaciones con datos de precipitación cuyas longitudes hipotéticas sean >= a 10 años que mayoritariamente se encuentran el el último rango de cortes naturales con valores superiores a 26.649315 años. En actividades posteriores analizaremos el traslapo entre las series reales y evaluaremos que estaciones requerirán ser completadas y/o extendidas.
 
 
 ### Identificación de estaciones con datos de temperatura
 
+En el caso específico de la temperatura del áire cerca a la superficie del suelo, los registros pueden ser obtenidos de estaciones Agrometeorológicas, Climatológicas Ordinarias, Climatológicas Principales, Sinópticas Principales y Sinópticas Secundarias.
+
+Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre las estaciones de las categorías indicadas y represente por símbolos graduados en 3 clases por cortes naturales a partir de las longitudes hipotéticas de series dentro de la ventana de tiempo calculadas en el campo `LYearSTW`. Visualice a escala 1:2,250,000 (en monitores FHD 1920 x 1080p). Podrá observar que para las categorías indicadas se obtienen 320 estaciones.
+
+Expresión SQL: `CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Sinóptica Principal', 'Sinóptica Secundaria')`
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQuery.png)
+
+Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 10 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
+
+Expresión SQL para series >= 10 años : `LYearSTW >= 10 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Sinóptica Principal', 'Sinóptica Secundaria')`
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryCategory.png)
+
+| Series >= 10 y 25 años                                                                                                                                                                                                                                                                                                                     |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 138<br>Media: 37.3 años<br>Mínimo: 10.3 años<br>Máximo: 42 años!<br>Desv. Est.: 8.9 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAir10.png) |
+
+
+Para el desarrollo del caso de estudio, utilizaremos las estaciones con datos de precipitación cuyas longitudes hipotéticas sean >= a 10 años que mayoritariamente se encuentran el el último rango de cortes naturales con valores superiores a 26.649315 años. En actividades posteriores analizaremos el traslapo entre las series reales y evaluaremos que estaciones requerirán ser completadas y/o extendidas.
 
 
 
