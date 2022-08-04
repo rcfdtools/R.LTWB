@@ -1,5 +1,5 @@
 ## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
-Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Select By Location` `Python`
+Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Merge` `Bar graph` `Select By Location` `Python` `LYearS` `LYearSTW` `Definition Query` `Normal distrinution` `Statistics`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStation.png)
 
@@ -11,7 +11,15 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 ### Objetivos
 
 * Descargar el catálogo nacional de estaciones - CNE del IDEAM Colombia.
+* Descargar el catálogo nacional de estaciones - CNE de otras entidades de Colombia.
+* Conocer las categorías de las estaciones hiroclimatológicas y que tipo de observaciones realizan.
+* Conocer los estados, tecnologías y niveles de aprobación de los datos en estaciones.
 * Identificar los atributos contenidos en el catálogo de objetos del CNE.
+* Crear el polígono aferente a la envolvente de la zona de estudio para la selección de las estaciones requeridas.
+* Seleccionar, exportar e integrar las estaciones del IDEAM y de otras entidades dentro del polígono aferente definido.
+* Calcular la longitud hipotética de las series a partir de la fecha de instalación y suspensión de las estaciones utilizando Python Script.
+* Calcular la longitud hipotética de las series dentro de una ventana de tiempo establecida a partir de la fecha de instalación y suspensión de las estaciones utilizando Python Script.
+* Identificar, representar, graficar y analizar las longitudes hipotéticas de series para estaciones que contienen datos de precipitación, temperatura del aire cerca del suelo, evaporación potencial y nivel de lámina y caudal en ríos.
 
 
 ### Requerimientos
@@ -26,7 +34,7 @@ El [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http
 
 ### Atributos que componen el catálogo nacional de estaciones
 
-Tomados directamente del archivo [CNE_IDEAM.xls](http://bart.ideam.gov.co/cneideam/CNE_IDEAM.xls) v20220731.
+Tomados directamente del catálogo de objetos del archivo [CNE_IDEAM.xls](http://bart.ideam.gov.co/cneideam/CNE_IDEAM.xls) v20220731.
 
 | Atributo             | Tipo        | Descripción                                                                                                                                                                                                                                    |
 |:---------------------|:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -538,9 +546,17 @@ Simboloce las estaciones por categorías y cree un gráfico de barras que repres
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
 
 
-### Solución de errores :lady_beetle:
+### Solución de errores:lady_beetle:
 
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto.](https://github.com/rcfdtools/R.LTWB/discussions/13) 
+
+
+### Actividades complementarias a ser desarrolladas por el estudiante :student:
+
+| Actividad  | Alcance                                                                                                                                                                                                                                                                           |
+|:----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1      | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS.                                                                                                                                                                                                | 
+|     2      | Siguiendo el procedimiento presentado en esta clase, realice un análisis detallado de longitud hipotética de series para estaciones que realizan observaciones de brillo solar, radiación solar, humedad del aire cerca al suelo, parámetros relacionados con viento y nubosidad. | 
 
 
 ### Referencias
