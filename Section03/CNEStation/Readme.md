@@ -546,12 +546,12 @@ Simboloce las estaciones por categorías y cree un gráfico de barras que repres
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
 
 
-### Solución de errores:lady_beetle:
+### :lady_beetle:Solución de errores
 
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto.](https://github.com/rcfdtools/R.LTWB/discussions/13) 
 
 
-### Actividades complementarias a ser desarrolladas por el estudiante :student:
+### :student:Actividades complementarias a ser desarrolladas por el estudiante
 
 | Actividad  | Alcance                                                                                                                                                                                                                                                                           |
 |:----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
