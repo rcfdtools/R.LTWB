@@ -41,5 +41,7 @@ Parámetros para descarga en DHIME
 General update.
 _Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas relacionadas con esta actividad._
 
+
+
 <div align="center">
 </div>

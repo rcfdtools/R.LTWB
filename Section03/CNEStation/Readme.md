@@ -1,5 +1,5 @@
 ## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
-Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Merge` `Bar graph` `Select By Location` `Python` `LYearS` `LYearSTW` `Definition Query` `Normal distrinution` `Statistics`
+Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Merge` `Bar graph` `Select By Location` `Python` `LYearS` `LYearSTW` `Definition Query` `Normal distribution` `Statistics`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStation.png)
 
@@ -587,7 +587,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                                                                                                                                                                                                                                                                  | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.05 | Diagrama de procesos geográficos.                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.08.05 | Diagrama de procesos geográficos.                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  | 0.75  |
 | 2022.08.04 | Gráficos de análisis de estaciones con registros de precipitación para longitudes hipotéticas mayores a 10, 15, 20, 25, 30, 35 años. Análisis de temperatura, evaporación potencial y altura de lámina de agua para longitudes >= 5 años. Documentación. Solución de errores. Actividades complementarias.                                   | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 | 2022.08.03 | Cálculo de longitud hipotética de series dentro de la ventana de tiempo definida sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. Gráficas de análisis genera de series. Documentación.  Tabla con tipos de observaciones que pueden ser realizadas por las estaciones dependiendo de su categoría.                                    | [rcfdtools](https://github.com/rcfdtools)  |  4.5  |
 | 2022.08.02 | Definición de longitud de aferencia a partir de la menor dimensión horizontal o vertical, creación de buffer, selección de estaciones por localización, exportación de estaciones IDEAM y otras entidades, unión de estaciones en capa única, cálculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
@@ -597,8 +597,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/StrDEM)  | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/999) | [Siguiente]() |
-|-----------------------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------------|---------------|
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/StrDEM)  | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/14) | [Siguiente]() |
+|-----------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|---------------|
 
 [^1]: http://dhime.ideam.gov.co/atencionciudadano/
 [^2]: https://pro.arcgis.com/en/pro-app/latest/help/data/excel/prepare-to-work-with-excel-in-arcgis-pro.htm
