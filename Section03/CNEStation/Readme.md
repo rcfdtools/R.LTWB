@@ -576,6 +576,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1      | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS.                                                                                                                                                                                                 | 
 |     2      | Siguiendo el procedimiento presentado en esta clase, realice un análisis detallado de longitud hipotética de series para estaciones que realizan observaciones de brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. | 
+|     3      | Investigue y documente otros portales desde los cuales se pueda descargar información hidroclimatológica de estaciones terrestres en Colombia o en cualquier lugar del mundo.                                                                                                      | 
 
 
 ### Referencias
