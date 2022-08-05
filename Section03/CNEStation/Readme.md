@@ -242,10 +242,10 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioBufferStation.png)
 
 El límite espacial del polígono buffer es:  
-* Norte: 11.016209°
-* Sur: 8.587125°
-* Este: -72.732946°
-* Oeste: -74.391210°
+* Norte (top): 11.016209°
+* Sur (bottom): 8.587125°
+* Este (right): -72.732946°
+* Oeste (left): -74.391210°
 
 > Tenga en cuenta que utiliza métodos de filtrado o selección a partir de los límites del polígono buffer, se seleccionarán todas aquellas estaciones que estén cerca de las esquinas redondeadas y hasta su límite ortogonal proyectado.
 
