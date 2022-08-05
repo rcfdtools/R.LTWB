@@ -241,6 +241,14 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioBufferStation.png)
 
+El límite espacial del polígono buffer es:  
+* Norte: 11.016209°
+* Sur: 8.587125°
+* Este: -72.732946°
+* Oeste: -74.391210°
+
+> Tenga en cuenta que utiliza métodos de filtrado o selección a partir de los límites del polígono buffer, se seleccionarán todas aquellas estaciones que estén cerca de las esquinas redondeadas y hasta su límite ortogonal proyectado.
+
 
 ### Selección, exportación e integración de estaciones dentro y al rededor de la zona de estudio
 
@@ -577,7 +585,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 ### Referencias
 
 * http://dhime.ideam.gov.co/atencionciudadano/
-* [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto.](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
+* [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 
 ### Control de versiones

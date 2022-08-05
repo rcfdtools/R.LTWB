@@ -33,10 +33,8 @@ Pending tasks
 	Stations density.
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 
-Parámetros para descarga en DHIME
-    Departamento
-    Municipio
-    Código
+Excel Avanzado: Graficar por fechas https://www.youtube.com/watch?v=dQ19rKbA05o
+Cómo crear un DIAGRAMA de GANTT en Excel [ Cronograma usando los gráficos ] https://www.youtube.com/watch?v=chR6kx4btDQ
 
 General update.
 _Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas relacionadas con esta actividad._
