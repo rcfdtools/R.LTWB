@@ -20,6 +20,7 @@ Eclude all Compiled Python Files
 *.pyc
 Eclude all TIFF world file
 *.tfw
+*.aux.xml
 
 # Large files exclusions
 .dem/ASTER/ASTGTMV003Mosaic.tif
