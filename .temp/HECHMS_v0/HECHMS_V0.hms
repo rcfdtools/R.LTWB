@@ -1,0 +1,15 @@
+Project: HECHMS_V0
+     Description: 
+     Version: 4.9
+     Filepath Separator: \
+     DSS File Name: HECHMS_V0.dss
+     Time Zone ID: America/Bogota
+End:
+
+Basin: Basin 1
+     Filename: Basin_1.basin
+     Description: 
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:33
+End:
+

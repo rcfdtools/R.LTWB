@@ -1,0 +1,8020 @@
+Basin: Basin 1
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Version: 4.9
+     Filepath Separator: \
+     Unit System: Metric
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Compute Local Flow At Junctions: No
+     Unregulated Output Required: No
+
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Subbasin: Subbasin11
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.043360122526646
+     Longitude Degrees: -72.9660996379341
+     Canvas X: 1121845.1325747299
+     Canvas Y: 1602624.4504080003
+     Area: 5.3465
+     Downstream: J98
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin12
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.02839923933571
+     Longitude Degrees: -72.96541076860011
+     Canvas X: 1121926.26212994
+     Canvas Y: 1600969.617811387
+     Area: 4.5116
+     Downstream: J98
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J98
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1120389.4138944007
+     Canvas Y: 1601862.7878625237
+     Downstream: R98
+End:
+
+Reach: R98
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1117917.1896944009
+     Canvas Y: 1600640.5646625236
+     From Canvas X: 1120389.4138944007
+     From Canvas Y: 1601862.7878625237
+     Downstream: J91
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin17
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.011183617850467
+     Longitude Degrees: -72.98114612281346
+     Canvas X: 1120207.2363603471
+     Canvas Y: 1599059.313256004
+     Area: 11.359
+     Downstream: J91
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1100
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:33
+     Latitude Degrees:  10.0335280182738
+     Longitude Degrees: -72.98935450322529
+     Canvas X: 1119019.540665008
+     Canvas Y: 1601909.6884427625
+     Area: 4.8935
+     Downstream: J91
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J91
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1117917.1896944009
+     Canvas Y: 1600640.5646625236
+     Downstream: R91
+End:
+
+Reach: R91
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1113667.1862944008
+     Canvas Y: 1598751.6742625237
+     From Canvas X: 1117917.1896944009
+     From Canvas Y: 1600640.5646625236
+     Downstream: J69
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1107
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.016610343701855
+     Longitude Degrees: -73.01544677008127
+     Canvas X: 1116444.097465172
+     Canvas Y: 1599647.3320731425
+     Area: 13.864
+     Downstream: J69
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin18
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.025601854115228
+     Longitude Degrees: -73.03671158996862
+     Canvas X: 1114109.2387727117
+     Canvas Y: 1600634.5761077986
+     Area: 4.1482
+     Downstream: J69
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J69
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1113667.1862944008
+     Canvas Y: 1598751.6742625237
+     Downstream: R69
+End:
+
+Reach: R69
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1113472.7416944008
+     Canvas Y: 1598696.1186625236
+     From Canvas X: 1113667.1862944008
+     From Canvas Y: 1598751.6742625237
+     Downstream: J68
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin111
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.996764358473316
+     Longitude Degrees: -73.01821392587388
+     Canvas X: 1116147.7284308155
+     Canvas Y: 1597450.8790820946
+     Area: 6.2616
+     Downstream: J68
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1129
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.008514624480481
+     Longitude Degrees: -73.0412789446209
+     Canvas X: 1113614.385517542
+     Canvas Y: 1598742.7210873174
+     Area: 0.0934
+     Downstream: J68
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J68
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1113472.7416944008
+     Canvas Y: 1598696.1186625236
+     Downstream: R68
+End:
+
+Reach: R68
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1109417.1828944008
+     Canvas Y: 1592362.7802625236
+     From Canvas X: 1113472.7416944008
+     From Canvas Y: 1598696.1186625236
+     Downstream: J52
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin117
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.972896984134676
+     Longitude Degrees: -73.01398068890148
+     Canvas X: 1116620.436537901
+     Canvas Y: 1594812.0271498542
+     Area: 22.414
+     Downstream: J74
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin122
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.946575511726985
+     Longitude Degrees: -73.01337902826673
+     Canvas X: 1116695.7730222705
+     Canvas Y: 1591900.4117923258
+     Area: 20.117
+     Downstream: J74
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J74
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1112722.7410944009
+     Canvas Y: 1591973.8910625237
+     Downstream: R74
+End:
+
+Reach: R74
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1109417.1828944008
+     Canvas Y: 1592362.7802625236
+     From Canvas X: 1112722.7410944009
+     From Canvas Y: 1591973.8910625237
+     Downstream: J52
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1130
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.978933329152248
+     Longitude Degrees: -73.05720418274159
+     Canvas X: 1111878.245975043
+     Canvas Y: 1595464.8632618606
+     Area: 25.120
+     Downstream: J52
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1124
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.939526299839098
+     Longitude Degrees: -73.05976466635377
+     Canvas X: 1111610.8497524317
+     Canvas Y: 1591104.6340395508
+     Area: 8.7732
+     Downstream: J52
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J52
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1109417.1828944008
+     Canvas Y: 1592362.7802625236
+     Downstream: R52
+End:
+
+Reach: R52
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1106556.0694944009
+     Canvas Y: 1588279.4436625235
+     From Canvas X: 1109417.1828944008
+     From Canvas Y: 1592362.7802625236
+     Downstream: J36
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin130
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.910313525202596
+     Longitude Degrees: -73.051315001898
+     Canvas X: 1112547.5530838072
+     Canvas Y: 1587875.85149565
+     Area: 36.610
+     Downstream: J36
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1146
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.939035770530769
+     Longitude Degrees: -73.0951555377803
+     Canvas X: 1107729.502610857
+     Canvas Y: 1591038.6751763253
+     Area: 20.513
+     Downstream: J36
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J36
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1106556.0694944009
+     Canvas Y: 1588279.4436625235
+     Downstream: R36
+End:
+
+Reach: R36
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1104944.9570944007
+     Canvas Y: 1586112.7752625237
+     From Canvas X: 1106556.0694944009
+     From Canvas Y: 1588279.4436625235
+     Downstream: J33
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin139
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.880907104429541
+     Longitude Degrees: -73.09209436009607
+     Canvas X: 1108084.2725673856
+     Canvas Y: 1584609.3223530715
+     Area: 21.025
+     Downstream: J33
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1162
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.905096975513446
+     Longitude Degrees: -73.1154376444513
+     Canvas X: 1105515.9324174242
+     Canvas Y: 1587277.7817936318
+     Area: 6.8904
+     Downstream: J33
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J33
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1104944.9570944007
+     Canvas Y: 1586112.7752625237
+     Downstream: R33
+End:
+
+Reach: R33
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1102472.7328944008
+     Canvas Y: 1585057.2188625236
+     From Canvas X: 1104944.9570944007
+     From Canvas Y: 1586112.7752625237
+     Downstream: J29
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin147
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.862619650476823
+     Longitude Degrees: -73.12007733197363
+     Canvas X: 1105020.5049018427
+     Canvas Y: 1582577.4042839366
+     Area: 13.066
+     Downstream: J29
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1165
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.890590025886993
+     Longitude Degrees: -73.13265471539435
+     Canvas X: 1103632.020262863
+     Canvas Y: 1585667.5973021686
+     Area: 5.7299
+     Downstream: J29
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J29
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1102472.7328944008
+     Canvas Y: 1585057.2188625236
+     Downstream: R29
+End:
+
+Reach: R29
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1099111.6190944007
+     Canvas Y: 1581862.7718625236
+     From Canvas X: 1102472.7328944008
+     From Canvas Y: 1585057.2188625236
+     Downstream: J25
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin154
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.84406230737318
+     Longitude Degrees: -73.1322664294804
+     Canvas X: 1103689.163855203
+     Canvas Y: 1580520.7679789742
+     Area: 13.059
+     Downstream: J88
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin155
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.828922719237227
+     Longitude Degrees: -73.14731993165218
+     Canvas X: 1102042.3623313385
+     Canvas Y: 1578841.3977257716
+     Area: 9.4252
+     Downstream: J88
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J88
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1100389.3978944009
+     Canvas Y: 1581057.2156625236
+     Downstream: R88
+End:
+
+Reach: R88
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1099111.6190944007
+     Canvas Y: 1581862.7718625236
+     From Canvas X: 1100389.3978944009
+     From Canvas Y: 1581057.2156625236
+     Downstream: J25
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1169
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.87068150093992
+     Longitude Degrees: -73.15560341732876
+     Canvas X: 1101120.8667477001
+     Canvas Y: 1583458.2611081537
+     Area: 8.6512
+     Downstream: J25
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1110
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.845219587677608
+     Longitude Degrees: -73.16838329438269
+     Canvas X: 1099726.6212288442
+     Canvas Y: 1580637.8232353635
+     Area: 4.1759
+     Downstream: J25
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J25
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1099111.6190944007
+     Canvas Y: 1581862.7718625236
+     Downstream: R25
+End:
+
+Reach: R25
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1089667.1670944009
+     Canvas Y: 1582029.4386625236
+     From Canvas X: 1099111.6190944007
+     From Canvas Y: 1581862.7718625236
+     Downstream: J21
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1173
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.85421588043348
+     Longitude Degrees: -73.21346756864614
+     Canvas X: 1094778.1599812189
+     Canvas Y: 1581619.8944197255
+     Area: 13.493
+     Downstream: J21
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin144
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.870386854046522
+     Longitude Degrees: -73.2566822723241
+     Canvas X: 1090033.1553043574
+     Canvas Y: 1583396.7590901265
+     Area: 7.0671
+     Downstream: J21
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J21
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1089667.1670944009
+     Canvas Y: 1582029.4386625236
+     Downstream: R21
+End:
+
+Reach: R21
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1083444.9398944008
+     Canvas Y: 1585001.6632625237
+     From Canvas X: 1089667.1670944009
+     From Canvas Y: 1582029.4386625236
+     Downstream: J16
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1177
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.869826985022382
+     Longitude Degrees: -73.29588300774789
+     Canvas X: 1085733.2656490412
+     Canvas Y: 1583324.51977903
+     Area: 10.615
+     Downstream: J16
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin138
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.885450598515117
+     Longitude Degrees: -73.29304304570668
+     Canvas X: 1086040.728611712
+     Canvas Y: 1585053.483447363
+     Area: 7.3904
+     Downstream: J16
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J16
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1083444.9398944008
+     Canvas Y: 1585001.6632625237
+     Downstream: R16
+End:
+
+Reach: R16
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1082167.1610944008
+     Canvas Y: 1586418.3310625236
+     From Canvas X: 1083444.9398944008
+     From Canvas Y: 1585001.6632625237
+     Downstream: J14
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin16
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.018622775145413
+     Longitude Degrees: -73.0656974787908
+     Canvas X: 1110933.3841828275
+     Canvas Y: 1599852.6090513167
+     Area: 5.9074
+     Downstream: J96
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin19
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.007380503623208
+     Longitude Degrees: -73.06088807713735
+     Canvas X: 1111464.5692223534
+     Canvas Y: 1598610.5645155052
+     Area: 4.0633
+     Downstream: J96
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J96
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1110083.8500944008
+     Canvas Y: 1598112.7848625237
+     Downstream: R96
+End:
+
+Reach: R96
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1106444.9582944007
+     Canvas Y: 1597835.0068625237
+     From Canvas X: 1110083.8500944008
+     From Canvas Y: 1598112.7848625237
+     Downstream: J82
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1102
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.999812762763979
+     Longitude Degrees: -73.08604716807172
+     Canvas X: 1108708.3207863166
+     Canvas Y: 1597764.992995367
+     Area: 9.3735
+     Downstream: J82
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin15
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.019234336999247
+     Longitude Degrees: -73.09801802431292
+     Canvas X: 1107389.274737972
+     Canvas Y: 1599909.5472386223
+     Area: 7.6574
+     Downstream: J82
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J82
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1106444.9582944007
+     Canvas Y: 1597835.0068625237
+     Downstream: R82
+End:
+
+Reach: R82
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1105611.6242944007
+     Canvas Y: 1596835.0060625237
+     From Canvas X: 1106444.9582944007
+     From Canvas Y: 1597835.0068625237
+     Downstream: J75
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin116
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.982417639502849
+     Longitude Degrees: -73.0971747014466
+     Canvas X: 1107493.846400932
+     Canvas Y: 1595837.0456116905
+     Area: 6.3449
+     Downstream: J75
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1116
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.999554323803634
+     Longitude Degrees: -73.1133420949782
+     Canvas X: 1105715.3918399273
+     Canvas Y: 1597727.533333226
+     Area: 2.5100
+     Downstream: J75
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J75
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1105611.6242944007
+     Canvas Y: 1596835.0060625237
+     Downstream: R75
+End:
+
+Reach: R75
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1103361.6224944007
+     Canvas Y: 1595418.3382625235
+     From Canvas X: 1105611.6242944007
+     From Canvas Y: 1596835.0060625237
+     Downstream: J67
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin118
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.969916337618523
+     Longitude Degrees: -73.11385032126573
+     Canvas X: 1105669.2246671254
+     Canvas Y: 1594448.7433301623
+     Area: 6.6142
+     Downstream: J67
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1123
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.99034376732792
+     Longitude Degrees: -73.1255432278157
+     Canvas X: 1104380.4270873144
+     Canvas Y: 1596704.75653792
+     Area: 5.5100
+     Downstream: J67
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J67
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1103361.6224944007
+     Canvas Y: 1595418.3382625235
+     Downstream: R67
+End:
+
+Reach: R67
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1099806.0640944007
+     Canvas Y: 1592501.6692625235
+     From Canvas X: 1103361.6224944007
+     From Canvas Y: 1595418.3382625235
+     Downstream: J57
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1131
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.970545588906923
+     Longitude Degrees: -73.15174825580175
+     Canvas X: 1101513.0081521587
+     Canvas Y: 1594506.4868705885
+     Area: 20.183
+     Downstream: J57
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin121
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.949329338822727
+     Longitude Degrees: -73.13375061846672
+     Canvas X: 1103493.3706896992
+     Canvas Y: 1592165.0847722585
+     Area: 9.2238
+     Downstream: J57
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J57
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1099806.0640944007
+     Canvas Y: 1592501.6692625235
+     Downstream: R57
+End:
+
+Reach: R57
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1097750.5068944008
+     Canvas Y: 1589335.0000625236
+     From Canvas X: 1099806.0640944007
+     From Canvas Y: 1592501.6692625235
+     Downstream: J51
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1141
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.942288723426884
+     Longitude Degrees: -73.17415347432038
+     Canvas X: 1099064.518770494
+     Canvas Y: 1591373.9075242819
+     Area: 9.6150
+     Downstream: J51
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin126
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.92962929247267
+     Longitude Degrees: -73.1572112171494
+     Canvas X: 1100926.4881917196
+     Canvas Y: 1589978.616415478
+     Area: 7.7083
+     Downstream: J51
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J51
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1097750.5068944008
+     Canvas Y: 1589335.0000625236
+     Downstream: R51
+End:
+
+Reach: R51
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1096139.3944944008
+     Canvas Y: 1588473.8882625236
+     From Canvas X: 1097750.5068944008
+     From Canvas Y: 1589335.0000625236
+     Downstream: J48
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin132
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.909482448340702
+     Longitude Degrees: -73.17707817163335
+     Canvas X: 1098753.594443886
+     Canvas Y: 1587743.9986601267
+     Area: 7.2770
+     Downstream: J48
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1147
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.923372744053022
+     Longitude Degrees: -73.19203874481171
+     Canvas X: 1097108.5963439473
+     Canvas Y: 1589276.1379811948
+     Area: 1.2770
+     Downstream: J48
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J48
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1096139.3944944008
+     Canvas Y: 1588473.8882625236
+     Downstream: R48
+End:
+
+Reach: R48
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1094861.6156944009
+     Canvas Y: 1588168.3324625236
+     From Canvas X: 1096139.3944944008
+     From Canvas Y: 1588473.8882625236
+     Downstream: J43
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin128
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.929522671334956
+     Longitude Degrees: -73.20251031052003
+     Canvas X: 1095958.313144918
+     Canvas Y: 1589953.3989274048
+     Area: 6.5648
+     Downstream: J43
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1150
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.91429054548834
+     Longitude Degrees: -73.20640212232239
+     Canvas X: 1095535.8932505655
+     Canvas Y: 1588267.3093724179
+     Area: 0.5069
+     Downstream: J43
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J43
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1094861.6156944009
+     Canvas Y: 1588168.3324625236
+     Downstream: R43
+End:
+
+Reach: R43
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1093611.6146944007
+     Canvas Y: 1587001.6648625236
+     From Canvas X: 1094861.6156944009
+     From Canvas Y: 1588168.3324625236
+     Downstream: J37
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin135
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.898623917718929
+     Longitude Degrees: -73.20002043865136
+     Canvas X: 1096240.4033075175
+     Canvas Y: 1586536.11495681
+     Area: 7.1181
+     Downstream: J94
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin137
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.88418408664136
+     Longitude Degrees: -73.20981677114447
+     Canvas X: 1095170.0460662446
+     Canvas Y: 1584935.9809982623
+     Area: 4.4066
+     Downstream: J94
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J94
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1094333.8374944008
+     Canvas Y: 1586501.6644625235
+     Downstream: R94
+End:
+
+Reach: R94
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1093611.6146944007
+     Canvas Y: 1587001.6648625236
+     From Canvas X: 1094333.8374944008
+     From Canvas Y: 1586501.6644625235
+     Downstream: J37
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1155
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.910007594122789
+     Longitude Degrees: -73.21102160913085
+     Canvas X: 1095030.461783161
+     Canvas Y: 1587792.2099914483
+     Area: 2.6358
+     Downstream: J37
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1104
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.901480619905033
+     Longitude Degrees: -73.21947527667528
+     Canvas X: 1094105.683891553
+     Canvas Y: 1586846.5639080743
+     Area: 0.6505
+     Downstream: J37
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J37
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1093611.6146944007
+     Canvas Y: 1587001.6648625236
+     Downstream: R37
+End:
+
+Reach: R37
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1089139.3888944008
+     Canvas Y: 1588029.4434625236
+     From Canvas X: 1093611.6146944007
+     From Canvas Y: 1587001.6648625236
+     Downstream: J30
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin127
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.895662567914068
+     Longitude Degrees: -73.1768052378944
+     Canvas X: 1098787.6637500867
+     Canvas Y: 1586215.323521739
+     Area: 40.169
+     Downstream: J41
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin143
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.87832192678611
+     Longitude Degrees: -73.24463755199191
+     Canvas X: 1091352.192874117
+     Canvas Y: 1584277.7897282522
+     Area: 10.089
+     Downstream: J41
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J41
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1089500.5002944008
+     Canvas Y: 1586307.2198625237
+     Downstream: R41
+End:
+
+Reach: R41
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1089139.3888944008
+     Canvas Y: 1588029.4434625236
+     From Canvas X: 1089500.5002944008
+     From Canvas Y: 1586307.2198625237
+     Downstream: J30
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1161
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.904781404275397
+     Longitude Degrees: -73.24475715189386
+     Canvas X: 1091331.765604579
+     Canvas Y: 1587204.654609464
+     Area: 4.4120
+     Downstream: J30
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1157
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.903611941994034
+     Longitude Degrees: -73.26391958320563
+     Canvas X: 1089230.3105681448
+     Canvas Y: 1587070.0969374012
+     Area: 1.0903
+     Downstream: J30
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J30
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1089139.3888944008
+     Canvas Y: 1588029.4434625236
+     Downstream: R30
+End:
+
+Reach: R30
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1085972.7196944007
+     Canvas Y: 1587723.8876625237
+     From Canvas X: 1089139.3888944008
+     From Canvas Y: 1588029.4434625236
+     Downstream: J26
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1168
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.912331021323359
+     Longitude Degrees: -73.27981892081108
+     Canvas X: 1087484.1321146754
+     Canvas Y: 1588030.3604355818
+     Area: 6.9421
+     Downstream: J26
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin133
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.899741391156736
+     Longitude Degrees: -73.28851466107889
+     Canvas X: 1086533.694973894
+     Canvas Y: 1586635.458913922
+     Area: 4.0262
+     Downstream: J26
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J26
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1085972.7196944007
+     Canvas Y: 1587723.8876625237
+     Downstream: R26
+End:
+
+Reach: R26
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1082167.1610944008
+     Canvas Y: 1586418.3310625236
+     From Canvas X: 1085972.7196944007
+     From Canvas Y: 1587723.8876625237
+     Downstream: J14
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1182
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.887475096141836
+     Longitude Degrees: -73.327895722743
+     Canvas X: 1082217.3448514298
+     Canvas Y: 1585268.6384863087
+     Area: 3.9900
+     Downstream: J14
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1172
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.899355160791064
+     Longitude Degrees: -73.30992683872788
+     Canvas X: 1084185.254524979
+     Canvas Y: 1586587.2504135533
+     Area: 3.9012
+     Downstream: J14
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J14
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1082167.1610944008
+     Canvas Y: 1586418.3310625236
+     Downstream: R14
+End:
+
+Reach: R14
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1074472.7104944007
+     Canvas Y: 1587390.5540625236
+     From Canvas X: 1082167.1610944008
+     From Canvas Y: 1586418.3310625236
+     Downstream: J10
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin125
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.925814935991815
+     Longitude Degrees: -73.30182688892567
+     Canvas X: 1085066.8544389985
+     Canvas Y: 1589516.2028596818
+     Area: 17.870
+     Downstream: J70
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin123
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.94114857909257
+     Longitude Degrees: -73.32489069498892
+     Canvas X: 1082533.5252785357
+     Canvas Y: 1591206.5392145535
+     Area: 11.935
+     Downstream: J70
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J70
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1080111.6038944009
+     Canvas Y: 1589223.8888625237
+     Downstream: R70
+End:
+
+Reach: R70
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1078306.0468944008
+     Canvas Y: 1588223.8880625237
+     From Canvas X: 1080111.6038944009
+     From Canvas Y: 1589223.8888625237
+     Downstream: J63
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin136
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.905880884664084
+     Longitude Degrees: -73.33820333091823
+     Canvas X: 1081082.2327263888
+     Canvas Y: 1587302.0869794497
+     Area: 9.2770
+     Downstream: J63
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1128
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.91976203958344
+     Longitude Degrees: -73.35665999675507
+     Canvas X: 1079054.5945856066
+     Canvas Y: 1588833.1199617716
+     Area: 4.7207
+     Downstream: J63
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J63
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1078306.0468944008
+     Canvas Y: 1588223.8880625237
+     Downstream: R63
+End:
+
+Reach: R63
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1074472.7104944007
+     Canvas Y: 1587390.5540625236
+     From Canvas X: 1078306.0468944008
+     From Canvas Y: 1588223.8880625237
+     Downstream: J10
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1184
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.899144704752455
+     Longitude Degrees: -73.36741835879428
+     Canvas X: 1077879.5435712517
+     Canvas Y: 1586549.990745811
+     Area: 7.3171
+     Downstream: J10
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1135
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.91400221796094
+     Longitude Degrees: -73.38258657529848
+     Canvas X: 1076212.4517566105
+     Canvas Y: 1588189.945476623
+     Area: 4.4329
+     Downstream: J10
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J10
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1074472.7104944007
+     Canvas Y: 1587390.5540625236
+     Downstream: R10
+End:
+
+Reach: R10
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1067250.4824944008
+     Canvas Y: 1584584.9962625236
+     From Canvas X: 1074472.7104944007
+     From Canvas Y: 1587390.5540625236
+     Downstream: J7
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin145
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.867797230247708
+     Longitude Degrees: -73.44795422879413
+     Canvas X: 1069052.9001829992
+     Canvas Y: 1583064.7888336238
+     Area: 13.013
+     Downstream: J7
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1188
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.89045059918844
+     Longitude Degrees: -73.43030169973876
+     Canvas X: 1070984.3468436303
+     Canvas Y: 1585574.2581598484
+     Area: 12.380
+     Downstream: J7
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J7
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1067250.4824944008
+     Canvas Y: 1584584.9962625236
+     Downstream: R7
+End:
+
+Reach: R7
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063944.9242944007
+     Canvas Y: 1578751.6582625236
+     From Canvas X: 1067250.4824944008
+     From Canvas Y: 1584584.9962625236
+     Downstream: J6
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin151
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.854910561059265
+     Longitude Degrees: -73.31333780223484
+     Canvas X: 1083822.3807856005
+     Canvas Y: 1581670.094465359
+     Area: 30.333
+     Downstream: J44
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin141
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.880301866101814
+     Longitude Degrees: -73.37967955478153
+     Canvas X: 1076539.0854623762
+     Canvas Y: 1584462.8530486878
+     Area: 26.011
+     Downstream: J44
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J44
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1072556.0422944007
+     Canvas Y: 1583501.6620625237
+     Downstream: R44
+End:
+
+Reach: R44
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1072000.4862944009
+     Canvas Y: 1582640.5502625236
+     From Canvas X: 1072556.0422944007
+     From Canvas Y: 1583501.6620625237
+     Downstream: J40
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin146
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.854010908673315
+     Longitude Degrees: -73.40263098140215
+     Canvas X: 1074027.4893115244
+     Canvas Y: 1581549.5259409985
+     Area: 4.3619
+     Downstream: J40
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1154
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.868606942113784
+     Longitude Degrees: -73.4198094319066
+     Canvas X: 1072139.925349847
+     Canvas Y: 1583160.2976530197
+     Area: 0.3897
+     Downstream: J40
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J40
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1072000.4862944009
+     Canvas Y: 1582640.5502625236
+     Downstream: R40
+End:
+
+Reach: R40
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1066056.0370944007
+     Canvas Y: 1579696.1034625235
+     From Canvas X: 1072000.4862944009
+     From Canvas Y: 1582640.5502625236
+     Downstream: J27
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1158
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.845412859173797
+     Longitude Degrees: -73.44675223231266
+     Canvas X: 1069189.4130467486
+     Canvas Y: 1580589.0310387465
+     Area: 6.4120
+     Downstream: J27
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin150
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.846481386976045
+     Longitude Degrees: -73.46674764808965
+     Canvas X: 1066995.7626404183
+     Canvas Y: 1580703.1601666585
+     Area: 5.0000
+     Downstream: J27
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J27
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1066056.0370944007
+     Canvas Y: 1579696.1034625235
+     Downstream: R27
+End:
+
+Reach: R27
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063944.9242944007
+     Canvas Y: 1578751.6582625236
+     From Canvas X: 1066056.0370944007
+     From Canvas Y: 1579696.1034625235
+     Downstream: J6
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1191
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.85567107961304
+     Longitude Degrees: -73.48398082621893
+     Canvas X: 1065103.5472674915
+     Canvas Y: 1581716.256636229
+     Area: 12.858
+     Downstream: J6
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1171
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.832246761932048
+     Longitude Degrees: -73.4878301343143
+     Canvas X: 1064685.8645141306
+     Canvas Y: 1579124.4929106524
+     Area: 1.9398
+     Downstream: J6
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J6
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063944.9242944007
+     Canvas Y: 1578751.6582625236
+     Downstream: R6
+End:
+
+Reach: R6
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061167.1442944007
+     Canvas Y: 1576418.3230625237
+     From Canvas X: 1063944.9242944007
+     From Canvas Y: 1578751.6582625236
+     Downstream: J5
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin152
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.82322276441313
+     Longitude Degrees: -73.38501307835514
+     Canvas X: 1075967.1250977523
+     Canvas Y: 1578147.8618074164
+     Area: 28.867
+     Downstream: J49
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin161
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.806605596549161
+     Longitude Degrees: -73.45334301624405
+     Canvas X: 1068474.4042825843
+     Canvas Y: 1576295.0954679537
+     Area: 7.1042
+     Downstream: J49
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J49
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1067861.5940944008
+     Canvas Y: 1578112.7688625236
+     Downstream: R49
+End:
+
+Reach: R49
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1066194.9260944007
+     Canvas Y: 1577862.7686625237
+     From Canvas X: 1067861.5940944008
+     From Canvas Y: 1578112.7688625236
+     Downstream: J42
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin148
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.84646194095214
+     Longitude Degrees: -73.37556157808156
+     Canvas X: 1076998.6299999396
+     Canvas Y: 1580720.6056067308
+     Area: 22.006
+     Downstream: J60
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin157
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.83037659688195
+     Longitude Degrees: -73.39634885821512
+     Canvas X: 1074721.9211500746
+     Canvas Y: 1578936.6326216029
+     Area: 9.9900
+     Downstream: J60
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J60
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1070667.1518944008
+     Canvas Y: 1580168.3260625235
+     Downstream: R60
+End:
+
+Reach: R60
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1066194.9260944007
+     Canvas Y: 1577862.7686625237
+     From Canvas X: 1070667.1518944008
+     From Canvas Y: 1580168.3260625235
+     Downstream: J42
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1138
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.830249479337526
+     Longitude Degrees: -73.44195802960961
+     Canvas X: 1069718.5023439017
+     Canvas Y: 1578912.7556202356
+     Area: 6.4846
+     Downstream: J42
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1149
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.82116310000387
+     Longitude Degrees: -73.46587119653327
+     Canvas X: 1067097.0123127808
+     Canvas Y: 1577902.8128274765
+     Area: 0.9907
+     Downstream: J42
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J42
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1066194.9260944007
+     Canvas Y: 1577862.7686625237
+     Downstream: R42
+End:
+
+Reach: R42
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061611.5890944009
+     Canvas Y: 1576446.1008625235
+     From Canvas X: 1066194.9260944007
+     From Canvas Y: 1577862.7686625237
+     Downstream: J32
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1156
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.816731824676234
+     Longitude Degrees: -73.48545236747526
+     Canvas X: 1064949.73308738
+     Canvas Y: 1577408.8107763606
+     Area: 8.3318
+     Downstream: J32
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin168
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.79770902822187
+     Longitude Degrees: -73.51253886961945
+     Canvas X: 1061981.7278005828
+     Canvas Y: 1575299.5531744275
+     Area: 6.7145
+     Downstream: J32
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J32
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061611.5890944009
+     Canvas Y: 1576446.1008625235
+     Downstream: R32
+End:
+
+Reach: R32
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061167.1442944007
+     Canvas Y: 1576418.3230625237
+     From Canvas X: 1061611.5890944009
+     From Canvas Y: 1576446.1008625235
+     Downstream: J5
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1192
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.817833510345393
+     Longitude Degrees: -73.50659637354585
+     Canvas X: 1062629.9101773766
+     Canvas Y: 1577526.6563075222
+     Area: 2.1983
+     Downstream: J5
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1166
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.808406385978037
+     Longitude Degrees: -73.51771114555419
+     Canvas X: 1061412.3011856829
+     Canvas Y: 1576481.8558768826
+     Area: 0.1505
+     Downstream: J5
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J5
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061167.1442944007
+     Canvas Y: 1576418.3230625237
+     Downstream: R5
+End:
+
+Reach: R5
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054750.4724944008
+     Canvas Y: 1572084.9862625236
+     From Canvas X: 1061167.1442944007
+     From Canvas Y: 1576418.3230625237
+     Downstream: J4
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin181
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.76011056130763
+     Longitude Degrees: -73.57629910572841
+     Canvas X: 1054992.7073105227
+     Canvas Y: 1571129.6986117947
+     Area: 5.6003
+     Downstream: J97
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin178
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.77343545033991
+     Longitude Degrees: -73.55533387930275
+     Canvas X: 1057290.7956684951
+     Canvas Y: 1572607.0552697307
+     Area: 4.3249
+     Downstream: J97
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J97
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1055028.2504944007
+     Canvas Y: 1571807.2082625236
+     Downstream: R97
+End:
+
+Reach: R97
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1054750.4724944008
+     Canvas Y: 1572084.9862625236
+     From Canvas X: 1055028.2504944007
+     From Canvas Y: 1571807.2082625236
+     Downstream: J4
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1193
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.793901617713232
+     Longitude Degrees: -73.5468875070655
+     Canvas X: 1058213.959292042
+     Canvas Y: 1574872.280681624
+     Area: 13.944
+     Downstream: J4
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1101
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.767110321561615
+     Longitude Degrees: -73.57704145252357
+     Canvas X: 1054910.1080387754
+     Canvas Y: 1571903.8229231487
+     Area: 0.2469
+     Downstream: J4
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J4
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054750.4724944008
+     Canvas Y: 1572084.9862625236
+     Downstream: R4
+End:
+
+Reach: R4
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052306.0260944008
+     Canvas Y: 1570473.8738625236
+     From Canvas X: 1054750.4724944008
+     From Canvas Y: 1572084.9862625236
+     Downstream: J3
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin14
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.012458463117575
+     Longitude Degrees: -73.14089671525453
+     Canvas X: 1102689.8685816457
+     Canvas Y: 1599146.3088862847
+     Area: 19.914
+     Downstream: J73
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin113
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.986345876000398
+     Longitude Degrees: -73.16723824921228
+     Canvas X: 1099809.5240152725
+     Canvas Y: 1596249.615012277
+     Area: 4.3549
+     Downstream: J73
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J73
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1098528.2852944008
+     Canvas Y: 1596918.3394625236
+     Downstream: R73
+End:
+
+Reach: R73
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1091917.1688944008
+     Canvas Y: 1594529.4486625236
+     From Canvas X: 1098528.2852944008
+     From Canvas Y: 1596918.3394625236
+     Downstream: J54
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1125
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.985828742043948
+     Longitude Degrees: -73.19882691709816
+     Canvas X: 1096345.770778096
+     Canvas Y: 1596183.031223908
+     Area: 24.689
+     Downstream: J54
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin114
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.99143761650708
+     Longitude Degrees: -73.22035620535578
+     Canvas X: 1093983.3446934912
+     Canvas Y: 1596797.279845932
+     Area: 6.7801
+     Downstream: J54
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J54
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1091917.1688944008
+     Canvas Y: 1594529.4486625236
+     Downstream: R54
+End:
+
+Reach: R54
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1088944.9442944007
+     Canvas Y: 1595918.3386625235
+     From Canvas X: 1091917.1688944008
+     From Canvas Y: 1594529.4486625236
+     Downstream: J45
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin13
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  10.025952272165272
+     Longitude Degrees: -73.19395800352389
+     Canvas X: 1096867.7849619668
+     Canvas Y: 1600622.9298726388
+     Area: 42.782
+     Downstream: J58
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin115
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.990120213554361
+     Longitude Degrees: -73.24247935981177
+     Canvas X: 1091557.8308665813
+     Canvas Y: 1596645.3344748837
+     Area: 5.6806
+     Downstream: J58
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J58
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089806.0560944008
+     Canvas Y: 1596723.8948625235
+     Downstream: R58
+End:
+
+Reach: R58
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1088944.9442944007
+     Canvas Y: 1595918.3386625235
+     From Canvas X: 1089806.0560944008
+     From Canvas Y: 1596723.8948625235
+     Downstream: J45
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1144
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.976092053394048
+     Longitude Degrees: -73.25380109869562
+     Canvas X: 1090320.2297733126
+     Canvas Y: 1595090.4431497462
+     Area: 5.1628
+     Downstream: J45
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1140
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.987196167890353
+     Longitude Degrees: -73.26257863528957
+     Canvas X: 1089354.6744174103
+     Canvas Y: 1596316.3760583797
+     Area: 0.7076
+     Downstream: J45
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J45
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1088944.9442944007
+     Canvas Y: 1595918.3386625235
+     Downstream: R45
+End:
+
+Reach: R45
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1087806.0544944007
+     Canvas Y: 1594612.7820625235
+     From Canvas X: 1088944.9442944007
+     From Canvas Y: 1595918.3386625235
+     Downstream: J39
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin119
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.961404225880193
+     Longitude Degrees: -73.25409012488817
+     Canvas X: 1090292.5780971744
+     Canvas Y: 1593465.6206985123
+     Area: 8.0147
+     Downstream: J39
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1153
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.977873543043097
+     Longitude Degrees: -73.27050513582684
+     Canvas X: 1088488.0196132415
+     Canvas Y: 1595282.9919384657
+     Area: 0.5324
+     Downstream: J39
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J39
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1087806.0544944007
+     Canvas Y: 1594612.7820625235
+     Downstream: R39
+End:
+
+Reach: R39
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1084583.8296944008
+     Canvas Y: 1593640.5590625235
+     From Canvas X: 1087806.0544944007
+     From Canvas Y: 1594612.7820625235
+     Downstream: J34
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin129
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.919777458045171
+     Longitude Degrees: -73.24189080871768
+     Canvas X: 1091641.9873877056
+     Canvas Y: 1588864.2803877015
+     Area: 10.995
+     Downstream: J90
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin124
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.937145645837393
+     Longitude Degrees: -73.22340218697022
+     Canvas X: 1093664.8336825161
+     Canvas Y: 1590790.6821255898
+     Area: 8.6867
+     Downstream: J90
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J90
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1091056.0570944007
+     Canvas Y: 1590779.4456625236
+     Downstream: R90
+End:
+
+Reach: R90
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1090389.3898944007
+     Canvas Y: 1591640.5574625237
+     From Canvas X: 1091056.0570944007
+     From Canvas Y: 1590779.4456625236
+     Downstream: J85
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin120
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.95276715571858
+     Longitude Degrees: -73.21778266975943
+     Canvas X: 1094276.6588885845
+     Canvas Y: 1592520.3116470983
+     Area: 11.595
+     Downstream: J85
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1108
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.93970010928763
+     Longitude Degrees: -73.2455932626965
+     Canvas X: 1091230.3945613953
+     Canvas Y: 1591067.0729804984
+     Area: 0.9444
+     Downstream: J85
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J85
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1090389.3898944007
+     Canvas Y: 1591640.5574625237
+     Downstream: R85
+End:
+
+Reach: R85
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084583.8296944008
+     Canvas Y: 1593640.5590625235
+     From Canvas X: 1090389.3898944007
+     From Canvas Y: 1591640.5574625237
+     Downstream: J34
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1113
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.946789912946366
+     Longitude Degrees: -73.28352939431849
+     Canvas X: 1087068.0634159555
+     Canvas Y: 1591841.1388084618
+     Area: 9.5000
+     Downstream: J34
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1159
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.966299938648842
+     Longitude Degrees: -73.2807286486566
+     Canvas X: 1087370.0237491159
+     Canvas Y: 1594000.027619637
+     Area: 8.2585
+     Downstream: J34
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J34
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1084583.8296944008
+     Canvas Y: 1593640.5590625235
+     Downstream: R34
+End:
+
+Reach: R34
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1083889.3846944007
+     Canvas Y: 1594390.5596625237
+     From Canvas X: 1084583.8296944008
+     From Canvas Y: 1593640.5590625235
+     Downstream: J31
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin110
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.995192074288749
+     Longitude Degrees: -73.27660428122113
+     Canvas X: 1087814.5614664396
+     Canvas Y: 1597197.1053689558
+     Area: 12.887
+     Downstream: J87
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin112
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.993764513107807
+     Longitude Degrees: -73.30134968420653
+     Canvas X: 1085101.5795052215
+     Canvas Y: 1597032.7105873614
+     Area: 7.6729
+     Downstream: J87
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J87
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1085417.1636944008
+     Canvas Y: 1595085.0046625237
+     Downstream: R87
+End:
+
+Reach: R87
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1083889.3846944007
+     Canvas Y: 1594390.5596625237
+     From Canvas X: 1085417.1636944008
+     From Canvas Y: 1595085.0046625237
+     Downstream: J31
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1111
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.970194076054726
+     Longitude Degrees: -73.30156030242019
+     Canvas X: 1085084.6060106023
+     Canvas Y: 1594425.3595041432
+     Area: 1.6574
+     Downstream: J31
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1164
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.965552808953213
+     Longitude Degrees: -73.30939227798441
+     Canvas X: 1084226.9527151326
+     Canvas Y: 1593909.9529094747
+     Area: 0.5062
+     Downstream: J31
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J31
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1083889.3846944007
+     Canvas Y: 1594390.5596625237
+     Downstream: R31
+End:
+
+Reach: R31
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1070722.7074944007
+     Canvas Y: 1588057.2212625237
+     From Canvas X: 1083889.3846944007
+     From Canvas Y: 1594390.5596625237
+     Downstream: J19
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1167
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.93770390393042
+     Longitude Degrees: -73.3654279346689
+     Canvas X: 1078088.7242342504
+     Canvas Y: 1590815.6945683067
+     Area: 18.701
+     Downstream: J19
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin134
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.900379362277254
+     Longitude Degrees: -73.42946070765416
+     Canvas X: 1071074.4541783554
+     Canvas Y: 1586672.6952445365
+     Area: 5.2847
+     Downstream: J19
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J19
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1070722.7074944007
+     Canvas Y: 1588057.2212625237
+     Downstream: R19
+End:
+
+Reach: R19
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063583.8128944007
+     Canvas Y: 1584140.5514625236
+     From Canvas X: 1070722.7074944007
+     From Canvas Y: 1588057.2212625237
+     Downstream: J13
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin131
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.910437305899448
+     Longitude Degrees: -73.47932506846415
+     Canvas X: 1065603.3957028133
+     Canvas Y: 1587775.0062130734
+     Area: 20.627
+     Downstream: J80
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin140
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.87424949000789
+     Longitude Degrees: -73.51505326995522
+     Canvas X: 1061691.6709569695
+     Canvas Y: 1583765.3648534229
+     Area: 4.8318
+     Downstream: J80
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J80
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1062972.7012944007
+     Canvas Y: 1585057.2188625236
+     Downstream: R80
+End:
+
+Reach: R80
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1063583.8128944007
+     Canvas Y: 1584140.5514625236
+     From Canvas X: 1062972.7012944007
+     From Canvas Y: 1585057.2188625236
+     Downstream: J13
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1179
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.902103598472866
+     Longitude Degrees: -73.46104749769424
+     Canvas X: 1067609.6962669145
+     Canvas Y: 1586856.8452211204
+     Area: 9.6458
+     Downstream: J13
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1118
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.880914371049778
+     Longitude Degrees: -73.50457042217091
+     Canvas X: 1062840.2317003922
+     Canvas Y: 1584504.5357448345
+     Area: 1.0818
+     Downstream: J13
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J13
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063583.8128944007
+     Canvas Y: 1584140.5514625236
+     Downstream: R13
+End:
+
+Reach: R13
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063556.0350944009
+     Canvas Y: 1584112.7736625236
+     From Canvas X: 1063583.8128944007
+     From Canvas Y: 1584140.5514625236
+     Downstream: J12
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin142
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.87210366064242
+     Longitude Degrees: -73.48484142027728
+     Canvas X: 1065005.9251432002
+     Canvas Y: 1583533.7378457596
+     Area: 4.2438
+     Downstream: J12
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1185
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.877737274277138
+     Longitude Degrees: -73.49754344943564
+     Canvas X: 1063611.5906944007
+     Canvas Y: 1584154.4403625233
+     Area: 0.0046
+     Downstream: J12
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J12
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1063556.0350944009
+     Canvas Y: 1584112.7736625236
+     Downstream: R12
+End:
+
+Reach: R12
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1057861.5860944008
+     Canvas Y: 1577029.4346625237
+     From Canvas X: 1063556.0350944009
+     From Canvas Y: 1584112.7736625236
+     Downstream: J9
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin149
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.836431011915112
+     Longitude Degrees: -73.54328566198429
+     Canvas X: 1058601.6484148437
+     Canvas Y: 1579577.128814557
+     Area: 17.014
+     Downstream: J9
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1186
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.839881206629373
+     Longitude Degrees: -73.51678428006457
+     Canvas X: 1061508.1720865357
+     Canvas Y: 1579963.5065120186
+     Area: 16.502
+     Downstream: J9
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J9
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1057861.5860944008
+     Canvas Y: 1577029.4346625237
+     Downstream: R9
+End:
+
+Reach: R9
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052639.3596944008
+     Canvas Y: 1572334.9864625237
+     From Canvas X: 1057861.5860944008
+     From Canvas Y: 1577029.4346625237
+     Downstream: J8
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin165
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.80340605726727
+     Longitude Degrees: -73.59867056119255
+     Canvas X: 1052531.2525202932
+     Canvas Y: 1575915.0543306808
+     Area: 14.191
+     Downstream: J83
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin177
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.761084987835398
+     Longitude Degrees: -73.62122793070274
+     Canvas X: 1050062.8605044081
+     Canvas Y: 1571230.4964712826
+     Area: 4.7029
+     Downstream: J83
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J83
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1051417.1364944007
+     Canvas Y: 1572890.5424625236
+     Downstream: R83
+End:
+
+Reach: R83
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1052361.5816944009
+     Canvas Y: 1572779.4312625236
+     From Canvas X: 1051417.1364944007
+     From Canvas Y: 1572890.5424625236
+     Downstream: J77
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin173
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.790219795507289
+     Longitude Degrees: -73.59353629272059
+     Canvas X: 1053096.6207462994
+     Canvas Y: 1574457.3254713549
+     Area: 4.2461
+     Downstream: J77
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1115
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.776947856702309
+     Longitude Degrees: -73.60538593713281
+     Canvas X: 1051798.6212727523
+     Canvas Y: 1572987.4730731864
+     Area: 0.4776
+     Downstream: J77
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J77
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1052361.5816944009
+     Canvas Y: 1572779.4312625236
+     Downstream: R77
+End:
+
+Reach: R77
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1052639.3596944008
+     Canvas Y: 1572334.9864625237
+     From Canvas X: 1052361.5816944009
+     From Canvas Y: 1572779.4312625236
+     Downstream: J8
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1189
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.793736066578223
+     Longitude Degrees: -73.57214551660869
+     Canvas X: 1055442.879998021
+     Canvas Y: 1574849.7073040644
+     Area: 10.614
+     Downstream: J8
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1121
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.772193428719335
+     Longitude Degrees: -73.60325082457976
+     Canvas X: 1052033.6181436095
+     Canvas Y: 1572461.914898376
+     Area: 0.4390
+     Downstream: J8
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J8
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052639.3596944008
+     Canvas Y: 1572334.9864625237
+     Downstream: R8
+End:
+
+Reach: R8
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052306.0260944008
+     Canvas Y: 1570473.8738625236
+     From Canvas X: 1052639.3596944008
+     From Canvas Y: 1572334.9864625237
+     Downstream: J3
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1190
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.762403883012027
+     Longitude Degrees: -73.6051342081091
+     Canvas X: 1051828.490800412
+     Canvas Y: 1571378.8054016656
+     Area: 2.6829
+     Downstream: J3
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1194
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.765258672817115
+     Longitude Degrees: -73.5914735489857
+     Canvas X: 1053326.9074855573
+     Canvas Y: 1571696.6993872682
+     Area: 1.8148
+     Downstream: J3
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J3
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052306.0260944008
+     Canvas Y: 1570473.8738625236
+     Downstream: R3
+End:
+
+Reach: R3
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052389.3594944007
+     Canvas Y: 1568751.6502625237
+     From Canvas X: 1052306.0260944008
+     From Canvas Y: 1570473.8738625236
+     Downstream: J2
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin195
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.716332427867036
+     Longitude Degrees: -73.62390513298362
+     Canvas X: 1049775.742229201
+     Canvas Y: 1566280.0497164996
+     Area: 6.8048
+     Downstream: J92
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin190
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.737135027458805
+     Longitude Degrees: -73.62455161827523
+     Canvas X: 1049701.7259497624
+     Canvas Y: 1568580.9150951814
+     Area: 6.6065
+     Downstream: J92
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J92
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1050917.1360944007
+     Canvas Y: 1567696.0938625236
+     Downstream: R92
+End:
+
+Reach: R92
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1052389.3594944007
+     Canvas Y: 1568751.6502625237
+     From Canvas X: 1050917.1360944007
+     From Canvas Y: 1567696.0938625236
+     Downstream: J2
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1195
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.747399196034289
+     Longitude Degrees: -73.60396659128021
+     Canvas X: 1051958.9277704232
+     Canvas Y: 1569719.3201416894
+     Area: 2.8480
+     Downstream: J2
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1106
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.733598715269284
+     Longitude Degrees: -73.60783635308958
+     Canvas X: 1051536.4293739987
+     Canvas Y: 1568192.2628418352
+     Area: 1.0741
+     Downstream: J2
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J2
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1052389.3594944007
+     Canvas Y: 1568751.6502625237
+     Downstream: R2
+End:
+
+Reach: R2
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054000.4718944007
+     Canvas Y: 1566946.0932625236
+     From Canvas X: 1052389.3594944007
+     From Canvas Y: 1568751.6502625237
+     Downstream: J1
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin184
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.745745603324824
+     Longitude Degrees: -73.21315280366758
+     Canvas X: 1094843.501907455
+     Canvas Y: 1569621.1761933896
+     Area: 18.040
+     Downstream: J71
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin187
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.751633861676037
+     Longitude Degrees: -73.22690650412358
+     Canvas X: 1093332.5995681442
+     Canvas Y: 1570268.6979115126
+     Area: 5.9599
+     Downstream: J71
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J71
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1090361.6120944007
+     Canvas Y: 1570223.8736625237
+     Downstream: R71
+End:
+
+Reach: R71
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089778.2782944008
+     Canvas Y: 1572001.6528625237
+     From Canvas X: 1090361.6120944007
+     From Canvas Y: 1570223.8736625237
+     Downstream: J65
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin179
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.7613576547683
+     Longitude Degrees: -73.24005763847435
+     Canvas X: 1091886.8231165165
+     Canvas Y: 1571340.7174563007
+     Area: 5.1080
+     Downstream: J65
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1127
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.75727509868983
+     Longitude Degrees: -73.25445555827432
+     Canvas X: 1090308.0484879862
+     Canvas Y: 1570885.2355529729
+     Area: 2.1412
+     Downstream: J65
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J65
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089778.2782944008
+     Canvas Y: 1572001.6528625237
+     Downstream: R65
+End:
+
+Reach: R65
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089417.1668944007
+     Canvas Y: 1572196.0974625237
+     From Canvas X: 1089778.2782944008
+     From Canvas Y: 1572001.6528625237
+     Downstream: J62
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin175
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.775059945264045
+     Longitude Degrees: -73.23916870205103
+     Canvas X: 1091980.6027289438
+     Canvas Y: 1572856.6721611426
+     Area: 8.7739
+     Downstream: J62
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1133
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.76728793333356
+     Longitude Degrees: -73.26157745437965
+     Canvas X: 1089523.8853260286
+     Canvas Y: 1571990.9293397325
+     Area: 0.1659
+     Downstream: J62
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J62
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089417.1668944007
+     Canvas Y: 1572196.0974625237
+     Downstream: R62
+End:
+
+Reach: R62
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1088472.7216944008
+     Canvas Y: 1572973.8758625237
+     From Canvas X: 1089417.1668944007
+     From Canvas Y: 1572196.0974625237
+     Downstream: J59
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin170
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.794523737051874
+     Longitude Degrees: -73.205157839147
+     Canvas X: 1095706.891164329
+     Canvas Y: 1575019.1873228399
+     Area: 16.520
+     Downstream: J79
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin164
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.809576383972267
+     Longitude Degrees: -73.22323678471172
+     Canvas X: 1093719.0540175384
+     Canvas Y: 1576679.198063415
+     Area: 6.2400
+     Downstream: J79
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J79
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1091639.3908944007
+     Canvas Y: 1575223.8776625236
+     Downstream: R79
+End:
+
+Reach: R79
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1091472.7240944006
+     Canvas Y: 1574973.8774625235
+     From Canvas X: 1091639.3908944007
+     From Canvas Y: 1575223.8776625236
+     Downstream: J76
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin172
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.777921916317252
+     Longitude Degrees: -73.21362303483245
+     Canvas X: 1094782.8010520875
+     Canvas Y: 1573180.3281570475
+     Area: 7.7647
+     Downstream: J76
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1119
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.795330075759342
+     Longitude Degrees: -73.24517879590246
+     Canvas X: 1091315.6089589624
+     Canvas Y: 1575097.2693741021
+     Area: 0.2199
+     Downstream: J76
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J76
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1091472.7240944006
+     Canvas Y: 1574973.8774625235
+     Downstream: R76
+End:
+
+Reach: R76
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1088472.7216944008
+     Canvas Y: 1572973.8758625237
+     From Canvas X: 1091472.7240944006
+     From Canvas Y: 1574973.8774625235
+     Downstream: J59
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1122
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.788120096281705
+     Longitude Degrees: -73.24844774810266
+     Canvas X: 1090958.9081395278
+     Canvas Y: 1574298.8355825425
+     Area: 3.2145
+     Downstream: J59
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1136
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.763939993132217
+     Longitude Degrees: -73.26659692476107
+     Canvas X: 1088974.0031673887
+     Canvas Y: 1571619.264511163
+     Area: 2.6937
+     Downstream: J59
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J59
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1088472.7216944008
+     Canvas Y: 1572973.8758625237
+     Downstream: R59
+End:
+
+Reach: R59
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1086167.1642944007
+     Canvas Y: 1574251.6546625237
+     From Canvas X: 1088472.7216944008
+     From Canvas Y: 1572973.8758625237
+     Downstream: J56
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin166
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.805529620528707
+     Longitude Degrees: -73.2648503204638
+     Canvas X: 1089154.564523747
+     Canvas Y: 1576220.2409776421
+     Area: 6.0633
+     Downstream: J93
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin171
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.790844698090371
+     Longitude Degrees: -73.26726491055015
+     Canvas X: 1088893.5588001206
+     Canvas Y: 1574595.2009416197
+     Area: 4.9907
+     Downstream: J93
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J93
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1087139.3872944007
+     Canvas Y: 1574529.4326625236
+     Downstream: R93
+End:
+
+Reach: R93
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1086167.1642944007
+     Canvas Y: 1574251.6546625237
+     From Canvas X: 1087139.3872944007
+     From Canvas Y: 1574529.4326625236
+     Downstream: J56
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1139
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.78213337677873
+     Longitude Degrees: -73.28085032241106
+     Canvas X: 1087405.2587908646
+     Canvas Y: 1573628.0303215368
+     Area: 1.7677
+     Downstream: J56
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1105
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.789184713796555
+     Longitude Degrees: -73.2862180088406
+     Canvas X: 1086814.476640207
+     Canvas Y: 1574406.6368653623
+     Area: 0.5980
+     Downstream: J56
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J56
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1086167.1642944007
+     Canvas Y: 1574251.6546625237
+     Downstream: R56
+End:
+
+Reach: R56
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1085861.6084944007
+     Canvas Y: 1574251.6546625237
+     From Canvas X: 1086167.1642944007
+     From Canvas Y: 1574251.6546625237
+     Downstream: J55
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin174
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.769697301052226
+     Longitude Degrees: -73.28187469137006
+     Canvas X: 1087296.1070792342
+     Canvas Y: 1572252.1308667457
+     Area: 4.9344
+     Downstream: J55
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1142
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.788263030608187
+     Longitude Degrees: -73.29335596737134
+     Canvas X: 1086031.5432708715
+     Canvas Y: 1574302.852960563
+     Area: 0.0787
+     Downstream: J55
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J55
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1085861.6084944007
+     Canvas Y: 1574251.6546625237
+     Downstream: R55
+End:
+
+Reach: R55
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084889.3854944007
+     Canvas Y: 1574362.7658625236
+     From Canvas X: 1085861.6084944007
+     From Canvas Y: 1574251.6546625237
+     Downstream: J53
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin159
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.823345949493433
+     Longitude Degrees: -73.17663077895781
+     Canvas X: 1098828.3392113084
+     Canvas Y: 1578215.7254857991
+     Area: 8.9445
+     Downstream: J89
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin162
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.810536839724545
+     Longitude Degrees: -73.18548224671758
+     Canvas X: 1097860.999185524
+     Canvas Y: 1576796.1986084878
+     Area: 8.7963
+     Downstream: J89
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J89
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1095111.6158944007
+     Canvas Y: 1578307.2134625237
+     Downstream: R89
+End:
+
+Reach: R89
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1093278.2810944007
+     Canvas Y: 1578529.4358625237
+     From Canvas X: 1095111.6158944007
+     From Canvas Y: 1578307.2134625237
+     Downstream: J78
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin153
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.83925631201096
+     Longitude Degrees: -73.2008548854685
+     Canvas X: 1096166.1000747324
+     Canvas Y: 1579968.67876027
+     Area: 8.7955
+     Downstream: J78
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1109
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.822385803792514
+     Longitude Degrees: -73.2161980735379
+     Canvas X: 1094487.6692646085
+     Canvas Y: 1578098.1256133216
+     Area: 1.9321
+     Downstream: J78
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J78
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1093278.2810944007
+     Canvas Y: 1578529.4358625237
+     Downstream: R78
+End:
+
+Reach: R78
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089639.3892944008
+     Canvas Y: 1577751.6574625236
+     From Canvas X: 1093278.2810944007
+     From Canvas Y: 1578529.4358625237
+     Downstream: J64
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin158
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.8324211740908
+     Longitude Degrees: -73.2397917013045
+     Canvas X: 1091896.446291427
+     Canvas Y: 1579201.6689498548
+     Area: 7.8866
+     Downstream: J64
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1120
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.819243284108664
+     Longitude Degrees: -73.24203209626387
+     Canvas X: 1091654.2888445158
+     Canvas Y: 1577743.3472599778
+     Area: 3.3349
+     Downstream: J64
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J64
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1089639.3892944008
+     Canvas Y: 1577751.6574625236
+     Downstream: R64
+End:
+
+Reach: R64
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084889.3854944007
+     Canvas Y: 1574362.7658625236
+     From Canvas X: 1089639.3892944008
+     From Canvas Y: 1577751.6574625236
+     Downstream: J53
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1134
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.803566863901233
+     Longitude Degrees: -73.28179153907152
+     Canvas X: 1087296.3861785352
+     Canvas Y: 1575998.6843034718
+     Area: 2.7624
+     Downstream: J53
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1143
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.788161951142044
+     Longitude Degrees: -73.29867590466257
+     Canvas X: 1085447.869424671
+     Canvas Y: 1574290.3183571182
+     Area: 0.2855
+     Downstream: J53
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J53
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084889.3854944007
+     Canvas Y: 1574362.7658625236
+     Downstream: R53
+End:
+
+Reach: R53
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084139.3848944008
+     Canvas Y: 1574279.4324625237
+     From Canvas X: 1084889.3854944007
+     From Canvas Y: 1574362.7658625236
+     Downstream: J50
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin160
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.815669106646139
+     Longitude Degrees: -73.28559205037199
+     Canvas X: 1086876.2621067255
+     Canvas Y: 1577336.4087220596
+     Area: 14.085
+     Downstream: J50
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1145
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.779526405813048
+     Longitude Degrees: -73.30407118809043
+     Canvas X: 1084858.094693497
+     Canvas Y: 1573333.7263461277
+     Area: 3.4167
+     Downstream: J50
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J50
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084139.3848944008
+     Canvas Y: 1574279.4324625237
+     Downstream: R50
+End:
+
+Reach: R50
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1082667.1614944008
+     Canvas Y: 1573112.7648625236
+     From Canvas X: 1084139.3848944008
+     From Canvas Y: 1574279.4324625237
+     Downstream: J47
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin196
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.743229693995453
+     Longitude Degrees: -73.27325873196263
+     Canvas X: 1088248.465067952
+     Canvas Y: 1569326.61645389
+     Area: 25.456
+     Downstream: J47
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1148
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.782868423155913
+     Longitude Degrees: -73.32068021126246
+     Canvas X: 1083034.8940459832
+     Canvas Y: 1573699.2712976565
+     Area: 2.4861
+     Downstream: J47
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J47
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1082667.1614944008
+     Canvas Y: 1573112.7648625236
+     Downstream: R47
+End:
+
+Reach: R47
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1080500.4930944007
+     Canvas Y: 1573390.5428625236
+     From Canvas X: 1082667.1614944008
+     From Canvas Y: 1573112.7648625236
+     Downstream: J38
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin198
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.7177654027858
+     Longitude Degrees: -73.26105773822279
+     Canvas X: 1089594.1226054274
+     Canvas Y: 1566513.0463996085
+     Area: 12.330
+     Downstream: J86
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin197
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.713278394442758
+     Longitude Degrees: -73.2819847667328
+     Canvas X: 1087298.6915558982
+     Canvas Y: 1566011.2578267152
+     Area: 10.253
+     Downstream: J86
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J86
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1086306.0532944007
+     Canvas Y: 1568307.2054625237
+     Downstream: R86
+End:
+
+Reach: R86
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084389.3850944007
+     Canvas Y: 1570112.7624625235
+     From Canvas X: 1086306.0532944007
+     From Canvas Y: 1568307.2054625237
+     Downstream: J72
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin188
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.735958365259094
+     Longitude Degrees: -73.31339049727589
+     Canvas X: 1083846.4566365243
+     Canvas Y: 1568512.094664265
+     Area: 4.6049
+     Downstream: J72
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1112
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.740680038368566
+     Longitude Degrees: -73.2978389796296
+     Canvas X: 1085551.8183887599
+     Canvas Y: 1569038.2743750482
+     Area: 3.4066
+     Downstream: J72
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J72
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1084389.3850944007
+     Canvas Y: 1570112.7624625235
+     Downstream: R72
+End:
+
+Reach: R72
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1080500.4930944007
+     Canvas Y: 1573390.5428625236
+     From Canvas X: 1084389.3850944007
+     From Canvas Y: 1570112.7624625235
+     Downstream: J38
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1126
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.759874670451895
+     Longitude Degrees: -73.3273671561772
+     Canvas X: 1082306.851903611
+     Canvas Y: 1571154.171819073
+     Area: 5.4799
+     Downstream: J38
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1151
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.778186228210616
+     Longitude Degrees: -73.3345804057892
+     Canvas X: 1081510.901652543
+     Canvas Y: 1573177.9578040235
+     Area: 3.0046
+     Downstream: J38
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J38
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1080500.4930944007
+     Canvas Y: 1573390.5428625236
+     Downstream: R38
+End:
+
+Reach: R38
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1079306.0476944007
+     Canvas Y: 1573362.7650625235
+     From Canvas X: 1080500.4930944007
+     From Canvas Y: 1573390.5428625236
+     Downstream: J35
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin189
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.747772754654877
+     Longitude Degrees: -73.33655926456842
+     Canvas X: 1081301.155828983
+     Canvas Y: 1569813.2942779884
+     Area: 10.087
+     Downstream: J35
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1160
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.78461859139223
+     Longitude Degrees: -73.34851869861211
+     Canvas X: 1079980.0333205815
+     Canvas Y: 1573886.1360970717
+     Area: 1.8627
+     Downstream: J35
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J35
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1079306.0476944007
+     Canvas Y: 1573362.7650625235
+     Downstream: R35
+End:
+
+Reach: R35
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1075028.2664944008
+     Canvas Y: 1573168.3204625237
+     From Canvas X: 1079306.0476944007
+     From Canvas Y: 1573362.7650625235
+     Downstream: J28
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin185
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.756044705607312
+     Longitude Degrees: -73.35457182615663
+     Canvas X: 1079322.657350745
+     Canvas Y: 1570724.016621664
+     Area: 7.0664
+     Downstream: J95
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin182
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.749517213094906
+     Longitude Degrees: -73.36741768748989
+     Canvas X: 1077914.6187850698
+     Canvas Y: 1569998.99606727
+     Area: 4.4236
+     Downstream: J95
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J95
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1077667.1574944009
+     Canvas Y: 1571834.9860625237
+     Downstream: R95
+End:
+
+Reach: R95
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1075028.2664944008
+     Canvas Y: 1573168.3204625237
+     From Canvas X: 1077667.1574944009
+     From Canvas Y: 1571834.9860625237
+     Downstream: J28
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1163
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.780629789966888
+     Longitude Degrees: -73.3728592687098
+     Canvas X: 1077310.3337926497
+     Canvas Y: 1573439.239263369
+     Area: 3.8341
+     Downstream: J28
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1103
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.773048516034601
+     Longitude Degrees: -73.3824123317655
+     Canvas X: 1076263.9006507427
+     Canvas Y: 1572598.4689537394
+     Area: 3.0046
+     Downstream: J28
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J28
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1075028.2664944008
+     Canvas Y: 1573168.3204625237
+     Downstream: R28
+End:
+
+Reach: R28
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1067778.2606944009
+     Canvas Y: 1573279.4316625237
+     From Canvas X: 1075028.2664944008
+     From Canvas Y: 1573168.3204625237
+     Downstream: J24
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin156
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.830382640139431
+     Longitude Degrees: -73.31222312298931
+     Canvas X: 1083950.8528789873
+     Canvas Y: 1578957.1912874142
+     Area: 12.655
+     Downstream: J84
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin163
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.809831320533114
+     Longitude Degrees: -73.3187237209564
+     Canvas X: 1083242.8401751183
+     Canvas Y: 1576682.2715753922
+     Area: 9.3796
+     Downstream: J84
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J84
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1080583.8264944009
+     Canvas Y: 1577084.9902625235
+     Downstream: R84
+End:
+
+Reach: R84
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1068583.8168944009
+     Canvas Y: 1574029.4322625236
+     From Canvas X: 1080583.8264944009
+     From Canvas Y: 1577084.9902625235
+     Downstream: J46
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin167
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.793691926767876
+     Longitude Degrees: -73.37446724753566
+     Canvas X: 1077130.8925500023
+     Canvas Y: 1574883.7297560931
+     Area: 20.134
+     Downstream: J46
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1114
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.802626196289506
+     Longitude Degrees: -73.39506465939094
+     Canvas X: 1074869.0355371393
+     Canvas Y: 1575867.336074326
+     Area: 11.962
+     Downstream: J46
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J46
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1068583.8168944009
+     Canvas Y: 1574029.4322625236
+     Downstream: R46
+End:
+
+Reach: R46
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1067778.2606944009
+     Canvas Y: 1573279.4316625237
+     From Canvas X: 1068583.8168944009
+     From Canvas Y: 1574029.4322625236
+     Downstream: J24
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1170
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.779607119611693
+     Longitude Degrees: -73.43050748594875
+     Canvas X: 1070985.4259919154
+     Canvas Y: 1573313.4440238767
+     Area: 8.2577
+     Downstream: J24
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1152
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.783193007320897
+     Longitude Degrees: -73.45579231206959
+     Canvas X: 1068210.4735158035
+     Canvas Y: 1573704.8705993649
+     Area: 0.4398
+     Downstream: J24
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J24
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1067778.2606944009
+     Canvas Y: 1573279.4316625237
+     Downstream: R24
+End:
+
+Reach: R24
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1066639.3708944009
+     Canvas Y: 1572473.8754625237
+     From Canvas X: 1067778.2606944009
+     From Canvas Y: 1573279.4316625237
+     Downstream: J23
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin192
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.734436393163646
+     Longitude Degrees: -73.39342602887317
+     Canvas X: 1075064.0938550795
+     Canvas Y: 1568324.9727979416
+     Area: 36.322
+     Downstream: J66
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin180
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.763222870278822
+     Longitude Degrees: -73.41666595710473
+     Canvas X: 1072507.655477007
+     Canvas Y: 1571504.0732825105
+     Area: 4.3472
+     Downstream: J66
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J66
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1070806.0408944008
+     Canvas Y: 1571501.6524625237
+     Downstream: R66
+End:
+
+Reach: R66
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1070167.1514944008
+     Canvas Y: 1571834.9860625237
+     From Canvas X: 1070806.0408944008
+     From Canvas Y: 1571501.6524625237
+     Downstream: J61
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin176
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.764877633661115
+     Longitude Degrees: -73.40131801131895
+     Canvas X: 1074191.3408240296
+     Canvas Y: 1571690.4446998385
+     Area: 10.318
+     Downstream: J61
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1132
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.764065427943788
+     Longitude Degrees: -73.43523237358744
+     Canvas X: 1070470.286822202
+     Canvas Y: 1571593.3422546408
+     Area: 0.3719
+     Downstream: J61
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J61
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1070167.1514944008
+     Canvas Y: 1571834.9860625237
+     Downstream: R61
+End:
+
+Reach: R61
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1066639.3708944009
+     Canvas Y: 1572473.8754625237
+     From Canvas X: 1070167.1514944008
+     From Canvas Y: 1571834.9860625237
+     Downstream: J23
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1137
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.761250884855562
+     Longitude Degrees: -73.45359033539052
+     Canvas X: 1068456.554786166
+     Canvas Y: 1571278.2439907885
+     Area: 6.3249
+     Downstream: J23
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1174
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.775428752685775
+     Longitude Degrees: -73.46403520231962
+     Canvas X: 1067307.6477351296
+     Canvas Y: 1572844.3917633519
+     Area: 0.9321
+     Downstream: J23
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J23
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1066639.3708944009
+     Canvas Y: 1572473.8754625237
+     Downstream: R23
+End:
+
+Reach: R23
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1065167.1474944009
+     Canvas Y: 1570418.3182625237
+     From Canvas X: 1066639.3708944009
+     From Canvas Y: 1572473.8754625237
+     Downstream: J22
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin186
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.741922243189528
+     Longitude Degrees: -73.46335480321365
+     Canvas X: 1067389.0349231493
+     Canvas Y: 1569138.298390536
+     Area: 13.055
+     Downstream: J22
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1175
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.76462946199982
+     Longitude Degrees: -73.47879512885024
+     Canvas X: 1065690.3122689973
+     Canvas Y: 1571646.9520232857
+     Area: 5.5100
+     Downstream: J22
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J22
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1065167.1474944009
+     Canvas Y: 1570418.3182625237
+     Downstream: R22
+End:
+
+Reach: R22
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1062806.0344944007
+     Canvas Y: 1569223.8728625237
+     From Canvas X: 1065167.1474944009
+     From Canvas Y: 1570418.3182625237
+     Downstream: J20
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin193
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.722487460366516
+     Longitude Degrees: -73.47771166080273
+     Canvas X: 1065817.4524154789
+     Canvas Y: 1566985.758664867
+     Area: 22.292
+     Downstream: J20
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1176
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.749852762269049
+     Longitude Degrees: -73.49599755749153
+     Canvas X: 1063805.623921301
+     Canvas Y: 1570009.180739023
+     Area: 6.3565
+     Downstream: J20
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J20
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1062806.0344944007
+     Canvas Y: 1569223.8728625237
+     Downstream: R20
+End:
+
+Reach: R20
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061167.1442944007
+     Canvas Y: 1570723.8740625237
+     From Canvas X: 1062806.0344944007
+     From Canvas Y: 1569223.8728625237
+     Downstream: J18
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin169
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.782983310169511
+     Longitude Degrees: -73.49618093823138
+     Canvas X: 1063779.194608934
+     Canvas Y: 1573673.7702423513
+     Area: 27.332
+     Downstream: J18
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1178
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.748926914989807
+     Longitude Degrees: -73.51221700371107
+     Canvas X: 1062026.07744342
+     Canvas Y: 1569903.7553007065
+     Area: 2.2431
+     Downstream: J18
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J18
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1061167.1442944007
+     Canvas Y: 1570723.8740625237
+     Downstream: R18
+End:
+
+Reach: R18
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1059472.6984944008
+     Canvas Y: 1570334.9848625236
+     From Canvas X: 1061167.1442944007
+     From Canvas Y: 1570723.8740625237
+     Downstream: J17
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin183
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.765693720901915
+     Longitude Degrees: -73.5360714376737
+     Canvas X: 1059405.6236108071
+     Canvas Y: 1571754.0653628616
+     Area: 4.7261
+     Downstream: J17
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1180
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.751842774560147
+     Longitude Degrees: -73.52626711539327
+     Canvas X: 1060483.8693232753
+     Canvas Y: 1570223.737718968
+     Area: 0.9460
+     Downstream: J17
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J17
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1059472.6984944008
+     Canvas Y: 1570334.9848625236
+     Downstream: R17
+End:
+
+Reach: R17
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1057056.0298944009
+     Canvas Y: 1568446.0944625237
+     From Canvas X: 1059472.6984944008
+     From Canvas Y: 1570334.9848625236
+     Downstream: J15
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin199
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.711541644135355
+     Longitude Degrees: -73.52739166013353
+     Canvas X: 1060367.7121030497
+     Canvas Y: 1565765.7946155188
+     Area: 14.630
+     Downstream: J81
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin191
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Latitude Degrees:  9.732011175981775
+     Longitude Degrees: -73.52223033016736
+     Canvas X: 1060930.4085387285
+     Canvas Y: 1568030.8691588435
+     Area: 5.1142
+     Downstream: J81
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J81
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1059750.4764944008
+     Canvas Y: 1568501.6500625235
+     Downstream: R81
+End:
+
+Reach: R81
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1057056.0298944009
+     Canvas Y: 1568446.0944625237
+     From Canvas X: 1059750.4764944008
+     From Canvas Y: 1568501.6500625235
+     Downstream: J15
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1181
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.75186968647549
+     Longitude Degrees: -73.55864531822576
+     Canvas X: 1056931.1317728618
+     Canvas Y: 1570221.0947494286
+     Area: 7.5664
+     Downstream: J15
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1117
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.743245160555526
+     Longitude Degrees: -73.53945150733246
+     Canvas X: 1059038.7077051534
+     Canvas Y: 1569270.4198787678
+     Area: 4.0185
+     Downstream: J15
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J15
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1057056.0298944009
+     Canvas Y: 1568446.0944625237
+     Downstream: R15
+End:
+
+Reach: R15
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054583.8056944008
+     Canvas Y: 1567612.7604625237
+     From Canvas X: 1057056.0298944009
+     From Canvas Y: 1568446.0944625237
+     Downstream: J11
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1183
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.73298270221778
+     Longitude Degrees: -73.56913726273972
+     Canvas X: 1055783.032498429
+     Canvas Y: 1568130.2533757903
+     Area: 8.5440
+     Downstream: J11
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin194
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.71613488258072
+     Longitude Degrees: -73.56875213063422
+     Canvas X: 1055828.0888329512
+     Canvas Y: 1566266.777742576
+     Area: 4.5957
+     Downstream: J11
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J11
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054583.8056944008
+     Canvas Y: 1567612.7604625237
+     Downstream: R11
+End:
+
+Reach: R11
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054000.4718944007
+     Canvas Y: 1566946.0932625236
+     From Canvas X: 1054583.8056944008
+     From Canvas Y: 1567612.7604625237
+     Downstream: J1
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1196
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.732696818057338
+     Longitude Degrees: -73.59479944671936
+     Canvas X: 1052967.125368103
+     Canvas Y: 1568094.5143877764
+     Area: 6.9329
+     Downstream: J1
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Subbasin: Subbasin1187
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.726267149473948
+     Longitude Degrees: -73.58211161670543
+     Canvas X: 1054360.4201845485
+     Canvas Y: 1567385.3382773031
+     Area: 0.3133
+     Downstream: J1
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Junction: J1
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1054000.4718944007
+     Canvas Y: 1566946.0932625236
+     Downstream: R1
+End:
+
+Reach: R1
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Canvas X: 1053889.3606944007
+     Canvas Y: 1566751.6486625236
+     From Canvas X: 1054000.4718944007
+     From Canvas Y: 1566946.0932625236
+     Downstream: Sink-1
+
+     Route: Lag
+     Initial Variable: Combined Inflow
+     Channel Loss: None
+End:
+
+Subbasin: Subbasin1197
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:08
+     Latitude Degrees:  9.721770298557871
+     Longitude Degrees: -73.58789703338154
+     Canvas X: 1053726.2827574501
+     Canvas Y: 1566887.020576735
+     Area: 0.2986
+     Downstream: Sink-1
+
+     Discretization: None
+     File: 
+
+     Canopy: None
+     Allow Simultaneous Precip Et: No
+     Plant Uptake Method: None
+
+     Surface: None
+
+     LossRate: Initial+Constant
+     Percent Impervious Area: 0.0
+
+     Transform: Clark
+     Clark Method: Specified
+     Time Area Method: Default
+
+     Baseflow: Recession
+End:
+
+Sink: Sink-1
+     Last Modified Date: 27 June 2022
+     Last Modified Time: 15:48:09
+     Canvas X: 1053889.3606944007
+     Canvas Y: 1566751.6486625236
+     Computation Point: Yes
+End:
+
+Basin Layer Properties:
+     Element Layer:
+          Name: Icons
+          Layer shown: Yes
+     End Layer:
+     Element Layer:
+          Name: Reaches
+          Layer shown: Yes
+     End Layer:
+     2D Connection Layer:
+          Layer shown: No
+     End Layer:
+     Element Layer:
+          Name: Subbasins
+          Layer shown: Yes
+     End Layer:
+     Discretization Layer:
+          Layer shown: No
+     End Layer:
+     Breakpoint Layer:
+          Layer shown: Yes
+     End Layer:
+     Base Layer:
+          Name: Identified Streams
+          Layer shown: Yes
+          Properties Filename: maps\streams5626091782022.xml
+     End Layer:
+     Base Layer:
+          Name: Flow Accumulation
+          Layer shown: No
+          Properties Filename: maps\flowaccum4806091782022.xml
+     End Layer:
+     Base Layer:
+          Name: Flow Direction
+          Layer shown: No
+          Properties Filename: maps\flowdir4806091782022.xml
+     End Layer:
+     Base Layer:
+          Name: Sink Locations
+          Layer shown: No
+          Properties Filename: maps\sinklocs5726081782022.xml
+     End Layer:
+     Base Layer:
+          Name: Sink Fill
+          Layer shown: No
+          Properties Filename: maps\sinkfill5726081782022.xml
+     End Layer:
+     Base Layer:
+          Name: Reconditioned Terrain
+          Layer shown: No
+          Properties Filename: maps\reconditioned1523081782022.xml
+     End Layer:
+     Base Layer:
+          Name: Terrain
+          Layer shown: No
+          Properties Filename: maps\elevation3714081782022.xml
+     End Layer:
+End:
+
+Basin Spatial Properties:
+     Coordinate System: PROJCS["GAUSS_BTA_MAGNA",GEOGCS["CGS_SIRGAS",DATUM["CGS_SIRGAS",SPHEROID["GRS_1980",6378137,298.257222101]],PRIMEM["Greenwich",0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["false_easting",1000000],PARAMETER["false_northing",1000000],PARAMETER["central_meridian",-74.077507917],PARAMETER["scale_factor",1],PARAMETER["latitude_of_origin",4.596200417],UNIT["Meter",1],AXIS["Easting",EAST],AXIS["Northing",NORTH]]
+     Terrain: Terrain 1
+     Threshold: 4
+     Break Point: Break Point 1
+          X Coordinate: 1053890.0022717009
+          Y Coordinate: 1566750.591683715
+     End Break Point:
+     reach_prefix: R
+     junction_insert: true
+     junction_prefix: J
+     subbasin_prefix: Subbasin1
+End:
+
+Basin Schematic Properties:
+     Last View N: NaN
+     Last View S: NaN
+     Last View W: NaN
+     Last View E: NaN
+     Maximum View N: 1602624.4504080003
+     Maximum View S: 1565765.7946155188
+     Maximum View W: 1049701.7259497624
+     Maximum View E: 1121926.26212994
+     Extent Method: Elements
+     Buffer: 0
+     Draw Icons: Yes
+     Draw Icon Labels: Name
+     Draw Map Objects: No
+     Draw Gridlines: No
+     Draw Flow Direction: No
+     Draw HillShade Layer: Yes
+     Draw Elevation Layer: Yes
+     Elevation Layer Color Palette: Gray Scale
+     Ignore Elevation Color Ramp Scale: No
+     Use Interpolated Color Ramp for Elevation Layer: Yes
+     Color Ramp Opacity Level for Elevation Layer: 33.0
+     Fix Element Locations: Yes
+     Fix Hydrologic Order: No
+End:
+
+Computation Point: Sink-1
+     Parameter Set: 1
+     End Parameter Set:
+     Parameter Set: 2
+     End Parameter Set:
+     Parameter Set: 3
+     End Parameter Set:
+     Parameter Set: 4
+     End Parameter Set:
+     Parameter Set: 5
+     End Parameter Set:
+
+     Graph Definition: 
+     End Graph Definition: 
+
+     Graph Definition: 
+     End Graph Definition: 
+
+     Graph Definition: 
+     End Graph Definition: 
+
+     Graph Definition: 
+     End Graph Definition: 
+
+     Graph Definition: 
+     End Graph Definition: 
+
+End Computation Point: 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rasterDisplayProperties schemaVersion="0.0" type="Classify" colorRamp="Default Flow Direction Ramp" method="Manual" min="1.0" max="9.0" transparency="0.0" isHillShaded="false" isInverted="false">
+    <displayRangeList color="-16750400" min="-INF" max="1.0" label="&lt;=1.0"/>
+    <displayRangeList color="-16733372" min="1.0" max="2.0" label="&lt;=2.0"/>
+    <displayRangeList color="-8071680" min="2.0" max="3.0" label="&lt;=3.0"/>
+    <displayRangeList color="-722432" min="3.0" max="4.0" label="&lt;=4.0"/>
+    <displayRangeList color="-21689" min="4.0" max="5.0" label="&lt;=5.0"/>
+    <displayRangeList color="-43672" min="5.0" max="6.0" label="&lt;=6.0"/>
+    <displayRangeList color="-3538788" min="6.0" max="7.0" label="&lt;=7.0"/>
+    <displayRangeList color="-9699165" min="7.0" max="8.0" label="&lt;=8.0"/>
+    <displayRangeList color="-16777216" min="8.0" max="9.0" label="&lt;=9.0"/>
+</rasterDisplayProperties>
