@@ -1,26 +1,31 @@
 # Ignore files for push...
 
+
 # General advice from https://github.com/rcfdtools
 # Before put large files over 100MB, you have to include the path and name here on .gitignore.
 # Alert: when you create large files them can appear into the Commit main panel for push and the GitHub server can get back an error and stop the file loading and the pushing process. You can drop the commit, renaming the files after the inclusion here on .gitignore or move the large files to another external directory (like Downloads) and then make a Push. After the Push be done, you can move back the large files to the original folder. Before made Commit drops, is recommended get a full copy of your local repository for prevent data lost.
 # Large files over 100MB have be compress in 95MB file parts.
 
+
 # General exclusions
 #.gitignore
 .git/
-.github/
+#.github/
 .idea/
 venv/
 Lib/
 #.refs/GitHubRefs/
+# Grid pyramid
 *.ovr
 *.lock
 *__pycache__*
-Eclude all Compiled Python Files
+# Compiled Python Files
 *.pyc
-Eclude all TIFF world file
+# TIFF world file
 *.tfw
+# Grid temporal metadata
 *.aux.xml
+
 
 # Large files exclusions
 .dem/ASTER/ASTGTMV003Mosaic.tif
