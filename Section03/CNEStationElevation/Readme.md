@@ -294,18 +294,33 @@ donde,
 C: cobertura de área en km² por cada estación
 D: densidad en estaciones / km²
 
+Manualmente, calcule el radio de acción promedio en km de cada estación utilizando la siguiente expresión:
+
+r = √ ( A / π)
+
+donde, 
+r: radio de acción en km
+A: área de cobertura en km² de cada estación
+π: número de Pi. 3.1415926535897932384626433832795
+
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateFieldDensity.png)
 
 Valores de densidad y cobertura obtenidos
 
-| Atributo   | Descripción                                                                                    | D, Estn/km²       | Cobertura, km²/Estn |  
-|------------|:-----------------------------------------------------------------------------------------------|-------------------|---------------------|
-| DnStations | Densidad en estaciones por km² para toda la zona de estudio                                    | 0.00902742680521  | 110.77              |
-| DnStRain   | Densidad en estaciones por km² para obtención de datos de precipitación                        | 0.002852          | 350.63              |
-| DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316 | 1160.49             |
-| DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                | 0.000841          | 1189.06             |
+| Atributo   | Descripción                                                                                    | D, Estn/km²       | Cobertura, km²/Estn | Radio de acción, km |  
+|------------|:-----------------------------------------------------------------------------------------------|-------------------|---------------------|---------------------|
+| DnStations | Densidad en estaciones por km² para toda la zona de estudio                                    | 0.00902742680521  | 110.77              | 5.94                |
+| DnStRain   | Densidad en estaciones por km² para obtención de datos de precipitación                        | 0.002852          | 350.63              | 10.57               |
+| DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316 | 1160.49             | 19.22               |
+| DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                | 0.000841          | 1189.06             | 19.46               |
 
-Como observa en la tabla, los valores de densidad corresponden a valores inferiores a 1e-3 lo cual dimensionalmente no permite obtener un indicio claro de sí el número de estaciones es suficiente para realizar un análisis espacial adecuado de los diferentes parámetros climatológicos, por otra parte, la cobertura es un indicado significativo a partir del cual se puede deducir que para la red completa de estaciones seleccionada, la cobertura en km² por cada estación es de 110.77 que visualmente en el mapa de localización corresponde a un área de cubrimiento significativamente grande. Para los parámetros climáticos particulares, las coberturas de cada estación son mucho mayores y de hasta 1189.06 km²/estación, lo que indica que respecto a la red completa su densidad es aproximadamente 10 veces menos.  
+Como observa en la tabla, los valores de densidad corresponden a valores inferiores a 1e-3 lo cual dimensionalmente no permite obtener un indicio claro de sí el número de estaciones es suficiente para realizar un análisis espacial adecuado de los diferentes parámetros climatológicos, por otra parte, la cobertura es un indicado significativo a partir del cual se puede deducir que para la red completa de estaciones seleccionada, la cobertura en km² por cada estación es de 110.77 que visualmente en el mapa de localización corresponde a un área de cubrimiento significativamente grande. Para los parámetros climáticos particulares, las coberturas de cada estación son mucho mayores y de hasta 1189.06 km²/estación, lo que indica que respecto a la red completa su densidad es aproximadamente 10 veces menos. En el caso de los radios de acción, los valores obtenidos se ajustan a los lineamientos establecidos por la [Organización Meteorológica Munidal - OMM](https://public.wmo.int/es) que para datos puviométricos recomienda que el radio de acción sea de al menos 12.5 km y para las estaciones seleccionadas el valor obtenido es 10.57 km, con respecto a los datos de temperatura y evaporación correspondientes principalmente a estaciones climatológicas ordinarias, la recomendación de la OMM es de un radio de 25 km y para las estaciones de la zona de estudio el mayor valor obtenido para estos parámetros es de 19.46 km.
+
+De acuerdo a la WMO, para las estaciones:
+
+* Climatológica principal y Agro-meteorológica (CP-AM), la distancia media recomendada entre estaciones es de 150km para un radio de acción de 75km.
+* Climatológica ordinaria (CO - AU), la distancia media recomendada entre estaciones es de 50km para un radio de acción de 25km.
+* Meteorológica especial (ME) y Pluviométrica (PM - PG), la distancia media recomendada entre estaciones es de 25km para un radio de acción de 12.5km.
 
 A partir de este momento, ya dispone de la red de estaciones de la zona de estudio con diferentes elevaciones y su clasificación por diferentes pisos térmicos.
 
@@ -326,6 +341,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [IDEAM Colombia - Clasificación climática de Caldas](http://www.ideam.gov.co/documents/10182/599272/Clasificacion+Climatica+de+Caldas+2014.pdf/d4ffa383-e60b-4ec5-8aa2-1b553d23b44f?version=1.0)
 * [Pisos térmicos en Costa Rica](https://www.mep.go.cr/sites/default/files/recursos/recursos-interactivos/clima_tiempo/pdf/pisos_termicos.pdf)
 * [Diseño de la red hidrometeorológica nacional IDEAM - Colombia](http://sgi.ideam.gov.co/documents/412030/561097/M-GDI-H-G001+GU%C3%8DA+DISE%C3%91O+DE+LA+RED+HIDROMETEOROL%C3%93GICA+NACIONAL.pdf/9da0e118-58cc-43eb-87e0-8c6316dc691c?version=1.0)
+* [Propuesta Metodológica para el Rediseño de una Red Meteorológica en un Sector de la Región Andina Colombiana](https://hemeroteca.unad.edu.co/index.php/publicaciones-e-investigacion/article/view/1281/2031)
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 
