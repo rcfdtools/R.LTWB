@@ -156,6 +156,25 @@ En el panel _Matrix Layout_, represente en la esquina superior derecha los valor
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixOutliersTable.png)
 
+> Para el desarrollo del caso de estudio utilizaremos las elevaciones obtenidas a través del modelo digital de elevación ALOS PALSAR, lo anterior debido a que este modelo contiene mediciones cada 12.5m.  
+
+10. Para la clasificación por pisos térmicos, crear en la tabla de atributos del archivo de formas _CNE_IDEAM_OE_ZE.shp_ los siguientes campos de atributos:
+
+| Field      | Tipo     | Descripción                                                                         |
+|------------|----------|-------------------------------------------------------------------------------------|
+| TherLCv    | Float    | Rango de elevación según la clasificación convencional con cortes cada 1000 m.s.n.m |
+| TherLCvTxt | Text 100 | Etiqueta del rango de elevación según la clasificación convencional                 |
+| TherLCl    | Float    | Rango de elevación según la clasificación Caldas con cortes variable                |
+| TherLClTxt | Text 100 | Etiqueta del rango de elevación según la clasificación Caldas                       |
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0AddField.png)
+
+11. Utilizando _Calculate Field_ desde la cabecera de los campos de atributos y utilizando el siguiente script en Python, calcule el rango de elevación al cual pertenece cada estación y su etiqueta de datos a partir de las elevaciones obtenidas del modelo digital de elevación ALOS PALSAR.
+
+
+
+ 
+
 
 ### Actividades complementarias:pencil2:
 

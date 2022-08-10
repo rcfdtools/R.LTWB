@@ -11,6 +11,7 @@
 #.github/
 .idea/
 venv/
+venvArcGISDesktop10.2.2/
 Lib/
 #.refs/GitHubRefs/
 # Grid pyramid

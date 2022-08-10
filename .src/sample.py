@@ -1,3 +1,34 @@
+
+# Parameters
+thermalLevelCaldas = True  # True for Caldas classification, False for conventional classification range
+thermalLevelRefConv = [[1000,'Cálido, 24°C+, <= 1000 meters'],
+                       [2000,'Templado, 18°C+, <= 2000 meters'],
+                       [3000,'Frío, 12°C+, <= 3000 meters'],
+                       [4000,'Páramo, 0°C, <= 4000 meters'],
+                       [99999,'Glacial, 0°C-, > 4000 meters']] # Elevation value in meters
+thermalLevelRefCaldas = [[800,'Cálido, T>=24°C, <=800meter'],
+                         [1800,'Templado, 24°C>T>18°C, <=1800meter'],
+                         [2800,'Frío, 18°C>T>12°C, <=2800meter'],
+                         [3700,'Muy Frío, 12°C>T>6°C, <=3700meter'],
+                         [4700,'Extremadamente Frio, 6°C>T>0°C, <=4700meter'],
+                         [99999,'Nival, T<0°C, >4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermalLevelCaldas == True:
+    thermalLevelRef = thermalLevelRefCaldas
+else:
+    thermalLevelRef = thermalLevelRefConv
+
+def thermalLevelF(elevation):
+    for i in thermalLevelRef[:]:
+        if elevation <= i[0]:
+            return i[1]
+
+elevation_value = 1825
+print('The elevation value %f correspond to the Thermic level value %f ' %(thermalLevelF(elevation_value)))
+
+
+'''
 from datetime import datetime
 installation_date = '14/09/1972'
 #installation_date = ''
@@ -14,8 +45,6 @@ def len_years_serie(installation_date, suspension_date):
     return float(diff_date.days)/365
 
 print(len_years_serie(installation_date, suspension_date))
-
-'''
 
 # Basic date difference sample over Python 3
 installation_date = datetime.strptime('14/09/1972', '%d/%m/%Y')
@@ -107,5 +136,5 @@ print('\nBasic date difference sample with full date end time window cut\n'
       'Time-window end date: %s\n' %(tw_end_date)+
       'Serie full length, years: %f\n' %len_years_serie(installation_date,suspension_date)[0]+
       'Serie time-window length, years: %f' %len_years_serie(installation_date,suspension_date)[1])
-
 '''
+
