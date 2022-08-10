@@ -305,10 +305,9 @@ Valores de densidad y cobertura obtenidos
 | DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316 | 1160.49             |
 | DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                | 0.000841          | 1189.06             |
 
+Como observa en la tabla, los valores de densidad corresponden a valores inferiores a 1e-3 lo cual dimensionalmente no permite obtener un indicio claro de sí el número de estaciones es suficiente para realizar un análisis espacial adecuado de los diferentes parámetros climatológicos, por otra parte, la cobertura es un indicado significativo a partir del cual se puede deducir que para la red completa de estaciones seleccionada, la cobertura en km² por cada estación es de 110.77 que visualmente en el mapa de localización corresponde a un área de cubrimiento significativamente grande. Para los parámetros climáticos particulares, las coberturas de cada estación son mucho mayores y de hasta 1189.06 km²/estación, lo que indica que respecto a la red completa su densidad es aproximadamente 10 veces menos.  
 
 A partir de este momento, ya dispone de la red de estaciones de la zona de estudio con diferentes elevaciones y su clasificación por diferentes pisos térmicos.
-
-
 
 
 ### Actividades complementarias:pencil2:
@@ -326,6 +325,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [IDEAM Colombia - Clasificación de los climas (clima-text.pdf)](http://atlas.ideam.gov.co/basefiles/clima-text.pdf)
 * [IDEAM Colombia - Clasificación climática de Caldas](http://www.ideam.gov.co/documents/10182/599272/Clasificacion+Climatica+de+Caldas+2014.pdf/d4ffa383-e60b-4ec5-8aa2-1b553d23b44f?version=1.0)
 * [Pisos térmicos en Costa Rica](https://www.mep.go.cr/sites/default/files/recursos/recursos-interactivos/clima_tiempo/pdf/pisos_termicos.pdf)
+* [Diseño de la red hidrometeorológica nacional IDEAM - Colombia](http://sgi.ideam.gov.co/documents/412030/561097/M-GDI-H-G001+GU%C3%8DA+DISE%C3%91O+DE+LA+RED+HIDROMETEOROL%C3%93GICA+NACIONAL.pdf/9da0e118-58cc-43eb-87e0-8c6316dc691c?version=1.0)
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 
