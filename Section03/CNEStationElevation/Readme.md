@@ -1,5 +1,5 @@
 ## Análisis y representación de elevaciones en estaciones terrestres
-Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Scatter plot` `Definition Query` `Normal distribution` `Statistics`
+Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Scatter plot` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStation.png)
 
@@ -83,7 +83,22 @@ En el panel de simbología, de clic en la pestaña Histogram, podrá observar la
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalStatistic.png)
 
-4. 
+4. Cargue al proyecto los modelos digitales de elevación ASTER (ASTGTMV003Mosaic.tif), SRTM (SRTMV003MosaicArcGISPro.tif) y ALOS (APFBSRT1MosaicArcGISPro.tif), represente estos modelos por relieve sombreado utilizando el esquema de color contínuo de negro a blanco.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0DEMShadedRelief.png)
+
+5. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga simultáneamente los valores de elevación de los 3 modelos digitales de elevación. Nombre los campos de atributos de salida como `DEMASTER`, `DEMSRTM` y `DEMALOS`. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ExtractMultiValuesToPoints.png)
+
+> El procedimiento anterior puede ser desarrollado manualmente para cada DEM a través de la herramienta Zonal Statistics As Table.
+
+6. Para cada uno de los campos de atributos `DEMASTER`, `DEMSRTM` y `DEMALOS`, genere una estadística y evalue los rangos de valores.
+
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationASTERStatistic.png)
+
+
 
 
 
