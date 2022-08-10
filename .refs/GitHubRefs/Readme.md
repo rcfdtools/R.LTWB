@@ -1,4 +1,4 @@
-## GitHub reference clone file
+## GitHub reference clone repositorie files donwloaded
 
 En esta carpeta encontrará una copia de la carpeta clonada de diferentes repositorios utilizados como referencia.  
 
