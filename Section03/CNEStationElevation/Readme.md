@@ -163,7 +163,7 @@ En el panel _Matrix Layout_, represente en la esquina superior derecha los valor
 10. Para la clasificación por pisos térmicos, crear en la tabla de atributos del archivo de formas _CNE_IDEAM_OE_ZE.shp_ los siguientes campos de atributos:
 
 | Field      | Tipo     | Descripción                                                                         |
-|------------|----------|-------------------------------------------------------------------------------------|
+|:-----------|:---------|:------------------------------------------------------------------------------------|
 | TherLCv    | Float    | Rango de elevación según la clasificación convencional con cortes cada 1000 m.s.n.m |
 | TherLCvTxt | Text 100 | Etiqueta del rango de elevación según la clasificación convencional                 |
 | TherLCl    | Float    | Rango de elevación según la clasificación Caldas con cortes variable                |
@@ -207,11 +207,11 @@ def thermal_level_f(elevation):
 Para calcular cada uno de los campos utilizar:
 
 | Field      | Llamado de función            | thermal_level_caldas |
-|------------|-------------------------------|----------------------|
-| TherLCv    | thermal_level_f(!DEMALOS!)[0] | False                |
-| TherLCvTxt | thermal_level_f(!DEMALOS!)[1] | False                |
-| TherLCl    | thermal_level_f(!DEMALOS!)[0] | True                 |
-| TherLClTxt | thermal_level_f(!DEMALOS!)[1] | True                 |
+|------------|-------------------------------|:--------------------:|
+| TherLCv    | thermal_level_f(!DEMALOS!)[0] |        False         |
+| TherLCvTxt | thermal_level_f(!DEMALOS!)[1] |        False         |
+| TherLCl    | thermal_level_f(!DEMALOS!)[0] |         True         |
+| TherLClTxt | thermal_level_f(!DEMALOS!)[1] |         True         |
 
 Ejemplo de cálculo para TherLCv:  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateFieldTherLCv.png)
@@ -226,24 +226,24 @@ Desde la simbología de representación por valores únicos para los campos de a
 
 Resultados para cortes convencionales
 
-| Valor de corte | Etiqueta                        | Estaciones |
-|:---------------|:--------------------------------|------------|
-| 1000           | Cálido, 24°C+, <= 1000 meters   | 416        |
-| 2000           | Templado, 18°C+, <= 2000 meters | 20         |
-| 3000           | Frío, 12°C+, <= 3000 meters     | 4          |
-| 4000           | Páramo, 0°C, <= 4000 meters     | 0          |
-| 99999          | Glacial, 0°C-, > 4000 meters    | 0          |
+| Valor de corte | Etiqueta                        | Estaciones  |
+|:---------------|:--------------------------------|:-----------:|
+| 1000           | Cálido, 24°C+, <= 1000 meters   |     416     |
+| 2000           | Templado, 18°C+, <= 2000 meters |     20      |
+| 3000           | Frío, 12°C+, <= 3000 meters     |      4      |
+| 4000           | Páramo, 0°C, <= 4000 meters     |      0      |
+| 99999          | Glacial, 0°C-, > 4000 meters    |      0      |
 
 Resultados para cortes Francisco José de Caldas, año 1802
 
 | Valor de corte | Etiqueta                                    | Estaciones |
-|:---------------|:--------------------------------------------|------------|
-| 800            | Cálido, T>=24°C, <=800meter                 | 411        |
-| 1800           | Templado, 24°C>T>18°C, <=1800meter          | 24         |
-| 2800           | Frío, 18°C>T>12°C, <=2800meter              | 5          |
-| 3700           | Muy Frío, 12°C>T>6°C, <=3700meter           | 0          |
-| 4700           | Extremadamente Frio, 6°C>T>0°C, <=4700meter | 0          |
-| 99999          | Nival, T<0°C, >4700meter                    | 0          |
+|:---------------|:--------------------------------------------|:----------:|
+| 800            | Cálido, T>=24°C, <=800meter                 |    411     |
+| 1800           | Templado, 24°C>T>18°C, <=1800meter          |     24     |
+| 2800           | Frío, 18°C>T>12°C, <=2800meter              |     5      |
+| 3700           | Muy Frío, 12°C>T>6°C, <=3700meter           |     0      |
+| 4700           | Extremadamente Frio, 6°C>T>0°C, <=4700meter |     0      |
+| 99999          | Nival, T<0°C, >4700meter                    |     0      |
 
 Como observa en las gráficas y tablas anteriores, las estaciones de la zona de estudio se encuentran predominantemente en el piso térmico Cálido y algunas de ellas se encuentran en el piso térmico templado y muy pocas en el piso térmico frío sobre la cordillera oriental de Colombia. 
 
@@ -258,16 +258,16 @@ Para estimar la densidad promedio de estaciones por km² y el cubrimiento promed
 
 2. En la tabla de atributos del polígono aferente, cree los siguientes atributos:
 
-| Field      | Tipo   | Descripción                                                                                                                                                                                          |
-|------------|--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Stations   | Long   | Número de estaciones seleccionadas en la zona de estudio (440 estaciones)                                                                                                                            |
-| StatnsRain | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de precipitación con longitud hipotética de series igual o superior a 10 años (139 estaciones )                     |
-| StatnsTemp | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de temperatura del aire cerca del suelo con longitud hipotética de series igual o superior a 5 años (42 estaciones) |
-| StatnsEvap | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de evaporación potencial con longitud hipotética de series igual o superior a 5 años (41 estaciones)                |
-| DnStations | Double | Densidad en estaciones por km² para toda la zona de estudio                                                                                                                                          |
-| DnStRain   | Double | Densidad en estaciones por km² para obtención de datos de precipitación                                                                                                                              |
-| DnStTemp   | Double | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo                                                                                                       |
-| DnStEvap   | Double | Densidad en estaciones por km² para obtención de datos de evaporación potencial                                                                                                                      |
+| Field       | Tipo    | Descripción                                                                                                                                                                                          |
+|:------------|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Stations    | Long    | Número de estaciones seleccionadas en la zona de estudio (440 estaciones)                                                                                                                            |
+| StatnsRain  | Long    | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de precipitación con longitud hipotética de series igual o superior a 10 años (139 estaciones )                     |
+| StatnsTemp  | Long    | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de temperatura del aire cerca del suelo con longitud hipotética de series igual o superior a 5 años (42 estaciones) |
+| StatnsEvap  | Long    | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de evaporación potencial con longitud hipotética de series igual o superior a 5 años (41 estaciones)                |
+| DnStations  | Double  | Densidad en estaciones por km² para toda la zona de estudio                                                                                                                                          |
+| DnStRain    | Double  | Densidad en estaciones por km² para obtención de datos de precipitación                                                                                                                              |
+| DnStTemp    | Double  | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo                                                                                                       |
+| DnStEvap    | Double  | Densidad en estaciones por km² para obtención de datos de evaporación potencial                                                                                                                      |
 
 > El número de estaciones seleccionadas ha sido obtenido en la actividad: [Catálogo nacional de estaciones - CNE y selección para la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 >
@@ -345,7 +345,8 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS para las estaciones de la zona de estudio.                         | 
 |     2     | Investigue y documente otros métodos de clasificación por nivel térmico que se apliquen en otros países diferentes a los citados en las referencias. | 
-|     3     | Investigue, documente e implementa al menos una metodología adicional para el análisis de densidad de estaciones.                                   | 
+|     3     | Investigue, documente e implementa al menos una metodología adicional para el análisis de densidad de estaciones.                                    | 
+|     4     | Cree un script en Python que permita calcular la densidad, cobertura y radio de acción a partir de área y el número de estaciones.                   |
  
 
 ### Referencias
@@ -360,9 +361,9 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción         | Autor                                      | Horas |
-|------------|:--------------------|--------------------------------------------|:-----:|
-| 2022.08.10 | Versión inicial.    | [rcfdtools](https://github.com/rcfdtools)  |       |
+| Versión    | Descripción                                                                                  | Autor                                      | Horas |
+|------------|:---------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.10 | Versión inicial con análisis por matriz de dispersión, densidad, cobertura, radio de acción. | [rcfdtools](https://github.com/rcfdtools)  |  8.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
