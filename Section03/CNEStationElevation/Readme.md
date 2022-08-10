@@ -1,5 +1,5 @@
-## Análisis y representación de elevaciones en estaciones terrestres
-Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Chart` `Scatter Plot Matrix` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points`
+## Análisis, representación de elevaciones y densidad de estaciones terrestres
+Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Chart` `Scatter Plot Matrix` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points` `Calculate Geometry Attributes`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStationElevation.svg)
 
@@ -10,8 +10,8 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 
 * Obtener las cotas de las estaciones a partir de los modelos satelitales digitales de elevación ASTER, SRTM y ALOS.
 * Analizar la correspondencia entre las elevaciones presentadas en el campo `altitud` del IDEAM y las elevaciones obtenidas a partir de modelos satelitales.
-* Clasificar las estaciones terrestres por piso térmico a partir de cortes convencionales cada 1000 m.s.n.m y los cortes definidos por Caldas en 1802.
-* Estimar la densidad promedio de estaciones por km² y el cubrimiento promedio en km² por estación dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondiente al Cesar.
+* Utilizando Python, clasificar las estaciones terrestres por piso térmico a partir de cortes convencionales cada 1000 m.s.n.m y los cortes definidos por Caldas en 1802.
+* Estimar la densidad promedio de estaciones por km² y el cubrimiento promedio en km² por estación dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondientes al Cesar.
 * Definir las elevaciones de las estaciones que posteriormente se utilizarán como referencia en los algoritmos de imputación o completado de datos faltantes a partir de relaciones geográficas. 
 
 
@@ -71,7 +71,7 @@ El siguiente diagrama representa los procedimientos generales requeridos para el
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0MapProject.png)
 
-2. Simbolice las estaciones por colores graduados a partir del campo `altitud` del IDEAM por el método de representación `Intervalo Definido` en 3 clases utilizando tamaños de intervalo cada 1000 m.s.n.m y utilice el esquema de color contínuo `Yellow to Red`. Desde el menú desplegable de más opciones `More`, active la visualización de estadísticos, podrá observar que para las 440 estaciones utilizadas en la zona de estudio, el rango de las elevaciones se encuentra entre 1 y 2700 m.s.n.m con elevaciones medias de 204.98 m.s.n.m y desviación estándar de 328.84 m.s.n.m, lo que indica que mayoritariamente las estaciones utilizadas se encuentran en la zona de llanura para la zona hidrográfica en estudio.
+2. Simbolice las estaciones por colores graduados a partir del campo `altitud` del IDEAM por el método de representación `Intervalo Definido` en 3 clases utilizando tamaños de intervalo cada 1000 m.s.n.m y utilice el esquema de color continuo `Yellow to Red`. Desde el menú desplegable de más opciones `More`, active la visualización de estadísticos, podrá observar que para las 440 estaciones utilizadas en la zona de estudio, el rango de las elevaciones se encuentra entre 1 y 2700 m.s.n.m con elevaciones medias de 204.98 m.s.n.m y desviación estándar de 328.84 m.s.n.m, lo que indica que mayoritariamente las estaciones utilizadas se encuentran en la zona de llanura para la zona hidrográfica en estudio.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventional.png)
 
@@ -79,7 +79,7 @@ En el panel de simbología, de clic en la pestaña Histogram, podrá observar la
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalHistogram.png)
 
-3. Abra la tabla de atributos de la capa y dando clic derecho en la columna de atributos del campo `altitud`, cree una estadística que incluya un histograma de 12 bandas y muestre la localización de la media, la mediana, la desviación estándar y el gráfico de distribución normal. En esta gráfica podrá analizar que mayoritariamente las estaciones se encuentran en cotas bajas. Seleccione las 6 primeras barras, en el estadístico podrá observar que de las 440 estaciones, 409 se encuentan entre las cotas 1 y 600 m.s.n.m. En el mapa podrá observar las localizaciones de estas estaciones y en la zona del costado derecho podrá observar que por encima de la cota 600 existen pocas estaciones.
+3. Abra la tabla de atributos de la capa y dando clic derecho en la columna de atributos del campo `altitud`, cree una estadística que incluya un histograma de 12 bandas y muestre la localización de la media, la mediana, la desviación estándar y el gráfico de distribución normal. En esta gráfica podrá analizar que mayoritariamente las estaciones se encuentran en cotas bajas. Seleccione las 6 primeras barras, en el estadístico podrá observar que de las 440 estaciones, 409 se encuentran entre las cotas 1 y 600 m.s.n.m. En el mapa podrá observar las localizaciones de estas estaciones y en la zona del costado derecho podrá observar que por encima de la cota 600 existen pocas estaciones.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalStatistic.png)
 
@@ -104,7 +104,7 @@ Las elevaciones de las estaciones obtenidas a partir del DEM SRTM, presentan val
 Las elevaciones preliminares de las estaciones obtenidas a partir del DEM ALOS, presentan valores entre -9999 y 2568 m.s.n.m. con media en 192.1 m.s.n.m. y desviación estándar de 604.4 m.s.n.m. Como observa en la gráfica, 1 de las estaciones ha obtenido un valor de -9999 que indica que no se ha podido obtener la elevación a partir del DEM. 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStatistic.png)
 
-Desde la tabla de atributos, dando doble clic en la cabecera del campo `DEMALOS`, ordene ascendentemente las elevaciones y luego dando doble clic en el registro de la estación, localice la estación en pantalla acercado a escala 1:5000 que corresponde a _SAN FRANCISCO [15067170]_ y asigne manualmente el valor de la elevación utilizando como referencia la celda más próxima de la grilla ALOS que corresponde a 128 m.s.n.m.
+Desde la tabla de atributos, dando doble clic en la cabecera del campo `DEMALOS`, ordene ascendentemente las elevaciones y luego dando doble clic en el registro de la estación, localice la estación en pantalla acercando a escala 1:5000 que corresponde a _SAN FRANCISCO [15067170]_ y asigne manualmente el valor de la elevación utilizando como referencia la celda más próxima de la grilla ALOS que corresponde a 128 m.s.n.m.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStationManualValue.png)
 
@@ -126,13 +126,15 @@ Tabla resumen de valores obtenidos de elevación.
 | Skewness    | 3.56  | 3.4   | 3.4   | 3.4   |
 | Kurtosis    | 18.5  | 16.2  | 16.3  | 16.3  |
 
-> Como puede observar en la tabla anterior, existe una diferencia importante entre el máximo de las elevaciones del IDEAM con respecto al máximo de las elevaciones obtenida a través de los modelo digitales de elevación DEM.
+> Como puede observar en la tabla anterior, existe una diferencia importante entre el máximo de las elevaciones del IDEAM con respecto al máximo de las elevaciones obtenidas a través de los modelos digitales de elevación DEM.
+> 
+> Tenga en cuenta que las elevaciones han sido obtenidas en las localizaciones disponibles de la red de estaciones del catálogo nacional y estas localizaciones pueden ser imprecisas.
 
 7. En la tabla de contenido, de clic derecho sobre la capa de estaciones CNE_IDEAM_OE_ZE.shp y seleccione la opción _Create Chart / Scatter Plot Matrix_ para crear un gráfico de dispersión para comparar los valores de las diferentes elevaciones obtenidas. En variables seleccione `altitud`, `DEMASTER`, `DEMSRTM` y `DEMALOS`, active la casilla de visualización de línea de tendencia y agregue histogramas en las diagonales. 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CreateScatterPlotMatrix.png)
 
-Como puede observar en la siguiente ilustración, existe una alta correspondencia entre los valores de las elevaciones obtenidas a partir de las grilla DEM y dispersión y valores atípicos (outliers) al comparar las elevaciones del IDEAM con las obtenidas satelitalmente.
+Como puede observar en la siguiente ilustración, existe una alta correspondencia entre los valores de las elevaciones obtenidas a partir de las grillas DEM y dispersión y valores atípicos (outliers) al comparar las elevaciones del IDEAM con las obtenidas satelitalmente.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrix.png)
 
@@ -148,7 +150,7 @@ En el panel _Matrix Layout_, represente en la esquina superior derecha los valor
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixRPearson.png)
 
-8. En el panel _Matrix Layout_, represente en la esquina superior derecha el `Preview Plot` y seleccione en la gráfica la combinación entre altitud del IDEAM y los valores de ALOS. Ahora, manualmente y con ayuda de la tecla <kbd>Ctrl</kbd>, seleccione todas aquellas estaciones que estan muy alejadas de la tendencia lineal mostrada.
+8. En el panel _Matrix Layout_, represente en la esquina superior derecha el `Preview Plot` y seleccione en la gráfica la combinación entre altitud del IDEAM y los valores de ALOS. Ahora, manualmente y con ayuda de la tecla <kbd>Ctrl</kbd>, seleccione todas aquellas estaciones que están muy alejadas de la tendencia lineal mostrada.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixOutliers.png)
 
@@ -245,7 +247,38 @@ Resultados para cortes Francisco José de Caldas, año 1802
 
 Como observa en las gráficas y tablas anteriores, las estaciones de la zona de estudio se encuentran predominantemente en el piso térmico Cálido y algunas de ellas se encuentran en el piso térmico templado y muy pocas en el piso térmico frío sobre la cordillera oriental de Colombia. 
 
+
+### Análisis de densidad y cobertura
+
+Para estimar la densidad promedio de estaciones por km² y el cubrimiento promedio en km² por estación dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondientes al Cesar para todas las estaciones y para las estaciones asociadas a cada uno de los parámetros climatológicos, siga este procedimiento:
+
+1. Utilizando la herramienta _Geoprocessing / Data Management Tools / Calculate Geometry Attributes_, calcule el área espacial y el perímetro del polígono de aferencia _ZonaEstudioBufferStation.shp_, utilice el sistema de proyección de coordenadas _MAGNA_Colombia_CTM12_. Para el polígono de aferencia el área espacial es 48740.36 km².
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateGeometryAttributes.png)
+
+2. En la tabla de atributos del polígono aferente, cree los siguientes atributos:
+
+| Field      | Tipo   | Descripción                                                                                                                                                                          |
+|------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Stations   | Long   | Número de estaciones seleccionadas en la zona de estudio                                                                                                                             |
+| StatnsRain | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de precipitación con longitud hipotética de series igual o superior a 10 años                       |
+| StatnsTemp | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de temperatura del aire cerca del suelo con longitud hipotética de series igual o superior a 5 años |
+| StatnsEvap | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de evaporación potencial con longitud hipotética de series igual o superior a 5 años                |
+| DnStations | Double | Densidad en estaciones por km² para toda la zona de estudio                                                                                                                          |
+| DnStRain   | Double | Densidad en estaciones por km² para obtención de datos de precipitación                                                                                                              |
+| DnStTemp   | Double | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo                                                                                       |
+| DnStEvap   | Double | Densidad en estaciones por km² para obtención de datos de evaporación potencial                                                                                                      |
+
+> El número de estaciones ha sido obtenido en la actividad: [Catálogo nacional de estaciones - CNE y selección para la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+>
+> Para las estaciones registradoras de nivel de lámina de agua, no se presenta un análisis de densidad debido a que su localización se realiza sobre puntos de interés particulares sobre una corriente de agua y no bajo criterios de densidad espacial.
+
+
+
+
 A partir de este momento, ya dispone de la red de estaciones de la zona de estudio con diferentes elevaciones y su clasificación por diferentes pisos térmicos.
+
+
 
 
 ### Actividades complementarias:pencil2:
