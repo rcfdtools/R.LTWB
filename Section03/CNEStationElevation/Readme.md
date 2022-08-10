@@ -281,7 +281,7 @@ Para estimar la densidad promedio de estaciones por km² y el cubrimiento promed
 
 <div align="center">
 
-D = n / A
+**D = n / A**
 
 </div>
 
@@ -294,7 +294,7 @@ Manualmente, calcule la cobertura geográfica de cada estación con la expresió
 
 <div align="center">
 
-C = 1 / D
+**C = 1 / D**
 
 </div>
 
@@ -306,7 +306,7 @@ Manualmente, calcule el radio de acción promedio en km de cada estación utiliz
 
 <div align="center">
 
-r = √ ( A / π)
+**r = √ ( A / π)**
 
 </div>
 
