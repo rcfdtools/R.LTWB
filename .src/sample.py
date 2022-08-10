@@ -1,31 +1,31 @@
-
+# -*- coding: UTF-8 -*-
 # Parameters
-thermalLevelCaldas = True  # True for Caldas classification, False for conventional classification range
-thermalLevelRefConv = [[1000,'Cálido, 24°C+, <= 1000 meters'],
-                       [2000,'Templado, 18°C+, <= 2000 meters'],
-                       [3000,'Frío, 12°C+, <= 3000 meters'],
-                       [4000,'Páramo, 0°C, <= 4000 meters'],
-                       [99999,'Glacial, 0°C-, > 4000 meters']] # Elevation value in meters
-thermalLevelRefCaldas = [[800,'Cálido, T>=24°C, <=800meter'],
-                         [1800,'Templado, 24°C>T>18°C, <=1800meter'],
-                         [2800,'Frío, 18°C>T>12°C, <=2800meter'],
-                         [3700,'Muy Frío, 12°C>T>6°C, <=3700meter'],
-                         [4700,'Extremadamente Frio, 6°C>T>0°C, <=4700meter'],
-                         [99999,'Nival, T<0°C, >4700meter']] # Elevation value in meters
+thermal_level_caldas = False  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, <= 1000 meters'],
+                          [2000,'Templado, 18°C+, <= 2000 meters'],
+                          [3000,'Frío, 12°C+, <= 3000 meters'],
+                          [4000,'Páramo, 0°C, <= 4000 meters'],
+                          [99999,'Glacial, 0°C-, > 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T>=24°C, <=800meter'],
+                            [1800,'Templado, 24°C>T>18°C, <=1800meter'],
+                            [2800,'Frío, 18°C>T>12°C, <=2800meter'],
+                            [3700,'Muy Frío, 12°C>T>6°C, <=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C>T>0°C, <=4700meter'],
+                            [99999,'Nival, T<0°C, >4700meter']] # Elevation value in meters
 
 # Thermal level system
-if thermalLevelCaldas == True:
-    thermalLevelRef = thermalLevelRefCaldas
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
 else:
-    thermalLevelRef = thermalLevelRefConv
+    thermal_level_ref = thermal_level_ref_conv
 
-def thermalLevelF(elevation):
-    for i in thermalLevelRef[:]:
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
         if elevation <= i[0]:
-            return i[1]
+            return i[0],i[1]
 
 elevation_value = 1825
-print('The elevation value %f correspond to the Thermic level value %f ' %(thermalLevelF(elevation_value)))
+print('The elevation value %d correspond to the Thermic level value: %s ' %(elevation_value, thermal_level_f(elevation_value)[1]))
 
 
 '''

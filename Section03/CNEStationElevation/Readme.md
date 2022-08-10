@@ -171,25 +171,98 @@ En el panel _Matrix Layout_, represente en la esquina superior derecha los valor
 
 11. Utilizando _Calculate Field_ desde la cabecera de los campos de atributos y utilizando el siguiente script en Python, calcule el rango de elevación al cual pertenece cada estación y su etiqueta de datos a partir de las elevaciones obtenidas del modelo digital de elevación ALOS PALSAR.
 
+Pre-Logic Script Code para Python 2 sobre ArcGIS for Desktop y Python 3 sobre ArcGIS Pro:
+```
+# -*- coding: UTF-8 -*-
+# Parameters
+thermal_level_caldas = False  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, <= 1000 meters'],
+                          [2000,'Templado, 18°C+, <= 2000 meters'],
+                          [3000,'Frío, 12°C+, <= 3000 meters'],
+                          [4000,'Páramo, 0°C, <= 4000 meters'],
+                          [99999,'Glacial, 0°C-, > 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T>=24°C, <=800meter'],
+                            [1800,'Templado, 24°C>T>18°C, <=1800meter'],
+                            [2800,'Frío, 18°C>T>12°C, <=2800meter'],
+                            [3700,'Muy Frío, 12°C>T>6°C, <=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C>T>0°C, <=4700meter'],
+                            [99999,'Nival, T<0°C, >4700meter']] # Elevation value in meters
 
+# Thermal level system
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
+else:
+    thermal_level_ref = thermal_level_ref_conv
 
- 
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
+        if elevation <= i[0]:
+            return i[0],i[1]
+```
+
+> Para utilizar la clasificación convencional definir `thermal_level_caldas = False` y para la clasificación Caldas definir `thermal_level_caldas = True`
+
+Para calcular cada uno de los campos utilizar:
+
+| Field      | Llamado de función            | thermal_level_caldas |
+|------------|-------------------------------|----------------------|
+| TherLCv    | thermal_level_f(!DEMALOS!)[0] | False                |
+| TherLCvTxt | thermal_level_f(!DEMALOS!)[1] | False                |
+| TherLCl    | thermal_level_f(!DEMALOS!)[0] | True                 |
+| TherLClTxt | thermal_level_f(!DEMALOS!)[1] | True                 |
+
+Ejemplo de cálculo para TherLCv:  
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateFieldTherLCv.png)
+
+Realice el cálculo de los demás campos y verifique la tabla de atributos.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateFieldThermalLevelTable.png)
+
+Simbolice las estaciones por valores únicos a partir del campo de atributos `TherLCl` de la clasificación numérica Caldas.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimbologyUniqueValueTherLCv.png)
+
+Desde la simbología de representación por valores únicos para los campos de atributos TherLCv y TherLCl, obtenga el total de estaciones para cada rango utilizando la opción _More / Show Count_. 
+
+Resultados para cortes convencionales
+
+| Valor de corte | Etiqueta                        | Estaciones |
+|:---------------|:--------------------------------|------------|
+| 1000           | Cálido, 24°C+, <= 1000 meters   | 416        |
+| 2000           | Templado, 18°C+, <= 2000 meters | 20         |
+| 3000           | Frío, 12°C+, <= 3000 meters     | 4          |
+| 4000           | Páramo, 0°C, <= 4000 meters     | 0          |
+| 99999          | Glacial, 0°C-, > 4000 meters    | 0          |
+
+Resultados para cortes Francisco José de Caldas, año 1802
+
+| Valor de corte | Etiqueta                                    | Estaciones |
+|:---------------|:--------------------------------------------|------------|
+| 800            | Cálido, T>=24°C, <=800meter                 | 411        |
+| 1800           | Templado, 24°C>T>18°C, <=1800meter          | 24         |
+| 2800           | Frío, 18°C>T>12°C, <=2800meter              | 5          |
+| 3700           | Muy Frío, 12°C>T>6°C, <=3700meter           | 0          |
+| 4700           | Extremadamente Frio, 6°C>T>0°C, <=4700meter | 0          |
+| 99999          | Nival, T<0°C, >4700meter                    | 0          |
+
+Como observa en las gráficas y tablas anteriores, las estaciones de la zona de estudio se encuentran predominantemente en el piso térmico Cálido y algunas de ellas se encuentran en el piso térmico templado y muy pocas en el piso térmico frío sobre la cordillera oriental de Colombia. 
+
+A partir de este momento, ya dispone de la red de estaciones de la zona de estudio con diferentes elevaciones y su clasificación por diferentes pisos térmicos.
 
 
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                      |
-|:---------:|:-----------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS para las estaciones de la zona de estudio. | 
-|     2     | Realice el procedimiento presentado en esta clase en ArcGIS Pro para las estaciones del área continental de Colombia.        | 
+| Actividad | Alcance                                                                                                                                              |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS para las estaciones de la zona de estudio.                         | 
+|     2     | Investigue y documente otros métodos de clasificación por nivel térmico que se apliquen en otros países diferentes a los citados en las referencias. | 
  
 
 ### Referencias
 
-* http://dhime.ideam.gov.co/atencionciudadano/
-* http://www.ideam.gov.co/solicitud-de-informacion
+* [IDEAM Colombia - Clasificación de los climas (clima-text.pdf)](http://atlas.ideam.gov.co/basefiles/clima-text.pdf)
+* [IDEAM Colombia - Clasificación climática de Caldas](http://www.ideam.gov.co/documents/10182/599272/Clasificacion+Climatica+de+Caldas+2014.pdf/d4ffa383-e60b-4ec5-8aa2-1b553d23b44f?version=1.0)
+* [Pisos térmicos en Costa Rica](https://www.mep.go.cr/sites/default/files/recursos/recursos-interactivos/clima_tiempo/pdf/pisos_termicos.pdf)
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 

@@ -1,2 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metadata xml:lang="es"><Esri><CreaDate>20220810</CreaDate><CreaTime>10203700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Spatial Analyst Tools.tbx\ExtractMultiValuesToPoints" Date="20220810" Time="102037">ExtractMultiValuesToPoints "CNE_IDEAM_OE_ZE " "ASTGTMV003Mosaic.tif DEMASTER;SRTMV003MosaicArcGISPro.tif DEMSRTM;APFBSRT1MosaicArcGISPro.tif DEMALOS" NONE</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\Toolboxes\Data Management Tools.tbx\UpdateSchema" Date="20220810" Time="140758">UpdateSchema "CIMDATA=&lt;CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.0.0'&gt;&lt;WorkspaceConnectionString&gt;DATABASE=D:\R.LTWB\.shp&lt;/WorkspaceConnectionString&gt;&lt;WorkspaceFactory&gt;Shapefile&lt;/WorkspaceFactory&gt;&lt;Dataset&gt;CNE_IDEAM_OE_ZE .shp&lt;/Dataset&gt;&lt;DatasetType&gt;esriDTFeatureClass&lt;/DatasetType&gt;&lt;/CIMStandardDataConnection&gt;" &lt;operationSequence&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLCv&lt;/field_name&gt;&lt;field_type&gt;FLOAT&lt;/field_type&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLCvTxt&lt;/field_name&gt;&lt;field_type&gt;TEXT&lt;/field_type&gt;&lt;field_length&gt;100&lt;/field_length&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLCl&lt;/field_name&gt;&lt;field_type&gt;FLOAT&lt;/field_type&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLClTxt&lt;/field_name&gt;&lt;field_type&gt;TEXT&lt;/field_type&gt;&lt;field_length&gt;100&lt;/field_length&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;/operationSequence&gt;</Process></lineage></DataProperties></Esri></metadata>
+<metadata xml:lang="es"><Esri><CreaDate>20220810</CreaDate><CreaTime>10203700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Spatial Analyst Tools.tbx\ExtractMultiValuesToPoints" Date="20220810" Time="102037">ExtractMultiValuesToPoints "CNE_IDEAM_OE_ZE " "ASTGTMV003Mosaic.tif DEMASTER;SRTMV003MosaicArcGISPro.tif DEMSRTM;APFBSRT1MosaicArcGISPro.tif DEMALOS" NONE</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\Toolboxes\Data Management Tools.tbx\UpdateSchema" Date="20220810" Time="140758">UpdateSchema "CIMDATA=&lt;CIMStandardDataConnection xsi:type='typens:CIMStandardDataConnection' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/3.0.0'&gt;&lt;WorkspaceConnectionString&gt;DATABASE=D:\R.LTWB\.shp&lt;/WorkspaceConnectionString&gt;&lt;WorkspaceFactory&gt;Shapefile&lt;/WorkspaceFactory&gt;&lt;Dataset&gt;CNE_IDEAM_OE_ZE .shp&lt;/Dataset&gt;&lt;DatasetType&gt;esriDTFeatureClass&lt;/DatasetType&gt;&lt;/CIMStandardDataConnection&gt;" &lt;operationSequence&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLCv&lt;/field_name&gt;&lt;field_type&gt;FLOAT&lt;/field_type&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLCvTxt&lt;/field_name&gt;&lt;field_type&gt;TEXT&lt;/field_type&gt;&lt;field_length&gt;100&lt;/field_length&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLCl&lt;/field_name&gt;&lt;field_type&gt;FLOAT&lt;/field_type&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;workflow&gt;&lt;AddField&gt;&lt;field_name&gt;TherLClTxt&lt;/field_name&gt;&lt;field_type&gt;TEXT&lt;/field_type&gt;&lt;field_length&gt;100&lt;/field_length&gt;&lt;field_is_nullable&gt;False&lt;/field_is_nullable&gt;&lt;field_is_required&gt;False&lt;/field_is_required&gt;&lt;/AddField&gt;&lt;/workflow&gt;&lt;/operationSequence&gt;</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220810" Time="143150">CalculateField "CNE_IDEAM_OE_ZE " TherLCv thermalLevelF(!DEMALOS!)[0] "Python 3" "# -*- coding: UTF-8 -*-
+# Parameters
+thermalLevelCaldas = True  # True for Caldas classification, False for conventional classification range
+thermalLevelRefConv = [[1000,'Cálido, 24°C+, &lt;= 1000 meters'],
+                       [2000,'Templado, 18°C+, &lt;= 2000 meters'],
+                       [3000,'Frío, 12°C+, &lt;= 3000 meters'],
+                       [4000,'Páramo, 0°C, &lt;= 4000 meters'],
+                       [99999,'Glacial, 0°C-, &gt; 4000 meters']] # Elevation value in meters
+thermalLevelRefCaldas = [[800,'Cálido, T&gt;=24°C, &lt;=800meter'],
+                         [1800,'Templado, 24°C&gt;T&gt;18°C, &lt;=1800meter'],
+                         [2800,'Frío, 18°C&gt;T&gt;12°C, &lt;=2800meter'],
+                         [3700,'Muy Frío, 12°C&gt;T&gt;6°C, &lt;=3700meter'],
+                         [4700,'Extremadamente Frio, 6°C&gt;T&gt;0°C, &lt;=4700meter'],
+                         [99999,'Nival, T&lt;0°C, &gt;4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermalLevelCaldas == True:
+    thermalLevelRef = thermalLevelRefCaldas
+else:
+    thermalLevelRef = thermalLevelRefConv
+
+def thermalLevelF(elevation):
+    for i in thermalLevelRef[:]:
+        if elevation &lt;= i[0]:
+            return i[0],i[1]" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220810" Time="143516">CalculateField "CNE_IDEAM_OE_ZE " TherLCv thermal_level_f(!DEMALOS!)[0] "Python 3" "# -*- coding: UTF-8 -*-
+# Parameters
+thermal_level_caldas = True  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, &lt;= 1000 meters'],
+                          [2000,'Templado, 18°C+, &lt;= 2000 meters'],
+                          [3000,'Frío, 12°C+, &lt;= 3000 meters'],
+                          [4000,'Páramo, 0°C, &lt;= 4000 meters'],
+                          [99999,'Glacial, 0°C-, &gt; 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T&gt;=24°C, &lt;=800meter'],
+                            [1800,'Templado, 24°C&gt;T&gt;18°C, &lt;=1800meter'],
+                            [2800,'Frío, 18°C&gt;T&gt;12°C, &lt;=2800meter'],
+                            [3700,'Muy Frío, 12°C&gt;T&gt;6°C, &lt;=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C&gt;T&gt;0°C, &lt;=4700meter'],
+                            [99999,'Nival, T&lt;0°C, &gt;4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
+else:
+    thermal_level_ref = thermal_level_ref_conv
+
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
+        if elevation &lt;= i[0]:
+            return i[0],i[1]" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220810" Time="143534">CalculateField "CNE_IDEAM_OE_ZE " TherLCv thermal_level_f(!DEMALOS!)[0] "Python 3" "# -*- coding: UTF-8 -*-
+# Parameters
+thermal_level_caldas = False  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, &lt;= 1000 meters'],
+                          [2000,'Templado, 18°C+, &lt;= 2000 meters'],
+                          [3000,'Frío, 12°C+, &lt;= 3000 meters'],
+                          [4000,'Páramo, 0°C, &lt;= 4000 meters'],
+                          [99999,'Glacial, 0°C-, &gt; 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T&gt;=24°C, &lt;=800meter'],
+                            [1800,'Templado, 24°C&gt;T&gt;18°C, &lt;=1800meter'],
+                            [2800,'Frío, 18°C&gt;T&gt;12°C, &lt;=2800meter'],
+                            [3700,'Muy Frío, 12°C&gt;T&gt;6°C, &lt;=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C&gt;T&gt;0°C, &lt;=4700meter'],
+                            [99999,'Nival, T&lt;0°C, &gt;4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
+else:
+    thermal_level_ref = thermal_level_ref_conv
+
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
+        if elevation &lt;= i[0]:
+            return i[0],i[1]" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220810" Time="144248">CalculateField "CNE_IDEAM_OE_ZE " TherLCvTxt thermal_level_f(!DEMALOS!)[1] "Python 3" "# -*- coding: UTF-8 -*-
+# Parameters
+thermal_level_caldas = False  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, &lt;= 1000 meters'],
+                          [2000,'Templado, 18°C+, &lt;= 2000 meters'],
+                          [3000,'Frío, 12°C+, &lt;= 3000 meters'],
+                          [4000,'Páramo, 0°C, &lt;= 4000 meters'],
+                          [99999,'Glacial, 0°C-, &gt; 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T&gt;=24°C, &lt;=800meter'],
+                            [1800,'Templado, 24°C&gt;T&gt;18°C, &lt;=1800meter'],
+                            [2800,'Frío, 18°C&gt;T&gt;12°C, &lt;=2800meter'],
+                            [3700,'Muy Frío, 12°C&gt;T&gt;6°C, &lt;=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C&gt;T&gt;0°C, &lt;=4700meter'],
+                            [99999,'Nival, T&lt;0°C, &gt;4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
+else:
+    thermal_level_ref = thermal_level_ref_conv
+
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
+        if elevation &lt;= i[0]:
+            return i[0],i[1]" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220810" Time="144318">CalculateField "CNE_IDEAM_OE_ZE " TherLCl thermal_level_f(!DEMALOS!)[0] "Python 3" "# -*- coding: UTF-8 -*-
+# Parameters
+thermal_level_caldas = True  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, &lt;= 1000 meters'],
+                          [2000,'Templado, 18°C+, &lt;= 2000 meters'],
+                          [3000,'Frío, 12°C+, &lt;= 3000 meters'],
+                          [4000,'Páramo, 0°C, &lt;= 4000 meters'],
+                          [99999,'Glacial, 0°C-, &gt; 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T&gt;=24°C, &lt;=800meter'],
+                            [1800,'Templado, 24°C&gt;T&gt;18°C, &lt;=1800meter'],
+                            [2800,'Frío, 18°C&gt;T&gt;12°C, &lt;=2800meter'],
+                            [3700,'Muy Frío, 12°C&gt;T&gt;6°C, &lt;=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C&gt;T&gt;0°C, &lt;=4700meter'],
+                            [99999,'Nival, T&lt;0°C, &gt;4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
+else:
+    thermal_level_ref = thermal_level_ref_conv
+
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
+        if elevation &lt;= i[0]:
+            return i[0],i[1]" Text NO_ENFORCE_DOMAINS</Process><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Data Management Tools.tbx\CalculateField" Date="20220810" Time="144338">CalculateField "CNE_IDEAM_OE_ZE " TherLClTxt thermal_level_f(!DEMALOS!)[1] "Python 3" "# -*- coding: UTF-8 -*-
+# Parameters
+thermal_level_caldas = True  # True for Caldas classification, False for conventional classification range
+thermal_level_ref_conv = [[1000,'Cálido, 24°C+, &lt;= 1000 meters'],
+                          [2000,'Templado, 18°C+, &lt;= 2000 meters'],
+                          [3000,'Frío, 12°C+, &lt;= 3000 meters'],
+                          [4000,'Páramo, 0°C, &lt;= 4000 meters'],
+                          [99999,'Glacial, 0°C-, &gt; 4000 meters']] # Elevation value in meters
+thermal_level_ref_caldas = [[800,'Cálido, T&gt;=24°C, &lt;=800meter'],
+                            [1800,'Templado, 24°C&gt;T&gt;18°C, &lt;=1800meter'],
+                            [2800,'Frío, 18°C&gt;T&gt;12°C, &lt;=2800meter'],
+                            [3700,'Muy Frío, 12°C&gt;T&gt;6°C, &lt;=3700meter'],
+                            [4700,'Extremadamente Frio, 6°C&gt;T&gt;0°C, &lt;=4700meter'],
+                            [99999,'Nival, T&lt;0°C, &gt;4700meter']] # Elevation value in meters
+
+# Thermal level system
+if thermal_level_caldas == True:
+    thermal_level_ref = thermal_level_ref_caldas
+else:
+    thermal_level_ref = thermal_level_ref_conv
+
+def thermal_level_f(elevation):
+    for i in thermal_level_ref[:]:
+        if elevation &lt;= i[0]:
+            return i[0],i[1]" Text NO_ENFORCE_DOMAINS</Process></lineage></DataProperties></Esri></metadata>
