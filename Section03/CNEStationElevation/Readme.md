@@ -1,7 +1,7 @@
 ## Análisis y representación de elevaciones en estaciones terrestres
 Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Chart` `Scatter Plot Matrix` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStation.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStationElevation.svg)
 
 Los catálogos de estaciones terrestres contienen el atributo de elevación asociada a cada estación que debe ser validado a partir de los modelos digitales de elevación DEM para su uso posterior en la implementación de métodos de imputación de datos faltantes por relaciones espaciales.                       
 
