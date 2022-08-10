@@ -25,6 +25,7 @@ Lib/
 *.tfw
 # Grid temporal metadata
 *.aux.xml
+*.tif.xml
 
 
 # Large files exclusions
