@@ -248,7 +248,7 @@ Resultados para cortes Francisco José de Caldas, año 1802
 Como observa en las gráficas y tablas anteriores, las estaciones de la zona de estudio se encuentran predominantemente en el piso térmico Cálido y algunas de ellas se encuentran en el piso térmico templado y muy pocas en el piso térmico frío sobre la cordillera oriental de Colombia. 
 
 
-### Análisis de densidad y cobertura
+### Análisis de densidad, cobertura y radio de acción
 
 Para estimar la densidad promedio de estaciones por km² y el cubrimiento promedio en km² por estación dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondientes al Cesar para todas las estaciones y para las estaciones asociadas a cada uno de los parámetros climatológicos, siga este procedimiento:
 
