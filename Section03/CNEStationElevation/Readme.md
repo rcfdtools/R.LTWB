@@ -1,5 +1,5 @@
 ## Análisis, representación de elevaciones y densidad de estaciones terrestres
-Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Chart` `Scatter Plot Matrix` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points` `Calculate Geometry Attributes`
+Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Chart` `Scatter Plot Matrix` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points` `Calculate Geometry Attributes` `Calculate Fields`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStationElevation.svg)
 
@@ -258,22 +258,52 @@ Para estimar la densidad promedio de estaciones por km² y el cubrimiento promed
 
 2. En la tabla de atributos del polígono aferente, cree los siguientes atributos:
 
-| Field      | Tipo   | Descripción                                                                                                                                                                          |
-|------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Stations   | Long   | Número de estaciones seleccionadas en la zona de estudio                                                                                                                             |
-| StatnsRain | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de precipitación con longitud hipotética de series igual o superior a 10 años                       |
-| StatnsTemp | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de temperatura del aire cerca del suelo con longitud hipotética de series igual o superior a 5 años |
-| StatnsEvap | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de evaporación potencial con longitud hipotética de series igual o superior a 5 años                |
-| DnStations | Double | Densidad en estaciones por km² para toda la zona de estudio                                                                                                                          |
-| DnStRain   | Double | Densidad en estaciones por km² para obtención de datos de precipitación                                                                                                              |
-| DnStTemp   | Double | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo                                                                                       |
-| DnStEvap   | Double | Densidad en estaciones por km² para obtención de datos de evaporación potencial                                                                                                      |
+| Field      | Tipo   | Descripción                                                                                                                                                                                          |
+|------------|--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Stations   | Long   | Número de estaciones seleccionadas en la zona de estudio (440 estaciones)                                                                                                                            |
+| StatnsRain | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de precipitación con longitud hipotética de series igual o superior a 10 años (139 estaciones )                     |
+| StatnsTemp | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de temperatura del aire cerca del suelo con longitud hipotética de series igual o superior a 5 años (42 estaciones) |
+| StatnsEvap | Long   | Número de estaciones seleccionadas en la zona de estudio para obtención de datos de evaporación potencial con longitud hipotética de series igual o superior a 5 años (41 estaciones)                |
+| DnStations | Double | Densidad en estaciones por km² para toda la zona de estudio                                                                                                                                          |
+| DnStRain   | Double | Densidad en estaciones por km² para obtención de datos de precipitación                                                                                                                              |
+| DnStTemp   | Double | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo                                                                                                       |
+| DnStEvap   | Double | Densidad en estaciones por km² para obtención de datos de evaporación potencial                                                                                                                      |
 
-> El número de estaciones ha sido obtenido en la actividad: [Catálogo nacional de estaciones - CNE y selección para la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+> El número de estaciones seleccionadas ha sido obtenido en la actividad: [Catálogo nacional de estaciones - CNE y selección para la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 >
 > Para las estaciones registradoras de nivel de lámina de agua, no se presenta un análisis de densidad debido a que su localización se realiza sobre puntos de interés particulares sobre una corriente de agua y no bajo criterios de densidad espacial.
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0AddFieldDensity.png)
 
+3. En la tabla de atributos, asigne el número de estaciones en los campos `Stations=440`, `StatnsRain=139`, `StatnsTemp=42` y `StatnsEvap=41`. 
+
+4. Utilizando la herramienta _Calculate Field_ disponible en la cabecera de cada campo de atributos, calcule las densidades de los campos DnStations, DnStRain, DnStTemp y DnStEvap con la siguiente expresión:
+
+D = n / A
+
+donde,
+D: densidad en estaciones / km²
+n: número de estaciones
+A: área en km²
+
+Manualmente, calcule la cobertura geográfica de cada estación con la expresión:
+
+C = 1 / D
+
+donde,
+C: cobertura de área en km² por cada estación
+D: densidad en estaciones / km²
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateFieldDensity.png)
+
+Valores de densidad y cobertura obtenidos
+
+| Atributo   | Descripción                                                                                    | D, Estn/km²       | Cobertura, km²/Estn |  
+|------------|:-----------------------------------------------------------------------------------------------|-------------------|---------------------|
+| DnStations | Densidad en estaciones por km² para toda la zona de estudio                                    | 0.00902742680521  | 110.77              |
+| DnStRain   | Densidad en estaciones por km² para obtención de datos de precipitación                        | 0.002852          | 350.63              |
+| DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316 | 1160.49             |
+| DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                | 0.000841          | 1189.06             |
 
 
 A partir de este momento, ya dispone de la red de estaciones de la zona de estudio con diferentes elevaciones y su clasificación por diferentes pisos térmicos.
