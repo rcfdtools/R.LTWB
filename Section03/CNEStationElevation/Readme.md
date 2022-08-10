@@ -24,6 +24,16 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 * [Capa integrada de estaciones terrestres del IDEAM y otras entidades. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 
 
+### Diagrama general de procedimientos
+
+El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
+
+<div align="center">
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStationFlowchart.svg" width="65%"><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
+</div>
+
+
 ### Arreglos de datos para clasificación de estaciones por pisos térmicos
 
 
@@ -48,14 +58,6 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 | 3700           | Muy Frío, 12°C>T>6°C, <=3700meter           |
 | 4700           | Extremadamente Frio, 6°C>T>0°C, <=4700meter |
 | 99999          | Nival, T<0°C, >4700meter                    |
-
-
-### Diagrama general de procedimientos
-
-<div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStationFlowchart.svg" width="65%"><br>
-<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
-</div>
 
 
 ### Procedimiento general
