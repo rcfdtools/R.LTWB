@@ -93,12 +93,42 @@ En el panel de simbología, de clic en la pestaña Histogram, podrá observar la
 
 > El procedimiento anterior puede ser desarrollado manualmente para cada DEM a través de la herramienta Zonal Statistics As Table.
 
-6. Para cada uno de los campos de atributos `DEMASTER`, `DEMSRTM` y `DEMALOS`, genere una estadística y evalue los rangos de valores.
+6. Para cada uno de los campos de atributos `DEMASTER`, `DEMSRTM` y `DEMALOS`, genere estadísticas detalladas y evalue los rangos de valores.
 
-
+Las elevaciones de las estaciones obtenidas a partir del DEM ASTER, presentan valores entre 5 y 2567 m.s.n.m. con media en 214.7 m.s.n.m. y desviación estándar de 358.2 m.s.n.m. Seleccionando las 3 primeras bandas, podrá observar que de las 440 estaciones, 405 se encuentran entre 5 y 627 m.s.n.m. 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationASTERStatistic.png)
 
+Las elevaciones de las estaciones obtenidas a partir del DEM SRTM, presentan valores entre 0 y 2564 m.s.n.m. con media en 216.6 m.s.n.m. y desviación estándar de 357.4 m.s.n.m. Seleccionando las 3 primeras bandas, podrá observar que de las 440 estaciones, 405 se encuentran entre 0 y 636 m.s.n.m. 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationSRTMStatistic.png)
 
+Las elevaciones preliminares de las estaciones obtenidas a partir del DEM ALOS, presentan valores entre -9999 y 2568 m.s.n.m. con media en 192.1 m.s.n.m. y desviación estándar de 604.4 m.s.n.m. Como observa en la gráfica, 1 de las estaciones ha obtenido un valor de -9999 que indica que no se ha podido obtener la elevación a partir del DEM. 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStatistic.png)
+
+Desde la tabla de atributos, dando doble clic en la cabecera del campo `DEMALOS`, ordene ascendentemente las elevaciones y luego dando doble clic en el registro de la estación, localice la estación en pantalla acercado a escala 1:5000 que corresponde a _SAN FRANCISCO [15067170]_ y asigne manualmente el valor de la elevación utilizando como referencia la celda más próxima de la grilla ALOS que corresponde a 128 m.s.n.m. .
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStationManualValue.png)
+
+Vuelva a la estadística de campo. Las elevaciones preliminares de las estaciones obtenidas a partir del DEM ALOS asignando manualmente la elevación a una de las estaciones, presentan valores entre -6 y 2568 m.s.n.m. con media en 215.2 m.s.n.m. y desviación estándar de 358.1 m.s.n.m. Seleccionando las 3 primeras bandas, podrá observar que de las 440 estaciones, 404 se encuentran entre 0 y 602 m.s.n.m. 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStatisticFixed.png)
+
+Tabla resumen de valores obtenidos de elevación.  
+
+| Estadístico | IDEAM | ASTER | SRTM  | ALOS  |
+|-------------|-------|-------|-------|-------|
+| Mean        | 205   | 214.7 | 216.6 | 215.2 |
+| Median      | 100   | 95    | 97    | 97    |
+| STD. Dev.   | 329.2 | 358.2 | 357.4 | 358.1 |
+| Rows        | 440   | 440   | 440   | 440   |
+| Count       | 440   | 440   | 440   | 440   |
+| Nulls       | 0     | 0     | 0     | 0     |
+| Min         | 1     | 5     | 0     | -6    |
+| Max         | 2700  | 2567  | 2564  | 2568  |
+| Skewness    | 3.56  | 3.4   | 3.4   | 3.4   |
+| Kurtosis    | 18.5  | 16.2  | 16.3  | 16.3  |
+
+> Como puede observar en la tabla anterior, existe una diferencia importante entre el máximo de las elevaciones del IDEAM con respecto al máximo de las elevaciones obtenida a través de los modelo digitales de elevación DEM.
+
+7. 
 
 
 
