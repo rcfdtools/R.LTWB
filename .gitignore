@@ -27,6 +27,7 @@ Lib/
 *.tif.aux.xml
 *.tif.vat.cpg
 *.tif.vat.dbf
+*Copia_de_seguridad_de*
 
 
 # Large files exclusions

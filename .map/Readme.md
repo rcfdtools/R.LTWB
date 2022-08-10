@@ -1,6 +1,6 @@
 ## Map documents
 
-Esta carpeta contiene los mapas de documento creados en aplicaciones SIG, como:
+Esta carpeta contiene los mapas de documento creados en aplicaciones SIG en diferentes formatos.
 
 * .mxd: mapa de ArcGIS for Desktop
 * .sxd: escena de  ArcGIS for Desktop
