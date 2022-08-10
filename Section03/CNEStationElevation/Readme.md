@@ -1,5 +1,5 @@
 ## Análisis y representación de elevaciones en estaciones terrestres
-Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Scatter plot` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points`
+Keywords: `IDEAM` `Weather Station` `Bar graph` `Select By Location` `Chart` `Scatter Plot Matrix` `Definition Query` `Normal distribution` `Statistics` `Extract Multi Values to Points`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStation.png)
 
@@ -104,7 +104,7 @@ Las elevaciones de las estaciones obtenidas a partir del DEM SRTM, presentan val
 Las elevaciones preliminares de las estaciones obtenidas a partir del DEM ALOS, presentan valores entre -9999 y 2568 m.s.n.m. con media en 192.1 m.s.n.m. y desviación estándar de 604.4 m.s.n.m. Como observa en la gráfica, 1 de las estaciones ha obtenido un valor de -9999 que indica que no se ha podido obtener la elevación a partir del DEM. 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStatistic.png)
 
-Desde la tabla de atributos, dando doble clic en la cabecera del campo `DEMALOS`, ordene ascendentemente las elevaciones y luego dando doble clic en el registro de la estación, localice la estación en pantalla acercado a escala 1:5000 que corresponde a _SAN FRANCISCO [15067170]_ y asigne manualmente el valor de la elevación utilizando como referencia la celda más próxima de la grilla ALOS que corresponde a 128 m.s.n.m. .
+Desde la tabla de atributos, dando doble clic en la cabecera del campo `DEMALOS`, ordene ascendentemente las elevaciones y luego dando doble clic en el registro de la estación, localice la estación en pantalla acercado a escala 1:5000 que corresponde a _SAN FRANCISCO [15067170]_ y asigne manualmente el valor de la elevación utilizando como referencia la celda más próxima de la grilla ALOS que corresponde a 128 m.s.n.m.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStationManualValue.png)
 
@@ -128,8 +128,33 @@ Tabla resumen de valores obtenidos de elevación.
 
 > Como puede observar en la tabla anterior, existe una diferencia importante entre el máximo de las elevaciones del IDEAM con respecto al máximo de las elevaciones obtenida a través de los modelo digitales de elevación DEM.
 
-7. 
+7. En la tabla de contenido, de clic derecho sobre la capa de estaciones CNE_IDEAM_OE_ZE.shp y seleccione la opción _Create Chart / Scatter Plot Matrix_ para crear un gráfico de dispersión para comparar los valores de las diferentes elevaciones obtenidas. En variables seleccione `altitud`, `DEMASTER`, `DEMSRTM` y `DEMALOS`, active la casilla de visualización de línea de tendencia y agregue histogramas en las diagonales. 
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CreateScatterPlotMatrix.png)
+
+Como puede observar en la siguiente ilustración, existe una alta correspondencia entre los valores de las elevaciones obtenidas a partir de las grilla DEM y dispersión y valores atípicos (outliers) al comparar las elevaciones del IDEAM con las obtenidas satelitalmente.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrix.png)
+
+En el panel _Matrix Layout_, represente en la esquina superior derecha los valores del parámetro estadístico R². Como puede observar en la gráfica, el coeficiente de determinación entre los datos obtenidos satelitalmente es 1 y entre los datos satelitales vs. los datos IDEAM es de 0.79.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixRSquare.png)
+
+> El R-cuadrado es una medida estadística de qué tan cerca están los datos de la línea de regresión ajustada. También se conoce como coeficiente de determinación, o coeficiente de determinación múltiple si se trata de regresión múltiple. [^1]
+
+En el panel _Matrix Layout_, represente en la esquina superior derecha los valores del coeficiente de correlación de Pearson _r_. Como puede observar en la gráfica, el valor de _r_ entre los datos obtenidos satelitalmente es 1 y entre los datos satelitales vs. los datos IDEAM es de 0.89.
+
+> En estadística, el coeficiente de correlación de Pearson es una medida de dependencia lineal entre dos variables aleatorias cuantitativas. A diferencia de la covarianza, la correlación de Pearson es independiente de la escala de medida de las variables. [^2]
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixRPearson.png)
+
+8. En el panel _Matrix Layout_, represente en la esquina superior derecha el `Preview Plot` y seleccione en la gráfica la combinación entre altitud del IDEAM y los valores de ALOS. Ahora, manualmente y con ayuda de la tecla <kbd>Ctrl</kbd>, seleccione todas aquellas estaciones que estan muy alejadas de la tendencia lineal mostrada.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixOutliers.png)
+
+9. Abra la tabla de atributos, filtre las estaciones seleccionadas y realice visualmente un análisis de las diferencias entre los valores de elevación registrados en el IDEAM vs. los obtenidos a partir de los DEM. Podrá observar que todas estas estaciones presentan una gran diferencia de elevación y que los valores reportados por el IDEAM no corresponden a elevaciones homogéneas comparando con los datos obtenidos satelitalmente.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0ElevationScatterPlotMatrixOutliersTable.png)
 
 
 ### Actividades complementarias:pencil2:
@@ -163,5 +188,5 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/999) | [Siguiente]() |
 |--------------------------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------------|---------------|
 
-[^1]: http://dhime.ideam.gov.co/atencionciudadano/
-[^2]: https://pro.arcgis.com/en/pro-app/latest/help/data/excel/prepare-to-work-with-excel-in-arcgis-pro.htm
+[^1]: https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste#:~:text=El%20R%2Dcuadrado%20es%20una,se%20trata%20de%20regresi%C3%B3n%20m%C3%BAltiple.
+[^2]: https://es.wikipedia.org/wiki/Coeficiente_de_correlaci%C3%B3n_de_Pearson
