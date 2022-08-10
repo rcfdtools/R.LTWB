@@ -279,7 +279,11 @@ Para estimar la densidad promedio de estaciones por km² y el cubrimiento promed
 
 4. Utilizando la herramienta _Calculate Field_ disponible en la cabecera de cada campo de atributos, calcule las densidades de los campos DnStations, DnStRain, DnStTemp y DnStEvap con la siguiente expresión:
 
+<div align="center">
+
 D = n / A
+
+</div>
 
 donde,
 D: densidad en estaciones / km²
@@ -288,7 +292,11 @@ A: área en km²
 
 Manualmente, calcule la cobertura geográfica de cada estación con la expresión:
 
+<div align="center">
+
 C = 1 / D
+
+</div>
 
 donde,
 C: cobertura de área en km² por cada estación
@@ -296,7 +304,11 @@ D: densidad en estaciones / km²
 
 Manualmente, calcule el radio de acción promedio en km de cada estación utilizando la siguiente expresión:
 
+<div align="center">
+
 r = √ ( A / π)
+
+</div>
 
 donde, 
 r: radio de acción en km
