@@ -11,6 +11,7 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 * Obtener las cotas de las estaciones a partir de los modelos satelitales digitales de elevación ASTER, SRTM y ALOS.
 * Analizar la correspondencia entre las elevaciones presentadas en el campo `altitud` del IDEAM y las elevaciones obtenidas a partir de modelos satelitales.
 * Clasificar las estaciones terrestres por piso térmico a partir de cortes convencionales cada 1000 m.s.n.m y los cortes definidos por Caldas en 1802.
+* Estimar la densidad promedio de estaciones por km² y el cubrimiento promedio en km² por estación dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondiente al Cesar.
 * Definir las elevaciones de las estaciones que posteriormente se utilizarán como referencia en los algoritmos de imputación o completado de datos faltantes a partir de relaciones geográficas. 
 
 
@@ -20,11 +21,15 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
 * [Polígono que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
-* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
-* [Capa integrada de estaciones terrestres del IDEAM y otras entidades. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+* [Polígono envolvente aferente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioBufferStation.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+* [Capa integrada de estaciones terrestres del IDEAM y otras entidades de la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+* Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
+* Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
+* Modelo digital de elevación ALOS PALSAR 12.5m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
+* :open_file_folder: [Descargar mosaicos grillas DEM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).
 
 
-### Diagrama general de procedimientos
+### Diagrama general de procesos
 
 El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
 
@@ -62,37 +67,34 @@ El siguiente diagrama representa los procedimientos generales requeridos para el
 
 ### Procedimiento general
 
-1. Ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones en formato Microsoft Excel y Shapefile, el Catálogo nacional de otras entidades y el Glosario de variables. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion). Copiar los archivos de Microsoft Excel _[CNE_IDEAM.xls]()_ y _[CNE_OE.xls]()_ en el directorio _D:\R.LTWB\\.datasets_, copiar y descomprimir el archivo [CNE_IDEAM.zip]() que contiene los puntos de localización de las estaciones en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_.
+1. En ArcGIS Pro, abra el mapa _D:\R.LTWB\.map\ArcGISProSection03.aprx_ creado en la actividad de [selección de estaciones para la zona de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation) que contiene las estaciones integradas y los polígonos de la zona de estudio y su zona aferente. En caso de que este generando un proyecto nuevo, cargue directamente los archivos de formas geométricas [CNE_IDEAM_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip) y [ZonaEstudioBufferStation.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioBufferStation.zip). 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/DHIMERecursos.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/IDEAMSolicitudInformacion.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0MapProject.png)
 
-2. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection03.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
+2. Simbolice las estaciones por colores graduados a partir del campo `altitud` del IDEAM por el método de representación `Intervalo Definido` en 3 clases utilizando tamaños de intervalo cada 1000 m.s.n.m y utilice el esquema de color contínuo `Yellow to Red`. Desde el menú desplegable de más opciones `More`, active la visualización de estadísticos, podrá observar que para las 440 estaciones utilizadas en la zona de estudio, el rango de las elevaciones se encuentra entre 1 y 2700 m.s.n.m con elevaciones medias de 204.98 m.s.n.m y desviación estándar de 328.84 m.s.n.m, lo que indica que mayoritariamente las estaciones utilizadas se encuentran en la zona de llanura para la zona hidrográfica en estudio.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0NewMapProject.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventional.png)
 
-3. Desde la carpeta _.shp_, agregue al mapa el archivo shapefile [CNE_IDEAM.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM.zip), [ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip) y [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). Modifique la simbología de representación de _ZonaEstudioEnvelope_ sin relleno - línea contorno rojo - grosor 3 y _ZonaEstudio_ sin relleno - línea contorno negro - grosor 2. Simbolice las estaciones con puntos color gris 30% - sin contorno - tamaño 6, rotular por el campo `CODIGO` y acercar a la zona de estudio. 
+En el panel de simbología, de clic en la pestaña Histogram, podrá observar las barras o bandas que representan las estacionen en cada clase y la localización del valor promedio.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CNEMap.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalHistogram.png)
 
-> Tenga en cuenca que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE contiene integrado este sistema. En cuanto al número de estaciones, para la versión descargada a 20220731, el CNE se compone de 4476 estaciones.
+3. Abra la tabla de atributos de la capa y dando clic derecho en la columna de atributos del campo `altitud`, cree una estadística que incluya un histograma de 12 bandas y muestre la localización de la media, la mediana, la desviación estándar y el gráfico de distribución normal. En esta gráfica podrá analizar que mayoritariamente las estaciones se encuentran en cotas bajas. Seleccione las 6 primeras barras, en el estadístico podrá observar que de las 440 estaciones, 409 se encuentan entre las cotas 1 y 600 m.s.n.m. En el mapa podrá observar las localizaciones de estas estaciones y en la zona del costado derecho podrá observar que por encima de la cota 600 existen pocas estaciones.
 
-4. Desde la carpeta _.datasets_, agregue el archivo _CNE_OE.xls_ que contiene la localización de estaciones de otras entidades de Colombia y abra la tabla de atributos, podrá observar que a fecha 20220731 la tabla contiene 4620 registros. Dando clic derecho en la tabla y seleccionando la opción _Display XY Data_, cree una tabla de eventos geográficos para representar la localización de estas estaciones. Utilice el sistema de coordenadas _GCS_WGS_1984_.
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalStatistic.png)
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CNEOEDisplayXYData.png)
+4. 
 
-Como puede observar en la ilustración, en el polígono envolvente de la zona de estudio existen múltiples estaciones del catálogo nacional del IDEAM y de otras entidades. 
-
-> Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920)[^2].
 
 
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                            |
-|:---------:|:-----------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS. | 
+| Actividad | Alcance                                                                                                                      |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS para las estaciones de la zona de estudio. | 
+|     2     | Realice el procedimiento presentado en esta clase en ArcGIS Pro para las estaciones del área continental de Colombia.        | 
  
 
 ### Referencias

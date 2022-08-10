@@ -31,7 +31,7 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 
 
-### Diagrama general de procedimientos
+### Diagrama general de procesos
 
 El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
 
