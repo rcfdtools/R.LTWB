@@ -319,12 +319,12 @@ A: área de cobertura en km² de cada estación
 
 Valores de densidad y cobertura obtenidos
 
-| Atributo   | Descripción                                                                                    | D, Estn/km²       | Cobertura, km²/Estn | Radio de acción, km |  
-|------------|:-----------------------------------------------------------------------------------------------|-------------------|---------------------|---------------------|
-| DnStations | Densidad en estaciones por km² para toda la zona de estudio                                    | 0.00902742680521  | 110.77              | 5.94                |
-| DnStRain   | Densidad en estaciones por km² para obtención de datos de precipitación                        | 0.002852          | 350.63              | 10.57               |
-| DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316 | 1160.49             | 19.22               |
-| DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                | 0.000841          | 1189.06             | 19.46               |
+|  Atributo   | Descripción                                                                                    |    D, Estn/km²     | Cobertura, km²/Estn | Radio de acción, km |  
+|:-----------:|:-----------------------------------------------------------------------------------------------|:------------------:|:-------------------:|:-------------------:|
+| DnStations  | Densidad en estaciones por km² para toda la zona de estudio                                    |  0.00902742680521  |       110.77        |        5.94         |
+|  DnStRain   | Densidad en estaciones por km² para obtención de datos de precipitación                        |      0.002852      |       350.63        |        10.57        |
+|  DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316  |       1160.49       |        19.22        |
+|  DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                |      0.000841      |       1189.06       |        19.46        |
 
 Como observa en la tabla, los valores de densidad corresponden a valores inferiores a 1e-3 lo cual dimensionalmente no permite obtener un indicio claro de sí el número de estaciones es suficiente para realizar un análisis espacial adecuado de los diferentes parámetros climatológicos, por otra parte, la cobertura es un indicado significativo a partir del cual se puede deducir que para la red completa de estaciones seleccionada, la cobertura en km² por cada estación es de 110.77 que visualmente en el mapa de localización corresponde a un área de cubrimiento significativamente grande. Para los parámetros climáticos particulares, las coberturas de cada estación son mucho mayores y de hasta 1189.06 km²/estación, lo que indica que respecto a la red completa su densidad es aproximadamente 10 veces menos. En el caso de los radios de acción, los valores obtenidos se ajustan a los lineamientos establecidos por la [Organización Meteorológica Munidal - OMM](https://public.wmo.int/es) que para datos puviométricos recomienda que el radio de acción sea de al menos 12.5 km y para las estaciones seleccionadas el valor obtenido es 10.57 km, con respecto a los datos de temperatura y evaporación correspondientes principalmente a estaciones climatológicas ordinarias, la recomendación de la OMM es de un radio de 25 km y para las estaciones de la zona de estudio el mayor valor obtenido para estos parámetros es de 19.46 km.
 
@@ -345,6 +345,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop y en QGIS para las estaciones de la zona de estudio.                         | 
 |     2     | Investigue y documente otros métodos de clasificación por nivel térmico que se apliquen en otros países diferentes a los citados en las referencias. | 
+|     3     | Investigue, documente e implementa al menos una metodología adicional para el análisis de densidad de estaciones.                                   | 
  
 
 ### Referencias
