@@ -285,10 +285,10 @@ D = n / A
 
 </div>
 
-donde,
-D: densidad en estaciones / km²
-n: número de estaciones
-A: área en km²
+donde,  
+D: densidad en estaciones / km²  
+n: número de estaciones  
+A: área en km²  
 
 Manualmente, calcule la cobertura geográfica de cada estación con la expresión:
 
@@ -298,9 +298,9 @@ C = 1 / D
 
 </div>
 
-donde,
-C: cobertura de área en km² por cada estación
-D: densidad en estaciones / km²
+donde,  
+C: cobertura de área en km² por cada estación  
+D: densidad en estaciones / km²  
 
 Manualmente, calcule el radio de acción promedio en km de cada estación utilizando la siguiente expresión:
 
@@ -310,10 +310,10 @@ r = √ ( A / π)
 
 </div>
 
-donde, 
-r: radio de acción en km
-A: área de cobertura en km² de cada estación
-π: número de Pi. 3.1415926535897932384626433832795
+donde,  
+r: radio de acción en km  
+A: área de cobertura en km² de cada estación  
+π: número de Pi. 3.1415926535897932384626433832795  
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CalculateFieldDensity.png)
 
