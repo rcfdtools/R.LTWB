@@ -8,7 +8,7 @@ A partir de las grillas de acumulación de flujo, se pueden identificar las celd
 
 ### Objetivos
 
-* Marcar las celdas o pixeles correspondientes a cada cuenca de drenaje para un área de aportación determinada.
+* Marcar las celdas o píxeles correspondientes a cada cuenca de drenaje para un área de aportación determinada.
 * Convertir el mapa binarizado en un red de drenaje vectorizada.
 * Obtener los puntos de inicio y confluencia característicos de toda la red obtenida.
 * Eliminar nodos duplicados.
@@ -47,7 +47,7 @@ La demarcación de drenajes a partir de un área de aportación definida puede s
 
 #### Demarcación de drenajes con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [acumulaciones de flujo](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [acumulaciones de flujo](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres [ASTERStr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERStr.rar), [SRTMStr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMStr.rar) y [ALOSStr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSStr.rar) en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_. Como criterio de área de aportación utilice p. ej. 1 km², que para los modelos ASTER y SRTM corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 metros y para el modelo ALOS PALSAR, 6400 celdas de aportación ya que su resolución es de 12.5 metros. Para la representación en pantalla, use como fondo la red de drenaje vectorial.
 
@@ -85,7 +85,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 42'24.63")
 
 3. Convierta las grillas de demarcación de drenajes a vectores con la herramienta _ArcToolBox / Conversion Tools / From Raster / Raster to Polyline_, nombre como _[ASTERStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/asterstr.zip)_, _[SRTMStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/srtmstr.zip)_ y _[ALOSStr.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/alosstr.zip)_ en la carpeta _D:\R.LTWB\\.shp_. Desactive la casilla `Simplify polylines` para obtener líneas detalladas sobre cada celda horizontal, vertical y diagonal. Automáticamente, esta herramienta genera tramos de drenaje independientes manteniendo la correspondencia entre los puntos de unión de afluentes.
 
-Parámetros de entrada para la conversión a polilínea en grilla ASTER
+Parámetros de entrada para la conversión a polilíneas de grilla ASTER
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMASTERParameters.png)
 
 Resultados ventana de ejecución grilla ASTER (dt: 03'20")
@@ -100,7 +100,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 06'52")
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMALOSLog.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMALOS.png)
 
-> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, son localizadas a lo largo y en la diagonal de los pixeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
+> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, son localizadas a lo largo y en la diagonal de los píxeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red, pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
 
 4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _[ASTERStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ASTERStrNode.zip)_, _[SRTMStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/SRTMStrNode.zip)_ y _[ALOSStrNode.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ALOSStrNode.zip)_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
 
@@ -141,7 +141,7 @@ Utilizando la herramienta _ArcToolBox / Data Management Tools / General / Delete
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalParameters.png)  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/ArcGISDesktop10.2.2DeleteIdenticalStrDEMASTER.png)
 
-> En QGIS 3, el procedimiento de eliminación de elementos duplicados puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple que en ArcGIS debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente, sin embargo, es necesario crear una nueva capa geográfica. El proceso de eliminación homologable a _Delete Identical_ de ArcGIS puede ser realizado en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
+> En QGIS 3, el procedimiento de eliminación de elementos duplicados puede ser realizado con la herramienta _Processing Toolbox / Vector general / Delete duplicate geometries_, es más simple que en ArcGIS debido a que todos aquellos elementos que espacialmente sean coincidentes en su geometría, son eliminados automáticamente, sin embargo, es necesario crear una nueva capa geográfica. El proceso de eliminación homologable a _Delete Identical_ de ArcGIS puede ser ejecutado en QGIS con la herramienta _Processing Toolbox / Vector general / Delete duplicates by attribute_.
 
 Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y ALOSStrNode.shp. Resultados obtenidos:  
 
@@ -210,7 +210,7 @@ Rotule con las expresiones VB Script:
 | [ArcGIS Pro / Spatial Analyst](https://pro.arcgis.com/en/pro-app/latest/help/analysis/raster-functions/flow-direction-raster-function.htm) | En el panel _Geoprocessing_, busque la caja de herramientas _Spatial Analyst Tools / Map Algebra_ y seleccione la herramienta _Raster Calculator_. Ingrese la expresión, p. ej. `Con("ASTERFac.tif">=1062,1)` para grillas ASTER con resolución de 30.68464585 metros y defina el nombre del archivo vectorizado de salida. |
 | [ArcGIS Pro / Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)                                                 | En el panel _Geoprocessing_, busque la caja de herramientas _Arc Hydro Tools Pro / Terrain Preprocessing_ y seleccione la herramienta _Stream Definition_. Seleccione la grilla FAC de entrada, establezca el área de aportación o el número de celdas equivalentes y asigne un nombre a la grilla de salida.               |
 | [HEC-HMS](https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu)                                     | En el panel lateral seleccione en _Basin Models_ el modelo de cuenca creado, luego en el menú _GIS_ seleccione la opción _Identify Streams_ y defina el área de aportación.                                                                                                                                                 |
-| [QGIS 3](https://acolita.com/direccion-del-drenaje-en-qgis-3/)                                                                             | En el _Processing Toolbox_ busque el grupo de herramientas _Raster Analysis _ y ejecute _Raster Calculator_ ingresando, p. ej. `if("ASTERFac@1" >= 1062, 1, 0)`.                                                                                                                                                                                            |
+| [QGIS 3](https://acolita.com/direccion-del-drenaje-en-qgis-3/)                                                                             | En el _Processing Toolbox_ busque el grupo de herramientas _Raster Analysis _ y ejecute _Raster Calculator_ ingresando, p. ej. `if("ASTERFac@1" >= 1062, 1, 0)`.                                                                                                                                                            |
 
 Ejemplo de raster calculator sobre QGIS  
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/StrDEM/Screenshot/QGIS3.26.0RasterCalculatorStrDEMASTER.png)
