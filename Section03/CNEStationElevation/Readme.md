@@ -11,7 +11,7 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 * Obtener las cotas de las estaciones a partir de los modelos satelitales digitales de elevación ASTER, SRTM y ALOS.
 * Analizar la correspondencia entre las elevaciones presentadas en el campo `altitud` del IDEAM y las elevaciones obtenidas a partir de modelos satelitales.
 * Utilizando Python, clasificar las estaciones terrestres por piso térmico a partir de cortes convencionales cada 1000 m.s.n.m y los cortes definidos por Caldas en 1802.
-* Estimar la densidad promedio de estaciones por km² y el cubrimiento promedio en km² por estación dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondientes al Cesar.
+* Estimar la densidad promedio de estaciones por km², el cubrimiento promedio en km² por estación y el radio de acción dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondientes al Cesar - Colombia.
 * Definir las elevaciones de las estaciones que posteriormente se utilizarán como referencia en los algoritmos de imputación o completado de datos faltantes a partir de relaciones geográficas. 
 
 
