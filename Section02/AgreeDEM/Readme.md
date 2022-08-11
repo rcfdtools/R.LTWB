@@ -26,12 +26,15 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 * [Red de drenaje zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZEMerge.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/GDB100k).
-* Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
-* Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
-* Modelo digital de elevación ALOS PALSAR 12.5m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
+* Modelo digital de elevación ASTER GDEM 30 m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
+* Modelo digital de elevación SRTM 30 m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm)
+* Modelo digital de elevación ALOS PALSAR 12.5 m. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos)
 * :open_file_folder: [Descargar mosaicos grillas DEM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem).
 
-### Procedimiento general
+
+### Diagrama general de procesos
+
+El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Graph/AgreeDEMFlowchart.svg" width="75%"><br>
@@ -39,9 +42,11 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 </div>
 
 
+### Procedimiento general
+
 #### Recorte de modelos digitales de elevación DEM con ArcGIS Pro
 
-1. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio utilizaremos una distancia de 30m x 2 = 60m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer contiene esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
+1. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio usaremos una distancia de 30 m x 2 = 60 m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30 m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer contiene esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
 > La aferencia garantiza que el posterior recorte de los DEM incluya todas las celdas perimetrales dentro de la zona de estudio.
 
@@ -78,10 +83,10 @@ ALOS PALSAR de la zona de estudio (288 MB aprox.)
 Especificaciones de las grillas recortadas de la zona de estudio, referencia espacial MAGNA_SIRGAS_CMT12:
 
 |                                  MDE                                   | Grilla mosaico recortada         |  Resolución, m  | Cols  | Filas  | Area, km² | Cota mín, m | Cota máx, m | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                 |
-|:----------------------------------------------------------------------:|:---------------------------------|:---------------:|:-----:|:------:|:---------:|:--------------:|:--------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [ASTER GDEM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/ASTER) | ASTGTMV003MosaicArcGISProZE.tif  |      30.68      | 5408  |  8221  | 41860.42  |       0        |      5687      | [.rar](ASTGTMV003MosaicArcGISProZE.rar)                                                                                                                                                                                                                                                                                      |
-|    [SRTM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/SRTM)     | SRTMV003MosaicArcGISProZE.tif    |      30.68      | 5408  |  8221  | 41860.42  |      -46       |      5696      | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISProZE.rar)                                                                                                                                                                                                                                |
-| [ALOS PALSAR](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/ALOS) | APFBSRT1MosaicArcGISProZE.tif    |      12.5       | 13274 | 20179  | 41852.51  |      -48       |      5709      | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part3.rar) |
+|:----------------------------------------------------------------------:|:---------------------------------|:---------------:|:-----:|:------:|:---------:|:-----------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ASTER GDEM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/ASTER) | ASTGTMV003MosaicArcGISProZE.tif  |      30.68      | 5408  |  8221  | 41860.42  |      0      |    5687     | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProZE.rar)                                                                                                                                                                                                                             |
+|    [SRTM](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/SRTM)     | SRTMV003MosaicArcGISProZE.tif    |      30.68      | 5408  |  8221  | 41860.42  |     -46     |    5696     | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISProZE.rar)                                                                                                                                                                                                                                |
+| [ALOS PALSAR](https://github.com/rcfdtools/R.LTWB/tree/main/.dem/ALOS) | APFBSRT1MosaicArcGISProZE.tif    |      12.5       | 13274 | 20179  | 41852.51  |     -48     |    5709     | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISProZE.part3.rar) |
 
 > El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
 > 
@@ -100,7 +105,7 @@ Automáticamente, obtendrá una carpeta con la estructura de directorios y archi
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateNewProjectStructure.png)
 
-2. En el menú _Components – Create Component – Basin Model_, cree 3 modelos de cuencas y nómbrelos como como _BasinASTER_, _BasinSRTM_, y _BasinALOS_.
+2. En el menú _Components – Create Component – Basin Model_, cree 3 modelos de cuencas y nómbrelos como _BasinASTER_, _BasinSRTM_, y _BasinALOS_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9CreateBasinModel.png)
 
@@ -114,7 +119,7 @@ Automáticamente, obtendrá una carpeta con la estructura de directorios y archi
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData2.png)
 
-Automáticamente los archivos _ASTGTMV003MosaicArcGISProZE.tif_, _SRTMV003MosaicArcGISProZE.tif_ y _APFBSRT1MosaicArcGISProZE.tif_ serán copiados con los nombres _TerrainASTER.elevation.tif_, _TerrainSRTM.elevation.tif_ y _TerrainALOS.elevation.tif_ en la carpeta _D:\R.LTWB\HECHMS\terrain_ y también en la carpeta _D:\R.LTWB\HECHMS\gis_ dentro de subcarpetas independientes.
+Automáticamente, los archivos _ASTGTMV003MosaicArcGISProZE.tif_, _SRTMV003MosaicArcGISProZE.tif_ y _APFBSRT1MosaicArcGISProZE.tif_ serán copiados con los nombres _TerrainASTER.elevation.tif_, _TerrainSRTM.elevation.tif_ y _TerrainALOS.elevation.tif_ en la carpeta _D:\R.LTWB\HECHMS\terrain_ y también en la carpeta _D:\R.LTWB\HECHMS\gis_ dentro de subcarpetas independientes.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/HECHMS4.9TerrainData3.png)
 
@@ -173,7 +178,7 @@ En la ventana de edición de permisos, de clic en el botón _Add..._, busque su 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2NewMap.png)
 
-3. Agregue al mapa la red de drenaje _D:\R.LTWB\\.shp\DrenajeSencilloIGAC100kZEMerge.shp_, dando clic derecho en la capa exporte la red de drenaje en la carpeta _.shp_ como _DrenajeSencilloIGAC100kZEMergeNoAttrib.shp_.
+3. Agregue al mapa la red de drenaje _D:\R.LTWB\\.shp\DrenajeSencilloIGAC100kZEMerge.shp_, dando clic derecho en la capa, exporte la red de drenaje en la carpeta _.shp_ como _DrenajeSencilloIGAC100kZEMergeNoAttrib.shp_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2ExportData.png)
 
@@ -183,11 +188,11 @@ Abra la tabla de atributos de DrenajeSencilloIGAC100kZEMergeNoAttrib.shp y dando
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2DeleteField.png)
 
-En el campo _SHAPE_Leng_, dando clic en la cabecera y seleccionando la opción _Calculate Geometry_ recalcule la longitud geométrica en metros de cada entidad.
+En el campo _SHAPE_Leng_, dando clic en la cabecera y seleccionando la opción _Calculate Geometry_, recalcule la longitud geométrica en metros de cada entidad.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2CalculateGeometry.png)
 
-Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red utilizada en la zona de estudio. Clic derecho en la cabecera del campo _SHAPE_Leng_ y seleccione _Statistics_. Podrá observar que la red de drenaje a incrustar en el terreno tiene una longitud de 42968 km.
+Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red utilizada en la zona de estudio. Clic derecho en la cabecera del campo _SHAPE_Leng_, seleccione _Statistics_. Podrá observar que la red de drenaje a incrustar en el terreno tiene una longitud de 42968 km.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2FieldStatistics.png)
 
@@ -195,11 +200,11 @@ Obtenga las estadísticas de campo para los 17069 tramos de drenaje de la red ut
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2LoadDEMGrids.png)
 
-5. Desde el menú _Customize / Toolbars_ active la barra denominada _HEC-GeoHMS_
+5. Desde el menú _Customize / Toolbars_, active la barra denominada _HEC-GeoHMS_
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSToolbar.png)
 
-6. En la barra de herramientas _HEC-GeoHMS_ de clic en el menú _Preprocessing_ y seleccione la opción _DEM Reconditioning_. Reacondicione las grillas DEM utilizando los parámetros definidos en la siguiente ilustración y nombre cada grilla resultante como ASTERAgreeDEM.tif, SRTMAgreeDEM.tif y ALOSAgreeDEM.tif. Guarde las grillas en la carpeta _D:\R.LTWB\HECGeoHMS\Layers\_
+6. En la barra de herramientas _HEC-GeoHMS_ de clic en el menú _Preprocessing_, seleccione la opción _DEM Reconditioning_. Reacondicione las grillas DEM utilizando los parámetros definidos en la siguiente ilustración y nombre cada grilla resultante como ASTERAgreeDEM.tif, SRTMAgreeDEM.tif y ALOSAgreeDEM.tif. Guarde las grillas en la carpeta _D:\R.LTWB\HECGeoHMS\Layers\_
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSDEMReconditioningParameters.png)
 
@@ -266,6 +271,16 @@ En este momento dispone de grillas de terreno reacondicionadas para relleno de s
 
 * https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu
 * https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
+
+
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                                                                                   |
+|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                               |
+|     2     | Investigue y documente otras herramientas, librerías, complementos o plug-in desde los que se pueda realizar el reacondicionamiento de modelo de terreno. |
 
 
 ### Compatibilidad
