@@ -39,7 +39,7 @@ El siguiente diagrama representa los procedimientos generales requeridos para el
 </div>
 
 
-### Arreglos de datos para clasificación de estaciones por pisos térmicos
+### Conceptos generales de arreglos de datos para clasificación de estaciones por pisos térmicos
 
 
 #### Cortes convencionales
@@ -75,7 +75,7 @@ El siguiente diagrama representa los procedimientos generales requeridos para el
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventional.png)
 
-En el panel de simbología, de clic en la pestaña Histogram, podrá observar las barras o bandas que representan las estacionen en cada clase y la localización del valor promedio.
+En el panel de simbología, de clic en la pestaña _Histogram_, podrá observar las barras o bandas que representan las estacionen en cada clase y la localización del valor promedio.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalHistogram.png)
 
@@ -108,7 +108,7 @@ Desde la tabla de atributos, dando doble clic en la cabecera del campo `DEMALOS`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStationManualValue.png)
 
-Vuelva a la estadística de campo. Las elevaciones preliminares de las estaciones obtenidas a partir del DEM ALOS asignando manualmente la elevación a una de las estaciones, presentan valores entre -6 y 2568 m.s.n.m. con media en 215.2 m.s.n.m. y desviación estándar de 358.1 m.s.n.m. Seleccionando las 3 primeras bandas, podrá observar que de las 440 estaciones, 404 se encuentran entre 0 y 602 m.s.n.m. 
+Regrese a la estadística de campo, podrá observar que las elevaciones de las estaciones obtenidas a partir del DEM ALOS asignando manualmente la elevación a una de las estaciones, presentan valores entre -6 y 2568 m.s.n.m. con media en 215.2 m.s.n.m. y desviación estándar de 358.1 m.s.n.m. Seleccionando las 3 primeras bandas, podrá observar que de las 440 estaciones, 404 se encuentran entre 0 y 602 m.s.n.m. 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0StationALOSStatisticFixed.png)
 
 Tabla resumen de valores obtenidos de elevación.  
@@ -128,9 +128,9 @@ Tabla resumen de valores obtenidos de elevación.
 
 > Como puede observar en la tabla anterior, existe una diferencia importante entre el máximo de las elevaciones del IDEAM con respecto al máximo de las elevaciones obtenidas a través de los modelos digitales de elevación DEM.
 > 
-> Tenga en cuenta que las elevaciones han sido obtenidas en las localizaciones disponibles de la red de estaciones del catálogo nacional y estas localizaciones pueden ser imprecisas.
+> Tenga en cuenta que las elevaciones han sido obtenidas en las localizaciones disponibles de la red de estaciones del catálogo nacional y estas pueden no estar actualizadas, por lo que el valor de elevación puede corresponder a una localización diferente.
 
-7. En la tabla de contenido, de clic derecho sobre la capa de estaciones CNE_IDEAM_OE_ZE.shp y seleccione la opción _Create Chart / Scatter Plot Matrix_ para crear un gráfico de dispersión para comparar los valores de las diferentes elevaciones obtenidas. En variables seleccione `altitud`, `DEMASTER`, `DEMSRTM` y `DEMALOS`, active la casilla de visualización de línea de tendencia y agregue histogramas en las diagonales. 
+7. En la tabla de contenido, de clic derecho sobre la capa de estaciones CNE_IDEAM_OE_ZE.shp y seleccione la opción _Create Chart / Scatter Plot Matrix_ para crear un gráfico de dispersión que permita comparar los valores de las diferentes elevaciones obtenidas. En variables seleccione `altitud`, `DEMASTER`, `DEMSRTM` y `DEMALOS`, active la casilla de visualización de línea de tendencia y agregue histogramas en las diagonales. 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Screenshot/ArcGISPro3.0.0CreateScatterPlotMatrix.png)
 
@@ -334,7 +334,7 @@ De acuerdo a la WMO, para las estaciones:
 * Climatológica ordinaria (CO - AU), la distancia media recomendada entre estaciones es de 50km para un radio de acción de 25km.
 * Meteorológica especial (ME) y Pluviométrica (PM - PG), la distancia media recomendada entre estaciones es de 25km para un radio de acción de 12.5km.
 
-A partir de este momento, ya dispone de la red de estaciones de la zona de estudio con diferentes elevaciones y su clasificación por diferentes pisos térmicos.
+A partir de este momento, dispone de la red de estaciones de la zona de estudio con diferentes elevaciones, clasificación por diferentes pisos térmicos y análisis de densidad, que permiten establecer que las estaciones disponibles en la red son suficientes para el análisis a realizar.
 
 
 ### Actividades complementarias:pencil2:
@@ -357,13 +357,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [Pisos térmicos en Costa Rica](https://www.mep.go.cr/sites/default/files/recursos/recursos-interactivos/clima_tiempo/pdf/pisos_termicos.pdf)
 * [Diseño de la red hidrometeorológica nacional IDEAM - Colombia](http://sgi.ideam.gov.co/documents/412030/561097/M-GDI-H-G001+GU%C3%8DA+DISE%C3%91O+DE+LA+RED+HIDROMETEOROL%C3%93GICA+NACIONAL.pdf/9da0e118-58cc-43eb-87e0-8c6316dc691c?version=1.0)
 * [Propuesta Metodológica para el Rediseño de una Red Meteorológica en un Sector de la Región Andina Colombiana](https://hemeroteca.unad.edu.co/index.php/publicaciones-e-investigacion/article/view/1281/2031)
-* [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 
 ### Control de versiones
 
 | Versión    | Descripción                                                                                  | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.11 | Diagrama general de procesos, revisión y complementación de documentación.                   | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 | 2022.08.10 | Versión inicial con análisis por matriz de dispersión, densidad, cobertura, radio de acción. | [rcfdtools](https://github.com/rcfdtools)  |  8.5  |
 
 
@@ -371,8 +371,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/999) | [Siguiente]() |
-|--------------------------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------------|---------------|
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/15) | [Siguiente]() |
+|--------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|---------------|
 
 [^1]: https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste#:~:text=El%20R%2Dcuadrado%20es%20una,se%20trata%20de%20regresi%C3%B3n%20m%C3%BAltiple.
 [^2]: https://es.wikipedia.org/wiki/Coeficiente_de_correlaci%C3%B3n_de_Pearson
