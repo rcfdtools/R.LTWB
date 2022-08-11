@@ -51,7 +51,7 @@ Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term w
 
 #### Zonificación hidrográfica de Colombia
 
-La zonificación hidrográfica de Colombia desde el punto de vista hidrológico, tiene sus inicios en el HIMAT mediante la Resolución 0337 del 1978, la cual establece que el país está conformado por cinco Áreas hidrográficas (1-Caribe, 2- Magdalena - Cauca, 3- Orinoco, 4- Amazonas y 5-Pacífico) que a su vez están divididas en Zonas Hidrográficas y subdivididas en Subzonas Hidrográficas. En ese entonces, el propósito de la zonificación fue de adoptar un sistema de codificación para estaciones Hidrometerológicas. Posteriormente, el IDEAM introduce esta zonificación para otros fines, tales como estudios y análisis hidrológicos relacionados con los informes ambientales, p.ej, el Índice de Aridez, el Escurrimiento y el Rendimiento Hídrico.[^1]
+La zonificación hidrográfica de Colombia desde el punto de vista hidrológico, tiene sus inicios en el HIMAT mediante la Resolución 0337 del 1978, la cual establece que el país está conformado por cinco Áreas hidrográficas (1-Caribe, 2- Magdalena - Cauca, 3- Orinoco, 4- Amazonas y 5-Pacífico) que a su vez están divididas en Zonas Hidrográficas y subdivididas en Subzonas Hidrográficas. En ese entonces, el propósito de la zonificación fue de adoptar un sistema de codificación para estaciones Hidrometerológicas. Posteriormente, el IDEAM introduce esta zonificación para otros fines, tales como estudios y análisis hidrológicos relacionados con los informes ambientales, p. ej. el Índice de Aridez, el Escurrimiento y el Rendimiento Hídrico.[^1]
 
 La zonificación de cuencas hidrográficas corresponde a tres niveles de jerarquía: áreas, zonas y subzonas hidrográficas. Las áreas hidrográficas corresponden a las regiones hidrográficas o vertientes que, en sentido estricto, son las grandes cuencas que agrupan un conjunto de ríos con sus afluentes que desembocan en un mismo mar. Ahora bien, en Colombia se distinguen cuatro vertientes, dos de ellas asociadas a ríos de importancia continental (vertiente del Orinoco y vertiente del Amazonas) y las vertientes del Atlántico y del Pacífico. Se delimita adicionalmente como áea hidrográfica la cuenca Magdalena-Cauca, que aunque tributa y forma parte de la vertiente del Atlántico, tiene importancia socioeconómica por su alto poblamiento y aporte al producto interno bruto.[^2]
 
@@ -153,13 +153,13 @@ Catálogo de objetos en Subzonas [^4]
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
-5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_. Simbolice solo por contorno utilizando borde externo negro en grosor 3.
+5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_. Simbolice solo por contorno usando borde externo negro en grosor 3.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
-6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 ó ESRI 103599.
+6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 o ESRI 103599.
 
-> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar el cálculo de áreas y perímetros en unidades del sistema internacional. En la carpeta _[.ProjectionFile](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)_ de este repositorio se encuentran diferentes archivos de proyección, incluido _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
+> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar los cálculos de áreas y perímetros en unidades del sistema internacional. En la carpeta _[.ProjectionFile](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)_ de este repositorio se encuentran diferentes archivos de proyección, incluido _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
 
 Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
 ```
@@ -206,7 +206,7 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
-En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISPro o ArcGISProSection01. Automáticamente serán creados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección _Folders_, realice la conexión a la carpeta _D:\R.LTWB_.
+En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISPro o ArcGISProSection01. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección _Folders_, realice la conexión a la carpeta _D:\R.LTWB_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0NewMapProject.png)
 
@@ -222,7 +222,7 @@ La disolución de los polígonos para la creación de la zona de estudio se real
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Dissolve.png)
 
-Para cambiar el sistema de proyección de coordenadas, en las propiedades del mapa _Map_ de la tabla de contenidos _Contents_, seleccione la pestaña _Coordinate Systems_ y en la caja de búsqueda ingrese 103599 correspondiente a MAGNA-SIRGAS CMT12.
+Para cambiar el sistema de proyección de coordenadas, en las propiedades del mapa _Map_ de la tabla de contenidos _Contents_, seleccione la pestaña _Coordinate Systems_ y en la caja de búsqueda ingrese 103599, correspondiente a MAGNA-SIRGAS CMT12.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0CRS103599.png)
 
@@ -259,7 +259,7 @@ El proceso de disolución se realiza utilizando la herramienta _Vector geometry 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Dissolve.png)
 
-Para cambiar el sistema de proyección, oprima la combinación de teclas <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> para acceder a la ventana de propiedades del proyecto y en la ventana _CRS_ ingrese en la casilla de filtro o búsqueda el valor 9377, correspondiente al sistema de referencia de coordenadas MAGNA-SIRGAS / Origen-Nacional. Seleccione y de clic en _Apply_ y _Ok_. En la parte inferior derecha de QGIS, podrá observar el sistema asignado como _EPSG: 9377_.
+Para cambiar el sistema de proyección, oprima la combinación de teclas <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> para acceder a la ventana de propiedades del proyecto y en la ventana _CRS_, ingrese en la casilla de filtro o búsqueda el valor 9377, correspondiente al sistema de referencia de coordenadas MAGNA-SIRGAS / Origen-Nacional. Seleccione y de clic en _Apply_ y _Ok_. En la parte inferior derecha de QGIS, podrá observar el sistema asignado como _EPSG: 9377_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0CRS9377.png)
 
@@ -288,7 +288,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     1     | Realice el procedimiento presentado en esta clase para el caso de estudio asignado por [rcfdtools](https://github.com/rcfdtools) o para el caso propuesto por el estudiante y aprobado por [rcfdtools](https://github.com/rcfdtools). A cada estudiante se le asigna un código único de caso de estudio que contiene el prefijo CS.                                                                                                                                                               |
 |     2     | En su GitHub, cree un repositorio para su caso de estudio y nombre como _R.LTWB.CS######_. Cree la estructura de directorios existente en [R.LTWB](https://github.com/rcfdtools/R.LTWB) dentro su propio repositorio y en la carpeta _Seccion1 / CaseStudy_, incluya el documento .pdf de desarrollo de las actividades indicadas en esta clase. Incluya los archivos obtenidos y generados en las carpetas de archivos específicos (.datasets, .dem, .map, .projectionfile, .refs, .shp, .temp)  |
 
-> Tenga presente que durante todo el curso, los documentos de desarrollo y avances de su caso de estudio deberán ser incluidos en la sección y actividad correspondiente y dentro de las carpetas generales correspondientes. El nombre del reporte de desarrollo corresponderá al nombre de la actividad y al final se incluye la fecha de la versión en formato aaaammdd, p. ej. CaseStudy20220811.pdf. En caso de que requiera de la presentación de una nueva versión del documento de desarrollo, conserve las versiones anteriores e incluya la nueva versión con la fecha actualizada. Recuerde que para repositorio de uso libre, el tamaño máximo de los archivos que se pueden cargar es de 100MB, archivos con tamaño superior deben ser comprimidos en una o múltiples partes de 95MB.
+> Tenga presente que durante todo el curso, los documentos de desarrollo y avances de su caso de estudio deberán ser incluidos en la sección y actividad correspondiente y dentro de las carpetas generales correspondientes. El nombre del reporte de desarrollo corresponderá al nombre de la actividad y al final se incluye la fecha de la versión en formato aaaammdd, p. ej. CaseStudy20220811.pdf. En caso de que requiera de la presentación de una nueva versión del documento de desarrollo, conserve las versiones anteriores e incluya la nueva versión con la fecha actualizada. Recuerde que para repositorio de uso libre, el tamaño máximo de los archivos que se pueden cargar es de 100 MB, archivos con tamaño superior deben ser comprimidos en una o múltiples partes de 95 MB.
 
 
 ### Compatibilidad
