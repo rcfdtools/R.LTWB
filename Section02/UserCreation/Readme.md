@@ -1,7 +1,7 @@
 ## Creación de usuario NASA Earthdata 
 Keywords: `NASA` `EarthData` `User creation`
 
-Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.[^1]
+Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5 m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.[^1]
 
 <div align="center">
   <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/NASA.png" width="250px">
@@ -48,7 +48,7 @@ Especificaciones para nombres de usuario
 * Debe ser máximo de 30 caracteres. Be a Maximum of 30 characters
 * Se pueden utilizar letras, números, puntos y guiones bajos. Use letters, numbers, periods and underscores
 * No puede contener espacios en blanco. Not contain any blank spaces
-* No puede iniciar, terminar o contener dos caracteres consecutivos como punto o guión bajo. Not begin, end or contain two consecutive special characters( . _ )
+* No puede iniciar, terminar o contener dos caracteres consecutivos como punto o guion bajo. Not begin, end or contain two consecutive special characters( . _ )
 
 Especificaciones para contraseña  
 * Como mínimo de 8 caracteres. Minimum of 8 characters
@@ -56,7 +56,7 @@ Especificaciones para contraseña
 * Al menos 1 carácter en minúscula. One Lowercase letter
 * Al menos un número One Number
 
-> Para la creación de la cuenta ejemplo se ha seleccionado Education en Affiliation, Science Team en User Type y Hydrologic Cycle como Study Area. Seleccione las aficiociones o suscripciones que más se adapten a su perfil profesional.
+> Para la creación de la cuenta ejemplo se ha seleccionado _Education_ en _Affiliation_, _Science Team_ en _User Type_ y _Hydrologic Cycle_ como _Study Area_. Seleccione las afiliaciones o suscripciones que más se adapten a su perfil profesional.
 
 En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondientes a notificaciones [EOSDIS](https://www.earthdata.nasa.gov/eosdis) y [Meris and ESA Sentinel-3 Data](https://earth.esa.int/eogateway/instruments/meris) y de clic en el botón `REGISTER FOR EARTHDATA LOGIN`
 

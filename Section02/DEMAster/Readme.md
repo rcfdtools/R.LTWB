@@ -33,12 +33,17 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 
 
-### Procedimiento de descarga
+### Diagrama general de procesos
+
+El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Graph/DEMAsterFlowchart.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
+
+
+### Procedimiento de descarga
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
@@ -423,6 +428,16 @@ En este momento dispone de grillas integradas de elevación ASTER que cubren tod
 * [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
 * [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
 * Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012.
+
+
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                            |
+|:---------:|:---------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.        |
+|     2     | Investigue y documente a través de que librerías Python se pueden descargar archivos de EarthData. |
 
 
 ### Compatibilidad
