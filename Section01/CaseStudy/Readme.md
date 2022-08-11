@@ -25,7 +25,17 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 * [QGIS 3+](https://qgis.org/) (opcional)
 
 
-### Alcance
+### Diagrama general de procesos
+
+Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo a su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
+
+<div align="center">
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudyFlowchart.svg" width="70%"><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
+</div>
+
+
+### Alcance y conceptos generales
 
 Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la red de estaciones terrestres hidroclimatológicas del [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia](http://www.ideam.gov.co/). A nivel particular se estudiará a detalle la zona hidrográfica 28, denominada _Cesar_ que hace parte del área hidrográfica principal 2, correspondiente a _Magdalena - Cauca_ que se compone de las siguientes subzonas:
 
@@ -38,14 +48,8 @@ Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term w
 
 > Estudiantes que aplicaron para curso certificado, desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
-Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo a su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
 
-<div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudyFlowchart.svg" width="70%"><br>
-<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
-</div>
-
-### Zonificación hidrográfica de Colombia
+#### Zonificación hidrográfica de Colombia
 
 La zonificación hidrográfica de Colombia desde el punto de vista hidrológico, tiene sus inicios en el HIMAT mediante la Resolución 0337 del 1978, la cual establece que el país está conformado por cinco Áreas hidrográficas (1-Caribe, 2- Magdalena - Cauca, 3- Orinoco, 4- Amazonas y 5-Pacífico) que a su vez están divididas en Zonas Hidrográficas y subdivididas en Subzonas Hidrográficas. En ese entonces, el propósito de la zonificación fue de adoptar un sistema de codificación para estaciones Hidrometerológicas. Posteriormente, el IDEAM introduce esta zonificación para otros fines, tales como estudios y análisis hidrológicos relacionados con los informes ambientales, p.ej, el Índice de Aridez, el Escurrimiento y el Rendimiento Hídrico.[^1]
 
