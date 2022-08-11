@@ -279,6 +279,18 @@ El proceso de obtención del polígono perimetral se realiza con la herramienta 
 Ahora dispone de un polígono que podrá utilizar como máscara de selección para la obtención de información satelital o para la selección de estaciones dentro de la zona de estudio.
 
 
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                    |
+|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase para el caso de estudio asignado por [rcfdtools](https://github.com/rcfdtools) o para el caso propuesto por el estudiante y aprobado. A cada estudiante se le asigna un código único de caso de estudio que contiene el prefijo CS.                                                      |
+|     2     | En su GitHub, cree un repositorio para el caso de estudio y nombre como _R.LTWB.CS######_. Cree la estructura de directorios existente en [R.LTWB](https://github.com/rcfdtools/R.LTWB en su propio repositorio y en la carpeta _Seccion1 / CaseStudy_ incluya el documento .pdf de desarrollo de las actividades indicadas en esta clase. |
+
+> Durante todo el curso, los documentos de desarrollo y avance de su caso de estudio deberán ser incluidos en la sección y actividad correspondiente. El nombre del archivo corresponderá al nombre de la actividad y al final se indica la fecha de la versión en formato aaaammdd, p. ej. CaseStudy20220811.pdf. En caso de que requiera de la presentación de una nueva versión del documento de desarrollo, conserve las versiones anteriores e incluya la nueva versión con la fecha actualizada.
+
+
 ### Compatibilidad
 
 * Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de geoprocesamiento para disolución de polígonos y creación de polígonos envolventes.
