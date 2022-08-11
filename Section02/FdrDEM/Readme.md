@@ -175,10 +175,10 @@ En este momento dispone de grillas de direcciones para acumulación de flujo sob
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                       |
-|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                   |
-|     2     | Investigue y documente la codificación de direcciones de flujo en otra herramientas, p. ej. Autodesk, SWMM, Bentley, Workstation, Iber, Ansys |
+| Actividad | Alcance                                                                                                                                        |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                    |
+|     2     | Investigue y documente la codificación de direcciones de flujo en otra herramientas, p. ej. Autodesk, SWMM, Bentley, Workstation, Iber, Ansys. |
 
 
 ### Compatibilidad
