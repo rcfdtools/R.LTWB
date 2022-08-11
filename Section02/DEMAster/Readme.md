@@ -35,7 +35,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 
 ### Diagrama general de procesos
 
-El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
+El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Graph/DEMAsterFlowchart.svg" width="70%"><br>
@@ -438,6 +438,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:---------------------------------------------------------------------------------------------------|
 |     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.        |
 |     2     | Investigue y documente a través de que librerías Python se pueden descargar archivos de EarthData. |
+|     3     | Investigue y documente las diferencias entre las versiones 1, 2 y 3 del modelo ASTER GDEM.         |
 
 
 ### Compatibilidad

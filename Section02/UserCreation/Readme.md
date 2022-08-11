@@ -21,7 +21,7 @@ Para la descarga de los modelos de terreno y la información climatológica obte
 
 ### Diagrama general de procesos
 
-El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
+El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Graph/UserCreationEarthdataFlowchart.svg" width="60%"><br>

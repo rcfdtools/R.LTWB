@@ -31,7 +31,7 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 
 ### Diagrama general de procesos
 
-El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
+El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationElevation/Graph/CNEStationElevationFlowchart.svg" width="75%"><br>
