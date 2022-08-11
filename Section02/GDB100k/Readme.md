@@ -197,10 +197,10 @@ En este momento ya dispone de la red de drenaje que será utilizada para la rect
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                           |
-|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                       |
-|     2     | Investigue y documente otros servicios en línea desde donde se puedan obtener vectores de drenaje. Descargue y compare con los disponibles en el IGAC - Colombia. |
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                       |
+|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                                                                                                                                                                   |
+|     2     | Investigue y documente otros servicios en línea desde donde se puedan obtener vectores de drenaje (p. ej. [IDECA](https://www.ideca.gov.co/), [CAR Cundinamarca - Colombia](https://www.car.gov.co/), [ESRI](https://datosabiertos.esri.co/)). Descargue y compare con los disponibles en el IGAC - Colombia. |
 
 
 ### Compatibilidad
