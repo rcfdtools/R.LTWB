@@ -1,9 +1,9 @@
-## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)
+## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)
 Keywords: `NASA` `jpl` `ASTER` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
 
-Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o pixeles con variaciones cada 1 metro.
+Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o píxeles con variaciones cada 1 metro.
 
 A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo, como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
 
@@ -75,7 +75,7 @@ Como puede observar, las cuadrículas son ortogonales y no contienen traslapos d
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchResults.png)
 
-Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11km x 111.11km de superficie.
+Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 9 archivos requeridos que tienen un peso aproximado de 213.1 MB y de clic en _Done_ y _Download Data_.
 
@@ -280,7 +280,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
 
-> Debido a que el tamaño del archivo de mosaico es superior a 100MB, se han creado en GitHub dos archivos comprimidos en _.dem/ASTER_ denominados ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
+> Debido a que el tamaño del archivo de mosaico es superior a 100 MB, se han creado en GitHub dos archivos comprimidos en _.dem/ASTER_ denominados ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
 
 > El rango de elevaciones de la imagen de mosaico puede no coincidir en la representación con el rango de valores de las imágenes originales, para recalcular los estadísticos de una grilla en _ArcCatalog_ de clic en la imagen y seleccione la opción _Calculate Statistics_.
 
@@ -292,7 +292,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2ProfileGraph.png)
 
-5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los pixeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
+5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los píxeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
@@ -317,7 +317,7 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
 
-5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente se cargará una nueva capa denominada _Line Notes_.
+5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente, se cargará una nueva capa denominada _Line Notes_.
 
 Seleccione la capa _Line Notes_, de clic en el menú _Edit_ y establezca en la sección _Elevation Mode - Surface_ y _Ground_.
 
@@ -354,17 +354,17 @@ En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Merge_ y seleccione 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0Merge.png)
 
-2. Desde el panel _Layers_, de clic derecho en la capa temporal _Merged_ y exporte en la carpeta _./dem/ASTER_ la imagen de mosaico como _ASTGTMV003MosaicQGIS.tif_ asignando el EPSG 9377.
+2. Desde el panel _Layers_, de clic derecho en la capa temporal _Merged_ y, exporte en la carpeta _./dem/ASTER_ la imagen de mosaico como _ASTGTMV003MosaicQGIS.tif_ asignando el EPSG 9377.
 
 > En QGIS, el tamaño regular de las celdas originales de 30.68464585 metros obtenido de la conversión de grados a metros por el cambio del sistema de coordenadas no se mantiene, se recomienda ingresar un valor idéntico de resolución horizontal y vertical. Considerar que para el desarrollo del balance hidrológico de largo plazo, el tamaño de las celdas debe ser verificado y establecido en función de los valores obtenidos en la grilla.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeExport.png)
 
-3. Luego de cargar la grilla podrá observar que los el rango de valores de la grilla resultante inicia en cero, lo cual visualmente no es correcto debido a que en las imágenes originales existen valores de -84 metros. Lo anterior debido a que es necesario recalcular los estadísticos de la grilla, para ello utilizar la opción _Raster layer statistics_ disponible en el _Processing Toolbox_ dentro del grupo de herramientas _Raster analysis_. 
+3. Luego de cargar la grilla, podrá observar que el rango de valores de la grilla resultante inicia en cero, lo cual visualmente no es correcto debido a que en las imágenes originales existen valores de -84 metros. Lo anterior debido a que es necesario recalcular los estadísticos de la grilla, para ello utilizar la opción _Raster layer statistics_ disponible en el _Processing Toolbox_ dentro del grupo de herramientas _Raster analysis_. 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0RasterLayerStatistics.png)
 
-> En QGIS, el tamaño del archivo de la grilla Merged puede ser considerable mayor al obtenido mediante ArcGIS.
+> En QGIS, el tamaño del archivo del mapa grillado Merged puede ser considerable mayor al obtenido mediante ArcGIS.
 
 4. Para la visualización de perfiles de muestreo, en el menú _Plugins_ seleccione _Manage and Install Plugins..._, en la caja de búsqueda ingrese _Profile tool_ e instale esta herramienta.
 
@@ -385,7 +385,7 @@ En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM c
 
 ### Sombreado de colinas - Hillshade
 
-A través de la herramienta Hillshade, se crea un mapa de relieve sombreado simplificado teniendo en cuenta el ángulo y altura de la fuente de iluminación, es frecuentemente utilizado para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos. Si bien las herramientas SIG disponen de simbologías de representación al vuelo para falso Hillshade, la creación de este mapa es útil debido a que la grilla resultante es ligera de representar y contiene valores discretos enteros de celdas entre 0 y 254 o 0 y 255 dependiendo de la herramienta SIG utilizada para su creación.
+A través de la herramienta Hillshade, se crea un mapa de relieve sombreado simplificado teniendo en cuenta el ángulo y altura de la fuente de iluminación, es frecuentemente utilizado para interpretar el relieve del terreno de una forma visualmente clara o como mapa base en la representación espacial de otros fenómenos. Si bien las herramientas SIG disponen de simbologías de representación al vuelo para falso Hillshade, la creación de este mapa es útil debido a que la grilla resultante es ligera de representar y contiene valores discretos enteros de celdas entre 0 y 254 o 0 y 255 dependiendo de la herramienta SIG usada para su creación.
 
 > Para la generación correcta del mapa de sombreado de colinas es necesario que el mapa utilice un sistema de coordenadas proyectado, para el caso de estudio utilizar MAGNA origen único nacional o CTM12.
 
