@@ -305,10 +305,10 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                         |
-|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                     |
-|     2     | Investigue y documente otros modelos digitales de elevación que puedan ser utilizados en el desarrollo de proyectos hidrológicos, p. ej. Lidar. |
+| Actividad | Alcance                                                                                                                                                  |
+|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                              |
+|     2     | Investigue y documente otros tipos de modelos digitales de elevación que puedan ser utilizados en el desarrollo de proyectos hidrológicos, p. ej. Lidar. |
 
 
 ### Compatibilidad

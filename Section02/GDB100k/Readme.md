@@ -26,7 +26,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 
 
-### Procedimiento general
+### Diagrama general de procesos
 
 Para la obtención de la red de drenaje definitiva que será utilizada para el reacondicionamiento del modelo de terreno necesario para el desarrollo del balance, es necesario descargar los vectores disponibles en la base de datos nacional del IGAC de Colombia, luego recortar los drenajes hasta el límite de la zona de estudio, integrar los drenajes y completar los vectores faltantes como se describe en el siguiente diagrama:
 
@@ -35,6 +35,8 @@ Para la obtención de la red de drenaje definitiva que será utilizada para el r
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
+
+### Procedimiento general
 
 1. Ingrese al portal https://www.colombiaenmapas.gov.co/, en temática seleccione _Cartografía Básica_ y busque _Base de datos vectorial básica. Colombia. Escala 1:100.000_ del año 2022. En la parte inferior del _Detalle del Servicio_ seleccione en _Formato de descarga Geodatabase_ y de clic en _Descargar_, automáticamente iniciará la descarga a través de una orden de servicio. La GDB comprimida tiene un tamaño aproximado de 665 MB.
 
@@ -46,7 +48,7 @@ Para la obtención de la red de drenaje definitiva que será utilizada para el r
 
 > Tenga en cuenta que los drenajes restituídos pueden no estar actualizados de acuerdo a las condiciones particulares de la zona de estudio evaluada. Se recomienda verificar con imágenes satelitales recientes, la correspondencia entre las redes de drenaje digitalizadas por el IGAC y las redes de drenajes visibles en imágenes. Por ejemplo, en la zona de explotación minera a cielo abierto del Departamento del Cesar en Colombia, los drenajes sobre los polígonos de concesión pueden no corresponder a las condiciones actuales debido a realineamiento de cauces.
 
-3. Utilizando la herramienta de geoprocesamiento _Clip_, recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _[DrenajeSencilloIGAC100kZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZE.zip)_. Para el recorte, utilice como máscara el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
+3. Utilizando la herramienta de geoprocesamiento _Clip_, recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _[DrenajeSencilloIGAC100kZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZE.zip)_. Para el recorte, use como máscara el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
 
 > En ArcGIS Pro puede utilizar también la herramienta _Pairwise Clip_ que contiene funcionalidades extendidas de la herramienta _Clip_.
 >
@@ -91,7 +93,7 @@ Estado de drenajes - Subtipos
 
 5. A partir de los polígonos de los drenajes dobles y utilizando la herramienta de geoprocesamiento _Topographic Production Tools / Polygon to Centerline_ de ArcGIS Pro, cree las líneas centrales que demarcan cada drenaje sencillo y nombre la capa resultante como _DrenajeDobleIGAC100kZECenterline_ dentro de la GDB de ArcGIS Pro y seleccione en _Connecting Features_ la capa correspondiente a los drenajes sencillos de la zona de estudio, denominada previamente como _[DrenajeSencilloIGAC100kZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/DrenajeSencilloIGAC100kZE.zip)_ para obtener líneas conectoras desde los drenajes sencillos hasta las líneas centrales.
 
-> Debido a que internamente esta herramienta debe crear campos de atributos que contienen los nombres de las capas de entrada, los nombres de atributos pueden contener más de 10 caracteres, lo que generará un error de ejecución. Para obtener las líneas centrales, primero cree una capa geográfica de lineas centrales en la GDB de ArcGIS Pro y luego exporte a un archivo de formas shapefile.
+> Debido a que internamente esta herramienta debe crear campos de atributos que contienen los nombres de las capas de entrada, los nombres de atributos pueden contener más de 10 caracteres, lo que generará un error de ejecución. Para obtener las líneas centrales, primero genere una capa geográfica de lineas centrales en la GDB de ArcGIS Pro y luego exporte a un archivo de formas shapefile.
 >
 > Para conocer como realizar este procedimiento en ArcGIS for Desktop, [clic aquí](https://support.esri.com/en/technical-article/000012414). El procedimiento consiste en convertir primero los polígonos a líneas utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Polygon to Line_, luego eliminar los extremos que confinan cada polígono y finalmente con la herramienta _ArcToolBox / Cartography Tools / Generalization / Collapse Dual Lines To Centerline_ obtener una line central a lo largo de las lineas paralelas externas que delimitan cada drenaje doble.
 
@@ -119,7 +121,7 @@ En la base de datos geográfica del IGAC pueden existir elementos adicionales co
 
 > La extensión y conectividad de los tramos de drenajes sencillos hasta el eje central de los tramos de drenajes dobles es vital para garantizar que la acumulación de flujo por los cauces principales se realice de forma correcta. 
 
-En la tabla de contenido de clic en List By Selection y únicamente active la capa _DrenajeSencilloIGAC100kZEMerge.shp_. Para facilitar la edición, en la visualización utilice como referencia de localización los tramos principales de la capa _DrenajeDobleIGAC100kZECenterline.shp_ 
+En la tabla de contenido de clic en _List By Selection_ y únicamente active la capa _DrenajeSencilloIGAC100kZEMerge.shp_. Para facilitar la edición, en la visualización utilice como referencia de localización los tramos principales de la capa _DrenajeDobleIGAC100kZECenterline.shp_ 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/GDB100k/Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEListBySelection.png)
 
@@ -189,6 +191,16 @@ En este momento ya dispone de la red de drenaje que será utilizada para la rect
 * https://gisrsstudy.com/drainage-density-arcgis/
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/topographic-production/polygon-to-centerline.htm
 * [Línea central de un polígono en QGIS](https://www.youtube.com/watch?v=aVWnMI-QdSs)
+
+
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                                                                                           |
+|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                       |
+|     2     | Investigue y documente otros servicios en línea desde donde se puedan obtener vectores de drenaje. Descargue y compare con los disponibles en el IGAC - Colombia. |
 
 
 ### Compatibilidad
