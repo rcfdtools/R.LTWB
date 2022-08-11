@@ -597,7 +597,7 @@
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 473.38 C0 478.69 -14.2 478.69 -26.26 478.69 C-44.31 478.69 -57.59 478.69 -70.86 478.69 C-84.13 478.69 -97.39
+			<path d="M0 473.38 C-0 478.69 -14.2 478.69 -26.26 478.69 C-44.31 478.69 -57.59 478.69 -70.86 478.69 C-84.13 478.69 -97.39
 						 478.69 -115.4 478.69 C-125.14 478.69 -136.27 478.69 -140.23 483.17 L-140.36 483.51" class="st14"/>
 		</g>
 		<g id="shape499-179" v:mID="499" v:groupContext="shape" transform="translate(298.981,-77.0209)">
@@ -620,12 +620,12 @@
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="62.3622" cy="461.899" width="124.73" height="22.6772"/>
 			<path d="M11.34 473.24 L113.39 473.24 A11.3384 11.3384 -180 0 0 124.72 461.9 A11.3384 11.3384 -180 0 0 113.39 450.56
-						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st6"/>
+						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st11"/>
 			<text x="9.32" y="458.9" class="st20" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Calculate Geometry Attributes<v:newlineChar/><tspan
 						x="46.27" dy="1.312em" class="st16">Area km</tspan>²</text>		</g>
 		<g id="shape500-184" v:mID="500" v:groupContext="shape" transform="translate(298.981,-113.589)">
 			<title>Rounded Rectangle.500</title>
-			<desc>Add Field Stations, DnStations</desc>
+			<desc>Add Field: Stations, DnStations, coverage, inference</desc>
 			<v:userDefs>
 				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
 				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
@@ -644,9 +644,9 @@
 			<v:textRect cx="62.3622" cy="461.899" width="124.73" height="22.6772"/>
 			<path d="M11.34 473.24 L113.39 473.24 A11.3384 11.3384 -180 0 0 124.72 461.9 A11.3384 11.3384 -180 0 0 113.39 450.56
 						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st11"/>
-			<text x="43.55" y="459.2" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Add Field<v:newlineChar/><tspan
-						x="27.04" dy="1.35em" class="st8">Stations, DnStations</tspan></text>		</g>
-		<g id="shape501-189" v:mID="501" v:groupContext="shape" v:layerMember="0" transform="translate(298.981,-198.065)">
+			<text x="5.15" y="459.2" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Add Field: <tspan
+						class="st8">Stations, DnStations, </tspan><tspan x="28.07" dy="1.35em" class="st8">coverage, inference</tspan></text>		</g>
+		<g id="shape501-190" v:mID="501" v:groupContext="shape" v:layerMember="0" transform="translate(298.981,-198.065)">
 			<title>Dynamic connector.501</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
@@ -655,7 +655,7 @@
 						 -0.39 524.69 C4.88 529.72 15.8 529.72 24.51 529.72 C34.67 529.72 41.82 529.72 51.68 529.72 C54.88 529.72
 						 58.36 529.72 60.45 531.11 L60.61 531.44" class="st14"/>
 		</g>
-		<g id="shape503-194" v:mID="503" v:groupContext="shape" transform="translate(151.579,-113.589)">
+		<g id="shape503-195" v:mID="503" v:groupContext="shape" transform="translate(151.579,-113.589)">
 			<title>Rounded Rectangle.503</title>
 			<desc>Stations count total &#38; per weather parameter</desc>
 			<v:userDefs>
@@ -678,16 +678,16 @@
 						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st6"/>
 			<text x="33.88" y="459.8" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Stations count<v:newlineChar/><tspan
 						x="8.58" dy="1.237em" class="st8">total &#38; per weather parameter</tspan></text>		</g>
-		<g id="shape504-199" v:mID="504" v:groupContext="shape" v:layerMember="0" transform="translate(206.855,-150.299)">
+		<g id="shape504-200" v:mID="504" v:groupContext="shape" v:layerMember="0" transform="translate(206.855,-150.299)">
 			<title>Dynamic connector.504</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M7.09 473.38 C7.09 475.7 7.09 479.56 7.09 482.9" class="st13"/>
 		</g>
-		<g id="shape505-204" v:mID="505" v:groupContext="shape" transform="translate(151.579,-49.5321)">
+		<g id="shape505-205" v:mID="505" v:groupContext="shape" transform="translate(151.579,-49.5321)">
 			<title>Rounded Rectangle.505</title>
-			<desc>Calculate stations density, coverage &#38; aference radius</desc>
+			<desc>Calculate Field: density, coverage &#38; inference radius</desc>
 			<v:userDefs>
 				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
 				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
@@ -706,9 +706,9 @@
 			<v:textRect cx="62.3622" cy="461.899" width="124.73" height="22.6772"/>
 			<path d="M11.34 473.24 L113.39 473.24 A11.3384 11.3384 -180 0 0 124.72 461.9 A11.3384 11.3384 -180 0 0 113.39 450.56
 						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st6"/>
-			<text x="16.88" y="458.9" class="st20" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Calculate stations density, <tspan
-						x="14.03" dy="1.312em" class="st16">coverage &#38; aference radius</tspan></text>		</g>
-		<g id="shape506-209" v:mID="506" v:groupContext="shape" transform="translate(298.981,-150.158)">
+			<text x="4.22" y="458.9" class="st20" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Calculate Field: density, coverage <tspan
+						x="30" dy="1.312em" class="st16">&#38; inference radius</tspan></text>		</g>
+		<g id="shape506-210" v:mID="506" v:groupContext="shape" transform="translate(298.981,-150.158)">
 			<title>Rounded Rectangle.506</title>
 			<desc>Study Zone</desc>
 			<v:userDefs>
@@ -730,36 +730,36 @@
 			<path d="M11.34 473.24 L113.39 473.24 A11.3384 11.3384 -180 0 0 124.72 461.9 A11.3384 11.3384 -180 0 0 113.39 450.56
 						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st1"/>
 			<text x="39.74" y="464.6" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Study Zone</text>		</g>
-		<g id="shape509-213" v:mID="509" v:groupContext="shape" v:layerMember="0" transform="translate(206.855,-113.589)">
+		<g id="shape509-214" v:mID="509" v:groupContext="shape" v:layerMember="0" transform="translate(206.855,-113.589)">
 			<title>Dynamic connector.509</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M7.09 473.24 C7.09 482.28 7.09 499.22 7.09 510.25" class="st13"/>
 		</g>
-		<g id="shape510-218" v:mID="510" v:groupContext="shape" v:layerMember="0" transform="translate(354.257,-150.299)">
+		<g id="shape510-219" v:mID="510" v:groupContext="shape" v:layerMember="0" transform="translate(354.257,-150.299)">
 			<title>Dynamic connector.510</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M7.09 473.38 C7.09 475.7 7.09 479.56 7.09 482.9" class="st13"/>
 		</g>
-		<g id="shape511-223" v:mID="511" v:groupContext="shape" v:layerMember="0" transform="translate(354.257,-113.73)">
+		<g id="shape511-224" v:mID="511" v:groupContext="shape" v:layerMember="0" transform="translate(354.257,-113.73)">
 			<title>Dynamic connector.511</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M7.09 473.38 C7.09 475.7 7.09 479.56 7.09 482.9" class="st13"/>
 		</g>
-		<g id="shape512-228" v:mID="512" v:groupContext="shape" v:layerMember="0" transform="translate(361.343,-113.589)">
+		<g id="shape512-229" v:mID="512" v:groupContext="shape" v:layerMember="0" transform="translate(361.343,-113.589)">
 			<title>Dynamic connector.512</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 473.24 C0 478.55 -12.3 478.55 -23.19 478.55 C-44.92 478.55 -61.01 478.55 -91.13 478.55 C-113.9 478.55 -144.68
+			<path d="M0 473.24 C-0 478.55 -12.3 478.55 -23.19 478.55 C-44.92 478.55 -61.01 478.55 -91.13 478.55 C-113.9 478.55 -144.68
 						 478.55 -147.23 510.26 L-147.25 510.62" class="st14"/>
 		</g>
-		<g id="shape513-233" v:mID="513" v:groupContext="shape" v:layerMember="0" transform="translate(298.981,-88.3595)">
+		<g id="shape513-234" v:mID="513" v:groupContext="shape" v:layerMember="0" transform="translate(298.981,-88.3595)">
 			<title>Dynamic connector.513</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
@@ -767,7 +767,7 @@
 			<path d="M0 473.24 C-21.26 473.24 -39.34 473.24 -55.45 473.24 C-67.75 473.24 -78.9 473.24 -82.86 478.28 C-84.26 480.05
 						 -84.76 482.46 -84.94 485.02 L-84.95 485.38" class="st14"/>
 		</g>
-		<g id="shape517-238" v:mID="517" v:groupContext="shape" transform="translate(86.3825,-9.84707)">
+		<g id="shape517-239" v:mID="517" v:groupContext="shape" transform="translate(86.3825,-9.84707)">
 			<title>Rounded Rectangle.517</title>
 			<desc>Study Zone Buffer Density values</desc>
 			<v:userDefs>
@@ -790,7 +790,7 @@
 						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st1"/>
 			<text x="26.64" y="459.2" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Study Zone Buffer<v:newlineChar/><tspan
 						x="37.18" dy="1.35em" class="st8">Density values</tspan></text>		</g>
-		<g id="shape518-243" v:mID="518" v:groupContext="shape" transform="translate(232.367,-9.84707)">
+		<g id="shape518-244" v:mID="518" v:groupContext="shape" transform="translate(232.367,-9.84707)">
 			<title>Rounded Rectangle.518</title>
 			<desc>Study Zone Density values</desc>
 			<v:userDefs>
@@ -813,7 +813,7 @@
 						 L11.34 450.56 A11.3384 11.3384 -180 0 0 0 461.9 A11.3384 11.3384 -180 0 0 11.34 473.24 Z" class="st1"/>
 			<text x="39.74" y="459.2" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Study Zone<v:newlineChar/><tspan
 						x="37.18" dy="1.35em" class="st8">Density values</tspan></text>		</g>
-		<g id="shape520-248" v:mID="520" v:groupContext="shape" v:layerMember="0" transform="translate(213.942,-49.5321)">
+		<g id="shape520-249" v:mID="520" v:groupContext="shape" v:layerMember="0" transform="translate(213.942,-49.5321)">
 			<title>Dynamic connector.520</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
@@ -821,7 +821,7 @@
 			<path d="M0 473.24 C-0 478.55 -5.48 478.55 -10.34 478.55 C-19.92 478.55 -27.08 478.55 -40.59 478.55 C-49.53 478.55 -61.26
 						 478.55 -64.4 485.95 L-64.46 486.31" class="st14"/>
 		</g>
-		<g id="shape521-253" v:mID="521" v:groupContext="shape" v:layerMember="0" transform="translate(213.942,-49.5321)">
+		<g id="shape521-254" v:mID="521" v:groupContext="shape" v:layerMember="0" transform="translate(213.942,-49.5321)">
 			<title>Dynamic connector.521</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
