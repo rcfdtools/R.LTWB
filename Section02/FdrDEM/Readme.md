@@ -23,7 +23,17 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 > El libro de cálculo [FdrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
 
 
-### Direcciones de flujo FDR en diferentes herramientas
+### Diagrama general de procesos
+
+El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
+
+<div align="center">
+<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Graph/FdrDEMFlowchart.svg" width="65%"><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
+</div>
+
+
+### Conceptos generales de direcciones de flujo FDR en diferentes herramientas
 
 Existen diferentes codificaciones para la marcación de direcciones de flujo que dependen principalmente de la herramienta utilizada.
 
@@ -52,16 +62,12 @@ Existen diferentes codificaciones para la marcación de direcciones de flujo que
 
 ### Procedimiento general
 
-<div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Graph/FdrDEMFlowchart.svg" width="65%"><br>
-<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
-</div>
-
 La estimación de direcciones de flujo puede ser realizada con Spatial Analyst Tools de ArcGIS for Desktop, HEC-GeoHMS sobre ArcGIS 10.2.2 a través de Arc Hydro Tools, Spatial Analyst de ArcGIS Pro, Arc Hydro Tools sobre ArcGIS Pro, QGIS, HEC-HMS a través del menú GIS y otras herramientas y librerías.
+
 
 #### Direcciones de flujo con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [relleno de sumideros](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio  _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [relleno de sumideros](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Direction_ y cree la grilla de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFdr.tif, SRTMFdr.tif y ALOSFdr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\.
 
@@ -86,7 +92,7 @@ Resultados ventana de ejecución grilla ALOS (dt: 09'08")
 
 <div align="center">
 
-|    Grilla    |               Descargar :open_file_folder:                                          |
+|    Grilla    |                            Descargar :open_file_folder:                             |
 |:------------:|:-----------------------------------------------------------------------------------:|
 | ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) |
 | SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFdr.rar)  |
@@ -165,6 +171,16 @@ En este momento dispone de grillas de direcciones para acumulación de flujo sob
 * https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
 
 
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                                                                       |
+|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                   |
+|     2     | Investigue y documente la codificación de direcciones de flujo en otra herramientas, p. ej. Autodesk, SWMM, Bentley, Workstation, Iber, Ansys |
+
+
 ### Compatibilidad
 
 * Se recomienda desarrollar la marcación de direcciones de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las direcciones con las mismas herramientas _Terrain Processing_.  
@@ -174,7 +190,7 @@ En este momento dispone de grillas de direcciones para acumulación de flujo sob
 
 | Versión     | Descripción                                                                                                                           | Autor                                      | Horas |
 |-------------|:--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS. Algebra de mapas para recodificación FDR. Diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |  6   |
+| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS. Algebra de mapas para recodificación FDR. Diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
