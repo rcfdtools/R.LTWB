@@ -1,4 +1,4 @@
-## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5m)
+## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
 Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/DEMAlos.png)
@@ -30,7 +30,7 @@ Especificaciones técnicas y modos de captura
 
 > La resolución aproximada de los modelos digitales de elevación ALOS PALSAR en modo FBS es de 12.5 metros.
 
-> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [:mortar_board:Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
+> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [:mortar_board:Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
 
 
 ### Requerimientos
@@ -41,12 +41,17 @@ Especificaciones técnicas y modos de captura
 * [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
 
 
-### Procedimiento de descarga
+### Diagrama general de procesos
+
+El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Graph/DEMAlosFlowchart.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
+
+
+### Procedimiento de descarga
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
@@ -80,7 +85,7 @@ Como podrá observar, al localizarse sobre el mapa y desplazar el puntero sobre 
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/EarthdataSearchResults.png)
 
-Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11km x 111.11km de superficie.
+Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 23 archivos requeridos que tienen un peso aproximado de 5.3 GB (222 MB por archivo comprimido y 71 MB para cada archivo .dem.tif aproximadamente) y de clic en _Done_ y _Download Data_.
 
@@ -261,7 +266,7 @@ EDSCEOF
 
 Luego de los procesos de obtención de las imágenes satelitales, es necesaria la construcción de un mosaico único a partir de las imágenes individuales obtenidas para cada modelo de terreno. El balance hidrológico de largo plazo podrá ser realizado utilizando diferentes modelos de terreno y permitirá comparar la oferta hídrica obtenida utilizando diferentes superficies.
 
-> Para conocer como realizar este procedimiento en ArcGIS for Desktop y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
+> Para conocer como realizar este procedimiento en ArcGIS for Desktop y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
@@ -269,7 +274,7 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAlos/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
-2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _APFBSRT1MosaicArcGISPro.tif_. Para la zona de estudio, el archivo de mosaico tendrá un tamaño aproximado de 412MB.
+2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _APFBSRT1MosaicArcGISPro.tif_. Para la zona de estudio, el archivo de mosaico tendrá un tamaño aproximado de 412 MB.
 
 > Debido a que las imágenes utilizadas se traslapan, en la herramienta de geoprocesamiento _Mosaic to New Raster_ es necesario seleccionar el operador de mosaico `Mean` para obtener el promedio de las elevaciones en cada celda.
 
@@ -283,9 +288,9 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 
 <div align="center">
 
-| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS Pro / mosaic            | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part3.rar), [part4.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part4.rar), [part5.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part5.rar), |
+| Aplicación / grilla | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|:--------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ArcGIS Pro / mosaic | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part2.rar), [part3.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part3.rar), [part4.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part4.rar), [part5.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ALOS/APFBSRT1MosaicArcGISPro.part5.rar),                                                                                                    |
 
 </div>
 
@@ -294,6 +299,16 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 * [ALOS_PALSAR_LEVEL1.0](https://search.earthdata.nasa.gov/search/granules?p=C1206485320-ASF)
 * [ALOS_PALSAR_LEVEL1.1](https://search.earthdata.nasa.gov/search/granules?p=C1206485527-ASF)
 * [ALOS_PALSAR_RTC_LOW_RES](https://search.earthdata.nasa.gov/search/granules?p=C1206487217-ASF)
+
+
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                                                                         |
+|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                     |
+|     2     | Investigue y documente otros modelos digitales de elevación que puedan ser utilizados en el desarrollo de proyectos hidrológicos, p. ej. Lidar. |
 
 
 ### Compatibilidad
