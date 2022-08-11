@@ -19,14 +19,19 @@ Para la descarga de los modelos de terreno y la información climatológica obte
 * Cualquier navegador actualizado de Internet
 
 
-### Procedimiento para Earthdata
+### Diagrama general de procesos
 
-Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda crear una cuenta de correo electrónico de [Google](https://mail.google.com/) que podrá utilizar para crear posteriormente una cuenta en [GitHub](https://github.com/) y clonar el contenido completo de este curso, incluidos los paquetes de datos, scripts y documentación oficial.
+El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Graph/UserCreationEarthdataFlowchart.svg" width="60%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
+
+
+### Procedimiento para Earthdata
+
+Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda crear una cuenta de correo electrónico de [Google](https://mail.google.com/) que podrá utilizar para crear posteriormente una cuenta en [GitHub](https://github.com/) y clonar el contenido completo de este curso, incluidos los paquetes de datos, scripts y documentación oficial.
 
 1. Ingresar al servicio web [Eathdata](https://search.earthdata.nasa.gov) de la NASA y dar clic en [Earthdata login](https://d53njncz5taqi.cloudfront.net/login?ee=prod&state=https%3A%2F%2Fsearch.earthdata.nasa.gov%2Fsearch). 
 
@@ -65,7 +70,7 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData7.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData8.png)
 
-Su cuenta ha sido creada, validada y esta lista para ser utilizada en el buscador de Earthdata.
+Su cuenta ha sido creada, validada y está lista para ser utilizada en el buscador de Earthdata.
 
 
 ### Compatibilidad
@@ -74,7 +79,6 @@ Su cuenta ha sido creada, validada y esta lista para ser utilizada en el buscado
 
 
 ### Control de versiones
-
 
 | Versión     | Descripción                                           | Autor                                      | Horas |
 |-------------|:------------------------------------------------------|--------------------------------------------|:-----:|

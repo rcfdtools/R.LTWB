@@ -288,7 +288,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     1     | Realice el procedimiento presentado en esta clase para el caso de estudio asignado por [rcfdtools](https://github.com/rcfdtools) o para el caso propuesto por el estudiante y aprobado por [rcfdtools](https://github.com/rcfdtools). A cada estudiante se le asigna un código único de caso de estudio que contiene el prefijo CS.                                                                                                                                                               |
 |     2     | En su GitHub, cree un repositorio para su caso de estudio y nombre como _R.LTWB.CS######_. Cree la estructura de directorios existente en [R.LTWB](https://github.com/rcfdtools/R.LTWB) dentro su propio repositorio y en la carpeta _Seccion1 / CaseStudy_, incluya el documento .pdf de desarrollo de las actividades indicadas en esta clase. Incluya los archivos obtenidos y generados en las carpetas de archivos específicos (.datasets, .dem, .map, .projectionfile, .refs, .shp, .temp)  |
 
-> Tenga presente que durante todo el curso, los documentos de desarrollo y avances de su caso de estudio deberán ser incluidos en la sección y actividad correspondiente y dentro de las carpetas generales correspondientes. El nombre del reporte de desarrollo corresponderá al nombre de la actividad y al final se incluye la fecha de la versión en formato aaaammdd, p. ej. CaseStudy20220811.pdf. En caso de que requiera de la presentación de una nueva versión del documento de desarrollo, conserve las versiones anteriores e incluya la nueva versión con la fecha actualizada. Recuerde que para repositorio de uso libre, el tamaño máximo de los archivos que se pueden cargar es de 100 MB, archivos con tamaño superior deben ser comprimidos en una o múltiples partes de 95 MB.
+> Tenga presente que durante todo el curso, los documentos de desarrollo y avances de su caso de estudio deberán ser incluidos en la sección y actividad correspondiente y dentro de las carpetas generales correspondientes. El nombre del reporte de desarrollo corresponderá al nombre de la actividad y al final se incluye la fecha de la versión en formato aaaammdd, p. ej. CaseStudy20220811.pdf. En caso de que requiera de la presentación de una nueva versión del documento de desarrollo, conserve las versiones anteriores e incluya la nueva versión con la fecha actualizada. Recuerde que para repositorios de uso libre en GitHub, el tamaño máximo de los archivos que se pueden cargar es de 100 MB, archivos con tamaños superiores deben ser comprimidos en una o múltiples partes de 95 MB.
 
 
 ### Compatibilidad
@@ -298,12 +298,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                          | Autor                                      | Horas |
-|-------------|:-----------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.20  | Inclusión de diagrama de procesos.                                                                   | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.09  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.08  | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. | [rcfdtools](https://github.com/rcfdtools)  |  2.5  | 
-| 2022.07.06  | Versión inicial con definición general del caso de estudio y mapas de referencia.                    | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| Versión    | Descripción                                                                                          | Autor                                      | Horas |
+|------------|:-----------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.11 | Inclusión de actividades complementarias.                                                            | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.20 | Inclusión de diagrama de procesos.                                                                   | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.09 | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.08 | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. | [rcfdtools](https://github.com/rcfdtools)  |  2.5  | 
+| 2022.07.06 | Versión inicial con definición general del caso de estudio y mapas de referencia.                    | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
