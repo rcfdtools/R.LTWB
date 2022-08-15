@@ -9,7 +9,7 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 ### Objetivos
 
 * A partir de las estaciones identificadas y seleccionadas para la zona de estudio, obtener las series o registros de las estaciones a partir de los datos disponibles en el portal DHIME del IDEAM.
-* Integrar los datos descargados en archivos de texto separados por comas .csv en un único archivo.
+* Integrar los archivos de datos independientes descargados en archivos de texto separados por comas .csv, en un único archivo.
 
 
 ### Requerimientos
@@ -36,6 +36,8 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 
 #### Glosario de variables IDEAM
+
+El libro de Excel del [glosario de variables del IDEAM - Colombia](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/GlosarioVariables.xlsx), se compone de 3 hojas de cálculo que contienen el listado de etiquetas básicas de los diferentes parámetros de la red hidroclimátológica y las etiquetas de las series diarias derivadas. La versión utilizada para ejemplificar esta clase corresponde a la fecha 2022.07.31. 
 
 
 #### Nivel de aprobación de cada dato[^1]
