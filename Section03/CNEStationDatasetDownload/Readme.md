@@ -55,12 +55,12 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 2. Desde Excel, abra los siguientes archivos de estaciones seleccionadas que fueron exportados a formato DBase File .dbf, copie y pegue a las hojas del libro de Excel:
 
-| Parámetro             | Archivo .dbf estaciones                                                                                                            | Hoja Excel           |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| Precipitación         | [CNE_IDEAM_OE_ZE_Precipitacion.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf)     | Precipitacion        |
-| Temperatura del aire  | [CNE_IDEAM_OE_ZE_TemperaturaAire.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) | TemperaturaAire      |
-| Evaporación potencial | [CNE_IDEAM_OE_ZE_Evaporacion.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf)         | EvaporacionPotencial |
-| Caudal                | [CNE_IDEAM_OE_ZE_NivelCaudal.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf)         | Caudal               |
+| Parámetro             | Archivo .dbf estaciones                                                                                                            | Hoja Excel           | Estaciones |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------|----------------------|------------|
+| Precipitación         | [CNE_IDEAM_OE_ZE_Precipitacion.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf)     | Precipitacion        | 139        |
+| Temperatura del aire  | [CNE_IDEAM_OE_ZE_TemperaturaAire.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) | TemperaturaAire      | 42         |
+| Evaporación potencial | [CNE_IDEAM_OE_ZE_Evaporacion.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf)         | EvaporacionPotencial | 41         |
+| Caudal                | [CNE_IDEAM_OE_ZE_NivelCaudal.dbf](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf)         | Caudal               | 65         |
 
 3. En cada hoja del libro de Excel, agregue las siguientes dos columnas:
 
@@ -71,17 +71,36 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 > El propósito de estas columnas es registrar para cuáles estaciones fue posible realizar la descarga de series y en que archivo de la secuencia de descarga se encuentran los datos obtenidos. 
 
-4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `COIDGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú View, congele la primera fila correspondiente a las etiquetas de columna.
+4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `COIDGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú _View_, congele la primera fila correspondiente a las etiquetas de columna.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelCNEStationDatasetDownload.png)
 
 > Debido a que los datos se han copiado desde archivos .dbf, es posible que debido a la codificación de texto, no se visualicen correctamente las tildes y eñes.
 
+5. Ingrese al portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del [IDEAM - Colombia](http://www.ideam.gov.co/), acepte los términos de referencia y de clic en _Aceptar_.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMETerminos.png)
+
+
+### Descarga de series de precipitación
+
+6. En la pestaña _Consultar_, defina los siguientes parámetros:
+
+* Periodo
+  * Fecha Inicial: `31/12/1899`, correspondiente a fecha a partir de la cual se pueden obtener registros desde el servicio DHIME.
+  * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
+* Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos mensuales para los datos de precipitación.
+* Parámetro: `PRECIPITACIÓN`.
+* Variable: `Lista Completa` seleccionando `Precipitación total mensual`
+
+> Las descargas a partir de la fecha final también pueden ser realizadas a partir de [años hidrológicos](https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico) completos que pueden corresponder a periodos del 01 de junio al 31 de mayo del año inmediatamente siguiente o a las fracciones de invierno a verano o ciclos estacionales dependiendo de la zona geográfica.
 
 
 ### Referencias
 
-* 
+* http://dhime.ideam.gov.co/atencionciudadano/
+* http://www.ideam.gov.co/
+* https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico
 
 
 ### Control de versiones
