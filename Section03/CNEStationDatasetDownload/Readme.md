@@ -1,5 +1,5 @@
 ## Obtención de series de datos discretos climatológicos de estaciones terrestres
-Keywords: `IDEAM` `Weather Station` `DHIME`
+Keywords: `IDEAM` `Weather Station` `DHIME` `Rain` `Air Temperature` `Evaporation` `Water Flow`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/CNEStationDatasetDownload.png)
 
