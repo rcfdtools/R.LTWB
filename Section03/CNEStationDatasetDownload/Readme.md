@@ -220,7 +220,7 @@ Resumen de datos obtenidos para caudal medio mensual
 * 65 seleccionadas, 57 descargables de IDEAM
 * Comprimidos de datos (22).zip a datos (27).zip
 
-Al finalizar la descarga de todos los registros para todos los parámetros requeridos, copie los archivos comprimidos en la carpeta _D:\R.LTWB\\.datasets\IDEAM_.
+Al finalizar la descarga de todos los registros para todos los parámetros requeridos, copie los archivos comprimidos en la carpeta _[D:\R.LTWB\\.datasets\IDEAM](https://github.com/rcfdtools/R.LTWB/tree/main/.datasets/IDEAM)_.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DatasetsIDEAM.png)
 
