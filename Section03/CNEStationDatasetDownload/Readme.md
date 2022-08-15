@@ -15,7 +15,7 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 ### Requerimientos
 
 * [Microsoft Excel from Office 64 bits](https://aka.ms/office-install) 
-* [Listado de estaciones seleccionadas para la zona de estudio con datos de precipitación.](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
+* [Listado de estaciones seleccionadas de precipitación en la zona de estudio.](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 
 
 ### Diagrama general de procesos
@@ -32,8 +32,9 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 ### Procedimiento general
 
-1. Dentro de la carpeta _D:\R.LTWB\\.datasets_, cree una nueva carpeta con el nombre _IDEAM_, y un nuevo libro de Microsoft Excel con el nombre CNEStationDatasetDownload.xlsx. Dentro del libro de Excel cree 4 hojas y nombre como: `Precipitacion`, `TemperaturaAire`, `EvaporacionPotencial` y `Caudal`.
+1. Dentro de la carpeta _D:\R.LTWB\\.datasets_, cree una nueva carpeta con el nombre _IDEAM_, y un nuevo libro de Microsoft Excel con el nombre CNEStationDatasetDownload.xlsx. Dentro del libro de Excel, crear 4 hojas y nombrar como: `Precipitacion`, `TemperaturaAire`, `EvaporacionPotencial` y `Caudal`.
 
+2. 
 
 
 
@@ -55,7 +56,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/15) | [Siguiente]() |
-|--------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|---------------|
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationElevation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Siguiente]() |
+|--------------------------------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------------------|---------------|
 
 [^1]: 
