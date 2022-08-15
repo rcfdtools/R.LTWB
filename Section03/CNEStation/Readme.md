@@ -165,17 +165,6 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 > De acuerdo a la nota del Anexo 2 del IDEAM: se debe tener en cuenta que la red es de tipo dinámico; es decir, a través de su operación se han instalado y suspendido estaciones a lo largo del territorio nacional, conservando en todo caso los datos históricos registrados. Esto significa que la sumatoria de las estaciones del Catálogo corresponde al número total de estaciones que han hecho parte de la red a través de su historia de operación y registro de información.
 
 
-#### Nivel de aprobación de cada dato[^1]
-
-| Código | Novel de aprobación |
-|:------:|:-------------------:|
-|  900   |     Preliminar      |
-|  1100  |     En revisión     |
-|  1200  |     Definitivo      |
-
-> La información validada o definitiva al encontrarse certificada, ha surtido el proceso de validación técnica necesaria que garantiza la calidad del dato y determina la oficialidad de la información que podrá ser utilizada para toma de decisiones. Para el desarrollo del caso de estudio, usaremos la información IDEAM en todos los niveles de aprobación disponibles.
-
-
 ### Procedimiento general
 
 1. Ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones en formato Microsoft Excel y Shapefile, el Catálogo nacional de otras entidades y el Glosario de variables. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion). Copiar los archivos de Microsoft Excel _[CNE_IDEAM.xls]()_ y _[CNE_OE.xls]()_ en el directorio _D:\R.LTWB\\.datasets_, copiar y descomprimir el archivo [CNE_IDEAM.zip]() que contiene los puntos de localización de las estaciones en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_.
@@ -562,7 +551,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     3     | Investigue y documente otros portales desde los cuales se pueda descargar información hidroclimatológica de estaciones terrestres en Colombia o en cualquier lugar del mundo.                                                                                                                                                                                  | 
 |     4     | Utilizando la herramienta [CNEStationSelect](https://github.com/rcfdtools/R.HydroTools/tree/main/CNEStationSelect) del repositorio [R.HydroTools](https://github.com/rcfdtools/R.HydroTools), realice el procedimiento de selección de estaciones para estudios hidrológicos y compare las estaciones obtenidas con el procedimiento presentado en esta clase. |
 |     5     | Utilizando Python, cree una herramienta que homologue los atributos de cualquier catálogo de estaciones al formato del Catálogo Nacional de Estaciones de Colombia - CNE. El homologador debe escribir los datos en el mismo orden de columnas que contiene el CNE.                                                                                            |
-
 
 
 ### Referencias
