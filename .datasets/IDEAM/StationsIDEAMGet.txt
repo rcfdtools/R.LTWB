@@ -1,0 +1,26 @@
+Ordenar estaciones seleccionadas por departamento y código
+
+Precipitación total mensual
+139 seleccionadas, 131 descargables IDEAM
+Variable derivada 
+datos.zip a datos (14).zip
+
+Temperatura máxima diaria
+42 seleccionadas, 25 descargables IDEAM
+Variable básica
+datos (15).zip a datos (17).zip
+
+Temperatura mínima diaria
+42 seleccionadas, 25 descargables IDEAM
+Variable básica
+datos (18).zip a datos (20).zip
+
+Evaporación total diaria
+41 seleccionadas, 1 descargable IDEAM 29065130
+Variable básica
+datos (21).zip
+
+Caudal medio mensual
+65 seleccionadas, 57 descargables IDEAM
+Variable derivada
+
