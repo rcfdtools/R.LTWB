@@ -1,5 +1,5 @@
 ## Obtención de series de datos discretos climatológicos de estaciones terrestres
-Keywords: `IDEAM` `Weather Station` 
+Keywords: `IDEAM` `Weather Station` `DHIME`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Graph/CNEStationDatasetDownload.png)
 
@@ -103,15 +103,15 @@ Glosario de variables del IDEAM - Series básicas
 Glosario de variables del IDEAM - Series derivadas
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesDerivadasPrecipitacion.png)
 
-7. En la sección _Datos Estación_ de DHIME, seleccione el departamento de Bolivar y todos sus municipios. Desde el archivo de Excel y la hoja _Precipitacion_, seleccione el código de la primera estación, oprima las teclas <kbd>Ctrl</kbd> + <kbd>c</kbd>; en el navegador de Internet oprima <kbd>Ctrl</kbd> + <kbd>f</kbd> para abrir el cuadro de búsqueda, con <kbd>Ctrl</kbd> + <kbd>v</kbd> pegue el código y de <kbd>Enter</kbd>. Automáticamente será dirigido a la estación, marque la casilla de selección ubicada en la parte izquierda y repita el procedimiento hasta marcar 10 estaciones si estas se encuentran en el mismo Departamento. En el libro de Excel, ingrese `Y` en la columna `Ready` si la estación se encuentra disponible en DHIME y `N` si no aparece en la búsqueda.
+7. En la sección _Datos Estación_ de DHIME, seleccione el departamento de Bolivar y todos sus municipios. Desde el archivo de Excel y la hoja _Precipitacion_, seleccione el código de la primera estación y oprima las teclas <kbd>Ctrl</kbd> + <kbd>c</kbd>; en el navegador de Internet oprima <kbd>Ctrl</kbd> + <kbd>f</kbd> para abrir el cuadro de búsqueda, con <kbd>Ctrl</kbd> + <kbd>v</kbd> pegue el código y de <kbd>Enter</kbd>. Automáticamente será dirigido a la estación, marque la casilla de selección ubicada en la parte izquierda y repita el procedimiento hasta marcar 10 estaciones si estas se encuentran en el mismo Departamento. En el libro de Excel, ingrese `Y` en la columna `Ready` si la estación se encuentra disponible en DHIME y `N` si no aparece en la búsqueda.
 
 > Para navegadores de Internet en Español oprima <kbd>Ctrl</kbd> + <kbd>b</kbd> para realizar búsquedas.
 > 
-> DHIME permite realizar descargas simultáneas para máximo 10 estaciones.
+> DHIME permite realizar descargas simultáneas de registros para máximo 10 estaciones.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionDescarga.png)
 
-Debido a que para el departamento de Bolivar solo descargaremos los datos 7 estaciones, es necesario dar clic en el botón `Agregar a la Consulta` y luego dar clic en el botón `Agregar Otros` que permitirá agregar 3 estaciones más sin perder el periodo definido. Es necesario volver a seleccionar manualmente el parámetro para continuar con la búsqueda y marcado de las estaciones.
+Debido a que para el departamento de Bolivar solo descargaremos los datos de 7 estaciones, es necesario dar clic en el botón `Agregar a la Consulta` y luego dar clic en el botón `Agregar Otros` que permitirá agregar 3 estaciones más sin perder el periodo definido. Es necesario volver a seleccionar manualmente el parámetro para continuar con la búsqueda y marcado de las estaciones.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionDescargaQueryAdd.png)
 
@@ -119,13 +119,98 @@ Seleccione y agregue las 3 primeras estaciones del departamento del Cesar regist
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionDescargaCSV.png)
 
-En el portal DHIME, de clic en el botón `Limpiar` y repita el procedimiento de descarga hasta obtener los registros de precipitación de todas las estaciones seleccionadas para la zona de estudio. 
+En el portal DHIME, de clic en el botón `Limpiar` y repita el procedimiento de descarga anterior hasta obtener los registros de precipitación de todas las estaciones requeridas para la zona de estudio. Recuerde registrar los valores correspondientes en las columnas `Ready` y `File` del libro de Excel.
+
+Resumen de datos obtenidos para precipitación total mensual
+* 139 seleccionadas, 131 descargables de IDEAM
+* Comprimidos de datos.zip a datos (14).zip
 
 
 ### Descarga de series de temperatura del aire
 
-8. Para la descar 
+8. Para la descarga de las series temporales de temperatura, utilice los siguientes parámetros:
 
+* Periodo
+  * Fecha Inicial: `31/12/1899`, correspondiente a fecha a partir de la cual se pueden obtener registros desde el servicio DHIME.
+  * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
+* Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos diarios.
+* Parámetro: `TEMPERATURA`.
+* Variable: `Lista Completa` seleccionando y descargando primero `Temperatura máxima diaria` y luego `Temperatura mínima diaria`, que de acuerdo al Glosario de Variables del IDEAM, corresponden a _variables básicas_ debido a que no requieren de un proceso de cálculo y son obtenidas directamente de un registrador. 
+
+> DHIME no dispone de registros derivados de temperatura media mensual calculados a partir de los datos diarios, por lo que es necesario calcular los valores medios a partir de los datos máximos y mínimos.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMETemperaturaAireParametros.png)
+
+Glosario de variables del IDEAM - Series básicas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesBasicasTemperaturaAire.png)
+
+Glosario de variables del IDEAM - Series derivadas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesDerivadasTemperaturaAire.png)
+
+Resumen de datos obtenidos para temperatura máxima diaria
+* 42 seleccionadas, 25 descargables de IDEAM
+* Comprimidos de datos (15).zip a datos (17).zip
+
+Resumen de datos obtenidos para temperatura mínima diaria
+* 42 seleccionadas, 25 descargables de IDEAM
+* Comprimidos de datos (18).zip a datos (20).zip
+
+
+### Descarga de series de evaporación potencial
+
+9. Para la descarga de las series temporales de evaporación potencial, utilice los siguientes parámetros:
+
+* Periodo
+  * Fecha Inicial: `31/12/1899`, correspondiente a fecha a partir de la cual se pueden obtener registros desde el servicio DHIME.
+  * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
+* Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos diarios.
+* Parámetro: `EVAPORACIÓN`.
+* Variable: `Lista Completa` seleccionando y descargando `Evaporación total diaria`, que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable básica_ debido a que no requieren de un proceso de cálculo y es obtenida directamente de un registrador. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEEvaporacionParametros.png)
+
+Glosario de variables del IDEAM - Series básicas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesBasicasEvaporacion.png)
+
+Glosario de variables del IDEAM - Series derivadas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesDerivadasEvaporacion.png)
+
+Resumen de datos obtenidos para evaporación total diaria
+* 41 seleccionadas, 1 descargable de IDEAM correspondiente a la estación 29065130
+* Comprimido de datos datos (21).zip
+
+>Como puede observar en las imágenes de referencia, al seleccionar este parámetro no es posible descargar los datos derivados correspondientes a evaporación total mensual. 
+
+
+### Descarga de series de caudal medio mensual
+
+10. Para la descarga de las series temporales de caudal medio mensual, utilice los siguientes parámetros:
+
+* Periodo
+  * Fecha Inicial: `31/12/1899`, correspondiente a fecha a partir de la cual se pueden obtener registros desde el servicio DHIME.
+  * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
+* Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos medios mensuales.
+* Parámetro: `CAUDAL`.
+* Variable: `Lista Completa` seleccionando y descargando `Caudal medio mensual`, que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir del promedio de los valores registrados a nivel horario. 
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMECaudalParametros.png)
+
+Glosario de variables del IDEAM - Series básicas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesBasicasCaudal.png)
+
+Glosario de variables del IDEAM - Series derivadas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesDerivadasCaudal.png)
+
+Resumen de datos obtenidos para caudal medio mensual
+* 65 seleccionadas, 57 descargables de IDEAM
+* Comprimidos de datos (22).zip a datos (27).zip
+
+
+
+
+
+
+Al finalizar la descarga de todos los registros para todos los parámetros requeridos, copie los archivos comprimidos en la carpeta _D:\R.LTWB\\.datasets\IDEAM_.
 
 
 ### Referencias
@@ -137,9 +222,9 @@ En el portal DHIME, de clic en el botón `Limpiar` y repita el procedimiento de 
 
 ### Control de versiones
 
-| Versión    | Descripción     | Autor                                      | Horas |
-|------------|:----------------|--------------------------------------------|:-----:|
-| 2022.08.15 | Versión inical. | [rcfdtools](https://github.com/rcfdtools)  |  4.5  |
+| Versión    | Descripción                                                                                             | Autor                                      | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.15 | Versión inical. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
