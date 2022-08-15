@@ -91,9 +91,19 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
   * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
 * Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos mensuales para los datos de precipitación.
 * Parámetro: `PRECIPITACIÓN`.
-* Variable: `Lista Completa` seleccionando `Precipitación total mensual`
+* Variable: `Lista Completa` seleccionando `Precipitación total mensual` que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir de la sumatoria de los valores registrados horarios, diarios o de frecuencias inferiores. 
 
 > Las descargas a partir de la fecha final también pueden ser realizadas a partir de [años hidrológicos](https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico) completos que pueden corresponder a periodos del 01 de junio al 31 de mayo del año inmediatamente siguiente o a las fracciones de invierno a verano o ciclos estacionales dependiendo de la zona geográfica.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionParametros.png)
+
+Glosario de variables del IDEAM - Series básicas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesBasicasPrecipitacion.png)
+
+Glosario de variables del IDEAM - Series derivadas
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesDerivadasPrecipitacion.png)
+
+7. 
 
 
 ### Referencias
