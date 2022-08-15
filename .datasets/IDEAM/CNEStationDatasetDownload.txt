@@ -24,3 +24,5 @@ Caudal medio mensual
 65 seleccionadas, 57 descargables IDEAM
 Variable derivada
 
+unzip files an join .csv files with python
+
