@@ -71,7 +71,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 > El propósito de estas columnas es registrar para cuáles estaciones fue posible realizar la descarga de series y en que archivo de la secuencia de descarga se encuentran los datos obtenidos. 
 
-4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `COIDGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú _View_, congele la primera fila correspondiente a las etiquetas de columna.
+4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `COIDGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú _View_, congele la primera fila correspondiente a las etiquetas de columna. Ordene las estaciones por Departamento y código.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelCNEStationDatasetDownload.png)
 
@@ -93,7 +93,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 * Parámetro: `PRECIPITACIÓN`.
 * Variable: `Lista Completa` seleccionando `Precipitación total mensual` que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir de la sumatoria de los valores registrados horarios, diarios o de frecuencias inferiores. 
 
-> Las descargas a partir de la fecha final también pueden ser realizadas a partir de [años hidrológicos](https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico) completos que pueden corresponder a periodos del 01 de junio al 31 de mayo del año inmediatamente siguiente o a las fracciones de invierno a verano o ciclos estacionales dependiendo de la zona geográfica.
+> Las descargas a partir de la fecha final también pueden ser realizadas a partir de [años hidrológicos](https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico) que pueden corresponder a periodos del 01 de junio al 31 de mayo del año inmediatamente siguiente, fracciones de invierno a verano o ciclos estacionales dependiendo de la zona geográfica.
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionParametros.png)
 
@@ -103,7 +103,29 @@ Glosario de variables del IDEAM - Series básicas
 Glosario de variables del IDEAM - Series derivadas
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/MicrosoftExcelGlosarioVariablesDerivadasPrecipitacion.png)
 
-7. 
+7. En la sección _Datos Estación_ de DHIME, seleccione el departamento de Bolivar y todos sus municipios. Desde el archivo de Excel y la hoja _Precipitacion_, copie el código de la primera estación y en el navegador de Internet oprima las teclas <kbd>Ctrl</kbd> + <kbd>f</kbd> y con <kbd>Ctrl</kbd> + <kbd>v</kbd>, pegue el código y de <kbd>Enter</kbd>. Automáticamente será dirigido a la estación, marque la casilla de selección ubicada en la parte izquierda y repita el procedimiento hasta marcar 10 estaciones si estas se encuentran en el mismo Departamento. En el libro de Excel, ingrese `Y` en la columna `Ready` si la estación se encuentra disponible en DHIME y `N` si no aparece en la búsqueda.
+
+> Para navegadores de Internet en Español oprima <kbd>Ctrl</kbd> + <kbd>b</kbd> para realizar búsquedas.
+> 
+> DHIME permite realizar descargas simultáneas para máximo 10 estaciones.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionDescarga.png)
+
+Debido a que para el departamento de Bolivar solo descargaremos los datos 7 estaciones, es necesario dar clic en el botón `Agregar a la Consulta` y luego dar clic en el botón `Agregar Otros` que permitirá agregar 3 estaciones más sin perder el periodo definido. Es necesario volver a seleccionar manualmente el parámetro para continuar con la búsqueda y marcado de las estaciones.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionDescargaQueryAdd.png)
+
+Seleccione y agregue las 3 primeras estaciones del departamento del Cesar registradas en el libro de Excel para completar el bloque de 10 estaciones. De clic en el botón `Agregar a la Consulta` que lo llevará a la pestaña de descargas y de clic en el botón `Descargar`. Obtendrá en la carpeta de descargas de su sistema operativo, un archivo comprimido en formato .zip con el nombre _datos.zip_ que contendrá dentro un archivo de texto separado por comas denominado _excel.csv.csv_. En el libro de Excel, registre el nombre del archivo descargado en la columna `File`.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DHIMEPrecipitacionDescargaCSV.png)
+
+En el portal DHIME, de clic en el botón `Limpiar` y repita el procedimiento de descarga hasta obtener los registros de precipitación de todas las estaciones seleccionadas para la zona de estudio. 
+
+
+### Descarga de series de temperatura del aire
+
+8. Para la descar 
+
 
 
 ### Referencias
