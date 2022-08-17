@@ -240,9 +240,10 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                             | Autor                                      | Horas |
-|------------|:--------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.15 | Versión inical. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME | [rcfdtools](https://github.com/rcfdtools)  |   7   |
+| Versión    | Descripción                                                                                                                                                             | Autor                                      | Horas |
+|------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
