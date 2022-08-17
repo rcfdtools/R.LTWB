@@ -3,7 +3,7 @@
 # Description: this script uncompress and join multiple .zip files get manually from http://dhime.ideam.gov.co/atencionciudadano/ into a single .csv file.
 # Repository: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
 # License: https://github.com/rcfdtools/R.LTWB/wiki/License
-# Requirements: Python 3+, Pandas
+# Requirements: Python 3+, Pandas,
 
 # Libraries
 import glob
