@@ -338,18 +338,18 @@ A partir de este momento dispone de registros integrados de diferentes variables
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                              | Autor                                      | Horas |
-|------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas.                                                                               | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
-| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                 | [rcfdtools](https://github.com/rcfdtools)  |   7   |
+| Versión    | Descripción                                                                                                                                                                                               | Autor                                      | Horas |
+|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas. Diagrama de procesos CNEStationDatasetDownloadFlowchart.svg, diagrama de flujo CNEStationCSVJoinFlowchart.svg  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv.                                   | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationElevation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Siguiente]() |
-|--------------------------------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------------------|---------------|
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationElevation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/16) | [Siguiente]() |
+|-----------------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|---------------|
 
 [^1]: http://dhime.ideam.gov.co/atencionciudadano/
