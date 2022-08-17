@@ -15,6 +15,8 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 ### Requerimientos
 
 * [Microsoft Excel from Office 64 bits.](https://aka.ms/office-install) 
+* [Python 3+](https://www.python.org/)
+* [Pandas para Python 3+](https://pandas.pydata.org/)
 * [Glosario de variables IDEAM.](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/GlosarioVariables.xlsx) [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 * [Listado de estaciones seleccionadas de precipitación en la zona de estudio.](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
 * [Listado de estaciones seleccionadas de temperatura del aire en la zona de estudio.](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)
@@ -40,7 +42,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 El libro de Excel del [glosario de variables del IDEAM - Colombia](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/GlosarioVariables.xlsx), se compone de 3 hojas de cálculo que contienen el listado de etiquetas básicas de los diferentes parámetros de la red hidroclimátológica y las etiquetas de las series diarias derivadas que corresponden a datos que se calculan a partir de las series básicas. La versión utilizada para ejemplificar esta clase corresponde a la fecha 2022.07.31. 
 
 
-#### Catálogo de datos de los registros discretos del IDEAM
+#### Catálogo de datos de los registros discretos IDEAM
 
 Tomados directamente de los archivos de texto separados por comas obtenidos del servicio [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del [IDEAM](http://www.ideam.gov.co/) y tipos devueltos por Python / Pandas.
 
@@ -64,7 +66,7 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 | Frecuencia       | object     | Frecuencia de captura o de cálculo. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos.                                                                                                                                  |
 | Fecha            | datetime64 | Fecha de registro.                                                                                                                                                                                                                             |
 | Valor            | float64    | Valor registrado.                                                                                                                                                                                                                              |
-| Grado            | int64      | Grado del dato, p. ej. -1, 4, 5, 50.                                                                                                                                                                                                           |
+| Grado            | int64      | Grado del dato asignado por el IDEAM dentro de sus procesos de validación, p. ej. -1, 4, 5, 50.                                                                                                                                                |
 | Calificador      | object     | Calificador del dato registrado, p. ej. Dudoso, Est. Interpolación, Est. Otros métodos, Est. Regresión, Estimado, Río Seco, Sección Inestable. Calificado en archivos dBase.                                                                   |
 | NivelAprobacion  | int64      | Nivel de aprobación. NivelAprob en archivos dBase.                                                                                                                                                                                             |
 
@@ -254,7 +256,54 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 
 ### Unión de series descargadas
 
-Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio.
+Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio. Para este proceso utilizaremos Python y la librería Pandas a través del siguiente script localizado en la carpeta _.src_.
+
+Para la ejecución del script, previamente se requiere de la instalación previa de Python 3+ y la librería Pandas. [:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/Requirement)
+
+Script [D:\R.LTWB\.src\CNEStationCSVJoin.py](https://github.com/rcfdtools/R.LTWB/blob/main/.src/CNEStationCSVJoin.py)
+```
+# -*- coding: UTF-8 -*-
+# Name: CNEStationCSVJoin.py
+# Description: this script uncompress and join multiple .zip files get manually from http://dhime.ideam.gov.co/atencionciudadano/ into a single .csv file.
+# Repository: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
+# License: https://github.com/rcfdtools/R.LTWB/wiki/License
+# Requirements: Python 3+, Pandas
+
+# Libraries
+import glob
+from zipfile import ZipFile
+import os
+import pandas as pd
+
+# Procedure
+path = '../.datasets/IDEAM/' # Your local .zip files path
+join_file = 'IDEAMJoined.csv' # Joined file name
+if os.path.isfile(path + join_file):
+    os.remove(path + join_file)
+zip_files = glob.glob(path + '*.zip')
+for i in zip_files:
+    print('Unzipping %s' %i)
+    ZipFile(i).extractall(path)
+    os.rename(path + 'excel.csv.csv', i+'.csv')
+csv_files = glob.glob(path + '*.csv')
+df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
+df.to_csv(path + join_file, encoding='utf-8', index=False)
+print(df)
+for csv_file in csv_files:
+    os.remove(csv_file)
+```
+
+> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados del servicio DHIME.
+
+
+1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'` corresponde a la ruta relativa donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
+
+2. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\IDEAM` diríjase a la carpeta donde están contenidos los datos descargados. Usando el comando `DIR /W`, liste en una vista ancha, los archivos contenidos en la carpeta IDEAM y verifique que se encuentren los archivos comprimidos .zip obtenidos previamente.
+
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/Windows11CMDDir.png)
+
+3. Limpie la consola con el comando `CLS` y utilizando en el `CMD` la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\CNEStationCSVJoin.py"`, ejecute el script que realizará la descompresión e integración de los archivos y creará o actualizará el archivo `IDEAMJoined.csv`.
+
 
 
 
