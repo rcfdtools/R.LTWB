@@ -1,24 +1,3 @@
-# -*- coding: UTF-8 -*-
-import glob
-from zipfile import ZipFile
-import os
-import pandas as pd
-path = '../.datasets/IDEAM/' # Your local .zip files path
-join_file = 'IDEAM.csv' # Joining file name
-if os.path.isfile(path + join_file):
-    os.remove(path + join_file)
-zip_files = glob.glob(path + '*.zip')
-for i in zip_files:
-    print('Unzipping %s' %i)
-    ZipFile(i).extractall(path)
-    os.rename(path + 'excel.csv.csv', i+'.csv')
-csv_files = glob.glob(path + '*.csv')
-df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
-df.to_csv(path + join_file, encoding='utf-8', index=False)
-print(df)
-for csv_file in csv_files:
-    os.remove(csv_file)
-
 
 '''
 # -*- coding: UTF-8 -*-
