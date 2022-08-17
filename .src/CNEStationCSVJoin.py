@@ -16,7 +16,7 @@ path = 'D:/R.LTWB/.datasets/IDEAM/' # Your local .zip files path, use ../.datase
 join_file = 'IDEAMJoined.csv' # Joined file name
 if os.path.isfile(path + join_file):
     os.remove(path + join_file)
-zip_files = glob.glob(path + '*.zip')
+zip_files = glob.glob(path + 'datos*.zip')
 for i in zip_files:
     print('Unzipping %s' %i)
     ZipFile(i).extractall(path)

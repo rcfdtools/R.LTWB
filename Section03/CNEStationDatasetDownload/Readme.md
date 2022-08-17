@@ -276,16 +276,16 @@ import os
 import pandas as pd
 
 # Procedure
-path = '../.datasets/IDEAM/' # Your local .zip files path
+path = 'D:/R.LTWB/.datasets/IDEAM/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
 join_file = 'IDEAMJoined.csv' # Joined file name
 if os.path.isfile(path + join_file):
     os.remove(path + join_file)
-zip_files = glob.glob(path + '*.zip')
+zip_files = glob.glob(path + 'datos*.zip')
 for i in zip_files:
     print('Unzipping %s' %i)
     ZipFile(i).extractall(path)
     os.rename(path + 'excel.csv.csv', i+'.csv')
-csv_files = glob.glob(path + '*.csv')
+csv_files = glob.glob(path + 'datos*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + join_file, encoding='utf-8', index=False)
 print(df)
@@ -293,7 +293,7 @@ for csv_file in csv_files:
     os.remove(csv_file)
 ```
 
-> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME y los comprimidos deberán iniciar con el nombre _datos_.
+> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME que inicien con el nombre _datos_ y los comprimidos originalmente obtenidos sí deberán iniciar con el nombre _datos_.
 
 1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'` corresponde a la ruta relativa donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
 
@@ -306,7 +306,7 @@ for csv_file in csv_files:
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/Windows11PythonCNEStationCSVJoin1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/Windows11PythonCNEStationCSVJoin2.png)
 
-Como puede observar, se han integrado 514926 registros en el archivo IDEAMJoined.csv.
+Como puede observar, se han integrado 514926 registros en el archivo IDEAMJoined.csv que tiene un tamaño aproximado de 154 MB.
 
 4. Desde en bloc de notas _Notepad++_, abra el archivo IDEAMJoined.csv y verifique el total de registros obtenidos.
 
