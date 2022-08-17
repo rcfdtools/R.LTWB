@@ -293,8 +293,7 @@ for csv_file in csv_files:
     os.remove(csv_file)
 ```
 
-> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME.
-
+> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME y los comprimidos deberán iniciar con el nombre _datos_.
 
 1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'` corresponde a la ruta relativa donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
 
@@ -304,9 +303,16 @@ for csv_file in csv_files:
 
 3. Limpie la consola con el comando `CLS` y utilizando en el `CMD` la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\CNEStationCSVJoin.py"`, ejecute el script que realizará la descompresión e integración de los archivos y creará o actualizará el archivo `IDEAMJoined.csv`.
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/Windows11PythonCNEStationCSVJoin1.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/Windows11PythonCNEStationCSVJoin2.png)
 
+Como puede observar, se han integrado 514926 registros en el archivo IDEAMJoined.csv.
 
+4. Desde en bloc de notas _Notepad++_, abra el archivo IDEAMJoined.csv y verifique el total de registros obtenidos.
 
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/NotepadIDEAMJoined.png)
+
+A partir de este momento dispone de registros integrados de diferentes variables hidroclimatológicas.
 
 
 ### Referencias

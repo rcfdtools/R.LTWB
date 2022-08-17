@@ -12,7 +12,7 @@ import os
 import pandas as pd
 
 # Procedure
-path = '../.datasets/IDEAM/' # Your local .zip files path
+path = 'D:/R.LTWB/.datasets/IDEAM/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
 join_file = 'IDEAMJoined.csv' # Joined file name
 if os.path.isfile(path + join_file):
     os.remove(path + join_file)
@@ -21,7 +21,7 @@ for i in zip_files:
     print('Unzipping %s' %i)
     ZipFile(i).extractall(path)
     os.rename(path + 'excel.csv.csv', i+'.csv')
-csv_files = glob.glob(path + '*.csv')
+csv_files = glob.glob(path + 'datos*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + join_file, encoding='utf-8', index=False)
 print(df)
