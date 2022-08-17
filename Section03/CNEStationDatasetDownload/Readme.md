@@ -306,7 +306,7 @@ for csv_file in csv_files:
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/Windows11PythonCNEStationCSVJoin1.png)
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/Windows11PythonCNEStationCSVJoin2.png)
 
-Como puede observar, se han integrado 514926 registros en el archivo IDEAMJoined.csv que tiene un tamaño aproximado de 154 MB.
+Como puede observar, se han integrado 514926 registros en el archivo [IDEAMJoined.csv](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/IDEAM/IDEAMJoined.zip) que tiene un tamaño aproximado de 154 MB.
 
 4. Desde en bloc de notas _Notepad++_, abra el archivo IDEAMJoined.csv y verifique el total de registros obtenidos.
 
