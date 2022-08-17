@@ -1,5 +1,5 @@
 ## Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
-Keywords: `IDEAM` `Weather Station` `DHIME` `Rain` `Air Temperature` `Evaporation` `Water Flow`
+Keywords: `IDEAM` `Weather Station` `DHIME` `Rain` `Air Temperature` `Evaporation` `Water Flow` `Python` `Pandas` `os.path.isfile` `os.remove` `glob` `ZipFile` `os.rename` `pd.concat` `to_csv`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/CNEStationDatasetDownload.png)
 
@@ -9,7 +9,7 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 ### Objetivos
 
 * A partir de las estaciones identificadas y seleccionadas para la zona de estudio, obtener las series o registros de las estaciones a partir de los datos disponibles en el portal DHIME del IDEAM.
-* Integrar los archivos de datos comprimidos descargados que contienen archivos de texto separados por comas, en un único archivo .csv.
+* Utilizando Python y Pandas, integrar los archivos de datos comprimidos descargados que contienen archivos de texto separados por comas, en un único archivo .csv.
 
 
 ### Requerimientos
@@ -254,7 +254,7 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DatasetsIDEAM.png)
 
 
-### Unión de series descargadas
+### Unión de series descargadas utilizando Python y Pandas
 
 Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio. Para este proceso utilizaremos Python y la librería Pandas a través del siguiente script localizado en la carpeta _.src_.
 
@@ -333,6 +333,7 @@ A partir de este momento dispone de registros integrados de diferentes variables
 
 | Versión    | Descripción                                                                                                                                                             | Autor                                      | Horas |
 |------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.17 | Complementación documentación para .                                                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
