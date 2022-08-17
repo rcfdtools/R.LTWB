@@ -1,3 +1,8 @@
+
+
+
+
+'''
 # -*- coding: UTF-8 -*-
 # Parameters
 thermal_level_caldas = False  # True for Caldas classification, False for conventional classification range
@@ -28,7 +33,7 @@ elevation_value = 1825
 print('The elevation value %d correspond to the Thermic level value: %s ' %(elevation_value, thermal_level_f(elevation_value)[1]))
 
 
-'''
+
 from datetime import datetime
 installation_date = '14/09/1972'
 #installation_date = ''
