@@ -111,7 +111,7 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 
 </div>
 
-> El propósito de estas columnas es registrar para cuáles estaciones fue posible realizar la descarga de series y en que archivo de la secuencia de descarga se encuentran los datos obtenidos. Posteriormente, realizaremos la lectura de los mismos parámetros a partir de información satelital, pero únicamente para las estaciones terrestres que disponen de información.
+> El propósito de estas columnas es registrar para cuáles estaciones fue posible realizar la descarga de series y en que archivo de la secuencia de descarga se encuentran los datos obtenidos. Posteriormente, efectuaremos la lectura de los mismos parámetros a partir de información satelital, pero únicamente para las estaciones terrestres que disponen de información.
 
 4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `COIDGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú _View_, congele la primera fila correspondiente a las etiquetas de columna. Ordene las estaciones por Departamento y código para facilitar la búsqueda y la descarga.
 
@@ -331,11 +331,11 @@ A partir de este momento dispone de registros integrados de diferentes variables
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                             | Autor                                      | Horas |
-|------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas.                                                                              | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
-| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                | [rcfdtools](https://github.com/rcfdtools)  |   7   |
+| Versión    | Descripción                                                                                                                                                              | Autor                                      | Horas |
+|------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas.                                                                               | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
+| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv.  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                 | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
