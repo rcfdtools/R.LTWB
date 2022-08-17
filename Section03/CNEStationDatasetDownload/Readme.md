@@ -293,9 +293,9 @@ for csv_file in csv_files:
     os.remove(csv_file)
 ```
 
-> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME que inicien con el nombre _datos_ y los comprimidos originalmente obtenidos sí deberán iniciar con el nombre _datos_.
+> Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME que inicien con el nombre _datos_ y los comprimidos originalmente obtenidos sí deberán iniciar como _datos****.zip_.
 
-1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'` corresponde a la ruta relativa donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
+1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'` que corresponde a la ruta relativa o `path = 'D:/R.LTWB/.datasets/IDEAM/'` que corresponde a la ruta absoluta donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
 
 2. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\IDEAM` diríjase a la carpeta donde están contenidos los datos descargados. Usando el comando `DIR /W`, liste en una vista ancha, los archivos contenidos en la carpeta IDEAM y verifique que se encuentren los archivos comprimidos .zip obtenidos previamente.
 
