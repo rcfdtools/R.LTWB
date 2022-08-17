@@ -234,6 +234,8 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 * https://stackoverflow.com/questions/3451111/unzipping-files-in-python
 * https://stackoverflow.com/questions/2491222/how-to-rename-a-file-using-python
 * https://www.tutorialspoint.com/how-to-merge-all-csv-files-into-a-single-dataframe-python-pandas
+* https://stackoverflow.com/questions/16923281/writing-a-pandas-dataframe-to-csv-file
+* https://stackoverflow.com/questions/32834731/how-to-delete-a-file-by-extension-in-python
 
 
 ### Control de versiones

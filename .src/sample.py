@@ -3,17 +3,21 @@ import glob
 from zipfile import ZipFile
 import os
 import pandas as pd
-# All files and directories ending with .txt and that don't begin with a dot:
-zip_files = glob.glob('../.datasets/IDEAM/*.zip')
+path = '../.datasets/IDEAM/' # Your local .zip files path
+join_file = 'IDEAM.csv' # Joining file name
+if os.path.isfile(path + join_file):
+    os.remove(path + join_file)
+zip_files = glob.glob(path + '*.zip')
 for i in zip_files:
-    print('Uncompressing %s' %i)
-    ZipFile(i).extractall('../.datasets/IDEAM/')
-    os.rename('../.datasets/IDEAM/excel.csv.csv', i+'.csv')
-csv_files = glob.glob('../.datasets/IDEAM/*.csv')
+    print('Unzipping %s' %i)
+    ZipFile(i).extractall(path)
+    os.rename(path + 'excel.csv.csv', i+'.csv')
+csv_files = glob.glob(path + '*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
+df.to_csv(path + join_file, encoding='utf-8', index=False)
 print(df)
-df.to_csv('../.datasets/IDEAM/IDEAM.csv', encoding='utf-8', index=False)
-
+for csv_file in csv_files:
+    os.remove(csv_file)
 
 
 '''
