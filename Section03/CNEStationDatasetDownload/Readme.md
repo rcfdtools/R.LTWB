@@ -295,7 +295,7 @@ for csv_file in csv_files:
 
 > Para la ejecución correcta del script `CNEStationCSVJoin.py`, en la carpeta `.datasets/IDEAM/` no deben existir archivos comprimidos .zip diferentes a los descargados desde el servicio DHIME que inicien con el nombre _datos_ y los comprimidos originalmente obtenidos sí deberán iniciar como _datos****.zip_.
 
-1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'` que corresponde a la ruta relativa o `path = 'D:/R.LTWB/.datasets/IDEAM/'` que corresponde a la ruta absoluta donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
+1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'`, que corresponde a la ruta relativa o `path = 'D:/R.LTWB/.datasets/IDEAM/'` que corresponde a la ruta absoluta donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
 
 2. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\IDEAM` diríjase a la carpeta donde están contenidos los datos descargados. Usando el comando `DIR /W`, liste en una vista ancha, los archivos contenidos en la carpeta IDEAM y verifique que se encuentren los archivos comprimidos .zip obtenidos previamente.
 
@@ -333,7 +333,7 @@ A partir de este momento dispone de registros integrados de diferentes variables
 
 | Versión    | Descripción                                                                                                                                                             | Autor                                      | Horas |
 |------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.17 | Complementación documentación para .                                                                                                                                    | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas.                                                                              | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
 | 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
