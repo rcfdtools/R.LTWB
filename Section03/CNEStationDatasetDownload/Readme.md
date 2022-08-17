@@ -39,8 +39,6 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 El libro de Excel del [glosario de variables del IDEAM - Colombia](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/GlosarioVariables.xlsx), se compone de 3 hojas de cálculo que contienen el listado de etiquetas básicas de los diferentes parámetros de la red hidroclimátológica y las etiquetas de las series diarias derivadas que corresponden a datos que se calculan a partir de las series básicas. La versión utilizada para ejemplificar esta clase corresponde a la fecha 2022.07.31. 
 
-<div align="center">
-
 
 #### Catálogo de datos de los registros discretos del IDEAM
 
@@ -60,15 +58,15 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 | Municipio        | object     | Municipio o subzonificación política. Equivalente a condado en otros países.                                                                                                                                                                   |
 | FechaInstalacion | datetime64 | Fecha de instalación. FechaInsta en archivos dBase.                                                                                                                                                                                            |
 | FechaSuspension  | datetime64 | Fecha de suspensión. FechaSuspe en archivos dBase.                                                                                                                                                                                             |
-| IdParametro      | object     | Nombre del parámetro hidro-climatológico. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos. IdParametr en archivos dBase.                                                                                                                          |
+| IdParametro      | object     | Nombre del parámetro hidro-climatológico. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos. IdParametr en archivos dBase.                                                                                              |
 | Etiqueta         | object     | Etiqueta del parámetro que depende si es una variable básica o derivada. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos.                                                                                             |
-| DescripcionSerie | object     | Descripción de la etiqueta del parámetro que indica el nombre del parámetro el estadístico y la frecuencia. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos. Descripcio en archivos dBase.                                                         |
+| DescripcionSerie | object     | Descripción de la etiqueta del parámetro que indica el nombre del parámetro el estadístico y la frecuencia. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos. Descripcio en archivos dBase.                            |
 | Frecuencia       | object     | Frecuencia de captura o de cálculo. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos.                                                                                                                                  |
 | Fecha            | datetime64 | Fecha de registro.                                                                                                                                                                                                                             |
 | Valor            | float64    | Valor registrado.                                                                                                                                                                                                                              |
 | Grado            | int64      | Grado del dato, p. ej. -1, 4, 5, 50.                                                                                                                                                                                                           |
-| Calificador      | object     | Calificador del dato registrado, p. ej. Dudoso, Est. Interpolación, Est. Otros métodos, Est. Regresión, Estimado, Río Seco, Sección Inestable. Calificado en archivos dBase.                                                                                                |
-| NivelAprobacion  | int64      | Nivel de aprobación. NivelAprob en archivos dBase.                                                                                                                                                                                                                          |
+| Calificador      | object     | Calificador del dato registrado, p. ej. Dudoso, Est. Interpolación, Est. Otros métodos, Est. Regresión, Estimado, Río Seco, Sección Inestable. Calificado en archivos dBase.                                                                   |
+| NivelAprobacion  | int64      | Nivel de aprobación. NivelAprob en archivos dBase.                                                                                                                                                                                             |
 
 
 #### Nivel de aprobación de cada dato[^1]
@@ -79,7 +77,6 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 |  1100  |     En revisión     |
 |  1200  |     Definitivo      |
 
-</div>
 
 > La información validada o definitiva al encontrarse certificada, ha surtido el proceso de validación técnica necesaria que garantiza la calidad del dato y determina la oficialidad de la información que podrá ser utilizada para toma de decisiones. Para el desarrollo del caso de estudio, usaremos la información IDEAM en todos los niveles de aprobación disponibles.
 
