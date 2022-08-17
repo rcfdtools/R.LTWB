@@ -1,4 +1,4 @@
-## Obtención de series de datos discretos climatológicos de estaciones terrestres
+## Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
 Keywords: `IDEAM` `Weather Station` `DHIME` `Rain` `Air Temperature` `Evaporation` `Water Flow`
 
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/CNEStationDatasetDownload.png)
@@ -9,7 +9,7 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 ### Objetivos
 
 * A partir de las estaciones identificadas y seleccionadas para la zona de estudio, obtener las series o registros de las estaciones a partir de los datos disponibles en el portal DHIME del IDEAM.
-* Integrar los archivos de datos independientes descargados en archivos de texto separados por comas .csv, en un único archivo.
+* Integrar los archivos de datos comprimidos descargados que contienen archivos de texto separados por comas, en un único archivo .csv.
 
 
 ### Requerimientos
@@ -40,6 +40,36 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 El libro de Excel del [glosario de variables del IDEAM - Colombia](https://github.com/rcfdtools/R.LTWB/blob/main/.datasets/GlosarioVariables.xlsx), se compone de 3 hojas de cálculo que contienen el listado de etiquetas básicas de los diferentes parámetros de la red hidroclimátológica y las etiquetas de las series diarias derivadas que corresponden a datos que se calculan a partir de las series básicas. La versión utilizada para ejemplificar esta clase corresponde a la fecha 2022.07.31. 
 
 <div align="center">
+
+
+#### Catálogo de datos de los registros discretos del IDEAM
+
+Tomados directamente de los archivos de texto separados por comas obtenidos del servicio [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del [IDEAM](http://www.ideam.gov.co/) y tipos devueltos por Python / Pandas.
+
+| Atributo         | Tipo       | Descripción                                                                                                                                                                                                                                    |
+|------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CodigoEstacion   | int64      | Código de la estación. CodigoEsta en archivos dBase.                                                                                                                                                                                           |
+| NombreEstacion   | object     | Nombre de la estación. Incluye el código de la estación entre corchetes. NombreEsta en archivos dBase.                                                                                                                                         |
+| Latitud          | float64    | Latitud en grados decimales.                                                                                                                                                                                                                   |
+| Longitud         | float64    | Longitud en grados decimales.                                                                                                                                                                                                                  |
+| Altitud          | int64      | Altitud o cota sobre el nivel del mar en metros.                                                                                                                                                                                               |
+| Categoria        | object     | Categoría de la estación: Pluviométrica, Limnimétrica, Limnigráfica, Climática Ordinaria, Climática Principal, Pluviográfica, Meteorológica Especial, Agrometeorológica, Sinóptica Principal, Radio Sonda, Mareográfica, Sinóptica Secundaria. |
+| Entidad          | object     | Entidad encargada.                                                                                                                                                                                                                             |
+| AreaOperativa    | object     | Área operativa que administra la estación. AreaOperat en archivos dBase.                                                                                                                                                                       |
+| Departamento     | object     | Departamento o zonificación política. Equivalente a estados en otros países. Departamen en archivos dBase.                                                                                                                                     |
+| Municipio        | object     | Municipio o subzonificación política. Equivalente a condado en otros países.                                                                                                                                                                   |
+| FechaInstalacion | datetime64 | Fecha de instalación. FechaInsta en archivos dBase.                                                                                                                                                                                            |
+| FechaSuspension  | datetime64 | Fecha de suspensión. FechaSuspe en archivos dBase.                                                                                                                                                                                             |
+| IdParametro      | object     | Nombre del parámetro hidro-climatológico. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos. IdParametr en archivos dBase.                                                                                                                          |
+| Etiqueta         | object     | Etiqueta del parámetro que depende si es una variable básica o derivada. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos.                                                                                             |
+| DescripcionSerie | object     | Descripción de la etiqueta del parámetro que indica el nombre del parámetro el estadístico y la frecuencia. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos. Descripcio en archivos dBase.                                                         |
+| Frecuencia       | object     | Frecuencia de captura o de cálculo. Ver Glosario de variables IDEAM en servicio DHIME en la pestaña Recursos.                                                                                                                                  |
+| Fecha            | datetime64 | Fecha de registro.                                                                                                                                                                                                                             |
+| Valor            | float64    | Valor registrado.                                                                                                                                                                                                                              |
+| Grado            | int64      | Grado del dato, p. ej. -1, 4, 5, 50.                                                                                                                                                                                                           |
+| Calificador      | object     | Calificador del dato registrado, p. ej. Dudoso, Est. Interpolación, Est. Otros métodos, Est. Regresión, Estimado, Río Seco, Sección Inestable. Calificado en archivos dBase.                                                                                                |
+| NivelAprobacion  | int64      | Nivel de aprobación. NivelAprob en archivos dBase.                                                                                                                                                                                                                          |
+
 
 #### Nivel de aprobación de cada dato[^1]
 
@@ -225,6 +255,14 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Screenshot/DatasetsIDEAM.png)
 
 
+### Unión de series descargadas
+
+Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio.
+
+
+
+
+
 ### Referencias
 
 * http://dhime.ideam.gov.co/atencionciudadano/
@@ -236,6 +274,7 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 * https://www.tutorialspoint.com/how-to-merge-all-csv-files-into-a-single-dataframe-python-pandas
 * https://stackoverflow.com/questions/16923281/writing-a-pandas-dataframe-to-csv-file
 * https://stackoverflow.com/questions/32834731/how-to-delete-a-file-by-extension-in-python
+* https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15
 
 
 ### Control de versiones
