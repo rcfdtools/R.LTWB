@@ -221,7 +221,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/7)  | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) |
+| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/7)  | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) |
 |-----------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 
 [^1]: https://www.igac.gov.co/sites/igac.gov.co/files/anexo_1.1_catalogo_objetos_cartografiabasica_v1.0_.pdf ↩
