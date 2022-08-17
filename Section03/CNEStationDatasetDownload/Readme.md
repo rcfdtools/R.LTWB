@@ -230,6 +230,10 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 * http://dhime.ideam.gov.co/atencionciudadano/
 * http://www.ideam.gov.co/
 * https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico
+* https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
+* https://stackoverflow.com/questions/3451111/unzipping-files-in-python
+* https://stackoverflow.com/questions/2491222/how-to-rename-a-file-using-python
+* https://www.tutorialspoint.com/how-to-merge-all-csv-files-into-a-single-dataframe-python-pandas
 
 
 ### Control de versiones

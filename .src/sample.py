@@ -1,4 +1,18 @@
-
+# -*- coding: UTF-8 -*-
+import glob
+from zipfile import ZipFile
+import os
+import pandas as pd
+# All files and directories ending with .txt and that don't begin with a dot:
+zip_files = glob.glob('../.datasets/IDEAM/*.zip')
+for i in zip_files:
+    print('Uncompressing %s' %i)
+    ZipFile(i).extractall('../.datasets/IDEAM/')
+    os.rename('../.datasets/IDEAM/excel.csv.csv', i+'.csv')
+csv_files = glob.glob('../.datasets/IDEAM/*.csv')
+df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
+print(df)
+df.to_csv('../.datasets/IDEAM/IDEAM.csv', encoding='utf-8', index=False)
 
 
 
