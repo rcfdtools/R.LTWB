@@ -23,7 +23,7 @@
 		.st13 {fill:#f2f2f2;stroke:#ea4d35;stroke-width:1.5}
 		.st14 {fill:#ea4d35;fill-opacity:1;stroke:#ea4d35;stroke-opacity:1;stroke-width:0.37313432835821}
 		.st15 {marker-end:url(#mrkr6-190);stroke:#7f7f7f;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st16 {fill:#f2f2f2;stroke:#ea4d35;stroke-dasharray:10.5,7.5;stroke-width:1.5}
+		.st16 {fill:#f2f2f2;stroke:#ea4d35;stroke-dasharray:0.01,4.5;stroke-width:1.5}
 		.st17 {marker-end:url(#mrkr6-113);stroke:#7f7f7f;stroke-dasharray:3.5,2.5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
 		.st18 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
@@ -320,7 +320,7 @@
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 417.96 C-0 428.59 -18.55 428.59 -37.1 428.59 C-55.4 428.59 -73.69 428.59 -75.78 450.45 L-75.8 450.81"
+			<path d="M0 417.96 C0 428.59 -18.55 428.59 -37.1 428.59 C-55.4 428.59 -73.69 428.59 -75.78 450.45 L-75.8 450.81"
 					class="st9"/>
 		</g>
 		<g id="shape147-89" v:mID="147" v:groupContext="shape" v:layerMember="0" transform="translate(253.591,-306.068)">
@@ -417,7 +417,7 @@
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 417.96 C0 423.28 -15.9 423.28 -29.4 423.28 C-49.62 423.28 -64.5 423.28 -79.35 423.28 C-94.21 423.28 -109.05
+			<path d="M0 417.96 C-0 423.28 -15.9 423.28 -29.4 423.28 C-49.62 423.28 -64.5 423.28 -79.35 423.28 C-94.21 423.28 -109.05
 						 423.28 -129.19 423.28 C-140.86 423.28 -154.29 423.28 -157.84 430.7 L-157.92 431.05" class="st11"/>
 		</g>
 		<g id="shape154-123" v:mID="154" v:groupContext="shape" transform="translate(76.5815,-111.894)">
@@ -663,8 +663,8 @@
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 417.96 C0 428.59 -15.84 428.59 -29.91 428.59 C-57.86 428.59 -78.8 428.59 -118.49 428.59 C-146.08 428.59 -182.74
-						 428.59 -188.52 443.43 L-188.58 443.79" class="st9"/>
+			<path d="M0 417.96 C-0 428.59 -15.84 428.59 -29.91 428.59 C-57.86 428.59 -78.8 428.59 -118.49 428.59 C-146.08 428.59
+						 -182.74 428.59 -188.52 443.43 L-188.58 443.79" class="st9"/>
 		</g>
 		<g id="shape173-206" v:mID="173" v:groupContext="shape" transform="translate(76.5815,-154.414)">
 			<title>Rounded Rectangle.173</title>
