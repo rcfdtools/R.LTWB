@@ -260,7 +260,7 @@ Diagrama de flujo
 
 <div align="center">
 <br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStationDatasetDownload/Graph/CNEStationCSVJoinFlowchart.svg" width="50%"><br>
-<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio. Para este proceso utilizaremos Python y la librería Pandas a través del siguiente script localizado en la carpeta _.src_.

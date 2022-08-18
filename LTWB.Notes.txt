@@ -36,6 +36,9 @@ Pending tasks
 Excel Avanzado: Graficar por fechas https://www.youtube.com/watch?v=dQ19rKbA05o
 Cómo crear un DIAGRAMA de GANTT en Excel [ Cronograma usando los gráficos ] https://www.youtube.com/watch?v=chR6kx4btDQ
 
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
+
+
 General update.
 _Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas relacionadas con esta actividad._
 
