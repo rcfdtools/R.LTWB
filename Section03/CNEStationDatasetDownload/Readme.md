@@ -322,6 +322,15 @@ Como puede observar, se han integrado 514926 registros en el archivo [IDEAMJoine
 A partir de este momento dispone de registros integrados de diferentes variables hidroclimatológicas.
 
 
+### Actividades complementarias:pencil2:
+
+En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
+
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                               |
+|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Para las estaciones identificadas en la actividad [CNEStation](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation) relacionadas con brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad, descargue los registros disponibles en DHIME del IDEAM e integre las series a las presentadas en esta actividad. | 
+
+
 ### Referencias
 
 * http://dhime.ideam.gov.co/atencionciudadano/
