@@ -14,11 +14,8 @@ https://github.com/uecijg-ceh
 ✓✕
 
 Pending tasks
-    Recalculo de elevación en estaciones para los diferentes DEM
     Evaluación de estaciones por pisos térmicos.
-    Fix R.TeachingResearchGuide/wiki/License.
     Remove personal name from all the ArcGIS Pro screenshots.
-    Check Visual Studio Code integration with GitHUB.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, puntual.
 	Recalculate stations elevation.
@@ -32,6 +29,7 @@ Pending tasks
 	At the end of each class show a table with all the created files.
 	Stations density.
 	ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6 https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+	https://blog.ciat.cgiar.org/es/rclimtool-una-aplicacion-libre-para-el-llenado-y-analisis-de-datos-de-clima/
 
 Excel Avanzado: Graficar por fechas https://www.youtube.com/watch?v=dQ19rKbA05o
 Cómo crear un DIAGRAMA de GANTT en Excel [ Cronograma usando los gráficos ] https://www.youtube.com/watch?v=chR6kx4btDQ
