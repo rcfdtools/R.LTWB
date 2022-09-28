@@ -1,7 +1,7 @@
 ## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)
 Keywords: `NASA` `jpl` `ASTER` `ArcScene` `3D view` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster` `Profile view` `Line notes` `Merge` `Raster layer statistics` `Hillshade`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/DEMAster.png)
+![R.LTWB](Screenshot/DEMAster.png)
 
 Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o píxeles con variaciones cada 1 metro.
 
@@ -29,8 +29,8 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
-* Cuenta de usuario [NASA Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
+* Cuenta de usuario [NASA Eathdata](../UserCreation).
+* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
 
 
 ### Diagrama general de procesos
@@ -38,7 +38,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Graph/DEMAsterFlowchart.svg" width="70%"><br>
+<br><img alt="R.LTWB" src="Graph/DEMAsterFlowchart.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -47,7 +47,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
-> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas.)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation)
+> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas.)](../UserCreation)
 
 2. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
@@ -63,29 +63,29 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 Para el caso de estudio, utilizaremos el método _File_ para definir la máscara de selección de elementos a descargar.
 
-Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
+Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](../../.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchByShapefile.png)
+![R.LTWB](Screenshot/EarthdataSearchByShapefile.png)
 
 3. En la casilla de búsqueda ingresar **ASTER Global Digital Elevation Model V003**. Para la zona de estudio, es necesario descargar 9 cuadrículas.
 
 Como puede observar, las cuadrículas son ortogonales y no contienen traslapos debido a que corresponde a un modelo ya procesado y recortado. Para la zona de estudio, la información del modelo digital de elevación ha sido obtenida, procesada e integrada desde 2000.03.01 hasta 2013.11.30.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchResults.png)
+![R.LTWB](Screenshot/EarthdataSearchResults.png)
 
 Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 9 archivos requeridos que tienen un peso aproximado de 213.1 MB y de clic en _Done_ y _Download Data_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchDirectDownload.png)
+![R.LTWB](Screenshot/EarthdataSearchDirectDownload.png)
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos _dem.tif correspondientes a los archivos GeoTIFF del modelo digital de elevación. 
 
 > Los archivos _*num.tif corresponden a validación y marcación de celdas ajustadas y no son requeridos para el ensamble del mosaico del modelo digital de elevación.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/EarthdataSearchDirectDownloadLink.png)
+![R.LTWB](Screenshot/EarthdataSearchDirectDownloadLink.png)
 
 Listado de enlaces obtenidos  
 * https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/ASTGTM.003/ASTGTMV003_N09W074_dem.tif
@@ -128,11 +128,11 @@ Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la r
 
 En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para iniciar la descarga.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/Cygwin64Commands.png)
+![R.LTWB](Screenshot/Cygwin64Commands.png)
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/ASTER_
 
-Shell script [donwloadASTER.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/downloadASTER.sh) de Earthdata
+Shell script [donwloadASTER.sh](../../.src/downloadASTER.sh) de Earthdata
 ```
 #!/bin/bash
 
@@ -260,9 +260,9 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 #### Instrucciones en ArcGIS for Desktop (10.2.2)
 
-1. Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido como MAGNA_Colombia_CTM12. Desde las propiedades de cualquier imagen verifique su resolución, podrá observar que corresponde a 0.00027777778 x 0.00027777778 grados decimales debido a que el Datum es D_WGS_1984. 
+1. Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](../../Section01/CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido como MAGNA_Colombia_CTM12. Desde las propiedades de cualquier imagen verifique su resolución, podrá observar que corresponde a 0.00027777778 x 0.00027777778 grados decimales debido a que el Datum es D_WGS_1984. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2LoadResolution.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2LoadResolution.png)
 
 2. Utilizando la herramienta _ArcToolBox / Data Management Tools / Raster / Raster Dataset / Mosaic to New Raster_, cree el mosaico de terreno a partir de las 9 imágenes, seleccionando y arrastrando las imágenes desde la tabla de contenido hacia la herramienta de mosaico, establezca los siguientes parámetros:
 
@@ -274,11 +274,11 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 > No es necesario establecer `Cellsize` debido a que el valor equivalente en metros será recalculado automáticamente a partir de la resolución original de las imágenes. Por tratarse de imágenes sin superposición, no es necesario modificar el operador y el modo de color del mosaico resultante.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRaster.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2MosaicToNewRaster.png)
 
 Una vez finalice el ensamble del mosaico, este será cargado automáticamente al proyecto. Verifique que la imagen resultante utilice el sistema de referencia espacial MAGNA_Colombia_CTM12 y que la resolución de las celdas se encuentre en metros con valores aproximados de 30.68464585 x 30.68464585 metros. Para el mosaico creado, los valores de elevación se encuentran entre el rango de -84 a 5687 m.s.n.m.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2MosaicToNewRasterResolution.png)
 
 > Debido a que el tamaño del archivo de mosaico es superior a 100 MB, se han creado en GitHub dos archivos comprimidos en _.dem/ASTER_ denominados ASTGTMV003Mosaic.part1.rar y ASTGTMV003Mosaic.part2.rar
 
@@ -286,36 +286,36 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 3. Simbolice el mosaico de terreno de forma ajustada _Stretched_ con efecto de falso sombreado o _Hillshade_ con Z:1 por tipo _Histogram Equalize_ e invirtiendo la rampa de color Negro a blanco. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
-4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip) y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
+4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono [ZonaEstudioEnvelope.shp](../../.shp/ZonaEstudioEnvelope.zip) y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2ProfileGraph.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ProfileGraph.png)
 
-5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los píxeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
+5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los píxeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](../../.shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
+![R.LTWB](Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcSceneDesktop10.2.2Scene3DVerticalExaggeration.png)
+![R.LTWB](Screenshot/ArcSceneDesktop10.2.2Scene3DVerticalExaggeration.png)
 
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
 1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
 2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _ASTGTMV003MosaicArcGISPro.tif_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
 3. Simbolice el mosaico en modo de relieve sombreado o _Shaded Relief_ con _Z Scale Factor en 2_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
 4. En el menú _Map_ y en la sección _Layer_, seleccione la opción _Elevation Source Layer_ y establezca el modelo de terreno _ASTGTMV003MosaicArcGISPro.tif_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ElevationSourceLayer.png)
 
 5. Para visualizar perfiles a partir de líneas, en el menú Insert y en la sección Layer Templates, seleccione Line Map Notes. Automáticamente, se cargará una nueva capa denominada _Line Notes_.
 
@@ -325,15 +325,15 @@ De clic en _Create_ y en el panel derecho de clic derecho sobre _Line Notes_ y s
 
 En la ventana de propiedades, seleccione en el panel izquierdo _Tools_ y en _Densify Lines_ establezca 30 metros para que al dibujar la línea de muestreo se obtengan valores en cada pixel del MDE. Recuerde que el modelo digital de elevación tiene una resolución aproximada de 30 metros.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesSetup.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LineNotesSetup.png)
 
 En el panel de creación de entidades, seleccione la opción _Line_ y trace una línea en el sentido NW - SE del recuadro de la zona de estudio. La finalización de la línea de muestreo tomará algunos segundos debido a que corresponde a una línea 3D con múltiples nodos de acuerdo a la distancia de densificación indicada. En el menú _Edit_, de clic en _Save_ para terminar la edición de la capa.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesCreate.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LineNotesCreate.png)
 
 Con la línea seleccionada, en el panel _Contents_ ubicado a la izquierda, de clic derecho sobre la capa _Line Notes_, seleccione la opción _Create Chart - Profile Graph_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0LineNotesProfileGraph.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LineNotesProfileGraph.png)
 
 6. Para representación 3D, en el menú _Insert_ y en la sección _Project_, seleccione la opción _New Map_ y agregue una nueva escena local. 
 
@@ -343,7 +343,7 @@ En la tabla de contenido o _Contents_, seleccione _Ground_ en _Elevation Surface
 
 Rote la escena utilizando clic sostenido de la rueda del mouse. Cambie la simbología primaria del DEM a _Shaded Relief_ y agregue el polígono de la zona de estudio.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0Scene3D.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0Scene3D.png)
 
 
 #### Instrucciones en QGIS (3.26.0)
@@ -352,36 +352,36 @@ Rote la escena utilizando clic sostenido de la rueda del mouse. Cambie la simbol
 
 En el cuadro de búsqueda del _Processing Toolbox_ ingrese _Merge_ y seleccione la opción _Merge_ disponible en _Raster miscellaneous_ de _GDAL_. Desde la opción _Input rasters_, seleccione las 9 imágenes cargadas en el mapa, establezca en tipo _Int16_ correspondiente a valores enteros como en las imágenes originales y de clic en Run. No es necesario definir un nombre de archivo de salida en _Merged_ debido a que primero crearemos un archivo temporal denominado _Merged_ que luego podrá ser exportado y reproyectado al sistema de coordenadas requerido.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0Merge.png)
+![R.LTWB](Screenshot/QGIS3.26.0Merge.png)
 
 2. Desde el panel _Layers_, de clic derecho en la capa temporal _Merged_ y, exporte en la carpeta _./dem/ASTER_ la imagen de mosaico como _ASTGTMV003MosaicQGIS.tif_ asignando el EPSG 9377.
 
 > En QGIS, el tamaño regular de las celdas originales de 30.68464585 metros obtenido de la conversión de grados a metros por el cambio del sistema de coordenadas no se mantiene, se recomienda ingresar un valor idéntico de resolución horizontal y vertical. Considerar que para el desarrollo del balance hidrológico de largo plazo, el tamaño de las celdas debe ser verificado y establecido en función de los valores obtenidos en la grilla.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeExport.png)
+![R.LTWB](Screenshot/QGIS3.26.0MergeExport.png)
 
 3. Luego de cargar la grilla, podrá observar que el rango de valores de la grilla resultante inicia en cero, lo cual visualmente no es correcto debido a que en las imágenes originales existen valores de -84 metros. Lo anterior debido a que es necesario recalcular los estadísticos de la grilla, para ello utilizar la opción _Raster layer statistics_ disponible en el _Processing Toolbox_ dentro del grupo de herramientas _Raster analysis_. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0RasterLayerStatistics.png)
+![R.LTWB](Screenshot/QGIS3.26.0RasterLayerStatistics.png)
 
 > En QGIS, el tamaño del archivo del mapa grillado Merged puede ser considerable mayor al obtenido mediante ArcGIS.
 
 4. Para la visualización de perfiles de muestreo, en el menú _Plugins_ seleccione _Manage and Install Plugins..._, en la caja de búsqueda ingrese _Profile tool_ e instale esta herramienta.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0ProfileToolInstall.png)
+![R.LTWB](Screenshot/QGIS3.26.0ProfileToolInstall.png)
 
 En el panel _Layers_, seleccione el modelo de elevación _ASTGTMV003MosaicQGIS.tif_ y en el _Profile tool_ de clic en _Add Layer_, luego cree una línea temporal en el sentido NW - SE del recuadro de la zona de estudio.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0ProfileTool.png)
+![R.LTWB](Screenshot/QGIS3.26.0ProfileTool.png)
 
 5. Para la representación 3D instale el complemento QGis2threejs.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0QGis2threejsInstall.png)
+![R.LTWB](Screenshot/QGIS3.26.0QGis2threejsInstall.png)
 
 En el menu _WEB_, seleccione la opción _QGis2threejs Exporter_, active el DEM correspondiente al modelo de terreno _ASTGTMV003MosaicQGIS.tif_, observará que el modelo
 3D no permite visualizar las variaciones de la altura. En el menú _Scene_ seleccione _Scene Settings_ y defina _Z exaggereation en 20_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0QGis2threejsScene.png)
+![R.LTWB](Screenshot/QGIS3.26.0QGis2threejsScene.png)
 
 ### Sombreado de colinas - Hillshade
 
@@ -391,29 +391,30 @@ A través de la herramienta Hillshade, se crea un mapa de relieve sombreado simp
 
 En ArcGIS for Desktop, el mapa de sombreado puede ser creado con la herramienta _Spatial Analyst_ o _3D Analyst_ / Surface / Hillshade. Los parámetros requeridos son la grilla de mosaico, el azimuth y la altitud de la posición del sol en grados. Nombre el mapa como ASTGTMV003MosaicHillshade.tif
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISDesktop10.2.2MosaicHillshade.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2MosaicHillshade.png)
 
 En ArcGIS Pro, el mapa de sombreado puede es creado con la herramienta _Spatial Analyst Tools_ o _3D Analyst_ / Surface / Hillshade. Los parámetros requeridos son los mismos requeridos por ArcGIS for Desktop. Nombre el mapa como ASTGTMV003MosaicArcGISProHillshade.tif
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/ArcGISPro3.0.0MosaicHillshade.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0MosaicHillshade.png)
 
 En QGIS, el mapa de sombreado puede es creado con la herramienta _Processing Toolbox / Raster terrain analysis / Hillshade_ o también con GDAL. AL igual que en ArcGIS, los parámetros son el azimut o ángulo horizontal y el ángulo vertical. Generar solo temporalmente y no guardar en disco.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMAster/Screenshot/QGIS3.26.0MergeHillshade.png)
+![R.LTWB](Screenshot/QGIS3.26.0MergeHillshade.png)
 
 En este momento dispone de grillas integradas de elevación ASTER que cubren toda la zona de estudio y mapas de representación de colinas hillshade. 
 
 <div align="center">
 
-| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                                           |
-|:-------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS for Desktop / mosaic    | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003Mosaic.part2.rar)                                     |
-| ArcGIS for Desktop / hillshade | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicHillshade.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicHillshade.part2.rar)                   |
-| ArcGIS Pro / mosaic            | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISPro.part2.rar)                   |
-| ArcGIS Pro / hillshade         | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part2.rar) |
-| QGIS                           | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/ASTER/ASTGTMV003MosaicQGIS.rar)                                                                                                                                              |
+| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                           |
+|:-------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ArcGIS for Desktop / mosaic    | [part1.rar](../../.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003Mosaic.part2.rar)                                     |
+| ArcGIS for Desktop / hillshade | [part1.rar](../../.dem/ASTER/ASTGTMV003MosaicHillshade.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003MosaicHillshade.part2.rar)                   |
+| ArcGIS Pro / mosaic            | [part1.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISPro.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISPro.part2.rar)                   |
+| ArcGIS Pro / hillshade         | [part1.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part2.rar) |
+| QGIS                           | [.rar](../../.dem/ASTER/ASTGTMV003MosaicQGIS.rar)                                                                                                      |
 
 </div>
+
 
 ### Referencias
 
@@ -463,7 +464,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/4)  | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMSrtm) |
-|----------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [Anterior](../UserCreation) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/4) | [Siguiente](../DEMSrtm) |
+|-----------------------------|-----------------------------------|----------------------------------------------------------------------------------|-------------------------|
 
 [^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
