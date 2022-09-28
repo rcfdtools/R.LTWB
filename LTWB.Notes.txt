@@ -45,4 +45,4 @@ _Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas 
 <div align="center">
 </div>
 
-<br>(**Versión borrador**)
+<br>(_Versión borrador_)
