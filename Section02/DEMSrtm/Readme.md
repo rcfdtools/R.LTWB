@@ -1,7 +1,7 @@
 ## Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30 m), SRTM v3.0 3 arcsec (90 m)
 Keywords: `NASA` `SRTM` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/DEMSrtm.png)
+![R.LTWB](Screenshot/DEMSrtm.png)
 
 Shuttle Radar Topography Mission (SRTM), dispone de mapas topográficos de alta resolución para uso público desde el año 2015 y pueden ser utilizados para la creación de los mapas de dirección y acumulación de flujo.
 
@@ -16,15 +16,15 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 
 > La resolución aproximada de los modelos digitales de elevación SRTM versión 3 es de 30 y 90 metros.
 
-> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [:mortar_board:Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster).
+> Para aprender a visualizar perfiles de elevación, crear representaciones 3D y mapas de sombreado de colinas - Hillshade utilizando ArcGIS for Desktop, ArcGIS Pro y QGIS, consulte la actividad [:mortar_board:Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)](../DEMAster).
 
 
 ### Requerimientos
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
-* Cuenta de usuario [NASA Eathdata](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
+* Cuenta de usuario [NASA Eathdata](../UserCreation).
+* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
 
 
 ### Diagrama general de procesos
@@ -32,7 +32,7 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Graph/DEMSrtmFlowchart.svg" width="70%"><br>
+<br><img alt="R.LTWB" src="Graph/DEMSrtmFlowchart.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -41,7 +41,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
-> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation)
+> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](../UserCreation)
 
 2. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
@@ -57,27 +57,27 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 Para el caso de estudio, utilizaremos el método _File_ para definir la máscara de selección de elementos a descargar.
 
-Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
+Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](../../.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchByShapefile.png)
+![R.LTWB](Screenshot/EarthdataSearchByShapefile.png)
 
 3. En la casilla de búsqueda ingresar **NASA Shuttle Radar Topography Mission Global 1 arc second V003** para descargas en resolución de 30 metros o **NASA Shuttle Radar Topography Mission Global 3 arc second V003** para descargas en resolución de 90 metros. Para la zona de estudio, es necesario descargar 9 cuadrículas.
 
 Como puede observar, las cuadrículas son ortogonales y no contienen traslapos debido a que corresponde a un modelo ya procesado y recortado. Para la zona de estudio, la información del modelo digital de elevación ha sido obtenida, procesada e integrada desde 2000.02.11 hasta 2000.02.21.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchResults.png)
+![R.LTWB](Screenshot/EarthdataSearchResults.png)
 
 Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 9 archivos requeridos que tienen un peso aproximado de 100.9 MB y de clic en _Done_ y _Download Data_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownload.png)
+![R.LTWB](Screenshot/EarthdataSearchDirectDownload.png)
 
 En la ventana de descarga de clic derecho y seleccione la opción _Open link in new tab_ en los archivos .zip correspondientes a los archivos [.hgt](https://gdal.org/drivers/raster/srtmhgt.html) del modelo digital de elevación. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/EarthdataSearchDirectDownloadLink.png)
+![R.LTWB](Screenshot/EarthdataSearchDirectDownloadLink.png)
 
 Listado de enlaces obtenidos  
 * https://e4ftl01.cr.usgs.gov//DP133/SRTM/SRTMGL1.003/2000.02.11/N09W075.SRTMGL1.hgt.zip
@@ -111,7 +111,7 @@ En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/SRTM_
 
-Shell script [downloadSRTM.sh](https://github.com/rcfdtools/R.LTWB/blob/main/.src/downloadSRTM.sh) de Earthdata
+Shell script [downloadSRTM.sh](../../.src/downloadSRTM.sh) de Earthdata
 ```
 #!/bin/bash
 
@@ -228,29 +228,29 @@ EDSCEOF
 
 Luego de los procesos de obtención de las imágenes satelitales, es necesaria la construcción de un mosaico único a partir de las imágenes individuales obtenidas para cada modelo de terreno. El balance hidrológico de largo plazo podrá ser realizado utilizando diferentes modelos de terreno y permitirá comparar la oferta hídrica obtenida utilizando diferentes superficies.
 
-> Para conocer como realizar este procedimiento en ArcGIS for Desktop y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster)
+> Para conocer como realizar este procedimiento en ArcGIS for Desktop y QGIS, consulte la actividad [Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)](../DEMAster)
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
 1. Abra el mapa _ArcGISPro.aprx_ localizado en la carpeta _.map\ArcGISPro_, agregue las 9 imágenes del modelo de elevación SRTM v3 y agrupe como _DEM SRTM v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido con MAGNA_Colombia_CTM12 correspondiente al identificador ESRI 103599.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LoadCoordinates.png)
 
 2. Utilizando la herramienta _Mosaic to New Raster_, cree el mosaico a partir de las 9 imágenes independientes seleccionando _Pixel Type_ en _32 bit signed_. Nombre como _SRTMV003MosaicArcGISPro.tif_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0MosaicToNewRaster.png)
 
 3. Simbolice el mosaico en modo de relieve sombreado o _Shaded Relief_ con _Z Scale Factor en 2_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/DEMSrtm/Screenshot/ArcGISPro3.0.0ShadedRelief.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ShadedRelief.png)
 
 En este momento dispone del mapa grillado integrado de elevación SRTM que cubre toda la zona de estudio.
 
 <div align="center">
 
-| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                                                                                    |
-|:-------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS Pro / mosaic            | [part1.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISPro.part1.rar), [part2.rar](https://github.com/rcfdtools/R.LTWB/blob/main/.dem/SRTM/SRTMV003MosaicArcGISPro.part2.rar)  |
+| Aplicación / grilla            | Descargar :open_file_folder:                                                                                                   |
+|:-------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
+| ArcGIS Pro / mosaic            | [part1.rar](../../.dem/SRTM/SRTMV003MosaicArcGISPro.part1.rar), [part2.rar](../../.dem/SRTM/SRTMV003MosaicArcGISPro.part2.rar) |
 
 </div>
 
@@ -296,7 +296,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/5) | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos) |
-|------------------------------------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [Anterior](../DEMAster) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/5) | [Siguiente](../DEMAlos)  |
+|-------------------------|-----------------------------------|----------------------------------------------------------------------------------|--------------------------|
 
 [^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
