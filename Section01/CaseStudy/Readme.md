@@ -3,7 +3,7 @@ Keywords: `Case study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona hidrogeográfi
 
 Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en los diferentes mapas y capas geográficas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudy.png)
+![R.LTWB](Graph/CaseStudy.png)
 
 > En la ilustración, _COD_ZH_ corresponde al código de la Zona Hidrográfica.
 
@@ -18,6 +18,7 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 
 > El polígono regular permitirá en actividades posteriores del curso, realizar la descarga de información satelital y seleccionar las estaciones hidroclimatológicas de la zona de estudio. 
 
+
 ### Requerimientos
 
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
@@ -30,7 +31,7 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo a su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/CaseStudyFlowchart.svg" width="70%"><br>
+<br><img alt="R.LTWB" src="Graph/CaseStudyFlowchart.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -121,9 +122,9 @@ El proceso de delimitación se realiza a partir de la cobertura de Subzonas hidr
 
 1. Ingrese al portal http://www.ideam.gov.co/en/capas-geo y en el cuadro de búsqueda escriba _Zonificación Hidrográfica_, observará que a 2022.07.07 existen dos versiones de la capa de zonificación correspondientes al año 2010 y 2013. Realice la descarga del archivo de formas Shapefile del año 2013, consulte sus metadatos y el catálogo de objetos disponible.
 
-> La descarga permite obtener el archivo comprimido _[Zonificacion_Hidrografica_2013.zip](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/Zonificacion_Hidrografica_2013.zip)_ que contiene la capa geográfica en formato Shapefile, un mapa de muestra en formato .pdf, la ficha de representación gráfica y otros elementos complementarios. 
+> La descarga permite obtener el archivo comprimido _[Zonificacion_Hidrografica_2013.zip](../../.shp/Zonificacion_Hidrografica_2013.zip)_ que contiene la capa geográfica en formato Shapefile, un mapa de muestra en formato .pdf, la ficha de representación gráfica y otros elementos complementarios. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/IDEAMZonificacionHidrograficaDescarga.png)
+![R.LTWB](Screenshot/IDEAMZonificacionHidrograficaDescarga.png)
 
 Catálogo de objetos en Subzonas [^4]
 | Nombre       | Alias          | Definición                                                                   | Tipo de dato |
@@ -145,23 +146,23 @@ Catálogo de objetos en Subzonas [^4]
 
 3. Cree un mapa nuevo en blanco y agregue la capa de Subzonas Hidrográficas. Simbolice por categorías de valores únicos o _Unique Values_ a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas, guarde el mapa como _R.LTWB.mxd_ en la carpeta _.Map_ localizada en _D:\R.LTWB_
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013.png)
 
 > Recuerde que en ArcGIS for Desktop es necesario desde el catálogo, realizar la conexión a la unidad de disco o a una carpeta específica para poder agregar datos al mapa.
 
 4. A partir de las Subzonas Hidrográficas y utilizando la expresión `"COD_ZH" = 28`, filtre los polígonos del caso de estudio correspondientes a la Subzona 28 - Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar y Río Ariguaní. Cambie la simbología de representación a relleno color gris al 20%.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
 5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_. Simbolice solo por contorno usando borde externo negro en grosor 3.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 o ESRI 103599.
 
-> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar los cálculos de áreas y perímetros en unidades del sistema internacional. En la carpeta _[.ProjectionFile](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)_ de este repositorio se encuentran diferentes archivos de proyección, incluido _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
+> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar los cálculos de áreas y perímetros en unidades del sistema internacional. En la carpeta _[.projectionfile](../../.projectionfile)_ de este repositorio se encuentran diferentes archivos de proyección, incluido _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
 
-Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](https://github.com/rcfdtools/R.LTWB/tree/main/.ProjectionFile)
+Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](../../.projectionfile/MAGNA_OrigenNacional.prj)
 ```
 MAGNA_Colombia_Origen_Unico
 Authority: Custom
@@ -183,56 +184,56 @@ Datum: D_MAGNA
     Semiminor Axis: 6356752.314140356
     Inverse Flattening: 298.257222101
 ```
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2CRS9377.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2CRS9377.png)
 
-7. En la tabla de atributos de la capa geográfica _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
+7. En la tabla de atributos de la capa geográfica _[ZonaEstudio.shp](../../.shp/ZonaEstudio.zip)_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
 
 > En ArcGIS, nuevos campos pueden ser creados desde las propiedades de la tabla de atributos utilizando la opción _Add Field_. 
 > Para el cálculo del área y perímetros, de clic derecho en la cabecera de los campos y seleccione la opción _Calculate Geometry_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioAddField.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaEstudioAddField.png)
 
 Rotule indicando la zona, área y perímetro utilizando las siguientes expresiones: 
 
 * Parser VBScript: `[ZH] &VbNewLine& "Área, km²: " & round( [Akm2], 2) &VbNewLine& "Perímetro, km: " & round( [Pkm], 2)`
 * Parser Python: `[ZH] + "\nArea, km2: " +  [Akm2]  + "\nPerimetro, km: " + [Pkm]`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png)
 
-8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _[ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
+8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _[ZonaEstudioEnvelope.shp](../../.shp/ZonaEstudioEnvelope.zip)_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
 
 #### Instrucciones en ArcGIS Pro (3.0.0)
 
 En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como ArcGISPro o ArcGISProSection01. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección _Folders_, realice la conexión a la carpeta _D:\R.LTWB_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0NewMapProject.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0NewMapProject.png)
 
 Agregue la capa de Subzonas Hidrográficas y simbolice por categorías de valores únicos o _Unique Values_ a partir del campo `NOM_ZH` correspondiente a la Zona Hidrográfica y rotule las zonas a partir del campo de atributos `COD_SZH` correspondiente a los códigos de las subzonas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaHidrografica2013.png)
 
 Para el filtrado, desde las propiedades de la capa seleccione la pestaña _Definition Query_ y ensamble la expresión de filtrado o ingrese la instrucción SQL `COD_ZH = 28`.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Query.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Query.png)
 
 La disolución de los polígonos para la creación de la zona de estudio se realiza desde el panel de herramientas _Geoprocessing - Data Management Tools - Generalization - Dissolve_ que puede ser lanzado desde el menú _Analysis_ seleccionando la opción _Tools_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Dissolve.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaHidrografica2013Dissolve.png)
 
 Para cambiar el sistema de proyección de coordenadas, en las propiedades del mapa _Map_ de la tabla de contenidos _Contents_, seleccione la pestaña _Coordinate Systems_ y en la caja de búsqueda ingrese 103599, correspondiente a MAGNA-SIRGAS CMT12.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0CRS103599.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CRS103599.png)
 
 Para la creación de campos de atributo, abra la tabla de atributos y de clic en la opción Add, agregue los campos Akm2, Pkm y ZH.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioAddField.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaEstudioAddField.png)
 
 Calcule la geometría de los campos numéricos y asigne el nombre de la zona en el campo ZH utilizando el texto 'ZH 2 - Cesar' sobre Python 3 como _Expression Type_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioCalculateGeometry.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaEstudioCalculateGeometry.png)
 
 Para la rotulación compuesta, utilice cualquiera de las siguientes instrucciones:
 
@@ -240,40 +241,40 @@ Para la rotulación compuesta, utilice cualquiera de las siguientes instruccione
 * Parser Python: `[ZH] + "\nArea, km2: " +  [Akm2]  + "\nPerimetro, km: " + [Pkm]`
 * Parser Arcade: `$feature.ZH + '\nÁrea, km²: ' + Round($feature.Akm2, 2) + '\nPerímetro, km: : ' + Round($feature.Pkm, 2)`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioLabelArcade.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaEstudioLabelArcade.png)
 
 Utilizando la herramienta _Data Management Tools / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelope.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelope.png)
 
 
 #### Instrucciones en QGIS (3.26.0)
 
-Cree un mapa de proyecto, agregue la capa [Zonificacion_hidrografica_2013.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/Zonificacion_Hidrografica_2013.zip) y guarde en la carpeta _.map_ como _R.LTWB.qgz_
+Cree un mapa de proyecto, agregue la capa [Zonificacion_hidrografica_2013.shp](../../.shp/Zonificacion_Hidrografica_2013.zip) y guarde en la carpeta _.map_ como _R.LTWB.qgz_
 
 El filtrado de entidades se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Query.png)
+![R.LTWB](Screenshot/QGIS3.26.0ZonaHidrografica2013Query.png)
 
 El proceso de disolución se realiza utilizando la herramienta _Vector geometry - Dissolve_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> o desde la barra de menús _Processing_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaHidrografica2013Dissolve.png)
+![R.LTWB](Screenshot/QGIS3.26.0ZonaHidrografica2013Dissolve.png)
 
 Para cambiar el sistema de proyección, oprima la combinación de teclas <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> para acceder a la ventana de propiedades del proyecto y en la ventana _CRS_, ingrese en la casilla de filtro o búsqueda el valor 9377, correspondiente al sistema de referencia de coordenadas MAGNA-SIRGAS / Origen-Nacional. Seleccione y de clic en _Apply_ y _Ok_. En la parte inferior derecha de QGIS, podrá observar el sistema asignado como _EPSG: 9377_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0CRS9377.png)
+![R.LTWB](Screenshot/QGIS3.26.0CRS9377.png)
 
 Nuevos campos de atributos pueden ser creados directamente desde las opciones del _Field Calculator_, p. ej. para el cálculo del área en km² se crea el campo Akm2 y se calcula la geometría con la expresión `$area / (1000*1000)`. Para el perímetro utilizar la expresión `$perimeter / 1000`.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioAddField.png)
+![R.LTWB](Screenshot/QGIS3.26.0ZonaEstudioAddField.png)
 
 La rotulación compuesta indicando la zona, área y perímetro se realiza con la siguiente expresión: `concat("ZH",  '\nÁrea, km²: ', round("Akm2",2), '\nPerímetro, km: ', round("Pkm", 2))`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
+![R.LTWB](Screenshot/QGIS3.26.0ZonaEstudioLabel.png)
 
 El proceso de obtención del polígono perimetral se realiza con la herramienta _Vector geometry - Bounding boxes_ del _Processing Toolbox_ que se carga oprimiendo la combinación de teclas <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd> o desde la barra de menús _Processing_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Screenshot/QGIS3.26.0ZonaEstudioBoundingBoxes.png)
+![R.LTWB](Screenshot/QGIS3.26.0ZonaEstudioBoundingBoxes.png)
 
 
 Ahora dispone de un polígono que podrá utilizar como máscara de selección para la obtención de información satelital o para la selección de estaciones dentro de la zona de estudio.
