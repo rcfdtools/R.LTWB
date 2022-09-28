@@ -1,7 +1,7 @@
 ##  Direcciones de Flujo – Flow Direction – FDR
 Keywords: `FDR DEM` `Flow direction` `Fill DEM` `Map Algebra` `Raster Calculator` `Spatial Analyst Tools` `Arc Hydro Tools`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/FdrDEM.png)
+![R.LTWB](Screenshot/FdrDEM.png)
 
 Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
 
@@ -18,9 +18,9 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM)
+* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](../../HECGeoHMS/Layers)[:mortar_board:Aprender.](../FillDEM)
 
-> El libro de cálculo [FdrDEM.xlsx](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
+> El libro de cálculo [FdrDEM.xlsx](FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
 
 
 ### Diagrama general de procesos
@@ -28,7 +28,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Graph/FdrDEMFlowchart.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/FdrDEMFlowchart.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -67,42 +67,42 @@ La estimación de direcciones de flujo puede ser realizada con Spatial Analyst T
 
 #### Direcciones de flujo con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/AgreeDEM) y modificado en la clase de [relleno de sumideros](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](https://github.com/rcfdtools/R.LTWB/tree/main/HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [relleno de sumideros](../FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Direction_ y cree la grilla de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFdr.tif, SRTMFdr.tif y ALOSFdr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\.
 
 > En esta herramienta puede establecer el límite del mapa de direcciones con la opción _Input Outer Wall Polygon_.
 
 Parámetros de entrada para direcciones de flujo ASTER
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERParameters.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERParameters.png)
 
-Resultados ventana de ejecución grilla ASTER (dt: 01'11")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTER.png)
+Resultados, ventana de ejecución grilla ASTER (dt: 01'11")
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERLog.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTER.png)
 
-Resultados ventana de ejecución grilla SRTM (dt: 01'12")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMSRTMLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMSRTM.png)
+Resultados, ventana de ejecución grilla SRTM (dt: 01'12")
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMSRTMLog.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMSRTM.png)
 
-Resultados ventana de ejecución grilla ALOS (dt: 09'08")
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOSLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOS.png)
+Resultados, ventana de ejecución grilla ALOS (dt: 09'08")
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOSLog.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOS.png)
 
 > Para saber si las grillas FDR han sido creadas correctamente, en la simbología de representación desplegada en la tabla de atributos, únicamente deben ser visibles las direcciones 1, 2, 4, 8, 16, 32, 64, 128 y 255 que corresponde a celdas sin dirección. En caso de que aparezcan números consecutivos 1, 2, 3, 4... hasta 255, deberá revisar y volver a generar el mapa de relleno de sumideros debido a que existen múltiples zonas con depresiones o sifones que no drenan sobre la superficie del modelo de elevación a una localización más baja.
 
 <div align="center">
 
-|    Grilla    |                            Descargar :open_file_folder:                             |
-|:------------:|:-----------------------------------------------------------------------------------:|
-| ASTERFdr.tif | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) |
-| SRTMFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/SRTMFdr.rar)  |
-| ALOSFdr.tif  | [.rar](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ALOSFdr.rar)  |
+|    Grilla    |        Descargar :open_file_folder:         |
+|:------------:|:-------------------------------------------:|
+| ASTERFdr.tif | [.rar](../../HECGeoHMS/Layers/ASTERFdr.rar) |
+| SRTMFdr.tif  | [.rar](../../HECGeoHMS/Layers/SRTMFdr.rar)  |
+| ALOSFdr.tif  | [.rar](../../HECGeoHMS/Layers/ALOSFdr.rar)  |
 
 </div>
 
-3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
+3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](../../HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERGraph.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERGraph.png)
 
 Como puede observar en la gráfica y en la tabla de atributos, la dirección dominante en la grilla ASTER es 16 - Oeste con 7571807 celdas, similar a lo que ocurre en las grillas SRTM y ALOS en las que la dirección predominante también es 16.  
 
@@ -133,7 +133,7 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 
 Para recodificar el mapa FDR en formato ArcGIS a QGIS 3, primero convierta a formato rcfdtools con la siguiente expresión:
 
-Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrrcfdtools.rar)
+Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](../../HECGeoHMS/Layers/ASTERFdrrcfdtools.rar)
 
 ```
 Con("ASTERFdr.tif"==1, 20, Con("ASTERFdr.tif"==2, 21, Con("ASTERFdr.tif"==4, 22, Con("ASTERFdr.tif"==8, 23, Con("ASTERFdr.tif"==16, 24, Con("ASTERFdr.tif"==32, 25, Con("ASTERFdr.tif"==64, 26, Con("ASTERFdr.tif"==128, 27, 255))))))))
@@ -141,23 +141,23 @@ Con("ASTERFdr.tif"==1, 20, Con("ASTERFdr.tif"==2, 21, Con("ASTERFdr.tif"==4, 22,
 
 > Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdr.tif" por el nombre de la grilla FDR requerida.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftools.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsLog.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsMap.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftools.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsLog.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsMap.png)
 
-Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](https://github.com/rcfdtools/R.LTWB/blob/main/HECGeoHMS/Layers/ASTERFdrQGIS.rar)
+Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](../../HECGeoHMS/Layers/ASTERFdrQGIS.rar)
 
 ```
 Con("ASTERFdrrcfdtools.tif"==20, 2, Con("ASTERFdrrcfdtools.tif"==21, 3, Con("ASTERFdrrcfdtools.tif"==22, 4, Con("ASTERFdrrcfdtools.tif"==23, 5, Con("ASTERFdrrcfdtools.tif"==24, 6, Con("ASTERFdrrcfdtools.tif"==25, 7, Con("ASTERFdrrcfdtools.tif"==26, 0, Con("ASTERFdrrcfdtools.tif"==27, 1, 255))))))))
 ```
 
-> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdrrcfdtools.tif" por el nombre de la grilla FDR requerida.
+> Para otros modelos digitales de elevación, en la expresión, reemplace el nombre "ASTERFdrrcfdtools.tif", por el nombre de grilla FDR requerida.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Log.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/FdrDEM/Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Map.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Log.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrrcdftools2QGIS3Map.png)
 
-En este momento dispone de grillas de direcciones para acumulación de flujo sobre todo el modelo digital de elevación.
+En este momento, dispone de grillas de direcciones para acumulación de flujo sobre todo el modelo digital de elevación.
 
 
 ### Referencias
@@ -193,9 +193,11 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 | 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS. Algebra de mapas para recodificación FDR. Diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
 
+##
+
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FillDEM) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/10) | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/FacDEM)  |
-|-----------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [Anterior](../FillDEM) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/10) | [Siguiente](../FacDEM) |
+|------------------------|-----------------------------------|-----------------------------------------------------------------------------------|------------------------|
