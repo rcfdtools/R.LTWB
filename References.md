@@ -2,6 +2,17 @@ Esta carpeta contiene documentos, artículos y enlaces de referencia relacionado
 
 > Consulta [Aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.refs) los documentos de uso libre descargados e incluidos en este repositorio.
 
+
+### Enlaces de interés
+
+* [ArcGIS](https://www.arcgis.com/)
+* [QGIS](https://qgis.org/)
+* [HEC-HMS](https://www.hec.usace.army.mil/software/hec-hms/)
+* [IDEAM - Descarga de datos hidroclimatológicos de Colombia](http://dhime.ideam.gov.co/atencionciudadano/)
+* [Python.org](https://www.python.org/)
+* [Enlaces y referencias complementarias](https://github.com/rcfdtools/R.LTWB/wiki/Referencias)
+
+
 ### Hidrología & SIG
 
 * [Open Source Python Packages in Hydrology](https://github.com/raoulcollenteur/Python-Hydrology-Tools)
@@ -49,7 +60,8 @@ Esta carpeta contiene documentos, artículos y enlaces de referencia relacionado
 * [drawio](https://app.diagrams.net/)
 
 
-### Referencias en video  
+### Referencias en video
+
 Se recomienda revisar y validar a detalle los contenidos, modelos, datos y metodologías presentados en las siguientes referencias en video que no han sido desarrolladas por [r.cfdtools](https://github.com/rcfdtools) y que se citan únicamente con propósito académico.
 
 * [Cálculo de la evapotranspiración usando el método de la FAO-56 Penman-Monteith](https://www.youtube.com/watch?v=p4AqIbWmI6o)
