@@ -15,5 +15,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../Section01/CaseStudy) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/20) | [Siguiente](UserCreation) |
-|------------------------------------|-----------------------------------|-----------------------------------------------------------------------------------|---------------------------|
+| [Anterior](../Section01/CaseStudy) | [:house: Inicio](../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/20) | [Siguiente](UserCreation) |
+|------------------------------------|--------------------------------|-----------------------------------------------------------------------------------|---------------------------|
