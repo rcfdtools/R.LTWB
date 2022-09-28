@@ -4,7 +4,7 @@ Keywords: `NASA` `EarthData` `User creation`
 Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5 m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.[^1]
 
 <div align="center">
-  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/.icons/NASA.png" width="250px">
+  <img alt="R.LTWB" src="../../.icons/NASA.png" width="250px">
 </div>
 
 
@@ -24,7 +24,7 @@ Para la descarga de los modelos de terreno y la información climatológica obte
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Graph/UserCreationEarthdataFlowchart.svg" width="60%"><br>
+<br><img alt="R.LTWB" src="Graph/UserCreationEarthdataFlowchart.svg" width="60%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -35,11 +35,11 @@ Antes de iniciar con la creación de la cuenta NASA Earthdata, se recomienda cre
 
 1. Ingresar al servicio web [Eathdata](https://search.earthdata.nasa.gov) de la NASA y dar clic en [Earthdata login](https://d53njncz5taqi.cloudfront.net/login?ee=prod&state=https%3A%2F%2Fsearch.earthdata.nasa.gov%2Fsearch). 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData1.png)
+![R.LTWB](Screenshot/NASAEarthData1.png)
 
 2. En la ventana Earthdata Login, clic en Register.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData2.png)
+![R.LTWB](Screenshot/NASAEarthData2.png)
 
 3. En la ventana de registro, ingrese en información de perfil un nombre de usuario y contraseña, los datos correspondientes a la información del usuario, país, asociaciones, acepte las condiciones de uso y la validación de usuario humano reCAPTCHA.
 
@@ -60,15 +60,15 @@ Especificaciones para contraseña
 
 En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondientes a notificaciones [EOSDIS](https://www.earthdata.nasa.gov/eosdis) y [Meris and ESA Sentinel-3 Data](https://earth.esa.int/eogateway/instruments/meris) y de clic en el botón `REGISTER FOR EARTHDATA LOGIN`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData3.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData4.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData5.png)
+![R.LTWB](Screenshot/NASAEarthData3.png)
+![R.LTWB](Screenshot/NASAEarthData4.png)
+![R.LTWB](Screenshot/NASAEarthData5.png)
 
 4. Ingrese a su cuenta de correo y verifique la cuenta creada dando clic en el enlace de verificación, automáticamente será redirigido a la ventana de acceso de Eathdata Login, ingrese su nombre de usuario y contraseña y realice el ingreso. En la ventana principal del servicio podrá encontrar información relacionada con el perfil, opciones para actualización de datos, aplicaciones, grupos y generadores de Tokens para aplicaciones integradas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData6.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData7.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/UserCreation/Screenshot/NASAEarthData8.png)
+![R.LTWB](Screenshot/NASAEarthData6.png)
+![R.LTWB](Screenshot/NASAEarthData7.png)
+![R.LTWB](Screenshot/NASAEarthData8.png)
 
 Su cuenta ha sido creada, validada y está lista para ser utilizada en el buscador de Earthdata.
 
@@ -86,11 +86,13 @@ Su cuenta ha sido creada, validada y está lista para ser utilizada en el buscad
 | 2022.07.07  | Versión inicial creación de cuenta en NASA EarthData. | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 
 
+##
+
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/3) | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAster) |
-|-------------------------------------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| [Anterior](../../Section02) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/3) | [Siguiente](../DEMAster) |
+|-----------------------------|-----------------------------------|----------------------------------------------------------------------------------|--------------------------|
 
 [^1]: Logo NASA tomado de https://www.pngwing.com/
