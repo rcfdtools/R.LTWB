@@ -311,8 +311,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/Requirement) | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/2)  | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/UserCreation) |
-|---------------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Anterior](../Requirement) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/2) | [Siguiente](../../Section02) |
+|----------------------------|-----------------------------------|----------------------------------------------------------------------------------|------------------------------|
 
 [^1]: http://www.ideam.gov.co/web/agua/zonificacion-hidrografica
 [^2]: http://documentacion.ideam.gov.co/openbiblio/bvirtual/022655/MEMORIASMAPAZONIFICACIONHIDROGRAFICA.pdf
