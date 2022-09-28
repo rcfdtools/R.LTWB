@@ -113,7 +113,7 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 
 > El propósito de estas columnas es registrar para cuáles estaciones fue posible realizar la descarga de series y en que archivo de la secuencia de descarga se encuentran los datos obtenidos. Posteriormente, efectuaremos la lectura de los mismos parámetros a partir de información satelital, pero únicamente para las estaciones terrestres que disponen de información.
 
-4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `COIDGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú _View_, congele la primera fila correspondiente a las etiquetas de columna. Ordene las estaciones por Departamento y código para facilitar la búsqueda y la descarga.
+4. En cada hoja, mueva las columnas `DEPARTAMEN` y `MUNICIPIO` después de la columna `CODIGO`. En el menú _Data_, seleccione la opción _Filter_ y desde el menú _View_, congele la primera fila correspondiente a las etiquetas de columna. Ordene las estaciones por Departamento y código para facilitar la búsqueda y la descarga.
 
 ![R.LTWB](Screenshot/MicrosoftExcelCNEStationDatasetDownload.png)
 
