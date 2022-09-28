@@ -1,7 +1,7 @@
 ## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
 Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Merge` `Bar graph` `Select By Location` `Python` `LYearS` `LYearSTW` `Definition Query` `Normal distribution` `Statistics`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStation.png)
+![R.LTWB](Graph/CNEStation.png)
 
 Luego de la definición del caso de estudio realizada en la Sección 1, es necesario identificar la red de estaciones terrestres que serán utilizadas para el estudio de las diferentes variables hidroclimatológicas en la zona estudio.                       
 
@@ -27,8 +27,8 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Polígono que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
-* [Polígono envolvente que delimita la zona de estudio. ](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy)
+* [Polígono que delimita la zona de estudio. ](../../.shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
+* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
 
 
 ### Diagrama general de procesos
@@ -36,7 +36,7 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Graph/CNEStationFlowchart.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/CNEStationFlowchart.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -167,24 +167,24 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 
 ### Procedimiento general
 
-1. Ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones en formato Microsoft Excel y Shapefile, el Catálogo nacional de otras entidades y el Glosario de variables. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion). Copiar los archivos de Microsoft Excel _[CNE_IDEAM.xls]()_ y _[CNE_OE.xls]()_ en el directorio _D:\R.LTWB\\.datasets_, copiar y descomprimir el archivo [CNE_IDEAM.zip]() que contiene los puntos de localización de las estaciones en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_.
+1. Ingresar al portal _http://dhime.ideam.gov.co/atencionciudadano/_, aceptar los términos y condiciones para descargar información del Banco de Datos del IDEAM, dar clic en la pestaña de recursos y descargar el Catálogo nacional de estaciones en formato Microsoft Excel y Shapefile, el Catálogo nacional de otras entidades y el Glosario de variables. Opcionalmente, el catálogo puede ser descargado desde el portal del IDEAM desde [Solicitud de Información](http://www.ideam.gov.co/solicitud-de-informacion). Copiar los archivos de Microsoft Excel _[CNE_IDEAM.xls](../../.datasets/CNE_IDEAM.xls)_ y _[CNE_OE.xls](../../.datasets/CNE_OE.xls)_ en el directorio _D:\R.LTWB\\.datasets_, copiar y descomprimir el archivo [CNE_IDEAM.zip](../../.shp/CNE_IDEAM.zip) que contiene los puntos de localización de las estaciones en formato Shapefile dentro de la carpeta _D:\R.LTWB\\.shp_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/DHIMERecursos.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/IDEAMSolicitudInformacion.png)
+![R.LTWB](Screenshot/DHIMERecursos.png)
+![R.LTWB](Screenshot/IDEAMSolicitudInformacion.png)
 
 2. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection03.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0NewMapProject.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0NewMapProject.png)
 
-3. Desde la carpeta _.shp_, agregue al mapa el archivo shapefile [CNE_IDEAM.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM.zip), [ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip) y [ZonaEstudioEnvelope.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioEnvelope.zip). Modifique la simbología de representación de _ZonaEstudioEnvelope_ sin relleno - línea contorno rojo - grosor 3 y _ZonaEstudio_ sin relleno - línea contorno negro - grosor 2. Simbolice las estaciones con puntos color gris 30% - sin contorno - tamaño 6, rotular por el campo `CODIGO` y acercar a la zona de estudio. 
+3. Desde la carpeta _.shp_, agregue al mapa el archivo shapefile [CNE_IDEAM.shp](../../.shp/CNE_IDEAM.zip), [ZonaEstudio.shp](../../.shp/ZonaEstudio.zip) y [ZonaEstudioEnvelope.shp](../../.shp/ZonaEstudioEnvelope.zip). Modifique la simbología de representación de _ZonaEstudioEnvelope_ sin relleno - línea contorno rojo - grosor 3 y _ZonaEstudio_ sin relleno - línea contorno negro - grosor 2. Simbolice las estaciones con puntos color gris 30% - sin contorno - tamaño 6, rotular por el campo `CODIGO` y acercar a la zona de estudio. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEMap.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CNEMap.png)
 
 > Tenga en cuenca que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE contiene integrado este sistema. En cuanto al número de estaciones, para la versión descargada a 20220731, el CNE se compone de 4476 estaciones.
 
 4. Desde la carpeta _.datasets_, agregue el archivo _CNE_OE.xls_ que contiene la localización de estaciones de otras entidades de Colombia y abra la tabla de atributos, podrá observar que a fecha 20220731 la tabla contiene 4620 registros. Dando clic derecho en la tabla y seleccionando la opción _Display XY Data_, cree una tabla de eventos geográficos para representar la localización de estas estaciones. Utilice el sistema de coordenadas _GCS_WGS_1984_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEOEDisplayXYData.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CNEOEDisplayXYData.png)
 
 Como puede observar en la ilustración, en el polígono envolvente de la zona de estudio existen múltiples estaciones del catálogo nacional del IDEAM y de otras entidades. 
 
@@ -193,11 +193,11 @@ Como puede observar en la ilustración, en el polígono envolvente de la zona de
 
 ### Creación del polígono para selección de estaciones
 
-5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](https://github.com/rcfdtools/R.LTWB/tree/main/Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando p. ej. 1/20 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
+5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](../../Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando p. ej. 1/20 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
 
 Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic derecho en la tabla de contenido y _Properties_, ir a la pestaña _Source_ y ampliar la información de _Extent_. Para esta capa los límites geográficos expresados en grados decimales son: norte 10.940833°, sur 8.662500°, oeste -74.315834° y este -72.808322°.  
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelopeExtent.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaEstudioEnvelopeExtent.png)
 
 * Ancho (este - oeste ) = -72.808322° - -74.315834° =  1.507512°  
 * Alto (norte - sur) = 10.940833° - 8.662500° = 2.278333°  
@@ -206,9 +206,9 @@ Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic dere
 
 > La relación 1/20 dependerá de la densidad de las estaciones en la zona de frontera del polígono envolvente. Si existen pocas estaciones, se recomienda disminuir esta relación, p. ej. 1/10 o menos y si por contrario, la red es muy densa, aumentar la relación a 1/30 o más. Luego de crear el polígono, evaluar visualmente si las estaciones son suficientes para cubrir la extensión espacial del área hidrográfica en estudio, de lo contrario, ampliar el polígono.
 
-6. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente a la zona de estudio utilizando la relación 1/20 de la dimensión más corta correspondiente a 0.0753756°. Nombrar como _[ZonaEstudioBufferStation.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudioBufferStation.zip)_ en la carpeta _.shp_. Como puede observar, las esquinas obtenidas son redondeadas y debido a que este polígono únicamente será usado para seleccionar las estaciones de la zona de estudio y no para recortar los MDE o mapas interpolados, no es necesario generar un polígono envolvente.
+6. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente a la zona de estudio utilizando la relación 1/20 de la dimensión más corta correspondiente a 0.0753756°. Nombrar como _[ZonaEstudioBufferStation.shp](../../.shp/ZonaEstudioBufferStation.zip)_ en la carpeta _.shp_. Como puede observar, las esquinas obtenidas son redondeadas y debido a que este polígono únicamente será usado para seleccionar las estaciones de la zona de estudio y no para recortar los MDE o mapas interpolados, no es necesario generar un polígono envolvente.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0ZonaEstudioBufferStation.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0ZonaEstudioBufferStation.png)
 
 El límite espacial del polígono buffer es:  
 * Norte (top): 11.016209°
@@ -223,19 +223,19 @@ El límite espacial del polígono buffer es:
 
 7. Desde el menú _Map / Selection / Select By Location_, seleccione todas aquellas estaciones del catálogo nacional de estaciones y de otras entidades que se intersecan con la zona de estudio. Para la zona de estudio y la versión descargada de los catálogos, se han seleccionado 315 estaciones del CNE y 125 de otras entidades.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0SelectByLocation.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0SelectByLocation.png)
 
-8. Exporte las estaciones seleccionadas a nuevas capas geográficas, clic derecho en CNE_IDEAM / _Data / Export Features_ y nombre como _[CNE_IDEAM_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_ZE.zip)_ dentro de la carpeta _.shp_. Repita este procedimiento para la capa de eventos de las estaciones de otras entidades y nombre como _[CNE_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_OE_ZE.zip)_.
+8. Exporte las estaciones seleccionadas a nuevas capas geográficas, clic derecho en CNE_IDEAM / _Data / Export Features_ y nombre como _[CNE_IDEAM_ZE.shp](../../.shp/CNE_IDEAM_ZE.zip)_ dentro de la carpeta _.shp_. Repita este procedimiento para la capa de eventos de las estaciones de otras entidades y nombre como _[CNE_OE_ZE.shp](../../.shp/CNE_OE_ZE.zip)_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNE_IDEAM_ZEExportFeatures.png)  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNE_OE_ZEExportFeatures.png)  
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNEZEExportFeaturesMap.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CNE_IDEAM_ZEExportFeatures.png)  
+![R.LTWB](Screenshot/ArcGISPro3.0.0CNE_OE_ZEExportFeatures.png)  
+![R.LTWB](Screenshot/ArcGISPro3.0.0CNEZEExportFeaturesMap.png)
 
 > En ArcGIS for Desktop, el procedimiento de exportación se realiza dando clic derecho en la capa y seleccionando la opción _Data / Export Data_. Para el caso de la capa de eventos de las estaciones de otras entidades, se recomienda primero exportar la capa de eventos en un archivo Shapefile y luego efectuar la selección y exportación de las estaciones de la zona de estudio.
 
-9. Con la herramienta _Geoprocessing / Data Management Tools / General / Merge_, combine los archivos de formas _CNE_IDEAM_ZE.shp_ y _CNE_OE_ZE.shp_ en un único archivo y nombre como _[CNE_IDEAM_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)_. Asegúrese de marcar la casilla `Add source information to output` para obtener el campo de atributos `MERGE_SRC` que describe la capa fuente y de clic en la opción _Reset_ ubicada a la derecha de `Field Map` . La red de estaciones contendrá en total 440 estaciones (315 IDEAM + 125 otras entidades).
+9. Con la herramienta _Geoprocessing / Data Management Tools / General / Merge_, combine los archivos de formas _CNE_IDEAM_ZE.shp_ y _CNE_OE_ZE.shp_ en un único archivo y nombre como _[CNE_IDEAM_OE_ZE.shp](../../.shp/CNE_IDEAM_OE_ZE.zip)_. Asegúrese de marcar la casilla `Add source information to output` para obtener el campo de atributos `MERGE_SRC` que describe la capa fuente y de clic en la opción _Reset_ ubicada a la derecha de `Field Map` . La red de estaciones contendrá en total 440 estaciones (315 IDEAM + 125 otras entidades).
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CNE_IDEAM_OE_ZEMerge.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CNE_IDEAM_OE_ZEMerge.png)
 
 
 ### Estudio de longitud hipotética de series
@@ -253,7 +253,7 @@ En la capa _CNE_IDEAM_OE_ZE.shp_, crear los siguientes campos de atributos:
 
 En la tabla de atributos dar clic en el botón _Field: Add_ y desde el modo de edición agregar los campos indicados, luego desde el Menú superior _Fields_, dar clic en _Save_. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0AddField.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0AddField.png)
 
 > En ArcGIS for Desktop, desde las propiedades de la tabla de atributos seleccionar la opción _Add Field_.
 
@@ -261,13 +261,13 @@ En la tabla de atributos dar clic en el botón _Field: Add_ y desde el modo de e
 
 El cálculo del campo `LYearS` puede ser realizado dando clic en la cabecera del campo y seleccionando la opción _Calculate Field_ utilizando la instrucción Python 3 `(!FECHA_INST!-!FECHA_SUSP!)/365`, sin embargo, no podrá ser aplicada a estaciones que se encuentran suspendidas debido a que el campo fecha de suspensión contendrá valores nulos, por lo que Python devolverá un error y no realizará el cálculo solicitado. Igual sucede con el campo fecha de instalación cuando este se encuentra nulo, la operación de cálculo no podrá ser completada.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSError.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CalculareFieldLYearSError.png)
 
 > En ArcGIS for Desktop puede usar la expresión VBScript `( [FECHA_SUSP] - [FECHA_INST] )/365`.
 
 Para el correcto análisis de los campos fecha de instalación y fecha de suspensión, la configuración regional requerida debe ser definida desde el _Panel de Control / Region_, estableciendo el formato de fechas cortas como d/MM/yyyy.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/Windows11ControlPanlRegionFormat.png)
+![R.LTWB](Screenshot/Windows11ControlPanlRegionFormat.png)
 
 Para realizar correctamente este cálculo, es necesario considerar la fecha final de los registros de las estaciones que se encuentran en operación, para este ejemplo, la fecha de corte corresponde al último día del año inmediatamente anterior correspondiente a 2021.12.31 considerando que para el análisis climatológico, únicamente utilizaremos datos de años hidrologicamente completos. La longitud de series en años usando Python a través de Calculate Field para el campo LYearS, puede ser realizada a través de Code Block utilizando las siguientes instrucciones:
 
@@ -297,12 +297,12 @@ LYearS:
 len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 ```
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPython.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPython.png)
 
 > En ArcGIS for Desktop pude dar clic derecho sobre la cabecera del campo `LYearS` y seleccionar la opción _Field Calculator_ o desde _ArcToolBox / Data Management Tools / Fields / Calculate Field_.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPython.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPythonA.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPython.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSPythonA.png)
 
 > En el script, la variable booleana `is_python3` es utilizada para definir la versión de Python desde la cual se hace el llamado del Script.
 > 
@@ -310,11 +310,11 @@ len_years_serie(!FECHA_INST!, !FECHA_SUSP!)
 
 De clic derecho en la cabecera del campo `LYearS` y seleccione la opción _Statistics_, obtendrá un resumen estadístico y una gráfica con las longitudes hipotéticas en años para cada estación. Como puede observar, la media de las longitudes es de 24.8 años con una alta desviación estándar correspondiente a 22.6 años y múltiples estaciones tienen registros cortos de menos de 10 años.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSStatistics.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSStatistics.png)
 
 Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras correspondientes a los valores de la media y superiores, obtendrá que 158 estaciones contienen longitudes hipotéticas iguales o superiores a 38.3 años dentro y al rededor de la zona de estudio.    
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSStatisticsA.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSStatisticsA.png)
 
 **Cálculo simultáneo de campos LYears y LYearsTW**
 
@@ -398,21 +398,21 @@ LYearSTW:
 len_years_serie(!FECHA_INST!, !FECHA_SUSP!)[1]
 ```
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSTWPython.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPythonA.png)
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0CalculareFieldLYearSTWPython.png)
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2CalculareFieldLYearSTWPython.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CalculareFieldLYearSPythonA.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0CalculareFieldLYearSTWPython.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a cero `LYearSTW > 0`.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWDefinitionQuery.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWDefinitionQuery.png)
 
 De clic derecho en la cabecera del campo `LYearSTW` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico y una gráfica con las longitudes hipotéticas en años para cada estación dentro de la ventana de tiempo establecida. Como puede observar, la media de las longitudes hipotéticas es de 29.8 años con una desviación estándar de 16.1 años. Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras del histograma a partir de la media, obtendrá 174 de 263 estaciones con registros iguales o superiores a 29.5 años de registro y podrá observar simultáneamente su localización dentro y al rededor de la zona de estudio.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWStatistics.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWStatistics.png)
 
 Simbolice las estaciones por categoría a partir del campo `CATEGORIA` para las estaciones con longitudes hipotéticas dentro de la ventana de tiempo establecida y cree una gráfica de barras por categoría, podrá observar que el mayor número de estaciones corresponde a la categoría Pluviométricas.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0BarGraphCategoria.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0BarGraphCategoria.png)
 
 
 ### Identificación de estaciones con datos de precipitación
@@ -423,28 +423,28 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL: `CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal', 'Sinóptica Secundaria')`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainQuery1.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRainQuery1.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 10, 15, 20, 25, 30, 35 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
 
 Expresión SQL para series >= 10 años : `LYearSTW >= 10 And CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Pluviográfica', 'Pluviométrica', 'Sinóptica Principal', 'Sinóptica Secundaria')`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainQueryCategory.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRainQueryCategory.png)
 
 | Series >= 10 y 25 años                                                                                                                                                                                                                                                                                                           | Series >= 15 y 30 años                                                                                                                                                                                                                                                                                                           | Series >= 20 y 35 años                                                                                                                                                                                                                                                                                                           |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 139<br>Media: 37.1 años<br>Mínimo: 10.3 años<br>Máximo: 42 años<br>Desv. Est.: 9 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain10.png)    | Longitud hipotética en años >= 15<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 132<br>Media: 38.4 años<br>Mínimo: 15 años<br>Máximo: 42 años<br>Desv. Est.: 7.1 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain15.png)    | Longitud hipotética en años >= 20<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 124<br>Media: 39.8 años<br>Mínimo: 22.1 años<br>Máximo: 42 años<br>Desv. Est.: 4.6 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain20.png)  |
-| Longitud hipotética en años >= 25<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 119<br>Media: 40.5 años<br>Mínimo: 26.6 años<br>Máximo: 42 años<br>Desv. Est.: 3.17 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain25.png) | Longitud hipotética en años >= 30<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 116<br>Media: 40.8 años<br>Mínimo: 30.5 años<br>Máximo: 42 años<br>Desv. Est.: 2.54 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain30.png) | Longitud hipotética en años >= 35<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 109<br>Media: 41.3 años<br>Mínimo: 35.1 años<br>Máximo: 42 años<br>Desv. Est.: 1.58 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRain35.png) |
+| Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 139<br>Media: 37.1 años<br>Mínimo: 10.3 años<br>Máximo: 42 años<br>Desv. Est.: 9 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain10.png)    | Longitud hipotética en años >= 15<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 132<br>Media: 38.4 años<br>Mínimo: 15 años<br>Máximo: 42 años<br>Desv. Est.: 7.1 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain15.png)    | Longitud hipotética en años >= 20<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 124<br>Media: 39.8 años<br>Mínimo: 22.1 años<br>Máximo: 42 años<br>Desv. Est.: 4.6 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain20.png)  |
+| Longitud hipotética en años >= 25<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 119<br>Media: 40.5 años<br>Mínimo: 26.6 años<br>Máximo: 42 años<br>Desv. Est.: 3.17 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain25.png) | Longitud hipotética en años >= 30<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 116<br>Media: 40.8 años<br>Mínimo: 30.5 años<br>Máximo: 42 años<br>Desv. Est.: 2.54 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain30.png) | Longitud hipotética en años >= 35<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 109<br>Media: 41.3 años<br>Mínimo: 35.1 años<br>Máximo: 42 años<br>Desv. Est.: 1.58 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain35.png) |
 
 Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 10 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones pluviométricas y climáticas ordinarias son las que pueden contener los registros más extensos.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainQueryCategoryGraph.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRainQueryCategoryGraph.png)
 
 Para el desarrollo del caso de estudio, utilizaremos las estaciones con registros de precipitación cuyas longitudes hipotéticas sean >= a 10 años que mayoritariamente se encuentran en el último rango de cortes naturales con valores superiores a 26.649315 años. En actividades posteriores analizaremos el traslapo entre las series reales y evaluaremos que estaciones requerirán ser completadas y/o extendidas.
 
 Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 139 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_Precipitacion.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWRainTableToTable.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRainTableToTable.png)
 
 
 ### Identificación de estaciones con datos de temperatura del aire cerca al suelo
@@ -455,7 +455,7 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL: `CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal', 'Sinóptica Principal', 'Sinóptica Secundaria')`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQuery1.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQuery1.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 5 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
 
@@ -463,7 +463,7 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrome
 
 | Series >= 5 años                                                                                                                                                                                                                                                                                                                      |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 42<br>Media: 23.8 años<br>Mínimo: 5 años<br>Máximo: 42 años<br>Desv. Est.: 15.7 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAir5a.png) |
+| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 42<br>Media: 23.8 años<br>Mínimo: 5 años<br>Máximo: 42 años<br>Desv. Est.: 15.7 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAir5a.png) |
 
 Como observa, existen dentro y al rededor de la zona de estudio tan solo 42 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
@@ -471,15 +471,15 @@ Como observa, existen dentro y al rededor de la zona de estudio tan solo 42 esta
 
 Represente las estaciones por símbolos graduados a partir de la elevación, podrá observar que el rango disponible de elevaciones a partir del campo `altitud` registrado por el IDEAM, corresponde a valores entre 18 y 2256 m.s.n.m. y en la Serranía del Perijá al este de la zona de estudio, las elevaciones de terreno son mayores. De las 42 estaciones disponibles, tan solo 1 se encuentra por encima de los 2000 m.s.n.m.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryElevation.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryElevation.png)
 
 Simbolice las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryCategoryGraph.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirQueryCategoryGraph.png)
 
 Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 42 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_TemperaturaAire.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirTableToTable.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAirTableToTable.png)
 
 
 ### Identificación de estaciones con datos de evaporación potencial
@@ -490,7 +490,7 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL: `CATEGORIA IN ('Agrometeorológica', 'Climática Ordinaria', 'Climática Principal')`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporationQuery.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWEvaporationQuery.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 5 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
 
@@ -498,17 +498,17 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrome
 
 | Series >= 5 años                                                                                                                                                                                                                                                                                                                   |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 41<br>Media: 24.2 años<br>Mínimo: 5 años<br>Máximo: 42 años<br>Desv. Est.: 15.6 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporation5.png)  |
+| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 41<br>Media: 24.2 años<br>Mínimo: 5 años<br>Máximo: 42 años<br>Desv. Est.: 15.6 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWEvaporation5.png)  |
 
 Como observa, existen dentro y al rededor de la zona de estudio tan solo 41 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
 Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporationQueryCategoryGraph.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWEvaporationQueryCategoryGraph.png)
 
 Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 41 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_Evaporacion.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWEvaporationTableToTable.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWEvaporationTableToTable.png)
 
 
 ### Identificación de estaciones con datos de nivel de lámina de agua en ríos
@@ -519,7 +519,7 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 Expresión SQL: `CATEGORIA IN ('Limnimétrica', 'Limnigráfica')`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQuery.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQuery.png)
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre todas aquellas estaciones cuya longitud hipotética de registro dentro de la ventana de tiempo sea mayor a 5 años para las categorías indicadas y evalúe mediante una estadística sobre el campo `LYearSTW`, la media de las longitudes hipotéticas de las series y obtenga los estadísticos característicos.
 
@@ -527,17 +527,17 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Limnim
 
 | Series >= 5 años                                                                                                                                                                                                                                                                                                                 |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 65<br>Media: 37.3 años<br>Mínimo: 7.3 años<br>Máximo: 42 años<br>Desv. Est.: 10 años<br>![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevel5.png) |
+| Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 65<br>Media: 37.3 años<br>Mínimo: 7.3 años<br>Máximo: 42 años<br>Desv. Est.: 10 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWWaterLevel5.png) |
 
 Como observa, existen dentro y al rededor de la zona de estudio 65 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 51 tienen longitudes por encima de la media.
 
 Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que las estaciones limnimétricas y limnigráficas poseen registros extensos.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelQueryCategoryGraph.png)
 
 Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / Table to Table_, exporte en una tabla independiente las 65 estaciones obtenidas. Guarde la tabla en el directorio _D:\R.LTWB\\.datasets_ con el nombre CNE_IDEAM_OE_ZE_NivelCaudal.dbf. Esta tabla será usada para manualmente descargar los registros de las estaciones desde el servicio DHIME del IDEAM.
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section03/CNEStation/Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelTableToTable.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWWaterLevelTableToTable.png)
 
 
 ### Actividades complementarias:pencil2:
@@ -570,12 +570,14 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 | 2022.08.02 | Definición de longitud de aferencia a partir de la menor dimensión horizontal o vertical, creación de buffer, selección de estaciones por localización, exportación de estaciones IDEAM y otras entidades, unión de estaciones en capa única, cálculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 | 2022.08.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos.                                                                                                                                                                                                                                                      | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
+##
+
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/StrDEM)  | [:house: Inicio](https://github.com/rcfdtools/R.LTWB/wiki) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/14) | [Siguiente](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationElevation) |
-|-----------------------------------------------------------------------------|------------------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| [Anterior](../Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/14) | [Siguiente](../CNEStationElevation) |
+|--------------------------|-----------------------------------|-----------------------------------------------------------------------------------|-------------------------------------|
 
 [^1]: http://dhime.ideam.gov.co/atencionciudadano/
 [^2]: https://pro.arcgis.com/en/pro-app/latest/help/data/excel/prepare-to-work-with-excel-in-arcgis-pro.htm
