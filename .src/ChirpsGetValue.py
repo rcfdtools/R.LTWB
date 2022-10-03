@@ -21,7 +21,6 @@ print(value)
 
 # Processing values for each station and year
 import pandas as pd
-# import xlrd # Tested with 2.0.1 version. # Has to be installed with not import required.
 
 sampleRecord = 12 # Number of records to show in the sample
 latitude_name = 'Latitud'
@@ -36,17 +35,32 @@ print('\n', station_df)
 station_df = station_df.query('Etiqueta == "PTPM_TT_M"') # Filter for rain values
 print('\nFiltered records for PTPM_TT_M: %s' %(str(station_df.shape[0])))
 
-# Filter for specified year and month
+# Processing values per year and month
 year_start = 1981
 year_end = 1981
+#station_df_filter = station_df.filter(items=['CodigoEstacion', 'NombreEstacion', latitude_name, longitude_name, 'Etiqueta', 'Fecha', 'Etiqueta', 'Frecuencia', 'Valor'])
+station_df_array = station_df[['CodigoEstacion', 'NombreEstacion', latitude_name, longitude_name, 'Etiqueta', 'Fecha', 'Etiqueta', 'Valor']]
+print(station_df_array)
+print('\nProcessing values per year and month')
 for year in range(year_start, year_end+1, 1):
-    for month in range (12):
+    for month in range (1): # 12 months
         year_month = str(year).zfill(4) + '-' + str(month+1).zfill(2)
         station_df_filter = station_df[station_df['Fecha'].dt.strftime('%Y-%m') == year_month]
-        print('Processing: %s with %s records' %(year_month, str(station_df_filter.shape[0]) ))
-        #print('\nFiltered records for PTPM_TT_M and specified year and month: %s' %(str(station_df_filter.shape[0])))
+        stations = station_df_filter.shape[0]
+        station_df_array1 = station_df_filter[
+            ['CodigoEstacion', 'NombreEstacion', latitude_name, longitude_name, 'Etiqueta', 'Fecha', 'Etiqueta',
+             'Valor']]
+        print('Processing: %s with %s records' %(year_month, str(stations) ))
+        #print(station_df_filter)
+        #print(station_df_array1)
+        for i in range(1, stations+1):
+            #print(i)
+            #station_code = station_df_array1['CodigoEstacion']
+            #latitude = station_df_array1[latitude_name]
+            #longitude = station_df_array1[longitude_name]
+            #print('\tStation: %s (%s, %s)' %(str(station_code), str(latitude), str(longitude)))
+            print(station_df_array1['CodigoEstacion'][i])
 
-#station_df_filter = station_df.filter(items=['CodigoEstacion', latitude_name, longitude_name, 'Fecha', 'Etiqueta','Frecuencia', 'Valor'])
 #print(station_df_filter)
 
 
