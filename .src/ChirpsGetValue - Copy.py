@@ -49,20 +49,16 @@ for year in range(year_start, year_end+1, 1):
         chirps_file = 'chirps-v2.0.' + str(year).zfill(4) + '.' + str(month+1).zfill(2)
         url_file = url_server + chirps_file + grid_extension + compress_format
         compress_file = path + chirps_file + grid_extension + compress_format
-        print('\nGetting %s' %url_file)
-        if os.path.isfile(compress_file) == False:
-            print('Saving as %s' %compress_file)
-            file_request = requests.get(url_file)
-            if file_request:
+        print('Getting %s' %url_file)
+        print('Saving as %s' %compress_file)
+        file_request = requests.get(url_file)
+        if file_request:
+            if os.path.isfile(compress_file) == False:
                 open(compress_file, 'wb').write(file_request.content)
-        else:
-            print('Compress file %s is already in the directory.' %compress_file)
         if os.path.isfile(path + chirps_file + grid_extension) == False:
             with gzip.open(compress_file, 'rb') as f_in:
                 with open(path + chirps_file + grid_extension, 'wb') as f_out:
                     shutil.copyfileobj(f_in, f_out)
-        else:
-            print('Grid %s is already in the directory.' %(path + chirps_file + grid_extension))
         if plot_raster:
             raster = rasterio.open(path + chirps_file + grid_extension)
             #print(raster.crs) # Print coordinate reference system - CRS
@@ -75,8 +71,6 @@ for year in range(year_start, year_end+1, 1):
             station_df_filter['SatValue'] = chirps_value(chirps_file + grid_extension, station_df_filter[longitude_name], station_df_filter[latitude_name])
             station_df_filter['SatDesc'] = chirps_file + grid_extension
             station_df_filter.to_csv(path + chirps_file + '.csv')
-        else:
-            print('Sliced .csv %s with Chirps values is already in the directory.' % (path + chirps_file + '.csv'))
 # Join .csv files
 csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
