@@ -140,11 +140,11 @@ print('\nProcess accomplished, check the results file: %s' %(path + station_file
 # https://towardsdatascience.com/8-ways-to-filter-pandas-dataframes-d34ba585c1b8
 # https://towardsdatascience.com/4-tricks-you-should-know-to-parse-date-columns-with-pandas-read-csv-27355bb2ad0e
 # https://www.codegrepper.com/code-examples/python/how+to+extract+gz+file+python
-# https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html
 # https://www.geeksforgeeks.org/python-pandas-dataframe-corr/
-# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html
 # https://stackoverflow.com/questions/42579908/use-corr-to-get-the-correlation-between-two-columns
-# https://pandas.pydata.org/docs/reference/api/pandas.concat.html
 # https://stackoverflow.com/questions/36454494
 # https://www.geeksforgeeks.org/python-pandas-dataframe-set_index/
+# https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html
+# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html
+# https://pandas.pydata.org/docs/reference/api/pandas.concat.html
 # https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html
