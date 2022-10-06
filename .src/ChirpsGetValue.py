@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Name: CNEStationCSVJoin.py
+# Name: ChirpsGetValue.py
 # Description: this script downloads the Chirps monthly rain geogrids and identify the specific values in the IDEAM - Colombia monthly stations series for calculate their correlations.
 # Repository: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/xxxxx
 # License: https://github.com/rcfdtools/R.LTWB/wiki/License
@@ -27,7 +27,9 @@ def chirps_value(raster_file, longitude, latitude):
 path = 'C:/temp/ChirpsTest/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = False # Plot every geogrid
-remove_temp_file = False # Remove all the Chirps download files after processing
+remove_temp_file_comp = False # Remove all the Chirps download files after processing
+remove_temp_file_geogrid = False # Remove all the Chirps geogrid files after processing
+remove_temp_file_csv = False # Remove all .csv sliced files after processing
 date_install = 'FechaInstalacion' # IDEAM installation date field name
 date_suspend = 'FechaSuspension' # IDEAM suspension date field name
 date_record = 'Fecha' # IDEAM date field name for the record values
@@ -112,11 +114,13 @@ csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
 df = pd.read_csv(path + station_file_chirps)
-df.plot.scatter(x=value_name, y='SatValue', alpha=0.5, figsize=(6, 6))
+fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.5, figsize=(6, 6))
 plt.title('Scatter plot IDEAM vs. CHIRPS')
+fig.figure.savefig(path + 'PlotScatterIdeamChirps.png')
 plt.show()
-df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
+fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
 plt.title('IDEAM & CHIRPS boxplot')
+fig.figure.savefig(path + 'PlotIdeamChirpsBoxplot.png')
 plt.show()
 # Correlation plot
 correlation_df.set_index('datetime', inplace = True)
@@ -125,11 +129,25 @@ print(correlation_df.info())
 print(correlation_df)
 print('\nAverage correlation values per method')
 print(correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)) # iloc for get only the required attributes
-correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(12, 6), rot=90)
+fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(12, 6), rot=90)
 plt.title('Monthly correlation time serie values')
+fig.figure.savefig(path + 'PlotMonthlyCorrelationTimeSerie.png')
 correlation_df.iloc[:, [2, 3, 4]].plot.box(figsize=(6, 6))
-plt.title('Monthly correlation values boxplot')
+fig = plt.title('Monthly correlation values boxplot')
+fig.figure.savefig(path + 'PlotMonthlyCorrelationBoxplot.png')
 plt.show()
+# Remove temporal files
+if remove_temp_file_comp:
+    chirps_files = glob.glob(path + 'chirps-v2.0.*.gz')
+    for chirps_file in chirps_files:
+        os.remove(chirps_file)
+if remove_temp_file_geogrid:
+    geogrid_files = glob.glob(path + 'chirps-v2.0.*.tif')
+    for geogrid_file in geogrid_files:
+        os.remove(geogrid_file)
+if remove_temp_file_csv: # csv glob.glob created before
+    for csv_file in csv_files:
+        os.remove(csv_file)
 print('\nProcess accomplished, check the results file: %s' %(path + station_file_chirps))
 
 # References
