@@ -4,7 +4,7 @@
 # Repository: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/xxxxx
 # License: https://github.com/rcfdtools/R.LTWB/wiki/License
 # Requirements: Python 3+, pandas, rasterio, requests
-# Attention: do not convert the .csv file into an Excel file because you would be process more than 1048576 records.
+# Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
 # Libraries
 import os.path
@@ -24,9 +24,11 @@ def chirps_value(raster_file, longitude, latitude):
     return raster.read(1)[row, col]
 
 # General variables
-path = 'D:/R.LTWB/.datasets/CHIRPS/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
+station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv' # Current IDEAM records file
+station_file_chirps = 'IDEAMJoinedChirps.csv' # Output IDEAM records with the Chirps values
+path = 'D:/R.LTWB/.datasets/CHIRPS/' # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
-plot_raster = True # Plot every geogrid
+plot_raster = False # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
 remove_temp_file_geogrid = True # Remove all the Chirps geogrid files after processing
 remove_temp_file_csv = False # Remove all .csv sliced files after processing
@@ -39,13 +41,12 @@ longitude_name = 'Longitud' # IDEAM longitude name
 value_name = 'Valor' # IDEAM value field name
 geogrid_extension = '.tif'
 compress_format = '.gz'
-station_file = 'IDEAMJoined.csv' # Current IDEAM records
-station_file_chirps = 'IDEAMJoinedChirps.csv' # Output file recording the Chirps value and the geogrid data source
-year_start = 1981
-year_end = 2021
+year_start = 1981 # Chirps values starts at 1981
+year_end = 2021 # This value have to correspond with the end of the IDEAM series
 
-# Open the station dataframe and show general information
-station_df = pd.read_csv(path+station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
+# Open the IDEAM station dataframe and show general information
+# Learn more about the IDEAM file in https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
+station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
 print('\nGeneral dataframe information ')
 print(station_df.info())
 print('\nStation records sample')
@@ -149,21 +150,3 @@ if remove_temp_file_csv: # csv glob.glob created before
     for csv_file in csv_files:
         os.remove(csv_file)
 print('\nProcess accomplished, check the results file: %s' %(path + station_file_chirps))
-
-# References
-# https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing
-# https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/
-# https://hatarilabs.com/ih-en/extract-point-value-from-a-raster-file-with-python-geopandas-and-rasterio-tutorial
-# https://www.youtube.com/watch?v=6zzneGT4mkg
-# https://sparkbyexamples.com/pandas/pandas-dataframe-filter/
-# https://towardsdatascience.com/8-ways-to-filter-pandas-dataframes-d34ba585c1b8
-# https://towardsdatascience.com/4-tricks-you-should-know-to-parse-date-columns-with-pandas-read-csv-27355bb2ad0e
-# https://www.codegrepper.com/code-examples/python/how+to+extract+gz+file+python
-# https://www.geeksforgeeks.org/python-pandas-dataframe-corr/
-# https://stackoverflow.com/questions/42579908/use-corr-to-get-the-correlation-between-two-columns
-# https://stackoverflow.com/questions/36454494
-# https://www.geeksforgeeks.org/python-pandas-dataframe-set_index/
-# https://pandas.pydata.org/docs/getting_started/intro_tutorials/05_add_columns.html
-# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html
-# https://pandas.pydata.org/docs/reference/api/pandas.concat.html
-# https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html
