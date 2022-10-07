@@ -1,9 +1,7 @@
-## Plantilla para actividades
-Keywords: `Remote sensing` `Chirps` `Rasterio`
+## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
+Keywords: `Remote sensing` `Chirps` `rasterio` `requests`
 
 ![R.LTWB](Screenshot/RemoteSensing.png)
-
-Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres.
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.                                                                                                                                                                                                 
 
@@ -15,24 +13,22 @@ Para la validación o el contraste de información terrestre, se pueden obtener 
 
 ### Requerimientos
 
-* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
-* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
-* [QGIS 3+](https://qgis.org/) (opcional)
-* HEC-HMS 4.9+
+* [Python 3+](https://www.python.org/)
+* Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload)
 
 
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Graph/AgreeDEMFlowchart.png" width="80%"><br>
+<br><img alt="R.LTWB" src="Graph/RemoteSensing.svg" width="80%"><br>
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 1. 
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/IGACGDB100k.png)
+![R.LTWB](Screenshot/xxxx.png)
 
-En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
+En este momento, dispone de registros IDEAM de precipitación con el registro de valores Chirps.
 
 
 ### Referencias
@@ -65,7 +61,7 @@ En este momento ya dispone de la grilla de terreno reacondicionada requerida par
 
 | Versión    | Descripción     | Autor                                      | Horas |
 |------------|:----------------|--------------------------------------------|:-----:|
-| 2022.07.20 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   0   |
+| 2022.10.07 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   0   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
