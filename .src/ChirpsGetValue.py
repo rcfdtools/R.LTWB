@@ -24,7 +24,7 @@ def chirps_value(raster_file, longitude, latitude):
     return raster.read(1)[row, col]
 
 # General variables
-path = 'C:/temp/ChirpsTest/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
+path = 'D:/R.LTWB/.datasets/CHIRPS/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = True # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
@@ -151,6 +151,7 @@ if remove_temp_file_csv: # csv glob.glob created before
 print('\nProcess accomplished, check the results file: %s' %(path + station_file_chirps))
 
 # References
+# https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing
 # https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/
 # https://hatarilabs.com/ih-en/extract-point-value-from-a-raster-file-with-python-geopandas-and-rasterio-tutorial
 # https://www.youtube.com/watch?v=6zzneGT4mkg
