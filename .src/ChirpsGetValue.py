@@ -27,8 +27,8 @@ def chirps_value(raster_file, longitude, latitude):
 path = 'C:/temp/ChirpsTest/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = False # Plot every geogrid
-remove_temp_file_comp = False # Remove all the Chirps download files after processing
-remove_temp_file_geogrid = False # Remove all the Chirps geogrid files after processing
+remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
+remove_temp_file_geogrid = True # Remove all the Chirps geogrid files after processing
 remove_temp_file_csv = False # Remove all .csv sliced files after processing
 date_install = 'FechaInstalacion' # IDEAM installation date field name
 date_suspend = 'FechaSuspension' # IDEAM suspension date field name
@@ -65,16 +65,16 @@ for year in range(year_start, year_end+1, 1):
         url_file = url_server + chirps_file + geogrid_extension + compress_format
         compress_file = path + chirps_file + geogrid_extension + compress_format
         print('\nProcessing geogrid %s from %s' %(year_month, url_file))
-        # Request the compress geogrid Chirps file
-        if os.path.isfile(compress_file) == False:
+        # Request the compress geogrid Chirps file if the processed sliced .csv doesn't exist
+        if os.path.isfile(compress_file) == False and os.path.isfile(path + chirps_file + '.csv') == False:
             print('Saving compressed file as %s' %compress_file)
             file_request = requests.get(url_file)
             if file_request:
                 open(compress_file, 'wb').write(file_request.content)
         else:
             print('Compressed file %s is already in the directory.' %compress_file)
-        # Uncompress the Chirps file
-        if os.path.isfile(path + chirps_file + geogrid_extension) == False:
+        # Uncompress the Chirps file if the geodrid and the processed sliced .csv doesn't exist
+        if os.path.isfile(path + chirps_file + geogrid_extension) == False and os.path.isfile(path + chirps_file + '.csv') == False:
             with gzip.open(compress_file, 'rb') as f_in:
                 with open(path + chirps_file + geogrid_extension, 'wb') as f_out:
                     shutil.copyfileobj(f_in, f_out)
@@ -99,7 +99,7 @@ for year in range(year_start, year_end+1, 1):
             print('Sliced .csv serie %s with Chirps values is already in the directory.' % (path + chirps_file + '.csv'))
         # Correlation analysis
         print('Correlation analysis')
-        df = pd.read_csv(path + chirps_file + '.csv')
+        df = pd.read_csv(path + chirps_file + '.csv', low_memory=False)
         correlation_pearson = df[value_name].corr(df['SatValue'], method='pearson')
         print('[Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient): %f' %correlation_pearson)
         correlation_kendall = df[value_name].corr(df['SatValue'], method='kendall')
@@ -113,13 +113,13 @@ for year in range(year_start, year_end+1, 1):
 csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
-df = pd.read_csv(path + station_file_chirps)
+df = pd.read_csv(path + station_file_chirps, low_memory=False)
 fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.5, figsize=(6, 6))
-plt.title('Scatter plot IDEAM vs. CHIRPS')
+plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotScatterIdeamChirps.png')
 plt.show()
 fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
-plt.title('IDEAM & CHIRPS boxplot')
+plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotIdeamChirpsBoxplot.png')
 plt.show()
 # Correlation plot
@@ -129,11 +129,11 @@ print(correlation_df.info())
 print(correlation_df)
 print('\nAverage correlation values per method')
 print(correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)) # iloc for get only the required attributes
-fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(12, 6), rot=90)
-plt.title('Monthly correlation time serie values')
+fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(10, 6), rot=90)
+plt.title('IDEAM vs. CHIRPS - Monthly correlations')
 fig.figure.savefig(path + 'PlotMonthlyCorrelationTimeSerie.png')
 correlation_df.iloc[:, [2, 3, 4]].plot.box(figsize=(6, 6))
-fig = plt.title('Monthly correlation values boxplot')
+fig = plt.title('IDEAM vs. CHIRPS - Correlations boxplot')
 fig.figure.savefig(path + 'PlotMonthlyCorrelationBoxplot.png')
 plt.show()
 # Remove temporal files
