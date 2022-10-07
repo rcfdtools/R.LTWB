@@ -1,3 +1,0 @@
-Pending tasks
-	Unzip files and join .csv files with python.
-
