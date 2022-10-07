@@ -26,7 +26,7 @@ def chirps_value(raster_file, longitude, latitude):
 # General variables
 path = 'C:/temp/ChirpsTest/' # Your local .zip files path, use ../.datasets/IDEAM/ for relative path
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
-plot_raster = False # Plot every geogrid
+plot_raster = True # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
 remove_temp_file_geogrid = True # Remove all the Chirps geogrid files after processing
 remove_temp_file_csv = False # Remove all .csv sliced files after processing
@@ -81,8 +81,8 @@ for year in range(year_start, year_end+1, 1):
                     print('Uncompressing geogrid as %s' %(path + chirps_file + geogrid_extension))
         else:
             print('Geogrid %s is already in the directory.' %(path + chirps_file + geogrid_extension))
-        # Plot raster in screen
-        if plot_raster:
+        # Plot raster in screen if the geogrid file still
+        if plot_raster and remove_temp_file_geogrid == False:
             raster = rasterio.open(path + chirps_file + geogrid_extension)
             #print(raster.crs) # Print coordinate reference system - CRS
             #print(raster.count) # Print number of bands
