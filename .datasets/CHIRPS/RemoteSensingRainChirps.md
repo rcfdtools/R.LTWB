@@ -1,3 +1,14 @@
+## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
+
+* Archivo de resultados: D:/R.LTWB/.datasets/CHIRPS/RemoteSensingRainChirps.md
+* Fecha y hora de inicio de ejecución: 2022-10-08 17:53:25.873856
+* Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
+* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython']
+* matplotlib versión: 3.6.0
+* Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/RemoteSensing
+* Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md
+* Créditos: r.cfdtools@gmail.com
+
 
 ### General dataframe information
 
