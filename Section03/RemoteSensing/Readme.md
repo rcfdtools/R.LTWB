@@ -1,5 +1,5 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
-Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `rasterio` `requests` `tabulate`
+Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `pandas` `rasterio` `requests` `tabulate`
 
 ![R.LTWB](Screenshot/RemoteSensing.png)
 
@@ -14,9 +14,10 @@ Para la validación o el contraste de información terrestre, se pueden obtener 
 ### Requerimientos
 
 * [Python 3+](https://www.python.org/)
-* Rasterio para Python
-* Requests para Python
-* Tabulate para Python
+* [Pandas](https://pandas.pydata.org/docs/index.html) para Python
+* [Rasterio](https://pypi.org/project/rasterio/) para Python
+* [Requests](https://requests.readthedocs.io/) para Python
+* [Tabulate](https://pypi.org/project/tabulate/) para Python, requerido para impresión de tablas en formato Markdown desde pandas.
 * Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload)
 
 
@@ -37,6 +38,7 @@ En este momento, dispone de registros IDEAM de precipitación con el registro de
 ### Referencias
 
 * https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing
+* https://www.chc.ucsb.edu/data/chirps
 * https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/
 * https://hatarilabs.com/ih-en/extract-point-value-from-a-raster-file-with-python-geopandas-and-rasterio-tutorial
 * [Python Scripting for Exporting Multiple Rasters into Time Series](https://www.youtube.com/watch?v=6zzneGT4mkg)

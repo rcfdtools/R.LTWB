@@ -16,7 +16,8 @@ import gzip
 import shutil
 import glob
 import matplotlib.pyplot as plt
-import tabulate
+import tabulate # required for print tables in Markdown using pandas
+from datetime import date
 
 # Function for get the raster value in a specific coordinate
 def chirps_value(raster_file, longitude, latitude):
@@ -32,6 +33,7 @@ station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv' # Output IDEAM c
 station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv' # Output IDEAM correlations with Chirps - mean
 station_file_corr_year = 'IDEAMJoinedChirpsCorrelationYear.csv' # Output IDEAM correlations with Chirps for each year
 station_file_corr_month = 'IDEAMJoinedChirpsCorrelationMonth.csv' # Output IDEAM correlations with Chirps for each month
+file_log_name = path + 'RemoteSensingRainChirps.md'
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = False # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
