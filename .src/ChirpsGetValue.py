@@ -16,6 +16,7 @@ import gzip
 import shutil
 import glob
 import matplotlib.pyplot as plt
+import tabulate
 
 # Function for get the raster value in a specific coordinate
 def chirps_value(raster_file, longitude, latitude):
@@ -45,21 +46,25 @@ longitude_name = 'Longitud' # IDEAM longitude name
 value_name = 'Valor' # IDEAM value field name
 geogrid_extension = '.tif'
 compress_format = '.gz'
+plot_colormap = 'tab20b' # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 year_start = 1981 # Chirps values starts at 1981
 year_end = 2021 # This value have to correspond with the end of the IDEAM series
 
 # Open the IDEAM station dataframe and show general information
 # Learn more about the IDEAM file in https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
 station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
-print('\nGeneral dataframe information ')
+print('\n### General dataframe information\n')
 print(station_df.info())
-print('\nStation records sample')
+print('\nStation records sample\n')
 print(station_df)
+ideam_regs = station_df.shape[0]
+print('\nIDEAM records: %s' %(str(ideam_regs)))
 station_df = station_df.query(parameter_name) # Filter for the monthly rain values
-print('\nFiltered records for %s: %s' %(parameter_name, str(station_df.shape[0])))
+ideam_regs_query = station_df.shape[0]
+print('Filtered records for %s: %i (%f%%)' %(parameter_name, ideam_regs_query, (ideam_regs_query/ideam_regs)*100))
 
-# Processing Chirps values per year and month
-print('\nProcessing Chrips values per year and month')
+# Processing Chrips values per month in each year (displayed only in Python console)
+print('\n\n### Processing Chrips values per month in each year')
 cols = ['Date', 'Year', 'Month', 'Pearson', 'Kendall', 'Spearman']
 correlation_df = pd.DataFrame(columns = cols)
 for year in range(year_start, year_end+1, 1):
@@ -103,56 +108,65 @@ for year in range(year_start, year_end+1, 1):
         else:
             print('Sliced .csv serie %s with Chirps values is already in the directory.' % (path + chirps_file + '.csv'))
         # Correlation analysis
-        print('Correlation analysis')
         df = pd.read_csv(path + chirps_file + '.csv', low_memory=False)
         correlation_pearson = df[value_name].corr(df['SatValue'], method='pearson')
-        print('[Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient): %f' %correlation_pearson)
         correlation_kendall = df[value_name].corr(df['SatValue'], method='kendall')
-        print('[Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient): %f' %correlation_kendall)
         correlation_spearman = df[value_name].corr(df['SatValue'], method='spearman')
-        print('[Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient): %f' %correlation_spearman)
+        print('Correlation analysis. Pearson = %f, Kendall = %f, Spearman = %f' %(correlation_pearson, correlation_kendall, correlation_spearman))
         df2 = pd.DataFrame([[pd.to_datetime(date, format=('%Y/%m/%d')), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns = cols)
         #correlation_df = pd.concat([correlation_df, df2], ignore_index = True)
         correlation_df = pd.concat([correlation_df, df2])
+
 # Join .csv files and plot
 csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
 df = pd.read_csv(path + station_file_chirps, low_memory=False)
-fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.5, figsize=(6, 6))
+fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c='black', cmap=None)
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
-fig.figure.savefig(path + 'PlotScatterIdeamChirps.png')
+fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()
 fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
 plt.title('IDEAM & CHIRPS - Boxplot')
-fig.figure.savefig(path + 'PlotIdeamChirpsBoxplot.png')
+fig.figure.savefig(path + 'PlotDateIdeamChirpsBoxplot.png')
 plt.show()
+
 # Correlation save & plot
+print('\n\n### Correlation Analysis\n\nThe correlation methods used for the analysis are:\n')
+print('[* Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)')
+print('[* Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)')
+print('[* Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)')
 correlation_df.to_csv(path + station_file_corr_date, encoding='utf-8', index=False)
 correlation_df.set_index('Date', inplace = True)
-print('\nCorrelation values time series')
-print(correlation_df.info())
-print(correlation_df)
-print('\nAverage correlation values per method')
+print('\n\n#### Correlation values for date\n\nThe following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.\n')
+print(correlation_df.to_markdown())
+print('\n\n#### Average correlation per method per date\n\nThe values shown below, correspond to the average correlation values in each date processed.\n')
 df = correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)  # iloc for get only the required attributes
 df.to_csv(path + station_file_corr_date_mean, encoding='utf-8', index=True)
-print(df)
-print('\nAverage correlation values per year and method')
-df = correlation_df.groupby('Year').mean()
-df.to_csv(path + station_file_corr_year, encoding='utf-8', index=True)
-print(df)
-print('\nAverage correlation values per month and method')
-df = correlation_df.groupby('Month').mean()
-df.to_csv(path + station_file_corr_month, encoding='utf-8', index=True)
-print(df)
-
-fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(10, 6), rot=90)
-plt.title('IDEAM vs. CHIRPS - Monthly correlations')
-fig.figure.savefig(path + 'PlotMonthlyCorrelationTimeSerie.png')
+fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(10, 6), rot=90, colormap=plot_colormap)
+plt.title('IDEAM vs. CHIRPS - Correlations per date')
+fig.figure.savefig(path + 'PlotDateCorrelationTimeSerie.png')
 correlation_df.iloc[:, [2, 3, 4]].plot.box(figsize=(6, 6))
 fig = plt.title('IDEAM vs. CHIRPS - Correlations boxplot')
-fig.figure.savefig(path + 'PlotMonthlyCorrelationBoxplot.png')
+fig.figure.savefig(path + 'PlotDateCorrelationBoxplot.png')
+print(df.to_markdown())
+print('\n\n#### Average correlation yearly and method\n\nThis table show the average correlation values obtained for each method in every year in the record set.\n')
+df = correlation_df.groupby('Year').mean()
+df.to_csv(path + station_file_corr_year, encoding='utf-8', index=True)
+print(df.to_markdown())
+fig = df.plot(figsize=(10, 6), rot=90, colormap=plot_colormap)
+plt.title('IDEAM vs. CHIRPS - Correlations per year')
+fig.figure.savefig(path + 'PlotYearCorrelationTimeSerie.png')
+print('\n#### Average correlation monthly and method\n\nThis table show the average correlation values obtained in every month in the record set.\n')
+df = correlation_df.groupby('Month').mean()
+df.to_csv(path + station_file_corr_month, encoding='utf-8', index=True)
+print(df.to_markdown())
+fig = df.plot(figsize=(10, 6), rot=0, colormap=plot_colormap)
+plt.title('IDEAM vs. CHIRPS - Correlations per month')
+plt.xticks(range(1, 13, 1))
+fig.figure.savefig(path + 'PlotMonthCorrelationTimeSerie.png')
 plt.show()
+
 # Remove temporal files
 if remove_temp_file_comp:
     chirps_files = glob.glob(path + 'chirps-v2.0.*.gz')

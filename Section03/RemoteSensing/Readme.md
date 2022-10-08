@@ -1,5 +1,5 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
-Keywords: `Remote sensing` `Chirps` `rasterio` `requests` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot`
+Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `rasterio` `requests` `tabulate`
 
 ![R.LTWB](Screenshot/RemoteSensing.png)
 
@@ -14,6 +14,9 @@ Para la validación o el contraste de información terrestre, se pueden obtener 
 ### Requerimientos
 
 * [Python 3+](https://www.python.org/)
+* Rasterio para Python
+* Requests para Python
+* Tabulate para Python
 * Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload)
 
 
@@ -50,6 +53,11 @@ En este momento, dispone de registros IDEAM de precipitación con el registro de
 * https://pandas.pydata.org/docs/reference/api/pandas.concat.html
 * https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html
 * https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.mean.html
+* https://www.w3schools.com/python/ref_func_range.asp
+* https://matplotlib.org/stable/tutorials/colors/colormaps.html
+* [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+* [Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)
+* [Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
 
 
 ### Compatibilidad
