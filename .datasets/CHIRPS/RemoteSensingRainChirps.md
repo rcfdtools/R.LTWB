@@ -561,7 +561,13 @@ Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](IDEAMJoinedChirpsCorrel
 </div>
 
 
+<div align="center">
+
+
 ![R.LTWB](PlotDateCorrelationBoxplot.png)
+
+</div>
+
 
 
 #### Average correlation yearly and method
