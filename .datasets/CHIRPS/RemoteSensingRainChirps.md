@@ -1,7 +1,7 @@
-## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
+## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres, IDEAM vs. CHIRPS
 
 * Archivo de resultados: D:/R.LTWB/.datasets/CHIRPS/RemoteSensingRainChirps.md
-* Fecha y hora de inicio de ejecución: 2022-10-08 17:53:25.873856
+* Fecha y hora de inicio de ejecución: 2022-10-08 17:55:19.622979
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython']
 * matplotlib versión: 3.6.0

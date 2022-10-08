@@ -67,7 +67,7 @@ year_start = 1981  # Chirps values starts at 1981
 year_end = 2021  # This value have to correspond with the end of the IDEAM series
 
 # Header
-print_log('## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres')
+print_log('## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres, IDEAM vs. CHIRPS')
 print_log('\n* Archivo de resultados: ' + file_log_name +
           '\n* Fecha y hora de inicio de ejecución: ' + str(datetime.now()) +
           '\n* Python versión: ' + str(sys.version) +
