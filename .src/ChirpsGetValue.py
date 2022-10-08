@@ -25,8 +25,9 @@ def chirps_value(raster_file, longitude, latitude):
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv' # Current IDEAM records file
-station_file_chirps = 'IDEAMJoinedChirps.csv' # Output IDEAM records with the Chirps values
 path = 'D:/R.LTWB/.datasets/CHIRPS/' # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
+station_file_chirps = 'IDEAMJoinedChirps.csv' # Output IDEAM records with the Chirps values
+station_file_corr = 'IDEAMJoinedChirpsCorrelation.csv' # Output IDEAM correlations with Chirps
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = False # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
@@ -123,7 +124,8 @@ fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
 plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotIdeamChirpsBoxplot.png')
 plt.show()
-# Correlation plot
+# Correlation plot and save
+correlation_df.to_csv(path + station_file_corr, encoding='utf-8', index=False)
 correlation_df.set_index('datetime', inplace = True)
 print('\nCorrelation values time series')
 print(correlation_df.info())

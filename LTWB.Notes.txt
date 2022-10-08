@@ -26,33 +26,8 @@ Pending tasks
 CNE_IDEAM_OE_ZE.shp
 Extract Values to Points
 Extract Multi Values to Points
-Weather variables from satellite
-    Precipitación total mensual
-    Temperatura máxima diaria
-    Temperatura mínima diaria
-    Evaporación total diaria
-    Brillo solar
-    Radiación solar
-    Humedad del aire cerca al suelo
-    Viento
-    Nubosidad
-
-.venvPython3.10.5
-datetime64
-Pseudocódigo Precipitación Chirps
-    Pandas dataframe D:\R.LTWB\.datasets\IDEAM\IDEAMJoined.csv
-    Filtro dataframe por Etiqueta = PTPM_TT_M y Fecha >= 1981
-    Ordenar registros por fecha.
-    Crear dos atributos para guardar los valores leídos y la descripción de la fuente: SatValue, SatDesc
-    Verificar si registros dataset inician en 1981
-    Descargar raster iniciando en 1981.01 https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/
-    Descomprimir raster
-    Leer valores en cada localización por estación
-    Guardar valor y descripción en cada registro del dataframe
 
 
-https://hatarilabs.com/ih-en/extract-point-value-from-a-raster-file-with-python-geopandas-and-rasterio-tutorial
-Python Scripting for Exporting Multiple Rasters into Time Series https://www.youtube.com/watch?v=6zzneGT4mkg
 
 
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>

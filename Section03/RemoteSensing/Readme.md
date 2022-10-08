@@ -36,7 +36,7 @@ En este momento, dispone de registros IDEAM de precipitación con el registro de
 * https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing
 * https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/
 * https://hatarilabs.com/ih-en/extract-point-value-from-a-raster-file-with-python-geopandas-and-rasterio-tutorial
-* https://www.youtube.com/watch?v=6zzneGT4mkg
+* [Python Scripting for Exporting Multiple Rasters into Time Series](https://www.youtube.com/watch?v=6zzneGT4mkg)
 * https://sparkbyexamples.com/pandas/pandas-dataframe-filter/
 * https://towardsdatascience.com/8-ways-to-filter-pandas-dataframes-d34ba585c1b8
 * https://towardsdatascience.com/4-tricks-you-should-know-to-parse-date-columns-with-pandas-read-csv-27355bb2ad0e
@@ -68,7 +68,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../CNEStationDatasetDownload) | [Inicio](../../) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
-|----------------------------------------------------|------------------|---------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../CNEStationDatasetDownload) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
+|----------------------------------------------------|---------------------------|---------------------------------------------------------------------------|--------------------------|
 
 [^1]: 

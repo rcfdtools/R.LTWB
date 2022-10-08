@@ -1,0 +1,25 @@
+Notes
+
+Weather variables from satellite
+    Precipitación total mensual
+    Temperatura máxima diaria
+    Temperatura mínima diaria
+    Evaporación total diaria
+    Brillo solar
+    Radiación solar
+    Humedad del aire cerca al suelo
+    Viento
+    Nubosidad
+
+Pseudocódigo Precipitación Chirps
+    Pandas dataframe D:\R.LTWB\.datasets\IDEAM\IDEAMJoined.csv.
+    Filtro dataframe por Etiqueta = PTPM_TT_M y Fecha >= 1981.
+    Ordenar registros por fecha.
+    Crear dos atributos para guardar los valores leídos y la descripción de la fuente: SatValue, SatDesc.
+    Verificar si registros dataset inician en 1981.
+    Descargar raster iniciando en 1981.01 https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/
+    Descomprimir raster.
+    Leer valores en cada localización por estación.
+    Guardar valor y descripción en cada registro del dataframe.
+	Calcular correlaciones por mes en cada año.
+	Graficar correlaciones.
