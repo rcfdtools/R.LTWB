@@ -57,7 +57,7 @@ print('\nFiltered records for %s: %s' %(parameter_name, str(station_df.shape[0])
 
 # Processing Chirps values per year and month
 print('\nProcessing Chrips values per year and month')
-cols = ['datetime', 'Year', 'Month', 'Pearson', 'Kendall', 'Spearman']
+cols = ['Date', 'Year', 'Month', 'Pearson', 'Kendall', 'Spearman']
 correlation_df = pd.DataFrame(columns = cols)
 for year in range(year_start, year_end+1, 1):
     for month in range (12):
@@ -126,7 +126,7 @@ fig.figure.savefig(path + 'PlotIdeamChirpsBoxplot.png')
 plt.show()
 # Correlation plot and save
 correlation_df.to_csv(path + station_file_corr, encoding='utf-8', index=False)
-correlation_df.set_index('datetime', inplace = True)
+correlation_df.set_index('Date', inplace = True)
 print('\nCorrelation values time series')
 print(correlation_df.info())
 print(correlation_df)
