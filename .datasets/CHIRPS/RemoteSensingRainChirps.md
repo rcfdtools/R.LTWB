@@ -521,6 +521,7 @@ The following table, shows the monthly average correlation values obtained from 
 | 2021-10-01 00:00:00 |   2021 |      10 | 0.286252   |  0.154729  |  0.226714  |
 | 2021-11-01 00:00:00 |   2021 |      11 | 0.735614   |  0.453125  |  0.631615  |
 | 2021-12-01 00:00:00 |   2021 |      12 | 0.546456   |  0.398528  |  0.564     |
+
 ![R.LTWB](PlotDateCorrelationTimeSerie.png)
 
 
