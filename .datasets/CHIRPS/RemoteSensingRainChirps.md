@@ -14,9 +14,9 @@
 
 The correlation methods used for the analysis are:
 
-[*Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)  
-[*Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)  
-[*Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)  
+* [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)  
+* [Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)  
+* [Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)  
 
 
 #### Correlation values for date
