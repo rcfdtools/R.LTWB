@@ -25,6 +25,11 @@ def chirps_value(raster_file, longitude, latitude):
     row, col = raster.index(longitude, latitude)
     return raster.read(1)[row, col]
 
+# Function for print and show results in a file
+def print_log(txt_print, on_screen=True):
+    if on_screen: print(txt_print)
+    file_log.write(txt_print + '\n')
+
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv' # Current IDEAM records file
 path = 'D:/R.LTWB/.datasets/CHIRPS/' # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
@@ -34,6 +39,7 @@ station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv' # Outpu
 station_file_corr_year = 'IDEAMJoinedChirpsCorrelationYear.csv' # Output IDEAM correlations with Chirps for each year
 station_file_corr_month = 'IDEAMJoinedChirpsCorrelationMonth.csv' # Output IDEAM correlations with Chirps for each month
 file_log_name = path + 'RemoteSensingRainChirps.md'
+file_log = open(file_log_name, 'w+')  # w+ create the file if it doesn't exist
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = False # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
@@ -55,18 +61,18 @@ year_end = 2021 # This value have to correspond with the end of the IDEAM series
 # Open the IDEAM station dataframe and show general information
 # Learn more about the IDEAM file in https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
 station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
-print('\n### General dataframe information\n')
+print_log('\n### General dataframe information\n', True)
 print(station_df.info())
 print('\nStation records sample\n')
 print(station_df)
 ideam_regs = station_df.shape[0]
-print('\nIDEAM records: %s' %(str(ideam_regs)))
+print_log('\n* IDEAM records: %s' %(str(ideam_regs)), True)
 station_df = station_df.query(parameter_name) # Filter for the monthly rain values
 ideam_regs_query = station_df.shape[0]
-print('Filtered records for %s: %i (%f%%)' %(parameter_name, ideam_regs_query, (ideam_regs_query/ideam_regs)*100))
+print_log('* Filtered records for %s: %i (%f%%)' %(parameter_name, ideam_regs_query, (ideam_regs_query/ideam_regs)*100), True)
 
 # Processing Chrips values per month in each year (displayed only in Python console)
-print('\n\n### Processing Chrips values per month in each year')
+print_log('\n\n### Processing Chrips values per month in each year\n', True)
 cols = ['Date', 'Year', 'Month', 'Pearson', 'Kendall', 'Spearman']
 correlation_df = pd.DataFrame(columns = cols)
 for year in range(year_start, year_end+1, 1):
@@ -120,15 +126,19 @@ for year in range(year_start, year_end+1, 1):
         correlation_df = pd.concat([correlation_df, df2])
 
 # Join .csv files and plot
+print_log('\n### IDEAM vs. CHIRPS - plots\n', True)
 csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
 df = pd.read_csv(path + station_file_chirps, low_memory=False)
 fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c='black', cmap=None)
+print_log('\n#### IDEAM vs. CHIRPS - Scatter plot\n', True)
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()
+print_log('\n![R.LTWB](PlotDateScatterIdeamChirps.png)', True)
 fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
+print_log('\n#### IDEAM & CHIRPS - Boxplot', True)
 plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotDateIdeamChirpsBoxplot.png')
 plt.show()
