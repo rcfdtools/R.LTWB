@@ -135,7 +135,7 @@ print(correlation_df.info())
 print(correlation_df)
 print('\nAverage correlation values per method')
 df = correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)  # iloc for get only the required attributes
-df.to_csv(path + station_file_corr_date_mean, encoding='utf-8', index=False)
+df.to_csv(path + station_file_corr_date_mean, encoding='utf-8', index=True)
 print(df)
 fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(10, 6), rot=90)
 plt.title('IDEAM vs. CHIRPS - Monthly correlations')
