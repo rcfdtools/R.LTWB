@@ -126,7 +126,7 @@ for year in range(year_start, year_end+1, 1):
         correlation_df = pd.concat([correlation_df, df2])
 
 # Join .csv files and plot
-print_log('\n\n### General IDEAM vs. CHIRPS - plots\n')
+print_log('\n\n### General IDEAM vs. CHIRPS - plots')
 csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
@@ -144,9 +144,9 @@ plt.show()
 
 # Correlation save & plot
 print_log('\n\n### Correlation Analysis\n\nThe correlation methods used for the analysis are:\n')
-print_log('[* Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)\n')
-print_log('[* Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)\n')
-print_log('[* Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)\n')
+print_log('[* Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)  ')
+print_log('[* Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)  ')
+print_log('[* Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)  ')
 correlation_df.to_csv(path + station_file_corr_date, encoding='utf-8', index=False)
 correlation_df.set_index('Date', inplace = True)
 print_log('\n\n#### Correlation values for date\n\nThe following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.\n')
