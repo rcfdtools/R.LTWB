@@ -61,15 +61,15 @@ year_end = 2021 # This value have to correspond with the end of the IDEAM series
 # Open the IDEAM station dataframe and show general information
 # Learn more about the IDEAM file in https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
 station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
-print_log('\n### General dataframe information\n', True)
+print_log('\n### General dataframe information\n')
 print(station_df.info())
 print('\nStation records sample\n')
 print(station_df)
 ideam_regs = station_df.shape[0]
-print_log('\n* IDEAM records: %s' %(str(ideam_regs)), True)
+print_log('* IDEAM records: %s' %(str(ideam_regs)))
 station_df = station_df.query(parameter_name) # Filter for the monthly rain values
 ideam_regs_query = station_df.shape[0]
-print_log('* Filtered records for %s: %i (%f%%)' %(parameter_name, ideam_regs_query, (ideam_regs_query/ideam_regs)*100), True)
+print_log('* Filtered records for %s: %i (%s%%)' %(parameter_name, ideam_regs_query, str(round((ideam_regs_query/ideam_regs)*100, 2))))
 
 # Processing Chrips values per month in each year (displayed only in Python console)
 print('\n\n### Processing Chrips values per month in each year\n')
@@ -126,7 +126,7 @@ for year in range(year_start, year_end+1, 1):
         correlation_df = pd.concat([correlation_df, df2])
 
 # Join .csv files and plot
-print_log('\n### IDEAM vs. CHIRPS - plots\n', True)
+print_log('\n\n### General IDEAM vs. CHIRPS - plots\n')
 csv_files = glob.glob(path + 'chirps-v2.0.*.csv')
 df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
@@ -135,22 +135,22 @@ fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c=
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()
-print_log('\n![R.LTWB](PlotDateScatterIdeamChirps.png)', True)
+print_log('![R.LTWB](PlotDateScatterIdeamChirps.png)')
 fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
 plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotDateIdeamChirpsBoxplot.png')
-print_log('\n![R.LTWB](PlotDateIdeamChirpsBoxplot.png)', True)
+print_log('![R.LTWB](PlotDateIdeamChirpsBoxplot.png)')
 plt.show()
 
 # Correlation save & plot
-print('\n\n### Correlation Analysis\n\nThe correlation methods used for the analysis are:\n')
-print('[* Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)')
-print('[* Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)')
-print('[* Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)')
+print_log('\n\n### Correlation Analysis\n\nThe correlation methods used for the analysis are:\n')
+print_log('[* Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)')
+print_log('[* Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)')
+print_log('[* Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%%27s_rank_correlation_coefficient)')
 correlation_df.to_csv(path + station_file_corr_date, encoding='utf-8', index=False)
 correlation_df.set_index('Date', inplace = True)
-print('\n\n#### Correlation values for date\n\nThe following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.\n')
-print(correlation_df.to_markdown())
+print_log('\n\n#### Correlation values for date\n\nThe following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.\n')
+print_log(correlation_df.to_markdown())
 print('\n\n#### Average correlation per method per date\n\nThe values shown below, correspond to the average correlation values in each date processed.\n')
 df = correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)  # iloc for get only the required attributes
 df.to_csv(path + station_file_corr_date_mean, encoding='utf-8', index=True)
