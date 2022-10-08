@@ -174,7 +174,7 @@ fig.figure.savefig(path + 'PlotYearCorrelationTimeSerie.png')
 print_log('\n![R.LTWB](PlotYearCorrelationTimeSerie.png)')
 df = correlation_df.groupby('Month').mean()
 df.to_csv(path + station_file_corr_month, encoding='utf-8', index=True)
-print_log('\n#### Average correlation monthly and method\n\nThis table show the average correlation values obtained in every month in the record set.\n\nGet the table [%s](%s) \n' %(station_file_corr_month, station_file_corr_month))
+print_log('\n#### Average correlation monthly and method\n\nThis table shows the average correlation values obtained in every month in the record set.\n\nGet the table [%s](%s) \n' %(station_file_corr_month, station_file_corr_month))
 print_log(df.to_markdown())
 fig = df.plot(figsize=(10, 6), rot=0, colormap=plot_colormap)
 plt.title('IDEAM vs. CHIRPS - Correlations per month')
@@ -196,4 +196,5 @@ if remove_temp_file_csv: # csv glob.glob created before
     for csv_file in csv_files:
         os.remove(csv_file)
 print('\nProcess accomplished, check the results files like: %s' %(path + station_file_chirps))
+
 

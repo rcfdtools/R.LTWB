@@ -596,7 +596,7 @@ Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelatio
 
 #### Average correlation monthly and method
 
-This table show the average correlation values obtained in every month in the record set.
+This table shows the average correlation values obtained in every month in the record set.
 
 Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](IDEAMJoinedChirpsCorrelationMonth.csv) 
 
