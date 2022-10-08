@@ -10,8 +10,20 @@
 
 Processed .csv file [IDEAMJoinedChirps.csv](IDEAMJoinedChirps.csv)
 
+
+<div align="center">
+
 ![R.LTWB](PlotDateScatterIdeamChirps.png)
+
+</div>
+
+
+<div align="center">
+
 ![R.LTWB](PlotDateIdeamChirpsBoxplot.png)
+
+</div>
+
 
 
 ### Correlation Analysis
@@ -27,6 +39,9 @@ The correlation methods used for the analysis are:
 
 The following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.
 Get the table [IDEAMJoinedChirpsCorrelationDate.csv](IDEAMJoinedChirpsCorrelationDate.csv) 
+
+
+<div align="center">
 
 | Date                |   Year |   Month |    Pearson |    Kendall |   Spearman |
 |:--------------------|-------:|--------:|-----------:|-----------:|-----------:|
@@ -523,6 +538,9 @@ Get the table [IDEAMJoinedChirpsCorrelationDate.csv](IDEAMJoinedChirpsCorrelatio
 | 2021-11-01 00:00:00 |   2021 |      11 | 0.735614   |  0.453125  |  0.631615  |
 | 2021-12-01 00:00:00 |   2021 |      12 | 0.546456   |  0.398528  |  0.564     |
 
+</div>
+
+
 ![R.LTWB](PlotDateCorrelationTimeSerie.png)
 
 
@@ -531,11 +549,17 @@ Get the table [IDEAMJoinedChirpsCorrelationDate.csv](IDEAMJoinedChirpsCorrelatio
 The values shown below, correspond to the average correlation values in each date processed.
 Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](IDEAMJoinedChirpsCorrelationDateMean.csv) 
 
+
+<div align="center">
+
 |          |        0 |
 |:---------|---------:|
 | Pearson  | 0.625075 |
 | Kendall  | 0.423064 |
 | Spearman | 0.576582 |
+
+</div>
+
 
 ![R.LTWB](PlotDateCorrelationBoxplot.png)
 
@@ -544,6 +568,9 @@ Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](IDEAMJoinedChirpsCorrel
 
 This table shows the average correlation values obtained for each method in every year in the record set.
 Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelationYear.csv) 
+
+
+<div align="center">
 
 |   Year |   Pearson |   Kendall |   Spearman |
 |-------:|----------:|----------:|-----------:|
@@ -589,12 +616,18 @@ Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelatio
 |   2020 |  0.455553 |  0.365314 |   0.51242  |
 |   2021 |  0.46256  |  0.301765 |   0.426802 |
 
+</div>
+
+
 ![R.LTWB](PlotYearCorrelationTimeSerie.png)
 
 #### Average correlation monthly and method
 
 This table shows the average correlation values obtained in every month in the record set.
 Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](IDEAMJoinedChirpsCorrelationMonth.csv) 
+
+
+<div align="center">
 
 |   Month |   Pearson |   Kendall |   Spearman |
 |--------:|----------:|----------:|-----------:|
@@ -610,5 +643,8 @@ Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](IDEAMJoinedChirpsCorrelati
 |      10 |  0.647893 |  0.442117 |   0.608432 |
 |      11 |  0.688458 |  0.44099  |   0.605399 |
 |      12 |  0.700465 |  0.428826 |   0.576633 |
+
+</div>
+
 
 ![R.LTWB](PlotMonthCorrelationTimeSerie.png)

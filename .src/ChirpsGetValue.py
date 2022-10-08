@@ -26,9 +26,11 @@ def chirps_value(raster_file, longitude, latitude):
     return raster.read(1)[row, col]
 
 # Function for print and show results in a file
-def print_log(txt_print, on_screen=True):
+def print_log(txt_print, on_screen=True, center_div=False):
     if on_screen: print(txt_print)
+    if center_div: file_log.write('\n<div align="center">\n' + '\n')
     file_log.write(txt_print + '\n')
+    if center_div: file_log.write('\n</div>\n' + '\n')
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv' # Current IDEAM records file
@@ -136,11 +138,11 @@ fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c=
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()
-print_log('![R.LTWB](PlotDateScatterIdeamChirps.png)')
+print_log('![R.LTWB](PlotDateScatterIdeamChirps.png)', center_div=True)
 fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
 plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotDateIdeamChirpsBoxplot.png')
-print_log('![R.LTWB](PlotDateIdeamChirpsBoxplot.png)')
+print_log('![R.LTWB](PlotDateIdeamChirpsBoxplot.png)', center_div=True)
 plt.show()
 
 # Correlation save & plot
@@ -151,7 +153,7 @@ print_log('* [Spearman’s rank correlation coefficient](https://en.wikipedia.or
 correlation_df.to_csv(path + station_file_corr_date, encoding='utf-8', index=False)
 correlation_df.set_index('Date', inplace = True)
 print_log('\n\n#### Correlation values for the date records\n\nThe following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.\nGet the table [%s](%s) \n' %(station_file_corr_date, station_file_corr_date))
-print_log(correlation_df.to_markdown())
+print_log(correlation_df.to_markdown(), center_div=True)
 df = correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)  # iloc for get only the required attributes
 df.to_csv(path + station_file_corr_date_mean, encoding='utf-8', index=True)
 fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(10, 6), rot=90, colormap=plot_colormap)
@@ -159,7 +161,7 @@ plt.title('IDEAM vs. CHIRPS - Correlations per date')
 fig.figure.savefig(path + 'PlotDateCorrelationTimeSerie.png')
 print_log('\n![R.LTWB](PlotDateCorrelationTimeSerie.png)')
 print_log('\n\n#### Average correlations per method\n\nThe values shown below, correspond to the average correlation values in each date processed.\nGet the table [%s](%s) \n' %(station_file_corr_date_mean, station_file_corr_date_mean))
-print_log(df.to_markdown())
+print_log(df.to_markdown(), center_div=True)
 correlation_df.iloc[:, [2, 3, 4]].plot.box(figsize=(6, 6))
 fig = plt.title('IDEAM vs. CHIRPS - Correlations boxplot')
 fig.figure.savefig(path + 'PlotDateCorrelationBoxplot.png')
@@ -167,7 +169,7 @@ print_log('\n![R.LTWB](PlotDateCorrelationBoxplot.png)')
 df = correlation_df.groupby('Year').mean()
 df.to_csv(path + station_file_corr_year, encoding='utf-8', index=True)
 print_log('\n\n#### Average correlation yearly and method\n\nThis table shows the average correlation values obtained for each method in every year in the record set.\nGet the table [%s](%s) \n' %(station_file_corr_year, station_file_corr_year))
-print_log(df.to_markdown())
+print_log(df.to_markdown(), center_div=True)
 fig = df.plot(figsize=(10, 6), rot=90, colormap=plot_colormap)
 plt.title('IDEAM vs. CHIRPS - Correlations per year')
 fig.figure.savefig(path + 'PlotYearCorrelationTimeSerie.png')
@@ -175,7 +177,7 @@ print_log('\n![R.LTWB](PlotYearCorrelationTimeSerie.png)')
 df = correlation_df.groupby('Month').mean()
 df.to_csv(path + station_file_corr_month, encoding='utf-8', index=True)
 print_log('\n#### Average correlation monthly and method\n\nThis table shows the average correlation values obtained in every month in the record set.\nGet the table [%s](%s) \n' %(station_file_corr_month, station_file_corr_month))
-print_log(df.to_markdown())
+print_log(df.to_markdown(), center_div=True)
 fig = df.plot(figsize=(10, 6), rot=0, colormap=plot_colormap)
 plt.title('IDEAM vs. CHIRPS - Correlations per month')
 plt.xticks(range(1, 13, 1))
