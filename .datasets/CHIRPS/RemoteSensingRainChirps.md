@@ -533,6 +533,7 @@ The values shown below, correspond to the average correlation values in each dat
 | Pearson  | 0.625075 |
 | Kendall  | 0.423064 |
 | Spearman | 0.576582 |
+
 ![R.LTWB](PlotDateCorrelationBoxplot.png)
 
 
@@ -583,6 +584,7 @@ This table show the average correlation values obtained for each method in every
 |   2019 |  0.366845 |  0.306236 |   0.42744  |
 |   2020 |  0.455553 |  0.365314 |   0.51242  |
 |   2021 |  0.46256  |  0.301765 |   0.426802 |
+
 ![R.LTWB](PlotYearCorrelationTimeSerie.png)
 
 #### Average correlation monthly and method
@@ -603,4 +605,5 @@ This table show the average correlation values obtained in every month in the re
 |      10 |  0.647893 |  0.442117 |   0.608432 |
 |      11 |  0.688458 |  0.44099  |   0.605399 |
 |      12 |  0.700465 |  0.428826 |   0.576633 |
+
 ![R.LTWB](PlotMonthCorrelationTimeSerie.png)
