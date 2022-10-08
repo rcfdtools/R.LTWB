@@ -27,7 +27,10 @@ def chirps_value(raster_file, longitude, latitude):
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv' # Current IDEAM records file
 path = 'D:/R.LTWB/.datasets/CHIRPS/' # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
 station_file_chirps = 'IDEAMJoinedChirps.csv' # Output IDEAM records with the Chirps values
-station_file_corr = 'IDEAMJoinedChirpsCorrelation.csv' # Output IDEAM correlations with Chirps
+station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv' # Output IDEAM correlations with Chirps for each date
+station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv' # Output IDEAM correlations with Chirps - mean
+station_file_corr_year = 'IDEAMJoinedChirpsCorrelationYear.csv' # Output IDEAM correlations with Chirps for each year
+station_file_corr_month = 'IDEAMJoinedChirpsCorrelationMonth.csv' # Output IDEAM correlations with Chirps for each month
 url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
 plot_raster = False # Plot every geogrid
 remove_temp_file_comp = True # Remove all the compressed Chirps files downloaded after processing
@@ -124,14 +127,16 @@ fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
 plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotIdeamChirpsBoxplot.png')
 plt.show()
-# Correlation plot and save
-correlation_df.to_csv(path + station_file_corr, encoding='utf-8', index=False)
+# Correlation save & plot
+correlation_df.to_csv(path + station_file_corr_date, encoding='utf-8', index=False)
 correlation_df.set_index('Date', inplace = True)
 print('\nCorrelation values time series')
 print(correlation_df.info())
 print(correlation_df)
 print('\nAverage correlation values per method')
-print(correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)) # iloc for get only the required attributes
+df = correlation_df.iloc[:, [2, 3, 4]].mean(axis=0)  # iloc for get only the required attributes
+df.to_csv(path + station_file_corr_date_mean, encoding='utf-8', index=False)
+print(df)
 fig = correlation_df.iloc[:, [2, 3, 4]].plot(figsize=(10, 6), rot=90)
 plt.title('IDEAM vs. CHIRPS - Monthly correlations')
 fig.figure.savefig(path + 'PlotMonthlyCorrelationTimeSerie.png')

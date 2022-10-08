@@ -1,3 +1,9 @@
+import pandas as pd
+df = pd.DataFrame({'A': [1, 1, 2, 1, 2],
+                   'B': [5, 2, 3, 4, 5],
+                   'C': [1, 2, 1, 1, 2]}, columns=['A', 'B', 'C'])
+print(df)
+print(df.groupby('A').mean())
 
 '''
 # -*- coding: UTF-8 -*-

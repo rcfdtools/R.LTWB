@@ -49,6 +49,7 @@ En este momento, dispone de registros IDEAM de precipitación con el registro de
 * https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html
 * https://pandas.pydata.org/docs/reference/api/pandas.concat.html
 * https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html
+* https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.GroupBy.mean.html
 
 
 ### Compatibilidad
