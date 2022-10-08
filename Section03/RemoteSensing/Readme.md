@@ -1,5 +1,5 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
-Keywords: `Remote sensing` `Chirps` `rasterio` `requests`
+Keywords: `Remote sensing` `Chirps` `rasterio` `requests` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot`
 
 ![R.LTWB](Screenshot/RemoteSensing.png)
 
@@ -68,7 +68,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki)  | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
-|---------------------------------------------------------------------------------------|-----------------------------------------------------|---------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../CNEStationDatasetDownload) | [Inicio](../../) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
+|----------------------------------------------------|------------------|---------------------------------------------------------------------------|--------------------------|
 
 [^1]: 

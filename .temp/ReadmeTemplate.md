@@ -1,9 +1,9 @@
 ## Plantilla para actividades
 Keywords: `DEM` `AgreeDEM`
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/AgreeDEM.png)
+![R.LTWB](Screenshot/AgreeDEM.png)
 
-Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar el terreno incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
+xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 ### Objetivos
@@ -22,13 +22,13 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Graph/AgreeDEMFlowchart.png" width="80%"><br>
+<br><img alt="R.LTWB" src="Graph/AgreeDEMFlowchart.png" width="80%"><br>
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 1. xxx
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section02/AgreeDEM/Screenshot/IGACGDB100k.png)
+![R.LTWB](Screenshot/IGACGDB100k.png)
 
 En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
 
@@ -55,7 +55,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](https://github.com/rcfdtools/R.LTWB/tree/main/Section02/DEMAlos) | [Inicio](https://github.com/rcfdtools/R.LTWB/wiki)  | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
-|---------------------------------------------------------------------------------------|-----------------------------------------------------|---------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../xxxx) | [Inicio](../../) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
+|-------------------------------|------------------|---------------------------------------------------------------------------|--------------------------|
 
 [^1]: 
