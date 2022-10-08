@@ -72,7 +72,7 @@ ideam_regs_query = station_df.shape[0]
 print_log('* Filtered records for %s: %i (%f%%)' %(parameter_name, ideam_regs_query, (ideam_regs_query/ideam_regs)*100), True)
 
 # Processing Chrips values per month in each year (displayed only in Python console)
-print_log('\n\n### Processing Chrips values per month in each year\n', True)
+print('\n\n### Processing Chrips values per month in each year\n')
 cols = ['Date', 'Year', 'Month', 'Pearson', 'Kendall', 'Spearman']
 correlation_df = pd.DataFrame(columns = cols)
 for year in range(year_start, year_end+1, 1):
@@ -132,15 +132,14 @@ df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
 df = pd.read_csv(path + station_file_chirps, low_memory=False)
 fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c='black', cmap=None)
-print_log('\n#### IDEAM vs. CHIRPS - Scatter plot\n', True)
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()
 print_log('\n![R.LTWB](PlotDateScatterIdeamChirps.png)', True)
 fig = df.boxplot(column=[value_name, 'SatValue'], figsize=(6, 6), grid=False)
-print_log('\n#### IDEAM & CHIRPS - Boxplot', True)
 plt.title('IDEAM & CHIRPS - Boxplot')
 fig.figure.savefig(path + 'PlotDateIdeamChirpsBoxplot.png')
+print_log('\n![R.LTWB](PlotDateIdeamChirpsBoxplot.png)', True)
 plt.show()
 
 # Correlation save & plot
