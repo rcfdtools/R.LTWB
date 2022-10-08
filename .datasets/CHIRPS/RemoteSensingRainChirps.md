@@ -25,7 +25,8 @@ The correlation methods used for the analysis are:
 
 #### Correlation values for the date records
 
-The following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values. Get the table [IDEAMJoinedChirpsCorrelationDate.csv](IDEAMJoinedChirpsCorrelationDate.csv) 
+The following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent Chirps values.
+Get the table [IDEAMJoinedChirpsCorrelationDate.csv](IDEAMJoinedChirpsCorrelationDate.csv) 
 
 | Date                |   Year |   Month |    Pearson |    Kendall |   Spearman |
 |:--------------------|-------:|--------:|-----------:|-----------:|-----------:|
@@ -527,7 +528,8 @@ The following table, shows the monthly average correlation values obtained from 
 
 #### Average correlations per method
 
-The values shown below, correspond to the average correlation values in each date processed. Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](IDEAMJoinedChirpsCorrelationDateMean.csv) 
+The values shown below, correspond to the average correlation values in each date processed.
+Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](IDEAMJoinedChirpsCorrelationDateMean.csv) 
 
 |          |        0 |
 |:---------|---------:|
@@ -540,7 +542,8 @@ The values shown below, correspond to the average correlation values in each dat
 
 #### Average correlation yearly and method
 
-This table show the average correlation values obtained for each method in every year in the record set. Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelationYear.csv) 
+This table show the average correlation values obtained for each method in every year in the record set.
+Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelationYear.csv) 
 
 |   Year |   Pearson |   Kendall |   Spearman |
 |-------:|----------:|----------:|-----------:|
@@ -590,7 +593,8 @@ This table show the average correlation values obtained for each method in every
 
 #### Average correlation monthly and method
 
-This table show the average correlation values obtained in every month in the record set. Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](IDEAMJoinedChirpsCorrelationMonth.csv) 
+This table show the average correlation values obtained in every month in the record set.
+Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](IDEAMJoinedChirpsCorrelationMonth.csv) 
 
 |   Month |   Pearson |   Kendall |   Spearman |
 |--------:|----------:|----------:|-----------:|
