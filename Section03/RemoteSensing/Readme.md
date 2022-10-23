@@ -2,7 +2,7 @@
 Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `pandas` `rasterio` `requests` `tabulate`
 
 <div align="center">
-<br><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="75%"><br>
+<br><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="50%"><br>
 </div>
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
