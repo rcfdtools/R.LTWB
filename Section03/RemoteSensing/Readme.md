@@ -31,7 +31,7 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/RemoteSensing.svg" width="60%"><br>
-<sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.

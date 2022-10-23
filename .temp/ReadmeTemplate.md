@@ -23,7 +23,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/AgreeDEMFlowchart.png" width="80%"><br>
-<sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 1. xxx
