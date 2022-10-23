@@ -5,6 +5,10 @@ Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman`
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
 
+CHIRPS permite descargar datos de precipitación diaria con resoluciones espaciales de 0.05 y 0.25 grados (5.5 y 27.8 km aprox.) en formatos BIL, TIDD o NetCDF y con series de 30 o más años. La banda de descarga se ubica entre las latitudes 50°S a -50°N en todas las longitudes de la superficie terrestre, iniciando su captura desde 1981 y hasta la actualidad. CHIRPS combina imágenes satelitales (NASA y NOAA) con datos registrados en estaciones terrestres y es frecuentemente utilizado para análisis de tendencias y monitoreo de sequías debidas a cambios estacionales. Esta fusión de datos permite estimar valores en zonas en las que no existen estaciones terrestres, complementando valores obtenidos por otros métodos que tienen en cuenta la relación espacial entre estaciones próximas.
+
+Desde el año 1999, el Servicio Geológico de los Estados Unidos de América – USGS y los científicos del Grupo de Amenazas Climáticas - CHG, con el apoyo de la Agencia Internacional para el Desarrollo de los Estados Unidos – USAID, la NASA y la NOAA, han desarrollado técnicas para producir mapas de precipitación especialmente en zonas donde existen pocos datos. Estimar espacial y temporalmente las variaciones de la precipitación, es un aspecto importante para el monitoreo del medio ambiente y para mitigar las sequías.
+
 
 ### Objetivos
 
@@ -30,11 +34,7 @@ Para la validación o el contraste de información terrestre, se pueden obtener 
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-CHIRPS permite descargar datos de precipitación diaria con resoluciones espaciales de 0.05 y 0.25 grados (5.5 y 27.8 km aprox.) en formatos BIL, TIDD o NetCDF y con series de 30 o más años. La banda de descarga se ubica entre las latitudes 50°S a -50°N en todas las longitudes de la superficie terrestre, iniciando su captura desde 1981 y hasta la actualidad. CHIRPS combina imágenes satelitales (NASA y NOAA) con datos registrados en estaciones terrestres y es frecuentemente utilizado para análisis de tendencias y monitoreo de sequías debidas a cambios estacionales. Esta fusión de datos permite estimar valores en zonas en las que no existen estaciones terrestres, complementando valores obtenidos por otros métodos que tienen en cuenta la relación espacial entre estaciones próximas.
-
-Desde el año 1999, el Servicio Geológico de los Estados Unidos de América – USGS y los científicos del Grupo de Amenazas Climáticas - CHG, con el apoyo de la Agencia Internacional para el Desarrollo de los Estados Unidos – USAID, la NASA y la NOAA, han desarrollado técnicas para producir mapas de precipitación especialmente en zonas donde existen pocos datos. Estimar espacial y temporalmente las variaciones de la precipitación, es un aspecto importante para el monitoreo del medio ambiente y para mitigar las sequías.
-
-1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y muévalo a la carpeta local `D:\R.LTWB\.src` de su equipo. Este script ha sido desarrollado por [rcfdtools](https://github.com/rcfdtools). 
+1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo. Este script ha sido desarrollado por [rcfdtools](https://github.com/rcfdtools). 
 
 Funcionalidades del script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py)
 
