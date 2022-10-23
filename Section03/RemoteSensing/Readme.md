@@ -30,7 +30,7 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 ### Procedimiento general - Precipitación CHIRPS [^1] 
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/RemoteSensing.svg" width="80%"><br>
+<br><img alt="R.LTWB" src="Graph/RemoteSensing.svg" width="60%"><br>
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
