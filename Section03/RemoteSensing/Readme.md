@@ -34,16 +34,16 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 <sub>Convenciones del diagrama: Base de datos geográfica GDB en azul, Clases de entidad en gris, Geo-procesos en verde y Procesos manuales en amarillo.<br>Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo. Este script ha sido desarrollado por [rcfdtools](https://github.com/rcfdtools). 
+1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 Funcionalidades del script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py)
 
-* Descarga directa de archivos comprimidos de grillas Chirps de precipitación mensual total a partir de la definición de un rango de año, p.ej., entre 1981 y 2021.
+* Descarga directa de archivos comprimidos de grillas Chirps de precipitación mensual total a partir de la definición de un rango de años, p.ej., entre 1981 y 2021.
 * Descompresión de grillas .tif.
 * Segmentación mensual por año del archivo integrado de registros discretos obtenidos del IDEAM para la Etiqueta = "PTPM_TT_M" correspondiente a datos de precipitación mensual total.
-* Lectura de valores Chirps por mes en cada año sobre las localizaciones específicas de la red de estaciones terrestres del IDEAM. Para cada mes en cada año, se crea un archivo .csv que contiene los valores leídos de Chirps, p.ej., [chirps-v2.0.1981.01.csv](../../.datasets/CHIRPS/chirps-v2.0.1981.01.csv).
+* Lectura de valores Chirps por mes en cada año sobre las localizaciones específicas de la red de estaciones terrestres del IDEAM. Para cada mes en cada año, se crea un archivo .csv que contiene los valores IDEAM más los valores leídos Chirps, p.ej., [chirps-v2.0.1981.01.csv](../../.datasets/CHIRPS/chirps-v2.0.1981.01.csv).
 * Integración de archivos .csv en un único archivo, nombrado como [IDEAMJoinedChirps.csv](../../.datasets/CHIRPS/IDEAMJoinedChirps.csv).
-* Para cada mes de cada año, se calculan las correlaciones utilizando los métodos de Pearson, Kendal y Spearman y se genera el archivo [IDEAMJoinedChirpsCorrelationDate.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDate.csv).
+* Para cada mes de cada año, se calculan correlaciones utilizando los métodos de Pearson, Kendal y Spearman y se genera el archivo [IDEAMJoinedChirpsCorrelationDate.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDate.csv).
 * A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones y se genera el archivo [IDEAMJoinedChirpsCorrelationDateMean.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDateMean.csv) que contiene 3 valores.
 * A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones por año y se genera el archivo [IDEAMJoinedChirpsCorrelationYear.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationYear.csv) que contiene 3 valores por cada año. 
 * A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones por mes y se genera el archivo [IDEAMJoinedChirpsCorrelationMonth.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationMonth.csv) que contiene 3 valores para los 12 meses del año.
@@ -273,13 +273,13 @@ if remove_temp_file_csv:  # csv glob.glob created before
 print('\nProcess accomplished, check the results files like: %s' % (path + station_file_chirps))
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad anterior. 
+2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad anterior denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
 
-3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\CHIRPS` diríjase a la carpeta donde están contenidos los datos descargados.
+3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\CHIRPS` ubíquese dentro de la carpeta CHIRPS.
 
 ![R.LTWB](Screenshot/Windows11CMDCD.png)
 
-4. En él `CMD`, ejecute la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\ChirpsGetValue.py"` que realizará la descarga y procesamiento de los datos de precipitación de Chirps. Durante la ejecución, podrá observar que en la consola se presenta el detalle de los procesos ejecutados para los registros de estaciones de cada mes en cada año y la previsualización de las diferentes gráficas de análisis.
+4. En él `CMD`, ejecute la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\ChirpsGetValue.py"` que realizará la descarga y procesamiento de los datos de precipitación de Chirps. Durante la ejecución, podrá observar que en la consola se presenta el detalle de los procesos ejecutados para los registros de estaciones de cada mes en cada año y la previsualización de las diferentes tablas y gráficas de análisis.
 
 ![R.LTWB](Screenshot/Windows11CMDChirpsGetValue1.png)
 ![R.LTWB](Screenshot/Windows11CMDChirpsGetValue2.png)
