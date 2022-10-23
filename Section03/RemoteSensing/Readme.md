@@ -1,9 +1,7 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
 Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `pandas` `rasterio` `requests` `tabulate`
 
-<div align="center">
-<br><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="50%"><br>
-</div>
+<div align="center"><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="50%"></div>
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
 
@@ -962,11 +960,11 @@ En este momento, dispone de registros IDEAM de precipitación con el registro de
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance |
-|:---------:|:--------|
-|     1     | XXX.    | 
-
-
+| Actividad | Alcance                                                                                                                                                                                                                                                                      |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Investigue y documente servicios en Internet desde los cuales se puedan obtener datos satelitales de temperatura media diaria y evaporación total diaria.                                                                                                                    | 
+|     2     | Cree scripts en Python que permitan descargar, leer los valores de temperatura y evaporación satelitales en las localizaciones de la red de estaciones IDEAM utilizadas en este curso y que permita realizar análisis de correlación como los presentados en esta actividad. |
+|     3     | Analice los resultados de las correlaciones e indique si a partir de los datos obtenidos satelitalmente, se pueden obtener valores precisos para la realización de balances hidrológicos de largo plazo.                                                                     | 
 
 
 ### Referencias
@@ -994,12 +992,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [Pearson correlation coefficient](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
 * [Kendall rank correlation coefficient](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient)
 * [Spearman’s rank correlation coefficient](https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient)
-
-
-### Compatibilidad
-
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para de digitalización con opciones de encajado o snapping.
-* 
 
 
 ### Control de versiones
