@@ -1,9 +1,9 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres, IDEAM vs. CHIRPS
 
 * Archivo de resultados: D:/R.LTWB/.datasets/CHIRPS/RemoteSensingRainChirps.md
-* Fecha y hora de inicio de ejecución: 2022-10-08 17:55:19.622979
+* Fecha y hora de inicio de ejecución: 2022-10-23 08:19:23.420585
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython']
+* Python rutas: ['D:\\R.LTWB\\.src', 'C:\\Python3.10.5\\python310.zip', 'C:\\Python3.10.5\\DLLs', 'C:\\Python3.10.5\\lib', 'C:\\Python3.10.5']
 * matplotlib versión: 3.6.0
 * Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/RemoteSensing
 * Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md
@@ -581,7 +581,7 @@ Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](IDEAMJoinedChirpsCorrel
 
 
 
-#### Average correlation yearly and method
+#### Average yearly correlation and method
 
 This table shows the average correlation values obtained for each method in every year in the record set.
 Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelationYear.csv) 
@@ -638,7 +638,7 @@ Get the table [IDEAMJoinedChirpsCorrelationYear.csv](IDEAMJoinedChirpsCorrelatio
 
 ![R.LTWB](PlotYearCorrelationTimeSerie.png)
 
-#### Average correlation monthly and method
+#### Average monthly correlation and method
 
 This table shows the average correlation values obtained in every month in the record set.
 Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](IDEAMJoinedChirpsCorrelationMonth.csv) 
