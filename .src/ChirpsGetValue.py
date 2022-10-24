@@ -40,7 +40,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
-path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
+path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
 station_file_chirps = 'IDEAMJoinedChirps.csv'  # Output IDEAM records with the Chirps values
 station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv'  # Output IDEAM correlations with Chirps for each date
 station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv'  # Output IDEAM correlations with Chirps - mean
@@ -126,7 +126,7 @@ for year in range(year_start, year_end+1, 1):
             show(raster)  # Plot the raster file
         # Slice the IDEAM file per year and month and get the Chirps values
         if os.path.isfile(path + chirps_file + '.csv') is False:
-            station_df_filter = station_df[station_df['Fecha'].dt.strftime('%Y-%m') == year_month]
+            station_df_filter = station_df[station_df[date_record].dt.strftime('%Y-%m') == year_month]
             stations = station_df_filter.shape[0]
             print('Slicing .csv serie for %s with %d records' % (year_month, stations))
             station_df_filter['SatValue'] = chirps_value(chirps_file + geogrid_extension, station_df_filter[longitude_name], station_df_filter[latitude_name])
@@ -151,7 +151,7 @@ df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
 df = pd.read_csv(path + station_file_chirps, low_memory=False)
 print_log('\nProcessed .csv file [%s](%s)\n' % (station_file_chirps, station_file_chirps))
-fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c='black', cmap=None)
+fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.75, figsize=(6, 6), c='black', cmap=None)
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()

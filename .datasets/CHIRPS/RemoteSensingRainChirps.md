@@ -1,9 +1,9 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres, IDEAM vs. CHIRPS
 
 * Archivo de resultados: D:/R.LTWB/.datasets/CHIRPS/RemoteSensingRainChirps.md
-* Fecha y hora de inicio de ejecución: 2022-10-23 08:19:23.420585
+* Fecha y hora de inicio de ejecución: 2022-10-24 13:38:24.532472
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python rutas: ['D:\\R.LTWB\\.src', 'C:\\Python3.10.5\\python310.zip', 'C:\\Python3.10.5\\DLLs', 'C:\\Python3.10.5\\lib', 'C:\\Python3.10.5']
+* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools.wiki', 'D:\\R.HydroTools']
 * matplotlib versión: 3.6.0
 * Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/RemoteSensing
 * Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md

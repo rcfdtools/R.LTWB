@@ -1,2 +1,19 @@
-Calcular longitud registrada de series en cada variable IDEAM descargada.
-Comparar longitud hipotética de series con longitud 
+Ok. Segmentar datos dentro de la ventana de tiempo definida, p.ej., 1981 - 2021.
+Calcular en cada estación la longitud registrada de series para cada variable IDEAM descargada.
+Comparar la longitud hipotética de series en cada estación con la longitud registrada.
+Graficar series por estación para cada variable.
+Crear pivot tables para cada variable.
+
+
+References
+
+* https://kanoki.org/2020/01/21/pandas-dataframe-filter-with-multiple-conditions/
+* https://stackoverflow.com/questions/49684951/pandas-read-csv-dtype-read-all-columns-but-few-as-string
+* https://sparkbyexamples.com/pandas/pandas-find-unique-values-from-columns
+* https://www.w3schools.com/python/pandas/ref_df_describe.asp
+* https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
+* https://stackoverflow.com/questions/29370057/select-dataframe-rows-between-two-dates
+
+
+Others
+* Descarga, organización y análisis de datos hidrometeorologicos IDEAM con Google Colaboratory, QGIS https://www.youtube.com/watch?v=MDo0-18Vvtw

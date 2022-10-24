@@ -1,7 +1,7 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
 Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `pandas` `rasterio` `requests` `tabulate`
 
-<div align="center"><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br></div> 
+<div align="center"><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br><br></div> 
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
 
@@ -96,7 +96,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
-path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
+path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
 station_file_chirps = 'IDEAMJoinedChirps.csv'  # Output IDEAM records with the Chirps values
 station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv'  # Output IDEAM correlations with Chirps for each date
 station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv'  # Output IDEAM correlations with Chirps - mean
