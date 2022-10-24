@@ -1,0 +1,2 @@
+Calcular longitud registrada de series en cada variable IDEAM descargada.
+Comparar longitud hipotética de series con longitud 
