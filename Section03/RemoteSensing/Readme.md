@@ -1,7 +1,7 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
 Keywords: `Remote sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `pandas` `rasterio` `requests` `tabulate`
 
-<div align="center"><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="75%">[^1]<br><br></div> 
+<div align="center"><img alt="R.LTWB" src="Screenshot/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br></div> 
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
 
@@ -27,7 +27,7 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 * Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload)
 
 
-### Procedimiento general - Precipitación CHIRPS [^2] 
+### Procedimiento general - Precipitación CHIRPS [^1] 
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/RemoteSensing.svg" width="60%"><br>
@@ -1011,5 +1011,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Actividad anterior](../CNEStationDatasetDownload) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/22) | [Actividad siguiente]()  |
 |----------------------------------------------------|---------------------------|------------------------------------------------------------------------|--------------------------|
 
-[^1]: Tomado de: https://www.chc.ucsb.edu/data/chirps
 [^1]: https://www.chc.ucsb.edu/data/chirps
