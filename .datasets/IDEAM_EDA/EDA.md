@@ -1,9 +1,9 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-27 11:03:58.506974
+* Fecha y hora de inicio de ejecución: 2022-10-27 15:47:58.101438
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.HydroTools', 'D:\\R.GISPython']
+* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib versión: 3.6.0
 * Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/EDA
 * Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md
@@ -22,23 +22,11 @@ Station records sample for head
 |  3 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-03-01 00:00:00 |    36.7 |      50 |           nan |               900 |
 |  4 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-04-01 00:00:00 |   189.4 |      50 |           nan |               900 |
 |  5 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-07-01 00:00:00 |   241.9 |      50 |           nan |               900 |
-|  6 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-08-01 00:00:00 |   319.7 |      50 |           nan |               900 |
-|  7 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-09-01 00:00:00 |   220.8 |      50 |           nan |               900 |
-|  8 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-10-01 00:00:00 |   264   |      50 |           nan |               900 |
-|  9 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-11-01 00:00:00 |   295.7 |      50 |           nan |               900 |
-| 10 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-12-01 00:00:00 |    85.7 |      50 |           nan |               900 |
-| 11 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1989-02-01 00:00:00 |    47.6 |      50 |           nan |               900 |
 
 Station records sample for tail
 
 |        |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   | Fecha               |   Valor |   Grado |   Calificador |   NivelAprobacion |
 |-------:|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|:--------------------|--------:|--------:|--------------:|------------------:|
-| 514915 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-03-01 00:00:00 |       0 |      50 |           nan |               900 |
-| 514916 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-04-01 00:00:00 |     105 |      50 |           nan |               900 |
-| 514917 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-05-01 00:00:00 |     110 |      50 |           nan |               900 |
-| 514918 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-06-01 00:00:00 |     205 |      50 |           nan |               900 |
-| 514919 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-07-01 00:00:00 |     329 |      50 |           nan |               900 |
-| 514920 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-08-01 00:00:00 |     320 |      50 |           nan |               900 |
 | 514921 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-09-01 00:00:00 |     518 |      50 |           nan |               900 |
 | 514922 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-10-01 00:00:00 |     105 |      50 |           nan |               900 |
 | 514923 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-11-01 00:00:00 |     243 |      50 |           nan |               900 |
@@ -48,9 +36,17 @@ Station records sample for tail
 
 
 ### Analysis from 1980 to 2021 for Etiqueta == "PTPM_TT_M": 55363 (10.75%)
+![R.LTWB](Graph/Plot_PTPM_TT_M_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_DensityKDE.png)
+
+<div align="center">
+
 
 
 **PTPM_TT_M - Station: 25025330 (339 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -74,18 +70,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 23210020 (297 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -109,18 +112,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 23215060 (146 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -144,18 +154,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 23215050 (467 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -179,18 +196,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020670 (466 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -214,18 +238,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021640 (443 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -249,18 +280,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021590 (206 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -284,18 +322,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020090 (501 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -319,18 +364,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020650 (436 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -354,18 +406,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020660 (502 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -389,18 +448,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040150 (466 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -424,18 +490,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040360 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -459,18 +532,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060150 (488 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -494,18 +574,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060560 (442 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -529,18 +616,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060040 (499 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -564,18 +658,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060200 (483 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -599,18 +700,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040100 (493 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -634,18 +742,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021630 (460 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -669,18 +784,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040140 (484 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -704,18 +826,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060100 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -739,18 +868,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060350 (461 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -774,18 +910,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060030 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -809,18 +952,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060140 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -844,18 +994,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060060 (492 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -879,18 +1036,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060190 (420 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -914,18 +1078,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060170 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -949,18 +1120,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29065020 (490 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -984,18 +1162,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060270 (501 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1019,18 +1204,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060240 (441 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1054,18 +1246,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29065010 (122 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1089,18 +1288,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060180 (500 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1124,18 +1330,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060340 (490 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1159,18 +1372,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060330 (252 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1194,18 +1414,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060220 (258 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1229,18 +1456,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29065030 (412 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1264,18 +1498,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060250 (499 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1299,18 +1540,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060550 (360 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1334,18 +1582,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060290 (249 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1369,18 +1624,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060070 (502 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1404,18 +1666,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060230 (370 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1439,18 +1708,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060160 (489 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1474,18 +1750,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060210 (501 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1509,18 +1792,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060280 (484 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1544,18 +1834,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060310 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1579,18 +1876,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060120 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1614,18 +1918,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 15015020 (339 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1649,18 +1960,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 16060010 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1684,18 +2002,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 16070030 (309 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1719,18 +2044,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 16070040 (472 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1754,18 +2086,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 16050240 (327 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1789,18 +2128,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 16070020 (154 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1824,18 +2170,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 16070010 (437 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1859,18 +2212,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020220 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1894,18 +2254,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020240 (502 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1929,18 +2296,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021240 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1964,18 +2338,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25025250 (453 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -1999,18 +2380,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021580 (188 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2034,18 +2422,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020250 (501 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2069,18 +2464,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020690 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2104,18 +2506,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020920 (418 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2139,18 +2548,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020260 (495 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2174,18 +2590,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020270 (500 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2209,18 +2632,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28025090 (500 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2244,18 +2674,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020230 (482 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2279,18 +2716,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020230 (266 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2314,18 +2758,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020280 (467 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2349,18 +2800,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040310 (357 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2384,18 +2842,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040350 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2419,18 +2884,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020080 (470 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2454,18 +2926,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020420 (448 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2489,18 +2968,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28025080 (347 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2524,18 +3010,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021650 (442 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2559,18 +3052,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040030 (499 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2594,18 +3094,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020460 (498 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2629,18 +3136,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020150 (431 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2664,18 +3178,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28035040 (492 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2699,18 +3220,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040270 (484 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2734,18 +3262,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28025070 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2769,18 +3304,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040070 (494 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2804,18 +3346,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040400 (358 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2839,18 +3388,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020600 (468 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2874,18 +3430,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020440 (492 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2909,18 +3472,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020310 (281 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2944,18 +3514,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28030190 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -2979,18 +3556,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040200 (187 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3014,18 +3598,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020590 (448 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3049,18 +3640,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010370 (501 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3084,18 +3682,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040060 (140 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3119,18 +3724,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28025020 (494 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3154,18 +3766,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28020410 (457 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3189,18 +3808,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010070 (432 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3224,18 +3850,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28035010 (462 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3259,18 +3892,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010360 (470 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3294,18 +3934,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28035020 (474 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3329,18 +3976,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040170 (106 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3364,18 +4018,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010020 (359 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3399,18 +4060,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010040 (498 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3434,18 +4102,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040010 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3469,18 +4144,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28030220 (401 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3504,18 +4186,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28025040 (171 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3539,18 +4228,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 29060090 (501 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3574,18 +4270,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010140 (255 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3609,18 +4312,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010090 (474 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3644,18 +4354,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28045010 (228 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3679,18 +4396,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010130 (122 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3714,18 +4438,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 15060080 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3749,18 +4480,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 15060150 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3784,18 +4522,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010200 (471 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3819,18 +4564,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 15060070 (387 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3854,18 +4606,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 15065040 (243 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3889,18 +4648,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010280 (15 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3924,18 +4690,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 15060050 (487 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3959,18 +4732,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28015070 (499 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -3994,18 +4774,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28010340 (492 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4029,18 +4816,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25025090 (466 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4064,18 +4858,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040320 (487 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4099,18 +4900,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021620 (468 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4134,18 +4942,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021040 (503 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4169,18 +4984,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021200 (484 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4204,18 +5026,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021500 (492 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4239,18 +5068,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021380 (477 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4274,18 +5110,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020900 (492 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4309,18 +5152,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25025300 (470 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4344,18 +5194,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 28040300 (480 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4379,18 +5236,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021540 (490 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4414,18 +5278,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020880 (490 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4449,18 +5320,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020890 (483 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4484,18 +5362,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021320 (491 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4519,18 +5404,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25020870 (497 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4554,18 +5446,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_DensityKDE.png)
 
+<div align="center">
+
+
 
 **PTPM_TT_M - Station: 25021090 (475 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4589,10 +5488,11 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_TimeSerie.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_Boxplot.png)
 
 </div>
 
@@ -4601,9 +5501,17 @@ Statistics table
 
 
 ### Analysis from 1980 to 2021 for Etiqueta == "TMX_CON": 185849 (36.09%)
+![R.LTWB](Graph/Plot_TMX_CON_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_DensityKDE.png)
+
+<div align="center">
+
 
 
 **TMX_CON - Station: 28045020 (1050 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4627,18 +5535,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28045020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28045020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28045020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28025090 (12953 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4662,18 +5577,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28025090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28025090_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28025090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 25025250 (11758 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4697,18 +5619,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_25025250_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_25025250_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_25025250_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 25025330 (7606 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4732,18 +5661,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_25025330_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_25025330_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_25025330_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28045040 (784 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4767,18 +5703,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28045040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28045040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28045040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28035040 (9424 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4802,18 +5745,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28035040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28035040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28035040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 23215060 (960 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4837,18 +5787,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_23215060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_23215060_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_23215060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28025070 (13398 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4872,18 +5829,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28025070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28025070_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28025070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28025080 (7076 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4907,18 +5871,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28025080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28025080_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28025080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28035010 (8442 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4942,18 +5913,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28035010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28035010_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28035010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28025502 (11456 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -4977,18 +5955,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28025502_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28025502_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28025502_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28035020 (12136 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5012,18 +5997,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28035020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28035020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28035020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28015030 (1127 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5047,18 +6039,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28015030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28015030_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28015030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28035070 (42 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5082,18 +6081,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28035070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28035070_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28035070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28025020 (12966 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5117,18 +6123,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28025020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28025020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28025020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28025040 (2613 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5152,18 +6165,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28025040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28025040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28025040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 15065040 (3465 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5187,18 +6207,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_15065040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_15065040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_15065040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 28015070 (12645 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5222,18 +6249,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_28015070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_28015070_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_28015070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 25025090 (8486 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5257,18 +6291,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_25025090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_25025090_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_25025090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 25025002 (7701 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5292,18 +6333,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_25025002_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_25025002_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_25025002_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 29065020 (9406 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5327,18 +6375,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_29065020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_29065020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_29065020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 29065030 (10537 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5362,18 +6417,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_29065030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_29065030_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_29065030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 25025300 (10066 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5397,18 +6459,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_25025300_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_25025300_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_25025300_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 15015020 (8859 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5432,18 +6501,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_15015020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_15015020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_15015020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMX_CON - Station: 29065010 (893 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5467,10 +6543,11 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMX_CON_29065010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMX_CON_29065010_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMX_CON_29065010_Boxplot.png)
 
 </div>
 
@@ -5479,9 +6556,17 @@ Statistics table
 
 
 ### Analysis from 1980 to 2021 for Etiqueta == "TMN_CON": 209823 (40.75%)
+![R.LTWB](Graph/Plot_TMN_CON_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_DensityKDE.png)
+
+<div align="center">
+
 
 
 **TMN_CON - Station: 28025502 (12238 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5505,18 +6590,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28025502_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28025502_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28025502_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28025090 (11867 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5540,18 +6632,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28025090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28025090_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28025090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 25025250 (12340 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5575,18 +6674,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_25025250_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_25025250_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_25025250_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28015030 (1404 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5610,18 +6716,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28015030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28015030_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28015030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 25025330 (9275 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5645,18 +6758,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_25025330_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_25025330_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_25025330_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 23215060 (1248 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5680,18 +6800,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_23215060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_23215060_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_23215060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28025070 (13818 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5715,18 +6842,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28025070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28025070_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28025070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28025020 (13452 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5750,18 +6884,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28025020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28025020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28025020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28025040 (3231 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5785,18 +6926,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28025040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28025040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28025040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28025080 (7636 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5820,18 +6968,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28025080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28025080_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28025080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28045020 (1052 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5855,18 +7010,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28045020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28045020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28045020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28035020 (11824 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5890,18 +7052,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28035020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28035020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28035020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28045040 (1274 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5925,18 +7094,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28045040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28045040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28045040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28035070 (42 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5960,18 +7136,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28035070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28035070_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28035070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28035040 (13405 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -5995,18 +7178,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28035040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28035040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28035040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28035010 (10557 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6030,18 +7220,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28035010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28035010_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28035010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 15065040 (4949 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6065,18 +7262,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_15065040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_15065040_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_15065040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 28015070 (12475 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6100,18 +7304,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_28015070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_28015070_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_28015070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 25025002 (10733 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6135,18 +7346,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_25025002_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_25025002_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_25025002_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 15015020 (9964 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6170,18 +7388,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_15015020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_15015020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_15015020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 25025090 (9774 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6205,18 +7430,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_25025090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_25025090_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_25025090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 29065020 (12983 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6240,18 +7472,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_29065020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_29065020_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_29065020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 29065030 (11526 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6275,18 +7514,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_29065030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_29065030_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_29065030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 25025300 (11693 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6310,18 +7556,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_25025300_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_25025300_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_25025300_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_DensityKDE.png)
 
+<div align="center">
+
+
 
 **TMN_CON - Station: 29065010 (1063 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6345,10 +7598,11 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_TMN_CON_29065010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_TMN_CON_29065010_TimeSerie.png)
+![R.LTWB](Graph/Plot_TMN_CON_29065010_Boxplot.png)
 
 </div>
 
@@ -6357,9 +7611,17 @@ Statistics table
 
 
 ### Analysis from 1980 to 2021 for Etiqueta == "EV_TT_D": 4821 (0.94%)
+![R.LTWB](Graph/Plot_EV_TT_D_TimeSerie.png)
+![R.LTWB](Graph/Plot_EV_TT_D_DensityKDE.png)
+
+<div align="center">
+
 
 
 **EV_TT_D - Station: 29065130 (4821 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6383,10 +7645,11 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_EV_TT_D_29065130_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_EV_TT_D_29065130_TimeSerie.png)
+![R.LTWB](Graph/Plot_EV_TT_D_29065130_Boxplot.png)
 
 </div>
 
@@ -6395,9 +7658,17 @@ Statistics table
 
 
 ### Analysis from 1980 to 2021 for Etiqueta == "Q_MEDIA_M": 21126 (4.1%)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_DensityKDE.png)
+
+<div align="center">
+
 
 
 **Q_MEDIA_M - Station: 25027400 (489 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6421,18 +7692,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027360 (462 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6456,18 +7734,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027620 (415 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6491,18 +7776,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027490 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6526,18 +7818,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027390 (456 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6561,18 +7860,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027330 (484 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6596,18 +7902,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027410 (423 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6631,18 +7944,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027320 (473 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6666,18 +7986,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027420 (482 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6701,18 +8028,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027630 (461 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6736,18 +8070,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28017120 (230 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6771,18 +8112,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027590 (339 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6806,18 +8154,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28017150 (52 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6841,18 +8196,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28027030 (439 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6876,18 +8238,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027080 (449 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6911,18 +8280,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28027020 (399 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6946,18 +8322,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28017110 (465 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -6981,18 +8364,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027890 (424 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7016,18 +8406,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28017050 (263 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7051,18 +8448,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28027040 (412 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7086,18 +8490,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28027050 (349 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7121,18 +8532,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037060 (482 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7156,18 +8574,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037020 (362 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7191,18 +8616,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28027160 (372 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7226,18 +8658,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037040 (474 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7261,18 +8700,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28047020 (474 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7296,18 +8742,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037010 (437 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7331,18 +8784,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037090 (410 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7366,18 +8826,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037130 (422 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7401,18 +8868,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28037030 (474 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7436,18 +8910,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28047080 (96 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7471,18 +8952,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28047040 (247 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7506,18 +8994,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067210 (28 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7541,18 +9036,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067020 (328 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7576,18 +9078,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28017080 (465 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7611,18 +9120,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067200 (115 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7646,18 +9162,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067080 (291 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7681,18 +9204,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067130 (388 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7716,18 +9246,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067150 (148 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7751,18 +9288,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 15067170 (156 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7786,18 +9330,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28017140 (41 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7821,18 +9372,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28047010 (412 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7856,18 +9414,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067050 (393 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7891,18 +9456,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 25027020 (504 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7926,18 +9498,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067120 (444 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7961,18 +9540,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 28047050 (451 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -7996,18 +9582,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067060 (257 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8031,18 +9624,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067070 (426 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8066,18 +9666,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067040 (446 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8101,18 +9708,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067010 (448 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8136,18 +9750,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067150 (481 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8171,18 +9792,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067130 (476 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8206,18 +9834,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 29067160 (397 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8241,18 +9876,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 16067020 (244 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8276,18 +9918,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 16037040 (387 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8311,18 +9960,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 16047020 (283 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8346,18 +10002,25 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_Boxplot.png)
 
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_DensityKDE.png)
 
+<div align="center">
+
+
 
 **Q_MEDIA_M - Station: 16067010 (397 rec.)**
+
+</div>
+
 
 <div align="center">
 
@@ -8381,10 +10044,11 @@ Statistics table
 
 </div>
 
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_TimeSerie.png)
 
 <div align="center">
 
-![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_TimeSerie.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_Boxplot.png)
 
 </div>
 
