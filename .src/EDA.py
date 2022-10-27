@@ -95,26 +95,26 @@ for parameter in parameter_list:
         print_log('\n\n**%s - Station: %s (%s rec.)**' %(parameter, station, df.shape[0]), center_div=True)
         print_log('Statistics table', center_div=True)
         print_log(df[value_name].describe().to_markdown(), center_div=True)
-        fig = df.plot(y=value_name, figsize=(fig_size, fig_size), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
+        fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
         fig.set_ylabel(value_name)
         plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_TimeSerie.png'
         plt.savefig(path + 'Graph/' + fig_name)
         print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
         plt.close('all') # After the fig is saved, close the fig release memory and clean the plot
-        fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size), grid=False)
+        fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size+1), grid=False)
         plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_Boxplot.png'
         plt.savefig(path + 'Graph/' + fig_name)
         print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
         plt.close('all')
-        fig = df.plot.hist(column=value_name, bins=histogram_binds, alpha=0.9, figsize=(fig_size, fig_size), colormap=plot_colormap, edgecolor='white', legend=False)
+        fig = df.plot.hist(column=value_name, bins=histogram_binds, alpha=0.9, figsize=(fig_size, fig_size+1), colormap=plot_colormap, edgecolor='white', legend=False)
         plt.title('Histogram for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_Histogram.png'
         plt.savefig(path + 'Graph/' + fig_name)
         print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
         plt.close('all')  # After the fig is saved, close the fig release memory
-        fig = df[value_name].plot.kde(colormap=plot_colormap, figsize=(fig_size, fig_size))
+        fig = df[value_name].plot.kde(colormap=plot_colormap, figsize=(fig_size, fig_size+1))
         plt.title('KDE density for %s - Station %s (%d rec.)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_DensityKDE.png'
         plt.savefig(path + 'Graph/' + fig_name)
@@ -125,11 +125,11 @@ for parameter in parameter_list:
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_name, values=value_name)
     #print(pivot_table)
     pivot_table.to_csv(path + 'Pivot_' + parameter + '.csv')
-    fig = pivot_table.plot(figsize=(fig_size*2, fig_size), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
+    fig = pivot_table.plot(figsize=(fig_size*2, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
     plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_TimeSerie.png')
-    fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size), legend=False)
+    fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size+1), legend=False)
     plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_DensityKDE.png')
 
