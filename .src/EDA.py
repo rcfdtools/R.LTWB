@@ -125,11 +125,11 @@ for parameter in parameter_list:
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_name, values=value_name)
     #print(pivot_table)
     pivot_table.to_csv(path + 'Pivot_' + parameter + '.csv')
-    fig = pivot_table.plot(figsize=(fig_size*2, fig_size*2), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
+    fig = pivot_table.plot(figsize=(fig_size*2, fig_size), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
     plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_TimeSerie.png')
-    fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size*2), legend=False)
+    fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size), legend=False)
     plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_DensityKDE.png')
 
