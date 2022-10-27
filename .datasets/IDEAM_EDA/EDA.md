@@ -1,7 +1,7 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-27 16:00:44.047517
+* Fecha y hora de inicio de ejecución: 2022-10-27 16:18:14.076175
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib versión: 3.6.0
@@ -12,7 +12,7 @@
 
 ### General dataframe information with 514927 IDEAM records
 
-Station records sample for head
+Dataframe records head sample
 
 |    |   CodigoEstacion | NombreEstacion                                  |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   | Fecha               |   Valor |   Grado |   Calificador |   NivelAprobacion |
 |---:|-----------------:|:------------------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|:--------------------|--------:|--------:|--------------:|------------------:|
@@ -23,7 +23,7 @@ Station records sample for head
 |  4 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-04-01 00:00:00 |   189.4 |      50 |           nan |               900 |
 |  5 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-07-01 00:00:00 |   241.9 |      50 |           nan |               900 |
 
-Station records sample for tail
+Dataframe records tail sample
 
 |        |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   | Fecha               |   Valor |   Grado |   Calificador |   NivelAprobacion |
 |-------:|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|:--------------------|--------:|--------:|--------------:|------------------:|
@@ -70,6 +70,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                                  |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1987-12-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   202   |      50 |           nan |               900 |
+| 1988-01-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1988-02-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    18.9 |      50 |           nan |               900 |
+| 1988-03-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    36.7 |      50 |           nan |               900 |
+| 1988-04-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   189.4 |      50 |           nan |               900 |
+| 1988-07-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   241.9 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_Histogram.png)
@@ -105,6 +117,18 @@ Statistics table
 | max   | 649     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1995-05-01 00:00:00 |         23210020 | GLORIA LA [23210020] |   8.63056 |   -73.8042 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     183 |       4 |           nan |               900 |
+| 1995-06-01 00:00:00 |         23210020 | GLORIA LA [23210020] |   8.63056 |   -73.8042 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     211 |      50 |           nan |               900 |
+| 1995-07-01 00:00:00 |         23210020 | GLORIA LA [23210020] |   8.63056 |   -73.8042 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     257 |      50 |           nan |               900 |
+| 1995-08-01 00:00:00 |         23210020 | GLORIA LA [23210020] |   8.63056 |   -73.8042 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     422 |      50 |           nan |               900 |
+| 1995-09-01 00:00:00 |         23210020 | GLORIA LA [23210020] |   8.63056 |   -73.8042 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     422 |      50 |           nan |               900 |
+| 1995-10-01 00:00:00 |         23210020 | GLORIA LA [23210020] |   8.63056 |   -73.8042 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     420 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_Boxplot.png)
@@ -142,6 +166,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                          | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:---------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-10-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   126.2 |      50 |           nan |               900 |
+| 1983-11-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   114   |      50 |           nan |               900 |
+| 1983-12-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    40.8 |      50 |           nan |               900 |
+| 1984-01-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    21.7 |      50 |           nan |               900 |
+| 1984-02-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    91.5 |      50 |           nan |               900 |
+| 1984-03-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     9.5 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_Histogram.png)
@@ -177,6 +213,18 @@ Statistics table
 | max   | 1094.2   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         23215050 | MATA LA [23215050] |   8.61444 |   -73.6364 |       163 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1983-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      50 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         23215050 | MATA LA [23215050] |   8.61444 |   -73.6364 |       163 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1983-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      14 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         23215050 | MATA LA [23215050] |   8.61444 |   -73.6364 |       163 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1983-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       9 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         23215050 | MATA LA [23215050] |   8.61444 |   -73.6364 |       163 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1983-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      80 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         23215050 | MATA LA [23215050] |   8.61444 |   -73.6364 |       163 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1983-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     280 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         23215050 | MATA LA [23215050] |   8.61444 |   -73.6364 |       163 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1983-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      59 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_Boxplot.png)
@@ -214,6 +262,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020670 | RAYA LA [25020670] |   9.05028 |   -73.5597 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020670 | RAYA LA [25020670] |   9.05028 |   -73.5597 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020670 | RAYA LA [25020670] |   9.05028 |   -73.5597 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020670 | RAYA LA [25020670] |   9.05028 |   -73.5597 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     175 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020670 | RAYA LA [25020670] |   9.05028 |   -73.5597 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     253 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020670 | RAYA LA [25020670] |   9.05028 |   -73.5597 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     115 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_Histogram.png)
@@ -249,6 +309,18 @@ Statistics table
 | max   | 717     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1984-12-01 00:00:00 |         25021640 | SANTA ISABEL [25021640] |   8.71275 |   -73.7026 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pelaya      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1985-01-01 00:00:00 |         25021640 | SANTA ISABEL [25021640] |   8.71275 |   -73.7026 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pelaya      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0.8 |      50 |           nan |               900 |
+| 1985-02-01 00:00:00 |         25021640 | SANTA ISABEL [25021640] |   8.71275 |   -73.7026 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pelaya      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     2.8 |      50 |           nan |               900 |
+| 1985-03-01 00:00:00 |         25021640 | SANTA ISABEL [25021640] |   8.71275 |   -73.7026 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pelaya      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     5.3 |      50 |           nan |               900 |
+| 1985-04-01 00:00:00 |         25021640 | SANTA ISABEL [25021640] |   8.71275 |   -73.7026 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pelaya      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    23.3 |      50 |           nan |               900 |
+| 1985-05-01 00:00:00 |         25021640 | SANTA ISABEL [25021640] |   8.71275 |   -73.7026 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pelaya      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    24.2 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_Boxplot.png)
@@ -286,6 +358,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion             |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021590 | TAMALAMEQUE D C [25021590] |   8.86667 |   -73.8167 |        33 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1979-11-15 00:00:00 | 1998-06-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021590 | TAMALAMEQUE D C [25021590] |   8.86667 |   -73.8167 |        33 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1979-11-15 00:00:00 | 1998-06-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      24 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021590 | TAMALAMEQUE D C [25021590] |   8.86667 |   -73.8167 |        33 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1979-11-15 00:00:00 | 1998-06-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021590 | TAMALAMEQUE D C [25021590] |   8.86667 |   -73.8167 |        33 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1979-11-15 00:00:00 | 1998-06-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     200 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021590 | TAMALAMEQUE D C [25021590] |   8.86667 |   -73.8167 |        33 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1979-11-15 00:00:00 | 1998-06-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     378 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021590 | TAMALAMEQUE D C [25021590] |   8.86667 |   -73.8167 |        33 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1979-11-15 00:00:00 | 1998-06-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     189 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_Histogram.png)
@@ -321,6 +405,18 @@ Statistics table
 | max   | 870.6   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020090 | TAMALAMEQUE [25020090] |   8.86039 |   -73.8154 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1960-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020090 | TAMALAMEQUE [25020090] |   8.86039 |   -73.8154 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1960-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      24 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020090 | TAMALAMEQUE [25020090] |   8.86039 |   -73.8154 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1960-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020090 | TAMALAMEQUE [25020090] |   8.86039 |   -73.8154 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1960-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     200 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020090 | TAMALAMEQUE [25020090] |   8.86039 |   -73.8154 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1960-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     378 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020090 | TAMALAMEQUE [25020090] |   8.86039 |   -73.8154 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Tamalameque | 1960-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     189 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_Boxplot.png)
@@ -358,6 +454,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020650 | TERROR EL HACIENDA [25020650] |   8.93878 |   -73.5602 |       250 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      11 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020650 | TERROR EL HACIENDA [25020650] |   8.93878 |   -73.5602 |       250 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      38 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020650 | TERROR EL HACIENDA [25020650] |   8.93878 |   -73.5602 |       250 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020650 | TERROR EL HACIENDA [25020650] |   8.93878 |   -73.5602 |       250 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020650 | TERROR EL HACIENDA [25020650] |   8.93878 |   -73.5602 |       250 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     304 |      50 |           nan |               900 |
+| 1980-07-01 00:00:00 |         25020650 | TERROR EL HACIENDA [25020650] |   8.93878 |   -73.5602 |       250 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     220 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_Histogram.png)
@@ -393,6 +501,18 @@ Statistics table
 | max   | 679     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020660 | ZAPATOZA [25020660] |   9.00975 |    -73.754 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       1 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020660 | ZAPATOZA [25020660] |   9.00975 |    -73.754 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      42 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020660 | ZAPATOZA [25020660] |   9.00975 |    -73.754 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020660 | ZAPATOZA [25020660] |   9.00975 |    -73.754 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     133 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020660 | ZAPATOZA [25020660] |   9.00975 |    -73.754 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     207 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020660 | ZAPATOZA [25020660] |   9.00975 |    -73.754 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     105 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_Boxplot.png)
@@ -430,6 +550,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040150 | BELLAVISTA [28040150] |   10.3081 |   -74.0392 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Algarrobo   | 1963-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       9 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040150 | BELLAVISTA [28040150] |   10.3081 |   -74.0392 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Algarrobo   | 1963-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      56 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040150 | BELLAVISTA [28040150] |   10.3081 |   -74.0392 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Algarrobo   | 1963-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040150 | BELLAVISTA [28040150] |   10.3081 |   -74.0392 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Algarrobo   | 1963-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     127 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040150 | BELLAVISTA [28040150] |   10.3081 |   -74.0392 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Algarrobo   | 1963-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     187 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040150 | BELLAVISTA [28040150] |   10.3081 |   -74.0392 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Algarrobo   | 1963-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     138 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_Histogram.png)
@@ -465,6 +597,18 @@ Statistics table
 | max   | 840      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio             | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040360 | CABANA LA HACIENDA [28040360] |     9.861 |   -74.0767 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040360 | CABANA LA HACIENDA [28040360] |     9.861 |   -74.0767 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040360 | CABANA LA HACIENDA [28040360] |     9.861 |   -74.0767 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040360 | CABANA LA HACIENDA [28040360] |     9.861 |   -74.0767 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     126 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040360 | CABANA LA HACIENDA [28040360] |     9.861 |   -74.0767 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     103 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040360 | CABANA LA HACIENDA [28040360] |     9.861 |   -74.0767 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      50 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_Boxplot.png)
@@ -502,6 +646,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060150 | DESTINO EL [29060150] |   10.5737 |   -74.2241 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060150 | DESTINO EL [29060150] |   10.5737 |   -74.2241 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060150 | DESTINO EL [29060150] |   10.5737 |   -74.2241 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060150 | DESTINO EL [29060150] |   10.5737 |   -74.2241 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060150 | DESTINO EL [29060150] |   10.5737 |   -74.2241 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     373 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060150 | DESTINO EL [29060150] |   10.5737 |   -74.2241 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     236 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_Histogram.png)
@@ -537,6 +693,18 @@ Statistics table
 | max   | 718      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1984-12-01 00:00:00 |         29060560 | DONA MARIA [29060560] |   10.3844 |   -74.1779 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1985-01-01 00:00:00 |         29060560 | DONA MARIA [29060560] |   10.3844 |   -74.1779 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1985-02-01 00:00:00 |         29060560 | DONA MARIA [29060560] |   10.3844 |   -74.1779 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1985-03-01 00:00:00 |         29060560 | DONA MARIA [29060560] |   10.3844 |   -74.1779 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    24.3 |      50 |           nan |               900 |
+| 1985-04-01 00:00:00 |         29060560 | DONA MARIA [29060560] |   10.3844 |   -74.1779 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    11   |      50 |           nan |               900 |
+| 1985-05-01 00:00:00 |         29060560 | DONA MARIA [29060560] |   10.3844 |   -74.1779 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    94.2 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_Boxplot.png)
@@ -574,6 +742,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060040 | FUNDACION [29060040] |   10.5244 |   -74.1822 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060040 | FUNDACION [29060040] |   10.5244 |   -74.1822 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060040 | FUNDACION [29060040] |   10.5244 |   -74.1822 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060040 | FUNDACION [29060040] |   10.5244 |   -74.1822 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     129 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060040 | FUNDACION [29060040] |   10.5244 |   -74.1822 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     316 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060040 | FUNDACION [29060040] |   10.5244 |   -74.1822 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     163 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_Histogram.png)
@@ -609,6 +789,18 @@ Statistics table
 | max   | 685     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060200 | MARIA LA [29060200] |   10.5407 |    -74.187 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060200 | MARIA LA [29060200] |   10.5407 |    -74.187 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060200 | MARIA LA [29060200] |   10.5407 |    -74.187 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060200 | MARIA LA [29060200] |   10.5407 |    -74.187 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      52 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060200 | MARIA LA [29060200] |   10.5407 |    -74.187 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     252 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060200 | MARIA LA [29060200] |   10.5407 |    -74.187 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     153 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_Boxplot.png)
@@ -646,6 +838,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040100 | MONTERRUBIO [28040100] |   10.2337 |   -74.2733 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Pivijai     | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      83 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040100 | MONTERRUBIO [28040100] |   10.2337 |   -74.2733 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Pivijai     | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       8 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040100 | MONTERRUBIO [28040100] |   10.2337 |   -74.2733 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Pivijai     | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040100 | MONTERRUBIO [28040100] |   10.2337 |   -74.2733 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Pivijai     | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     102 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040100 | MONTERRUBIO [28040100] |   10.2337 |   -74.2733 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Pivijai     | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     257 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040100 | MONTERRUBIO [28040100] |   10.2337 |   -74.2733 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Pivijai     | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     180 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_Histogram.png)
@@ -681,6 +885,18 @@ Statistics table
 | max   | 370      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1982-07-01 00:00:00 |         25021630 | NUEVA GRANADA [25021630] |   9.80175 |   -74.3886 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     123 |      50 |           nan |               900 |
+| 1982-08-01 00:00:00 |         25021630 | NUEVA GRANADA [25021630] |   9.80175 |   -74.3886 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     229 |      50 |           nan |               900 |
+| 1982-09-01 00:00:00 |         25021630 | NUEVA GRANADA [25021630] |   9.80175 |   -74.3886 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     187 |      50 |           nan |               900 |
+| 1982-10-01 00:00:00 |         25021630 | NUEVA GRANADA [25021630] |   9.80175 |   -74.3886 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     170 |      50 |           nan |               900 |
+| 1982-11-01 00:00:00 |         25021630 | NUEVA GRANADA [25021630] |   9.80175 |   -74.3886 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      68 |      50 |           nan |               900 |
+| 1982-12-01 00:00:00 |         25021630 | NUEVA GRANADA [25021630] |   9.80175 |   -74.3886 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      30 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_Boxplot.png)
@@ -718,6 +934,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio            | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:---------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040140 | SAN ANGEL [28040140] |   10.0331 |   -74.2126 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Sabanas De San Ángel | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040140 | SAN ANGEL [28040140] |   10.0331 |   -74.2126 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Sabanas De San Ángel | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      38 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040140 | SAN ANGEL [28040140] |   10.0331 |   -74.2126 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Sabanas De San Ángel | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      25 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040140 | SAN ANGEL [28040140] |   10.0331 |   -74.2126 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Sabanas De San Ángel | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     165 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040140 | SAN ANGEL [28040140] |   10.0331 |   -74.2126 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Sabanas De San Ángel | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     106 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040140 | SAN ANGEL [28040140] |   10.0331 |   -74.2126 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Sabanas De San Ángel | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     165 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_Histogram.png)
@@ -753,6 +981,18 @@ Statistics table
 | max   | 665     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060100 | SANTA ROSA DE LIMA [29060100] |   10.4027 |    -74.108 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      75 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060100 | SANTA ROSA DE LIMA [29060100] |   10.4027 |    -74.108 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060100 | SANTA ROSA DE LIMA [29060100] |   10.4027 |    -74.108 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060100 | SANTA ROSA DE LIMA [29060100] |   10.4027 |    -74.108 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     103 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060100 | SANTA ROSA DE LIMA [29060100] |   10.4027 |    -74.108 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     230 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060100 | SANTA ROSA DE LIMA [29060100] |   10.4027 |    -74.108 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     180 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_Boxplot.png)
@@ -790,6 +1030,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion    |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060350 | BAYANO [29060350] |   10.6312 |   -74.2986 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060350 | BAYANO [29060350] |   10.6312 |   -74.2986 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060350 | BAYANO [29060350] |   10.6312 |   -74.2986 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060350 | BAYANO [29060350] |   10.6312 |   -74.2986 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      40 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060350 | BAYANO [29060350] |   10.6312 |   -74.2986 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     215 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060350 | BAYANO [29060350] |   10.6312 |   -74.2986 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     207 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_Histogram.png)
@@ -825,6 +1077,18 @@ Statistics table
 | max   | 750     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060030 | BONGO EL [29060030] |   10.6488 |   -74.3755 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060030 | BONGO EL [29060030] |   10.6488 |   -74.3755 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060030 | BONGO EL [29060030] |   10.6488 |   -74.3755 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060030 | BONGO EL [29060030] |   10.6488 |   -74.3755 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      26 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060030 | BONGO EL [29060030] |   10.6488 |   -74.3755 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     131 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060030 | BONGO EL [29060030] |   10.6488 |   -74.3755 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     184 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_Boxplot.png)
@@ -862,6 +1126,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060140 | CARMEN EL [29060140] |   10.6755 |   -74.2064 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      14 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060140 | CARMEN EL [29060140] |   10.6755 |   -74.2064 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060140 | CARMEN EL [29060140] |   10.6755 |   -74.2064 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060140 | CARMEN EL [29060140] |   10.6755 |   -74.2064 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      37 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060140 | CARMEN EL [29060140] |   10.6755 |   -74.2064 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     281 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060140 | CARMEN EL [29060140] |   10.6755 |   -74.2064 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      98 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_Histogram.png)
@@ -897,6 +1173,18 @@ Statistics table
 | max   | 944     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060060 | CENIZO EL [29060060] |   10.6516 |   -74.0732 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1959-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       8 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060060 | CENIZO EL [29060060] |   10.6516 |   -74.0732 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1959-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060060 | CENIZO EL [29060060] |   10.6516 |   -74.0732 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1959-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060060 | CENIZO EL [29060060] |   10.6516 |   -74.0732 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1959-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      67 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060060 | CENIZO EL [29060060] |   10.6516 |   -74.0732 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1959-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     292 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060060 | CENIZO EL [29060060] |   10.6516 |   -74.0732 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1959-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     206 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_Boxplot.png)
@@ -934,6 +1222,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060190 | FLORIDA LA [29060190] |   10.6106 |   -74.2554 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1973-04-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060190 | FLORIDA LA [29060190] |   10.6106 |   -74.2554 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1973-04-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060190 | FLORIDA LA [29060190] |   10.6106 |   -74.2554 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1973-04-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060190 | FLORIDA LA [29060190] |   10.6106 |   -74.2554 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1973-04-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      56 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060190 | FLORIDA LA [29060190] |   10.6106 |   -74.2554 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1973-04-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     313 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060190 | FLORIDA LA [29060190] |   10.6106 |   -74.2554 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1973-04-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     134 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_Histogram.png)
@@ -969,6 +1269,18 @@ Statistics table
 | max   | 534.1    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060170 | GAVILAN [29060170] |   10.6804 |   -74.3307 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060170 | GAVILAN [29060170] |   10.6804 |   -74.3307 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060170 | GAVILAN [29060170] |   10.6804 |   -74.3307 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060170 | GAVILAN [29060170] |   10.6804 |   -74.3307 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      12 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060170 | GAVILAN [29060170] |   10.6804 |   -74.3307 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      40 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060170 | GAVILAN [29060170] |   10.6804 |   -74.3307 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     290 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_Boxplot.png)
@@ -1006,6 +1318,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     3.3 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    59.2 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   225.4 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   154.6 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_Histogram.png)
@@ -1041,6 +1365,18 @@ Statistics table
 | max   | 519      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060270 | PALO ALTO [29060270] |   10.7225 |   -74.2719 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060270 | PALO ALTO [29060270] |   10.7225 |   -74.2719 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060270 | PALO ALTO [29060270] |   10.7225 |   -74.2719 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060270 | PALO ALTO [29060270] |   10.7225 |   -74.2719 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      66 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060270 | PALO ALTO [29060270] |   10.7225 |   -74.2719 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     171 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060270 | PALO ALTO [29060270] |   10.7225 |   -74.2719 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     215 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_Boxplot.png)
@@ -1078,6 +1414,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060240 | UNION LA [29060240] |   10.7066 |   -74.2236 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060240 | UNION LA [29060240] |   10.7066 |   -74.2236 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060240 | UNION LA [29060240] |   10.7066 |   -74.2236 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060240 | UNION LA [29060240] |   10.7066 |   -74.2236 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060240 | UNION LA [29060240] |   10.7066 |   -74.2236 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     229 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060240 | UNION LA [29060240] |   10.7066 |   -74.2236 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | 2019-02-07 11:43:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     105 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_Histogram.png)
@@ -1113,6 +1461,18 @@ Statistics table
 | max   | 366.7    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion    |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     1   |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     2.8 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   318.7 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    91.1 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_Boxplot.png)
@@ -1150,6 +1510,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060180 | ESPERANZA LA [29060180] |   10.7425 |   -74.3063 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060180 | ESPERANZA LA [29060180] |   10.7425 |   -74.3063 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060180 | ESPERANZA LA [29060180] |   10.7425 |   -74.3063 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060180 | ESPERANZA LA [29060180] |   10.7425 |   -74.3063 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      60 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060180 | ESPERANZA LA [29060180] |   10.7425 |   -74.3063 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     210 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060180 | ESPERANZA LA [29060180] |   10.7425 |   -74.3063 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     204 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_Histogram.png)
@@ -1185,6 +1557,18 @@ Statistics table
 | max   | 875     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060340 | PALMOR EL [29060340] |   10.7734 |   -74.0256 |      1200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      67 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060340 | PALMOR EL [29060340] |   10.7734 |   -74.0256 |      1200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060340 | PALMOR EL [29060340] |   10.7734 |   -74.0256 |      1200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060340 | PALMOR EL [29060340] |   10.7734 |   -74.0256 |      1200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     197 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060340 | PALMOR EL [29060340] |   10.7734 |   -74.0256 |      1200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     425 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060340 | PALMOR EL [29060340] |   10.7734 |   -74.0256 |      1200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     259 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_Boxplot.png)
@@ -1222,6 +1606,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1990-01-01 00:00:00 |         29060330 | PLAYA LA [29060330] |    10.762 |   -74.1205 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1990-01-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1990-02-01 00:00:00 |         29060330 | PLAYA LA [29060330] |    10.762 |   -74.1205 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1990-01-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      18 |      50 |           nan |               900 |
+| 1990-03-01 00:00:00 |         29060330 | PLAYA LA [29060330] |    10.762 |   -74.1205 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1990-01-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       3 |      50 |           nan |               900 |
+| 1990-04-01 00:00:00 |         29060330 | PLAYA LA [29060330] |    10.762 |   -74.1205 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1990-01-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     192 |      50 |           nan |               900 |
+| 1990-05-01 00:00:00 |         29060330 | PLAYA LA [29060330] |    10.762 |   -74.1205 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1990-01-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     132 |      50 |           nan |               900 |
+| 1990-06-01 00:00:00 |         29060330 | PLAYA LA [29060330] |    10.762 |   -74.1205 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1990-01-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     160 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_Histogram.png)
@@ -1257,6 +1653,18 @@ Statistics table
 | max   | 941     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060220 | POLY LA [29060220] |   10.8167 |   -74.1833 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1972-01-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060220 | POLY LA [29060220] |   10.8167 |   -74.1833 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1972-01-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       3 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060220 | POLY LA [29060220] |   10.8167 |   -74.1833 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1972-01-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060220 | POLY LA [29060220] |   10.8167 |   -74.1833 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1972-01-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     108 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060220 | POLY LA [29060220] |   10.8167 |   -74.1833 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1972-01-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     339 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060220 | POLY LA [29060220] |   10.8167 |   -74.1833 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1972-01-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     123 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_Boxplot.png)
@@ -1294,6 +1702,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    79.3 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   243.4 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   178   |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_Histogram.png)
@@ -1329,6 +1749,18 @@ Statistics table
 | max   | 627.6    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060250 | PROYECTOS LOS [29060250] |   10.7367 |   -74.2371 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060250 | PROYECTOS LOS [29060250] |   10.7367 |   -74.2371 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060250 | PROYECTOS LOS [29060250] |   10.7367 |   -74.2371 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060250 | PROYECTOS LOS [29060250] |   10.7367 |   -74.2371 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     102 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060250 | PROYECTOS LOS [29060250] |   10.7367 |   -74.2371 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     259 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060250 | PROYECTOS LOS [29060250] |   10.7367 |   -74.2371 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     133 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_Boxplot.png)
@@ -1366,6 +1798,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1984-04-01 00:00:00 |         29060550 | RUBY EL [29060550] |   10.8451 |   -74.1882 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1984-03-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1984-05-01 00:00:00 |         29060550 | RUBY EL [29060550] |   10.8451 |   -74.1882 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1984-03-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     135 |      50 |           nan |               900 |
+| 1984-06-01 00:00:00 |         29060550 | RUBY EL [29060550] |   10.8451 |   -74.1882 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1984-03-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      96 |      50 |           nan |               900 |
+| 1984-07-01 00:00:00 |         29060550 | RUBY EL [29060550] |   10.8451 |   -74.1882 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1984-03-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      55 |      50 |           nan |               900 |
+| 1984-08-01 00:00:00 |         29060550 | RUBY EL [29060550] |   10.8451 |   -74.1882 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1984-03-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     137 |      50 |           nan |               900 |
+| 1984-09-01 00:00:00 |         29060550 | RUBY EL [29060550] |   10.8451 |   -74.1882 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1984-03-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     290 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_Histogram.png)
@@ -1401,6 +1845,18 @@ Statistics table
 | max   | 627     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060290 | SAN JUAN [29060290] |   10.7667 |   -74.1667 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1975-05-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060290 | SAN JUAN [29060290] |   10.7667 |   -74.1667 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1975-05-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060290 | SAN JUAN [29060290] |   10.7667 |   -74.1667 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1975-05-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060290 | SAN JUAN [29060290] |   10.7667 |   -74.1667 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1975-05-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      76 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060290 | SAN JUAN [29060290] |   10.7667 |   -74.1667 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1975-05-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     212 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060290 | SAN JUAN [29060290] |   10.7667 |   -74.1667 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1975-05-15 00:00:00 | 2002-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     174 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_Boxplot.png)
@@ -1438,6 +1894,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060070 | SAN PABLO [29060070] |   10.8082 |   -74.0268 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1960-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    24.3 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060070 | SAN PABLO [29060070] |   10.8082 |   -74.0268 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1960-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    29.1 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060070 | SAN PABLO [29060070] |   10.8082 |   -74.0268 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1960-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   131   |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060070 | SAN PABLO [29060070] |   10.8082 |   -74.0268 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1960-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   360   |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060070 | SAN PABLO [29060070] |   10.8082 |   -74.0268 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1960-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   195   |      50 |           nan |               900 |
+| 1980-07-01 00:00:00 |         29060070 | SAN PABLO [29060070] |   10.8082 |   -74.0268 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1960-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   250   |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_Histogram.png)
@@ -1473,6 +1941,18 @@ Statistics table
 | max   | 549     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060230 | SARA LA [29060230] |   10.8362 |    -74.161 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1971-08-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060230 | SARA LA [29060230] |   10.8362 |    -74.161 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1971-08-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060230 | SARA LA [29060230] |   10.8362 |    -74.161 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1971-08-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-08-01 00:00:00 |         29060230 | SARA LA [29060230] |   10.8362 |    -74.161 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1971-08-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      71 |       4 |           nan |               900 |
+| 1980-09-01 00:00:00 |         29060230 | SARA LA [29060230] |   10.8362 |    -74.161 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1971-08-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     312 |      50 |           nan |               900 |
+| 1980-10-01 00:00:00 |         29060230 | SARA LA [29060230] |   10.8362 |    -74.161 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1971-08-15 00:00:00 | 2019-02-07 11:33:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     187 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_Boxplot.png)
@@ -1510,6 +1990,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060160 | ENANO EL [29060160] |   10.9022 |   -74.1895 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060160 | ENANO EL [29060160] |   10.9022 |   -74.1895 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060160 | ENANO EL [29060160] |   10.9022 |   -74.1895 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060160 | ENANO EL [29060160] |   10.9022 |   -74.1895 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      31 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060160 | ENANO EL [29060160] |   10.9022 |   -74.1895 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     209 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060160 | ENANO EL [29060160] |   10.9022 |   -74.1895 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1974-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     113 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_Histogram.png)
@@ -1545,6 +2037,18 @@ Statistics table
 | max   | 549.8    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060210 | PALMA LA [29060210] |   10.9668 |   -74.2047 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060210 | PALMA LA [29060210] |   10.9668 |   -74.2047 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060210 | PALMA LA [29060210] |   10.9668 |   -74.2047 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060210 | PALMA LA [29060210] |   10.9668 |   -74.2047 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      72 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060210 | PALMA LA [29060210] |   10.9668 |   -74.2047 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     255 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060210 | PALMA LA [29060210] |   10.9668 |   -74.2047 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     138 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_Boxplot.png)
@@ -1582,6 +2086,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060280 | SAN ISIDRO [29060280] |   10.9008 |   -74.2206 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060280 | SAN ISIDRO [29060280] |   10.9008 |   -74.2206 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060280 | SAN ISIDRO [29060280] |   10.9008 |   -74.2206 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060280 | SAN ISIDRO [29060280] |   10.9008 |   -74.2206 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      40 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060280 | SAN ISIDRO [29060280] |   10.9008 |   -74.2206 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     246 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060280 | SAN ISIDRO [29060280] |   10.9008 |   -74.2206 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      99 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_Histogram.png)
@@ -1617,6 +2133,18 @@ Statistics table
 | max   | 930      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060310 | SEVILLANO [29060310] |   10.9331 |   -74.2524 |         5 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1979-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060310 | SEVILLANO [29060310] |   10.9331 |   -74.2524 |         5 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1979-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060310 | SEVILLANO [29060310] |   10.9331 |   -74.2524 |         5 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1979-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060310 | SEVILLANO [29060310] |   10.9331 |   -74.2524 |         5 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1979-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     169 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060310 | SEVILLANO [29060310] |   10.9331 |   -74.2524 |         5 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1979-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      53 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060310 | SEVILLANO [29060310] |   10.9331 |   -74.2524 |         5 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1979-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      53 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_Boxplot.png)
@@ -1654,6 +2182,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060120 | TASAJERA [29060120] |   10.9762 |   -74.3618 |         2 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1965-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060120 | TASAJERA [29060120] |   10.9762 |   -74.3618 |         2 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1965-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060120 | TASAJERA [29060120] |   10.9762 |   -74.3618 |         2 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1965-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060120 | TASAJERA [29060120] |   10.9762 |   -74.3618 |         2 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1965-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060120 | TASAJERA [29060120] |   10.9762 |   -74.3618 |         2 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1965-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060120 | TASAJERA [29060120] |   10.9762 |   -74.3618 |         2 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Puebloviejo | 1965-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_Histogram.png)
@@ -1689,6 +2229,18 @@ Statistics table
 | max   | 407      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion   |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    27.2 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   152.5 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    92.3 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_Boxplot.png)
@@ -1726,6 +2278,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16060010 | CNO LA RAYA [16060010] |   8.83472 |   -72.7917 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      53 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16060010 | CNO LA RAYA [16060010] |   8.83472 |   -72.7917 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      16 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16060010 | CNO LA RAYA [16060010] |   8.83472 |   -72.7917 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16060010 | CNO LA RAYA [16060010] |   8.83472 |   -72.7917 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     230 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16060010 | CNO LA RAYA [16060010] |   8.83472 |   -72.7917 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     306 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16060010 | CNO LA RAYA [16060010] |   8.83472 |   -72.7917 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      89 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_Histogram.png)
@@ -1761,6 +2325,18 @@ Statistics table
 | max   | 1351     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16070030 | HACHARIRA [16070030] |   8.87583 |   -72.9822 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1973-04-15 00:00:00 | 2018-07-13 12:10:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     200 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16070030 | HACHARIRA [16070030] |   8.87583 |   -72.9822 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1973-04-15 00:00:00 | 2018-07-13 12:10:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      97 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16070030 | HACHARIRA [16070030] |   8.87583 |   -72.9822 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1973-04-15 00:00:00 | 2018-07-13 12:10:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16070030 | HACHARIRA [16070030] |   8.87583 |   -72.9822 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1973-04-15 00:00:00 | 2018-07-13 12:10:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     345 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16070030 | HACHARIRA [16070030] |   8.87583 |   -72.9822 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1973-04-15 00:00:00 | 2018-07-13 12:10:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     306 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16070030 | HACHARIRA [16070030] |   8.87583 |   -72.9822 |        75 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1973-04-15 00:00:00 | 2018-07-13 12:10:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      89 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_Boxplot.png)
@@ -1798,6 +2374,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion   |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16070040 | ORU [16070040]   |   8.64111 |   -72.9094 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      67 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16070040 | ORU [16070040]   |   8.64111 |   -72.9094 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      59 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16070040 | ORU [16070040]   |   8.64111 |   -72.9094 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      34 |       4 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16070040 | ORU [16070040]   |   8.64111 |   -72.9094 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     229 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16070040 | ORU [16070040]   |   8.64111 |   -72.9094 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     288 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16070040 | ORU [16070040]   |   8.64111 |   -72.9094 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     212 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_Histogram.png)
@@ -1833,6 +2421,18 @@ Statistics table
 | max   | 1150     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1984-03-01 00:00:00 |         16050240 | PALACIO EL [16050240] |   8.61033 |   -73.3511 |      1280 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Convención  | 1984-03-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       3 |      50 |           nan |               900 |
+| 1984-04-01 00:00:00 |         16050240 | PALACIO EL [16050240] |   8.61033 |   -73.3511 |      1280 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Convención  | 1984-03-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     166 |      50 |           nan |               900 |
+| 1984-05-01 00:00:00 |         16050240 | PALACIO EL [16050240] |   8.61033 |   -73.3511 |      1280 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Convención  | 1984-03-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     115 |      50 |           nan |               900 |
+| 1984-06-01 00:00:00 |         16050240 | PALACIO EL [16050240] |   8.61033 |   -73.3511 |      1280 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Convención  | 1984-03-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     159 |      50 |           nan |               900 |
+| 1984-07-01 00:00:00 |         16050240 | PALACIO EL [16050240] |   8.61033 |   -73.3511 |      1280 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Convención  | 1984-03-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     308 |      50 |           nan |               900 |
+| 1984-08-01 00:00:00 |         16050240 | PALACIO EL [16050240] |   8.61033 |   -73.3511 |      1280 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Convención  | 1984-03-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     207 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_Boxplot.png)
@@ -1870,6 +2470,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1986-03-01 00:00:00 |         16070020 | PISTA LA [16070020] |   9.11667 |   -72.8667 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1986-02-15 00:00:00 | 2019-01-21 08:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     144 |      50 |           nan |               900 |
+| 1986-04-01 00:00:00 |         16070020 | PISTA LA [16070020] |   9.11667 |   -72.8667 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1986-02-15 00:00:00 | 2019-01-21 08:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     415 |      50 |           nan |               900 |
+| 1986-05-01 00:00:00 |         16070020 | PISTA LA [16070020] |   9.11667 |   -72.8667 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1986-02-15 00:00:00 | 2019-01-21 08:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     729 |      50 |           nan |               900 |
+| 1986-06-01 00:00:00 |         16070020 | PISTA LA [16070020] |   9.11667 |   -72.8667 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1986-02-15 00:00:00 | 2019-01-21 08:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     170 |      50 |           nan |               900 |
+| 1986-07-01 00:00:00 |         16070020 | PISTA LA [16070020] |   9.11667 |   -72.8667 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1986-02-15 00:00:00 | 2019-01-21 08:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      97 |      50 |           nan |               900 |
+| 1986-08-01 00:00:00 |         16070020 | PISTA LA [16070020] |   9.11667 |   -72.8667 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1986-02-15 00:00:00 | 2019-01-21 08:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     349 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_Histogram.png)
@@ -1905,6 +2517,18 @@ Statistics table
 | max   | 1444     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16070010 | PUERTO BARCO [16070010] |   8.99806 |   -72.8969 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      50 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16070010 | PUERTO BARCO [16070010] |   8.99806 |   -72.8969 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      87 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16070010 | PUERTO BARCO [16070010] |   8.99806 |   -72.8969 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      18 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16070010 | PUERTO BARCO [16070010] |   8.99806 |   -72.8969 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     167 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16070010 | PUERTO BARCO [16070010] |   8.99806 |   -72.8969 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     727 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16070010 | PUERTO BARCO [16070010] |   8.99806 |   -72.8969 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     312 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_Boxplot.png)
@@ -1942,6 +2566,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion    |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020220 | ASTREA [25020220] |   9.49294 |   -73.9729 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1962-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020220 | ASTREA [25020220] |   9.49294 |   -73.9729 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1962-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020220 | ASTREA [25020220] |   9.49294 |   -73.9729 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1962-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       1 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020220 | ASTREA [25020220] |   9.49294 |   -73.9729 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1962-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      88 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020220 | ASTREA [25020220] |   9.49294 |   -73.9729 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1962-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     294 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020220 | ASTREA [25020220] |   9.49294 |   -73.9729 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1962-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      70 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_Histogram.png)
@@ -1977,6 +2613,18 @@ Statistics table
 | max   | 735     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020240 | CANAL EL [25020240] |   9.41047 |   -73.8904 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020240 | CANAL EL [25020240] |   9.41047 |   -73.8904 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      19 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020240 | CANAL EL [25020240] |   9.41047 |   -73.8904 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020240 | CANAL EL [25020240] |   9.41047 |   -73.8904 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     159 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020240 | CANAL EL [25020240] |   9.41047 |   -73.8904 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     168 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020240 | CANAL EL [25020240] |   9.41047 |   -73.8904 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      80 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_Boxplot.png)
@@ -2014,6 +2662,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021240 | CHIMICHAGUA [25021240] |   9.26008 |   -73.8099 |       138 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021240 | CHIMICHAGUA [25021240] |   9.26008 |   -73.8099 |       138 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021240 | CHIMICHAGUA [25021240] |   9.26008 |   -73.8099 |       138 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021240 | CHIMICHAGUA [25021240] |   9.26008 |   -73.8099 |       138 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     107 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021240 | CHIMICHAGUA [25021240] |   9.26008 |   -73.8099 |       138 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     266 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021240 | CHIMICHAGUA [25021240] |   9.26008 |   -73.8099 |       138 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     175 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_Histogram.png)
@@ -2049,6 +2709,18 @@ Statistics table
 | max   | 549.9   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    28.7 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    14.7 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     4.4 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    90   |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   147.9 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    90.4 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_Boxplot.png)
@@ -2086,6 +2758,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-01-01 00:00:00 |         25021580 | CURUMANI D C [25021580] |   9.18333 |   -73.5333 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1979-11-15 00:00:00 | 1996-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |       4 |           nan |               900 |
+| 1981-02-01 00:00:00 |         25021580 | CURUMANI D C [25021580] |   9.18333 |   -73.5333 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1979-11-15 00:00:00 | 1996-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     131 |      50 |           nan |               900 |
+| 1981-03-01 00:00:00 |         25021580 | CURUMANI D C [25021580] |   9.18333 |   -73.5333 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1979-11-15 00:00:00 | 1996-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      94 |      50 |           nan |               900 |
+| 1981-04-01 00:00:00 |         25021580 | CURUMANI D C [25021580] |   9.18333 |   -73.5333 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1979-11-15 00:00:00 | 1996-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     240 |      50 |           nan |               900 |
+| 1981-05-01 00:00:00 |         25021580 | CURUMANI D C [25021580] |   9.18333 |   -73.5333 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1979-11-15 00:00:00 | 1996-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     294 |      50 |           nan |               900 |
+| 1981-06-01 00:00:00 |         25021580 | CURUMANI D C [25021580] |   9.18333 |   -73.5333 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1979-11-15 00:00:00 | 1996-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     370 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_Histogram.png)
@@ -2121,6 +2805,18 @@ Statistics table
 | max   | 644.3   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020250 | CURUMANI [25020250] |   9.19719 |   -73.5419 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020250 | CURUMANI [25020250] |   9.19719 |   -73.5419 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      36 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020250 | CURUMANI [25020250] |   9.19719 |   -73.5419 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020250 | CURUMANI [25020250] |   9.19719 |   -73.5419 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     210 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020250 | CURUMANI [25020250] |   9.19719 |   -73.5419 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     112 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020250 | CURUMANI [25020250] |   9.19719 |   -73.5419 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      78 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_Boxplot.png)
@@ -2158,6 +2854,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020690 | POPONTE [25020690] |   9.42328 |   -73.4109 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      60 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020690 | POPONTE [25020690] |   9.42328 |   -73.4109 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      28 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020690 | POPONTE [25020690] |   9.42328 |   -73.4109 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020690 | POPONTE [25020690] |   9.42328 |   -73.4109 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     102 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020690 | POPONTE [25020690] |   9.42328 |   -73.4109 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     249 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020690 | POPONTE [25020690] |   9.42328 |   -73.4109 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     127 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_Histogram.png)
@@ -2193,6 +2901,18 @@ Statistics table
 | max   | 1274     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020920 | PRIMAVERA LA [25020920] |   9.21667 |   -73.4167 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | 2019-02-07 11:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020920 | PRIMAVERA LA [25020920] |   9.21667 |   -73.4167 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | 2019-02-07 11:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      51 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020920 | PRIMAVERA LA [25020920] |   9.21667 |   -73.4167 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | 2019-02-07 11:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020920 | PRIMAVERA LA [25020920] |   9.21667 |   -73.4167 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | 2019-02-07 11:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     219 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020920 | PRIMAVERA LA [25020920] |   9.21667 |   -73.4167 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | 2019-02-07 11:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     126 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020920 | PRIMAVERA LA [25020920] |   9.21667 |   -73.4167 |       500 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1972-09-15 00:00:00 | 2019-02-07 11:35:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      87 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_Boxplot.png)
@@ -2230,6 +2950,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020260 | RINCONHONDO [25020260] |   9.39703 |    -73.488 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      43 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020260 | RINCONHONDO [25020260] |   9.39703 |    -73.488 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      33 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020260 | RINCONHONDO [25020260] |   9.39703 |    -73.488 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      19 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020260 | RINCONHONDO [25020260] |   9.39703 |    -73.488 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     229 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020260 | RINCONHONDO [25020260] |   9.39703 |    -73.488 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     225 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020260 | RINCONHONDO [25020260] |   9.39703 |    -73.488 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1963-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      54 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_Histogram.png)
@@ -2265,6 +2997,18 @@ Statistics table
 | max   | 627     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion   |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020270 | SALOA [25020270] |   9.19317 |   -73.7313 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      31 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020270 | SALOA [25020270] |   9.19317 |   -73.7313 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020270 | SALOA [25020270] |   9.19317 |   -73.7313 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020270 | SALOA [25020270] |   9.19317 |   -73.7313 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      37 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020270 | SALOA [25020270] |   9.19317 |   -73.7313 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     129 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020270 | SALOA [25020270] |   9.19317 |   -73.7313 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chimichagua | 1963-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     112 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_Boxplot.png)
@@ -2302,6 +3046,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                 |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    15.1 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    13   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    44.6 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   139.8 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   134.7 |       4 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_Histogram.png)
@@ -2337,6 +3093,18 @@ Statistics table
 | max   | 926     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio           | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020230 | JAGUA LA [25020230] |   9.56217 |   -73.3395 |       170 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Jagua De Ibirico | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020230 | JAGUA LA [25020230] |   9.56217 |   -73.3395 |       170 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Jagua De Ibirico | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      44 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020230 | JAGUA LA [25020230] |   9.56217 |   -73.3395 |       170 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Jagua De Ibirico | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      13 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020230 | JAGUA LA [25020230] |   9.56217 |   -73.3395 |       170 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Jagua De Ibirico | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      85 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020230 | JAGUA LA [25020230] |   9.56217 |   -73.3395 |       170 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Jagua De Ibirico | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     287 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020230 | JAGUA LA [25020230] |   9.56217 |   -73.3395 |       170 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Jagua De Ibirico | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     117 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_Boxplot.png)
@@ -2374,6 +3142,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020230 | LLANOS LOS [28020230] |   9.73333 |      -73.3 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-09-15 00:00:00 | 2010-10-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020230 | LLANOS LOS [28020230] |   9.73333 |      -73.3 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-09-15 00:00:00 | 2010-10-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020230 | LLANOS LOS [28020230] |   9.73333 |      -73.3 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-09-15 00:00:00 | 2010-10-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       7 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020230 | LLANOS LOS [28020230] |   9.73333 |      -73.3 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-09-15 00:00:00 | 2010-10-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      76 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020230 | LLANOS LOS [28020230] |   9.73333 |      -73.3 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-09-15 00:00:00 | 2010-10-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     199 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020230 | LLANOS LOS [28020230] |   9.73333 |      -73.3 |       100 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-09-15 00:00:00 | 2010-10-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      28 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_Histogram.png)
@@ -2409,6 +3189,18 @@ Statistics table
 | max   | 749     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020280 | LOMA LA [25020280] |   9.60653 |    -73.612 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1963-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020280 | LOMA LA [25020280] |   9.60653 |    -73.612 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1963-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      11 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020280 | LOMA LA [25020280] |   9.60653 |    -73.612 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1963-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020280 | LOMA LA [25020280] |   9.60653 |    -73.612 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1963-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      61 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020280 | LOMA LA [25020280] |   9.60653 |    -73.612 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1963-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     254 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020280 | LOMA LA [25020280] |   9.60653 |    -73.612 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1963-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      57 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_Boxplot.png)
@@ -2446,6 +3238,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040310 | MOLINO EL [28040310] |   9.77606 |   -73.7434 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | 2016-06-01 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040310 | MOLINO EL [28040310] |   9.77606 |   -73.7434 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | 2016-06-01 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040310 | MOLINO EL [28040310] |   9.77606 |   -73.7434 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | 2016-06-01 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040310 | MOLINO EL [28040310] |   9.77606 |   -73.7434 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | 2016-06-01 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     150 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040310 | MOLINO EL [28040310] |   9.77606 |   -73.7434 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | 2016-06-01 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     108 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040310 | MOLINO EL [28040310] |   9.77606 |   -73.7434 |       110 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | 2016-06-01 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      56 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_Histogram.png)
@@ -2481,6 +3285,18 @@ Statistics table
 | max   | 673.4    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040350 | PASO EL   [28040350] |   9.65697 |   -73.7437 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040350 | PASO EL   [28040350] |   9.65697 |   -73.7437 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      14 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040350 | PASO EL   [28040350] |   9.65697 |   -73.7437 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040350 | PASO EL   [28040350] |   9.65697 |   -73.7437 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      50 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040350 | PASO EL   [28040350] |   9.65697 |   -73.7437 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     189 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040350 | PASO EL   [28040350] |   9.65697 |   -73.7437 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      31 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_Boxplot.png)
@@ -2518,6 +3334,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                 |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020080 | PLAYAS LAS HACIENDA [28020080] |   9.84808 |   -73.4622 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020080 | PLAYAS LAS HACIENDA [28020080] |   9.84808 |   -73.4622 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      88 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020080 | PLAYAS LAS HACIENDA [28020080] |   9.84808 |   -73.4622 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020080 | PLAYAS LAS HACIENDA [28020080] |   9.84808 |   -73.4622 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     132 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020080 | PLAYAS LAS HACIENDA [28020080] |   9.84808 |   -73.4622 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     164 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020080 | PLAYAS LAS HACIENDA [28020080] |   9.84808 |   -73.4622 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      16 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_Histogram.png)
@@ -2553,6 +3381,18 @@ Statistics table
 | max   | 567     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020420 | SAN GABRIEL [28020420] |   9.84461 |   -73.5477 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020420 | SAN GABRIEL [28020420] |   9.84461 |   -73.5477 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      35 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020420 | SAN GABRIEL [28020420] |   9.84461 |   -73.5477 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020420 | SAN GABRIEL [28020420] |   9.84461 |   -73.5477 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      67 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020420 | SAN GABRIEL [28020420] |   9.84461 |   -73.5477 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     140 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020420 | SAN GABRIEL [28020420] |   9.84461 |   -73.5477 |        70 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      46 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_Boxplot.png)
@@ -2590,6 +3430,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    18.5 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    44.9 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    78.9 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    95.4 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   101.7 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_Histogram.png)
@@ -2625,6 +3477,18 @@ Statistics table
 | max   | 910     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1984-12-01 00:00:00 |         25021650 | YUCAL EL [25021650] |   9.55739 |   -73.8762 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1985-01-01 00:00:00 |         25021650 | YUCAL EL [25021650] |   9.55739 |   -73.8762 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    54.9 |      50 |           nan |               900 |
+| 1985-02-01 00:00:00 |         25021650 | YUCAL EL [25021650] |   9.55739 |   -73.8762 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    19.7 |      50 |           nan |               900 |
+| 1985-03-01 00:00:00 |         25021650 | YUCAL EL [25021650] |   9.55739 |   -73.8762 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   132.9 |      50 |           nan |               900 |
+| 1985-04-01 00:00:00 |         25021650 | YUCAL EL [25021650] |   9.55739 |   -73.8762 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   239   |      50 |           nan |               900 |
+| 1985-05-01 00:00:00 |         25021650 | YUCAL EL [25021650] |   9.55739 |   -73.8762 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   199.2 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_Boxplot.png)
@@ -2662,6 +3526,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040030 | BOSCONIA [28040030] |   9.97575 |   -73.8817 |       130 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      30 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040030 | BOSCONIA [28040030] |   9.97575 |   -73.8817 |       130 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     110 |       4 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040030 | BOSCONIA [28040030] |   9.97575 |   -73.8817 |       130 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040030 | BOSCONIA [28040030] |   9.97575 |   -73.8817 |       130 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     140 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040030 | BOSCONIA [28040030] |   9.97575 |   -73.8817 |       130 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     319 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040030 | BOSCONIA [28040030] |   9.97575 |   -73.8817 |       130 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     115 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_Histogram.png)
@@ -2697,6 +3573,18 @@ Statistics table
 | max   | 591     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020460 | CODAZZI DC [28020460] |   10.0446 |   -73.2434 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020460 | CODAZZI DC [28020460] |   10.0446 |   -73.2434 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      19 |       4 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020460 | CODAZZI DC [28020460] |   10.0446 |   -73.2434 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020460 | CODAZZI DC [28020460] |   10.0446 |   -73.2434 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      38 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020460 | CODAZZI DC [28020460] |   10.0446 |   -73.2434 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     228 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020460 | CODAZZI DC [28020460] |   10.0446 |   -73.2434 |        90 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      62 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_Boxplot.png)
@@ -2734,6 +3622,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                   |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1986-01-01 00:00:00 |         28020150 | ESPERANZA LA HACIENDA [28020150] |     10.03 |   -73.6688 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1961-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1986-02-01 00:00:00 |         28020150 | ESPERANZA LA HACIENDA [28020150] |     10.03 |   -73.6688 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1961-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1986-03-01 00:00:00 |         28020150 | ESPERANZA LA HACIENDA [28020150] |     10.03 |   -73.6688 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1961-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      49 |      50 |           nan |               900 |
+| 1986-04-01 00:00:00 |         28020150 | ESPERANZA LA HACIENDA [28020150] |     10.03 |   -73.6688 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1961-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     130 |      50 |           nan |               900 |
+| 1986-05-01 00:00:00 |         28020150 | ESPERANZA LA HACIENDA [28020150] |     10.03 |   -73.6688 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1961-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      70 |      50 |           nan |               900 |
+| 1986-06-01 00:00:00 |         28020150 | ESPERANZA LA HACIENDA [28020150] |     10.03 |   -73.6688 |        60 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1961-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      84 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_Histogram.png)
@@ -2769,6 +3669,18 @@ Statistics table
 | max   | 425     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |       4 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    14.2 |       4 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    45.7 |       4 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   121.8 |       4 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    47.3 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_Boxplot.png)
@@ -2806,6 +3718,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040270 | MANATURE HACIENDA [28040270] |   10.0351 |   -73.7885 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1968-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040270 | MANATURE HACIENDA [28040270] |   10.0351 |   -73.7885 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1968-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      28 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040270 | MANATURE HACIENDA [28040270] |   10.0351 |   -73.7885 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1968-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040270 | MANATURE HACIENDA [28040270] |   10.0351 |   -73.7885 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1968-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      40 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040270 | MANATURE HACIENDA [28040270] |   10.0351 |   -73.7885 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1968-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     134 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040270 | MANATURE HACIENDA [28040270] |   10.0351 |   -73.7885 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1968-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     135 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_Histogram.png)
@@ -2841,6 +3765,18 @@ Statistics table
 | max   | 550.8   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria         | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    14.7 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    14.6 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   147.6 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   107.1 |       4 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   131.2 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_Boxplot.png)
@@ -2878,6 +3814,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040070 | PALMARIGUANI [28040070] |   9.93008 |   -73.9549 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040070 | PALMARIGUANI [28040070] |   9.93008 |   -73.9549 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      71 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040070 | PALMARIGUANI [28040070] |   9.93008 |   -73.9549 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040070 | PALMARIGUANI [28040070] |   9.93008 |   -73.9549 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      68 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040070 | PALMARIGUANI [28040070] |   9.93008 |   -73.9549 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     193 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040070 | PALMARIGUANI [28040070] |   9.93008 |   -73.9549 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      48 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_Histogram.png)
@@ -2913,6 +3861,18 @@ Statistics table
 | max   | 398      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1984-06-01 00:00:00 |         28040400 | PALMASOLA [28040400] |   9.97742 |   -73.8893 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1984-06-15 00:00:00 | 2019-02-07 11:42:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    86.2 |       4 |           nan |               900 |
+| 1984-07-01 00:00:00 |         28040400 | PALMASOLA [28040400] |   9.97742 |   -73.8893 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1984-06-15 00:00:00 | 2019-02-07 11:42:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   121   |      50 |           nan |               900 |
+| 1984-08-01 00:00:00 |         28040400 | PALMASOLA [28040400] |   9.97742 |   -73.8893 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1984-06-15 00:00:00 | 2019-02-07 11:42:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    11.3 |      50 |           nan |               900 |
+| 1984-09-01 00:00:00 |         28040400 | PALMASOLA [28040400] |   9.97742 |   -73.8893 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1984-06-15 00:00:00 | 2019-02-07 11:42:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    43.3 |      50 |           nan |               900 |
+| 1984-10-01 00:00:00 |         28040400 | PALMASOLA [28040400] |   9.97742 |   -73.8893 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1984-06-15 00:00:00 | 2019-02-07 11:42:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   360   |      50 |           nan |               900 |
+| 1984-11-01 00:00:00 |         28040400 | PALMASOLA [28040400] |   9.97742 |   -73.8893 |        50 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1984-06-15 00:00:00 | 2019-02-07 11:42:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    79   |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_Boxplot.png)
@@ -2950,6 +3910,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-12-01 00:00:00 |         28020600 | RETORNO EL [28020600] |   9.85472 |   -73.3572 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      56 |       4 |           nan |               900 |
+| 1982-01-01 00:00:00 |         28020600 | RETORNO EL [28020600] |   9.85472 |   -73.3572 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1982-02-01 00:00:00 |         28020600 | RETORNO EL [28020600] |   9.85472 |   -73.3572 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      14 |      50 |           nan |               900 |
+| 1982-03-01 00:00:00 |         28020600 | RETORNO EL [28020600] |   9.85472 |   -73.3572 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      40 |      50 |           nan |               900 |
+| 1982-04-01 00:00:00 |         28020600 | RETORNO EL [28020600] |   9.85472 |   -73.3572 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     278 |      50 |           nan |               900 |
+| 1982-05-01 00:00:00 |         28020600 | RETORNO EL [28020600] |   9.85472 |   -73.3572 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1979-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     259 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_Histogram.png)
@@ -2985,6 +3957,18 @@ Statistics table
 | max   | 610.6   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                   |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020440 | SANTA TERESA HACIENDA [28020440] |   9.91703 |   -73.2861 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020440 | SANTA TERESA HACIENDA [28020440] |   9.91703 |   -73.2861 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      46 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020440 | SANTA TERESA HACIENDA [28020440] |   9.91703 |   -73.2861 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020440 | SANTA TERESA HACIENDA [28020440] |   9.91703 |   -73.2861 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      92 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020440 | SANTA TERESA HACIENDA [28020440] |   9.91703 |   -73.2861 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     183 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020440 | SANTA TERESA HACIENDA [28020440] |   9.91703 |   -73.2861 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     110 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_Boxplot.png)
@@ -3022,6 +4006,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020310 | BOGOTANA LA [28020310] |      10.1 |     -73.15 |       200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020310 | BOGOTANA LA [28020310] |      10.1 |     -73.15 |       200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      62 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020310 | BOGOTANA LA [28020310] |      10.1 |     -73.15 |       200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      36 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020310 | BOGOTANA LA [28020310] |      10.1 |     -73.15 |       200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     134 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020310 | BOGOTANA LA [28020310] |      10.1 |     -73.15 |       200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     352 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020310 | BOGOTANA LA [28020310] |      10.1 |     -73.15 |       200 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     417 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_Histogram.png)
@@ -3057,6 +4053,18 @@ Statistics table
 | max   | 450.8    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28030190 | CARACOLI [28030190] |   10.0887 |   -73.7317 |       220 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      14 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28030190 | CARACOLI [28030190] |   10.0887 |   -73.7317 |       220 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28030190 | CARACOLI [28030190] |   10.0887 |   -73.7317 |       220 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28030190 | CARACOLI [28030190] |   10.0887 |   -73.7317 |       220 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     140 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28030190 | CARACOLI [28030190] |   10.0887 |   -73.7317 |       220 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      27 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28030190 | CARACOLI [28030190] |   10.0887 |   -73.7317 |       220 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     130 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_Boxplot.png)
@@ -3094,6 +4102,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040200 | CHIMILAIMA [28040200] |   10.0667 |   -73.7667 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1962-08-15 00:00:00 | 1996-12-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040200 | CHIMILAIMA [28040200] |   10.0667 |   -73.7667 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1962-08-15 00:00:00 | 1996-12-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      17 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040200 | CHIMILAIMA [28040200] |   10.0667 |   -73.7667 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1962-08-15 00:00:00 | 1996-12-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040200 | CHIMILAIMA [28040200] |   10.0667 |   -73.7667 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1962-08-15 00:00:00 | 1996-12-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      56 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040200 | CHIMILAIMA [28040200] |   10.0667 |   -73.7667 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1962-08-15 00:00:00 | 1996-12-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     196 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040200 | CHIMILAIMA [28040200] |   10.0667 |   -73.7667 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1962-08-15 00:00:00 | 1996-12-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     121 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_Histogram.png)
@@ -3129,6 +4149,18 @@ Statistics table
 | max   | 542      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020590 | LETICIA [28020590] |   10.1524 |   -73.2217 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020590 | LETICIA [28020590] |   10.1524 |   -73.2217 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      58 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020590 | LETICIA [28020590] |   10.1524 |   -73.2217 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020590 | LETICIA [28020590] |   10.1524 |   -73.2217 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     103 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020590 | LETICIA [28020590] |   10.1524 |   -73.2217 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     203 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020590 | LETICIA [28020590] |   10.1524 |   -73.2217 |       140 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1979-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      54 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_Boxplot.png)
@@ -3166,6 +4198,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010370 | PARIS DE FRANCIA [28010370] |   10.3071 |   -73.3254 |       180 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1971-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010370 | PARIS DE FRANCIA [28010370] |   10.3071 |   -73.3254 |       180 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1971-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      74 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010370 | PARIS DE FRANCIA [28010370] |   10.3071 |   -73.3254 |       180 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1971-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010370 | PARIS DE FRANCIA [28010370] |   10.3071 |   -73.3254 |       180 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1971-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       7 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010370 | PARIS DE FRANCIA [28010370] |   10.3071 |   -73.3254 |       180 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1971-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     175 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010370 | PARIS DE FRANCIA [28010370] |   10.3071 |   -73.3254 |       180 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1971-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      95 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_Histogram.png)
@@ -3201,6 +4245,18 @@ Statistics table
 | max   | 500     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040060 | PAVAS LAS [28040060] |   10.0667 |   -73.8833 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | 1992-07-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      55 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040060 | PAVAS LAS [28040060] |   10.0667 |   -73.8833 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | 1992-07-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      60 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040060 | PAVAS LAS [28040060] |   10.0667 |   -73.8833 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | 1992-07-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040060 | PAVAS LAS [28040060] |   10.0667 |   -73.8833 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | 1992-07-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      70 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040060 | PAVAS LAS [28040060] |   10.0667 |   -73.8833 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | 1992-07-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     249 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040060 | PAVAS LAS [28040060] |   10.0667 |   -73.8833 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Bosconia    | 1963-01-15 00:00:00 | 1992-07-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     125 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_Boxplot.png)
@@ -3238,6 +4294,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     9.6 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    49.1 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    14.2 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    91.8 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   116.5 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    90   |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_Histogram.png)
@@ -3273,6 +4341,18 @@ Statistics table
 | max   | 757     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28020410 | SAN BENITO [28020410] |   10.1842 |    -73.317 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28020410 | SAN BENITO [28020410] |   10.1842 |    -73.317 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      25 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28020410 | SAN BENITO [28020410] |   10.1842 |    -73.317 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28020410 | SAN BENITO [28020410] |   10.1842 |    -73.317 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      95 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28020410 | SAN BENITO [28020410] |   10.1842 |    -73.317 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     124 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28020410 | SAN BENITO [28020410] |   10.1842 |    -73.317 |       150 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1972-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     125 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_Boxplot.png)
@@ -3310,6 +4390,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1986-01-01 00:00:00 |         28010070 | VILLA MARLENE [28010070] |   10.1855 |   -73.4671 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1987-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1986-02-01 00:00:00 |         28010070 | VILLA MARLENE [28010070] |   10.1855 |   -73.4671 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1987-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |      50 |           nan |               900 |
+| 1986-03-01 00:00:00 |         28010070 | VILLA MARLENE [28010070] |   10.1855 |   -73.4671 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1987-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      33 |      50 |           nan |               900 |
+| 1986-04-01 00:00:00 |         28010070 | VILLA MARLENE [28010070] |   10.1855 |   -73.4671 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1987-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      90 |      50 |           nan |               900 |
+| 1986-05-01 00:00:00 |         28010070 | VILLA MARLENE [28010070] |   10.1855 |   -73.4671 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1987-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      48 |      50 |           nan |               900 |
+| 1986-06-01 00:00:00 |         28010070 | VILLA MARLENE [28010070] |   10.1855 |   -73.4671 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1987-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_Histogram.png)
@@ -3345,6 +4437,18 @@ Statistics table
 | max   | 479.6   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    10.9 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     7.9 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     7.5 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    60.1 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    90   |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_Boxplot.png)
@@ -3382,6 +4486,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010360 | ATANQUEZ [28010360] |   10.6973 |   -73.3531 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010360 | ATANQUEZ [28010360] |   10.6973 |   -73.3531 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      79 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010360 | ATANQUEZ [28010360] |   10.6973 |   -73.3531 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010360 | ATANQUEZ [28010360] |   10.6973 |   -73.3531 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     223 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010360 | ATANQUEZ [28010360] |   10.6973 |   -73.3531 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     345 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010360 | ATANQUEZ [28010360] |   10.6973 |   -73.3531 |       800 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1959-04-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     279 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_Histogram.png)
@@ -3417,6 +4533,18 @@ Statistics table
 | max   | 464.2    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    18.9 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     2.4 |       4 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    85.6 |       4 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    44.8 |       4 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    96.3 |       4 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_Boxplot.png)
@@ -3454,6 +4582,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040170 | CUEVAS LAS [28040170] |   10.4667 |   -73.5667 |      1260 | Pluviográfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-06-15 00:00:00 | 1996-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      63 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040170 | CUEVAS LAS [28040170] |   10.4667 |   -73.5667 |      1260 | Pluviográfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-06-15 00:00:00 | 1996-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      21 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040170 | CUEVAS LAS [28040170] |   10.4667 |   -73.5667 |      1260 | Pluviográfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-06-15 00:00:00 | 1996-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       8 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040170 | CUEVAS LAS [28040170] |   10.4667 |   -73.5667 |      1260 | Pluviográfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-06-15 00:00:00 | 1996-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     194 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040170 | CUEVAS LAS [28040170] |   10.4667 |   -73.5667 |      1260 | Pluviográfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-06-15 00:00:00 | 1996-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     317 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040170 | CUEVAS LAS [28040170] |   10.4667 |   -73.5667 |      1260 | Pluviográfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-06-15 00:00:00 | 1996-02-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     217 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_Histogram.png)
@@ -3489,6 +4629,18 @@ Statistics table
 | max   | 713      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1986-01-01 00:00:00 |         28010020 | DESCANSO EL [28010020] |   10.4801 |   -73.2372 |       160 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1986-04-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1986-02-01 00:00:00 |         28010020 | DESCANSO EL [28010020] |   10.4801 |   -73.2372 |       160 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1986-04-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1986-03-01 00:00:00 |         28010020 | DESCANSO EL [28010020] |   10.4801 |   -73.2372 |       160 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1986-04-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1986-04-01 00:00:00 |         28010020 | DESCANSO EL [28010020] |   10.4801 |   -73.2372 |       160 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1986-04-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1987-01-01 00:00:00 |         28010020 | DESCANSO EL [28010020] |   10.4801 |   -73.2372 |       160 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1986-04-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1987-02-01 00:00:00 |         28010020 | DESCANSO EL [28010020] |   10.4801 |   -73.2372 |       160 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1986-04-15 00:00:00 | 2019-02-07 11:41:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_Boxplot.png)
@@ -3526,6 +4678,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010040 | MANAURE [28010040] |   10.3914 |   -73.0253 |       740 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Manaure Balcón Del Cesar | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       7 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010040 | MANAURE [28010040] |   10.3914 |   -73.0253 |       740 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Manaure Balcón Del Cesar | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     114 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010040 | MANAURE [28010040] |   10.3914 |   -73.0253 |       740 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Manaure Balcón Del Cesar | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010040 | MANAURE [28010040] |   10.3914 |   -73.0253 |       740 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Manaure Balcón Del Cesar | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     110 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010040 | MANAURE [28010040] |   10.3914 |   -73.0253 |       740 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Manaure Balcón Del Cesar | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     231 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010040 | MANAURE [28010040] |   10.3914 |   -73.0253 |       740 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Manaure Balcón Del Cesar | 1975-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      71 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_Histogram.png)
@@ -3561,6 +4725,18 @@ Statistics table
 | max   | 1193     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040010 | PUEBLO BELLO [28040010] |   10.4146 |    -73.585 |        10 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040010 | PUEBLO BELLO [28040010] |   10.4146 |    -73.585 |        10 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      27 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040010 | PUEBLO BELLO [28040010] |   10.4146 |    -73.585 |        10 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040010 | PUEBLO BELLO [28040010] |   10.4146 |    -73.585 |        10 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     140 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040010 | PUEBLO BELLO [28040010] |   10.4146 |    -73.585 |        10 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     271 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040010 | PUEBLO BELLO [28040010] |   10.4146 |    -73.585 |        10 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     215 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_Boxplot.png)
@@ -3598,6 +4774,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-07-01 00:00:00 |         28030220 | SAN ANGEL [28030220] |   10.3471 |   -73.4441 |       244 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1983-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    79   |       4 |           nan |               900 |
+| 1983-08-01 00:00:00 |         28030220 | SAN ANGEL [28030220] |   10.3471 |   -73.4441 |       244 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1983-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   154   |      50 |           nan |               900 |
+| 1983-09-01 00:00:00 |         28030220 | SAN ANGEL [28030220] |   10.3471 |   -73.4441 |       244 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1983-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   249   |      50 |           nan |               900 |
+| 1983-10-01 00:00:00 |         28030220 | SAN ANGEL [28030220] |   10.3471 |   -73.4441 |       244 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1983-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   218.5 |      50 |           nan |               900 |
+| 1983-11-01 00:00:00 |         28030220 | SAN ANGEL [28030220] |   10.3471 |   -73.4441 |       244 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1983-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   131   |      50 |           nan |               900 |
+| 1983-12-01 00:00:00 |         28030220 | SAN ANGEL [28030220] |   10.3471 |   -73.4441 |       244 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1983-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_Histogram.png)
@@ -3633,6 +4821,18 @@ Statistics table
 | max   | 360.6    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     3.7 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    56.9 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     7.3 |       4 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   228   |       4 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   154   |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    41.1 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_Boxplot.png)
@@ -3670,6 +4870,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29060090 | SAN SEBASTIAN DE [29060090] |   10.5633 |   -73.6038 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1968-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      11 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29060090 | SAN SEBASTIAN DE [29060090] |   10.5633 |   -73.6038 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1968-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      26 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29060090 | SAN SEBASTIAN DE [29060090] |   10.5633 |   -73.6038 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1968-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29060090 | SAN SEBASTIAN DE [29060090] |   10.5633 |   -73.6038 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1968-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      85 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29060090 | SAN SEBASTIAN DE [29060090] |   10.5633 |   -73.6038 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1968-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     204 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29060090 | SAN SEBASTIAN DE [29060090] |   10.5633 |   -73.6038 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1968-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     110 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_Histogram.png)
@@ -3705,6 +4917,18 @@ Statistics table
 | max   | 630     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion             |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010140 | VILLA CARMELITA [28010140] |   10.5333 |      -73.3 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     3   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010140 | VILLA CARMELITA [28010140] |   10.5333 |      -73.3 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    17.2 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010140 | VILLA CARMELITA [28010140] |   10.5333 |      -73.3 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    50.3 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010140 | VILLA CARMELITA [28010140] |   10.5333 |      -73.3 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    63   |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010140 | VILLA CARMELITA [28010140] |   10.5333 |      -73.3 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   145.2 |      50 |           nan |               900 |
+| 1980-07-01 00:00:00 |         28010140 | VILLA CARMELITA [28010140] |   10.5333 |      -73.3 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-09-15 00:00:00 | 2004-08-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    27   |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_Boxplot.png)
@@ -3742,6 +4966,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010090 | PATILLAL [28010090] |   10.7039 |   -73.2116 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010090 | PATILLAL [28010090] |   10.7039 |   -73.2116 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      51 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010090 | PATILLAL [28010090] |   10.7039 |   -73.2116 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010090 | PATILLAL [28010090] |   10.7039 |   -73.2116 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      91 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010090 | PATILLAL [28010090] |   10.7039 |   -73.2116 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     201 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010090 | PATILLAL [28010090] |   10.7039 |   -73.2116 |       450 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     145 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_Histogram.png)
@@ -3777,6 +5013,18 @@ Statistics table
 | max   | 502.1   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                          | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------------|:---------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28045010 | PUEBLO BELLO  [28045010] |     10.37 |     -73.63 |      1000 | Climática Ordinaria | FEDERACION NACIONAL DE CAFETEROS | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1954-02-15 00:00:00 | 2020-10-21 17:13:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    47.7 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28045010 | PUEBLO BELLO  [28045010] |     10.37 |     -73.63 |      1000 | Climática Ordinaria | FEDERACION NACIONAL DE CAFETEROS | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1954-02-15 00:00:00 | 2020-10-21 17:13:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    38.3 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28045010 | PUEBLO BELLO  [28045010] |     10.37 |     -73.63 |      1000 | Climática Ordinaria | FEDERACION NACIONAL DE CAFETEROS | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1954-02-15 00:00:00 | 2020-10-21 17:13:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    10.5 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28045010 | PUEBLO BELLO  [28045010] |     10.37 |     -73.63 |      1000 | Climática Ordinaria | FEDERACION NACIONAL DE CAFETEROS | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1954-02-15 00:00:00 | 2020-10-21 17:13:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   189.4 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28045010 | PUEBLO BELLO  [28045010] |     10.37 |     -73.63 |      1000 | Climática Ordinaria | FEDERACION NACIONAL DE CAFETEROS | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1954-02-15 00:00:00 | 2020-10-21 17:13:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   313   |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28045010 | PUEBLO BELLO  [28045010] |     10.37 |     -73.63 |      1000 | Climática Ordinaria | FEDERACION NACIONAL DE CAFETEROS | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1954-02-15 00:00:00 | 2020-10-21 17:13:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   160   |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_Boxplot.png)
@@ -3814,6 +5062,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010130 | SARACHUI [28010130] |   10.7833 |      -73.4 |      1560 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-04-15 00:00:00 | 1990-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      27 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010130 | SARACHUI [28010130] |   10.7833 |      -73.4 |      1560 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-04-15 00:00:00 | 1990-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      44 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010130 | SARACHUI [28010130] |   10.7833 |      -73.4 |      1560 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-04-15 00:00:00 | 1990-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010130 | SARACHUI [28010130] |   10.7833 |      -73.4 |      1560 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-04-15 00:00:00 | 1990-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     229 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010130 | SARACHUI [28010130] |   10.7833 |      -73.4 |      1560 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-04-15 00:00:00 | 1990-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     513 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010130 | SARACHUI [28010130] |   10.7833 |      -73.4 |      1560 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-04-15 00:00:00 | 1990-05-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      84 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_Histogram.png)
@@ -3849,6 +5109,18 @@ Statistics table
 | max   | 722      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15060080 | CANAVERALES [15060080] |   10.7578 |   -72.8452 |       230 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         15060080 | CANAVERALES [15060080] |   10.7578 |   -72.8452 |       230 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      23 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         15060080 | CANAVERALES [15060080] |   10.7578 |   -72.8452 |       230 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         15060080 | CANAVERALES [15060080] |   10.7578 |   -72.8452 |       230 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      68 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15060080 | CANAVERALES [15060080] |   10.7578 |   -72.8452 |       230 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      55 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         15060080 | CANAVERALES [15060080] |   10.7578 |   -72.8452 |       230 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      30 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_Boxplot.png)
@@ -3886,6 +5158,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15060150 | CONEJO EL [15060150] |   10.7779 |   -72.7982 |       350 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         15060150 | CONEJO EL [15060150] |   10.7779 |   -72.7982 |       350 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      23 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         15060150 | CONEJO EL [15060150] |   10.7779 |   -72.7982 |       350 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         15060150 | CONEJO EL [15060150] |   10.7779 |   -72.7982 |       350 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      29 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15060150 | CONEJO EL [15060150] |   10.7779 |   -72.7982 |       350 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      93 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         15060150 | CONEJO EL [15060150] |   10.7779 |   -72.7982 |       350 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1975-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      27 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_Histogram.png)
@@ -3921,6 +5205,18 @@ Statistics table
 | max   | 556      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010200 | HATICO D LOS INDIO [28010200] |   10.8602 |   -73.1142 |       594 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010200 | HATICO D LOS INDIO [28010200] |   10.8602 |   -73.1142 |       594 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010200 | HATICO D LOS INDIO [28010200] |   10.8602 |   -73.1142 |       594 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010200 | HATICO D LOS INDIO [28010200] |   10.8602 |   -73.1142 |       594 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      39 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010200 | HATICO D LOS INDIO [28010200] |   10.8602 |   -73.1142 |       594 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     173 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010200 | HATICO D LOS INDIO [28010200] |   10.8602 |   -73.1142 |       594 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      76 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_Boxplot.png)
@@ -3958,6 +5254,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15060070 | JUGUETE EL [15060070] |    10.786 |   -72.7684 |       390 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1971-05-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         15060070 | JUGUETE EL [15060070] |    10.786 |   -72.7684 |       390 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1971-05-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     133 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         15060070 | JUGUETE EL [15060070] |    10.786 |   -72.7684 |       390 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1971-05-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         15060070 | JUGUETE EL [15060070] |    10.786 |   -72.7684 |       390 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1971-05-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     251 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15060070 | JUGUETE EL [15060070] |    10.786 |   -72.7684 |       390 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1971-05-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     371 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         15060070 | JUGUETE EL [15060070] |    10.786 |   -72.7684 |       390 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1971-05-15 00:00:00 | 2014-08-28 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     151 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_Histogram.png)
@@ -3993,6 +5301,18 @@ Statistics table
 | max   | 237.7    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-04-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    72.3 |       4 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    45.2 |      50 |           nan |               900 |
+| 1980-07-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    87.6 |       4 |           nan |               900 |
+| 1980-08-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   141.9 |       4 |           nan |               900 |
+| 1980-09-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    98.1 |      50 |           nan |               900 |
+| 1980-10-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   135.4 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_Boxplot.png)
@@ -4030,6 +5350,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:--------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010280 | PAMPLONA [28010280] |     10.65 |     -72.85 |       690 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1971-05-15 00:00:00 | 1993-11-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       2 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010280 | PAMPLONA [28010280] |     10.65 |     -72.85 |       690 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1971-05-15 00:00:00 | 1993-11-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010280 | PAMPLONA [28010280] |     10.65 |     -72.85 |       690 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1971-05-15 00:00:00 | 1993-11-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       8 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010280 | PAMPLONA [28010280] |     10.65 |     -72.85 |       690 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1971-05-15 00:00:00 | 1993-11-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      48 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010280 | PAMPLONA [28010280] |     10.65 |     -72.85 |       690 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1971-05-15 00:00:00 | 1993-11-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     135 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010280 | PAMPLONA [28010280] |     10.65 |     -72.85 |       690 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1971-05-15 00:00:00 | 1993-11-15 00:00:00 | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      26 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_Histogram.png)
@@ -4065,6 +5397,18 @@ Statistics table
 | max   | 489.2    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15060050 | SABANAS DE MANUELA [15060050] |    10.953 |    -73.048 |       420 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Distracción | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         15060050 | SABANAS DE MANUELA [15060050] |    10.953 |    -73.048 |       420 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Distracción | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      27 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         15060050 | SABANAS DE MANUELA [15060050] |    10.953 |    -73.048 |       420 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Distracción | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         15060050 | SABANAS DE MANUELA [15060050] |    10.953 |    -73.048 |       420 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Distracción | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     141 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15060050 | SABANAS DE MANUELA [15060050] |    10.953 |    -73.048 |       420 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Distracción | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     181 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         15060050 | SABANAS DE MANUELA [15060050] |    10.953 |    -73.048 |       420 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Distracción | 1963-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      27 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_Boxplot.png)
@@ -4102,6 +5446,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    28.6 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    71.2 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   111.6 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    96.4 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_Histogram.png)
@@ -4137,6 +5493,18 @@ Statistics table
 | max   | 457      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28010340 | VILLANUEVA [28010340] |   10.6158 |   -72.9819 |       340 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Villanueva  | 1970-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28010340 | VILLANUEVA [28010340] |   10.6158 |   -72.9819 |       340 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Villanueva  | 1970-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      24 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28010340 | VILLANUEVA [28010340] |   10.6158 |   -72.9819 |       340 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Villanueva  | 1970-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28010340 | VILLANUEVA [28010340] |   10.6158 |   -72.9819 |       340 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Villanueva  | 1970-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      62 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28010340 | VILLANUEVA [28010340] |   10.6158 |   -72.9819 |       340 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Villanueva  | 1970-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     139 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28010340 | VILLANUEVA [28010340] |   10.6158 |   -72.9819 |       340 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Villanueva  | 1970-08-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     129 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_Boxplot.png)
@@ -4174,6 +5542,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                   |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    70   |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    39.6 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     0   |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   168.7 |       4 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   168.4 |       4 |           nan |               900 |
+| 1980-07-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   135.7 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_Histogram.png)
@@ -4209,6 +5589,18 @@ Statistics table
 | max   | 491      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040320 | BRILLANTE EL [28040320] |   9.70275 |   -73.9591 |       135 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       7 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040320 | BRILLANTE EL [28040320] |   9.70275 |   -73.9591 |       135 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      51 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040320 | BRILLANTE EL [28040320] |   9.70275 |   -73.9591 |       135 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040320 | BRILLANTE EL [28040320] |   9.70275 |   -73.9591 |       135 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      85 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040320 | BRILLANTE EL [28040320] |   9.70275 |   -73.9591 |       135 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     127 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040320 | BRILLANTE EL [28040320] |   9.70275 |   -73.9591 |       135 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     137 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_Boxplot.png)
@@ -4246,6 +5638,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion   |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1982-07-01 00:00:00 |         25021620 | IRAN [25021620]  |   9.68378 |   -74.3222 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      63 |       4 |           nan |               900 |
+| 1982-08-01 00:00:00 |         25021620 | IRAN [25021620]  |   9.68378 |   -74.3222 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      69 |      50 |           nan |               900 |
+| 1982-09-01 00:00:00 |         25021620 | IRAN [25021620]  |   9.68378 |   -74.3222 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     102 |      50 |           nan |               900 |
+| 1982-10-01 00:00:00 |         25021620 | IRAN [25021620]  |   9.68378 |   -74.3222 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      66 |      50 |           nan |               900 |
+| 1982-11-01 00:00:00 |         25021620 | IRAN [25021620]  |   9.68378 |   -74.3222 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      31 |      50 |           nan |               900 |
+| 1982-12-01 00:00:00 |         25021620 | IRAN [25021620]  |   9.68378 |   -74.3222 |        80 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Nueva Granada | 1982-06-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_Histogram.png)
@@ -4281,6 +5685,18 @@ Statistics table
 | max   | 739     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021040 | MENCHIQUEJO [25021040] |   9.18806 |   -74.0442 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021040 | MENCHIQUEJO [25021040] |   9.18806 |   -74.0442 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      47 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021040 | MENCHIQUEJO [25021040] |   9.18806 |   -74.0442 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       6 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021040 | MENCHIQUEJO [25021040] |   9.18806 |   -74.0442 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      53 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021040 | MENCHIQUEJO [25021040] |   9.18806 |   -74.0442 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     201 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021040 | MENCHIQUEJO [25021040] |   9.18806 |   -74.0442 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     131 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_Boxplot.png)
@@ -4318,6 +5734,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021200 | NEGRITOS LOS [25021200] |   9.02667 |   -74.0794 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1976-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      21 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021200 | NEGRITOS LOS [25021200] |   9.02667 |   -74.0794 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1976-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021200 | NEGRITOS LOS [25021200] |   9.02667 |   -74.0794 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1976-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021200 | NEGRITOS LOS [25021200] |   9.02667 |   -74.0794 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1976-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      65 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021200 | NEGRITOS LOS [25021200] |   9.02667 |   -74.0794 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1976-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     136 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021200 | NEGRITOS LOS [25021200] |   9.02667 |   -74.0794 |        26 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1976-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     245 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_Histogram.png)
@@ -4353,6 +5781,18 @@ Statistics table
 | max   | 368      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021500 | PUEBLITO EL [25021500] |   9.58117 |   -74.3522 |        35 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       4 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021500 | PUEBLITO EL [25021500] |   9.58117 |   -74.3522 |        35 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021500 | PUEBLITO EL [25021500] |   9.58117 |   -74.3522 |        35 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      13 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021500 | PUEBLITO EL [25021500] |   9.58117 |   -74.3522 |        35 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     112 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021500 | PUEBLITO EL [25021500] |   9.58117 |   -74.3522 |        35 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     142 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021500 | PUEBLITO EL [25021500] |   9.58117 |   -74.3522 |        35 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Santa Ana   | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      95 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_Boxplot.png)
@@ -4390,6 +5830,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-06-01 00:00:00 |         25021380 | SAN ROQUE ALERTAS [25021380] |      9.07 |     -74.15 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1980-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     231 |      50 |           nan |               900 |
+| 1980-07-01 00:00:00 |         25021380 | SAN ROQUE ALERTAS [25021380] |      9.07 |     -74.15 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1980-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     194 |      50 |           nan |               900 |
+| 1980-08-01 00:00:00 |         25021380 | SAN ROQUE ALERTAS [25021380] |      9.07 |     -74.15 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1980-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     257 |      50 |           nan |               900 |
+| 1980-09-01 00:00:00 |         25021380 | SAN ROQUE ALERTAS [25021380] |      9.07 |     -74.15 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1980-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     207 |      50 |           nan |               900 |
+| 1980-10-01 00:00:00 |         25021380 | SAN ROQUE ALERTAS [25021380] |      9.07 |     -74.15 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1980-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     280 |      50 |           nan |               900 |
+| 1980-11-01 00:00:00 |         25021380 | SAN ROQUE ALERTAS [25021380] |      9.07 |     -74.15 |        24 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1980-05-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     205 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_Histogram.png)
@@ -4425,6 +5877,18 @@ Statistics table
 | max   | 510     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020900 | SAN SEBASTIAN [25020900] |   9.23389 |   -74.3558 |        65 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | San Sebastián De Buenavista | 1974-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020900 | SAN SEBASTIAN [25020900] |   9.23389 |   -74.3558 |        65 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | San Sebastián De Buenavista | 1974-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020900 | SAN SEBASTIAN [25020900] |   9.23389 |   -74.3558 |        65 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | San Sebastián De Buenavista | 1974-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020900 | SAN SEBASTIAN [25020900] |   9.23389 |   -74.3558 |        65 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | San Sebastián De Buenavista | 1974-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     104 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020900 | SAN SEBASTIAN [25020900] |   9.23389 |   -74.3558 |        65 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | San Sebastián De Buenavista | 1974-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     120 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020900 | SAN SEBASTIAN [25020900] |   9.23389 |   -74.3558 |        65 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | San Sebastián De Buenavista | 1974-01-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     105 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_Boxplot.png)
@@ -4462,6 +5926,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      67 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      82 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      57 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      85 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_Histogram.png)
@@ -4497,6 +5973,18 @@ Statistics table
 | max   | 564      |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio             | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28040300 | VILLA CONCEPCION [28040300] |   9.70631 |   -73.8594 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28040300 | VILLA CONCEPCION [28040300] |   9.70631 |   -73.8594 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28040300 | VILLA CONCEPCION [28040300] |   9.70631 |   -73.8594 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28040300 | VILLA CONCEPCION [28040300] |   9.70631 |   -73.8594 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      53 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28040300 | VILLA CONCEPCION [28040300] |   9.70631 |   -73.8594 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     242 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28040300 | VILLA CONCEPCION [28040300] |   9.70631 |   -73.8594 |       120 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1972-07-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      65 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_Boxplot.png)
@@ -4534,6 +6022,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021540 | AGUADAS LAS ALERTA [25021540] |      8.95 |     -74.05 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1978-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021540 | AGUADAS LAS ALERTA [25021540] |      8.95 |     -74.05 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1978-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      60 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021540 | AGUADAS LAS ALERTA [25021540] |      8.95 |     -74.05 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1978-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021540 | AGUADAS LAS ALERTA [25021540] |      8.95 |     -74.05 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1978-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     146 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021540 | AGUADAS LAS ALERTA [25021540] |      8.95 |     -74.05 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1978-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     221 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021540 | AGUADAS LAS ALERTA [25021540] |      8.95 |     -74.05 |        30 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1978-11-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      88 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_Histogram.png)
@@ -4569,6 +6069,18 @@ Statistics table
 | max   | 764     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio        | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-----------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020880 | BARRANCO DE LOBA [25020880] |   8.94667 |   -74.1106 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |       4 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020880 | BARRANCO DE LOBA [25020880] |   8.94667 |   -74.1106 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      10 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020880 | BARRANCO DE LOBA [25020880] |   8.94667 |   -74.1106 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020880 | BARRANCO DE LOBA [25020880] |   8.94667 |   -74.1106 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     124 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020880 | BARRANCO DE LOBA [25020880] |   8.94667 |   -74.1106 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     163 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020880 | BARRANCO DE LOBA [25020880] |   8.94667 |   -74.1106 |        25 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     148 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_Boxplot.png)
@@ -4606,6 +6118,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020890 | CHILLOA [25020890] |   9.11939 |   -74.2219 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      15 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020890 | CHILLOA [25020890] |   9.11939 |   -74.2219 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      24 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020890 | CHILLOA [25020890] |   9.11939 |   -74.2219 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020890 | CHILLOA [25020890] |   9.11939 |   -74.2219 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      77 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020890 | CHILLOA [25020890] |   9.11939 |   -74.2219 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     135 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020890 | CHILLOA [25020890] |   9.11939 |   -74.2219 |        20 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     382 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_Histogram.png)
@@ -4641,6 +6165,18 @@ Statistics table
 | max   | 744     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio              | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-----------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021320 | SUDAN EL [25021320] |   8.64333 |   -74.2122 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Tiquisio (Puerto Rico) | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    20.9 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021320 | SUDAN EL [25021320] |   8.64333 |   -74.2122 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Tiquisio (Puerto Rico) | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    33.7 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021320 | SUDAN EL [25021320] |   8.64333 |   -74.2122 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Tiquisio (Puerto Rico) | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |    56.2 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021320 | SUDAN EL [25021320] |   8.64333 |   -74.2122 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Tiquisio (Puerto Rico) | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   237.5 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021320 | SUDAN EL [25021320] |   8.64333 |   -74.2122 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Tiquisio (Puerto Rico) | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   282.7 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021320 | SUDAN EL [25021320] |   8.64333 |   -74.2122 |        23 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Tiquisio (Puerto Rico) | 1976-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |   231.6 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_Boxplot.png)
@@ -4678,6 +6214,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25020870 | PLAYITAS [25020870] |   8.82278 |   -73.9658 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      12 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25020870 | PLAYITAS [25020870] |   8.82278 |   -73.9658 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     125 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25020870 | PLAYITAS [25020870] |   8.82278 |   -73.9658 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25020870 | PLAYITAS [25020870] |   8.82278 |   -73.9658 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      47 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25020870 | PLAYITAS [25020870] |   8.82278 |   -73.9658 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     223 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25020870 | PLAYITAS [25020870] |   8.82278 |   -73.9658 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1974-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     138 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_Boxplot.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_Histogram.png)
@@ -4713,6 +6261,18 @@ Statistics table
 | max   | 680     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       5 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |      16 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |       0 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     158 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     125 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      |     201 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_Boxplot.png)
@@ -4755,6 +6315,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-01-01 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36   |      50 |           nan |              1200 |
+| 1983-01-02 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
+| 1983-01-03 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.8 |      50 |           nan |              1200 |
+| 1983-01-04 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1983-01-05 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.8 |      50 |           nan |              1200 |
+| 1983-01-06 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.4 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_Histogram.png)
@@ -4790,6 +6362,18 @@ Statistics table
 | max   |    42.3     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                 |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-01-03 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.6 |      50 |           nan |              1200 |
+| 1981-01-04 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34   |      50 |           nan |              1200 |
+| 1981-01-05 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.4 |      50 |           nan |              1200 |
+| 1981-01-06 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.2 |      50 |           nan |              1200 |
+| 1981-01-07 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 1981-01-08 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_Boxplot.png)
@@ -4827,6 +6411,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-04-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.6 |      50 |           nan |              1200 |
+| 1981-04-02 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
+| 1981-04-03 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
+| 1981-04-04 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.2 |      50 |           nan |              1200 |
+| 1981-04-05 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.6 |      50 |           nan |              1200 |
+| 1981-04-06 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.4 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_Histogram.png)
@@ -4862,6 +6458,18 @@ Statistics table
 | max   |   41.6    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                                  |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1990-03-27 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.2 |      50 |           nan |              1200 |
+| 1990-03-28 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.4 |      50 |           nan |              1200 |
+| 1990-03-29 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1990-03-30 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.6 |      50 |           nan |              1200 |
+| 1990-03-31 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.6 |      50 |           nan |              1200 |
+| 1990-04-01 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_Boxplot.png)
@@ -4899,6 +6507,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1987-09-10 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1987-09-11 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.4 |      50 |           nan |              1200 |
+| 1987-09-12 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.8 |      50 |           nan |              1200 |
+| 1987-09-14 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    30.2 |      50 |           nan |              1200 |
+| 1987-09-15 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1987-09-16 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34   |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_Histogram.png)
@@ -4934,6 +6554,18 @@ Statistics table
 | max   |   42.4     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-06-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1981-06-02 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1981-06-03 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32   |      50 |           nan |              1200 |
+| 1981-06-04 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
+| 1981-06-05 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.2 |      50 |           nan |              1200 |
+| 1981-06-07 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_Boxplot.png)
@@ -4971,6 +6603,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                          | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:---------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-09-17 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
+| 1983-09-18 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32   |      50 |           nan |              1200 |
+| 1983-09-19 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
+| 1983-09-20 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.2 |      50 |           nan |              1200 |
+| 1983-09-21 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
+| 1983-09-22 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_Histogram.png)
@@ -5006,6 +6650,18 @@ Statistics table
 | max   |    42.8     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria         | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.8 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34   |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.1 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.6 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.7 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_Boxplot.png)
@@ -5043,6 +6699,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-03 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35   |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.4 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35   |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35   |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_Histogram.png)
@@ -5078,6 +6746,18 @@ Statistics table
 | max   |   42.4     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-11 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1980-01-14 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
+| 1980-01-15 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1980-02-01 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
+| 1980-02-02 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.6 |      50 |           nan |              1200 |
+| 1980-02-03 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_Boxplot.png)
@@ -5115,6 +6795,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-04-02 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    39.2 |      50 |           nan |              1200 |
+| 1983-04-04 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.4 |      50 |           nan |              1200 |
+| 1983-04-06 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.4 |      50 |           nan |              1200 |
+| 1983-04-07 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1983-04-08 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.2 |      50 |           nan |              1200 |
+| 1983-04-09 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.4 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_Histogram.png)
@@ -5150,6 +6842,18 @@ Statistics table
 | max   |    41.8     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    30.8 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35   |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_Boxplot.png)
@@ -5187,6 +6891,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-03 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.3 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.9 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.8 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1980-01-09 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.9 |      50 |           nan |              1200 |
+| 1980-01-10 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.8 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_Histogram.png)
@@ -5222,6 +6938,18 @@ Statistics table
 | max   | 39.2     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion             |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 2012-12-01 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.8 |      50 |           nan |              1200 |
+| 2012-12-02 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 2012-12-03 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34   |      50 |           nan |              1200 |
+| 2012-12-04 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 2012-12-05 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.4 |      50 |           nan |              1200 |
+| 2012-12-06 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_Boxplot.png)
@@ -5259,6 +6987,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-02-01 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.3 |      50 |           nan |              1200 |
+| 1980-02-03 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.3 |      50 |           nan |              1200 |
+| 1980-02-04 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.3 |      50 |           nan |              1200 |
+| 1980-02-05 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    31.5 |      50 |           nan |              1200 |
+| 1980-02-06 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.9 |      50 |           nan |              1200 |
+| 1980-02-08 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.9 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_Histogram.png)
@@ -5294,6 +7034,18 @@ Statistics table
 | max   |   39.2     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-02 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    29.8 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    30   |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    29.8 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    31.8 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32   |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    29   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_Boxplot.png)
@@ -5331,6 +7083,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-04-01 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1980-04-02 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.2 |      50 |           nan |              1200 |
+| 1980-04-03 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.4 |      50 |           nan |              1200 |
+| 1980-04-04 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.4 |      50 |           nan |              1200 |
+| 1980-04-06 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    36.4 |      50 |           nan |              1200 |
+| 1980-04-08 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    37.2 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_Histogram.png)
@@ -5366,6 +7130,18 @@ Statistics table
 | max   |    42.2     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    29.8 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.6 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.2 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_Boxplot.png)
@@ -5403,6 +7179,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                   |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.8 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.2 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_Histogram.png)
@@ -5438,6 +7226,18 @@ Statistics table
 | max   |   44       |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1985-01-06 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1985-01-07 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1985-01-08 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1985-01-09 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34   |      50 |           nan |              1200 |
+| 1985-01-10 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.8 |      50 |           nan |              1200 |
+| 1985-01-11 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_Boxplot.png)
@@ -5475,6 +7275,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-03-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.2 |      50 |           nan |              1200 |
+| 1980-03-02 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35   |      50 |           nan |              1200 |
+| 1980-03-03 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.2 |      50 |           nan |              1200 |
+| 1980-03-04 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.6 |      50 |           nan |              1200 |
+| 1980-03-05 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1980-03-06 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_Histogram.png)
@@ -5510,6 +7322,18 @@ Statistics table
 | max   |    38.6    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.2 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.8 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.6 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    34.2 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_Boxplot.png)
@@ -5547,6 +7371,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1985-05-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1985-05-02 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1985-05-03 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.2 |      50 |           nan |              1200 |
+| 1985-05-04 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1985-05-05 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35   |      50 |           nan |              1200 |
+| 1985-05-06 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    35.8 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_Histogram.png)
@@ -5583,6 +7419,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion   |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.2 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.6 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33   |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.2 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_Histogram.png)
@@ -5618,6 +7466,18 @@ Statistics table
 | max   |  37.2     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion    |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-01-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.6 |      50 |           nan |              1200 |
+| 1981-01-02 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.4 |      50 |           nan |              1200 |
+| 1981-01-03 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    31.4 |      50 |           nan |              1200 |
+| 1981-01-04 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.8 |      50 |           nan |              1200 |
+| 1981-01-05 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    32.6 |      50 |           nan |              1200 |
+| 1981-01-06 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMX_CON    | Temperatura máxima diaria | Diaria       |    33.4 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065010_Boxplot.png)
@@ -5660,6 +7520,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-02 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24   |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.8 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.8 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         28025502 | AEROPUERTO ALFONSO LOPEZ - [28025502] |   10.4362 |   -73.2477 |       138 | Sinóptica Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2016-01-07 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_Histogram.png)
@@ -5695,6 +7567,18 @@ Statistics table
 | max   |    27.4     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                 |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-01-03 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1981-01-04 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1981-01-06 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
+| 1981-01-08 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
+| 1981-01-09 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.6 |      50 |           nan |              1200 |
+| 1981-01-10 00:00:00 |         28025090 | CENTENARIO HACIENDA [28025090] |   9.85025 |   -73.2655 |       100 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1976-12-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_Boxplot.png)
@@ -5732,6 +7616,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-04-01 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1981-04-02 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24   |      50 |           nan |              1200 |
+| 1981-04-04 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.2 |      50 |           nan |              1200 |
+| 1981-04-06 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1981-04-08 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.8 |      50 |           nan |              1200 |
+| 1981-04-11 00:00:00 |         25025250 | CHIRIGUANA [25025250] |   9.36103 |   -73.5934 |        40 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1973-06-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.2 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_Histogram.png)
@@ -5767,6 +7663,18 @@ Statistics table
 | max   |   26.8     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-02 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.3 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24   |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.3 |      50 |           nan |              1200 |
+| 1980-01-09 00:00:00 |         28015030 | CICOLAC [28015030] |   10.4833 |   -73.2667 |       180 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1964-01-15 00:00:00 | 1988-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.9 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_Boxplot.png)
@@ -5804,6 +7712,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                                  |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1987-09-14 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1987-09-15 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1987-09-16 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    25   |      50 |           nan |              1200 |
+| 1987-09-17 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    25.3 |      50 |           nan |              1200 |
+| 1987-09-18 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.2 |      50 |           nan |              1200 |
+| 1987-09-19 00:00:00 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    25.3 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_Histogram.png)
@@ -5839,6 +7759,18 @@ Statistics table
 | max   |   26.8     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                          | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:---------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-10-27 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.2 |      50 |           nan |              1200 |
+| 1983-10-28 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.6 |      50 |           nan |              1200 |
+| 1983-10-29 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.6 |      50 |           nan |              1200 |
+| 1983-10-30 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.6 |      50 |           nan |              1200 |
+| 1983-10-31 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.8 |      50 |           nan |              1200 |
+| 1983-11-01 00:00:00 |         23215060 | LA GLORIA [23215060] |   8.61528 |   -73.8006 |        35 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Cesar          | La Gloria   | 1995-05-15 00:00:00 | 2018-06-19 10:35:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_Boxplot.png)
@@ -5876,6 +7808,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria         | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio       | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.8 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.4 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025070 | MOTILONIA CODAZZI [28025070] |   10.0018 |   -73.2494 |       180 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Agustín Codazzi | 1956-01-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.6 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_Histogram.png)
@@ -5911,6 +7855,18 @@ Statistics table
 | max   |    26       |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-02-02 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.8 |      50 |           nan |              1200 |
+| 1980-02-03 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.6 |      50 |           nan |              1200 |
+| 1980-02-04 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.2 |      50 |           nan |              1200 |
+| 1980-02-05 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.8 |      50 |           nan |              1200 |
+| 1980-02-08 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19.8 |      50 |           nan |              1200 |
+| 1980-02-09 00:00:00 |         28025020 | RINCON EL [28025020] |   10.2714 |   -73.1314 |       350 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1964-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_Boxplot.png)
@@ -5948,6 +7904,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.2 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21   |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19.8 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    17.4 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20   |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28025040 | SAN JOSE D ORIENTE [28025040] |     10.35 |     -73.05 |       850 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1975-08-15 00:00:00 | 1998-05-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18   |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_Histogram.png)
@@ -5983,6 +7951,18 @@ Statistics table
 | max   |   27       |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.6 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28025080 | SOCOMBA [28025080] |   9.68667 |   -73.2406 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1976-12-15 00:00:00 | 2019-02-07 11:41:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_Boxplot.png)
@@ -6020,6 +8000,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1983-01-02 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    17.6 |      50 |           nan |              1200 |
+| 1983-01-03 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.4 |      50 |           nan |              1200 |
+| 1983-01-05 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18   |      50 |           nan |              1200 |
+| 1983-01-06 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.4 |      50 |           nan |              1200 |
+| 1983-01-07 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20   |      50 |           nan |              1200 |
+| 1983-01-09 00:00:00 |         28045020 | ALGARROBO [28045020] |     10.15 |   -74.0667 |        60 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1964-02-15 00:00:00 | 1987-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.8 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_Histogram.png)
@@ -6055,6 +8047,18 @@ Statistics table
 | max   |    28.6     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19.4 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19.6 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19   |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    17.6 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.4 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28035020 | CALLAO EL [28035020] |   10.3631 |   -73.3194 |       110 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_Boxplot.png)
@@ -6092,6 +8096,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1987-09-11 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1987-09-13 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    25   |      50 |           nan |              1200 |
+| 1987-09-14 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19   |      50 |           nan |              1200 |
+| 1987-09-15 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.4 |      50 |           nan |              1200 |
+| 1987-09-17 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.2 |      50 |           nan |              1200 |
+| 1987-09-18 00:00:00 |         28045040 | GUAIRA LA HACIENDA [28045040] |   9.61667 |      -73.8 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1987-09-15 00:00:00 | 1994-07-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.4 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_Histogram.png)
@@ -6127,6 +8143,18 @@ Statistics table
 | max   | 25.6     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion             |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 2012-12-01 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
+| 2012-12-02 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.8 |      50 |           nan |              1200 |
+| 2012-12-03 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.2 |      50 |           nan |              1200 |
+| 2012-12-04 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.4 |      50 |           nan |              1200 |
+| 2012-12-05 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.8 |      50 |           nan |              1200 |
+| 2012-12-06 00:00:00 |         28035070 | GUATAPURI - AUT [28035070] |   10.7321 |   -73.3924 |      1315 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2006-02-26 00:00:00 | 2018-06-11 10:25:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_Boxplot.png)
@@ -6164,6 +8192,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1981-06-01 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.2 |      50 |           nan |              1200 |
+| 1981-06-02 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24   |      50 |           nan |              1200 |
+| 1981-06-03 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.2 |      50 |           nan |              1200 |
+| 1981-06-05 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.8 |      50 |           nan |              1200 |
+| 1981-06-07 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.6 |      50 |           nan |              1200 |
+| 1981-06-08 00:00:00 |         28035040 | GUAYMARAL [28035040] |   9.90492 |   -73.6475 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_Histogram.png)
@@ -6199,6 +8239,18 @@ Statistics table
 | max   |    28.8     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-03 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.6 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         28035010 | VILLA ROSA [28035010] |   10.1907 |   -73.5474 |        70 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1968-03-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_Boxplot.png)
@@ -6236,6 +8288,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-09-05 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
+| 1980-09-06 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.6 |      50 |           nan |              1200 |
+| 1980-09-12 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.4 |      50 |           nan |              1200 |
+| 1980-09-14 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.6 |      50 |           nan |              1200 |
+| 1980-09-16 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
+| 1980-09-17 00:00:00 |         15065040 | LA PAULINA - AUT [15065040] |   10.8981 |   -72.8285 |       170 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 1966-09-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.2 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_Histogram.png)
@@ -6271,6 +8335,18 @@ Statistics table
 | max   |    26.2     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.5 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22   |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         28015070 | URUMITA [28015070] |   10.5664 |   -73.0164 |       255 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Urumita     | 1975-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.5 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_Boxplot.png)
@@ -6308,6 +8384,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1985-01-06 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.4 |      50 |           nan |              1200 |
+| 1985-01-07 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19.6 |      50 |           nan |              1200 |
+| 1985-01-08 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19   |      50 |           nan |              1200 |
+| 1985-01-09 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.8 |      50 |           nan |              1200 |
+| 1985-01-10 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.2 |      50 |           nan |              1200 |
+| 1985-01-11 00:00:00 |         25025002 | LOS ALAMOS - AUT [25025002] |   9.30406 |   -74.2736 |        25 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 2013-05-05 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    18.8 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_Histogram.png)
@@ -6343,6 +8431,18 @@ Statistics table
 | max   |   26.8     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion   |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23.2 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.8 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         15015020 | YE LA [15015020] |   10.9924 |   -74.2111 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1967-07-15 00:00:00 | 2019-02-07 11:34:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_Boxplot.png)
@@ -6380,6 +8480,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                   |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.2 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.2 |      50 |           nan |              1200 |
+| 1980-01-03 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.6 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.8 |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    25.2 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         25025090 | AEROPUERTO LAS FLORES [25025090] |   9.04633 |   -73.9708 |        34 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Banco    | 1952-02-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    24.6 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_Histogram.png)
@@ -6415,6 +8527,18 @@ Statistics table
 | max   |    27.4     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-03-01 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
+| 1980-03-02 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.4 |      50 |           nan |              1200 |
+| 1980-03-04 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.2 |      50 |           nan |              1200 |
+| 1980-03-05 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.4 |      50 |           nan |              1200 |
+| 1980-03-06 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.2 |      50 |           nan |              1200 |
+| 1980-03-07 00:00:00 |         29065020 | PADELMA [29065020] |   10.7211 |   -74.1997 |        20 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1967-08-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.6 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_Boxplot.png)
@@ -6452,6 +8576,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.4 |      50 |           nan |              1200 |
+| 1980-01-02 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.8 |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20   |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.4 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         29065030 | PRADO SEVILLA [29065030] |   10.7642 |   -74.1547 |        18 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1970-07-15 00:00:00 | 2019-02-07 11:32:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.6 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_Histogram.png)
@@ -6488,6 +8624,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio                   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------------|:--------------------|:------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1985-05-01 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.4 |      50 |           nan |              1200 |
+| 1985-05-02 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.6 |      50 |           nan |              1200 |
+| 1985-05-03 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.8 |      50 |           nan |              1200 |
+| 1985-05-04 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.6 |      50 |           nan |              1200 |
+| 1985-05-05 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.6 |      50 |           nan |              1200 |
+| 1985-05-06 00:00:00 |         25025300 | SEIS EL [25025300] |   9.68367 |   -74.3223 |        50 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | San Sebastián De Buenavista | 1984-11-15 00:00:00 | NaT               | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20.6 |      50 |           nan |              1200 |
+
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_Boxplot.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_Histogram.png)
@@ -6523,6 +8671,18 @@ Statistics table
 | max   |   25.2     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion    |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie          | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:--------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.4 |      50 |           nan |              1200 |
+| 1980-01-04 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    23   |      50 |           nan |              1200 |
+| 1980-01-05 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    20   |      50 |           nan |              1200 |
+| 1980-01-06 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    21.8 |      50 |           nan |              1200 |
+| 1980-01-07 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    22.6 |      50 |           nan |              1200 |
+| 1980-01-08 00:00:00 |         29065010 | ZACAPA [29065010] |   10.5833 |     -74.25 |        30 | Climática Ordinaria | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | El Retén    | 1967-07-15 00:00:00 | 1990-04-15 00:00:00 | TEMPERATURA   | TMN_CON    | Temperatura mínima diaria | Diaria       |    19.8 |      50 |           nan |              1200 |
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065010_Boxplot.png)
@@ -6565,6 +8725,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria         | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie         | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:-------------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 2008-10-20 00:00:00 |         29065130 | LA GRAN VIA - AUT [29065130] |     10.85 |   -74.1333 |        30 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 2008-01-10 00:00:00 | NaT               | EVAPORACION   | EV_TT_D    | Evaporación total diaria | Diaria       |       0 |      50 |           nan |               900 |
+| 2008-10-21 00:00:00 |         29065130 | LA GRAN VIA - AUT [29065130] |     10.85 |   -74.1333 |        30 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 2008-01-10 00:00:00 | NaT               | EVAPORACION   | EV_TT_D    | Evaporación total diaria | Diaria       |       0 |      -1 |           nan |               900 |
+| 2008-10-22 00:00:00 |         29065130 | LA GRAN VIA - AUT [29065130] |     10.85 |   -74.1333 |        30 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 2008-01-10 00:00:00 | NaT               | EVAPORACION   | EV_TT_D    | Evaporación total diaria | Diaria       |       0 |      -1 |           nan |               900 |
+| 2008-10-23 00:00:00 |         29065130 | LA GRAN VIA - AUT [29065130] |     10.85 |   -74.1333 |        30 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 2008-01-10 00:00:00 | NaT               | EVAPORACION   | EV_TT_D    | Evaporación total diaria | Diaria       |       0 |      -1 |           nan |               900 |
+| 2008-10-24 00:00:00 |         29065130 | LA GRAN VIA - AUT [29065130] |     10.85 |   -74.1333 |        30 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 2008-01-10 00:00:00 | NaT               | EVAPORACION   | EV_TT_D    | Evaporación total diaria | Diaria       |       0 |      -1 |           nan |               900 |
+| 2008-10-25 00:00:00 |         29065130 | LA GRAN VIA - AUT [29065130] |     10.85 |   -74.1333 |        30 | Agrometeorológica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 2008-01-10 00:00:00 | NaT               | EVAPORACION   | EV_TT_D    | Evaporación total diaria | Diaria       |       0 |      -1 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_TimeSerie.png)
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_Boxplot.png)
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_Histogram.png)
@@ -6606,6 +8778,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio         | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         25027400 | ALTO DEL ROSARIO [25027400] |   8.79444 |   -74.1603 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  128.4  |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         25027400 | ALTO DEL ROSARIO [25027400] |   8.79444 |   -74.1603 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   95.48 |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         25027400 | ALTO DEL ROSARIO [25027400] |   8.79444 |   -74.1603 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   49.44 |       4 | EST. INTERPOLACION |               900 |
+| 1980-04-01 00:00:00 |         25027400 | ALTO DEL ROSARIO [25027400] |   8.79444 |   -74.1603 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   68.57 |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         25027400 | ALTO DEL ROSARIO [25027400] |   8.79444 |   -74.1603 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  116.3  |      50 | nan                |               900 |
+| 1980-06-01 00:00:00 |         25027400 | ALTO DEL ROSARIO [25027400] |   8.79444 |   -74.1603 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  188.5  |      50 | nan                |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_Histogram.png)
@@ -6641,6 +8825,18 @@ Statistics table
 | max   | 4208.35  |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1980-01-01 00:00:00 |         25027360 | ARMENIA [25027360] |   8.89833 |     -74.39 |        22 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Pinillos    | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2350 |      50 | nan            |               900 |
+| 1980-02-01 00:00:00 |         25027360 | ARMENIA [25027360] |   8.89833 |     -74.39 |        22 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Pinillos    | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2090 |      50 | nan            |               900 |
+| 1980-03-01 00:00:00 |         25027360 | ARMENIA [25027360] |   8.89833 |     -74.39 |        22 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Pinillos    | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1723 |      50 | nan            |               900 |
+| 1980-04-01 00:00:00 |         25027360 | ARMENIA [25027360] |   8.89833 |     -74.39 |        22 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Pinillos    | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1796 |       4 | EST. REGRESION |               900 |
+| 1980-05-01 00:00:00 |         25027360 | ARMENIA [25027360] |   8.89833 |     -74.39 |        22 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Pinillos    | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2351 |       4 | EST. REGRESION |               900 |
+| 1980-06-01 00:00:00 |         25027360 | ARMENIA [25027360] |   8.89833 |     -74.39 |        22 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Pinillos    | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2750 |      50 | nan            |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_Boxplot.png)
@@ -6678,6 +8874,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1980-01-01 00:00:00 |         25027620 | CHAPETONA LA [25027620] |    8.8875 |   -73.9692 |        30 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1974-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  34.14  |       4 | EST. REGRESION |               900 |
+| 1980-02-01 00:00:00 |         25027620 | CHAPETONA LA [25027620] |    8.8875 |   -73.9692 |        30 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1974-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  22.07  |       4 | EST. REGRESION |               900 |
+| 1980-03-01 00:00:00 |         25027620 | CHAPETONA LA [25027620] |    8.8875 |   -73.9692 |        30 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1974-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.943 |       4 | EST. REGRESION |               900 |
+| 1980-04-01 00:00:00 |         25027620 | CHAPETONA LA [25027620] |    8.8875 |   -73.9692 |        30 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1974-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  16.31  |       4 | EST. REGRESION |               900 |
+| 1980-05-01 00:00:00 |         25027620 | CHAPETONA LA [25027620] |    8.8875 |   -73.9692 |        30 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1974-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  35.05  |       4 | EST. REGRESION |               900 |
+| 1980-06-01 00:00:00 |         25027620 | CHAPETONA LA [25027620] |    8.8875 |   -73.9692 |        30 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1974-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  56.95  |       4 | EST. REGRESION |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_Histogram.png)
@@ -6713,6 +8921,18 @@ Statistics table
 | max   | 7841.87 |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027490 | LAS AGUADAS [25027490] |      8.95 |     -74.05 |        27 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2761 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027490 | LAS AGUADAS [25027490] |      8.95 |     -74.05 |        27 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2394 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027490 | LAS AGUADAS [25027490] |      8.95 |     -74.05 |        27 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1843 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027490 | LAS AGUADAS [25027490] |      8.95 |     -74.05 |        27 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2219 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027490 | LAS AGUADAS [25027490] |      8.95 |     -74.05 |        27 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3003 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027490 | LAS AGUADAS [25027490] |      8.95 |     -74.05 |        27 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Martín De Loba | 1973-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3693 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_Boxplot.png)
@@ -6750,6 +8970,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio         | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027390 | PALOMAS LAS [25027390] |   8.83056 |   -74.1706 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2550 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027390 | PALOMAS LAS [25027390] |   8.83056 |   -74.1706 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2179 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027390 | PALOMAS LAS [25027390] |   8.83056 |   -74.1706 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1674 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027390 | PALOMAS LAS [25027390] |   8.83056 |   -74.1706 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1991 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027390 | PALOMAS LAS [25027390] |   8.83056 |   -74.1706 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2626 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027390 | PALOMAS LAS [25027390] |   8.83056 |   -74.1706 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Altos Del Rosario | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3229 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_Histogram.png)
@@ -6785,6 +9017,18 @@ Statistics table
 | max   | 7464    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         25027330 | PENONCITO [25027330] |   8.98972 |   -73.9472 |        28 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2902 |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         25027330 | PENONCITO [25027330] |   8.98972 |   -73.9472 |        28 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2421 |       4 | EST. INTERPOLACION |               900 |
+| 1980-03-01 00:00:00 |         25027330 | PENONCITO [25027330] |   8.98972 |   -73.9472 |        28 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2001 |      50 | nan                |               900 |
+| 1980-04-01 00:00:00 |         25027330 | PENONCITO [25027330] |   8.98972 |   -73.9472 |        28 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2414 |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         25027330 | PENONCITO [25027330] |   8.98972 |   -73.9472 |        28 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3423 |      50 | nan                |               900 |
+| 1980-06-01 00:00:00 |         25027330 | PENONCITO [25027330] |   8.98972 |   -73.9472 |        28 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | El Peñón    | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    4256 |       4 | EST. INTERPOLACION |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_Boxplot.png)
@@ -6822,6 +9066,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                          | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:---------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027410 | REGIDOR [25027410] |   8.66633 |   -73.8208 |        35 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Bolivar        | Regidor     | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2200 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027410 | REGIDOR [25027410] |   8.66633 |   -73.8208 |        35 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Bolivar        | Regidor     | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2118 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027410 | REGIDOR [25027410] |   8.66633 |   -73.8208 |        35 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Bolivar        | Regidor     | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1546 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027410 | REGIDOR [25027410] |   8.66633 |   -73.8208 |        35 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Bolivar        | Regidor     | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2282 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027410 | REGIDOR [25027410] |   8.66633 |   -73.8208 |        35 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Bolivar        | Regidor     | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3470 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027410 | REGIDOR [25027410] |   8.66633 |   -73.8208 |        35 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Bolivar        | Regidor     | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    4213 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_Histogram.png)
@@ -6857,6 +9113,18 @@ Statistics table
 | max   | 1489     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027320 | SAN ROQUE [25027320] |      9.07 |     -74.16 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  219.5  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027320 | SAN ROQUE [25027320] |      9.07 |     -74.16 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  118.8  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027320 | SAN ROQUE [25027320] |      9.07 |     -74.16 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   35.15 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027320 | SAN ROQUE [25027320] |      9.07 |     -74.16 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   75.56 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027320 | SAN ROQUE [25027320] |      9.07 |     -74.16 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  260.1  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027320 | SAN ROQUE [25027320] |      9.07 |     -74.16 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1972-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  425.6  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_Boxplot.png)
@@ -6894,6 +9162,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion         |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027420 | VICTORIA LA [25027420] |     8.965 |   -74.2208 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 198     |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027420 | VICTORIA LA [25027420] |     8.965 |   -74.2208 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 118.6   |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027420 | VICTORIA LA [25027420] |     8.965 |   -74.2208 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.306 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027420 | VICTORIA LA [25027420] |     8.965 |   -74.2208 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  63.54  |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027420 | VICTORIA LA [25027420] |     8.965 |   -74.2208 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 280.3   |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027420 | VICTORIA LA [25027420] |     8.965 |   -74.2208 |        24 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Margarita   | 1973-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 434.9   |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_Histogram.png)
@@ -6929,6 +9209,18 @@ Statistics table
 | max   | 4625     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio        | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-----------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         25027630 | RIO NUEVO [25027630] |   8.80972 |   -74.2544 |        23 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1971-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2480 |       4 | EST. REGRESION     |               900 |
+| 1980-02-01 00:00:00 |         25027630 | RIO NUEVO [25027630] |   8.80972 |   -74.2544 |        23 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1971-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2177 |       4 | EST. INTERPOLACION |               900 |
+| 1980-03-01 00:00:00 |         25027630 | RIO NUEVO [25027630] |   8.80972 |   -74.2544 |        23 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1971-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    1863 |       4 | EST. REGRESION     |               900 |
+| 1980-04-01 00:00:00 |         25027630 | RIO NUEVO [25027630] |   8.80972 |   -74.2544 |        23 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1971-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2119 |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         25027630 | RIO NUEVO [25027630] |   8.80972 |   -74.2544 |        23 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1971-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2702 |      50 | nan                |               900 |
+| 1980-06-01 00:00:00 |         25027630 | RIO NUEVO [25027630] |   8.80972 |   -74.2544 |        23 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | Barranco De Loba | 1971-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3163 |      50 | nan                |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_Boxplot.png)
@@ -6966,6 +9258,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1982-01-01 00:00:00 |         28017120 | ARIGUANI HACIENDA - AUT [28017120] |   10.5742 |    -73.397 |       550 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1980-12-15 00:00:00 | 2010-09-29 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.809 |       4 | EST. REGRESION |               900 |
+| 1982-02-01 00:00:00 |         28017120 | ARIGUANI HACIENDA - AUT [28017120] |   10.5742 |    -73.397 |       550 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1980-12-15 00:00:00 | 2010-09-29 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.162 |       4 | EST. REGRESION |               900 |
+| 1982-03-01 00:00:00 |         28017120 | ARIGUANI HACIENDA - AUT [28017120] |   10.5742 |    -73.397 |       550 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1980-12-15 00:00:00 | 2010-09-29 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.396 |      50 | nan            |               900 |
+| 1982-04-01 00:00:00 |         28017120 | ARIGUANI HACIENDA - AUT [28017120] |   10.5742 |    -73.397 |       550 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1980-12-15 00:00:00 | 2010-09-29 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.554 |       4 | EST. REGRESION |               900 |
+| 1982-05-01 00:00:00 |         28017120 | ARIGUANI HACIENDA - AUT [28017120] |   10.5742 |    -73.397 |       550 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1980-12-15 00:00:00 | 2010-09-29 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  32.77  |       4 | EST. REGRESION |               900 |
+| 1982-06-01 00:00:00 |         28017120 | ARIGUANI HACIENDA - AUT [28017120] |   10.5742 |    -73.397 |       550 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1980-12-15 00:00:00 | 2010-09-29 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  23.09  |       4 | EST. REGRESION |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_Histogram.png)
@@ -7001,6 +9305,18 @@ Statistics table
 | max   | 158.1    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027590 | CAIMANCITO [25027590] |   9.57114 |   -73.7947 |        40 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1974-07-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   54.68 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027590 | CAIMANCITO [25027590] |   9.57114 |   -73.7947 |        40 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1974-07-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   25.86 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027590 | CAIMANCITO [25027590] |   9.57114 |   -73.7947 |        40 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1974-07-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   12.85 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027590 | CAIMANCITO [25027590] |   9.57114 |   -73.7947 |        40 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1974-07-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   10.63 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027590 | CAIMANCITO [25027590] |   9.57114 |   -73.7947 |        40 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1974-07-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   41.51 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027590 | CAIMANCITO [25027590] |   9.57114 |   -73.7947 |        40 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Astrea      | 1974-07-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   68.01 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_Boxplot.png)
@@ -7038,6 +9354,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |    Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|---------:|--------:|--------------:|------------------:|
+| 2017-06-01 00:00:00 |         28017150 | CHEMESQUEMENA [28017150] |   10.7122 |   -73.4022 |      1160 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2014-01-10 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  7.90542 |       4 |           nan |               900 |
+| 2017-07-01 00:00:00 |         28017150 | CHEMESQUEMENA [28017150] |   10.7122 |   -73.4022 |      1160 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2014-01-10 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  5.59158 |       4 |           nan |               900 |
+| 2017-08-01 00:00:00 |         28017150 | CHEMESQUEMENA [28017150] |   10.7122 |   -73.4022 |      1160 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2014-01-10 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  7.43764 |       4 |           nan |               900 |
+| 2017-09-01 00:00:00 |         28017150 | CHEMESQUEMENA [28017150] |   10.7122 |   -73.4022 |      1160 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2014-01-10 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 11.532   |       4 |           nan |               900 |
+| 2017-10-01 00:00:00 |         28017150 | CHEMESQUEMENA [28017150] |   10.7122 |   -73.4022 |      1160 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2014-01-10 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 10.646   |       4 |           nan |               900 |
+| 2017-11-01 00:00:00 |         28017150 | CHEMESQUEMENA [28017150] |   10.7122 |   -73.4022 |      1160 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 2014-01-10 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      | 13.8526  |       4 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_Histogram.png)
@@ -7073,6 +9401,18 @@ Statistics table
 | max   |  95.94    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         28027030 | FLORES LAS [28027030] |   10.0965 |   -73.2435 |       112 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1962-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.045 |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         28027030 | FLORES LAS [28027030] |   10.0965 |   -73.2435 |       112 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1962-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.289 |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         28027030 | FLORES LAS [28027030] |   10.0965 |   -73.2435 |       112 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1962-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.617 |      50 | nan                |               900 |
+| 1980-04-01 00:00:00 |         28027030 | FLORES LAS [28027030] |   10.0965 |   -73.2435 |       112 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1962-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.055 |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         28027030 | FLORES LAS [28027030] |   10.0965 |   -73.2435 |       112 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1962-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.591 |       4 | EST. OTROS METODOS |               900 |
+| 1980-06-01 00:00:00 |         28027030 | FLORES LAS [28027030] |   10.0965 |   -73.2435 |       112 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | La Paz      | 1962-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.417 |      50 | nan                |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_Boxplot.png)
@@ -7110,6 +9450,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027080 | GRACIAS A DIOS HACIENDA [25027080] |   9.19447 |   -73.5765 |        46 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.381 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027080 | GRACIAS A DIOS HACIENDA [25027080] |   9.19447 |   -73.5765 |        46 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.961 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027080 | GRACIAS A DIOS HACIENDA [25027080] |   9.19447 |   -73.5765 |        46 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.481 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027080 | GRACIAS A DIOS HACIENDA [25027080] |   9.19447 |   -73.5765 |        46 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.956 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027080 | GRACIAS A DIOS HACIENDA [25027080] |   9.19447 |   -73.5765 |        46 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.024 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027080 | GRACIAS A DIOS HACIENDA [25027080] |   9.19447 |   -73.5765 |        46 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Curumaní    | 1963-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.053 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_Histogram.png)
@@ -7145,6 +9497,18 @@ Statistics table
 | max   |  17.66    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28027020 | MATILDE LA [28027020] |   10.1656 |   -73.2583 |       114 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1962-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.363 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28027020 | MATILDE LA [28027020] |   10.1656 |   -73.2583 |       114 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1962-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.7   |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28027020 | MATILDE LA [28027020] |   10.1656 |   -73.2583 |       114 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1962-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.833 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28027020 | MATILDE LA [28027020] |   10.1656 |   -73.2583 |       114 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1962-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.913 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28027020 | MATILDE LA [28027020] |   10.1656 |   -73.2583 |       114 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1962-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.913 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28027020 | MATILDE LA [28027020] |   10.1656 |   -73.2583 |       114 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | San Diego   | 1962-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.974 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_Boxplot.png)
@@ -7182,6 +9546,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28017110 | MINA LA [28017110] |   10.6867 |   -73.2698 |       429 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1969-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.582 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28017110 | MINA LA [28017110] |   10.6867 |   -73.2698 |       429 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1969-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.843 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28017110 | MINA LA [28017110] |   10.6867 |   -73.2698 |       429 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1969-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.695 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28017110 | MINA LA [28017110] |   10.6867 |   -73.2698 |       429 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1969-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.609 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28017110 | MINA LA [28017110] |   10.6867 |   -73.2698 |       429 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1969-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.121 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28017110 | MINA LA [28017110] |   10.6867 |   -73.2698 |       429 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1969-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.338 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_Histogram.png)
@@ -7217,6 +9593,18 @@ Statistics table
 | max   |  18.55    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         25027890 | PUENTE CARRETERA [25027890] |   9.34233 |   -73.4909 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1978-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.176 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         25027890 | PUENTE CARRETERA [25027890] |   9.34233 |   -73.4909 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1978-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.707 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         25027890 | PUENTE CARRETERA [25027890] |   9.34233 |   -73.4909 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1978-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.201 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         25027890 | PUENTE CARRETERA [25027890] |   9.34233 |   -73.4909 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1978-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.209 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         25027890 | PUENTE CARRETERA [25027890] |   9.34233 |   -73.4909 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1978-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.157 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         25027890 | PUENTE CARRETERA [25027890] |   9.34233 |   -73.4909 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Chiriguaná  | 1978-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.106 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_Boxplot.png)
@@ -7254,6 +9642,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1980-01-01 00:00:00 |         28017050 | REPOSO EL [28017050] |   10.5272 |   -73.3364 |       350 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1958-03-15 00:00:00 | 2019-02-07 11:41:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.391 |      50 | nan            |               900 |
+| 1980-02-01 00:00:00 |         28017050 | REPOSO EL [28017050] |   10.5272 |   -73.3364 |       350 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1958-03-15 00:00:00 | 2019-02-07 11:41:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.655 |       4 | EST. REGRESION |               900 |
+| 1980-03-01 00:00:00 |         28017050 | REPOSO EL [28017050] |   10.5272 |   -73.3364 |       350 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1958-03-15 00:00:00 | 2019-02-07 11:41:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.295 |       4 | EST. REGRESION |               900 |
+| 1980-04-01 00:00:00 |         28017050 | REPOSO EL [28017050] |   10.5272 |   -73.3364 |       350 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1958-03-15 00:00:00 | 2019-02-07 11:41:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.951 |       4 | EST. REGRESION |               900 |
+| 1980-05-01 00:00:00 |         28017050 | REPOSO EL [28017050] |   10.5272 |   -73.3364 |       350 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1958-03-15 00:00:00 | 2019-02-07 11:41:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  15.47  |      50 | nan            |               900 |
+| 1980-06-01 00:00:00 |         28017050 | REPOSO EL [28017050] |   10.5272 |   -73.3364 |       350 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1958-03-15 00:00:00 | 2019-02-07 11:41:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  15.7   |      50 | nan            |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_Histogram.png)
@@ -7289,6 +9689,18 @@ Statistics table
 | max   |  44         |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28027040 | SANTA TERESA [28027040] |   9.91594 |   -73.2837 |        80 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-11-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.944 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28027040 | SANTA TERESA [28027040] |   9.91594 |   -73.2837 |        80 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-11-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.519 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28027040 | SANTA TERESA [28027040] |   9.91594 |   -73.2837 |        80 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-11-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.377 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28027040 | SANTA TERESA [28027040] |   9.91594 |   -73.2837 |        80 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-11-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.449 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28027040 | SANTA TERESA [28027040] |   9.91594 |   -73.2837 |        80 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-11-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.657 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28027040 | SANTA TERESA [28027040] |   9.91594 |   -73.2837 |        80 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1962-11-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.437 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_Boxplot.png)
@@ -7326,6 +9738,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1980-01-01 00:00:00 |         28027050 | BECERRIL [28027050] |   9.68661 |   -73.2792 |       106 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1963-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.28  |       4 | EST. REGRESION |               900 |
+| 1980-02-01 00:00:00 |         28027050 | BECERRIL [28027050] |   9.68661 |   -73.2792 |       106 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1963-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.6   |       4 | EST. REGRESION |               900 |
+| 1980-03-01 00:00:00 |         28027050 | BECERRIL [28027050] |   9.68661 |   -73.2792 |       106 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1963-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.9   |       4 | EST. REGRESION |               900 |
+| 1980-04-01 00:00:00 |         28027050 | BECERRIL [28027050] |   9.68661 |   -73.2792 |       106 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1963-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.61  |       4 | EST. REGRESION |               900 |
+| 1980-05-01 00:00:00 |         28027050 | BECERRIL [28027050] |   9.68661 |   -73.2792 |       106 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1963-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.182 |      50 | nan            |               900 |
+| 1980-06-01 00:00:00 |         28027050 | BECERRIL [28027050] |   9.68661 |   -73.2792 |       106 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Becerrill   | 1963-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.933 |      50 | nan            |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_Histogram.png)
@@ -7361,6 +9785,18 @@ Statistics table
 | max   |  17.87    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037060 | CANTACLARO [28037060] |   10.0885 |   -73.7328 |       120 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.531 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037060 | CANTACLARO [28037060] |   10.0885 |   -73.7328 |       120 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.464 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037060 | CANTACLARO [28037060] |   10.0885 |   -73.7328 |       120 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.373 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037060 | CANTACLARO [28037060] |   10.0885 |   -73.7328 |       120 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.412 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037060 | CANTACLARO [28037060] |   10.0885 |   -73.7328 |       120 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.956 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037060 | CANTACLARO [28037060] |   10.0885 |   -73.7328 |       120 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.527 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_Boxplot.png)
@@ -7398,6 +9834,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                 |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037020 | CONVENCION HACIENDA [28037020] |   10.2678 |   -73.4171 |       104 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.411 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037020 | CONVENCION HACIENDA [28037020] |   10.2678 |   -73.4171 |       104 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.078 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037020 | CONVENCION HACIENDA [28037020] |   10.2678 |   -73.4171 |       104 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.438 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037020 | CONVENCION HACIENDA [28037020] |   10.2678 |   -73.4171 |       104 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.859 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037020 | CONVENCION HACIENDA [28037020] |   10.2678 |   -73.4171 |       104 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.568 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037020 | CONVENCION HACIENDA [28037020] |   10.2678 |   -73.4171 |       104 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.773 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_Histogram.png)
@@ -7433,6 +9881,18 @@ Statistics table
 | max   |  69.15    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1980-01-01 00:00:00 |         28027160 | ISLANDIA [28027160] |   9.63253 |   -73.6357 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1974-11-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.109 |      50 | nan            |               900 |
+| 1980-02-01 00:00:00 |         28027160 | ISLANDIA [28027160] |   9.63253 |   -73.6357 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1974-11-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.2   |      50 | nan            |               900 |
+| 1980-03-01 00:00:00 |         28027160 | ISLANDIA [28027160] |   9.63253 |   -73.6357 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1974-11-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.236 |      50 | nan            |               900 |
+| 1980-04-01 00:00:00 |         28027160 | ISLANDIA [28027160] |   9.63253 |   -73.6357 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1974-11-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.104 |       4 | EST. REGRESION |               900 |
+| 1980-05-01 00:00:00 |         28027160 | ISLANDIA [28027160] |   9.63253 |   -73.6357 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1974-11-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.358 |      50 | nan            |               900 |
+| 1980-06-01 00:00:00 |         28027160 | ISLANDIA [28027160] |   9.63253 |   -73.6357 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1974-11-15 00:00:00 | 2019-02-07 11:40:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.984 |      50 | nan            |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_Boxplot.png)
@@ -7470,6 +9930,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037040 | MARIANGOLA [28037040] |   10.1874 |   -73.5852 |        90 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.564 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037040 | MARIANGOLA [28037040] |   10.1874 |   -73.5852 |        90 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.212 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037040 | MARIANGOLA [28037040] |   10.1874 |   -73.5852 |        90 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.196 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037040 | MARIANGOLA [28037040] |   10.1874 |   -73.5852 |        90 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.186 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037040 | MARIANGOLA [28037040] |   10.1874 |   -73.5852 |        90 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.617 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037040 | MARIANGOLA [28037040] |   10.1874 |   -73.5852 |        90 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.387 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_Histogram.png)
@@ -7505,6 +9977,18 @@ Statistics table
 | max   |   6.531    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         28047020 | PUEBLO BELLO [28047020] |   10.4198 |   -73.5888 |      1125 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.224 |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         28047020 | PUEBLO BELLO [28047020] |   10.4198 |   -73.5888 |      1125 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.284 |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         28047020 | PUEBLO BELLO [28047020] |   10.4198 |   -73.5888 |      1125 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.594 |      50 | nan                |               900 |
+| 1980-04-01 00:00:00 |         28047020 | PUEBLO BELLO [28047020] |   10.4198 |   -73.5888 |      1125 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.709 |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         28047020 | PUEBLO BELLO [28047020] |   10.4198 |   -73.5888 |      1125 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.33  |       4 | EST. OTROS METODOS |               900 |
+| 1980-06-01 00:00:00 |         28047020 | PUEBLO BELLO [28047020] |   10.4198 |   -73.5888 |      1125 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pueblo Bello | 1963-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.199 |       4 | EST. OTROS METODOS |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_Boxplot.png)
@@ -7542,6 +10026,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037010 | PUENTE CALLAO [28037010] |   10.3629 |   -73.3174 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.424 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037010 | PUENTE CALLAO [28037010] |   10.3629 |   -73.3174 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.127 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037010 | PUENTE CALLAO [28037010] |   10.3629 |   -73.3174 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.098 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037010 | PUENTE CALLAO [28037010] |   10.3629 |   -73.3174 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.208 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037010 | PUENTE CALLAO [28037010] |   10.3629 |   -73.3174 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.11  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037010 | PUENTE CALLAO [28037010] |   10.3629 |   -73.3174 |       120 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.421 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_Histogram.png)
@@ -7577,6 +10073,18 @@ Statistics table
 | max   | 209.741     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                  |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037090 | PUENTE CANOAS  - AUT [28037090] |   9.64633 |   -73.6518 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1965-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  30.47  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037090 | PUENTE CANOAS  - AUT [28037090] |   9.64633 |   -73.6518 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1965-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  21.78  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037090 | PUENTE CANOAS  - AUT [28037090] |   9.64633 |   -73.6518 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1965-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.548 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037090 | PUENTE CANOAS  - AUT [28037090] |   9.64633 |   -73.6518 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1965-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.747 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037090 | PUENTE CANOAS  - AUT [28037090] |   9.64633 |   -73.6518 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1965-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  32.56  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037090 | PUENTE CANOAS  - AUT [28037090] |   9.64633 |   -73.6518 |        45 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Paso     | 1965-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  42.52  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_Boxplot.png)
@@ -7614,6 +10122,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037130 | PUENTE CARRETERA [28037130] |   10.1575 |   -73.6248 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.899 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037130 | PUENTE CARRETERA [28037130] |   10.1575 |   -73.6248 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.523 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037130 | PUENTE CARRETERA [28037130] |   10.1575 |   -73.6248 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.443 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037130 | PUENTE CARRETERA [28037130] |   10.1575 |   -73.6248 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.308 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037130 | PUENTE CARRETERA [28037130] |   10.1575 |   -73.6248 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.617 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037130 | PUENTE CARRETERA [28037130] |   10.1575 |   -73.6248 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1972-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.398 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_Histogram.png)
@@ -7649,6 +10169,18 @@ Statistics table
 | max   | 232.8    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                    |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28037030 | PUENTE SALGUERO  - AUT [28037030] |   10.3841 |   -73.2325 |       113 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  16.16  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28037030 | PUENTE SALGUERO  - AUT [28037030] |   10.3841 |   -73.2325 |       113 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.05  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28037030 | PUENTE SALGUERO  - AUT [28037030] |   10.3841 |   -73.2325 |       113 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.077 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28037030 | PUENTE SALGUERO  - AUT [28037030] |   10.3841 |   -73.2325 |       113 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   8.947 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28037030 | PUENTE SALGUERO  - AUT [28037030] |   10.3841 |   -73.2325 |       113 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  31.31  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28037030 | PUENTE SALGUERO  - AUT [28037030] |   10.3841 |   -73.2325 |       113 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Valledupar  | 1962-12-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  27.73  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_Boxplot.png)
@@ -7686,6 +10218,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1982-01-01 00:00:00 |         28047080 | BELLEZA LA [28047080] |   10.3333 |     -73.95 |       250 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1982-06-15 00:00:00 | 1992-09-15 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    13.8 |       4 | EST. REGRESION |               900 |
+| 1982-02-01 00:00:00 |         28047080 | BELLEZA LA [28047080] |   10.3333 |     -73.95 |       250 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1982-06-15 00:00:00 | 1992-09-15 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    15.2 |       4 | EST. REGRESION |               900 |
+| 1982-03-01 00:00:00 |         28047080 | BELLEZA LA [28047080] |   10.3333 |     -73.95 |       250 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1982-06-15 00:00:00 | 1992-09-15 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    10.8 |       4 | EST. REGRESION |               900 |
+| 1982-04-01 00:00:00 |         28047080 | BELLEZA LA [28047080] |   10.3333 |     -73.95 |       250 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1982-06-15 00:00:00 | 1992-09-15 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    16.4 |       4 | EST. REGRESION |               900 |
+| 1982-05-01 00:00:00 |         28047080 | BELLEZA LA [28047080] |   10.3333 |     -73.95 |       250 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1982-06-15 00:00:00 | 1992-09-15 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    21.8 |       4 | EST. REGRESION |               900 |
+| 1982-06-01 00:00:00 |         28047080 | BELLEZA LA [28047080] |   10.3333 |     -73.95 |       250 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1982-06-15 00:00:00 | 1992-09-15 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    27.6 |       4 | EST. REGRESION |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_Histogram.png)
@@ -7721,6 +10265,18 @@ Statistics table
 | max   |  13.65    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28047040 | PUENTE CARRETERA [28047040] |    10.271 |   -73.9727 |       151 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1963-02-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.46  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28047040 | PUENTE CARRETERA [28047040] |    10.271 |   -73.9727 |       151 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1963-02-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.998 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28047040 | PUENTE CARRETERA [28047040] |    10.271 |   -73.9727 |       151 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1963-02-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.747 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28047040 | PUENTE CARRETERA [28047040] |    10.271 |   -73.9727 |       151 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1963-02-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.715 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28047040 | PUENTE CARRETERA [28047040] |    10.271 |   -73.9727 |       151 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1963-02-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.161 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28047040 | PUENTE CARRETERA [28047040] |    10.271 |   -73.9727 |       151 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | El Copey    | 1963-02-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.479 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_Boxplot.png)
@@ -7758,6 +10314,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion            |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 2012-04-01 00:00:00 |         15067210 | CARACOLI - AUT [15067210] |   10.9501 |    -73.051 |       460 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2011-01-12 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   8.695 |      50 |           nan |               900 |
+| 2012-05-01 00:00:00 |         15067210 | CARACOLI - AUT [15067210] |   10.9501 |    -73.051 |       460 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2011-01-12 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  13.27  |      50 |           nan |               900 |
+| 2012-06-01 00:00:00 |         15067210 | CARACOLI - AUT [15067210] |   10.9501 |    -73.051 |       460 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2011-01-12 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.892 |      50 |           nan |               900 |
+| 2012-07-01 00:00:00 |         15067210 | CARACOLI - AUT [15067210] |   10.9501 |    -73.051 |       460 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2011-01-12 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.521 |      50 |           nan |               900 |
+| 2012-08-01 00:00:00 |         15067210 | CARACOLI - AUT [15067210] |   10.9501 |    -73.051 |       460 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2011-01-12 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.911 |      50 |           nan |               900 |
+| 2012-09-01 00:00:00 |         15067210 | CARACOLI - AUT [15067210] |   10.9501 |    -73.051 |       460 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2011-01-12 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.135 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_Histogram.png)
@@ -7793,6 +10361,18 @@ Statistics table
 | max   |  27.85    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         15067020 | CERCADO EL-AUTOMAT [15067020] |   10.9075 |   -73.0083 |       335 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2004-04-09 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.81  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         15067020 | CERCADO EL-AUTOMAT [15067020] |   10.9075 |   -73.0083 |       335 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2004-04-09 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.829 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         15067020 | CERCADO EL-AUTOMAT [15067020] |   10.9075 |   -73.0083 |       335 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2004-04-09 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.833 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         15067020 | CERCADO EL-AUTOMAT [15067020] |   10.9075 |   -73.0083 |       335 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2004-04-09 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.31  |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         15067020 | CERCADO EL-AUTOMAT [15067020] |   10.9075 |   -73.0083 |       335 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2004-04-09 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.285 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         15067020 | CERCADO EL-AUTOMAT [15067020] |   10.9075 |   -73.0083 |       335 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2004-04-09 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.346 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_Boxplot.png)
@@ -7830,6 +10410,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion              |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28017080 | CORRAL DE PIEDRA [28017080] |   10.8189 |   -73.0551 |       275 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.865 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28017080 | CORRAL DE PIEDRA [28017080] |   10.8189 |   -73.0551 |       275 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.751 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28017080 | CORRAL DE PIEDRA [28017080] |   10.8189 |   -73.0551 |       275 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.655 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28017080 | CORRAL DE PIEDRA [28017080] |   10.8189 |   -73.0551 |       275 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.847 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28017080 | CORRAL DE PIEDRA [28017080] |   10.8189 |   -73.0551 |       275 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.373 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28017080 | CORRAL DE PIEDRA [28017080] |   10.8189 |   -73.0551 |       275 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 1970-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.24  |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_Histogram.png)
@@ -7865,6 +10457,18 @@ Statistics table
 | max   |  38.9706  |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion               |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 2010-06-01 00:00:00 |         15067200 | EL SILENCIO - AUT [15067200] |   10.9171 |   -72.9153 |       255 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2010-06-25 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.725 |      50 |           nan |               900 |
+| 2010-07-01 00:00:00 |         15067200 | EL SILENCIO - AUT [15067200] |   10.9171 |   -72.9153 |       255 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2010-06-25 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   8.645 |      50 |           nan |               900 |
+| 2010-08-01 00:00:00 |         15067200 | EL SILENCIO - AUT [15067200] |   10.9171 |   -72.9153 |       255 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2010-06-25 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.524 |      50 |           nan |               900 |
+| 2010-09-01 00:00:00 |         15067200 | EL SILENCIO - AUT [15067200] |   10.9171 |   -72.9153 |       255 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2010-06-25 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.858 |      50 |           nan |               900 |
+| 2010-10-01 00:00:00 |         15067200 | EL SILENCIO - AUT [15067200] |   10.9171 |   -72.9153 |       255 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2010-06-25 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.15  |      50 |           nan |               900 |
+| 2010-11-01 00:00:00 |         15067200 | EL SILENCIO - AUT [15067200] |   10.9171 |   -72.9153 |       255 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Fonseca     | 2010-06-25 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  12.69  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_Boxplot.png)
@@ -7902,6 +10506,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-07-01 00:00:00 |         15067080 | MAGUEYES LOS [15067080] |   10.9467 |   -72.7723 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1980-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.544 |      50 |           nan |               900 |
+| 1980-08-01 00:00:00 |         15067080 | MAGUEYES LOS [15067080] |   10.9467 |   -72.7723 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1980-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.78  |      50 |           nan |               900 |
+| 1980-09-01 00:00:00 |         15067080 | MAGUEYES LOS [15067080] |   10.9467 |   -72.7723 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1980-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.88  |      50 |           nan |               900 |
+| 1980-10-01 00:00:00 |         15067080 | MAGUEYES LOS [15067080] |   10.9467 |   -72.7723 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1980-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.82  |      50 |           nan |               900 |
+| 1980-11-01 00:00:00 |         15067080 | MAGUEYES LOS [15067080] |   10.9467 |   -72.7723 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1980-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.48  |      50 |           nan |               900 |
+| 1980-12-01 00:00:00 |         15067080 | MAGUEYES LOS [15067080] |   10.9467 |   -72.7723 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1980-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.15  |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_Histogram.png)
@@ -7937,6 +10553,18 @@ Statistics table
 | max   |   0.936     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1987-08-01 00:00:00 |         15067130 | POZO HONDO [15067130] |   10.9986 |   -72.8196 |       210 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1987-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.12  |      50 | nan                |               900 |
+| 1987-09-01 00:00:00 |         15067130 | POZO HONDO [15067130] |   10.9986 |   -72.8196 |       210 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1987-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.271 |       4 | EST. OTROS METODOS |               900 |
+| 1987-10-01 00:00:00 |         15067130 | POZO HONDO [15067130] |   10.9986 |   -72.8196 |       210 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1987-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.499 |      50 | nan                |               900 |
+| 1987-11-01 00:00:00 |         15067130 | POZO HONDO [15067130] |   10.9986 |   -72.8196 |       210 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1987-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.357 |      50 | nan                |               900 |
+| 1987-12-01 00:00:00 |         15067130 | POZO HONDO [15067130] |   10.9986 |   -72.8196 |       210 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1987-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.168 |       4 | EST. OTROS METODOS |               900 |
+| 1988-01-01 00:00:00 |         15067130 | POZO HONDO [15067130] |   10.9986 |   -72.8196 |       210 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 1987-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.038 |      50 | nan                |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_Boxplot.png)
@@ -7974,6 +10602,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                  |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 2008-11-01 00:00:00 |         15067150 | PUENTE GUAJIRO - AUT [15067150] |   10.9264 |   -72.8044 |       485 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  25     |       4 |           nan |               900 |
+| 2008-12-01 00:00:00 |         15067150 | PUENTE GUAJIRO - AUT [15067150] |   10.9264 |   -72.8044 |       485 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.57  |       4 |           nan |               900 |
+| 2009-04-01 00:00:00 |         15067150 | PUENTE GUAJIRO - AUT [15067150] |   10.9264 |   -72.8044 |       485 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.934 |      50 |           nan |               900 |
+| 2009-05-01 00:00:00 |         15067150 | PUENTE GUAJIRO - AUT [15067150] |   10.9264 |   -72.8044 |       485 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.64  |      50 |           nan |               900 |
+| 2009-06-01 00:00:00 |         15067150 | PUENTE GUAJIRO - AUT [15067150] |   10.9264 |   -72.8044 |       485 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.68  |      50 |           nan |               900 |
+| 2009-07-01 00:00:00 |         15067150 | PUENTE GUAJIRO - AUT [15067150] |   10.9264 |   -72.8044 |       485 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.517 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_Histogram.png)
@@ -8009,6 +10649,18 @@ Statistics table
 | max   |  71.51    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 2008-12-01 00:00:00 |         15067170 | SAN FRANCISCO [15067170] |   10.9912 |   -72.7561 |       450 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.19  |       4 | nan                |               900 |
+| 2009-01-01 00:00:00 |         15067170 | SAN FRANCISCO [15067170] |   10.9912 |   -72.7561 |       450 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.381 |       4 | EST. OTROS METODOS |               900 |
+| 2009-02-01 00:00:00 |         15067170 | SAN FRANCISCO [15067170] |   10.9912 |   -72.7561 |       450 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.026 |       4 | EST. OTROS METODOS |               900 |
+| 2009-03-01 00:00:00 |         15067170 | SAN FRANCISCO [15067170] |   10.9912 |   -72.7561 |       450 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.079 |      50 | nan                |               900 |
+| 2009-04-01 00:00:00 |         15067170 | SAN FRANCISCO [15067170] |   10.9912 |   -72.7561 |       450 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.76  |      50 | nan                |               900 |
+| 2009-05-01 00:00:00 |         15067170 | SAN FRANCISCO [15067170] |   10.9912 |   -72.7561 |       450 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | Barrancas   | 2008-07-22 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  20.31  |       4 | EST. OTROS METODOS |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_Boxplot.png)
@@ -8046,6 +10698,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio          | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 2010-01-01 00:00:00 |         28017140 | CORRAL DE PIEDRA  - AUT [28017140] |     10.83 |     -73.07 |       275 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2004-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   76114 |      50 | nan                |               900 |
+| 2010-04-01 00:00:00 |         28017140 | CORRAL DE PIEDRA  - AUT [28017140] |     10.83 |     -73.07 |       275 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2004-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   50138 |       4 | EST. OTROS METODOS |               900 |
+| 2010-06-01 00:00:00 |         28017140 | CORRAL DE PIEDRA  - AUT [28017140] |     10.83 |     -73.07 |       275 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2004-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   43005 |      50 | nan                |               900 |
+| 2010-07-01 00:00:00 |         28017140 | CORRAL DE PIEDRA  - AUT [28017140] |     10.83 |     -73.07 |       275 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2004-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   39460 |      50 | nan                |               900 |
+| 2010-08-01 00:00:00 |         28017140 | CORRAL DE PIEDRA  - AUT [28017140] |     10.83 |     -73.07 |       275 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2004-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   55519 |      50 | nan                |               900 |
+| 2010-09-01 00:00:00 |         28017140 | CORRAL DE PIEDRA  - AUT [28017140] |     10.83 |     -73.07 |       275 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | La Guajira     | San Juan Del Cesar | 2004-09-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   23669 |       4 | EST. OTROS METODOS |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_Histogram.png)
@@ -8081,6 +10745,18 @@ Statistics table
 | max   |  65.28    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28047010 | AURORA LA [28047010] |   10.2769 |   -73.9778 |       150 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1961-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  16.83  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28047010 | AURORA LA [28047010] |   10.2769 |   -73.9778 |       150 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1961-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.81  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28047010 | AURORA LA [28047010] |   10.2769 |   -73.9778 |       150 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1961-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.395 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28047010 | AURORA LA [28047010] |   10.2769 |   -73.9778 |       150 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1961-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.16  |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28047010 | AURORA LA [28047010] |   10.2769 |   -73.9778 |       150 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1961-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  14.74  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28047010 | AURORA LA [28047010] |   10.2769 |   -73.9778 |       150 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1961-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  13.48  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_Boxplot.png)
@@ -8118,6 +10794,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29067050 | CANAL FLORIDA [29067050] |   10.7589 |   -74.1066 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.816 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29067050 | CANAL FLORIDA [29067050] |   10.7589 |   -74.1066 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.224 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29067050 | CANAL FLORIDA [29067050] |   10.7589 |   -74.1066 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.774 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29067050 | CANAL FLORIDA [29067050] |   10.7589 |   -74.1066 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.763 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29067050 | CANAL FLORIDA [29067050] |   10.7589 |   -74.1066 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.16  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29067050 | CANAL FLORIDA [29067050] |   10.7589 |   -74.1066 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.72  |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_Histogram.png)
@@ -8153,6 +10841,18 @@ Statistics table
 | max   | 9171    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion            |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         25027020 | EL BANCO - AUT [25027020] |   8.99253 |   -73.9694 |        29 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1934-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3231 |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         25027020 | EL BANCO - AUT [25027020] |   8.99253 |   -73.9694 |        29 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1934-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2680 |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         25027020 | EL BANCO - AUT [25027020] |   8.99253 |   -73.9694 |        29 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1934-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2004 |      50 | nan                |               900 |
+| 1980-04-01 00:00:00 |         25027020 | EL BANCO - AUT [25027020] |   8.99253 |   -73.9694 |        29 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1934-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    2468 |       4 | EST. INTERPOLACION |               900 |
+| 1980-05-01 00:00:00 |         25027020 | EL BANCO - AUT [25027020] |   8.99253 |   -73.9694 |        29 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1934-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    3474 |      50 | nan                |               900 |
+| 1980-06-01 00:00:00 |         25027020 | EL BANCO - AUT [25027020] |   8.99253 |   -73.9694 |        29 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Magdalena      | El Banco    | 1934-01-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |    4393 |      50 | nan                |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_Boxplot.png)
@@ -8190,6 +10890,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29067120 | FUNDACION [29067120] |   10.5233 |   -74.1828 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   21.44 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29067120 | FUNDACION [29067120] |   10.5233 |   -74.1828 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   14.8  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29067120 | FUNDACION [29067120] |   10.5233 |   -74.1828 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   11.41 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29067120 | FUNDACION [29067120] |   10.5233 |   -74.1828 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   14.45 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29067120 | FUNDACION [29067120] |   10.5233 |   -74.1828 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   27.01 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29067120 | FUNDACION [29067120] |   10.5233 |   -74.1828 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Fundación   | 1958-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   26.77 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_Histogram.png)
@@ -8225,6 +10937,18 @@ Statistics table
 | max   |  63.14   |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                 |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio             | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:----------------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         28047050 | PALMARIGUANI  - AUT [28047050] |   9.93097 |   -73.9588 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1978-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.28  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         28047050 | PALMARIGUANI  - AUT [28047050] |   9.93097 |   -73.9588 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1978-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.622 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         28047050 | PALMARIGUANI  - AUT [28047050] |   9.93097 |   -73.9588 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1978-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.342 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         28047050 | PALMARIGUANI  - AUT [28047050] |   9.93097 |   -73.9588 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1978-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.354 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         28047050 | PALMARIGUANI  - AUT [28047050] |   9.93097 |   -73.9588 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1978-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.43  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         28047050 | PALMARIGUANI  - AUT [28047050] |   9.93097 |   -73.9588 |        80 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ariguaní (El Dificil) | 1978-10-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  14.84  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_Boxplot.png)
@@ -8262,6 +10986,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                         |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         29067060 | PUERTO RICO HACIENDA  - AUT [29067060] |      10.5 |   -74.1333 |        55 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1967-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  17.88  |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         29067060 | PUERTO RICO HACIENDA  - AUT [29067060] |      10.5 |   -74.1333 |        55 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1967-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  12.67  |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         29067060 | PUERTO RICO HACIENDA  - AUT [29067060] |      10.5 |   -74.1333 |        55 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1967-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.948 |      50 | nan                |               900 |
+| 1980-04-01 00:00:00 |         29067060 | PUERTO RICO HACIENDA  - AUT [29067060] |      10.5 |   -74.1333 |        55 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1967-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  12.16  |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         29067060 | PUERTO RICO HACIENDA  - AUT [29067060] |      10.5 |   -74.1333 |        55 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1967-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  21.65  |       4 | EST. OTROS METODOS |               900 |
+| 1980-06-01 00:00:00 |         29067060 | PUERTO RICO HACIENDA  - AUT [29067060] |      10.5 |   -74.1333 |        55 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1967-06-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  22.44  |       4 | EST. OTROS METODOS |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_Histogram.png)
@@ -8297,6 +11033,18 @@ Statistics table
 | max   |  59.47    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29067070 | RIO FRIO [29067070] |   10.9054 |   -74.1541 |        30 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1978-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.213 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29067070 | RIO FRIO [29067070] |   10.9054 |   -74.1541 |        30 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1978-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.03  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29067070 | RIO FRIO [29067070] |   10.9054 |   -74.1541 |        30 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1978-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.847 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29067070 | RIO FRIO [29067070] |   10.9054 |   -74.1541 |        30 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1978-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.362 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29067070 | RIO FRIO [29067070] |   10.9054 |   -74.1541 |        30 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1978-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   6.935 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29067070 | RIO FRIO [29067070] |   10.9054 |   -74.1541 |        30 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1978-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  10.37  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_Boxplot.png)
@@ -8334,6 +11082,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion           |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio     | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:-------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:--------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29067040 | SANTA ROSALIA [29067040] |   10.8308 |   -74.1206 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.514 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29067040 | SANTA ROSALIA [29067040] |   10.8308 |   -74.1206 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.482 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29067040 | SANTA ROSALIA [29067040] |   10.8308 |   -74.1206 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.312 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29067040 | SANTA ROSALIA [29067040] |   10.8308 |   -74.1206 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   0.483 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29067040 | SANTA ROSALIA [29067040] |   10.8308 |   -74.1206 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.623 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29067040 | SANTA ROSALIA [29067040] |   10.8308 |   -74.1206 |        55 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Zona Bananera | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   1.814 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_Histogram.png)
@@ -8369,6 +11129,18 @@ Statistics table
 | max   | 119       |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion       |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1980-01-01 00:00:00 |         29067010 | TREBOL EL [29067010] |   10.6359 |   -74.1463 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1958-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.281 |       4 | EST. REGRESION |               900 |
+| 1980-02-01 00:00:00 |         29067010 | TREBOL EL [29067010] |   10.6359 |   -74.1463 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1958-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.391 |       4 | EST. REGRESION |               900 |
+| 1980-03-01 00:00:00 |         29067010 | TREBOL EL [29067010] |   10.6359 |   -74.1463 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1958-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.966 |       4 | EST. REGRESION |               900 |
+| 1980-04-01 00:00:00 |         29067010 | TREBOL EL [29067010] |   10.6359 |   -74.1463 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1958-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.533 |       4 | EST. REGRESION |               900 |
+| 1980-05-01 00:00:00 |         29067010 | TREBOL EL [29067010] |   10.6359 |   -74.1463 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1958-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  15.07  |       4 | EST. REGRESION |               900 |
+| 1980-06-01 00:00:00 |         29067010 | TREBOL EL [29067010] |   10.6359 |   -74.1463 |        60 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1958-03-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  15.27  |       4 | EST. REGRESION |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_Boxplot.png)
@@ -8406,6 +11178,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                     |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:-----------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         29067150 | GANADERIA CARIBE  - AUT [29067150] |   10.5749 |   -74.1267 |        67 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.91  |      50 | nan                |               900 |
+| 1980-02-01 00:00:00 |         29067150 | GANADERIA CARIBE  - AUT [29067150] |   10.5749 |   -74.1267 |        67 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.24  |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         29067150 | GANADERIA CARIBE  - AUT [29067150] |   10.5749 |   -74.1267 |        67 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.87  |      50 | nan                |               900 |
+| 1980-04-01 00:00:00 |         29067150 | GANADERIA CARIBE  - AUT [29067150] |   10.5749 |   -74.1267 |        67 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.844 |      50 | nan                |               900 |
+| 1980-05-01 00:00:00 |         29067150 | GANADERIA CARIBE  - AUT [29067150] |   10.5749 |   -74.1267 |        67 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  18.39  |       4 | EST. OTROS METODOS |               900 |
+| 1980-06-01 00:00:00 |         29067150 | GANADERIA CARIBE  - AUT [29067150] |   10.5749 |   -74.1267 |        67 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  18.07  |       4 | EST. OTROS METODOS |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_Histogram.png)
@@ -8441,6 +11225,18 @@ Statistics table
 | max   |  97.6     |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         29067130 | PUENTE FERROCARRIL [29067130] |   10.5858 |   -74.1921 |        37 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.851 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         29067130 | PUENTE FERROCARRIL [29067130] |   10.5858 |   -74.1921 |        37 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.309 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         29067130 | PUENTE FERROCARRIL [29067130] |   10.5858 |   -74.1921 |        37 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.634 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         29067130 | PUENTE FERROCARRIL [29067130] |   10.5858 |   -74.1921 |        37 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.554 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         29067130 | PUENTE FERROCARRIL [29067130] |   10.5858 |   -74.1921 |        37 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  18.75  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         29067130 | PUENTE FERROCARRIL [29067130] |   10.5858 |   -74.1921 |        37 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Aracataca   | 1965-05-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  16.48  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_Boxplot.png)
@@ -8478,6 +11274,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                   |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador    |   NivelAprobacion |
+|:--------------------|-----------------:|:---------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:---------------|------------------:|
+| 1982-01-01 00:00:00 |         29067160 | PUENTE SEVILLA  - AUT [29067160] |   10.7988 |   -74.0286 |        10 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1982-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.595 |       4 | EST. REGRESION |               900 |
+| 1982-02-01 00:00:00 |         29067160 | PUENTE SEVILLA  - AUT [29067160] |   10.7988 |   -74.0286 |        10 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1982-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   2.123 |       4 | EST. REGRESION |               900 |
+| 1982-03-01 00:00:00 |         29067160 | PUENTE SEVILLA  - AUT [29067160] |   10.7988 |   -74.0286 |        10 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1982-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.027 |       4 | EST. REGRESION |               900 |
+| 1982-04-01 00:00:00 |         29067160 | PUENTE SEVILLA  - AUT [29067160] |   10.7988 |   -74.0286 |        10 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1982-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.103 |       4 | EST. REGRESION |               900 |
+| 1982-05-01 00:00:00 |         29067160 | PUENTE SEVILLA  - AUT [29067160] |   10.7988 |   -74.0286 |        10 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1982-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   3.592 |       4 | EST. REGRESION |               900 |
+| 1982-06-01 00:00:00 |         29067160 | PUENTE SEVILLA  - AUT [29067160] |   10.7988 |   -74.0286 |        10 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Magdalena      | Ciénaga     | 1982-07-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  13.77  |       4 | EST. REGRESION |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_Histogram.png)
@@ -8513,6 +11321,18 @@ Statistics table
 | max   | 340.3    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion      |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16067020 | CABLE EL [16067020] |   8.67639 |   -72.9497 |       110 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1976-08-15 00:00:00 | 2001-04-20 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   68.34 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16067020 | CABLE EL [16067020] |   8.67639 |   -72.9497 |       110 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1976-08-15 00:00:00 | 2001-04-20 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   54.4  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16067020 | CABLE EL [16067020] |   8.67639 |   -72.9497 |       110 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1976-08-15 00:00:00 | 2001-04-20 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   41.71 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16067020 | CABLE EL [16067020] |   8.67639 |   -72.9497 |       110 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1976-08-15 00:00:00 | 2001-04-20 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   42.16 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16067020 | CABLE EL [16067020] |   8.67639 |   -72.9497 |       110 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1976-08-15 00:00:00 | 2001-04-20 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   46.58 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16067020 | CABLE EL [16067020] |   8.67639 |   -72.9497 |       110 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1976-08-15 00:00:00 | 2001-04-20 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   52.65 |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_Boxplot.png)
@@ -8550,6 +11370,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado | Calificador        |   NivelAprobacion |
+|:--------------------|-----------------:|:----------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|:-------------------|------------------:|
+| 1980-01-01 00:00:00 |         16037040 | CAMPO SEIS [16037040] |   8.60111 |   -72.8086 |        70 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   9.241 |       4 | EST. INTERPOLACION |               900 |
+| 1980-02-01 00:00:00 |         16037040 | CAMPO SEIS [16037040] |   8.60111 |   -72.8086 |        70 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   5.077 |      50 | nan                |               900 |
+| 1980-03-01 00:00:00 |         16037040 | CAMPO SEIS [16037040] |   8.60111 |   -72.8086 |        70 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   4.551 |       4 | EST. OTROS METODOS |               900 |
+| 1980-04-01 00:00:00 |         16037040 | CAMPO SEIS [16037040] |   8.60111 |   -72.8086 |        70 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   7.708 |       4 | EST. OTROS METODOS |               900 |
+| 1980-05-01 00:00:00 |         16037040 | CAMPO SEIS [16037040] |   8.60111 |   -72.8086 |        70 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   8.676 |       4 | EST. OTROS METODOS |               900 |
+| 1980-06-01 00:00:00 |         16037040 | CAMPO SEIS [16037040] |   8.60111 |   -72.8086 |        70 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1973-04-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  11.41  |      50 | nan                |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_Histogram.png)
@@ -8586,6 +11418,18 @@ Statistics table
 
 </div>
 
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion          |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension     | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:--------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16047020 | PUENTE TARRA [16047020] |   8.58861 |   -73.0811 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1971-11-15 00:00:00 | 2014-06-18 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   32.22 |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16047020 | PUENTE TARRA [16047020] |   8.58861 |   -73.0811 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1971-11-15 00:00:00 | 2014-06-18 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   27.17 |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16047020 | PUENTE TARRA [16047020] |   8.58861 |   -73.0811 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1971-11-15 00:00:00 | 2014-06-18 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   18.51 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16047020 | PUENTE TARRA [16047020] |   8.58861 |   -73.0811 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1971-11-15 00:00:00 | 2014-06-18 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   20.74 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16047020 | PUENTE TARRA [16047020] |   8.58861 |   -73.0811 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1971-11-15 00:00:00 | 2014-06-18 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   20.94 |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16047020 | PUENTE TARRA [16047020] |   8.58861 |   -73.0811 |       140 | Limnimétrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | El Tarra    | 1971-11-15 00:00:00 | 2014-06-18 00:00:00 | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   22.89 |      50 |           nan |               900 |
+
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_Boxplot.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_Histogram.png)
@@ -8621,6 +11465,18 @@ Statistics table
 | max   | 914.8    |
 
 </div>
+
+
+Station records head sample
+
+| Fecha               |   CodigoEstacion | NombreEstacion                        |   Latitud |   Longitud |   Altitud | Categoria    | Entidad                                                     | AreaOperativa                          | Departamento       | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie     | Frecuencia   |   Valor |   Grado |   Calificador |   NivelAprobacion |
+|:--------------------|-----------------:|:--------------------------------------|----------:|-----------:|----------:|:-------------|:------------------------------------------------------------|:---------------------------------------|:-------------------|:------------|:--------------------|:------------------|:--------------|:-----------|:---------------------|:-------------|--------:|--------:|--------------:|------------------:|
+| 1980-01-01 00:00:00 |         16067010 | PUERTO BARCO-GABARRA - AUT [16067010] |   9.00361 |      -72.9 |        19 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1969-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  149.3  |      50 |           nan |               900 |
+| 1980-02-01 00:00:00 |         16067010 | PUERTO BARCO-GABARRA - AUT [16067010] |   9.00361 |      -72.9 |        19 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1969-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   87.4  |      50 |           nan |               900 |
+| 1980-03-01 00:00:00 |         16067010 | PUERTO BARCO-GABARRA - AUT [16067010] |   9.00361 |      -72.9 |        19 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1969-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   52.39 |      50 |           nan |               900 |
+| 1980-04-01 00:00:00 |         16067010 | PUERTO BARCO-GABARRA - AUT [16067010] |   9.00361 |      -72.9 |        19 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1969-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |   73.03 |      50 |           nan |               900 |
+| 1980-05-01 00:00:00 |         16067010 | PUERTO BARCO-GABARRA - AUT [16067010] |   9.00361 |      -72.9 |        19 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1969-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  117.3  |      50 |           nan |               900 |
+| 1980-06-01 00:00:00 |         16067010 | PUERTO BARCO-GABARRA - AUT [16067010] |   9.00361 |      -72.9 |        19 | Limnigráfica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 08 - Santanderes-Arauca | Norte De Santander | Tibú        | 1969-08-15 00:00:00 | NaT               | CAUDAL        | Q_MEDIA_M  | Caudal medio mensual | Mensual      |  102.7  |      50 |           nan |               900 |
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_Boxplot.png)

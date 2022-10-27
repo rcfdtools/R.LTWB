@@ -64,9 +64,9 @@ station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_insta
 ideam_regs = station_df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records' % ideam_regs)
 print(station_df.info())
-print_log('\nStation records sample for head\n')
+print_log('\nDataframe records head sample\n')
 print_log(station_df.head(sample_records).to_markdown())
-print_log('\nStation records sample for tail\n')
+print_log('\nDataframe records tail sample\n')
 print_log(station_df.tail(sample_records).to_markdown())
 
 # Slice data from each parameter and station
@@ -91,16 +91,17 @@ for parameter in parameter_list:
         filter = station_name + ' == "' + station + '"'
         df = station_df1.query(filter)
         #df.set_index(date_record_name, inplace=True) # Already indexed in station_df1
-        #print(df)
         print_log('\n\n**%s - Station: %s (%s rec.)**' %(parameter, station, df.shape[0]), center_div=True)
         print_log('Statistics table', center_div=True)
         print_log(df[value_name].describe().to_markdown(), center_div=True)
+        print_log('\nStation records head sample\n')
+        print_log(df.head(sample_records).to_markdown())
         fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
         fig.set_ylabel(value_name)
         plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_TimeSerie.png'
         plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
+        print_log('\n![R.LTWB](Graph/%s)' % fig_name, center_div=False)
         plt.close('all') # After the fig is saved, close the fig release memory and clean the plot
         fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size+1), grid=False)
         plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
