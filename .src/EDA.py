@@ -85,14 +85,8 @@ for parameter in parameter_list:
     station_df1 = station_df.query(parameter_name)  # Filter for parameter
     station_df1 = station_df1[(station_df[date_record_name] >= str(start_year) + '-01-01') & (station_df[date_record_name] <= str(end_year) + '-12-31')]  # Filter per date range
     ideam_regs_query = station_df1.shape[0]
-    #print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
-    print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, str(station_df1[tag_desc_name][0]), parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
-    '''
-    if station_df1[tag_desc_name][0]:
-        print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, str(station_df1[tag_desc_name][0]), parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
-    else:
-        print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
-    '''
+    print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    #print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, station_df1[tag_desc_name][0], parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
     pivot_name = 'Pivot_' + parameter + '.csv'
     print_log('\nPivot table: [%s](%s)' %(pivot_name, pivot_name))
     fig_name = 'Plot_' + parameter + '_TimeSerie.png'

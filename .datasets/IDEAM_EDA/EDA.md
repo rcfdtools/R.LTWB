@@ -1,7 +1,7 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-27 17:58:43.152686
+* Fecha y hora de inicio de ejecución: 2022-10-27 18:08:09.247949
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib versión: 3.6.0
