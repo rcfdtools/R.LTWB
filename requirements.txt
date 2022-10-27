@@ -4,4 +4,5 @@ pandas
 matplotlib
 rasterio
 requests
+tabulate
 #seaborn

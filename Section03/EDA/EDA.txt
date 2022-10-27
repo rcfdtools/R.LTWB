@@ -1,8 +1,8 @@
 Ok. Segmentar datos dentro de la ventana de tiempo definida, p.ej., 1981 - 2021.
+Ok. Crear pivot tables para cada variable.
+Graficar series por estación para cada variable.
 Calcular en cada estación la longitud registrada de series para cada variable IDEAM descargada.
 Comparar la longitud hipotética de series en cada estación con la longitud registrada.
-Graficar series por estación para cada variable.
-Crear pivot tables para cada variable.
 
 
 References
@@ -13,7 +13,22 @@ References
 * https://www.w3schools.com/python/pandas/ref_df_describe.asp
 * https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
 * https://stackoverflow.com/questions/29370057/select-dataframe-rows-between-two-dates
+* https://www.dataquest.io/blog/tutorial-time-series-analysis-with-pandas/
+* https://www.statology.org/pandas-plot-distribution-of-column/
+* https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.kde.html
+* https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0
 
 
 Others
 * Descarga, organización y análisis de datos hidrometeorologicos IDEAM con Google Colaboratory, QGIS https://www.youtube.com/watch?v=MDo0-18Vvtw
+
+* https://www.projectpro.io/recipes/deal-with-missing-values-in-timeseries-in-python
+
+* https://towardsdatascience.com/how-to-plot-time-series-86b5358197d6
+
+
+
+#print(station_df)
+#df = station_df.groupby('CodigoEstacion')
+#df = station_df.groupby('CodigoEstacion').mean()
+#print('\n' + df.to_markdown())
