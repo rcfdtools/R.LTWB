@@ -106,7 +106,7 @@ for parameter in parameter_list:
         plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_Boxplot.png'
         plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=True)
+        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
         plt.close('all')
         fig = df.plot.hist(column=value_name, bins=histogram_binds, alpha=0.9, figsize=(fig_size, fig_size), colormap=plot_colormap, edgecolor='white', legend=False)
         plt.title('Histogram for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)

@@ -1,7 +1,7 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-27 15:47:58.101438
+* Fecha y hora de inicio de ejecución: 2022-10-27 15:53:32.567758
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib versión: 3.6.0
@@ -71,13 +71,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025330_DensityKDE.png)
 
@@ -113,13 +107,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23210020_DensityKDE.png)
 
@@ -155,13 +143,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215060_DensityKDE.png)
 
@@ -197,13 +179,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_23215050_DensityKDE.png)
 
@@ -239,13 +215,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020670_DensityKDE.png)
 
@@ -281,13 +251,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021640_DensityKDE.png)
 
@@ -323,13 +287,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021590_DensityKDE.png)
 
@@ -365,13 +323,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020090_DensityKDE.png)
 
@@ -407,13 +359,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020650_DensityKDE.png)
 
@@ -449,13 +395,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020660_DensityKDE.png)
 
@@ -491,13 +431,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040150_DensityKDE.png)
 
@@ -533,13 +467,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040360_DensityKDE.png)
 
@@ -575,13 +503,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060150_DensityKDE.png)
 
@@ -617,13 +539,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060560_DensityKDE.png)
 
@@ -659,13 +575,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060040_DensityKDE.png)
 
@@ -701,13 +611,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060200_DensityKDE.png)
 
@@ -743,13 +647,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040100_DensityKDE.png)
 
@@ -785,13 +683,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021630_DensityKDE.png)
 
@@ -827,13 +719,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040140_DensityKDE.png)
 
@@ -869,13 +755,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060100_DensityKDE.png)
 
@@ -911,13 +791,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060350_DensityKDE.png)
 
@@ -953,13 +827,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060030_DensityKDE.png)
 
@@ -995,13 +863,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060140_DensityKDE.png)
 
@@ -1037,13 +899,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060060_DensityKDE.png)
 
@@ -1079,13 +935,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060190_DensityKDE.png)
 
@@ -1121,13 +971,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060170_DensityKDE.png)
 
@@ -1163,13 +1007,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065020_DensityKDE.png)
 
@@ -1205,13 +1043,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060270_DensityKDE.png)
 
@@ -1247,13 +1079,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060240_DensityKDE.png)
 
@@ -1289,13 +1115,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065010_DensityKDE.png)
 
@@ -1331,13 +1151,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060180_DensityKDE.png)
 
@@ -1373,13 +1187,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060340_DensityKDE.png)
 
@@ -1415,13 +1223,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060330_DensityKDE.png)
 
@@ -1457,13 +1259,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060220_DensityKDE.png)
 
@@ -1499,13 +1295,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29065030_DensityKDE.png)
 
@@ -1541,13 +1331,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060250_DensityKDE.png)
 
@@ -1583,13 +1367,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060550_DensityKDE.png)
 
@@ -1625,13 +1403,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060290_DensityKDE.png)
 
@@ -1667,13 +1439,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060070_DensityKDE.png)
 
@@ -1709,13 +1475,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060230_DensityKDE.png)
 
@@ -1751,13 +1511,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060160_DensityKDE.png)
 
@@ -1793,13 +1547,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060210_DensityKDE.png)
 
@@ -1835,13 +1583,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060280_DensityKDE.png)
 
@@ -1877,13 +1619,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060310_DensityKDE.png)
 
@@ -1919,13 +1655,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060120_DensityKDE.png)
 
@@ -1961,13 +1691,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15015020_DensityKDE.png)
 
@@ -2003,13 +1727,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16060010_DensityKDE.png)
 
@@ -2045,13 +1763,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070030_DensityKDE.png)
 
@@ -2087,13 +1799,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070040_DensityKDE.png)
 
@@ -2129,13 +1835,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16050240_DensityKDE.png)
 
@@ -2171,13 +1871,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070020_DensityKDE.png)
 
@@ -2213,13 +1907,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_16070010_DensityKDE.png)
 
@@ -2255,13 +1943,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020220_DensityKDE.png)
 
@@ -2297,13 +1979,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020240_DensityKDE.png)
 
@@ -2339,13 +2015,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021240_DensityKDE.png)
 
@@ -2381,13 +2051,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025250_DensityKDE.png)
 
@@ -2423,13 +2087,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021580_DensityKDE.png)
 
@@ -2465,13 +2123,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020250_DensityKDE.png)
 
@@ -2507,13 +2159,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020690_DensityKDE.png)
 
@@ -2549,13 +2195,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020920_DensityKDE.png)
 
@@ -2591,13 +2231,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020260_DensityKDE.png)
 
@@ -2633,13 +2267,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020270_DensityKDE.png)
 
@@ -2675,13 +2303,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025090_DensityKDE.png)
 
@@ -2717,13 +2339,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020230_DensityKDE.png)
 
@@ -2759,13 +2375,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020230_DensityKDE.png)
 
@@ -2801,13 +2411,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020280_DensityKDE.png)
 
@@ -2843,13 +2447,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040310_DensityKDE.png)
 
@@ -2885,13 +2483,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040350_DensityKDE.png)
 
@@ -2927,13 +2519,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020080_DensityKDE.png)
 
@@ -2969,13 +2555,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020420_DensityKDE.png)
 
@@ -3011,13 +2591,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025080_DensityKDE.png)
 
@@ -3053,13 +2627,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021650_DensityKDE.png)
 
@@ -3095,13 +2663,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040030_DensityKDE.png)
 
@@ -3137,13 +2699,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020460_DensityKDE.png)
 
@@ -3179,13 +2735,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020150_DensityKDE.png)
 
@@ -3221,13 +2771,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035040_DensityKDE.png)
 
@@ -3263,13 +2807,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040270_DensityKDE.png)
 
@@ -3305,13 +2843,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025070_DensityKDE.png)
 
@@ -3347,13 +2879,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040070_DensityKDE.png)
 
@@ -3389,13 +2915,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040400_DensityKDE.png)
 
@@ -3431,13 +2951,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020600_DensityKDE.png)
 
@@ -3473,13 +2987,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020440_DensityKDE.png)
 
@@ -3515,13 +3023,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020310_DensityKDE.png)
 
@@ -3557,13 +3059,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030190_DensityKDE.png)
 
@@ -3599,13 +3095,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040200_DensityKDE.png)
 
@@ -3641,13 +3131,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020590_DensityKDE.png)
 
@@ -3683,13 +3167,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010370_DensityKDE.png)
 
@@ -3725,13 +3203,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040060_DensityKDE.png)
 
@@ -3767,13 +3239,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025020_DensityKDE.png)
 
@@ -3809,13 +3275,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28020410_DensityKDE.png)
 
@@ -3851,13 +3311,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010070_DensityKDE.png)
 
@@ -3893,13 +3347,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035010_DensityKDE.png)
 
@@ -3935,13 +3383,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010360_DensityKDE.png)
 
@@ -3977,13 +3419,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28035020_DensityKDE.png)
 
@@ -4019,13 +3455,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040170_DensityKDE.png)
 
@@ -4061,13 +3491,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010020_DensityKDE.png)
 
@@ -4103,13 +3527,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010040_DensityKDE.png)
 
@@ -4145,13 +3563,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040010_DensityKDE.png)
 
@@ -4187,13 +3599,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28030220_DensityKDE.png)
 
@@ -4229,13 +3635,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28025040_DensityKDE.png)
 
@@ -4271,13 +3671,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_29060090_DensityKDE.png)
 
@@ -4313,13 +3707,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010140_DensityKDE.png)
 
@@ -4355,13 +3743,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010090_DensityKDE.png)
 
@@ -4397,13 +3779,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28045010_DensityKDE.png)
 
@@ -4439,13 +3815,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010130_DensityKDE.png)
 
@@ -4481,13 +3851,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060080_DensityKDE.png)
 
@@ -4523,13 +3887,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060150_DensityKDE.png)
 
@@ -4565,13 +3923,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010200_DensityKDE.png)
 
@@ -4607,13 +3959,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060070_DensityKDE.png)
 
@@ -4649,13 +3995,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15065040_DensityKDE.png)
 
@@ -4691,13 +4031,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010280_DensityKDE.png)
 
@@ -4733,13 +4067,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_15060050_DensityKDE.png)
 
@@ -4775,13 +4103,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28015070_DensityKDE.png)
 
@@ -4817,13 +4139,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28010340_DensityKDE.png)
 
@@ -4859,13 +4175,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025090_DensityKDE.png)
 
@@ -4901,13 +4211,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040320_DensityKDE.png)
 
@@ -4943,13 +4247,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021620_DensityKDE.png)
 
@@ -4985,13 +4283,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021040_DensityKDE.png)
 
@@ -5027,13 +4319,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021200_DensityKDE.png)
 
@@ -5069,13 +4355,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021500_DensityKDE.png)
 
@@ -5111,13 +4391,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021380_DensityKDE.png)
 
@@ -5153,13 +4427,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020900_DensityKDE.png)
 
@@ -5195,13 +4463,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25025300_DensityKDE.png)
 
@@ -5237,13 +4499,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_28040300_DensityKDE.png)
 
@@ -5279,13 +4535,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021540_DensityKDE.png)
 
@@ -5321,13 +4571,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020880_DensityKDE.png)
 
@@ -5363,13 +4607,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020890_DensityKDE.png)
 
@@ -5405,13 +4643,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021320_DensityKDE.png)
 
@@ -5447,13 +4679,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25020870_DensityKDE.png)
 
@@ -5489,13 +4715,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_Histogram.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_25021090_DensityKDE.png)
 
@@ -5536,13 +4756,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045020_DensityKDE.png)
 
@@ -5578,13 +4792,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025090_DensityKDE.png)
 
@@ -5620,13 +4828,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025250_DensityKDE.png)
 
@@ -5662,13 +4864,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025330_DensityKDE.png)
 
@@ -5704,13 +4900,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28045040_DensityKDE.png)
 
@@ -5746,13 +4936,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035040_DensityKDE.png)
 
@@ -5788,13 +4972,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_23215060_DensityKDE.png)
 
@@ -5830,13 +5008,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025070_DensityKDE.png)
 
@@ -5872,13 +5044,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025080_DensityKDE.png)
 
@@ -5914,13 +5080,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035010_DensityKDE.png)
 
@@ -5956,13 +5116,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025502_DensityKDE.png)
 
@@ -5998,13 +5152,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035020_DensityKDE.png)
 
@@ -6040,13 +5188,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015030_DensityKDE.png)
 
@@ -6082,13 +5224,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28035070_DensityKDE.png)
 
@@ -6124,13 +5260,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025020_DensityKDE.png)
 
@@ -6166,13 +5296,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28025040_DensityKDE.png)
 
@@ -6208,13 +5332,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15065040_DensityKDE.png)
 
@@ -6250,13 +5368,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_28015070_DensityKDE.png)
 
@@ -6292,13 +5404,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025090_DensityKDE.png)
 
@@ -6334,13 +5440,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025002_DensityKDE.png)
 
@@ -6376,13 +5476,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065020_DensityKDE.png)
 
@@ -6418,13 +5512,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065030_DensityKDE.png)
 
@@ -6460,13 +5548,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_25025300_DensityKDE.png)
 
@@ -6502,13 +5584,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_15015020_DensityKDE.png)
 
@@ -6544,13 +5620,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMX_CON_29065010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMX_CON_29065010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMX_CON_29065010_Histogram.png)
 ![R.LTWB](Graph/Plot_TMX_CON_29065010_DensityKDE.png)
 
@@ -6591,13 +5661,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025502_DensityKDE.png)
 
@@ -6633,13 +5697,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025090_DensityKDE.png)
 
@@ -6675,13 +5733,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025250_DensityKDE.png)
 
@@ -6717,13 +5769,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28015030_DensityKDE.png)
 
@@ -6759,13 +5805,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025330_DensityKDE.png)
 
@@ -6801,13 +5841,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_23215060_DensityKDE.png)
 
@@ -6843,13 +5877,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025070_DensityKDE.png)
 
@@ -6885,13 +5913,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025020_DensityKDE.png)
 
@@ -6927,13 +5949,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025040_DensityKDE.png)
 
@@ -6969,13 +5985,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28025080_DensityKDE.png)
 
@@ -7011,13 +6021,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045020_DensityKDE.png)
 
@@ -7053,13 +6057,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035020_DensityKDE.png)
 
@@ -7095,13 +6093,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28045040_DensityKDE.png)
 
@@ -7137,13 +6129,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035070_DensityKDE.png)
 
@@ -7179,13 +6165,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035040_DensityKDE.png)
 
@@ -7221,13 +6201,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28035010_DensityKDE.png)
 
@@ -7263,13 +6237,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15065040_DensityKDE.png)
 
@@ -7305,13 +6273,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_28015070_DensityKDE.png)
 
@@ -7347,13 +6309,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025002_DensityKDE.png)
 
@@ -7389,13 +6345,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_15015020_DensityKDE.png)
 
@@ -7431,13 +6381,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025090_DensityKDE.png)
 
@@ -7473,13 +6417,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065020_DensityKDE.png)
 
@@ -7515,13 +6453,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065030_DensityKDE.png)
 
@@ -7557,13 +6489,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_25025300_DensityKDE.png)
 
@@ -7599,13 +6525,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_TMN_CON_29065010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_TMN_CON_29065010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_TMN_CON_29065010_Histogram.png)
 ![R.LTWB](Graph/Plot_TMN_CON_29065010_DensityKDE.png)
 
@@ -7646,13 +6566,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_Histogram.png)
 ![R.LTWB](Graph/Plot_EV_TT_D_29065130_DensityKDE.png)
 
@@ -7693,13 +6607,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027400_DensityKDE.png)
 
@@ -7735,13 +6643,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027360_DensityKDE.png)
 
@@ -7777,13 +6679,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027620_DensityKDE.png)
 
@@ -7819,13 +6715,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027490_DensityKDE.png)
 
@@ -7861,13 +6751,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027390_DensityKDE.png)
 
@@ -7903,13 +6787,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027330_DensityKDE.png)
 
@@ -7945,13 +6823,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027410_DensityKDE.png)
 
@@ -7987,13 +6859,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027320_DensityKDE.png)
 
@@ -8029,13 +6895,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027420_DensityKDE.png)
 
@@ -8071,13 +6931,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027630_DensityKDE.png)
 
@@ -8113,13 +6967,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017120_DensityKDE.png)
 
@@ -8155,13 +7003,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027590_DensityKDE.png)
 
@@ -8197,13 +7039,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017150_DensityKDE.png)
 
@@ -8239,13 +7075,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027030_DensityKDE.png)
 
@@ -8281,13 +7111,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027080_DensityKDE.png)
 
@@ -8323,13 +7147,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027020_DensityKDE.png)
 
@@ -8365,13 +7183,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017110_DensityKDE.png)
 
@@ -8407,13 +7219,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027890_DensityKDE.png)
 
@@ -8449,13 +7255,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017050_DensityKDE.png)
 
@@ -8491,13 +7291,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027040_DensityKDE.png)
 
@@ -8533,13 +7327,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027050_DensityKDE.png)
 
@@ -8575,13 +7363,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037060_DensityKDE.png)
 
@@ -8617,13 +7399,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037020_DensityKDE.png)
 
@@ -8659,13 +7435,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28027160_DensityKDE.png)
 
@@ -8701,13 +7471,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037040_DensityKDE.png)
 
@@ -8743,13 +7507,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047020_DensityKDE.png)
 
@@ -8785,13 +7543,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037010_DensityKDE.png)
 
@@ -8827,13 +7579,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037090_DensityKDE.png)
 
@@ -8869,13 +7615,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037130_DensityKDE.png)
 
@@ -8911,13 +7651,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28037030_DensityKDE.png)
 
@@ -8953,13 +7687,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047080_DensityKDE.png)
 
@@ -8995,13 +7723,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047040_DensityKDE.png)
 
@@ -9037,13 +7759,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067210_DensityKDE.png)
 
@@ -9079,13 +7795,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067020_DensityKDE.png)
 
@@ -9121,13 +7831,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017080_DensityKDE.png)
 
@@ -9163,13 +7867,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067200_DensityKDE.png)
 
@@ -9205,13 +7903,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067080_DensityKDE.png)
 
@@ -9247,13 +7939,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067130_DensityKDE.png)
 
@@ -9289,13 +7975,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067150_DensityKDE.png)
 
@@ -9331,13 +8011,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_15067170_DensityKDE.png)
 
@@ -9373,13 +8047,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28017140_DensityKDE.png)
 
@@ -9415,13 +8083,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047010_DensityKDE.png)
 
@@ -9457,13 +8119,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067050_DensityKDE.png)
 
@@ -9499,13 +8155,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_25027020_DensityKDE.png)
 
@@ -9541,13 +8191,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067120_DensityKDE.png)
 
@@ -9583,13 +8227,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_28047050_DensityKDE.png)
 
@@ -9625,13 +8263,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067060_DensityKDE.png)
 
@@ -9667,13 +8299,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067070_DensityKDE.png)
 
@@ -9709,13 +8335,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067040_DensityKDE.png)
 
@@ -9751,13 +8371,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067010_DensityKDE.png)
 
@@ -9793,13 +8407,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067150_DensityKDE.png)
 
@@ -9835,13 +8443,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067130_DensityKDE.png)
 
@@ -9877,13 +8479,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_29067160_DensityKDE.png)
 
@@ -9919,13 +8515,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067020_DensityKDE.png)
 
@@ -9961,13 +8551,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16037040_DensityKDE.png)
 
@@ -10003,13 +8587,7 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16047020_DensityKDE.png)
 
@@ -10045,12 +8623,6 @@ Statistics table
 </div>
 
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_TimeSerie.png)
-
-<div align="center">
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_Boxplot.png)
-
-</div>
-
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_Histogram.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_16067010_DensityKDE.png)
