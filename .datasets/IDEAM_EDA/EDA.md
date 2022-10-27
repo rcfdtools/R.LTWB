@@ -1,9 +1,9 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
-* Archivo de resultados: D:/R.LTWB/Section03/EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-24 16:58:39.987456
+* Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
+* Fecha y hora de inicio de ejecución: 2022-10-27 07:28:25.887087
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools.wiki', 'D:\\R.HydroTools']
+* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.HydroTools', 'D:\\R.GISPython']
 * matplotlib versión: 3.6.0
 * Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/EDA
 * Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md

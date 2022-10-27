@@ -29,7 +29,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
-path = 'D:/R.LTWB/Section03/EDA/'  # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
+path = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
 station_file_chirps = 'IDEAMJoinedChirps.csv'  # Output IDEAM records with the Chirps values
 station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv'  # Output IDEAM correlations with Chirps for each date
 station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv'  # Output IDEAM correlations with Chirps - mean
@@ -37,11 +37,6 @@ station_file_corr_year = 'IDEAMJoinedChirpsCorrelationYear.csv'  # Output IDEAM 
 station_file_corr_month = 'IDEAMJoinedChirpsCorrelationMonth.csv'  # Output IDEAM correlations with Chirps for each month
 file_log_name = path + 'EDA.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
-url_server = 'https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/'
-plot_raster = False  # Plot every geogrid
-remove_temp_file_comp = True  # Remove all the compressed Chirps files downloaded after processing
-remove_temp_file_geogrid = True  # Remove all the Chirps geogrid files after processing
-remove_temp_file_csv = False  # Remove all .csv sliced files after processing
 station_name = 'CodigoEstacion'  # IDEAM station code name
 date_install_name = 'FechaInstalacion'  # IDEAM installation date field name
 date_suspend_name = 'FechaSuspension'  # IDEAM suspension date field name
