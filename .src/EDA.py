@@ -45,6 +45,7 @@ sample_records = 3 # Records to show in the sample table head and tail
 histogram_binds = 12
 fig_size = 5 # Height size for figures plot
 print_table_sample = True
+update_stations_EDA = False
 year_start = 1980  # Chirps values starts at 1981
 year_end = 2021  # This value have to correspond with the end of the IDEAM series
 
@@ -55,6 +56,7 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
           '\n* Python versión: ' + str(sys.version) +
           '\n* Python rutas: ' + str(sys.path[0:5]) +
           '\n* matplotlib versión: ' + str(matplotlib.__version__) +
+          '\n* Print table samples: ' + str(print_table_sample) +
           '\n* Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/EDA'
           '\n* Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
           '\n* Créditos: r.cfdtools@gmail.com')
@@ -89,47 +91,47 @@ for parameter in parameter_list:
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
 
     # Data analysis per station
-    station_df1.set_index(date_record_name, inplace=True)
-    station_list = station_df1[station_name].unique()
-    for station in station_list:
-        filter = station_name + ' == "' + station + '"'
-        df = station_df1.query(filter)
-        #df.set_index(date_record_name, inplace=True) # Already indexed in station_df1
-        print_log('\n\n**%s - Station: %s (%s rec.)**' %(parameter, station, df.shape[0]), center_div=True)
-        print_log('Statistics table', center_div=True)
-        print_log(df[value_name].describe().to_markdown(), center_div=True)
-        if print_table_sample:
-            print_log('\nStation records head sample\n')
-            print_log(df.head(sample_records).to_markdown())
-        fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
-        fig.set_ylabel(value_name)
-        plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
-        fig_name = 'Plot_' + parameter + '_' + station + '_TimeSerie.png'
-        plt.savefig(path + 'Graph/' + fig_name)
-        print_log('\n![R.LTWB](Graph/%s)' % fig_name, center_div=False)
-        plt.close('all') # After the fig is saved, close the fig release memory and clean the plot
-        fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size+1), grid=False)
-        plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
-        fig_name = 'Plot_' + parameter + '_' + station + '_Boxplot.png'
-        plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
-        plt.close('all')
-        fig = df.plot.hist(column=value_name, bins=histogram_binds, alpha=0.9, figsize=(fig_size, fig_size+1), colormap=plot_colormap, edgecolor='white', legend=False)
-        plt.title('Histogram for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
-        fig_name = 'Plot_' + parameter + '_' + station + '_Histogram.png'
-        plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
-        plt.close('all')  # After the fig is saved, close the fig release memory
-        fig = df[value_name].plot.kde(colormap=plot_colormap, figsize=(fig_size, fig_size+1))
-        plt.title('KDE density for %s - Station %s (%d rec.)' % (parameter, station, df.shape[0]), fontsize = 10)
-        fig_name = 'Plot_' + parameter + '_' + station + '_DensityKDE.png'
-        plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
-        plt.close('all')
+    if update_stations_EDA:
+        station_df1.set_index(date_record_name, inplace=True)
+        station_list = station_df1[station_name].unique()
+        for station in station_list:
+            filter = station_name + ' == "' + station + '"'
+            df = station_df1.query(filter)
+            #df.set_index(date_record_name, inplace=True) # Already indexed in station_df1
+            print_log('\n\n**%s - Station: %s (%s rec.)**' %(parameter, station, df.shape[0]), center_div=True)
+            print_log('Statistics table', center_div=True)
+            print_log(df[value_name].describe().to_markdown(), center_div=True)
+            if print_table_sample:
+                print_log('\nStation records head sample\n')
+                print_log(df.head(sample_records).to_markdown())
+            fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
+            fig.set_ylabel(value_name)
+            plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
+            fig_name = 'Plot_' + parameter + '_' + station + '_TimeSerie.png'
+            plt.savefig(path + 'Graph/' + fig_name)
+            print_log('\n![R.LTWB](Graph/%s)' % fig_name, center_div=False)
+            plt.close('all') # After the fig is saved, close the fig release memory and clean the plot
+            fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size+1), grid=False)
+            plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
+            fig_name = 'Plot_' + parameter + '_' + station + '_Boxplot.png'
+            plt.savefig(path + 'Graph/' + fig_name)
+            print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
+            plt.close('all')
+            fig = df.plot.hist(column=value_name, bins=histogram_binds, alpha=0.9, figsize=(fig_size, fig_size+1), colormap=plot_colormap, edgecolor='white', legend=False)
+            plt.title('Histogram for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
+            fig_name = 'Plot_' + parameter + '_' + station + '_Histogram.png'
+            plt.savefig(path + 'Graph/' + fig_name)
+            print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
+            plt.close('all')  # After the fig is saved, close the fig release memory
+            fig = df[value_name].plot.kde(colormap=plot_colormap, figsize=(fig_size, fig_size+1))
+            plt.title('KDE density for %s - Station %s (%d rec.)' % (parameter, station, df.shape[0]), fontsize = 10)
+            fig_name = 'Plot_' + parameter + '_' + station + '_DensityKDE.png'
+            plt.savefig(path + 'Graph/' + fig_name)
+            print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
+            plt.close('all')
 
     # Pivot table & plot
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_name, values=value_name)
-    #print(pivot_table)
     pivot_table.to_csv(path + 'Pivot_' + parameter + '.csv')
     fig = pivot_table.plot(figsize=(fig_size*2, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
