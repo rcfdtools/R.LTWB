@@ -101,7 +101,7 @@ for parameter in parameter_list:
         fig_name = 'Plot_' + parameter + '_' + station + '_TimeSerie.png'
         plt.savefig(path + 'Graph/' + fig_name)
         print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
-        plt.close('all')
+        plt.close('all') # After the fig is saved, close the fig release memory and clean the plot
         fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size), grid=False)
         plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
         fig_name = 'Plot_' + parameter + '_' + station + '_Boxplot.png'
@@ -119,7 +119,7 @@ for parameter in parameter_list:
         fig_name = 'Plot_' + parameter + '_' + station + '_DensityKDE.png'
         plt.savefig(path + 'Graph/' + fig_name)
         print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
-        plt.close('all') # After the fig is saved, close the fig release memory
+        plt.close('all')
 
     # Pivot table & plot
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_name, values=value_name)
