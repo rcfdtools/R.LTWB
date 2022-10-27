@@ -87,7 +87,7 @@ for parameter in parameter_list:
         df = station_df1.query(filter)
         #df.set_index(date_record_name, inplace=True) # Already indexed in station_df1
         #print(df)
-        print_log('\n\n#### %s - Station: %s (%s rec.)' %(parameter, station, df.shape[0]))
+        print_log('\n\n**%s - Station: %s (%s rec.)**' %(parameter, station, df.shape[0]))
         print_log('Statistics table', center_div=True)
         print_log(df[value_name].describe().to_markdown(), center_div=True)
         fig = df.plot(y=value_name, figsize=(fig_size, fig_size/2), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
