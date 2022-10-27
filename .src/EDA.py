@@ -85,7 +85,14 @@ for parameter in parameter_list:
     station_df1 = station_df.query(parameter_name)  # Filter for parameter
     station_df1 = station_df1[(station_df[date_record_name] >= str(start_year) + '-01-01') & (station_df[date_record_name] <= str(end_year) + '-12-31')]  # Filter per date range
     ideam_regs_query = station_df1.shape[0]
-    print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, station_df1[tag_desc_name][0], parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    #print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, str(station_df1[tag_desc_name][0]), parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    '''
+    if station_df1[tag_desc_name][0]:
+        print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, str(station_df1[tag_desc_name][0]), parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    else:
+        print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    '''
     pivot_name = 'Pivot_' + parameter + '.csv'
     print_log('\nPivot table: [%s](%s)' %(pivot_name, pivot_name))
     fig_name = 'Plot_' + parameter + '_TimeSerie.png'
@@ -100,13 +107,15 @@ for parameter in parameter_list:
         filter = station_code + ' == "' + station + '"'
         df = station_df1.query(filter)
         #df.set_index(date_record_name, inplace=True) # Already indexed in station_df1
-        print_log('\n\n**%s - Station: %s (%s rec.)**' %(parameter, df[station_name][0], df.shape[0]), center_div=True)
-        print_log('Latitude: %f' %(df[latitude_name][0]))
+        map_location = ('Location over [Google Maps](http://maps.google.com/maps?q=' + str(df[latitude_name][0]) + ',' + str(
+            df[longitude_name][0]) + ') or [Openstreet Map](https://www.openstreetmap.org/query?lat=' + str(df[latitude_name][0]) + '&lon=' + str(
+            df[longitude_name][0]) + ')')
+        print_log('\n\n**%s - Station: %s (%s rec.)**<br>%s' %(parameter, df[station_name][0], df.shape[0], map_location), center_div=True)
+        if print_table_sample:
+            print_log('\nStation first record\n')
+            print_log(df.head(1).to_markdown())
         print_log('Statistics table', center_div=True)
         print_log(df[value_name].describe().to_markdown(), center_div=True)
-        if print_table_sample:
-            print_log('\nStation records head sample\n')
-            print_log(df.head(sample_records).to_markdown())
         fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
         fig.set_ylabel(value_name)
         plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
