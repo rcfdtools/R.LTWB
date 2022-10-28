@@ -152,7 +152,7 @@ for parameter in parameter_list:
         plt.close('all')
 
     # Pivot table, plot, describe and correlations
-    print_log('\n\n#### Correlation analysis matrix and statistics for %s' % parameter)
+    print_log('\n\n#### Pivot table statistics and correlation analysis for %s' % parameter)
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_code, values=value_name)
     pivot_table.to_csv(path + pivot_file)
     pivot_table.corr().to_csv(path + corr_file)
