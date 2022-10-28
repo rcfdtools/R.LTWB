@@ -11,7 +11,7 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 import tabulate  # required for print tables in Markdown using pandas
-import numpy as np
+#import numpy as np
 from datetime import datetime
 
 
@@ -80,12 +80,12 @@ if print_table_sample:
     print_log(station_df.head(sample_records).to_markdown())
     print_log('\nDataframe records tail sample\n')
     print_log(station_df.tail(sample_records).to_markdown())
-print_log('General statistics table', center_div=True)
+print_log('General statistics table with not year range filter', center_div=True)
 print_log(station_df.describe().to_markdown(), center_div=True)
 print_log('Stations in the dataset', center_div=True)
 stations_np = pd.DataFrame(station_df[station_name].unique())
 print_log(stations_np.to_markdown(), center_div=True)
-print_log('Records by parameter and station', center_div=True)
+print_log('Records by parameter and station with not year range filter', center_div=True)
 stations_np = station_df.groupby([tag_desc_name, station_name]).size()
 print_log(stations_np.to_markdown(), center_div=True)
 
@@ -97,7 +97,8 @@ for parameter in parameter_list:
     # General information per parameter
     parameter_name = tag_name + ' == "' + parameter + '"'  # Parameter filter
     station_df1 = station_df.query(parameter_name)  # Filter for parameter
-    station_df1 = station_df1[(station_df[date_record_name] >= str(start_year) + '-01-01') & (station_df[date_record_name] <= str(end_year) + '-12-31')]  # Filter per date range
+    station_df1 = station_df1[(station_df[date_record_name] >= str(start_year) + '-01-01') & (station_df[date_record_name] <= str(end_year) + '-12-31')] # Filter per date range
+    #station_df1.reset_index()
     ideam_regs_query = station_df1.shape[0]
     print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
     #print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, station_df1[tag_desc_name][0], parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
@@ -149,9 +150,11 @@ for parameter in parameter_list:
         print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
         plt.close('all')
 
-    # Pivot table & plot
+    # Pivot table, plot, describe and correlations
+    print_log('\n\n#### Correlation analysis matrix and statistics for %s' % parameter)
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_code, values=value_name)
-    pivot_table.to_csv(path + 'Pivot_' + parameter + '.csv')
+    pivot_file = path + 'Pivot_' + parameter + '.csv'
+    pivot_table.to_csv(pivot_file)
     fig = pivot_table.plot(figsize=(fig_size*2, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
     plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
@@ -159,6 +162,12 @@ for parameter in parameter_list:
     fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size+1), legend=False)
     plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_DensityKDE.png')
+    corr_df = pd.read_csv(pivot_file, low_memory=False)
+    corr_df.corr().to_csv(path + 'Pivot_' + parameter + '_Correlation.csv')
+    print_log('\nGeneral statistics table', center_div=False)
+    print_log(corr_df.corr().describe().to_markdown(), center_div=False)
+    print_log('\nCorrelation matrix', center_div=True)
+    print_log(corr_df.corr().to_markdown())
 
 # plt.show()
 plt.close('all')

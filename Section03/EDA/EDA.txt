@@ -21,6 +21,16 @@ References
 
 * https://www.digitalocean.com/community/tutorials/exploratory-data-analysis-python
 
+* https://datatofish.com/numpy-array-to-pandas-dataframe/
+
+* https://stackoverflow.com/questions/12286607/making-heatmap-from-pandas-dataframe
+
+* https://stackoverflow.com/questions/17679089/pandas-dataframe-groupby-two-columns-and-get-counts
+
+
+* https://www.easytweaks.com/pandas-group-one-multiple-columns/
+
+
 
 Others
 * Descarga, organización y análisis de datos hidrometeorologicos IDEAM con Google Colaboratory, QGIS https://www.youtube.com/watch?v=MDo0-18Vvtw
