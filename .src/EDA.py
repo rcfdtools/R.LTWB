@@ -109,8 +109,6 @@ for parameter in parameter_list:
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
     fig_name = 'Plot_' + parameter + '_DensityKDE.png'
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
-    fig_name = 'Plot_' + parameter + '_Correlation.png'
-    print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
 
     # Data analysis per station
     station_df1.set_index(date_record_name, inplace=True)
@@ -174,12 +172,14 @@ for parameter in parameter_list:
     plt.close('all')
     # Plot correlations in heatmap style
     plt.figure(figsize=(fig_size*3, fig_size*3))
-    plt.imshow(pivot_table.corr(), cmap='RdYlBu')
+    plt.imshow(pivot_table.corr(), cmap=plot_colormap)
     plt.colorbar()
     plt.xticks(range(len(pivot_table.corr())), pivot_table.corr().columns)
     plt.yticks(range(len(pivot_table.corr())), pivot_table.corr().index)
     plt.xticks(rotation=90)
     plt.title('Correlations for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query),fontsize=10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_Correlation.png')
+    fig_name = 'Plot_' + parameter + '_Correlation.png'
+    print_log('\n![R.LTWB](Graph/%s)' % fig_name, center_div=False)
     #plt.show()
     plt.close('all')

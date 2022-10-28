@@ -1,7 +1,7 @@
 Ok. Segmentar datos dentro de la ventana de tiempo definida, p.ej., 1981 - 2021.
 Ok. Crear pivot tables para cada variable.
 Ok. Graficar series por estación para cada variable.
-.csv file links.
+Ok. .csv file links.
 Calcular en cada estación la longitud registrada de series para cada variable IDEAM descargada.
 Comparar la longitud hipotética de series en cada estación con la longitud registrada.
 
