@@ -70,9 +70,11 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
 station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install_name, date_suspend_name, date_record_name], converters={station_code: str, grade_name: str, approved_name: str})
 ideam_regs = station_df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records' % ideam_regs)
-print_log('Datatypes in the dataset', center_div=True)
 print(station_df.info())
+print_log('Datatypes in the dataset', center_div=True)
 print_log(station_df.dtypes.to_markdown(), center_div=True)
+print_log('Null values in the dataset', center_div=True)
+print_log(station_df.isnull().sum().to_markdown(), center_div=True)
 if print_table_sample:
     print_log('\nDataframe records head sample\n')
     print_log(station_df.head(sample_records).to_markdown())
@@ -83,8 +85,9 @@ print_log(station_df.describe().to_markdown(), center_div=True)
 print_log('Stations in the dataset', center_div=True)
 stations_np = pd.DataFrame(station_df[station_name].unique())
 print_log(stations_np.to_markdown(), center_div=True)
-print_log('Null values in the dataset', center_div=True)
-print_log(station_df.isnull().sum().to_markdown(), center_div=True)
+print_log('Records by parameter and station', center_div=True)
+stations_np = station_df.groupby([tag_desc_name, station_name]).size()
+print_log(stations_np.to_markdown(), center_div=True)
 
 
 # Slice data from each parameter and station

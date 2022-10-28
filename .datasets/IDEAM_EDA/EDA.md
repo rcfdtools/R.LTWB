@@ -1,7 +1,7 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-28 08:15:15.501471
+* Fecha y hora de inicio de ejecución: 2022-10-28 08:32:33.546198
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide']
 * matplotlib versión: 3.6.0
@@ -47,6 +47,42 @@ Datatypes in the dataset
 | Grado            | object         |
 | Calificador      | object         |
 | NivelAprobacion  | object         |
+
+</div>
+
+
+<div align="center">
+
+Null values in the dataset
+
+</div>
+
+
+<div align="center">
+
+|                  |      0 |
+|:-----------------|-------:|
+| CodigoEstacion   |      0 |
+| NombreEstacion   |      0 |
+| Latitud          |      0 |
+| Longitud         |      0 |
+| Altitud          |      0 |
+| Categoria        |      0 |
+| Entidad          |      0 |
+| AreaOperativa    |      0 |
+| Departamento     |      0 |
+| Municipio        |      0 |
+| FechaInstalacion |      0 |
+| FechaSuspension  | 422201 |
+| IdParametro      |      0 |
+| Etiqueta         |      0 |
+| DescripcionSerie |      0 |
+| Frecuencia       |      0 |
+| Fecha            |      0 |
+| Valor            |      0 |
+| Grado            |      0 |
+| Calificador      | 506535 |
+| NivelAprobacion  |      0 |
 
 </div>
 
@@ -286,36 +322,254 @@ Stations in the dataset
 
 <div align="center">
 
-Null values in the dataset
+Records by parameter and station
 
 </div>
 
 
 <div align="center">
 
-|                  |      0 |
-|:-----------------|-------:|
-| CodigoEstacion   |      0 |
-| NombreEstacion   |      0 |
-| Latitud          |      0 |
-| Longitud         |      0 |
-| Altitud          |      0 |
-| Categoria        |      0 |
-| Entidad          |      0 |
-| AreaOperativa    |      0 |
-| Departamento     |      0 |
-| Municipio        |      0 |
-| FechaInstalacion |      0 |
-| FechaSuspension  | 422201 |
-| IdParametro      |      0 |
-| Etiqueta         |      0 |
-| DescripcionSerie |      0 |
-| Frecuencia       |      0 |
-| Fecha            |      0 |
-| Valor            |      0 |
-| Grado            |      0 |
-| Calificador      | 506535 |
-| NivelAprobacion  |      0 |
+|                                                                                    |     0 |
+|:-----------------------------------------------------------------------------------|------:|
+| ('Caudal medio mensual', 'ALTO DEL ROSARIO [25027400]')                            |   574 |
+| ('Caudal medio mensual', 'ARIGUANI HACIENDA - AUT [28017120]')                     |   230 |
+| ('Caudal medio mensual', 'ARMENIA [25027360]')                                     |   546 |
+| ('Caudal medio mensual', 'AURORA LA [28047010]')                                   |   664 |
+| ('Caudal medio mensual', 'BECERRIL [28027050]')                                    |   529 |
+| ('Caudal medio mensual', 'BELLEZA LA [28047080]')                                  |    96 |
+| ('Caudal medio mensual', 'CABLE EL [16067020]')                                    |   424 |
+| ('Caudal medio mensual', 'CAIMANCITO [25027590]')                                  |   411 |
+| ('Caudal medio mensual', 'CAMPO SEIS [16037040]')                                  |   567 |
+| ('Caudal medio mensual', 'CANAL FLORIDA [29067050]')                               |   574 |
+| ('Caudal medio mensual', 'CANTACLARO [28037060]')                                  |   681 |
+| ('Caudal medio mensual', 'CARACOLI - AUT [15067210]')                              |    28 |
+| ('Caudal medio mensual', 'CERCADO EL-AUTOMAT [15067020]')                          |   568 |
+| ('Caudal medio mensual', 'CHAPETONA LA [25027620]')                                |   487 |
+| ('Caudal medio mensual', 'CHEMESQUEMENA [28017150]')                               |    53 |
+| ('Caudal medio mensual', 'CONVENCION HACIENDA [28037020]')                         |   536 |
+| ('Caudal medio mensual', 'CORRAL DE PIEDRA  - AUT [28017140]')                     |    41 |
+| ('Caudal medio mensual', 'CORRAL DE PIEDRA [28017080]')                            |   705 |
+| ('Caudal medio mensual', 'EL BANCO - AUT [25027020]')                              |   592 |
+| ('Caudal medio mensual', 'EL SILENCIO - AUT [15067200]')                           |   115 |
+| ('Caudal medio mensual', 'FLORES LAS [28027030]')                                  |   620 |
+| ('Caudal medio mensual', 'FUNDACION [29067120]')                                   |   708 |
+| ('Caudal medio mensual', 'GANADERIA CARIBE  - AUT [29067150]')                     |   662 |
+| ('Caudal medio mensual', 'GRACIAS A DIOS HACIENDA [25027080]')                     |   497 |
+| ('Caudal medio mensual', 'ISLANDIA [28027160]')                                    |   444 |
+| ('Caudal medio mensual', 'LAS AGUADAS [25027490]')                                 |   589 |
+| ('Caudal medio mensual', 'MAGUEYES LOS [15067080]')                                |   292 |
+| ('Caudal medio mensual', 'MARIANGOLA [28037040]')                                  |   679 |
+| ('Caudal medio mensual', 'MATILDE LA [28027020]')                                  |   579 |
+| ('Caudal medio mensual', 'MINA LA [28017110]')                                     |   705 |
+| ('Caudal medio mensual', 'PALMARIGUANI  - AUT [28047050]')                         |   632 |
+| ('Caudal medio mensual', 'PALOMAS LAS [25027390]')                                 |   540 |
+| ('Caudal medio mensual', 'PENONCITO [25027330]')                                   |   572 |
+| ('Caudal medio mensual', 'POZO HONDO [15067130]')                                  |   388 |
+| ('Caudal medio mensual', 'PUEBLO BELLO [28047020]')                                |   726 |
+| ('Caudal medio mensual', 'PUENTE CALLAO [28037010]')                               |   647 |
+| ('Caudal medio mensual', 'PUENTE CANOAS  - AUT [28037090]')                        |   590 |
+| ('Caudal medio mensual', 'PUENTE CARRETERA [25027890]')                            |   448 |
+| ('Caudal medio mensual', 'PUENTE CARRETERA [28037130]')                            |   603 |
+| ('Caudal medio mensual', 'PUENTE CARRETERA [28047040]')                            |   499 |
+| ('Caudal medio mensual', 'PUENTE FERROCARRIL [29067130]')                          |   657 |
+| ('Caudal medio mensual', 'PUENTE GUAJIRO - AUT [15067150]')                        |   148 |
+| ('Caudal medio mensual', 'PUENTE SALGUERO  - AUT [28037030]')                      |   727 |
+| ('Caudal medio mensual', 'PUENTE SEVILLA  - AUT [29067160]')                       |   398 |
+| ('Caudal medio mensual', 'PUENTE TARRA [16047020]')                                |   463 |
+| ('Caudal medio mensual', 'PUERTO BARCO-GABARRA - AUT [16067010]')                  |   577 |
+| ('Caudal medio mensual', 'PUERTO RICO HACIENDA  - AUT [29067060]')                 |   437 |
+| ('Caudal medio mensual', 'REGIDOR [25027410]')                                     |   508 |
+| ('Caudal medio mensual', 'REPOSO EL [28017050]')                                   |   443 |
+| ('Caudal medio mensual', 'RIO FRIO [29067070]')                                    |   607 |
+| ('Caudal medio mensual', 'RIO NUEVO [25027630]')                                   |   534 |
+| ('Caudal medio mensual', 'SAN FRANCISCO [15067170]')                               |   157 |
+| ('Caudal medio mensual', 'SAN ROQUE [25027320]')                                   |   560 |
+| ('Caudal medio mensual', 'SANTA ROSALIA [29067040]')                               |   626 |
+| ('Caudal medio mensual', 'SANTA TERESA [28027040]')                                |   628 |
+| ('Caudal medio mensual', 'TREBOL EL [29067010]')                                   |   711 |
+| ('Caudal medio mensual', 'VICTORIA LA [25027420]')                                 |   567 |
+| ('Evaporación total diaria', 'LA GRAN VIA - AUT [29065130]')                       |  4822 |
+| ('Precipitación total mensual', 'AEROPUERTO LAS FLORES [25025090]')                |   665 |
+| ('Precipitación total mensual', 'AGUADAS LAS ALERTA [25021540]')                   |   504 |
+| ('Precipitación total mensual', 'ASTREA [25020220]')                               |   718 |
+| ('Precipitación total mensual', 'ATANQUEZ [28010360]')                             |   720 |
+| ('Precipitación total mensual', 'BARRANCO DE LOBA [25020880]')                     |   553 |
+| ('Precipitación total mensual', 'BAYANO [29060350]')                               |   522 |
+| ('Precipitación total mensual', 'BELLAVISTA [28040150]')                           |   671 |
+| ('Precipitación total mensual', 'BOGOTANA LA [28020310]')                          |   415 |
+| ('Precipitación total mensual', 'BONGO EL [29060030]')                             |   555 |
+| ('Precipitación total mensual', 'BOSCONIA [28040030]')                             |   500 |
+| ('Precipitación total mensual', 'BRILLANTE EL [28040320]')                         |   575 |
+| ('Precipitación total mensual', 'CABANA LA HACIENDA [28040360]')                   |   516 |
+| ('Precipitación total mensual', 'CALLAO EL [28035020]')                            |   616 |
+| ('Precipitación total mensual', 'CANAL EL [25020240]')                             |   705 |
+| ('Precipitación total mensual', 'CANAVERALES [15060080]')                          |   700 |
+| ('Precipitación total mensual', 'CARACOLI [28030190]')                             |   613 |
+| ('Precipitación total mensual', 'CARMEN EL [29060140]')                            |   659 |
+| ('Precipitación total mensual', 'CENIZO EL [29060060]')                            |   732 |
+| ('Precipitación total mensual', 'CENTENARIO HACIENDA [28025090]')                  |   518 |
+| ('Precipitación total mensual', 'CHILLOA [25020890]')                              |   534 |
+| ('Precipitación total mensual', 'CHIMICHAGUA [25021240]')                          |   594 |
+| ('Precipitación total mensual', 'CHIMILAIMA [28040200]')                           |   396 |
+| ('Precipitación total mensual', 'CHIRIGUANA [25025250]')                           |   532 |
+| ('Precipitación total mensual', 'CNO LA RAYA [16060010]')                          |   585 |
+| ('Precipitación total mensual', 'CODAZZI DC [28020460]')                           |   498 |
+| ('Precipitación total mensual', 'COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330]') |   340 |
+| ('Precipitación total mensual', 'CONEJO EL [15060150]')                            |   554 |
+| ('Precipitación total mensual', 'CUEVAS LAS [28040170]')                           |   334 |
+| ('Precipitación total mensual', 'CURUMANI D C [25021580]')                         |   188 |
+| ('Precipitación total mensual', 'CURUMANI [25020250]')                             |   706 |
+| ('Precipitación total mensual', 'DESCANSO EL [28010020]')                          |   359 |
+| ('Precipitación total mensual', 'DESTINO EL [29060150]')                           |   644 |
+| ('Precipitación total mensual', 'DONA MARIA [29060560]')                           |   443 |
+| ('Precipitación total mensual', 'ENANO EL [29060160]')                             |   551 |
+| ('Precipitación total mensual', 'ESPERANZA LA HACIENDA [28020150]')                |   500 |
+| ('Precipitación total mensual', 'ESPERANZA LA [29060180]')                         |   558 |
+| ('Precipitación total mensual', 'FLORIDA LA [29060190]')                           |   502 |
+| ('Precipitación total mensual', 'FUNDACION [29060040]')                            |   776 |
+| ('Precipitación total mensual', 'GANAD LA ESMERALDA  [25020040]')                  |   587 |
+| ('Precipitación total mensual', 'GAVILAN [29060170]')                              |   660 |
+| ('Precipitación total mensual', 'GLORIA LA [23210020]')                            |   298 |
+| ('Precipitación total mensual', 'GUAYMARAL [28035040]')                            |   589 |
+| ('Precipitación total mensual', 'HACHARIRA [16070030]')                            |   382 |
+| ('Precipitación total mensual', 'HATICO D LOS INDIO [28010200]')                   |   588 |
+| ('Precipitación total mensual', 'IRAN [25021620]')                                 |   469 |
+| ('Precipitación total mensual', 'JAGUA LA [25020230]')                             |   685 |
+| ('Precipitación total mensual', 'JUGUETE EL [15060070]')                           |   489 |
+| ('Precipitación total mensual', 'LA GLORIA [23215060]')                            |   146 |
+| ('Precipitación total mensual', 'LA PAULINA - AUT [15065040]')                     |   403 |
+| ('Precipitación total mensual', 'LETICIA [28020590]')                              |   449 |
+| ('Precipitación total mensual', 'LLANOS LOS [28020230]')                           |   481 |
+| ('Precipitación total mensual', 'LOMA LA [25020280]')                              |   658 |
+| ('Precipitación total mensual', 'MANATURE HACIENDA [28040270]')                    |   621 |
+| ('Precipitación total mensual', 'MANAURE [28010040]')                              |   599 |
+| ('Precipitación total mensual', 'MARIA LA [29060200]')                             |   545 |
+| ('Precipitación total mensual', 'MATA LA [23215050]')                              |   529 |
+| ('Precipitación total mensual', 'MENCHIQUEJO [25021040]')                          |   568 |
+| ('Precipitación total mensual', 'MOLINO EL [28040310]')                            |   441 |
+| ('Precipitación total mensual', 'MONTERRUBIO [28040100]')                          |   698 |
+| ('Precipitación total mensual', 'MOTILONIA CODAZZI [28025070]')                    |   585 |
+| ('Precipitación total mensual', 'NEGRITOS LOS [25021200]')                         |   525 |
+| ('Precipitación total mensual', 'NUEVA GRANADA [25021630]')                        |   461 |
+| ('Precipitación total mensual', 'ORU [16070040]')                                  |   551 |
+| ('Precipitación total mensual', 'PADELMA [29065020]')                              |   641 |
+| ('Precipitación total mensual', 'PALACIO EL [16050240]')                           |   335 |
+| ('Precipitación total mensual', 'PALMA LA [29060210]')                             |   656 |
+| ('Precipitación total mensual', 'PALMARIGUANI [28040070]')                         |   699 |
+| ('Precipitación total mensual', 'PALMASOLA [28040400]')                            |   358 |
+| ('Precipitación total mensual', 'PALMOR EL [29060340]')                            |   530 |
+| ('Precipitación total mensual', 'PALO ALTO [29060270]')                            |   658 |
+| ('Precipitación total mensual', 'PAMPLONA [28010280]')                             |   118 |
+| ('Precipitación total mensual', 'PARIS DE FRANCIA [28010370]')                     |   538 |
+| ('Precipitación total mensual', 'PASO EL   [28040350]')                            |   591 |
+| ('Precipitación total mensual', 'PATILLAL [28010090]')                             |   679 |
+| ('Precipitación total mensual', 'PAVAS LAS [28040060]')                            |   344 |
+| ('Precipitación total mensual', 'PISTA LA [16070020]')                             |   154 |
+| ('Precipitación total mensual', 'PLAYA LA [29060330]')                             |   252 |
+| ('Precipitación total mensual', 'PLAYAS LAS HACIENDA [28020080]')                  |   598 |
+| ('Precipitación total mensual', 'PLAYITAS [25020870]')                             |   561 |
+| ('Precipitación total mensual', 'POLY LA [29060220]')                              |   354 |
+| ('Precipitación total mensual', 'POPONTE [25020690]')                              |   583 |
+| ('Precipitación total mensual', 'PRADO SEVILLA [29065030]')                        |   530 |
+| ('Precipitación total mensual', 'PRIMAVERA LA [25020920]')                         |   506 |
+| ('Precipitación total mensual', 'PROYECTOS LOS [29060250]')                        |   656 |
+| ('Precipitación total mensual', 'PUEBLITO EL [25021500]')                          |   531 |
+| ('Precipitación total mensual', 'PUEBLO BELLO  [28045010]')                        |   526 |
+| ('Precipitación total mensual', 'PUEBLO BELLO [28040010]')                         |   709 |
+| ('Precipitación total mensual', 'PUERTO BARCO [16070010]')                         |   518 |
+| ('Precipitación total mensual', 'RAYA LA [25020670]')                              |   549 |
+| ('Precipitación total mensual', 'RETORNO EL [28020600]')                           |   589 |
+| ('Precipitación total mensual', 'RINCON EL [28025020]')                            |   686 |
+| ('Precipitación total mensual', 'RINCONHONDO [25020260]')                          |   700 |
+| ('Precipitación total mensual', 'RUBY EL [29060550]')                              |   360 |
+| ('Precipitación total mensual', 'SABANAS DE MANUELA [15060050]')                   |   678 |
+| ('Precipitación total mensual', 'SALOA [25020270]')                                |   714 |
+| ('Precipitación total mensual', 'SAN ANGEL [28030220]')                            |   401 |
+| ('Precipitación total mensual', 'SAN ANGEL [28040140]')                            |   665 |
+| ('Precipitación total mensual', 'SAN BENITO [28020410]')                           |   539 |
+| ('Precipitación total mensual', 'SAN GABRIEL [28020420]')                          |   529 |
+| ('Precipitación total mensual', 'SAN ISIDRO [29060280]')                           |   640 |
+| ('Precipitación total mensual', 'SAN JOSE D ORIENTE [28025040]')                   |   237 |
+| ('Precipitación total mensual', 'SAN JUAN [29060290]')                             |   305 |
+| ('Precipitación total mensual', 'SAN PABLO [29060070]')                            |   723 |
+| ('Precipitación total mensual', 'SAN ROQUE ALERTAS [25021380]')                    |   478 |
+| ('Precipitación total mensual', 'SAN SEBASTIAN DE [29060090]')                     |   574 |
+| ('Precipitación total mensual', 'SAN SEBASTIAN [25020900]')                        |   547 |
+| ('Precipitación total mensual', 'SANTA ISABEL [25021640]')                         |   444 |
+| ('Precipitación total mensual', 'SANTA ROSA DE LIMA [29060100]')                   |   568 |
+| ('Precipitación total mensual', 'SANTA ROSA [25021090]')                           |   537 |
+| ('Precipitación total mensual', 'SANTA TERESA HACIENDA [28020440]')                |   730 |
+| ('Precipitación total mensual', 'SARA LA [29060230]')                              |   471 |
+| ('Precipitación total mensual', 'SARACHUI [28010130]')                             |   263 |
+| ('Precipitación total mensual', 'SEIS EL [25025300]')                              |   510 |
+| ('Precipitación total mensual', 'SEVILLANO [29060310]')                            |   538 |
+| ('Precipitación total mensual', 'SOCOMBA [28025080]')                              |   389 |
+| ('Precipitación total mensual', 'SUDAN EL [25021320]')                             |   530 |
+| ('Precipitación total mensual', 'TAMALAMEQUE D C [25021590]')                      |   361 |
+| ('Precipitación total mensual', 'TAMALAMEQUE [25020090]')                          |   741 |
+| ('Precipitación total mensual', 'TASAJERA [29060120]')                             |   678 |
+| ('Precipitación total mensual', 'TERROR EL HACIENDA [25020650]')                   |   524 |
+| ('Precipitación total mensual', 'UNION LA [29060240]')                             |   597 |
+| ('Precipitación total mensual', 'URUMITA [28015070]')                              |   550 |
+| ('Precipitación total mensual', 'VILLA CARMELITA [28010140]')                      |   388 |
+| ('Precipitación total mensual', 'VILLA CONCEPCION [28040300]')                     |   564 |
+| ('Precipitación total mensual', 'VILLA MARLENE [28010070]')                        |   619 |
+| ('Precipitación total mensual', 'VILLA ROSA [28035010]')                           |   604 |
+| ('Precipitación total mensual', 'VILLANUEVA [28010340]')                           |   578 |
+| ('Precipitación total mensual', 'YE LA [15015020]')                                |   484 |
+| ('Precipitación total mensual', 'YUCAL EL [25021650]')                             |   443 |
+| ('Precipitación total mensual', 'ZACAPA [29065010]')                               |   308 |
+| ('Precipitación total mensual', 'ZAPATOZA [25020660]')                             |   587 |
+| ('Temperatura máxima diaria', 'AEROPUERTO ALFONSO LOPEZ - [28025502]')             | 12709 |
+| ('Temperatura máxima diaria', 'AEROPUERTO LAS FLORES [25025090]')                  |  8874 |
+| ('Temperatura máxima diaria', 'ALGARROBO [28045020]')                              |  1050 |
+| ('Temperatura máxima diaria', 'CALLAO EL [28035020]')                              | 12394 |
+| ('Temperatura máxima diaria', 'CENTENARIO HACIENDA [28025090]')                    | 13070 |
+| ('Temperatura máxima diaria', 'CHIRIGUANA [25025250]')                             | 11914 |
+| ('Temperatura máxima diaria', 'CICOLAC [28015030]')                                |  1148 |
+| ('Temperatura máxima diaria', 'COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330]')   |  7606 |
+| ('Temperatura máxima diaria', 'GUAIRA LA HACIENDA [28045040]')                     |   784 |
+| ('Temperatura máxima diaria', 'GUATAPURI - AUT [28035070]')                        |    42 |
+| ('Temperatura máxima diaria', 'GUAYMARAL [28035040]')                              |  9470 |
+| ('Temperatura máxima diaria', 'LA GLORIA [23215060]')                              |   960 |
+| ('Temperatura máxima diaria', 'LA PAULINA - AUT [15065040]')                       |  4285 |
+| ('Temperatura máxima diaria', 'LOS ALAMOS - AUT [25025002]')                       |  7702 |
+| ('Temperatura máxima diaria', 'MOTILONIA CODAZZI [28025070]')                      | 13951 |
+| ('Temperatura máxima diaria', 'PADELMA [29065020]')                                |  9853 |
+| ('Temperatura máxima diaria', 'PRADO SEVILLA [29065030]')                          | 11118 |
+| ('Temperatura máxima diaria', 'RINCON EL [28025020]')                              | 13407 |
+| ('Temperatura máxima diaria', 'SAN JOSE D ORIENTE [28025040]')                     |  3056 |
+| ('Temperatura máxima diaria', 'SEIS EL [25025300]')                                | 10067 |
+| ('Temperatura máxima diaria', 'SOCOMBA [28025080]')                                |  7504 |
+| ('Temperatura máxima diaria', 'URUMITA [28015070]')                                | 13322 |
+| ('Temperatura máxima diaria', 'VILLA ROSA [28035010]')                             |  8442 |
+| ('Temperatura máxima diaria', 'YE LA [15015020]')                                  | 10090 |
+| ('Temperatura máxima diaria', 'ZACAPA [29065010]')                                 |  1239 |
+| ('Temperatura mínima diaria', 'AEROPUERTO ALFONSO LOPEZ - [28025502]')             | 13496 |
+| ('Temperatura mínima diaria', 'AEROPUERTO LAS FLORES [25025090]')                  | 10055 |
+| ('Temperatura mínima diaria', 'ALGARROBO [28045020]')                              |  1052 |
+| ('Temperatura mínima diaria', 'CALLAO EL [28035020]')                              | 11958 |
+| ('Temperatura mínima diaria', 'CENTENARIO HACIENDA [28025090]')                    | 11991 |
+| ('Temperatura mínima diaria', 'CHIRIGUANA [25025250]')                             | 12540 |
+| ('Temperatura mínima diaria', 'CICOLAC [28015030]')                                |  1428 |
+| ('Temperatura mínima diaria', 'COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330]')   |  9275 |
+| ('Temperatura mínima diaria', 'GUAIRA LA HACIENDA [28045040]')                     |  1274 |
+| ('Temperatura mínima diaria', 'GUATAPURI - AUT [28035070]')                        |    42 |
+| ('Temperatura mínima diaria', 'GUAYMARAL [28035040]')                              | 13461 |
+| ('Temperatura mínima diaria', 'LA GLORIA [23215060]')                              |  1248 |
+| ('Temperatura mínima diaria', 'LA PAULINA - AUT [15065040]')                       |  5799 |
+| ('Temperatura mínima diaria', 'LOS ALAMOS - AUT [25025002]')                       | 10734 |
+| ('Temperatura mínima diaria', 'MOTILONIA CODAZZI [28025070]')                      | 14405 |
+| ('Temperatura mínima diaria', 'PADELMA [29065020]')                                | 13432 |
+| ('Temperatura mínima diaria', 'PRADO SEVILLA [29065030]')                          | 12117 |
+| ('Temperatura mínima diaria', 'RINCON EL [28025020]')                              | 13900 |
+| ('Temperatura mínima diaria', 'SAN JOSE D ORIENTE [28025040]')                     |  3644 |
+| ('Temperatura mínima diaria', 'SEIS EL [25025300]')                                | 11694 |
+| ('Temperatura mínima diaria', 'SOCOMBA [28025080]')                                |  8056 |
+| ('Temperatura mínima diaria', 'URUMITA [28015070]')                                | 13107 |
+| ('Temperatura mínima diaria', 'VILLA ROSA [28035010]')                             | 10558 |
+| ('Temperatura mínima diaria', 'YE LA [15015020]')                                  | 11197 |
+| ('Temperatura mínima diaria', 'ZACAPA [29065010]')                                 |  1393 |
 
 </div>
 
