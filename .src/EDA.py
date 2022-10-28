@@ -11,7 +11,6 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 import tabulate  # required for print tables in Markdown using pandas
-#import numpy as np
 from datetime import datetime
 
 
@@ -39,14 +38,14 @@ date_record_name = 'Fecha'  # IDEAM date field name for the record values
 latitude_name = 'Latitud'  # IDEAM latitude name ***********
 longitude_name = 'Longitud'  # IDEAM longitude name ***********
 value_name = 'Valor'  # IDEAM value field name
-grade_name = 'Grado' # IDEAM grade field name
-approved_name = 'NivelAprobacion' # IDEAM approved level field name
-tag_name = 'Etiqueta' # IDEAM record parameter frecuency tag
-tag_desc_name = 'DescripcionSerie' # IDEAM record parameter frecuency tag
+grade_name = 'Grado'  # IDEAM grade field name
+approved_name = 'NivelAprobacion'  # IDEAM approved level field name
+tag_name = 'Etiqueta'  # IDEAM record parameter frecuency tag
+tag_desc_name = 'DescripcionSerie'  # IDEAM record parameter frecuency tag
 plot_colormap = 'magma'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
-sample_records = 3 # Records to show in the sample table head and tail
+sample_records = 3  # Records to show in the sample table head and tail
 histogram_binds = 12
-fig_size = 5 # Height size for figures plot
+fig_size = 5  # Height size for figures plot
 print_table_sample = False
 start_year = 1980  # Chirps values starts at 1981
 end_year = 2021  # This value have to correspond with the end of the IDEAM series
@@ -97,14 +96,14 @@ for parameter in parameter_list:
     # General information per parameter
     parameter_name = tag_name + ' == "' + parameter + '"'  # Parameter filter
     station_df1 = station_df.query(parameter_name)  # Filter for parameter
-    station_df1 = station_df1[(station_df[date_record_name] >= str(start_year) + '-01-01') & (station_df[date_record_name] <= str(end_year) + '-12-31')] # Filter per date range
-    #station_df1.reset_index()
+    station_df1 = station_df1[(station_df[date_record_name] >= str(start_year) + '-01-01') & (station_df[date_record_name] <= str(end_year) + '-12-31')]  # Filter per date range
+    # station_df1.reset_index()
     ideam_regs_query = station_df1.shape[0]
     print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
-    #print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, station_df1[tag_desc_name][0], parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
+    # print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, station_df1[tag_desc_name][0], parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
     pivot_file = 'Pivot_' + parameter + '.csv'
     corr_file = 'Pivot_' + parameter + '_Correlation.csv'
-    print_log('\nPivot table: [%s](%s)' %(pivot_file, pivot_file))
+    print_log('\nPivot table: [%s](%s)' % (pivot_file, pivot_file))
     fig_name = 'Plot_' + parameter + '_TimeSerie.png'
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
     fig_name = 'Plot_' + parameter + '_DensityKDE.png'
@@ -114,41 +113,41 @@ for parameter in parameter_list:
     station_df1.set_index(date_record_name, inplace=True)
     station_list = station_df1[station_code].unique()
     for station in station_list:
-        filter = station_code + ' == "' + station + '"'
-        df = station_df1.query(filter)
-        #df.set_index(date_record_name, inplace=True) # Already indexed in station_df1
+        station_filter = station_code + ' == "' + station + '"'
+        df = station_df1.query(station_filter)
+        # df.set_index(date_record_name, inplace=True)  # Already indexed in station_df1
         map_location = ('Location over [Google Maps](http://maps.google.com/maps?q=' + str(df[latitude_name][0]) + ',' + str(
             df[longitude_name][0]) + ') or [Openstreet Map](https://www.openstreetmap.org/query?lat=' + str(df[latitude_name][0]) + '&lon=' + str(
             df[longitude_name][0]) + ')')
-        print_log('\n\n**%s - Station: %s (%s rec.)**<br>%s' %(parameter, df[station_name][0], df.shape[0], map_location), center_div=True)
+        print_log('\n\n**%s - Station: %s (%s rec.)**<br>%s' % (parameter, df[station_name][0], df.shape[0], map_location), center_div=True)
         print_log('\nStation first record\n')
         print_log(df.head(1).to_markdown())
         print_log('Statistics table', center_div=True)
         print_log(df[value_name].describe().to_markdown(), center_div=True)
         fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)
         fig.set_ylabel(value_name)
-        plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
+        plt.title('Time serie for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize=10)
         fig_name = 'Plot_' + parameter + '_' + station + '_TimeSerie.png'
         plt.savefig(path + 'Graph/' + fig_name)
         print_log('\n![R.LTWB](Graph/%s)' % fig_name, center_div=False)
-        plt.close('all') # After the fig is saved, close the fig release memory and clean the plot
+        plt.close('all')  # After the fig is saved, close the fig release memory and clean the plot
         fig = df.boxplot(column=value_name, figsize=(fig_size, fig_size+1), grid=False)
-        plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
+        plt.title('Boxplot for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize=10)
         fig_name = 'Plot_' + parameter + '_' + station + '_Boxplot.png'
         plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
+        print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
         plt.close('all')
         fig = df.plot.hist(column=value_name, bins=histogram_binds, alpha=0.9, figsize=(fig_size, fig_size+1), colormap=plot_colormap, edgecolor='white', legend=False)
-        plt.title('Histogram for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize = 10)
+        plt.title('Histogram for %s - Station %s (%d records)' % (parameter, station, df.shape[0]), fontsize=10)
         fig_name = 'Plot_' + parameter + '_' + station + '_Histogram.png'
         plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
+        print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
         plt.close('all')  # After the fig is saved, close the fig release memory
         fig = df[value_name].plot.kde(colormap=plot_colormap, figsize=(fig_size, fig_size+1))
-        plt.title('KDE density for %s - Station %s (%d rec.)' % (parameter, station, df.shape[0]), fontsize = 10)
+        plt.title('KDE density for %s - Station %s (%d rec.)' % (parameter, station, df.shape[0]), fontsize=10)
         fig_name = 'Plot_' + parameter + '_' + station + '_DensityKDE.png'
         plt.savefig(path + 'Graph/' + fig_name)
-        print_log('![R.LTWB](Graph/%s)' %fig_name, center_div=False)
+        print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
         plt.close('all')
 
     # Pivot table, plot, describe and correlations
@@ -158,16 +157,16 @@ for parameter in parameter_list:
     pivot_table.corr().to_csv(path + corr_file)
     print_log('\nGeneral statistics table', center_div=False)
     print_log(pivot_table.describe().to_markdown(), center_div=False)
-    print_log('\nCorrelation matrix [%s](%s)' %(corr_file, corr_file), center_div=False)
+    print_log('\nCorrelation matrix [%s](%s)' % (corr_file, corr_file), center_div=False)
     print_log(pivot_table.corr().to_markdown())
     print_log('\nCorrelation statistics table', center_div=False)
     print_log(pivot_table.corr().describe().to_markdown(), center_div=False)
     fig = pivot_table.plot(figsize=(fig_size*2, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
-    plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
+    plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize=10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_TimeSerie.png')
     fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size+1), legend=False)
-    plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
+    plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize=10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_DensityKDE.png')
     plt.close('all')
     # Plot correlations in heatmap style
@@ -177,9 +176,9 @@ for parameter in parameter_list:
     plt.xticks(range(len(pivot_table.corr())), pivot_table.corr().columns)
     plt.yticks(range(len(pivot_table.corr())), pivot_table.corr().index)
     plt.xticks(rotation=90)
-    plt.title('Correlations for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query),fontsize=10)
+    plt.title('Correlations for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize=10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_Correlation.png')
     fig_name = 'Plot_' + parameter + '_Correlation.png'
     print_log('\n![R.LTWB](Graph/%s)' % fig_name, center_div=False)
-    #plt.show()
+    # plt.show()
     plt.close('all')
