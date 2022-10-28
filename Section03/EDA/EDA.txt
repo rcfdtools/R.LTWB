@@ -23,6 +23,7 @@ References
 * https://stackoverflow.com/questions/12286607/making-heatmap-from-pandas-dataframe
 * https://stackoverflow.com/questions/17679089/pandas-dataframe-groupby-two-columns-and-get-counts
 * https://www.easytweaks.com/pandas-group-one-multiple-columns/
+* https://www.geeksforgeeks.org/display-the-pandas-dataframe-in-heatmap-style/
 
 
 

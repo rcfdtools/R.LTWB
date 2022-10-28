@@ -109,6 +109,8 @@ for parameter in parameter_list:
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
     fig_name = 'Plot_' + parameter + '_DensityKDE.png'
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
+    fig_name = 'Plot_' + parameter + '_Correlation.png'
+    print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
 
     # Data analysis per station
     station_df1.set_index(date_record_name, inplace=True)
@@ -156,6 +158,12 @@ for parameter in parameter_list:
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_code, values=value_name)
     pivot_table.to_csv(path + pivot_file)
     pivot_table.corr().to_csv(path + corr_file)
+    print_log('\nGeneral statistics table', center_div=False)
+    print_log(pivot_table.describe().to_markdown(), center_div=False)
+    print_log('\nCorrelation matrix [%s](%s)' %(corr_file, corr_file), center_div=False)
+    print_log(pivot_table.corr().to_markdown())
+    print_log('\nCorrelation statistics table', center_div=False)
+    print_log(pivot_table.corr().describe().to_markdown(), center_div=False)
     fig = pivot_table.plot(figsize=(fig_size*2, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
     plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
@@ -163,12 +171,15 @@ for parameter in parameter_list:
     fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size+1), legend=False)
     plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_DensityKDE.png')
-    print_log('\nGeneral statistics table', center_div=False)
-    print_log(pivot_table.describe().to_markdown(), center_div=False)
-    print_log('\nCorrelation matrix [%s](%s)' %(corr_file, corr_file), center_div=False)
-    print_log(pivot_table.corr().to_markdown())
-    print_log('\nCorrelation statistics table', center_div=False)
-    print_log(pivot_table.corr().describe().to_markdown(), center_div=False)
-
-# plt.show()
-plt.close('all')
+    plt.close('all')
+    # Plot correlations in heatmap style
+    plt.figure(figsize=(fig_size*3, fig_size*3))
+    plt.imshow(pivot_table.corr(), cmap='RdYlBu')
+    plt.colorbar()
+    plt.xticks(range(len(pivot_table.corr())), pivot_table.corr().columns)
+    plt.yticks(range(len(pivot_table.corr())), pivot_table.corr().index)
+    plt.xticks(rotation=90)
+    plt.title('Correlations for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query),fontsize=10)
+    plt.savefig(path + 'Graph/Plot_' + parameter + '_Correlation.png')
+    #plt.show()
+    plt.close('all')

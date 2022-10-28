@@ -1,7 +1,7 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-28 09:37:57.389917
+* Fecha y hora de inicio de ejecución: 2022-10-28 10:31:27.545877
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide']
 * matplotlib versión: 3.6.0
@@ -580,6 +580,7 @@ Records by parameter and station with not year range filter
 Pivot table: [Pivot_PTPM_TT_M.csv](Pivot_PTPM_TT_M.csv)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_TimeSerie.png)
 ![R.LTWB](Graph/Plot_PTPM_TT_M_DensityKDE.png)
+![R.LTWB](Graph/Plot_PTPM_TT_M_Correlation.png)
 
 <div align="center">
 
@@ -6338,6 +6339,7 @@ Correlation statistics table
 Pivot table: [Pivot_TMX_CON.csv](Pivot_TMX_CON.csv)
 ![R.LTWB](Graph/Plot_TMX_CON_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMX_CON_DensityKDE.png)
+![R.LTWB](Graph/Plot_TMX_CON_Correlation.png)
 
 <div align="center">
 
@@ -7476,6 +7478,7 @@ Correlation statistics table
 Pivot table: [Pivot_TMN_CON.csv](Pivot_TMN_CON.csv)
 ![R.LTWB](Graph/Plot_TMN_CON_TimeSerie.png)
 ![R.LTWB](Graph/Plot_TMN_CON_DensityKDE.png)
+![R.LTWB](Graph/Plot_TMN_CON_Correlation.png)
 
 <div align="center">
 
@@ -8614,6 +8617,7 @@ Correlation statistics table
 Pivot table: [Pivot_EV_TT_D.csv](Pivot_EV_TT_D.csv)
 ![R.LTWB](Graph/Plot_EV_TT_D_TimeSerie.png)
 ![R.LTWB](Graph/Plot_EV_TT_D_DensityKDE.png)
+![R.LTWB](Graph/Plot_EV_TT_D_Correlation.png)
 
 <div align="center">
 
@@ -8696,6 +8700,7 @@ Correlation statistics table
 Pivot table: [Pivot_Q_MEDIA_M.csv](Pivot_Q_MEDIA_M.csv)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_TimeSerie.png)
 ![R.LTWB](Graph/Plot_Q_MEDIA_M_DensityKDE.png)
+![R.LTWB](Graph/Plot_Q_MEDIA_M_Correlation.png)
 
 <div align="center">
 
