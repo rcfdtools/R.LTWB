@@ -102,8 +102,9 @@ for parameter in parameter_list:
     ideam_regs_query = station_df1.shape[0]
     print_log('\n\n### Analysis from %d to %d for %s: %i (%s%%)' % (start_year, end_year, parameter_name, ideam_regs_query, str(round((ideam_regs_query / ideam_regs) * 100, 2))))
     #print_log('\n\n### Analysis from %d to %d for %s (%s): %i (%s%%)' % (start_year, end_year, station_df1[tag_desc_name][0], parameter_name, ideam_regs_query,str(round((ideam_regs_query / ideam_regs) * 100, 2))))
-    pivot_name = 'Pivot_' + parameter + '.csv'
-    print_log('\nPivot table: [%s](%s)' %(pivot_name, pivot_name))
+    pivot_file = 'Pivot_' + parameter + '.csv'
+    corr_file = 'Pivot_' + parameter + '_Correlation.csv'
+    print_log('\nPivot table: [%s](%s)' %(pivot_file, pivot_file))
     fig_name = 'Plot_' + parameter + '_TimeSerie.png'
     print_log('![R.LTWB](Graph/%s)' % fig_name, center_div=False)
     fig_name = 'Plot_' + parameter + '_DensityKDE.png'
@@ -153,8 +154,7 @@ for parameter in parameter_list:
     # Pivot table, plot, describe and correlations
     print_log('\n\n#### Correlation analysis matrix and statistics for %s' % parameter)
     pivot_table = station_df1.pivot_table(index=date_record_name, columns=station_code, values=value_name)
-    pivot_file = path + 'Pivot_' + parameter + '.csv'
-    pivot_table.to_csv(pivot_file)
+    pivot_table.to_csv(path + pivot_file)
     fig = pivot_table.plot(figsize=(fig_size*2, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=0.5, lw=1)
     fig.set_ylabel(value_name)
     plt.title('Time series for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
@@ -162,12 +162,14 @@ for parameter in parameter_list:
     fig = pivot_table.plot.kde(colormap=plot_colormap, figsize=(fig_size*2, fig_size+1), legend=False)
     plt.title('KDE density for %s with %d stations (%d rec.)' % (parameter, len(station_list), ideam_regs_query), fontsize = 10)
     plt.savefig(path + 'Graph/Plot_' + parameter + '_DensityKDE.png')
-    corr_df = pd.read_csv(pivot_file, low_memory=False)
-    corr_df.corr().to_csv(path + 'Pivot_' + parameter + '_Correlation.csv')
+    corr_df = pd.read_csv(path + pivot_file, low_memory=False)
+    corr_df.corr().to_csv(path + corr_file)
     print_log('\nGeneral statistics table', center_div=False)
-    print_log(corr_df.corr().describe().to_markdown(), center_div=False)
-    print_log('\nCorrelation matrix', center_div=True)
+    print_log(pivot_table.corr().describe().to_markdown(), center_div=False)
+    print_log('\nCorrelation matrix [%s](%s)' %(corr_file, corr_file), center_div=False)
     print_log(corr_df.corr().to_markdown())
+    print_log('\nCorrelation statistics table', center_div=False)
+    print_log(corr_df.corr().describe().to_markdown(), center_div=False)
 
 # plt.show()
 plt.close('all')
