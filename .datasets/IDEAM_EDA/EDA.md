@@ -1,11 +1,11 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 
 * Archivo de resultados: D:/R.LTWB/.datasets/IDEAM_EDA/EDA.md
-* Fecha y hora de inicio de ejecución: 2022-10-27 18:08:09.247949
+* Fecha y hora de inicio de ejecución: 2022-10-28 08:15:15.501471
 * Python versión: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
+* Python rutas: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide']
 * matplotlib versión: 3.6.0
-* Print table samples: True
+* Print table samples: False
 * Start year: 1980
 * End year: 2021
 * Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/EDA
@@ -15,21 +15,310 @@
 
 ### General dataframe information with 514927 IDEAM records
 
-Dataframe records head sample
+<div align="center">
 
-|    |   CodigoEstacion | NombreEstacion                                  |   Latitud |   Longitud |   Altitud | Categoria           | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio   | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   | Fecha               |   Valor |   Grado |   Calificador |   NivelAprobacion |
-|---:|-----------------:|:------------------------------------------------|----------:|-----------:|----------:|:--------------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|:--------------------|--------:|--------:|--------------:|------------------:|
-|  0 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1987-12-01 00:00:00 |   202   |      50 |           nan |               900 |
-|  1 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-01-01 00:00:00 |     0   |      50 |           nan |               900 |
-|  2 |         25025330 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |   8.95422 |   -73.6301 |        50 | Climática Principal | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 05 - Magdalena-Cesar-Guajira | Cesar          | Pailitas    | 1987-09-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 1988-02-01 00:00:00 |    18.9 |      50 |           nan |               900 |
+Datatypes in the dataset
 
-Dataframe records tail sample
+</div>
 
-|        |   CodigoEstacion | NombreEstacion        |   Latitud |   Longitud |   Altitud | Categoria     | Entidad                                                     | AreaOperativa                               | Departamento   | Municipio    | FechaInstalacion    | FechaSuspension   | IdParametro   | Etiqueta   | DescripcionSerie            | Frecuencia   | Fecha               |   Valor |   Grado |   Calificador |   NivelAprobacion |
-|-------:|-----------------:|:----------------------|----------:|-----------:|----------:|:--------------|:------------------------------------------------------------|:--------------------------------------------|:---------------|:-------------|:--------------------|:------------------|:--------------|:-----------|:----------------------------|:-------------|:--------------------|--------:|--------:|--------------:|------------------:|
-| 514924 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2020-12-01 00:00:00 |      90 |      50 |           nan |               900 |
-| 514925 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2021-01-01 00:00:00 |       0 |      50 |           nan |               900 |
-| 514926 |         25021090 | SANTA ROSA [25021090] |   9.09333 |   -74.3139 |        40 | Pluviométrica | INSTITUTO DE HIDROLOGIA METEOROLOGIA Y ESTUDIOS AMBIENTALES | Area Operativa 02 - Atlántico-Bolivar-Sucre | Bolivar        | San Fernando | 1974-10-15 00:00:00 | NaT               | PRECIPITACION | PTPM_TT_M  | Precipitación total mensual | Mensual      | 2021-02-01 00:00:00 |       0 |      50 |           nan |               900 |
+
+<div align="center">
+
+|                  | 0              |
+|:-----------------|:---------------|
+| CodigoEstacion   | object         |
+| NombreEstacion   | object         |
+| Latitud          | float64        |
+| Longitud         | float64        |
+| Altitud          | int64          |
+| Categoria        | object         |
+| Entidad          | object         |
+| AreaOperativa    | object         |
+| Departamento     | object         |
+| Municipio        | object         |
+| FechaInstalacion | datetime64[ns] |
+| FechaSuspension  | datetime64[ns] |
+| IdParametro      | object         |
+| Etiqueta         | object         |
+| DescripcionSerie | object         |
+| Frecuencia       | object         |
+| Fecha            | datetime64[ns] |
+| Valor            | float64        |
+| Grado            | object         |
+| Calificador      | object         |
+| NivelAprobacion  | object         |
+
+</div>
+
+
+<div align="center">
+
+General statistics table
+
+</div>
+
+
+<div align="center">
+
+|       |       Latitud |      Longitud |    Altitud |       Valor |
+|:------|--------------:|--------------:|-----------:|------------:|
+| count | 514927        | 514927        | 514927     | 514927      |
+| mean  |     10.0618   |    -73.6262   |    125.831 |     73.8252 |
+| std   |      0.612032 |      0.456964 |    159.568 |    433.814  |
+| min   |      8.58861  |    -74.39     |      2     |   -176      |
+| 25%   |      9.68367  |    -74.1547   |     34     |     22.6    |
+| 50%   |     10.1907   |    -73.5934   |     70     |     27.2    |
+| 75%   |     10.5664   |    -73.2477   |    170     |     34.8    |
+| max   |     10.9986   |    -72.7561   |   1560     |  76114      |
+
+</div>
+
+
+<div align="center">
+
+Stations in the dataset
+
+</div>
+
+
+<div align="center">
+
+|     | 0                                               |
+|----:|:------------------------------------------------|
+|   0 | COLEGIO AGROPECUARIO PAILITAS  - AUT [25025330] |
+|   1 | GLORIA LA [23210020]                            |
+|   2 | LA GLORIA [23215060]                            |
+|   3 | MATA LA [23215050]                              |
+|   4 | RAYA LA [25020670]                              |
+|   5 | SANTA ISABEL [25021640]                         |
+|   6 | TAMALAMEQUE D C [25021590]                      |
+|   7 | TAMALAMEQUE [25020090]                          |
+|   8 | TERROR EL HACIENDA [25020650]                   |
+|   9 | ZAPATOZA [25020660]                             |
+|  10 | BELLAVISTA [28040150]                           |
+|  11 | CABANA LA HACIENDA [28040360]                   |
+|  12 | DESTINO EL [29060150]                           |
+|  13 | DONA MARIA [29060560]                           |
+|  14 | FUNDACION [29060040]                            |
+|  15 | MARIA LA [29060200]                             |
+|  16 | MONTERRUBIO [28040100]                          |
+|  17 | NUEVA GRANADA [25021630]                        |
+|  18 | SAN ANGEL [28040140]                            |
+|  19 | SANTA ROSA DE LIMA [29060100]                   |
+|  20 | BAYANO [29060350]                               |
+|  21 | BONGO EL [29060030]                             |
+|  22 | CARMEN EL [29060140]                            |
+|  23 | CENIZO EL [29060060]                            |
+|  24 | FLORIDA LA [29060190]                           |
+|  25 | GAVILAN [29060170]                              |
+|  26 | PADELMA [29065020]                              |
+|  27 | PALO ALTO [29060270]                            |
+|  28 | UNION LA [29060240]                             |
+|  29 | ZACAPA [29065010]                               |
+|  30 | ESPERANZA LA [29060180]                         |
+|  31 | PALMOR EL [29060340]                            |
+|  32 | PLAYA LA [29060330]                             |
+|  33 | POLY LA [29060220]                              |
+|  34 | PRADO SEVILLA [29065030]                        |
+|  35 | PROYECTOS LOS [29060250]                        |
+|  36 | RUBY EL [29060550]                              |
+|  37 | SAN JUAN [29060290]                             |
+|  38 | SAN PABLO [29060070]                            |
+|  39 | SARA LA [29060230]                              |
+|  40 | ENANO EL [29060160]                             |
+|  41 | PALMA LA [29060210]                             |
+|  42 | SAN ISIDRO [29060280]                           |
+|  43 | SEVILLANO [29060310]                            |
+|  44 | TASAJERA [29060120]                             |
+|  45 | YE LA [15015020]                                |
+|  46 | CNO LA RAYA [16060010]                          |
+|  47 | HACHARIRA [16070030]                            |
+|  48 | ORU [16070040]                                  |
+|  49 | PALACIO EL [16050240]                           |
+|  50 | PISTA LA [16070020]                             |
+|  51 | PUERTO BARCO [16070010]                         |
+|  52 | ALGARROBO [28045020]                            |
+|  53 | CENTENARIO HACIENDA [28025090]                  |
+|  54 | CHIRIGUANA [25025250]                           |
+|  55 | GUAIRA LA HACIENDA [28045040]                   |
+|  56 | GUAYMARAL [28035040]                            |
+|  57 | MOTILONIA CODAZZI [28025070]                    |
+|  58 | SOCOMBA [28025080]                              |
+|  59 | VILLA ROSA [28035010]                           |
+|  60 | AEROPUERTO ALFONSO LOPEZ - [28025502]           |
+|  61 | CALLAO EL [28035020]                            |
+|  62 | CICOLAC [28015030]                              |
+|  63 | GUATAPURI - AUT [28035070]                      |
+|  64 | RINCON EL [28025020]                            |
+|  65 | SAN JOSE D ORIENTE [28025040]                   |
+|  66 | LA PAULINA - AUT [15065040]                     |
+|  67 | URUMITA [28015070]                              |
+|  68 | AEROPUERTO LAS FLORES [25025090]                |
+|  69 | LOS ALAMOS - AUT [25025002]                     |
+|  70 | SEIS EL [25025300]                              |
+|  71 | ASTREA [25020220]                               |
+|  72 | CANAL EL [25020240]                             |
+|  73 | CHIMICHAGUA [25021240]                          |
+|  74 | CURUMANI D C [25021580]                         |
+|  75 | CURUMANI [25020250]                             |
+|  76 | POPONTE [25020690]                              |
+|  77 | PRIMAVERA LA [25020920]                         |
+|  78 | RINCONHONDO [25020260]                          |
+|  79 | SALOA [25020270]                                |
+|  80 | LA GRAN VIA - AUT [29065130]                    |
+|  81 | ALTO DEL ROSARIO [25027400]                     |
+|  82 | ARMENIA [25027360]                              |
+|  83 | CHAPETONA LA [25027620]                         |
+|  84 | LAS AGUADAS [25027490]                          |
+|  85 | PALOMAS LAS [25027390]                          |
+|  86 | PENONCITO [25027330]                            |
+|  87 | REGIDOR [25027410]                              |
+|  88 | SAN ROQUE [25027320]                            |
+|  89 | VICTORIA LA [25027420]                          |
+|  90 | RIO NUEVO [25027630]                            |
+|  91 | ARIGUANI HACIENDA - AUT [28017120]              |
+|  92 | CAIMANCITO [25027590]                           |
+|  93 | CHEMESQUEMENA [28017150]                        |
+|  94 | FLORES LAS [28027030]                           |
+|  95 | GRACIAS A DIOS HACIENDA [25027080]              |
+|  96 | MATILDE LA [28027020]                           |
+|  97 | MINA LA [28017110]                              |
+|  98 | PUENTE CARRETERA [25027890]                     |
+|  99 | REPOSO EL [28017050]                            |
+| 100 | SANTA TERESA [28027040]                         |
+| 101 | BECERRIL [28027050]                             |
+| 102 | CANTACLARO [28037060]                           |
+| 103 | CONVENCION HACIENDA [28037020]                  |
+| 104 | ISLANDIA [28027160]                             |
+| 105 | MARIANGOLA [28037040]                           |
+| 106 | PUEBLO BELLO [28047020]                         |
+| 107 | PUENTE CALLAO [28037010]                        |
+| 108 | PUENTE CANOAS  - AUT [28037090]                 |
+| 109 | PUENTE CARRETERA [28037130]                     |
+| 110 | PUENTE SALGUERO  - AUT [28037030]               |
+| 111 | BELLEZA LA [28047080]                           |
+| 112 | PUENTE CARRETERA [28047040]                     |
+| 113 | CARACOLI - AUT [15067210]                       |
+| 114 | CERCADO EL-AUTOMAT [15067020]                   |
+| 115 | CORRAL DE PIEDRA [28017080]                     |
+| 116 | EL SILENCIO - AUT [15067200]                    |
+| 117 | MAGUEYES LOS [15067080]                         |
+| 118 | POZO HONDO [15067130]                           |
+| 119 | PUENTE GUAJIRO - AUT [15067150]                 |
+| 120 | SAN FRANCISCO [15067170]                        |
+| 121 | CORRAL DE PIEDRA  - AUT [28017140]              |
+| 122 | AURORA LA [28047010]                            |
+| 123 | CANAL FLORIDA [29067050]                        |
+| 124 | EL BANCO - AUT [25027020]                       |
+| 125 | FUNDACION [29067120]                            |
+| 126 | PALMARIGUANI  - AUT [28047050]                  |
+| 127 | PUERTO RICO HACIENDA  - AUT [29067060]          |
+| 128 | RIO FRIO [29067070]                             |
+| 129 | SANTA ROSALIA [29067040]                        |
+| 130 | TREBOL EL [29067010]                            |
+| 131 | GANADERIA CARIBE  - AUT [29067150]              |
+| 132 | PUENTE FERROCARRIL [29067130]                   |
+| 133 | PUENTE SEVILLA  - AUT [29067160]                |
+| 134 | CABLE EL [16067020]                             |
+| 135 | CAMPO SEIS [16037040]                           |
+| 136 | PUENTE TARRA [16047020]                         |
+| 137 | PUERTO BARCO-GABARRA - AUT [16067010]           |
+| 138 | JAGUA LA [25020230]                             |
+| 139 | LLANOS LOS [28020230]                           |
+| 140 | LOMA LA [25020280]                              |
+| 141 | MOLINO EL [28040310]                            |
+| 142 | PASO EL   [28040350]                            |
+| 143 | PLAYAS LAS HACIENDA [28020080]                  |
+| 144 | SAN GABRIEL [28020420]                          |
+| 145 | YUCAL EL [25021650]                             |
+| 146 | BOSCONIA [28040030]                             |
+| 147 | CODAZZI DC [28020460]                           |
+| 148 | ESPERANZA LA HACIENDA [28020150]                |
+| 149 | MANATURE HACIENDA [28040270]                    |
+| 150 | PALMARIGUANI [28040070]                         |
+| 151 | PALMASOLA [28040400]                            |
+| 152 | RETORNO EL [28020600]                           |
+| 153 | SANTA TERESA HACIENDA [28020440]                |
+| 154 | BOGOTANA LA [28020310]                          |
+| 155 | CARACOLI [28030190]                             |
+| 156 | CHIMILAIMA [28040200]                           |
+| 157 | LETICIA [28020590]                              |
+| 158 | PARIS DE FRANCIA [28010370]                     |
+| 159 | PAVAS LAS [28040060]                            |
+| 160 | SAN BENITO [28020410]                           |
+| 161 | VILLA MARLENE [28010070]                        |
+| 162 | ATANQUEZ [28010360]                             |
+| 163 | CUEVAS LAS [28040170]                           |
+| 164 | DESCANSO EL [28010020]                          |
+| 165 | MANAURE [28010040]                              |
+| 166 | PUEBLO BELLO [28040010]                         |
+| 167 | SAN ANGEL [28030220]                            |
+| 168 | SAN SEBASTIAN DE [29060090]                     |
+| 169 | VILLA CARMELITA [28010140]                      |
+| 170 | PATILLAL [28010090]                             |
+| 171 | PUEBLO BELLO  [28045010]                        |
+| 172 | SARACHUI [28010130]                             |
+| 173 | CANAVERALES [15060080]                          |
+| 174 | CONEJO EL [15060150]                            |
+| 175 | HATICO D LOS INDIO [28010200]                   |
+| 176 | JUGUETE EL [15060070]                           |
+| 177 | PAMPLONA [28010280]                             |
+| 178 | SABANAS DE MANUELA [15060050]                   |
+| 179 | VILLANUEVA [28010340]                           |
+| 180 | BRILLANTE EL [28040320]                         |
+| 181 | IRAN [25021620]                                 |
+| 182 | MENCHIQUEJO [25021040]                          |
+| 183 | NEGRITOS LOS [25021200]                         |
+| 184 | PUEBLITO EL [25021500]                          |
+| 185 | SAN ROQUE ALERTAS [25021380]                    |
+| 186 | SAN SEBASTIAN [25020900]                        |
+| 187 | VILLA CONCEPCION [28040300]                     |
+| 188 | AGUADAS LAS ALERTA [25021540]                   |
+| 189 | BARRANCO DE LOBA [25020880]                     |
+| 190 | CHILLOA [25020890]                              |
+| 191 | SUDAN EL [25021320]                             |
+| 192 | GANAD LA ESMERALDA  [25020040]                  |
+| 193 | PLAYITAS [25020870]                             |
+| 194 | SANTA ROSA [25021090]                           |
+
+</div>
+
+
+<div align="center">
+
+Null values in the dataset
+
+</div>
+
+
+<div align="center">
+
+|                  |      0 |
+|:-----------------|-------:|
+| CodigoEstacion   |      0 |
+| NombreEstacion   |      0 |
+| Latitud          |      0 |
+| Longitud         |      0 |
+| Altitud          |      0 |
+| Categoria        |      0 |
+| Entidad          |      0 |
+| AreaOperativa    |      0 |
+| Departamento     |      0 |
+| Municipio        |      0 |
+| FechaInstalacion |      0 |
+| FechaSuspension  | 422201 |
+| IdParametro      |      0 |
+| Etiqueta         |      0 |
+| DescripcionSerie |      0 |
+| Frecuencia       |      0 |
+| Fecha            |      0 |
+| Valor            |      0 |
+| Grado            |      0 |
+| Calificador      | 506535 |
+| NivelAprobacion  |      0 |
+
+</div>
+
 
 
 ### Analysis from 1980 to 2021 for Etiqueta == "PTPM_TT_M": 55363 (10.75%)

@@ -11,6 +11,7 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 import tabulate  # required for print tables in Markdown using pandas
+import numpy as np
 from datetime import datetime
 
 
@@ -46,7 +47,7 @@ plot_colormap = 'magma'  # Color theme for plot graphics, https://matplotlib.org
 sample_records = 3 # Records to show in the sample table head and tail
 histogram_binds = 12
 fig_size = 5 # Height size for figures plot
-print_table_sample = True
+print_table_sample = False
 start_year = 1980  # Chirps values starts at 1981
 end_year = 2021  # This value have to correspond with the end of the IDEAM series
 
@@ -69,12 +70,22 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
 station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install_name, date_suspend_name, date_record_name], converters={station_code: str, grade_name: str, approved_name: str})
 ideam_regs = station_df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records' % ideam_regs)
+print_log('Datatypes in the dataset', center_div=True)
 print(station_df.info())
+print_log(station_df.dtypes.to_markdown(), center_div=True)
 if print_table_sample:
     print_log('\nDataframe records head sample\n')
     print_log(station_df.head(sample_records).to_markdown())
     print_log('\nDataframe records tail sample\n')
     print_log(station_df.tail(sample_records).to_markdown())
+print_log('General statistics table', center_div=True)
+print_log(station_df.describe().to_markdown(), center_div=True)
+print_log('Stations in the dataset', center_div=True)
+stations_np = pd.DataFrame(station_df[station_name].unique())
+print_log(stations_np.to_markdown(), center_div=True)
+print_log('Null values in the dataset', center_div=True)
+print_log(station_df.isnull().sum().to_markdown(), center_div=True)
+
 
 # Slice data from each parameter and station
 parameter_list = station_df[tag_name].unique()
@@ -105,9 +116,8 @@ for parameter in parameter_list:
             df[longitude_name][0]) + ') or [Openstreet Map](https://www.openstreetmap.org/query?lat=' + str(df[latitude_name][0]) + '&lon=' + str(
             df[longitude_name][0]) + ')')
         print_log('\n\n**%s - Station: %s (%s rec.)**<br>%s' %(parameter, df[station_name][0], df.shape[0], map_location), center_div=True)
-        if print_table_sample:
-            print_log('\nStation first record\n')
-            print_log(df.head(1).to_markdown())
+        print_log('\nStation first record\n')
+        print_log(df.head(1).to_markdown())
         print_log('Statistics table', center_div=True)
         print_log(df[value_name].describe().to_markdown(), center_div=True)
         fig = df.plot(y=value_name, figsize=(fig_size, fig_size+1), rot=90, colormap=plot_colormap, legend=False, alpha=1, lw=1)

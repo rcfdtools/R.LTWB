@@ -19,6 +19,8 @@ References
 * https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.kde.html
 * https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0
 
+* https://www.digitalocean.com/community/tutorials/exploratory-data-analysis-python
+
 
 Others
 * Descarga, organización y análisis de datos hidrometeorologicos IDEAM con Google Colaboratory, QGIS https://www.youtube.com/watch?v=MDo0-18Vvtw
