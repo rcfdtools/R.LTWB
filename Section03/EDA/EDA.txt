@@ -6,10 +6,7 @@ Calcular en cada estación la longitud registrada de series para cada variable I
 Comparar la longitud hipotética de series en cada estación con la longitud registrada.
 
 
-References
-
-
-Others
+Others references
 
 * Descarga, organización y análisis de datos hidrometeorologicos IDEAM con Google Colaboratory, QGIS https://www.youtube.com/watch?v=MDo0-18Vvtw
 * https://www.projectpro.io/recipes/deal-with-missing-values-in-timeseries-in-python
