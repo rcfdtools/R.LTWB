@@ -288,6 +288,8 @@ Durante el proceso de ejecución del script, se genera automáticamente las grá
 | [Pivot_TMX_CON.csv](../../.datasets/IDEAM_EDA/Pivot_TMX_CON.csv)                             | Tabla dinámica con series de temperatura máxima diaria.          |     25     |
 | [Pivot_TMX_CON_Correlation.csv](../../.datasets/IDEAM_EDA/Pivot_TMX_CON_Correlation.csv)     | Tabla de correlaciones para series de temperatura máxima diaria. |     25     |
 
+Consulte el reporte detallado de resultados [EDA.md](../../.datasets/IDEAM_EDA/EDA.md).
+
 En este momento, dispone de un reporte detallado de análisis, tablas dinámicas (pivot tables) y tablas de correlaciones por parámetro.
 
 
@@ -336,6 +338,6 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../RemoteSensing) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente]()  |
-|----------------------------------------|---------------------------|--------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../RemoteSensing) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/23) | [Actividad siguiente]() |
+|----------------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------|
 
