@@ -36,7 +36,7 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 
 1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
-Funcionalidades del script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py)
+Funcionalidades del script
 
 * Descarga directa de archivos comprimidos de grillas Chirps de precipitación mensual total a partir de la definición de un rango de años, p.ej., entre 1981 y 2021.
 * Descompresión de grillas .tif.
@@ -273,7 +273,7 @@ if remove_temp_file_csv:  # csv glob.glob created before
 print('\nProcess accomplished, check the results files like: %s' % (path + station_file_chirps))
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad anterior denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
+2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
 
 3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\CHIRPS` ubíquese dentro de la carpeta CHIRPS.
 

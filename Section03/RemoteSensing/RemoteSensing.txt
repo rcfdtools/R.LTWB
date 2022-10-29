@@ -1,4 +1,4 @@
-Weather variables from satellite observations
+Weather variables from satellital observations
     Ok. Precipitación total mensual
     Temperatura máxima diaria
     Temperatura mínima diaria

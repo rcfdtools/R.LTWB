@@ -8,24 +8,6 @@ Comparar la longitud hipotética de series en cada estación con la longitud reg
 
 References
 
-* https://kanoki.org/2020/01/21/pandas-dataframe-filter-with-multiple-conditions/
-* https://stackoverflow.com/questions/49684951/pandas-read-csv-dtype-read-all-columns-but-few-as-string
-* https://sparkbyexamples.com/pandas/pandas-find-unique-values-from-columns
-* https://www.w3schools.com/python/pandas/ref_df_describe.asp
-* https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.describe.html
-* https://stackoverflow.com/questions/29370057/select-dataframe-rows-between-two-dates
-* https://www.dataquest.io/blog/tutorial-time-series-analysis-with-pandas/
-* https://www.statology.org/pandas-plot-distribution-of-column/
-* https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.kde.html
-* https://towardsdatascience.com/histograms-and-density-plots-in-python-f6bda88f5ac0
-* https://www.digitalocean.com/community/tutorials/exploratory-data-analysis-python
-* https://datatofish.com/numpy-array-to-pandas-dataframe/
-* https://stackoverflow.com/questions/12286607/making-heatmap-from-pandas-dataframe
-* https://stackoverflow.com/questions/17679089/pandas-dataframe-groupby-two-columns-and-get-counts
-* https://www.easytweaks.com/pandas-group-one-multiple-columns/
-* https://www.geeksforgeeks.org/display-the-pandas-dataframe-in-heatmap-style/
-
-
 
 Others
 

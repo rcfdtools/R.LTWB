@@ -57,6 +57,7 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
           '\n* Python versión: ' + str(sys.version) +
           '\n* Python rutas: ' + str(sys.path[0:5]) +
           '\n* matplotlib versión: ' + str(matplotlib.__version__) +
+          '\n* pandas versión: ' + str(pd.__version__) +
           '\n* Print table samples: ' + str(print_table_sample) +
           '\n* Start year: ' + str(start_year) +
           '\n* End year: ' + str(end_year) +
