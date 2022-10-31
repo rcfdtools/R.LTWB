@@ -1,12 +1,13 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
-Keywords: `EDA` `matplotlib` `pandas` `tabulate`
+Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` 
 
 <div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="75%"></div> 
 
 Durante el proceso de revisión, validación y comprensión de los datos, es necesario utilizar diferentes técnicas que permitan identificar discontinuidades, cambios en el comportamiento temporal y en general revisar los paramétricos de cada serie por parámetro.
 
-¿Qué es y para que sirve la EDA?
+**¿Qué es y para que sirve la EDA?** [^1]
 
+La exploración y análisis de datos o EDA por sus siglas en inglés, se refiere al proceso de investigación, mejoramiento, descubrimiento de patrones de comportamiento e identificación de anomalías sobre conjuntos de datos; además, permite realizar pruebas de hipótesis y revisar las suposiciones que frecuentemente realizamos frente a ciertas variables climatológicas por medio de resúmenes estadísticos, tablas dinámicas y gráficas detalladas. Como buena práctica y antes de crear modelos complejos de análisis o pronóstico, se recomienda entender primero los datos para tener una idea de su comportamiento y relación. 
 
 
 ### Objetivos
@@ -342,3 +343,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Actividad anterior](../RemoteSensing) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/23) | [Actividad siguiente]() |
 |----------------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------|
 
+[^1]: Tomado o adaptado de https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15
