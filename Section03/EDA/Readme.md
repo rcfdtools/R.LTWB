@@ -1,5 +1,5 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
-Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` 
+Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `unique` `size` `correlation` `pivot-table` `stats` `histogram` `density` `boxplot` 
 
 <div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="75%"></div> 
 
