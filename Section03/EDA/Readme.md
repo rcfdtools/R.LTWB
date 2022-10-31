@@ -5,7 +5,7 @@ Keywords: `EDA` `matplotlib` `pandas` `tabulate`
 
 Durante el proceso de revisión, validación y comprensión de los datos, es necesario utilizar diferentes técnicas que permitan identificar discontinuidades, cambios en el comportamiento temporal y en general revisar los paramétricos de cada serie por parámetro.
 
-¿Qué y para que sirve EDA?
+¿Qué es y para que sirve la EDA?
 
 
 
@@ -322,6 +322,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://stackoverflow.com/questions/17679089/pandas-dataframe-groupby-two-columns-and-get-counts
 * https://www.easytweaks.com/pandas-group-one-multiple-columns/
 * https://www.geeksforgeeks.org/display-the-pandas-dataframe-in-heatmap-style/
+* https://towardsdatascience.com/how-to-plot-time-series-86b5358197d6
 
 
 ### Control de versiones
