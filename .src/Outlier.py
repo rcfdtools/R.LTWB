@@ -38,7 +38,7 @@ pivot_table_name = 'Pivot_PTPM_TT_M.csv' # Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/' # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
-file_log_name = path + 'Outlier.md'
+file_log_name = path + 'Outlier_IQR_' + pivot_table_name + '.md' # First file log
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'magma'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
@@ -52,7 +52,7 @@ q3_val = 0.9
 
 # Header
 print_log('## Outliers detection and processing')
-print_log('\n* Report name: ' + file_log_name +
+print_log('\n* Report name: various' +
           '\n* Processed file: ' + str(station_file) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
@@ -83,7 +83,7 @@ print_log(df_concat.to_markdown(), center_div=True)
 print_log('\nGeneral statistics table', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
 
-# Outliers processing for interquartile range IQR
+# METHOD 1 - Outliers processing for interquartile range IQR
 print_log('### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
