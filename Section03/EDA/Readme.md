@@ -54,8 +54,8 @@ Contenido del script
 ```
 # -*- coding: UTF-8 -*-
 # Name: EDA.py
-# Description:
-# Requirements: Python 3+, pandas, rasterio, requests, tabulate
+# Description: exploratory data analysis
+# Requirements: Python 3+, pandas, tabulate
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
 
@@ -81,7 +81,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
-path = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Your local .zip files path, use ../.datasets/CHIRPS/ for relative path
+path = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Your local files path, use ../.datasets/IDEAM_EDA/ for relative path
 file_log_name = path + 'EDA.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 station_code = 'CodigoEstacion'  # IDEAM station code name
@@ -89,13 +89,13 @@ station_name = 'NombreEstacion'  # IDEAM station code name
 date_install_name = 'FechaInstalacion'  # IDEAM installation date field name
 date_suspend_name = 'FechaSuspension'  # IDEAM suspension date field name
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
-latitude_name = 'Latitud'  # IDEAM latitude name ***********
-longitude_name = 'Longitud'  # IDEAM longitude name ***********
+latitude_name = 'Latitud'  # IDEAM latitude name
+longitude_name = 'Longitud'  # IDEAM longitude name
 value_name = 'Valor'  # IDEAM value field name
 grade_name = 'Grado'  # IDEAM grade field name
 approved_name = 'NivelAprobacion'  # IDEAM approved level field name
-tag_name = 'Etiqueta'  # IDEAM record parameter frecuency tag
-tag_desc_name = 'DescripcionSerie'  # IDEAM record parameter frecuency tag
+tag_name = 'Etiqueta'  # IDEAM record parameter frequency tag
+tag_desc_name = 'DescripcionSerie'  # IDEAM record parameter frequency tag
 plot_colormap = 'magma'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 sample_records = 3  # Records to show in the sample table head and tail
 histogram_binds = 12
