@@ -113,7 +113,7 @@ df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
 df_concat = pd.concat([df_q1, df_q3, df_IQR, df_bottom_lim, df_top_lim, df_min, df_max, df_count], axis='columns')
-print_log(df_concat.to_markdown()) # *******
+print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 ax = df.plot(color='lightblue', legend=False, alpha=0.1, figsize=(12, 6))
