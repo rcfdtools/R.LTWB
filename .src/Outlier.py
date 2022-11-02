@@ -80,8 +80,8 @@ print_log(df_concat.to_markdown(), center_div=True)
 print_log('\nGeneral statistics table', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
 
-# METHOD 1 - Outliers processing for interquartile range IQR
-print_log('### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
+# Method 1 - Outliers processing for interquartile range IQR
+print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
 print_log('\nOutliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
@@ -115,7 +115,7 @@ print_log(df_concat.to_markdown(), center_div=True)
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 ax = df.plot(color='lightblue', legend=False, alpha=0.1, figsize=(12, 6))
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
-plt.title('METHOD 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
+plt.title('Method 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
 ax.set_ylabel('Values for %s' % pivot_table_name)
 plt.savefig(path + outlier_file + '.png')
 print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
