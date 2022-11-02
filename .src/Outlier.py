@@ -34,16 +34,14 @@ def find_outliers_IQR(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_PTPM_TT_M.csv' # Pivot table name to process
+pivot_table_name = 'Pivot_EV_TT_D.csv' # Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/' # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
 file_log_name = path + 'Outlier_IQR_' + pivot_table_name + '.md' # First file log
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
-plot_colormap = 'magma'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 sample_records = 3  # Records to show in the sample table head and tail
-histogram_binds = 12
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
 q1_val = 0.1
