@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Name: Outlier.py
-# Description: outliers identification
+# Description: outliers detection and processing
 # Requirements: Python 3+, pandas, tabulate
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
@@ -49,7 +49,7 @@ q3_val = 0.75
 
 
 # Header
-print_log('## Outliers detection')
+print_log('## Outliers detection and processing')
 print_log('\n* Archivo de resultados: ' + file_log_name +
           '\n* Fecha y hora de inicio de ejecución: ' + str(datetime.now()) +
           '\n* Python versión: ' + str(sys.version) +
@@ -84,15 +84,15 @@ print_log(df_concat.to_markdown(), center_div=True)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR
-print_log('### Outliers processing using the interquartile range IQR (q1 = %f, q3 = %f)' % (q1_val, q3_val))
+print_log('### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = %f, q3 = %f)' % (q1_val, q3_val))
 outliers = find_outliers_IQR(df)
 #print_log('\nOutliers table') # *******
 #print_log(outliers.to_markdown()) # *******
 print_log('\nOutliers stats')
 df_q1 = df.quantile(q1_val).to_frame()
-df_q1.columns = ['q1']
+df_q1.columns = ['q1_'+str(q1_val)]
 df_q3 = df.quantile(q3_val).to_frame()
-df_q3.columns = ['q3']
+df_q3.columns = ['q3_'+str(q3_val)]
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
