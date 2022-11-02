@@ -79,8 +79,8 @@ print_log('General statistics table', center_div=True)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR
-print_log('### Outliers processing for interquartile range IQR')
-print_log('\nOutliers table')
+print_log('### Outliers processing using the interquartile range IQR')
+#print_log('\nOutliers table')
 outliers = find_outliers_IQR(df)
 print_log(outliers.to_markdown())
 print_log('\nOutliers stats')
