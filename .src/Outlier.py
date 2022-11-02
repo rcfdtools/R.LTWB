@@ -26,8 +26,8 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # Function to find outliers using interquartile range IQR
 def find_outliers_IQR(df):
-    q1 = df.quantile(0.25)
-    q3 = df.quantile(0.75)
+    q1 = df.quantile(q1_val)
+    q3 = df.quantile(q3_val)
     IQR = q3-q1
     outliers = df[((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
     return outliers
@@ -44,6 +44,8 @@ sample_records = 3  # Records to show in the sample table head and tail
 histogram_binds = 12
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
+q1_val = 0.25
+q3_val = 0.75
 
 
 # Header
@@ -61,8 +63,8 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
 
 
 # Open the IDEAM station dataframe and show general information
-df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name])
-df.set_index(date_record_name, inplace=True)
+df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
+#df.set_index(date_record_name, inplace=True)
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -82,13 +84,18 @@ print_log(df_concat.to_markdown(), center_div=True)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR
-print_log('### Outliers processing using the interquartile range IQR')
-#print_log('\nOutliers table')
+print_log('### Outliers processing using the interquartile range IQR (q1 = %f, q3 = %f)' % (q1_val, q3_val))
 outliers = find_outliers_IQR(df)
-#print_log(outliers.to_markdown())
+#print_log('\nOutliers table') # *******
+#print_log(outliers.to_markdown()) # *******
 print_log('\nOutliers stats')
+df_q1 = df.quantile(q1_val).to_frame()
+df_q1.columns = ['q1']
+df_q3 = df.quantile(q3_val).to_frame()
+df_q3.columns = ['q3']
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
-df_min = pd.DataFrame(outliers.min(), columns=['OlMin'])
-df_max = pd.DataFrame(outliers.max(), columns=['OlMax'])
-df_concat = pd.concat([df_count, df_min, df_max ], axis='columns')
-print_log(df_concat.to_markdown())
+df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
+df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
+df_concat = pd.concat([df_q1, df_q3, df_count, df_min, df_max ], axis='columns')
+print_log(df_concat.to_markdown()) # *******
+print_log('\nIQR outliers identified: %d' % df_concat['OlCount'].sum())
