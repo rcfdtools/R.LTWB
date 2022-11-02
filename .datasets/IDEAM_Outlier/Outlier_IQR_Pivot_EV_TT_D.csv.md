@@ -1,7 +1,7 @@
 ## Outliers detection and processing
 
 * Processed file: D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_EV_TT_D.csv
-* Execution date: 2022-11-02 17:20:54.632508
+* Execution date: 2022-11-02 17:30:55.722025
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools.wiki', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
@@ -63,13 +63,13 @@ General statistics table
 
 </div>
 
-### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = 0.1, q3 = 0.9)
+### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = 0.25, q3 = 0.75)
 
 Outliers table: [Outlier_IQR_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_EV_TT_D.csv)
 
 Outliers parameters
-* q1: quartile 0.1
-* q3: quartile 0.9
+* q1: quartile 0.25
+* q3: quartile 0.75
 * IQR: interquartile range (q3-q1)
 * OlBottomLim: outlier bottom limit (q1-1.5*IQR)
 * OlTopLim: outlier top limit (q3+1.5*IQR)
@@ -82,11 +82,11 @@ Outliers parameters
 
 |          |   q1 |   q3 |   IQR |   OlBottomLim |   OlTopLim |   OlMinVal |   OlMaxVal |   OlCount |
 |---------:|-----:|-----:|------:|--------------:|-----------:|-----------:|-----------:|----------:|
-| 29065130 |    0 | 1396 |  1396 |          2094 |       3490 |        nan |        nan |         0 |
+| 29065130 |    0 |  139 |   139 |         208.5 |      347.5 |        350 |       2529 |       781 |
 
 </div>
 
 
 ![R.LTWB](Outlier_IQR_Pivot_EV_TT_D.csv.png)
 
-IQR outliers identified: 0
+IQR outliers identified: 781
