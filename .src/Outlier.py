@@ -50,16 +50,17 @@ q3_val = 0.75
 
 # Header
 print_log('## Outliers detection and processing')
-print_log('\n* Archivo de resultados: ' + file_log_name +
-          '\n* Fecha y hora de inicio de ejecución: ' + str(datetime.now()) +
-          '\n* Python versión: ' + str(sys.version) +
-          '\n* Python rutas: ' + str(sys.path[0:5]) +
-          '\n* matplotlib versión: ' + str(matplotlib.__version__) +
-          '\n* pandas versión: ' + str(pd.__version__) +
+print_log('\n* Report name: ' + file_log_name +
+          '\n* Processed file: ' + str(station_file) +
+          '\n* Execution date: ' + str(datetime.now()) +
+          '\n* Python version: ' + str(sys.version) +
+          '\n* Python path: ' + str(sys.path[0:5]) +
+          '\n* matplotlib version: ' + str(matplotlib.__version__) +
+          '\n* pandas version: ' + str(pd.__version__) +
           '\n* Print table samples: ' + str(print_table_sample) +
-          '\n* Encuentra este script en https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
-          '\n* Cláusulas y condiciones de uso en https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
-          '\n* Créditos: r.cfdtools@gmail.com')
+          '\n* Instructions & cript: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
+          '\n* Licence: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
+          '\n* Credits: r.cfdtools@gmail.com')
 
 
 # Open the IDEAM station dataframe and show general information
