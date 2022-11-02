@@ -57,8 +57,8 @@ print_log('\n* Report name: ' + file_log_name +
           '\n* Python path: ' + str(sys.path[0:5]) +
           '\n* matplotlib version: ' + str(matplotlib.__version__) +
           '\n* pandas version: ' + str(pd.__version__) +
-          '\n* Print table samples: ' + str(print_table_sample) +
-          '\n* Instructions & cript: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
+          '\n* Print table sample: ' + str(print_table_sample) +
+          '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
           '\n* Licence: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
           '\n* Credits: r.cfdtools@gmail.com')
 
@@ -79,9 +79,7 @@ df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
-#print_log('Null values in the dataset', center_div=True)
-#print_log(df.isnull().sum().to_markdown(), center_div=True)
-#print_log('\n**General statistics table**', center_div=False)
+print_log('\n**General statistics table**', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR

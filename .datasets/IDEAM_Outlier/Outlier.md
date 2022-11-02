@@ -2,13 +2,13 @@
 
 * Report name: D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier.md
 * Processed file: D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv
-* Execution date: 2022-11-02 15:51:05.475128
+* Execution date: 2022-11-02 15:53:20.695422
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools.wiki', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
-* Print table samples: True
-* Instructions & cript: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier
+* Print table sample: True
+* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier
 * Licence: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md
 * Credits: r.cfdtools@gmail.com
 
@@ -175,6 +175,8 @@ Datatypes and nulls values in the dataset
 
 </div>
 
+
+**General statistics table**
 
 <div align="center">
 
