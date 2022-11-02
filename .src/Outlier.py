@@ -118,10 +118,10 @@ print_log(df_concat.to_markdown()) # *******
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 ax = df.plot(color='lightblue', legend=False, alpha=0.1, figsize=(12, 6))
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
-plt.title('\nMETHOD 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
+plt.title('METHOD 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
 ax.set_ylabel('Value')
 plt.savefig(path + outlier_file + '.png')
-print_log('![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
+print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 print_log('\nIQR outliers identified: %d' % df_concat['OlCount'].sum())
 #plt.show()
 
