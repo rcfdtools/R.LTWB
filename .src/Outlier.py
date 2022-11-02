@@ -52,8 +52,7 @@ q3_val = 0.9
 
 # Header
 print_log('## Outliers detection and processing')
-print_log('\n* Report name: various' +
-          '\n* Processed file: ' + str(station_file) +
+print_log('\n* Processed file: ' + str(station_file) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
           '\n* Python path: ' + str(sys.path[0:5]) +
