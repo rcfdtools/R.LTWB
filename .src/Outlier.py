@@ -44,8 +44,8 @@ date_record_name = 'Fecha'  # IDEAM date field name for the record values
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
-q1_val = 0.25 # Default is 0.25
-q3_val = 0.75 # Default is 0.75
+q1_val = 0.15 # Default is 0.25
+q3_val = 0.85 # Default is 0.75
 
 
 # Header
