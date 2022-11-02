@@ -43,7 +43,7 @@ plot_colormap = 'magma'  # Color theme for plot graphics, https://matplotlib.org
 sample_records = 3  # Records to show in the sample table head and tail
 histogram_binds = 12
 fig_size = 5  # Height size for figures plot
-print_table_sample = False
+print_table_sample = True
 
 
 # Header
@@ -66,16 +66,16 @@ df.set_index(date_record_name, inplace=True)
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
-print_log('Datatypes in the dataset', center_div=True)
-print_log(df.dtypes.to_markdown(), center_div=True)
-print_log('Null values in the dataset', center_div=True)
-print_log(df.isnull().sum().to_markdown(), center_div=True)
 if print_table_sample:
     print_log('\nDataframe records head sample\n')
     print_log(df.head(sample_records).to_markdown())
     print_log('\nDataframe records tail sample\n')
     print_log(df.tail(sample_records).to_markdown())
-print_log('General statistics table', center_div=True)
+print_log('Datatypes in the dataset', center_div=True)
+print_log(df.dtypes.to_markdown(), center_div=True)
+print_log('Null values in the dataset', center_div=True)
+print_log(df.isnull().sum().to_markdown(), center_div=True)
+print_log('\n**General statistics table**', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR
