@@ -46,8 +46,8 @@ sample_records = 3  # Records to show in the sample table head and tail
 histogram_binds = 12
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
-q1_val = 0.05
-q3_val = 0.95
+q1_val = 0.1
+q3_val = 0.9
 
 
 # Header
@@ -67,7 +67,6 @@ print_log('\n* Report name: ' + file_log_name +
 
 # Open the IDEAM station dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-#df.set_index(date_record_name, inplace=True)
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -115,7 +114,16 @@ df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
 df_concat = pd.concat([df_q1, df_q3, df_IQR, df_bottom_lim, df_top_lim, df_min, df_max, df_count], axis='columns')
 print_log(df_concat.to_markdown()) # *******
+# Plot values and outliers
+df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
+ax = df.plot(color='lightblue', legend=False, alpha=0.1, figsize=(12, 6))
+df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
+plt.title('METHOD 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
+ax.set_ylabel('Value')
+plt.savefig(path + outlier_file + '.png')
+print_log('![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 print_log('\nIQR outliers identified: %d' % df_concat['OlCount'].sum())
+#plt.show()
 
 #print(df_IQR)
 #print(type(df_IQR))

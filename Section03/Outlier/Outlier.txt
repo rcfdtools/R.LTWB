@@ -5,6 +5,8 @@ Tasks
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
 * https://datasciencesphere.com/analytics/5-easy-ways-to-detect-outliers-in-python/
 * https://realpython.com/pandas-merge-join-and-concat/
+* https://www.geeksforgeeks.org/pandas-plot-multiple-time-series-dataframe-into-a-single-plot/
+* https://www.tutorialspoint.com/plotting-multiple-dataframes-using-pandas-functionality
 
 
 
