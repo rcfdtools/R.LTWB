@@ -2,7 +2,7 @@
 
 * Report name: D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier.md
 * Processed file: D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv
-* Execution date: 2022-11-02 16:06:15.959748
+* Execution date: 2022-11-02 16:07:18.650781
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools.wiki', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
@@ -195,7 +195,7 @@ Datatypes and nulls values in the dataset
 
 ### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = 0.25, q3 = 0.75)
 
-Outliers table: [Outlier_IQR_Pivot_PTPM_TT_M.csv](../../Outlier_IQR_Pivot_PTPM_TT_M.csv)
+Outliers table: [Outlier_IQR_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv)
 
 **Outliers parameters**
 * q1: quartile 0.25
