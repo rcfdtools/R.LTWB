@@ -2,7 +2,7 @@
 
 * Report name: D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier.md
 * Processed file: D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv
-* Execution date: 2022-11-02 16:58:44.094771
+* Execution date: 2022-11-02 16:59:28.591559
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools.wiki', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
@@ -207,6 +207,9 @@ Outliers parameters
 * OlMaxVal: maximum outlier value founded
 * OlCount: # outliers founded
 
+
+<div align="center">
+
 |          |    q1 |     q3 |    IQR |   OlBottomLim |   OlTopLim |   OlMinVal |   OlMaxVal |   OlCount |
 |---------:|------:|-------:|-------:|--------------:|-----------:|-----------:|-----------:|----------:|
 | 15015020 |  0    | 160.34 | 160.34 |       240.51  |    400.85  |      403.1 |      407   |         2 |
@@ -339,6 +342,9 @@ Outliers parameters
 | 29065010 |  0    | 240.34 | 240.34 |       360.51  |    600.85  |      nan   |      nan   |         0 |
 | 29065020 |  0    | 254.22 | 254.22 |       381.33  |    635.55  |      nan   |      nan   |         0 |
 | 29065030 |  0    | 293.57 | 293.57 |       440.355 |    733.925 |      nan   |      nan   |         0 |
+
+</div>
+
 
 ![R.LTWB](Outlier_IQR_Pivot_PTPM_TT_M.csv.png)
 
