@@ -34,7 +34,7 @@ def find_outliers_IQR(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_EV_TT_D.csv' # Pivot table name to process
+pivot_table_name = 'Pivot_TMN_CON.csv' # Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/' # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
