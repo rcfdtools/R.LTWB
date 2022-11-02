@@ -46,8 +46,8 @@ sample_records = 3  # Records to show in the sample table head and tail
 histogram_binds = 12
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
-q1_val = 0.25
-q3_val = 0.75
+q1_val = 0.05
+q3_val = 0.95
 
 
 # Header
@@ -81,7 +81,7 @@ df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
-print_log('\n**General statistics table**', center_div=False)
+print_log('\nGeneral statistics table', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR
@@ -90,7 +90,7 @@ outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
 print_log('\nOutliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 outliers.to_csv(path + outlier_file)
-print_log('\n**Outliers parameters**'
+print_log('\nOutliers parameters'
           '\n* q1: quartile %s' %str(q1_val) +
           '\n* q3: quartile %s' %str(q3_val) +
           '\n* IQR: interquartile range (q3-q1)' +
