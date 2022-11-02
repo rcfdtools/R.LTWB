@@ -88,14 +88,32 @@ print_log('### METHOD 1 - Outliers processing using the interquartile range IQR 
 outliers = find_outliers_IQR(df)
 #print_log('\nOutliers table') # *******
 #print_log(outliers.to_markdown()) # *******
-print_log('\nOutliers stats')
+print_log('\n**Outliers stats**'
+          '\n* q1: quartile %s' %str(q1_val) +
+          '\n* q3: quartile %s' %str(q3_val) +
+          '\n* IQR: interquartile range (q3-q1)' +
+          '\n* OlBottomLim: outlier bottom limit (q1-1.5*IQR)'
+          '\n* OlTopLim: outlier top limit (q3+1.5*IQR)'
+          '\n* OlMinVal: minimum outlier value founded'
+          '\n* OlMaxVal: maximum outlier value founded'
+          '\n* OlCount: # outliers founded\n'
+          )
 df_q1 = df.quantile(q1_val).to_frame()
-df_q1.columns = ['q1_'+str(q1_val)]
+df_q1.columns = ['q1']
 df_q3 = df.quantile(q3_val).to_frame()
-df_q3.columns = ['q3_'+str(q3_val)]
+df_q3.columns = ['q3']
+df_IQR = (df_q3['q3'] - df_q1['q1']).to_frame()
+df_IQR.columns = ['IQR']
+df_bottom_lim = (df_q1['q1'] + 1.5 * df_IQR['IQR']).to_frame()
+df_bottom_lim.columns = ['OlBottomLim']
+df_top_lim = (df_q3['q3'] + 1.5 * df_IQR['IQR']).to_frame()
+df_top_lim.columns = ['OlTopLim']
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
-df_concat = pd.concat([df_q1, df_q3, df_count, df_min, df_max ], axis='columns')
+df_concat = pd.concat([df_q1, df_q3, df_IQR, df_bottom_lim, df_top_lim, df_min, df_max, df_count], axis='columns')
 print_log(df_concat.to_markdown()) # *******
 print_log('\nIQR outliers identified: %d' % df_concat['OlCount'].sum())
+
+#print(df_IQR)
+#print(type(df_IQR))
