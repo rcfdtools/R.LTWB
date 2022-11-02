@@ -34,8 +34,10 @@ def find_outliers_IQR(df):
 
 
 # General variables
-station_file = 'D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv'  # Current pivot IDEAM records file for a specified parameter
-path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local files path, use ../.datasets/IDEAM_Outlier/ for relative path
+pivot_table_name = 'Pivot_PTPM_TT_M.csv' # Pivot table name to process
+path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/' # Current location from pivot tables
+station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
+path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
 file_log_name = path + 'Outlier.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
@@ -83,11 +85,12 @@ print_log('\n**General statistics table**', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
 
 # Outliers processing for interquartile range IQR
-print_log('### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = %f, q3 = %f)' % (q1_val, q3_val))
+print_log('### METHOD 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 outliers = find_outliers_IQR(df)
-#print_log('\nOutliers table') # *******
-#print_log(outliers.to_markdown()) # *******
-print_log('\n**Outliers stats**'
+outlier_file = 'Outlier_IQR_' + pivot_table_name
+print_log('\nOutliers table: [%s](../../%s)' % (outlier_file, outlier_file))
+outliers.to_csv(path + outlier_file)
+print_log('\n**Outliers parameters**'
           '\n* q1: quartile %s' %str(q1_val) +
           '\n* q3: quartile %s' %str(q3_val) +
           '\n* IQR: interquartile range (q3-q1)' +
