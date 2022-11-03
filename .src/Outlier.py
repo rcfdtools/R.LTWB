@@ -73,10 +73,10 @@ if print_table_sample:
     print_log(df.head(sample_records).to_markdown())
     print_log('\nDataframe records tail sample\n')
     print_log(df.tail(sample_records).to_markdown())
-print_log('Datatypes and nulls values in the dataset', center_div=True)
+print_log('Datatypes for station and nulls values in the dataset', center_div=True)
 df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
-df_concat = pd.concat([df_dtypes, df_isnull], axis='columns')
+df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
 print_log(df_concat.to_markdown(), center_div=True)
 print_log('\nGeneral statistics table', center_div=False)
 print_log(df.describe().to_markdown(), center_div=True)
