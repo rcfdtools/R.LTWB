@@ -1,11 +1,12 @@
 ## Outliers detection and processing using statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_TMN_CON.csv](../IDEAM_EDA/Pivot_TMN_CON.csv)
-* Execution date: 2022-11-03 10:26:36.243453
+* Execution date: 2022-11-03 11:00:11.650959
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
+* numpy version: 1.23.2
 * Print table sample: True
 * Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier
 * License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md
@@ -92,8 +93,8 @@ Outliers parameters:
 * OlMinVal: minimum outlier value founded
 * OlMaxVal: maximum outlier value founded
 * OlCount: # outliers founded
-* CapLowerLim: capped lower limit for outliers replacement (mean() - cap_multiplier * std())
-* CapUpperLim: capped upper limit for outliers replacement (mean() + cap_multiplier * std())
+* CapLowerLim: capped lower limit for outliers replacement (mean() - 3 * std())
+* CapUpperLim: capped upper limit for outliers replacement (mean() + 3 * std())
 
 
 <div align="center">
@@ -132,9 +133,9 @@ Outliers parameters:
 ![R.LTWB](Outlier_IQR_Pivot_TMN_CON.csv.png)
 
 Identified and cleaning tables for 3629 IQR outliers founded
-* Identified outliers table: [Outlier_IQR_Drop_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Drop_Pivot_TMN_CON.csv)
-* Outliers drop file: [Outlier_IQR_Drop_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Drop_Pivot_TMN_CON.csv)
+* Identified outliers table: [Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
+* Outliers drop file: [Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 > The _drop file_ contains the database values without the outliers identified.
 >
-> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std())
+> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper capped values can be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.

@@ -10,6 +10,7 @@ import sys
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
 import tabulate  # required for print tables in Markdown using pandas
 from datetime import datetime
 
@@ -45,7 +46,7 @@ def drop_outliers_IQR(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_TMN_CON.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
@@ -56,8 +57,8 @@ plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.or
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
-q1_val = 0.25  # Default is 0.25
-q3_val = 0.75  # Default is 0.75
+q1_val = 0.1  # Default is 0.25
+q3_val = 0.9  # Default is 0.75
 cap_multiplier = 3 # Replace outlier valuer multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
@@ -69,6 +70,7 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
           '\n* Python path: ' + str(sys.path[0:5]) +
           '\n* matplotlib version: ' + str(matplotlib.__version__) +
           '\n* pandas version: ' + str(pd.__version__) +
+          '\n* numpy version: ' + str(np.__version__) +
           '\n* Print table sample: ' + str(print_table_sample) +
           '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
           '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
@@ -108,9 +110,10 @@ print_log('\nOutliers parameters:'
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
           '\n* OlCount: # outliers founded'
-          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - cap_multiplier * std())'
-          '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + cap_multiplier * std())\n'
+          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - %s * std())' % str(cap_multiplier) +
+          '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + %s * std())\n' % str(cap_multiplier)
           )
+# Assemble the parameters table
 df_q1 = df.quantile(q1_val).to_frame()
 df_q1.columns = ['q1']
 df_q3 = df.quantile(q3_val).to_frame()
@@ -142,13 +145,26 @@ plt.close('all')
 not_outliers = drop_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_Drop_' + pivot_table_name
 not_outliers.to_csv(path + outlier_file)
+# Capped outliers values
+df_capped = df
+upper_limit = df.mean()+cap_multiplier*df.std()
+lower_limit = df.mean()-cap_multiplier*df.std()
+df_capped = np.where(df_capped > upper_limit,
+    upper_limit,
+    np.where(
+       df_capped < lower_limit,
+       lower_limit,
+       df_capped
+    )
+)
+outlier_file = 'Outlier_IQR_Cap_' + pivot_table_name
+not_outliers.to_csv(path + outlier_file)
 print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
           '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
-
 print_log('\n> The _drop file_ contains the database values without the outliers identified.'
           '\n>'
-          '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std())')
+          '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper capped values can be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.')
 
 #print(df_IQR)
 #print(type(df_IQR))
