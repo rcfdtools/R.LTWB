@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Name: Outlier.py
-# Description: outliers detection and processing
+# Description: outliers detection and processing using statistical methods
 # Requirements: Python 3+, pandas, tabulate
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
@@ -62,7 +62,7 @@ cap_multiplier = 3 # Replace outlier valuer multiplier, default is 3. e.j, mean(
 
 
 # Header
-print_log('## Outliers detection and processing')
+print_log('## Outliers detection and processing using statistical methods')
 print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
