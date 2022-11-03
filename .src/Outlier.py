@@ -107,8 +107,8 @@ print_log('\nOutliers parameters:'
           '\n* OlUpperLim: outlier top limit (q3+1.5*IQR)'
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
-          '\n* OlCount: # outliers founded\n'
-          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - cap_multiplier * std())\n'
+          '\n* OlCount: # outliers founded'
+          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - cap_multiplier * std())'
           '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + cap_multiplier * std())\n'
           )
 df_q1 = df.quantile(q1_val).to_frame()
