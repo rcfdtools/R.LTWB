@@ -147,7 +147,7 @@ print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_co
           '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 
 print_log('\n> The _drop file_ contains the database values without the outliers identified.'
-          '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std())')
+          '\n\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std())')
 
 #print(df_IQR)
 #print(type(df_IQR))
