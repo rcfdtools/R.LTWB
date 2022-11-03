@@ -98,7 +98,7 @@ print_log('### Method 1 - Outliers processing using the interquartile range IQR 
 outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
-print_log('\nOutliers parameters'
+print_log('\nOutliers parameters:'
           '\n* q1: quartile %s' % str(q1_val) +
           '\n* q3: quartile %s' % str(q3_val) +
           '\n* IQR: interquartile range (q3-q1)' +
@@ -131,15 +131,14 @@ plt.title('Method 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outlie
 ax.set_ylabel('Values for %s' % pivot_table_name)
 plt.savefig(path + outlier_file + '.png')
 print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
-print_log('\nIQR outliers identified: %d' % df_concat['OlCount'].sum())
 plt.show()
 plt.close('all')
 # Drop outliers values
 not_outliers = drop_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_Drop_' + pivot_table_name
-print_log('\nCleaning the outliers')
-print_log('\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
-print_log('\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
+print_log('\nCleaning %d IQR outliers founded' % df_concat['OlCount'].sum() +
+          '\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
+          '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 not_outliers.to_csv(path + outlier_file)
 
 
