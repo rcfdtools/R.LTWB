@@ -1,7 +1,7 @@
 ## Outliers detection and processing
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-03 08:14:38.309259
+* Execution date: 2022-11-03 08:15:39.483433
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
@@ -42,7 +42,12 @@ Datatypes for station and nulls values in the dataset
 </div>
 
 
+<div align="center">
+
 General statistics table
+
+</div>
+
 
 <div align="center">
 

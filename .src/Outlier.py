@@ -78,8 +78,8 @@ df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
 print_log(df_concat.to_markdown(), center_div=True)
-print_log('\nGeneral statistics table', center_div=False)
-print_log(df.describe().T.to_markdown(), center_div=True)
+print_log('General statistics table', center_div=True)
+print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 1 - Outliers processing for interquartile range IQR
 print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
