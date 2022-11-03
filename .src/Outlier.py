@@ -25,12 +25,23 @@ def print_log(txt_print, on_screen=True, center_div=False):
         file_log.write('\n</div>\n' + '\n')
 
 # Function to find outliers using interquartile range - IQR
+# Ref: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
 def find_outliers_IQR(df):
     q1 = df.quantile(q1_val)
     q3 = df.quantile(q3_val)
     IQR = q3-q1
     outliers = df[((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
     return outliers
+
+# Function to drop outliers using interquartile range - IQR
+# Ref: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
+def drop_outliers_IQR(df):
+    q1 = df.quantile(q1_val)
+    q3 = df.quantile(q3_val)
+    IQR = q3-q1
+    not_outliers = df[~((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
+    return not_outliers
+
 
 
 # General variables
@@ -45,8 +56,8 @@ plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.or
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
-q1_val = 0.25  # Default is 0.25
-q3_val = 0.75  # Default is 0.75
+q1_val = 0.1  # Default is 0.25
+q3_val = 0.9  # Default is 0.75
 
 
 # Header
@@ -81,6 +92,7 @@ print_log(df_concat.to_markdown(), center_div=True)
 print_log('General statistics table', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
+
 # Method 1 - Outliers processing for interquartile range IQR
 print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 outliers = find_outliers_IQR(df)
@@ -91,8 +103,8 @@ print_log('\nOutliers parameters'
           '\n* q1: quartile %s' % str(q1_val) +
           '\n* q3: quartile %s' % str(q3_val) +
           '\n* IQR: interquartile range (q3-q1)' +
-          '\n* OlBottomLim: outlier bottom limit (q1-1.5*IQR)'
-          '\n* OlTopLim: outlier top limit (q3+1.5*IQR)'
+          '\n* OlLowerLim: outlier bottom limit (q1-1.5*IQR)'
+          '\n* OlUpperLim: outlier top limit (q3+1.5*IQR)'
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
           '\n* OlCount: # outliers founded\n'
@@ -104,9 +116,9 @@ df_q3.columns = ['q3']
 df_IQR = (df_q3['q3'] - df_q1['q1']).to_frame()
 df_IQR.columns = ['IQR']
 df_bottom_lim = (df_q1['q1'] + 1.5 * df_IQR['IQR']).to_frame()
-df_bottom_lim.columns = ['OlBottomLim']
+df_bottom_lim.columns = ['OlLowerLim']
 df_top_lim = (df_q3['q3'] + 1.5 * df_IQR['IQR']).to_frame()
-df_top_lim.columns = ['OlTopLim']
+df_top_lim.columns = ['OlUpperLim']
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
@@ -123,6 +135,12 @@ print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 print_log('\nIQR outliers identified: %d' % df_concat['OlCount'].sum())
 plt.show()
 plt.close('all')
+# Drop outliers values
+not_outliers = drop_outliers_IQR(df)
+outlier_file = 'Outlier_IQR_Drop_' + pivot_table_name
+print_log('\nOutliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
+not_outliers.to_csv(path + outlier_file)
+
 
 #print(df_IQR)
 #print(type(df_IQR))
