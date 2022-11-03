@@ -97,7 +97,6 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
-print_log('\nOutliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 outliers.to_csv(path + outlier_file)
 print_log('\nOutliers parameters'
           '\n* q1: quartile %s' % str(q1_val) +
@@ -139,6 +138,7 @@ plt.close('all')
 not_outliers = drop_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_Drop_' + pivot_table_name
 print_log('\nCleaning the outliers')
+print_log('\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 print_log('\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 not_outliers.to_csv(path + outlier_file)
 
