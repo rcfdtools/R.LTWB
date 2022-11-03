@@ -136,10 +136,10 @@ plt.close('all')
 # Drop outliers values
 not_outliers = drop_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_Drop_' + pivot_table_name
-print_log('\nCleaning %d IQR outliers founded' % df_concat['OlCount'].sum() +
+not_outliers.to_csv(path + outlier_file)
+print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
           '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
-not_outliers.to_csv(path + outlier_file)
 
 
 #print(df_IQR)

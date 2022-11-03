@@ -1,7 +1,7 @@
 ## Outliers detection and processing
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-03 09:35:43.149154
+* Execution date: 2022-11-03 09:46:18.043102
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
@@ -339,6 +339,6 @@ Outliers parameters:
 
 ![R.LTWB](Outlier_IQR_Pivot_PTPM_TT_M.csv.png)
 
-Cleaning 94 IQR outliers founded
+Identified and cleaning tables for 94 IQR outliers founded
 * Identified outliers table: [Outlier_IQR_Drop_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Drop_Pivot_PTPM_TT_M.csv)
 * Outliers drop file: [Outlier_IQR_Drop_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Drop_Pivot_PTPM_TT_M.csv)
