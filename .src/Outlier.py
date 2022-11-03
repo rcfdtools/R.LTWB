@@ -114,14 +114,16 @@ df_q3 = df.quantile(q3_val).to_frame()
 df_q3.columns = ['q3']
 df_IQR = (df_q3['q3'] - df_q1['q1']).to_frame()
 df_IQR.columns = ['IQR']
-df_bottom_lim = (df_q1['q1'] + 1.5 * df_IQR['IQR']).to_frame()
-df_bottom_lim.columns = ['OlLowerLim']
-df_top_lim = (df_q3['q3'] + 1.5 * df_IQR['IQR']).to_frame()
-df_top_lim.columns = ['OlUpperLim']
-df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
+df_lower_lim = (df_q1['q1'] + 1.5 * df_IQR['IQR']).to_frame()
+df_lower_lim.columns = ['OlLowerLim']
+df_upper_lim = (df_q3['q3'] + 1.5 * df_IQR['IQR']).to_frame()
+df_upper_lim.columns = ['OlUpperLim']
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
-df_concat = pd.concat([df_q1, df_q3, df_IQR, df_bottom_lim, df_top_lim, df_min, df_max, df_count], axis='columns')
+df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
+df_lower_cap = pd.DataFrame(df.mean()-3*df.std(), columns=['CapLowerLim'])
+df_upper_cap = pd.DataFrame(df.mean()+3*df.std(), columns=['CapUpperLim'])
+df_concat = pd.concat([df_q1, df_q3, df_IQR, df_lower_lim, df_upper_lim, df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
@@ -141,6 +143,8 @@ print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_co
           '\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
           '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 
+print_log('\n> The _drop file_ contains the database values without the outliers identified.'
+          '\n> The _cap file_ contains the database values an the outliers has been replaced with the lower or upper value calculated.')
 
 #print(df_IQR)
 #print(type(df_IQR))
