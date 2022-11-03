@@ -1,7 +1,7 @@
 ## Outliers detection and processing
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-03 10:05:02.072136
+* Execution date: 2022-11-03 10:14:22.189462
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
@@ -198,6 +198,10 @@ Outliers parameters:
 * OlMaxVal: maximum outlier value founded
 * OlCount: # outliers founded
 
+* CapLowerLim: capped lower limit for outliers replacement (mean() - cap_multiplier * std())
+
+* CapUpperLim: capped upper limit for outliers replacement (mean() + cap_multiplier * std())
+
 
 <div align="center">
 
@@ -344,4 +348,4 @@ Identified and cleaning tables for 94 IQR outliers founded
 * Outliers drop file: [Outlier_IQR_Drop_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Drop_Pivot_PTPM_TT_M.csv)
 
 > The _drop file_ contains the database values without the outliers identified.
-> The _cap file_ contains the database values an the outliers has been replaced with the lower or upper value calculated.
+> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std())

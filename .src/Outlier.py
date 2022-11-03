@@ -58,6 +58,7 @@ fig_size = 5  # Height size for figures plot
 print_table_sample = True
 q1_val = 0.1  # Default is 0.25
 q3_val = 0.9  # Default is 0.75
+cap_multiplier = 3 # Replace outlier valuer multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
 # Header
@@ -107,6 +108,8 @@ print_log('\nOutliers parameters:'
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
           '\n* OlCount: # outliers founded\n'
+          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - cap_multiplier * std())\n'
+          '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + cap_multiplier * std())\n'
           )
 df_q1 = df.quantile(q1_val).to_frame()
 df_q1.columns = ['q1']
@@ -121,8 +124,8 @@ df_upper_lim.columns = ['OlUpperLim']
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
-df_lower_cap = pd.DataFrame(df.mean()-3*df.std(), columns=['CapLowerLim'])
-df_upper_cap = pd.DataFrame(df.mean()+3*df.std(), columns=['CapUpperLim'])
+df_lower_cap = pd.DataFrame(df.mean()-cap_multiplier*df.std(), columns=['CapLowerLim'])
+df_upper_cap = pd.DataFrame(df.mean()+cap_multiplier*df.std(), columns=['CapUpperLim'])
 df_concat = pd.concat([df_q1, df_q3, df_IQR, df_lower_lim, df_upper_lim, df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
@@ -144,7 +147,7 @@ print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_co
           '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
 
 print_log('\n> The _drop file_ contains the database values without the outliers identified.'
-          '\n> The _cap file_ contains the database values an the outliers has been replaced with the lower or upper value calculated.')
+          '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std())')
 
 #print(df_IQR)
 #print(type(df_IQR))
