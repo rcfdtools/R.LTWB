@@ -24,7 +24,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
     if center_div:
         file_log.write('\n</div>\n' + '\n')
 
-# Function to find outliers using interquartile range IQR
+# Function to find outliers using interquartile range - IQR
 def find_outliers_IQR(df):
     q1 = df.quantile(q1_val)
     q3 = df.quantile(q3_val)
@@ -34,7 +34,7 @@ def find_outliers_IQR(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_TMX_CON.csv'  # Pivot table name to process
+pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
@@ -51,7 +51,7 @@ q3_val = 0.75  # Default is 0.75
 
 # Header
 print_log('## Outliers detection and processing')
-print_log('\n* Processed file: ' + str(station_file) +
+print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
           '\n* Python path: ' + str(sys.path[0:5]) +
