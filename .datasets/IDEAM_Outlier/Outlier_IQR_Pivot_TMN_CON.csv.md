@@ -1,7 +1,7 @@
 ## Outliers detection and processing
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_TMN_CON.csv](../IDEAM_EDA/Pivot_TMN_CON.csv)
-* Execution date: 2022-11-03 10:19:05.045572
+* Execution date: 2022-11-03 10:21:04.859757
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
