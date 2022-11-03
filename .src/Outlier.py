@@ -34,7 +34,7 @@ def find_outliers_IQR(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_PTPM_TT_M.csv' # Pivot table name to process
+pivot_table_name = 'Pivot_TMX_CON.csv' # Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/' # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
@@ -45,7 +45,7 @@ sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
 q1_val = 0.25 # Default is 0.25
-q3_val = 0.90 # Default is 0.75
+q3_val = 0.75 # Default is 0.75
 
 
 # Header
@@ -58,7 +58,7 @@ print_log('\n* Processed file: ' + str(station_file) +
           '\n* pandas version: ' + str(pd.__version__) +
           '\n* Print table sample: ' + str(print_table_sample) +
           '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
-          '\n* Licence: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
+          '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
           '\n* Credits: r.cfdtools@gmail.com')
 
 
@@ -113,7 +113,7 @@ df_concat = pd.concat([df_q1, df_q3, df_IQR, df_bottom_lim, df_top_lim, df_min, 
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-ax = df.plot(color='lightblue', legend=False, alpha=0.1, figsize=(12, 6))
+ax = df.plot(color='lightblue', legend=False, alpha=0.25, figsize=(12, 6))
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
 plt.title('Method 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
 ax.set_ylabel('Values for %s' % pivot_table_name)

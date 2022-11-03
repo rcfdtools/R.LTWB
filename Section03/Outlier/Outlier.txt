@@ -8,6 +8,3 @@ Tasks
 * https://www.geeksforgeeks.org/pandas-plot-multiple-time-series-dataframe-into-a-single-plot/
 * https://www.tutorialspoint.com/plotting-multiple-dataframes-using-pandas-functionality
 
-
-
-
