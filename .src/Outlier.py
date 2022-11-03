@@ -44,7 +44,6 @@ def drop_outliers_IQR(df):
     return not_outliers
 
 
-
 # General variables
 pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
@@ -143,8 +142,8 @@ plt.show()
 plt.close('all')
 # Drop outliers values
 not_outliers = drop_outliers_IQR(df)
-outlier_file = 'Outlier_IQR_Drop_' + pivot_table_name
-not_outliers.to_csv(path + outlier_file)
+outlier_file_drop = 'Outlier_IQR_Drop_' + pivot_table_name
+not_outliers.to_csv(path + outlier_file_drop)
 # Capped outliers values
 df_capped = df
 upper_limit = df.mean()+cap_multiplier*df.std()
@@ -157,11 +156,12 @@ df_capped = np.where(df_capped > upper_limit,
        df_capped
     )
 )
-outlier_file = 'Outlier_IQR_Cap_' + pivot_table_name
-not_outliers.to_csv(path + outlier_file)
+outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
+not_outliers.to_csv(path + outlier_file_cap)
 print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
-          '\n* Outliers drop file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file))
+          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file) +
+          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file))
 print_log('\n> The _drop file_ contains the database values without the outliers identified.'
           '\n>'
           '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper capped values can be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.')
