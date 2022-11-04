@@ -133,7 +133,7 @@ df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
 print_log(df_concat.to_markdown(), center_div=True)
-print_log('General statistics table', center_div=True)
+print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 
@@ -206,7 +206,7 @@ print_log('\n> The _drop file_ contains the database values without the outliers
           '\n>'
           '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
           )
-print_log('\n\n#### Statistical values for the capped and imputed files', center_div=False)
+print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
 print_log('General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
 print_log('General statistics table - Imputed file', center_div=True)

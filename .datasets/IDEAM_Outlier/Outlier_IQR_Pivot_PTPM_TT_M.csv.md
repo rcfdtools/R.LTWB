@@ -1,7 +1,7 @@
 ## Outliers detection and processing using statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-04 10:43:48.205243
+* Execution date: 2022-11-04 10:47:47.271592
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -45,7 +45,7 @@ Datatypes for station and nulls values in the dataset
 
 <div align="center">
 
-General statistics table
+General statistics table - Initial file
 
 </div>
 
@@ -355,7 +355,7 @@ Outliers parameters:
 > The imputation method replace each outlier value with the mean value that contains the original outliers values.
 
 
-#### Statistical values for the capped and imputed files
+#### Statistical values for the capped and imputed file
 
 <div align="center">
 
