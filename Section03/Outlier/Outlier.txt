@@ -1,5 +1,6 @@
 Tasks
-	
+	Plot graps for each .csv table.
+	Fix the cap method.
 
 
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
@@ -10,7 +11,19 @@ Tasks
 * https://sparkbyexamples.com/pandas/pandas-get-column-names
 * https://www.statology.org/pandas-index-to-list/
 
+
+df_capped = df
 column_headers = df_capped.columns.values.tolist()
+lower_limit = df_capped.mean()-cap_multiplier*df_capped.std()
+upper_limit = df_capped.mean()+cap_multiplier*df_capped.std()
+df_capped = np.where(df_capped > upper_limit,
+    upper_limit,
+    np.where(
+       df_capped < lower_limit,
+       lower_limit,
+       df_capped
+    )
+)
 df_capped = pd.DataFrame(df_capped, columns=column_headers)
-
-
+outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
+df_capped.to_csv(path + outlier_file_cap)
