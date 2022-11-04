@@ -1,6 +1,7 @@
 Tasks
 	Plot graps for each .csv table.
 	Fix the cap method.
+	Exclude stations list by user.
 
 
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
