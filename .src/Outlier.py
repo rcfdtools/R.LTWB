@@ -189,11 +189,11 @@ not_outliers.to_csv(path + outlier_file_drop)
 # Capped outliers values
 df_capped = cap_outliers_IQR(df)
 outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
-df_capped.to_csv(path + outlier_file_cap)
+df_capped.to_csv(path + outlier_file_cap, index_label=date_record_name)
 # Impute outliers with mean values
 df_impute = impute_outliers_IQR(df)
 outlier_file_impute = 'Outlier_IQR_Impute_' + pivot_table_name
-df_impute.to_csv(path + outlier_file_impute)
+df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print resoults
 print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
