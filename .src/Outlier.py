@@ -98,8 +98,9 @@ plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.or
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
-q1_val = 0.25  # Default is 0.25
-q3_val = 0.75  # Default is 0.75
+station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+q1_val = 0.1  # Default is 0.25
+q3_val = 0.9  # Default is 0.75
 cap_multiplier = 3 # Replacement outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
@@ -120,6 +121,7 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 
 # Open the IDEAM station dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
+df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())

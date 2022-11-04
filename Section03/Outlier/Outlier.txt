@@ -1,7 +1,5 @@
 Tasks
-	Plot graps for each .csv table.
-	Fix the cap method.
-	Exclude stations list by user.
+	Plots for each .csv table.
 
 
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
@@ -11,6 +9,7 @@ Tasks
 * https://www.tutorialspoint.com/plotting-multiple-dataframes-using-pandas-functionality
 * https://sparkbyexamples.com/pandas/pandas-get-column-names
 * https://www.statology.org/pandas-index-to-list/
+* https://www.statology.org/pandas-exclude-column/
 
 
 df_capped = df
@@ -28,3 +27,4 @@ df_capped = np.where(df_capped > upper_limit,
 df_capped = pd.DataFrame(df_capped, columns=column_headers)
 outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
 df_capped.to_csv(path + outlier_file_cap)
+
