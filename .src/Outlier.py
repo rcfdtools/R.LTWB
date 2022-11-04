@@ -195,7 +195,7 @@ df_impute = impute_outliers_IQR(df)
 outlier_file_impute = 'Outlier_IQR_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print resoults
-print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
+print_log('\n#### Identified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
           '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
           '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
@@ -206,6 +206,11 @@ print_log('\n> The _drop file_ contains the database values without the outliers
           '\n>'
           '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
           )
+print_log('\n\n#### Statistical values for the capped and imputed files', center_div=False)
+print_log('General statistics table - Capped file', center_div=True)
+print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log('General statistics table - Imputed file', center_div=True)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 '''
 print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 print(df.head(sample_records).to_markdown())
