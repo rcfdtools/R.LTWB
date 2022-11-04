@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Name: Outlier.py
-# Description: outliers detection and processing using statistical methods
+# Description: outliers detection and processing throught statistical methods
 # Requirements: Python 3+, pandas, tabulate
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
@@ -100,11 +100,11 @@ fig_size = 5  # Height size for figures plot
 print_table_sample = True
 q1_val = 0.1  # Default is 0.25
 q3_val = 0.9  # Default is 0.75
-cap_multiplier = 3 # Replace outlier valuer multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
+cap_multiplier = 3 # Replacement outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
 # Header
-print_log('## Outliers detection and processing using statistical methods')
+print_log('## Outliers detection and processing throught statistical methods')
 print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
@@ -128,7 +128,7 @@ if print_table_sample:
     print_log(df.head(sample_records).to_markdown())
     print_log('\nDataframe records tail sample\n')
     print_log(df.tail(sample_records).to_markdown())
-print_log('\nDatatypes for station and nulls values in the dataset', center_div=False)
+print_log('\nDatatypes for station and nulls values in the original file', center_div=False)
 df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
