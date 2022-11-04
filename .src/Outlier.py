@@ -43,6 +43,25 @@ def drop_outliers_IQR(df):
     not_outliers = df[~((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
     return not_outliers
 
+# Impute IQR outliers with mean values
+def impute_outliers_IQR(df):
+    column_headers = df.columns.values.tolist()
+    index_list = list(df.index.values)
+    q1 = df.quantile(q1_val)
+    q3 = df.quantile(q3_val)
+    IQR = q3-q1
+    upper = df[~(df > (q3+1.5*IQR))].max()
+    lower = df[~(df < (q1-1.5*IQR))].min()
+    df = np.where(df > upper,
+       df.mean(),
+       np.where(
+           df < lower,
+           df.mean(),
+           df
+           )
+       )
+    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
+    return df
 
 # General variables
 pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
@@ -146,8 +165,9 @@ outlier_file_drop = 'Outlier_IQR_Drop_' + pivot_table_name
 not_outliers.to_csv(path + outlier_file_drop)
 # Capped outliers values
 df_capped = df
-upper_limit = df.mean()+cap_multiplier*df.std()
-lower_limit = df.mean()-cap_multiplier*df.std()
+column_headers = df_capped.columns.values.tolist()
+lower_limit = df_capped.mean()-cap_multiplier*df_capped.std()
+upper_limit = df_capped.mean()+cap_multiplier*df_capped.std()
 df_capped = np.where(df_capped > upper_limit,
     upper_limit,
     np.where(
@@ -156,15 +176,33 @@ df_capped = np.where(df_capped > upper_limit,
        df_capped
     )
 )
+df_capped = pd.DataFrame(df_capped, columns=column_headers)
 outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
-not_outliers.to_csv(path + outlier_file_cap)
+df_capped.to_csv(path + outlier_file_cap)
+# Impute outliers with mean values
+df_impute = impute_outliers_IQR(df)
+outlier_file_impute = 'Outlier_IQR_Impute_' + pivot_table_name
+df_impute.to_csv(path + outlier_file_impute)
 print_log('\nIdentified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Identified outliers table: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
-          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file) +
-          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file))
+          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
+          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
+          '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
 print_log('\n> The _drop file_ contains the database values without the outliers identified.'
           '\n>'
-          '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper capped values can be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.')
+          '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper capped values can be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
+          '\n>'
+          '\n> The imputation method replace each outlier value with the mean value.'
+          )
+
+'''
+print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+print(df.head(sample_records).to_markdown())
+print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index')
+print(list(df.index.values))
+print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+'''
+
 
 #print(df_IQR)
 #print(type(df_IQR))
