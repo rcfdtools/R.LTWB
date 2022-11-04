@@ -192,7 +192,7 @@ print_log('\n> The _drop file_ contains the database values without the outliers
           '\n>'
           '\n> The _capped file_ contains the database values an the outliers has been replaced with the lower or upper capped value calculated. Lower outliers can be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper capped values can be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
           '\n>'
-          '\n> The imputation method replace each outlier value with the mean value.'
+          '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
           )
 
 '''
