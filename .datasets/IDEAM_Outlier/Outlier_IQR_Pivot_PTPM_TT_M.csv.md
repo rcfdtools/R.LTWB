@@ -1,7 +1,7 @@
 ## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-05 10:24:59.993282
+* Execution date: 2022-11-05 10:39:40.028133
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -190,6 +190,8 @@ General statistics table - Initial file
 
 ### Method 1 - Outliers processing using the interquartile range IQR (q1 = 0.1, q3 = 0.9)
 
+Since the data doesn’t follow a normal distribution, we will calculate the outlier data points using the statistical method called interquartile range (IQR) instead of using Z-score. Using the IQR, the outlier data points are the ones falling below Q1–1.5 IQR or above Q3 + 1.5 IQR. The Q1 could be the 25th percentile and Q3 could be the 75th percentile of the dataset, and IQR represents the interquartile range calculated by Q3 minus Q1 (Q3–Q1).[^1]
+
 Outliers parameters:
 * q1: quartile 0.1
 * q3: quartile 0.9
@@ -360,7 +362,7 @@ Outliers parameters:
 
 <div align="center">
 
-General statistics table - Capped file
+IQR - General statistics table - Capped file
 
 </div>
 
@@ -505,7 +507,7 @@ General statistics table - Capped file
 
 <div align="center">
 
-General statistics table - Imputed file
+IQR - General statistics table - Imputed file
 
 </div>
 
@@ -650,6 +652,9 @@ General statistics table - Imputed file
 
 
 ### Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - k * std()) with k = 3
+
+
+The empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations (denoted by ?) of the mean or average (denoted by µ). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation (µ ± ?), 95% within the first two standard deviations (µ ± 2?), and 99.7% within the first three standard deviations (µ ± 3?).[^2]
 
 Outliers parameters:
 * OlMinVal: minimum outlier value founded
@@ -816,7 +821,7 @@ Outliers parameters:
 
 <div align="center">
 
-General statistics table - Capped file
+ER - General statistics table - Capped file
 
 </div>
 
@@ -961,7 +966,7 @@ General statistics table - Capped file
 
 <div align="center">
 
-General statistics table - Imputed file
+ER - General statistics table - Imputed file
 
 </div>
 
@@ -1103,3 +1108,6 @@ General statistics table - Imputed file
 
 </div>
 
+
+
+[^1:] Taken or adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/[^2]: https://www.investopedia.com/terms/e/empirical-rule.asp

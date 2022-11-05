@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: windows-1252 -*-
 # Name: Outlier.py
 # Description: outliers detection and processing through statistical methods
 # Requirements: Python 3+, pandas, tabulate
@@ -192,6 +192,7 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 1 - Outliers processing through interquartile range IQR
 print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
+print_log('\nSince the data doesn’t follow a normal distribution, we will calculate the outlier data points using the statistical method called interquartile range (IQR) instead of using Z-score. Using the IQR, the outlier data points are the ones falling below Q1–1.5 IQR or above Q3 + 1.5 IQR. The Q1 could be the 25th percentile and Q3 could be the 75th percentile of the dataset, and IQR represents the interquartile range calculated by Q3 minus Q1 (Q3–Q1).[^1]')
 outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
@@ -260,14 +261,15 @@ print_log('\n> The _drop file_ contains the database values without the outliers
           '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
           )
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
-print_log('General statistics table - Capped file', center_div=True)
+print_log('IQR - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
-print_log('General statistics table - Imputed file', center_div=True)
+print_log('IQR - General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 
 # Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - cap_multiplier * std())
 print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - k * std()) with k = %s' % str(cap_multiplier))
+print_log('\n\nThe empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations (denoted by ?) of the mean or average (denoted by µ). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation (µ ± ?), 95% within the first two standard deviations (µ ± 2?), and 99.7% within the first three standard deviations (µ ± 3?).[^2]')
 outliers = find_outliers_ER(df)
 outlier_file = 'Outlier_ER_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
@@ -319,9 +321,9 @@ print_log('\n> The _drop file_ contains the database values without the outliers
           '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
           )
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
-print_log('General statistics table - Capped file', center_div=True)
+print_log('ER - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
-print_log('General statistics table - Imputed file', center_div=True)
+print_log('ER - General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 
@@ -351,3 +353,7 @@ print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 '''
 #print(df_IQR)
 #print(type(df_IQR))
+
+
+print_log('\n\n[^1:] Taken or adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/' +
+          '[^2]: https://www.investopedia.com/terms/e/empirical-rule.asp')
