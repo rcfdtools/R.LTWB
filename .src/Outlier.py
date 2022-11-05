@@ -133,6 +133,51 @@ def impute_outliers_ER(df):
     df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
     return df
 
+# Function to find outliers using the Z-score or standard score
+def find_outliers_zscore(df):
+    z = (df - df.mean()) / df.std()
+    outliers = df[(z >= zscore_threshold)]
+    return outliers
+
+# Function to drop outliers using the Z-score or standard score
+def drop_outliers_zscore(df):
+    z = (df - df.mean()) / df.std()
+    not_outliers = df[~(z >= zscore_threshold)]
+    return not_outliers
+
+# Function for Cap Z-score outliers with specified limits (mean() - cap_multiplier * std())
+def cap_outliers_zscore(df):
+    column_headers = df.columns.values.tolist()
+    index_list = list(df.index.values)
+    lower_cap = df.mean() - zscore_threshold * df.std()
+    upper_cap = df.mean() + zscore_threshold * df.std()
+    df = np.where(df > upper_cap,
+       upper_cap,
+       np.where(
+           df < lower_cap,
+           lower_cap,
+           df
+           )
+       )
+    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
+    return df
+
+# Function for impute ER outliers with the mean values
+def impute_outliers_zscore(df):
+    column_headers = df.columns.values.tolist()
+    index_list = list(df.index.values)
+    lower_cap = df.mean() - zscore_threshold * df.std()
+    upper_cap = df.mean() + zscore_threshold * df.std()
+    df = np.where(df > upper_cap,
+       df.mean(),
+       np.where(
+           df < lower_cap,
+           df.mean(),
+           df
+           )
+       )
+    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
+    return df
 
 
 # General variables
@@ -140,7 +185,7 @@ pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
-file_log_name = path + 'Outlier_IQR_' + pivot_table_name + '.md'  # First file log
+file_log_name = path + 'Outlier_IQR_' + pivot_table_name + '.md'  # Markdown file log
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
@@ -149,9 +194,10 @@ fig_size = 5  # Height size for figures plot
 print_table_sample = True
 show_plot = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-q1_val = 0.1  # Default is 0.25
-q3_val = 0.9  # Default is 0.75
-cap_multiplier = 4.5 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
+q1_val = 0.1  # Default is 0.25. Method 1.
+q3_val = 0.9  # Default is 0.75. Method 1.
+cap_multiplier = 4.5  # Replacement cap outlier value multiplier or k value, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules. . Method 1 & 2.
+zscore_threshold = 4.5  # Z-score threshold. Method 3. If the threshold is equal to the cap_multiplier, the results are the same as Method 2.
 
 
 # Header
@@ -254,12 +300,6 @@ print_log('\n#### Identified and cleaning tables for %d IQR outliers founded' % 
           '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
           '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
           '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
-print_log('\n> The _drop file_ contains the database values without the outliers identified.'
-          '\n>'
-          '\n> The _capped file_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
-          '\n>'
-          '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
-          )
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
 print_log('IQR - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
@@ -268,7 +308,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 
 
 # Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - cap_multiplier * std())
-print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or _k-sigma_ ( $\mu$ - k * $\sigma$ ) with _k_ = %s' % str(cap_multiplier))
+print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or _k-sigma_ ( $\mu$ - _k_ * $\sigma$ ) with _k_ = %s' % str(cap_multiplier))
 print_log('\n\nThe empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations (denoted by $\sigma$) of the mean or average (denoted by $\mu$). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation ( $\mu$ ± $\sigma$ ), 95% within the first two standard deviations ( $\mu$ ± 2 $\sigma$ ), and 99.7% within the first three standard deviations ( $\mu$ ± 3 $\sigma$ ).[^2]')
 outliers = find_outliers_ER(df)
 outlier_file = 'Outlier_ER_' + pivot_table_name
@@ -314,12 +354,6 @@ print_log('\n#### Identified and cleaning tables for %d ER or k-sigma outliers f
           '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
           '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
           '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
-print_log('\n> The _drop file_ contains the database values without the outliers identified.'
-          '\n>'
-          '\n> The _capped file_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
-          '\n>'
-          '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
-          )
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
 print_log('ER - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
@@ -327,33 +361,75 @@ print_log('ER - General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 
-'''
-df_capped = df
-column_headers = df_capped.columns.values.tolist()
-lower_limit = df_capped.mean()-cap_multiplier*df_capped.std()
-upper_limit = df_capped.mean()+cap_multiplier*df_capped.std()
-df_capped = np.where(df_capped > upper_limit,
-    upper_limit,
-    np.where(
-       df_capped < lower_limit,
-       lower_limit,
-       df_capped
-    )
-)
-df_capped = pd.DataFrame(df_capped, columns=column_headers)
-outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
-df_capped.to_csv(path + outlier_file_cap)
-'''
-'''
-print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-print(df.head(sample_records).to_markdown())
-print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index')
-print(list(df.index.values))
-print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-'''
-#print(df_IQR)
-#print(type(df_IQR))
-
-
+# Method 3 - Outliers processing through Z-score or standard core
+print_log('\n\n### Method 3 - Outliers processing through Z-score >= %s or standard core' % str(zscore_threshold))
+print_log('\n\nZ score is an important concept in statistics. Z score is also called standard score. This score helps to understand if each data value is greater or smaller than mean and how far away it is from the mean. More specifically, Z score tells how many standard deviations away a data point is from the mean. Z = ( x - $\mu$ ) / $\sigma$.[^3]')
+print_log('\n\n> Whit this method, the identified outliers are the same that the Method 2 that uses the empirical rule when the Z-score threshold is the same _k-sigma_ value. The Method 3 creates the Z-score table values. Use this method to compare the identified outliers with differents _k-sigma_ values.')
+outliers = find_outliers_zscore(df)
+outlier_file = 'Outlier_ZScore_' + pivot_table_name
+outliers.to_csv(path + outlier_file)
+zscore = (df - df.mean()) / df.std()
+zscore_file = 'Outlier_ZScore_Value_' + pivot_table_name
+zscore.to_csv(path + zscore_file)
+print_log('\nOutliers parameters:'
+          '\n* mean: mean value'
+          '\n* std: standard deviation value'
+          '\n* OlMinVal: minimum outlier value founded'
+          '\n* OlMaxVal: maximum outlier value founded'
+          '\n* OlCount: # outliers founded'
+          '\n* CapLowerLim: capped lower limit for outliers replacement ( $\mu$ - %s * $\sigma$ )' % str(cap_multiplier) +
+          '\n* CapUpperLim: capped upper limit for outliers replacement ( $\mu$ + %s * $\sigma$ )\n' % str(cap_multiplier)
+          )
+# Assemble the parameters table
+df_mean = df.mean().to_frame()
+df_mean.columns = ['mean']
+df_std = df.std().to_frame()
+df_std.columns = ['std']
+df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
+df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
+df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
+df_concat = pd.concat([df_mean, df_std, df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
+print_log(df_concat.to_markdown(), center_div=True)
+# Plot values and outliers
+df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
+ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
+df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
+plt.title('Method 3 - Z-score or standard core >= %s for %d stations (%d outliers)' % (str(zscore_threshold), df.shape[1], df_concat['OlCount'].sum()))
+ax.set_ylabel('Values for %s' % pivot_table_name)
+plt.savefig(path + outlier_file + '.png')
+print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
+if show_plot: plt.show()
+plt.close('all')
+# Drop outliers values
+not_outliers = drop_outliers_zscore(df)
+outlier_file_drop = 'Outlier_ZScore_Drop_' + pivot_table_name
+not_outliers.to_csv(path + outlier_file_drop)
+# Capped outliers values
+df_capped = cap_outliers_zscore(df)
+outlier_file_cap = 'Outlier_ZScore_Cap_' + pivot_table_name
+df_capped.to_csv(path + outlier_file_cap, index_label=date_record_name)
+# Impute outliers with mean values
+df_impute = impute_outliers_zscore(df)
+outlier_file_impute = 'Outlier_ZScore_Impute_' + pivot_table_name
+df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
+# Print results
+print_log('\n#### Identified and cleaning tables for %d Z-score or standard core outliers founded' % df_concat['OlCount'].sum() +
+          '\n* Outliers Z-score values file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (zscore_file, zscore_file) +
+          '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
+          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
+          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
+          '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
+print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
+print_log('Z-score - General statistics table - Capped file', center_div=True)
+print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log('Z-score - General statistics table - Imputed file', center_div=True)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log('\n\n> The _drop file_ contains the database values without the outliers identified.'
+          '\n>'
+          '\n> The _capped file_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
+          '\n>'
+          '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
+          )
 print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/' +
-          '\n[^2]: https://www.investopedia.com/terms/e/empirical-rule.asp')
+          '\n[^2]: https://www.investopedia.com/terms/e/empirical-rule.asp'+
+          '\n[^3]: Adapted from: https://www.geeksforgeeks.org/z-score-for-outlier-detection-python/')
