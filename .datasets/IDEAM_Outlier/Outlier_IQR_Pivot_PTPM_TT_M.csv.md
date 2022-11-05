@@ -1,7 +1,7 @@
 ## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-05 11:04:20.845281
+* Execution date: 2022-11-05 11:06:29.599641
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -651,7 +651,7 @@ IQR - General statistics table - Imputed file
 
 
 
-### Method 2 - Outliers processing through empirical rule - ER or k-sigma ( $\mu$ - k * $\sigma$ ) with k = 4.5
+### Method 2 - Outliers processing through empirical rule - ER or _k-sigma_ ( $\mu$ - k * $\sigma$ ) with _k_ = 4.5
 
 
 The empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations (denoted by $\sigma$) of the mean or average (denoted by $\mu$). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation ( $\mu$ ± $\sigma$ ), 95% within the first two standard deviations ( $\mu$ ± 2 $\sigma$ ), and 99.7% within the first three standard deviations ( $\mu$ ± 3 $\sigma$ ).[^2]
