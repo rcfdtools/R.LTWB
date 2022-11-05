@@ -205,8 +205,8 @@ print_log('\nOutliers parameters:'
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
           '\n* OlCount: # outliers founded'
-          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - %s * std())' % str(cap_multiplier) +
-          '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + %s * std())\n' % str(cap_multiplier)
+          '\n* CapLowerLim: capped lower limit for outliers replacement ( $\mu$ - %s * $\sigma$ )' % str(cap_multiplier) +
+          '\n* CapUpperLim: capped upper limit for outliers replacement ( $\mu$ + %s * $\sigma$ )\n' % str(cap_multiplier)
           )
 # Assemble the parameters table
 df_q1 = df.quantile(q1_val).to_frame()
@@ -277,8 +277,8 @@ print_log('\nOutliers parameters:'
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
           '\n* OlCount: # outliers founded'
-          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - %s * std())' % str(cap_multiplier) +
-          '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + %s * std())\n' % str(cap_multiplier)
+          '\n* CapLowerLim: capped lower limit for outliers replacement ( $\mu$ - %s * $\sigma$ )' % str(cap_multiplier) +
+          '\n* CapUpperLim: capped upper limit for outliers replacement ( $\mu$ + %s * $\sigma$ )\n' % str(cap_multiplier)
           )
 # Assemble the parameters table
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
