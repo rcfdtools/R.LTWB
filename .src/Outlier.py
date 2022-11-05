@@ -87,7 +87,7 @@ def impute_outliers_IQR(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_Q_MEDIA_M.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Pivot_TMX_CON.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
@@ -99,8 +99,8 @@ sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-q1_val = 0.1  # Default is 0.25
-q3_val = 0.9  # Default is 0.75
+q1_val = 0.25  # Default is 0.25
+q3_val = 0.75  # Default is 0.75
 cap_multiplier = 3 # Replacement outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
@@ -113,6 +113,7 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
           '\n* matplotlib version: ' + str(matplotlib.__version__) +
           '\n* pandas version: ' + str(pd.__version__) +
           '\n* numpy version: ' + str(np.__version__) +
+          '\n* Stations exclude: ' + str(station_exclude) +
           '\n* Print table sample: ' + str(print_table_sample) +
           '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Outlier'
           '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
