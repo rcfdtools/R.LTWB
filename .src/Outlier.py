@@ -87,9 +87,9 @@ def impute_outliers_IQR(df):
 
 # Function to find outliers using empirical rules - ER
 def find_outliers_ER(df):
-    lower_limit = df.mean() - cap_multiplier * df.std()
-    upper_limit = df.mean() + cap_multiplier * df.std()
-    outliers = df[((df < lower_limit) | (df > upper_limit))]
+    lower_cap = df.mean() - cap_multiplier * df.std()
+    upper_cap = df.mean() + cap_multiplier * df.std()
+    outliers = df[((df < lower_cap) | (df > upper_cap))]
     return outliers
 
 
@@ -106,8 +106,8 @@ sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-q1_val = 0.25  # Default is 0.25
-q3_val = 0.75  # Default is 0.75
+q1_val = 0.1  # Default is 0.25
+q3_val = 0.9  # Default is 0.75
 cap_multiplier = 3 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
@@ -224,10 +224,16 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 
 
 # Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - cap_multiplier * std())
-print_log('### Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - k * std()) with k = %s' % str(cap_multiplier))
+print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - k * std()) with k = %s' % str(cap_multiplier))
 outliers = find_outliers_ER(df)
 outlier_file = 'Outlier_ER_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
+# Assemble the parameters table
+df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
+df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
+df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
+df_concat = pd.concat([df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
+print_log(df_concat.to_markdown(), center_div=True)
 
 '''
 df_capped = df
