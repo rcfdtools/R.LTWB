@@ -355,5 +355,5 @@ print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 #print(type(df_IQR))
 
 
-print_log('\n\n[^1:] Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/' +
+print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/' +
           '\n[^2]: https://www.investopedia.com/terms/e/empirical-rule.asp')
