@@ -13,6 +13,10 @@ Tasks
 * https://www.investopedia.com/terms/e/empirical-rule.asp
 
 
+Assessments
+	Pivot_PTPM_TT_M.csv: q1=0.1 and q3=0.9 look similar to k-sigma=0.4
+
+
 df_capped = df
 column_headers = df_capped.columns.values.tolist()
 lower_limit = df_capped.mean()-cap_multiplier*df_capped.std()
@@ -29,3 +33,4 @@ df_capped = pd.DataFrame(df_capped, columns=column_headers)
 outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
 df_capped.to_csv(path + outlier_file_cap)
 
+find_outliers_ER

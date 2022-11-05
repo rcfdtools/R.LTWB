@@ -92,6 +92,48 @@ def find_outliers_ER(df):
     outliers = df[((df < lower_cap) | (df > upper_cap))]
     return outliers
 
+# Function to drop outliers using empirical rules - ER
+def drop_outliers_ER(df):
+    lower_cap = df.mean() - cap_multiplier * df.std()
+    upper_cap = df.mean() + cap_multiplier * df.std()
+    not_outliers = df[~((df < lower_cap) | (df > upper_cap))]
+    return not_outliers
+
+# Function for Cap ER outliers with specified limits (mean() - cap_multiplier * std())
+def cap_outliers_ER(df):
+    column_headers = df.columns.values.tolist()
+    index_list = list(df.index.values)
+    lower_cap = df.mean() - cap_multiplier * df.std()
+    upper_cap = df.mean() + cap_multiplier * df.std()
+    df = np.where(df > upper_cap,
+       upper_cap,
+       np.where(
+           df < lower_cap,
+           lower_cap,
+           df
+           )
+       )
+    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
+    return df
+
+# Function for impute ER outliers with the mean values
+def impute_outliers_ER(df):
+    column_headers = df.columns.values.tolist()
+    index_list = list(df.index.values)
+    lower_cap = df.mean() - cap_multiplier * df.std()
+    upper_cap = df.mean() + cap_multiplier * df.std()
+    df = np.where(df > upper_cap,
+       df.mean(),
+       np.where(
+           df < lower_cap,
+           df.mean(),
+           df
+           )
+       )
+    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
+    return df
+
+
 
 # General variables
 pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
@@ -105,10 +147,11 @@ plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.or
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 print_table_sample = True
+show_plot = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 q1_val = 0.1  # Default is 0.25
 q3_val = 0.9  # Default is 0.75
-cap_multiplier = 3 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
+cap_multiplier = 4 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
 
 
 # Header
@@ -190,7 +233,7 @@ plt.title('Method 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outlie
 ax.set_ylabel('Values for %s' % pivot_table_name)
 plt.savefig(path + outlier_file + '.png')
 print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
-plt.show()
+if show_plot: plt.show()
 plt.close('all')
 # Drop outliers values
 not_outliers = drop_outliers_IQR(df)
@@ -204,7 +247,7 @@ df_capped.to_csv(path + outlier_file_cap, index_label=date_record_name)
 df_impute = impute_outliers_IQR(df)
 outlier_file_impute = 'Outlier_IQR_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
-# Print resoults
+# Print results
 print_log('\n#### Identified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
           '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
           '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
@@ -234,6 +277,46 @@ df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
 df_concat = pd.concat([df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
+# Plot values and outliers
+df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
+ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
+df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
+plt.title('Method 2 - ER or k-sigma outliers (k = %s) for %d stations (%d outliers)' % (str(cap_multiplier), df.shape[1], df_concat['OlCount'].sum()))
+ax.set_ylabel('Values for %s' % pivot_table_name)
+plt.savefig(path + outlier_file + '.png')
+print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
+if show_plot: plt.show()
+plt.close('all')
+# Drop outliers values
+not_outliers = drop_outliers_ER(df)
+outlier_file_drop = 'Outlier_ER_Drop_' + pivot_table_name
+not_outliers.to_csv(path + outlier_file_drop)
+# Capped outliers values
+df_capped = cap_outliers_ER(df)
+outlier_file_cap = 'Outlier_ER_Cap_' + pivot_table_name
+df_capped.to_csv(path + outlier_file_cap, index_label=date_record_name)
+# Impute outliers with mean values
+df_impute = impute_outliers_ER(df)
+outlier_file_impute = 'Outlier_ER_Impute_' + pivot_table_name
+df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
+# Print results
+print_log('\n#### Identified and cleaning tables for %d ER or k-sigma outliers founded' % df_concat['OlCount'].sum() +
+          '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
+          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
+          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
+          '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
+print_log('\n> The _drop file_ contains the database values without the outliers identified.'
+          '\n>'
+          '\n> The _capped file_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
+          '\n>'
+          '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
+          )
+print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
+print_log('General statistics table - Capped file', center_div=True)
+print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log('General statistics table - Imputed file', center_div=True)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+
 
 '''
 df_capped = df
