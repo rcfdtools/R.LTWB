@@ -1,5 +1,7 @@
 Tasks
 	Plots for each .csv table.
+	# -*- coding: UTF-8 -*-
+	# -*- coding: windows-1252 -*-
 
 
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
