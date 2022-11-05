@@ -243,6 +243,8 @@ outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
 print_log('\nOutliers parameters:'
+          '\n* mean: mean value'
+          '\n* std: standard deviation value'              
           '\n* q1: quartile %s' % str(q1_val) +
           '\n* q3: quartile %s' % str(q3_val) +
           '\n* IQR: interquartile range (q3-q1)' +
@@ -255,6 +257,10 @@ print_log('\nOutliers parameters:'
           '\n* CapUpperLim: capped upper limit for outliers replacement ( $\mu$ + %s * $\sigma$ )\n' % str(cap_multiplier)
           )
 # Assemble the parameters table
+df_mean = df.mean().to_frame()
+df_mean.columns = ['mean']
+df_std = df.std().to_frame()
+df_std.columns = ['std']
 df_q1 = df.quantile(q1_val).to_frame()
 df_q1.columns = ['q1']
 df_q3 = df.quantile(q3_val).to_frame()
@@ -270,7 +276,7 @@ df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
 df_lower_cap = pd.DataFrame(df.mean()-cap_multiplier*df.std(), columns=['CapLowerLim'])
 df_upper_cap = pd.DataFrame(df.mean()+cap_multiplier*df.std(), columns=['CapUpperLim'])
-df_concat = pd.concat([df_q1, df_q3, df_IQR, df_lower_lim, df_upper_lim, df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
+df_concat = pd.concat([df_mean, df_std, df_q1, df_q3, df_IQR, df_lower_lim, df_upper_lim, df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
@@ -314,6 +320,8 @@ outliers = find_outliers_ER(df)
 outlier_file = 'Outlier_ER_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
 print_log('\nOutliers parameters:'
+          '\n* mean: mean value'
+          '\n* std: standard deviation value'          
           '\n* OlMinVal: minimum outlier value founded'
           '\n* OlMaxVal: maximum outlier value founded'
           '\n* OlCount: # outliers founded'
@@ -321,10 +329,14 @@ print_log('\nOutliers parameters:'
           '\n* CapUpperLim: capped upper limit for outliers replacement ( $\mu$ + %s * $\sigma$ )\n' % str(cap_multiplier)
           )
 # Assemble the parameters table
+df_mean = df.mean().to_frame()
+df_mean.columns = ['mean']
+df_std = df.std().to_frame()
+df_std.columns = ['std']
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
 df_count = pd.DataFrame(outliers.count(), columns=['OlCount'])
-df_concat = pd.concat([df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
+df_concat = pd.concat([df_mean, df_std, df_min, df_max, df_count, df_lower_cap, df_upper_cap], axis='columns')
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
