@@ -1,7 +1,7 @@
 ## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-05 10:46:18.554647
+* Execution date: 2022-11-05 10:48:30.740126
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -1110,5 +1110,5 @@ ER - General statistics table - Imputed file
 
 
 
-[^1:] Taken or adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
+[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
 [^2]: https://www.investopedia.com/terms/e/empirical-rule.asp
