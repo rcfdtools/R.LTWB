@@ -14,7 +14,7 @@ Tasks
 
 
 Assessments
-	Pivot_PTPM_TT_M.csv: q1=0.1 and q3=0.9 look similar to k-sigma=0.4
+	Pivot_PTPM_TT_M.csv: q1=0.1 and q3=0.9 look similar to k-sigma=4.5
 
 
 df_capped = df

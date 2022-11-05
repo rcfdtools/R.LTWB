@@ -151,7 +151,7 @@ show_plot = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 q1_val = 0.1  # Default is 0.25
 q3_val = 0.9  # Default is 0.75
-cap_multiplier = 4 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
+cap_multiplier = 4.5 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
 
 
 # Header
@@ -271,6 +271,13 @@ print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or
 outliers = find_outliers_ER(df)
 outlier_file = 'Outlier_ER_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
+print_log('\nOutliers parameters:'
+          '\n* OlMinVal: minimum outlier value founded'
+          '\n* OlMaxVal: maximum outlier value founded'
+          '\n* OlCount: # outliers founded'
+          '\n* CapLowerLim: capped lower limit for outliers replacement (mean() - %s * std())' % str(cap_multiplier) +
+          '\n* CapUpperLim: capped upper limit for outliers replacement (mean() + %s * std())\n' % str(cap_multiplier)
+          )
 # Assemble the parameters table
 df_min = pd.DataFrame(outliers.min(), columns=['OlMinVal'])
 df_max = pd.DataFrame(outliers.max(), columns=['OlMaxVal'])
