@@ -151,7 +151,7 @@ show_plot = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 q1_val = 0.1  # Default is 0.25
 q3_val = 0.9  # Default is 0.75
-cap_multiplier = 3 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
+cap_multiplier = 4.5 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
 
 
 # Header
@@ -269,7 +269,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 
 # Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - cap_multiplier * std())
 print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - k * std()) with k = %s' % str(cap_multiplier))
-print_log('\n\nThe empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations (denoted by $\sigma$) of the mean or average (denoted by $\mu$). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation ($\mu$ ± $\sigma$), 95% within the first two standard deviations ($\mu$ ± 2$\sigma$), and 99.7% within the first three standard deviations ($\mu$ ± 3$\sigma$).[^2]')
+print_log('\n\nThe empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations ( denoted by $\sigma$ ) of the mean or average ( denoted by $\mu$ ). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation ( $\mu$ ± $\sigma$ ), 95% within the first two standard deviations ( $\mu$ ± 2$\sigma$ ), and 99.7% within the first three standard deviations ( $\mu$ ± 3$\sigma$ ).[^2]')
 outliers = find_outliers_ER(df)
 outlier_file = 'Outlier_ER_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
