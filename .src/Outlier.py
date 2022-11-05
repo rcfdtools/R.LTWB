@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Name: Outlier.py
-# Description: outliers detection and processing throught statistical methods
+# Description: outliers detection and processing through statistical methods
 # Requirements: Python 3+, pandas, tabulate
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
@@ -43,7 +43,7 @@ def drop_outliers_IQR(df):
     not_outliers = df[~((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
     return not_outliers
 
-# Cap IQR outliers with specified limits (mean() - cap_multiplier * std())
+# Function for Cap IQR outliers with specified limits (mean() - cap_multiplier * std())
 def cap_outliers_IQR(df):
     column_headers = df.columns.values.tolist()
     index_list = list(df.index.values)
@@ -65,7 +65,7 @@ def cap_outliers_IQR(df):
     df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
     return df
 
-# Impute IQR outliers with mean values
+# Function for impute IQR outliers with the mean values
 def impute_outliers_IQR(df):
     column_headers = df.columns.values.tolist()
     index_list = list(df.index.values)
@@ -85,9 +85,16 @@ def impute_outliers_IQR(df):
     df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
     return df
 
+# Function to find outliers using empirical rules - ER
+def find_outliers_ER(df):
+    lower_limit = df.mean() - cap_multiplier * df.std()
+    upper_limit = df.mean() + cap_multiplier * df.std()
+    outliers = df[((df < lower_limit) | (df > upper_limit))]
+    return outliers
+
 
 # General variables
-pivot_table_name = 'Pivot_TMX_CON.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
@@ -101,11 +108,11 @@ print_table_sample = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 q1_val = 0.25  # Default is 0.25
 q3_val = 0.75  # Default is 0.75
-cap_multiplier = 3 # Replacement outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
+cap_multiplier = 3 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std()
 
 
 # Header
-print_log('## Outliers detection and processing throught statistical methods')
+print_log('## Outliers detection and processing through statistical methods')
 print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
@@ -120,7 +127,7 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
           '\n* Credits: r.cfdtools@gmail.com')
 
 
-# Open the IDEAM station dataframe and show general information
+# Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
@@ -140,7 +147,7 @@ print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 
-# Method 1 - Outliers processing for interquartile range IQR
+# Method 1 - Outliers processing through interquartile range IQR
 print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 outliers = find_outliers_IQR(df)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
@@ -214,16 +221,14 @@ print_log('General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
-'''
-print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-print(df.head(sample_records).to_markdown())
-print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index')
-print(list(df.index.values))
-print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-'''
 
 
-# Method 2 - Outliers processing with a specified range (mean() - cap_multiplier * std())
+# Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - cap_multiplier * std())
+print_log('### Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - k * std()) with k = %s' % str(cap_multiplier))
+outliers = find_outliers_ER(df)
+outlier_file = 'Outlier_ER_' + pivot_table_name
+outliers.to_csv(path + outlier_file)
+
 '''
 df_capped = df
 column_headers = df_capped.columns.values.tolist()
@@ -241,6 +246,12 @@ df_capped = pd.DataFrame(df_capped, columns=column_headers)
 outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
 df_capped.to_csv(path + outlier_file_cap)
 '''
-
+'''
+print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+print(df.head(sample_records).to_markdown())
+print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index')
+print(list(df.index.values))
+print('\n\nXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+'''
 #print(df_IQR)
 #print(type(df_IQR))

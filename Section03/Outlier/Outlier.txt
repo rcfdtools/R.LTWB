@@ -10,6 +10,7 @@ Tasks
 * https://sparkbyexamples.com/pandas/pandas-get-column-names
 * https://www.statology.org/pandas-index-to-list/
 * https://www.statology.org/pandas-exclude-column/
+* https://www.investopedia.com/terms/e/empirical-rule.asp
 
 
 df_capped = df
