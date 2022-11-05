@@ -11,6 +11,9 @@ Clone local directory D:\R.LTWB.wiki
 Organization
 https://github.com/uecijg-ceh
 
+# -*- coding: UTF-8 -*-
+# -*- coding: windows-1252 -*-
+
 ✓✕
 
 Pending tasks

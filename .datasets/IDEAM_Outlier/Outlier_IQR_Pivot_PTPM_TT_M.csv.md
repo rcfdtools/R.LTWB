@@ -1,7 +1,7 @@
 ## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-05 16:10:04.190883
+* Execution date: 2022-11-05 16:20:11.604416
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide']
 * matplotlib version: 3.6.0
@@ -1108,7 +1108,7 @@ ER - General statistics table - Imputed file
 Z score is an important concept in statistics. Z score is also called standard score. This score helps to understand if each data value is greater or smaller than mean and how far away it is from the mean. More specifically, Z score tells how many standard deviations away a data point is from the mean. Z = ( x - $\mu$ ) / $\sigma$.[^3]
 
 
-> Whit this method, the identified outliers are the same that the Method 2 that uses the empirical rule when the Z-score threshold is the same _k-sigma_ value. The Method 3 creates the Z-score table values. Use this method to compare the identified outliers with differents _k-sigma_ values.
+> Altought with this method, the identified outliers are the same obtained in Method 2 that uses the empirical rule when the Z-score threshold is the same _k-sigma_ value, the Method 3 creates the Z-score table values. Use this method to compare the identified outliers with differents _k-sigma_ values.
 
 Outliers parameters:
 * mean: mean value
@@ -1561,9 +1561,9 @@ Z-score - General statistics table - Imputed file
 
 
 
-> The _drop file_ contains the database values without the outliers identified.
+> The _drop files_ contains the database values without the outliers identified.
 >
-> The _capped file_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.
+> The _capped files_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.
 >
 > The imputation method replace each outlier value with the mean value that contains the original outliers values.
 

@@ -376,7 +376,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 # Method 3 - Outliers processing through Z-score or standard core
 print_log('\n\n### Method 3 - Outliers processing through Z-score >= %s or standard core' % str(zscore_threshold))
 print_log('\n\nZ score is an important concept in statistics. Z score is also called standard score. This score helps to understand if each data value is greater or smaller than mean and how far away it is from the mean. More specifically, Z score tells how many standard deviations away a data point is from the mean. Z = ( x - $\mu$ ) / $\sigma$.[^3]')
-print_log('\n\n> Whit this method, the identified outliers are the same that the Method 2 that uses the empirical rule when the Z-score threshold is the same _k-sigma_ value. The Method 3 creates the Z-score table values. Use this method to compare the identified outliers with differents _k-sigma_ values.')
+print_log('\n\n> Altought with this method, the identified outliers are the same obtained in Method 2 that uses the empirical rule when the Z-score threshold is the same _k-sigma_ value, the Method 3 creates the Z-score table values. Use this method to compare the identified outliers with differents _k-sigma_ values.')
 outliers = find_outliers_zscore(df)
 outlier_file = 'Outlier_ZScore_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
@@ -436,9 +436,9 @@ print_log('Z-score - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
 print_log('Z-score - General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
-print_log('\n\n> The _drop file_ contains the database values without the outliers identified.'
+print_log('\n\n> The _drop files_ contains the database values without the outliers identified.'
           '\n>'
-          '\n> The _capped file_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
+          '\n> The _capped files_ contains the database values and the outliers has been replaced with the lower or upper capped value calculated. Lower outliers could be replaced with negative values because the limit is defined with (mean() - cap_multiplier * std()). In some cases like _temperature analysis_, the upper outliers values could be replaced with values over the original values and you can try to fix this issue changing the parameter _cap_multiplier_ that defines the stripe values range.'
           '\n>'
           '\n> The imputation method replace each outlier value with the mean value that contains the original outliers values.'
           )

@@ -1,7 +1,4 @@
 Tasks
-	Plots for each .csv table.
-	# -*- coding: UTF-8 -*-
-	# -*- coding: windows-1252 -*-
 
 
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
@@ -16,23 +13,6 @@ Tasks
 * https://latex-tutorial.com/symbols/greek-alphabet/
 
 Assessments
-	Pivot_PTPM_TT_M.csv: q1=0.1 and q3=0.9 look similar to k-sigma=4.5
+	Pivot_PTPM_TT_M.csv: q1=0.1 and q3=0.9 look similar to k-sigma=4.5 or Z-Scrore thershold = 4.5
 
 
-df_capped = df
-column_headers = df_capped.columns.values.tolist()
-lower_limit = df_capped.mean()-cap_multiplier*df_capped.std()
-upper_limit = df_capped.mean()+cap_multiplier*df_capped.std()
-df_capped = np.where(df_capped > upper_limit,
-    upper_limit,
-    np.where(
-       df_capped < lower_limit,
-       lower_limit,
-       df_capped
-    )
-)
-df_capped = pd.DataFrame(df_capped, columns=column_headers)
-outlier_file_cap = 'Outlier_IQR_Cap_' + pivot_table_name
-df_capped.to_csv(path + outlier_file_cap)
-
-find_outliers_ER
