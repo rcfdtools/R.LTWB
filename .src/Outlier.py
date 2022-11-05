@@ -151,7 +151,7 @@ show_plot = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 q1_val = 0.1  # Default is 0.25
 q3_val = 0.9  # Default is 0.75
-cap_multiplier = 4.5 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
+cap_multiplier = 3 # Replacement cap outlier value multiplier, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules.
 
 
 # Header
