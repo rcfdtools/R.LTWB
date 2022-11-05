@@ -11,7 +11,7 @@ Tasks
 * https://www.statology.org/pandas-index-to-list/
 * https://www.statology.org/pandas-exclude-column/
 * https://www.investopedia.com/terms/e/empirical-rule.asp
-
+* https://latex-tutorial.com/symbols/greek-alphabet/
 
 Assessments
 	Pivot_PTPM_TT_M.csv: q1=0.1 and q3=0.9 look similar to k-sigma=4.5
