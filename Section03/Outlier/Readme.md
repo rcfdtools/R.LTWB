@@ -7,15 +7,15 @@ En esta actividad se obtienen los parámetros estadísticos de cada parámetro h
 
 Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
-* Método 1 - Rango intercuartil - IQR[^1]: aplica para datos que no siguen una distribución normal y permite identificar valores atípicos a partir de valores que se encuentran por fuera del rango intercuartílico Q1 a Q3. El valor del primer cuartil puede corresponder al percentil 25 y el valor del tercer cuartil puede corresponder al percentil 75 del conjunto de datos, por lo que el rango intercuartil se calcula como Q3-Q1.  
+* Método 1 - Rango intercuartílico - IQR[^1]: aplica para datos que no siguen una distribución normal y permite identificar valores atípicos a partir de valores que se encuentran por fuera del rango intercuartílico Q1 a Q3. El valor del primer cuartil puede corresponder al percentil 25 y el valor del tercer cuartil puede corresponder al percentil 75 del conjunto de datos, por lo que el rango intercuartílico se calcula como Q3-Q1.  
 * Método 2 - Regla empírica - ER[^2]: este método, también denominado regla 3-sigma o regla 68-5-99.7 correspondientes a una distribución normal, permiten identificar valores atípicos cuyas observaciones se encuentran fuera de la banda $\mu$ +- K * $\sigma$. 
-* Método 3 - núcleo estándar Z-score[^3]: este método, similar o idéntico a l método 2, permite calificar cada observación a partir del valor Z = ( x - $\mu$ ) / $\sigma$. Valores fuera de un valor establecido, p.ej. Z-score=3, son identificados como atípicos.
+* Método 3 - núcleo estándar Z-score[^3]: este método, similar o idéntico al método 2, permite calificar cada observación a partir del valor Z = ( x - $\mu$ ) / $\sigma$. Valores fuera de un valor establecido, p.ej. Z-score=3, son identificados como atípicos.
 
 
 ### Objetivos
 
 * Obtener estadísticas generales de cada estación para cada parámetro hidroclimatológico.
-* Identificar valores atípicos a través de diferentes métodos estadísticos (Rango intercuartil - IQR, regla empírica - ER y núcleo estándar Z-score).
+* Identificar valores atípicos a través de diferentes métodos estadísticos (Rango intercuartílico - IQR, regla empírica - ER y núcleo estándar Z-score).
 * Representar gráficamente las series de cada parámetro visualizando también los datos atípicos identificados.
 * Excluir valores atípicos de la matriz de estaciones para cada parámetro.
 * Reemplazar valores atípicos por valores límite definidos a partir de un rango de confianza ( $\mu$ +- K * $\sigma$ ).
@@ -43,17 +43,17 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
 Funcionalidades del script
 
-* Identificación de atípicos por 3 métodos estadísticos (Método 1 - Rango intercuartil - IQR, Método 2 - Regla empírica - ER y Método 3 - núcleo estándar Z-score).
+* Identificación de atípicos por 3 métodos estadísticos (Método 1 - Rango intercuartílico - IQR, Método 2 - Regla empírica - ER y Método 3 - núcleo estándar Z-score).
 * Permite definir la tabla dinámica (pivot table) del parámetro hidroclimatológico a evaluar.
 * El usuario puede excluir estaciones del análisis a través de la variable `station_exclude`.
-* Definición del cuartil inferior `q1_val` y superior `q3_val` que define el rango de exclusión en el método de rango interquartil - IQR.
+* Definición del cuartil inferior `q1_val` y superior `q3_val` que define el rango de exclusión en el método de rango intercuartílico - IQR.
 * Definición manual del multiplicador `cap_multiplier` o K-sigma que permite definir los valores de reemplazo ( $\mu$ +- %s * $\sigma$ ).  
 * Definición manual del límite de exclusión `zscore_threshold` en el método de exclusión por núcleo estándar.
 * Análisis masivo de estaciones por parámetro hidroclimatológico con estadísticos, parámetros de evaluación y gráficas con marcado de atípicos.
 * Generación de reportes detallados Markdown por cada parámetro hidroclimatológico evaluado. [IDEAM_Outlier](../../.datasets/IDEAM_Outlier).
 * Para cada método y cada parámetro hidroclimatológico analizado, crea las siguientes tablas: datos atípicos identificados, datos de entrada sin datos atípicos (drop), datos de entrada con datos atípicos reemplazados (cap) y datos de entrada con datos atípicos imputados (impute). 
 
-> En el Método 3 ó núcleo estándar Z-score, se genera una tabla adicional para cada parámetro hidroclimatológico que contiene los puntajes a partir de los cuales se realiza la identificación de valores atípicos.   
+> En el Método 3 o núcleo estándar Z-score, se genera una tabla adicional para cada parámetro hidroclimatológico que contiene los puntajes a partir de los cuales se realiza la identificación de valores atípicos.   
 > 
 > Para el ejemplo, se han excluido diferentes estaciones con registros de caudal sobre el Río Magdalena y otros ríos con caudales altos.
 
@@ -129,7 +129,7 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 | [Outlier_IQR_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMN_CON.csv.md)     | Temperatura diaria mínima, °C. q1=0.175, q3=0.825, k-sigma=3.5, Z-score=3.5 |     25     |   15341   |  403  | 410  |    410    |
 | [Outlier_IQR_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMX_CON.csv.md)     | Temperatura diaria máxima, °C. q1=0.175, q3=0.825, k-sigma=3.6, Z-score=3.6 |     25     |   15341   |  225  | 216  |    216    |
 
-> En la tabla: 1.IQR: número de valores atípicos identificados en Método 1 - Rango interquartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score. La columna _registros_ corresponde al número de registros de cada estación, incluídos los valores faltantes y/o nulos.
+> En la tabla: 1.IQR: número de valores atípicos identificados en Método 1 - Rango intercuartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score. La columna _registros_ corresponde al número de registros de cada estación, incluidos los valores faltantes y/o nulos.
 >
 > Nótese que para datos de temperatura mínima, se han identificado por los 3 métodos, valores atípicos en la zona inferior de las gráficas. En el caso de la temperatura máxima se han identificado valores atípicos en la zona superior e inferior de las gráficas.
 
@@ -137,15 +137,15 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 <div align='center'>
 
-| Método                                                           | $\mu$, media | $\sigma$, std |
-|:-----------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                   | 59.7829      | 74.2829       |
-| 1. Rango intercuartil - IQR. Reemplazo con $\mu$ - K * $\sigma$  | 59.718       | 73.9846       |
-| 1. Rango intercuartil - IQR. Imputación con $\mu$                | 57.7459      | 69.3425       |
-| 2. Regla empírica - ER. Reemplazo con $\mu$ - K * $\sigma$       | 59.718       | 73.9846       |
-| 2. Regla empírica - ER. Imputación con $\mu$                     | 57.7459      | 69.3425       |
-| 3. Z-score o núcleo estándar. Reemplazo con $\mu$ - K * $\sigma$ | 59.718       | 73.9846       |
-| 3. Z-score o núcleo estándar. Imputación con $\mu$               | 57.7459      | 69.3425       |
+| Método                                                             | $\mu$, media | $\sigma$, std |
+|:-------------------------------------------------------------------|:-------------|:--------------|
+| Serie original                                                     | 59.7829      | 74.2829       |
+| 1. Rango intercuartílico - IQR. Reemplazo con $\mu$ - K * $\sigma$ | 59.718       | 73.9846       |
+| 1. Rango intercuartílico - IQR. Imputación con $\mu$               | 57.7459      | 69.3425       |
+| 2. Regla empírica - ER. Reemplazo con $\mu$ - K * $\sigma$         | 59.718       | 73.9846       |
+| 2. Regla empírica - ER. Imputación con $\mu$                       | 57.7459      | 69.3425       |
+| 3. Z-score o núcleo estándar. Reemplazo con $\mu$ - K * $\sigma$   | 59.718       | 73.9846       |
+| 3. Z-score o núcleo estándar. Imputación con $\mu$                 | 57.7459      | 69.3425       |
 
 </div>
 
@@ -182,9 +182,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                          | Autor                                      | Horas |
-|------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.10.31 | Ilustración cabecera y diagrama de procesos.                                                                                                                                                                                                                                                                                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)  |   1   |
+| Versión    | Descripción                                                                                                                                                                                                                                                                                                    | Autor                                      | Horas |
+|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.11.07 | Documentación general. Ejecución para precipitación, evaporación, caudal, temperatura mínima y temperatura máxima. Ajuste de valores de exclusión en método 3 a partir del valor absoluto Z-score obtenido para cada dato. Ilustración cabecera y diagrama de procesos.                                        | [rcfdtools](https://github.com/rcfdtools)  |  7.5  |
+| 2022.11.05 | Método 2: funciones para identificación, eliminación, reemplazo e imputación. Generador documento detallado análisis Markdown. Método 3: Z-Score. Idéntico al método 2 con la diferencia que se crea la tabla de puntajes. Al utilizar el k-sigma igual al Z-score threshold, se obtienen los mismos outliers. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
+| 2022.11.04 | Método 1: inclusión de reemplazo de outliers usando rango definido  (mean() +- cap_multiplier * std()).                                                                                                                                                                                                        | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2022.11.03 | Método 1: inclusión de límites de reemplazo en tabla de parámetros IQR. Ajuste de datos descartando outliers identificados (drop). Método 2, borrador:  identificación de outliers y reemplaza con valores cap con  (mean() +- cap_multiplier * std())                                                         | [rcfdtools](https://github.com/rcfdtools)  |  4.5  |
+| 2022.11.03 | Método 1: Rango intercuartílico definido por usuario. Tabla de marcación. Tabla de análisis. Gráfico de análisis.                                                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
