@@ -124,7 +124,7 @@ Durante el proceso de ejecución del script, se genera automáticamente para cad
 | [Outlier_IQR_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMN_CON.csv.md)     | Temperatura diaria mínima, °C. q1=0.175, q3=0.825, k-sigma=3.5, Z-score=2.5  |     25     |   15341   |  403  | 410  |    396    |
 | [Outlier_IQR_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMX_CON.csv.md)     | Temperatura diaria máxima, °C. q1=0.175, q3=0.825, k-sigma=3.6, Z-score=2.95 |     25     |   15341   |  225  | 216  |    221    |
 
-> En la gráfica: 1.IQR: número de valores atípicos identificados en Método 1 - Rango interquartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score.
+> En la tabla: 1.IQR: número de valores atípicos identificados en Método 1 - Rango interquartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score.
 > 
 > Nótese que para datos de temperatura mínima, los métodos 1-IQR y 2-ER identifican mayoritariamente valores atípicos en la zona inferior de la gráfica, y para el método de 3-Z-score los valores identificados se localizan en la parte superior de la gráfica. Lo anterior debido a las tendencias de distribución de los datos.
 > 
