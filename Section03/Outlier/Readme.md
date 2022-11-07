@@ -1,7 +1,7 @@
 ## Identificación y procesamiento de datos atípicos - Outliers
 Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `Drop` `Capped` `Impute` `Interquartile-range` `Empirical-rule` `Z-score`
 
-<div align="center"><img alt="R.LTWB" src="Graph/Outlier.png" width="75%"></div> 
+<div align="center"><img alt="R.LTWB" src="Graph/Outlier.png" width="85%"></div> 
 
 En esta actividad se obtienen los parámetros estadísticos de cada parámetro hidroclimatológico en cada estación y se identifican, excluyen y completan los datos atípicos a través de métodos estadísticos.
 
