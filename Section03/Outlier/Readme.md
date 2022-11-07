@@ -5,6 +5,12 @@ Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe
 
 En esta actividad se obtienen los parámetros estadísticos de cada parámetro hidroclimatológico en cada estación y se identifican, excluyen y completan los datos atípicos a través de métodos estadísticos.
 
+Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
+
+* Método 1 - Rango intercuartil - IQR[^1]: aplica para datos que no siguen una distribución normal y permite identificar valores atípicos a partir de valores que se encuentran por fuera del rango intercuartílico Q1 a Q3. El valor del primer cuartil puede corresponder al percentil 25 y el valor del tercer cuartil puede corresponder al percentil 75 del conjunto de datos, por lo que el rango intercuartil se calcula como Q3-Q1.  
+* Método 2 - Regla empírica - ER[^2]: este método, también denominado regla 3-sigma o regla 68-5-99.7 correspondientes a una distribución normal, permiten identificar valores atípicos cuyas observaciones se encuentran fuera de la banda $\mu$ +- K * $\sigma$. 
+* Método 3 - núcleo estándar Z-score[^3]: este método, similar o idéntico a l método 2, permite calificar cada observación a partir del valor Z = ( x - $\mu$ ) / $\sigma$. Valores fuera de un valor establecido, p.ej. Z-score=3, son identificados como atípicos.
+
 
 ### Objetivos
 
@@ -14,7 +20,6 @@ En esta actividad se obtienen los parámetros estadísticos de cada parámetro h
 * Excluir valores atípicos de la matriz de estaciones para cada parámetro.
 * Reemplazar valores atípicos por valores límite definidos a partir de un rango de confianza ( $\mu$ +- K * $\sigma$ ).
 * Imputar valores atípicos con el valor de la media de cada estación.
-
 
 
 ### Requerimientos
@@ -124,11 +129,11 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 | [Outlier_IQR_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMN_CON.csv.md)     | Temperatura diaria mínima, °C. q1=0.175, q3=0.825, k-sigma=3.5, Z-score=3.5 |     25     |   15341   |  403  | 410  |    410    |
 | [Outlier_IQR_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMX_CON.csv.md)     | Temperatura diaria máxima, °C. q1=0.175, q3=0.825, k-sigma=3.6, Z-score=3.6 |     25     |   15341   |  225  | 216  |    216    |
 
-> En la tabla: 1.IQR: número de valores atípicos identificados en Método 1 - Rango interquartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score.
+> En la tabla: 1.IQR: número de valores atípicos identificados en Método 1 - Rango interquartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score. La columna _registros_ corresponde al número de registros de cada estación, incluídos los valores faltantes y/o nulos.
 >
-> Nótese que para datos de temperatura mínima, se han identificado por los 3 métodos, valores atípicos en la zona inferior de las gráficas. En el caso de la temperatura máxima se han identificado valores atípicos en la zona inferior e inferior de las gráficas.
+> Nótese que para datos de temperatura mínima, se han identificado por los 3 métodos, valores atípicos en la zona inferior de las gráficas. En el caso de la temperatura máxima se han identificado valores atípicos en la zona superior e inferior de las gráficas.
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, se pueden observar los siguientes valores:
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, se pueden observar los siguientes valores similares de media y desviación estándar:
 
 <div align='center'>
 
@@ -146,7 +151,7 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 **Conclusión general**
 
-De acuerdo a los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen en general estadísticos característicos similares.  
+De acuerdo a los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen similares los estadísticos característicos.  
 
 En este momento, dispone de reportes detallados de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
 
@@ -155,10 +160,10 @@ En este momento, dispone de reportes detallados de análisis por cada parámetro
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                            |
-|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir el script [Outlier.py](../../.src/Outlier.py), realice el análisis de los parámetros climatológicos definidos como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload), correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
-|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../.src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                            | 
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                |
+|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | A partir el script [Outlier.py](../../.src/Outlier.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
+|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../.src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                                                | 
 
 
 ### Referencias
