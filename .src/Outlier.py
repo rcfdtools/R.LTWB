@@ -201,7 +201,7 @@ zscore_threshold = 2.95  # Z-score threshold, default is 3. Method 3. If the thr
 
 
 # Header
-print_log('## Outliers detection and processing through statistical methods for %s' % pivot_table_name)
+print_log('## Outliers detection and processing through statistical methods')
 print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +

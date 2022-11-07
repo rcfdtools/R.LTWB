@@ -1,7 +1,7 @@
-## Outliers detection and processing through statistical methods for Pivot_TMX_CON.csv
+## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_TMX_CON.csv](../IDEAM_EDA/Pivot_TMX_CON.csv)
-* Execution date: 2022-11-07 11:07:49.728189
+* Execution date: 2022-11-07 11:08:54.672006
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
