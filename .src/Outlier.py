@@ -25,23 +25,18 @@ def print_log(txt_print, on_screen=True, center_div=False):
     if center_div:
         file_log.write('\n</div>\n' + '\n')
 
-# Function to find outliers using interquartile range - IQR
+# Function to find or drop outliers using interquartile range - IQR
 # Ref: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
-def find_outliers_IQR(df):
+def find_drop_outliers_IQR(df, drop=True):
+    # drop: True for only drop values, False for only find values.
     q1 = df.quantile(q1_val)
     q3 = df.quantile(q3_val)
     IQR = q3-q1
-    outliers = df[((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
+    if drop:
+        outliers = df[~((df < (q1 - 1.5 * IQR)) | (df > (q3 + 1.5 * IQR)))]
+    else:
+        outliers = df[((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
     return outliers
-
-# Function to drop outliers using interquartile range - IQR
-# Ref: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
-def drop_outliers_IQR(df):
-    q1 = df.quantile(q1_val)
-    q3 = df.quantile(q3_val)
-    IQR = q3-q1
-    not_outliers = df[~((df < (q1-1.5*IQR)) | (df > (q3+1.5*IQR)))]
-    return not_outliers
 
 # Function for Cap IQR outliers with specified limits (mean() - cap_multiplier * std())
 def cap_outliers_IQR(df):
@@ -85,26 +80,24 @@ def impute_outliers_IQR(df):
     df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
     return df
 
-# Function to find outliers using empirical rules - ER
-def find_outliers_ER(df):
+# Function to find or drop outliers using empirical rules - ER
+def find_drop_outliers_ER(df, drop=True):
+    # drop: True for only drop values, False for only find values.
     lower_cap = df.mean() - cap_multiplier * df.std()
     upper_cap = df.mean() + cap_multiplier * df.std()
-    outliers = df[((df < lower_cap) | (df > upper_cap))]
+    if drop:
+        outliers = df[~((df < lower_cap) | (df > upper_cap))]
+    else:
+        outliers = df[((df < lower_cap) | (df > upper_cap))]
     return outliers
 
-# Function to drop outliers using empirical rules - ER
-def drop_outliers_ER(df):
-    lower_cap = df.mean() - cap_multiplier * df.std()
-    upper_cap = df.mean() + cap_multiplier * df.std()
-    not_outliers = df[~((df < lower_cap) | (df > upper_cap))]
-    return not_outliers
-
-# Function for Cap ER outliers with specified limits (mean() - cap_multiplier * std())
-def cap_outliers_ER(df):
+# Function for Cap ER or Z-score outliers with specified limits (mean() +- k * std())
+def cap_outliers_ER_zscore(df, kz=3):
+    #kz: K-sigma or Z-score value.
     column_headers = df.columns.values.tolist()
     index_list = list(df.index.values)
-    lower_cap = df.mean() - cap_multiplier * df.std()
-    upper_cap = df.mean() + cap_multiplier * df.std()
+    lower_cap = df.mean() - kz * df.std()
+    upper_cap = df.mean() + kz * df.std()
     df = np.where(df > upper_cap,
        upper_cap,
        np.where(
@@ -116,12 +109,12 @@ def cap_outliers_ER(df):
     df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
     return df
 
-# Function for impute ER outliers with the mean values
-def impute_outliers_ER(df):
+# Function for impute ER or Z-score outliers with mean values
+def impute_outliers_ER_zscore(df, kz=3):
     column_headers = df.columns.values.tolist()
     index_list = list(df.index.values)
-    lower_cap = df.mean() - cap_multiplier * df.std()
-    upper_cap = df.mean() + cap_multiplier * df.std()
+    lower_cap = df.mean() - kz * df.std()
+    upper_cap = df.mean() + kz * df.std()
     df = np.where(df > upper_cap,
        df.mean(),
        np.where(
@@ -133,51 +126,15 @@ def impute_outliers_ER(df):
     df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
     return df
 
-# Function to find outliers using the Z-score or standard score
-def find_outliers_zscore(df):
+# Function to find or drop outliers using the Z-score or standard score
+def find_drop_outliers_zscore(df, drop=True):
+    # drop: True for only drop values, False for only find values.
     z = (df - df.mean()) / df.std()
-    outliers = df[(abs(z) >= zscore_threshold)]
+    if drop:
+        outliers = df[~(abs(z) >= zscore_threshold)]
+    else:
+        outliers = df[(abs(z) >= zscore_threshold)]
     return outliers
-
-# Function to drop outliers using the Z-score or standard score
-def drop_outliers_zscore(df):
-    z = (df - df.mean()) / df.std()
-    not_outliers = df[~(abs(z) >= zscore_threshold)]
-    return not_outliers
-
-# Function for Cap Z-score outliers with specified limits (mean() - cap_multiplier * std())
-def cap_outliers_zscore(df):
-    column_headers = df.columns.values.tolist()
-    index_list = list(df.index.values)
-    lower_cap = df.mean() - zscore_threshold * df.std()
-    upper_cap = df.mean() + zscore_threshold * df.std()
-    df = np.where(df > upper_cap,
-       upper_cap,
-       np.where(
-           df < lower_cap,
-           lower_cap,
-           df
-           )
-       )
-    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
-    return df
-
-# Function for impute ER outliers with the mean values
-def impute_outliers_zscore(df):
-    column_headers = df.columns.values.tolist()
-    index_list = list(df.index.values)
-    lower_cap = df.mean() - zscore_threshold * df.std()
-    upper_cap = df.mean() + zscore_threshold * df.std()
-    df = np.where(df > upper_cap,
-       df.mean(),
-       np.where(
-           df < lower_cap,
-           df.mean(),
-           df
-           )
-       )
-    df = pd.DataFrame(df, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
-    return df
 
 
 # General variables
@@ -239,7 +196,7 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 # Method 1 - Outliers processing through interquartile range IQR
 print_log('### Method 1 - Outliers processing using the interquartile range IQR (q1 = %s, q3 = %s)' % (str(q1_val), str(q3_val)))
 print_log('\nSince the data doesn`t follow a normal distribution, we will calculate the outlier data points using the statistical method called interquartile range (IQR) instead of using Z-score. Using the IQR, the outlier data points are the ones falling below Q1 - 1.5 IQR or above Q3 + 1.5 IQR. The Q1 could be the 25th percentile and Q3 could be the 75th percentile of the dataset, and IQR represents the interquartile range calculated by Q3 minus Q1 (Q3-Q1). [^1]')
-outliers = find_outliers_IQR(df)
+outliers = find_drop_outliers_IQR(df, drop=False)
 outlier_file = 'Outlier_IQR_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
 print_log('\nOutliers parameters:'
@@ -289,7 +246,7 @@ print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 if show_plot: plt.show()
 plt.close('all')
 # Drop outliers values
-not_outliers = drop_outliers_IQR(df)
+not_outliers = find_drop_outliers_IQR(df, drop=True)
 outlier_file_drop = 'Outlier_IQR_Drop_' + pivot_table_name
 not_outliers.to_csv(path + outlier_file_drop)
 # Capped outliers values
@@ -316,7 +273,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 # Method 2 - Outliers processing through empirical rule - ER or k-sigma (mean() - cap_multiplier * std())
 print_log('\n\n### Method 2 - Outliers processing through empirical rule - ER or _k-sigma_ ( $\mu$ - _k_ * $\sigma$ ) with _k_ = %s' % str(cap_multiplier))
 print_log('\n\nThe empirical rule, also referred to as the three-sigma rule or 68-95-99.7 rule, is a statistical rule which states that for a normal distribution, almost all observed data will fall within three standard deviations (denoted by $\sigma$) of the mean or average (denoted by $\mu$). In particular, the empirical rule predicts that 68% of observations falls within the first standard deviation ( $\mu$ ± $\sigma$ ), 95% within the first two standard deviations ( $\mu$ ± 2 $\sigma$ ), and 99.7% within the first three standard deviations ( $\mu$ ± 3 $\sigma$ ).[^2]')
-outliers = find_outliers_ER(df)
+outliers = find_drop_outliers_ER(df, drop=False)
 outlier_file = 'Outlier_ER_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
 print_log('\nOutliers parameters:'
@@ -349,15 +306,15 @@ print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 if show_plot: plt.show()
 plt.close('all')
 # Drop outliers values
-not_outliers = drop_outliers_ER(df)
+not_outliers = find_drop_outliers_ER(df, drop=True)
 outlier_file_drop = 'Outlier_ER_Drop_' + pivot_table_name
 not_outliers.to_csv(path + outlier_file_drop)
 # Capped outliers values
-df_capped = cap_outliers_ER(df)
+df_capped = cap_outliers_ER_zscore(df, kz=cap_multiplier)
 outlier_file_cap = 'Outlier_ER_Cap_' + pivot_table_name
 df_capped.to_csv(path + outlier_file_cap, index_label=date_record_name)
 # Impute outliers with mean values
-df_impute = impute_outliers_ER(df)
+df_impute = impute_outliers_ER_zscore(df, kz=cap_multiplier)
 outlier_file_impute = 'Outlier_ER_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print results
@@ -377,7 +334,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 print_log('\n\n### Method 3 - Outliers processing through Z-score >= %s or standard core' % str(zscore_threshold))
 print_log('\n\nZ score is an important concept in statistics. Z score is also called standard score. This score helps to understand if each data value is greater or smaller than mean and how far away it is from the mean. More specifically, Z score tells how many standard deviations away a data point is from the mean. Z = ( x - $\mu$ ) / $\sigma$.[^3]')
 print_log('\n\n> Altought with this method, the identified outliers are the same obtained in Method 2 that uses the empirical rule when the Z-score threshold is the same _k-sigma_ value, the Method 3 creates the Z-score table values. Use this method to compare the identified outliers with differents _k-sigma_ values.')
-outliers = find_outliers_zscore(df)
+outliers = find_drop_outliers_zscore(df, drop=False)
 outlier_file = 'Outlier_ZScore_' + pivot_table_name
 outliers.to_csv(path + outlier_file)
 zscore = (df - df.mean()) / df.std()
@@ -413,15 +370,15 @@ print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 if show_plot: plt.show()
 plt.close('all')
 # Drop outliers values
-not_outliers = drop_outliers_zscore(df)
+not_outliers = find_drop_outliers_zscore(df, drop=True)
 outlier_file_drop = 'Outlier_ZScore_Drop_' + pivot_table_name
 not_outliers.to_csv(path + outlier_file_drop)
 # Capped outliers values
-df_capped = cap_outliers_zscore(df)
+df_capped = cap_outliers_ER_zscore(df, kz=zscore_threshold)
 outlier_file_cap = 'Outlier_ZScore_Cap_' + pivot_table_name
 df_capped.to_csv(path + outlier_file_cap, index_label=date_record_name)
 # Impute outliers with mean values
-df_impute = impute_outliers_zscore(df)
+df_impute = impute_outliers_ER_zscore(df, kz=zscore_threshold)
 outlier_file_impute = 'Outlier_ZScore_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print results
