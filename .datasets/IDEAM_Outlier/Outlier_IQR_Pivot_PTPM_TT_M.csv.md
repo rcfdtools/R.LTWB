@@ -1,9 +1,9 @@
 ## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-05 16:20:11.604416
+* Execution date: 2022-11-07 08:27:42.843986
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide']
+* Python path: ['D:\\R.LTWB\\.src', 'C:\\Python3.10.5\\python310.zip', 'C:\\Python3.10.5\\DLLs', 'C:\\Python3.10.5\\lib', 'C:\\Python3.10.5']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
 * numpy version: 1.23.2

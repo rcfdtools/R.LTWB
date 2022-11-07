@@ -24,7 +24,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * [Microsoft Excel from Office 64 bits](https://aka.ms/office-install)
-* [Notepad++](https://notepad-plus-plus.org/downloads/)
+* [Notepad++](https://notepad-plus-plus.org)
 * [Python 3+](https://www.python.org/)
 * [Pandas para Python 3+](https://pandas.pydata.org/)
 

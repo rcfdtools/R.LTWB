@@ -197,7 +197,7 @@ station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '
 q1_val = 0.1  # Default is 0.25. Method 1.
 q3_val = 0.9  # Default is 0.75. Method 1.
 cap_multiplier = 4.5  # Replacement cap outlier value multiplier or k value, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules. . Method 1 & 2.
-zscore_threshold = 4.5  # Z-score threshold. Method 3. If the threshold is equal to the cap_multiplier, the results are the same as Method 2.
+zscore_threshold = 4.5  # Z-score threshold, default is 3. Method 3. If the threshold is equal to the cap_multiplier, the results are the same as Method 2.
 
 
 # Header
