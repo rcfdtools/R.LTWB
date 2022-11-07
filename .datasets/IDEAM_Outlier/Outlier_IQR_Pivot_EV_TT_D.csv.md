@@ -1,9 +1,9 @@
 ## Outliers detection and processing through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_EDA/Pivot_EV_TT_D.csv](../IDEAM_EDA/Pivot_EV_TT_D.csv)
-* Execution date: 2022-11-07 10:58:24.937806
+* Execution date: 2022-11-07 13:51:38.861465
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools', 'D:\\R.GISPython']
+* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
 * numpy version: 1.23.2
@@ -199,7 +199,7 @@ ER - General statistics table - Imputed file
 
 
 
-### Method 3 - Outliers processing through Z-score >= 0.25 or standard core
+### Method 3 - Outliers processing through Z-score >= 0.45 or standard core
 
 
 Z score is an important concept in statistics. Z score is also called standard score. This score helps to understand if each data value is greater or smaller than mean and how far away it is from the mean. More specifically, Z score tells how many standard deviations away a data point is from the mean. Z = ( x - $\mu$ ) / $\sigma$.[^3]
@@ -221,14 +221,14 @@ Outliers parameters:
 
 |          |    mean |     std |   OlMinVal |   OlMaxVal |   OlCount |   CapLowerLim |   CapUpperLim |
 |---------:|--------:|--------:|-----------:|-----------:|----------:|--------------:|--------------:|
-| 29065130 | 281.089 | 625.398 |        438 |       2529 |       714 |      -0.34029 |       562.518 |
+| 29065130 | 281.089 | 625.398 |       -176 |       2529 |       706 |      -0.34029 |       562.518 |
 
 </div>
 
 
 ![R.LTWB](Outlier_ZScore_Pivot_EV_TT_D.csv.png)
 
-#### Identified and cleaning tables for 714 Z-score or standard core outliers founded
+#### Identified and cleaning tables for 706 Z-score or standard core outliers founded
 * Outliers Z-score values file: [Outlier_ZScore_Value_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_ZScore_Value_Pivot_EV_TT_D.csv)
 * Outliers identified file: [Outlier_ZScore_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_ZScore_Pivot_EV_TT_D.csv)
 * Outliers dropped file: [Outlier_ZScore_Drop_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_ZScore_Drop_Pivot_EV_TT_D.csv)
@@ -247,9 +247,9 @@ Z-score - General statistics table - Capped file
 
 <div align="center">
 
-|          |   count |    mean |   std |     min |     25% |     50% |   75% |     max |
-|---------:|--------:|--------:|------:|--------:|--------:|--------:|------:|--------:|
-| 29065130 |    4821 | 183.438 | 114.5 | 124.739 | 124.739 | 124.739 |   139 | 437.438 |
+|          |   count |   mean |    std |      min |   25% |   50% |   75% |     max |
+|---------:|--------:|-------:|-------:|---------:|------:|------:|------:|--------:|
+| 29065130 |    4821 | 116.76 | 200.93 | -0.34029 |     0 |     0 |   139 | 562.518 |
 
 </div>
 
@@ -263,9 +263,9 @@ Z-score - General statistics table - Imputed file
 
 <div align="center">
 
-|          |   count |    mean |     std |   min |     25% |     50% |     75% |   max |
-|---------:|--------:|--------:|--------:|------:|--------:|--------:|--------:|------:|
-| 29065130 |    4821 | 275.801 | 30.5568 |   125 | 281.089 | 281.089 | 281.089 |   437 |
+|          |   count |    mean |    std |   min |   25% |   50% |   75% |   max |
+|---------:|--------:|--------:|-------:|------:|------:|------:|------:|------:|
+| 29065130 |    4821 | 76.3636 | 117.73 |     0 |     0 |     0 |   140 |   557 |
 
 </div>
 

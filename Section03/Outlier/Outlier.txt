@@ -1,5 +1,5 @@
 Tasks
-
+	Fix Z-Score abs values for minimun values.
 
 * https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
 * https://datasciencesphere.com/analytics/5-easy-ways-to-detect-outliers-in-python/
