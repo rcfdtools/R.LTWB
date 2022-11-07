@@ -130,6 +130,8 @@ Durante el proceso de ejecución del script, se genera automáticamente para cad
 
 Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, se pueden observar los siguientes valores:
 
+<div align='center'>
+
 | Método                                                           | $\mu$, media | $\sigma$, std |
 |:-----------------------------------------------------------------|:-------------|:--------------|
 | Serie original                                                   | 59.7829      | 74.2829       |
@@ -140,7 +142,11 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 | 3. Z-score o núcleo estándar. Reemplazo con $\mu$ - K * $\sigma$ | 59.718       | 73.9846       |
 | 3. Z-score o núcleo estándar. Imputación con $\mu$               | 57.7459      | 69.3425       |
 
-Conclusión general: de acuerdo a los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen en general estadísticos característicos similares.  
+</div>
+
+**Conclusión general**
+
+De acuerdo a los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen en general estadísticos característicos similares.  
 
 En este momento, dispone de reportes detallados de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
 
