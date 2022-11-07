@@ -1,7 +1,7 @@
 ## Exploración y análisis de series - EDA - Representación gráfica
 Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `unique` `size` `correlation` `pivot-table` `stats` `histogram` `density` `boxplot` 
 
-<div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="75%"></div> 
+<div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="85%"></div> 
 
 Durante el proceso de revisión, validación y comprensión de los datos, es necesario utilizar diferentes técnicas que permitan identificar discontinuidades, cambios en el comportamiento temporal y en general revisar los paramétricos de cada serie por parámetro.
 
