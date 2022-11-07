@@ -341,7 +341,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../RemoteSensing) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/23) | [Actividad siguiente]() |
-|----------------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------|
+| [Actividad anterior](../RemoteSensing) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/23) | [Actividad siguiente](../Outlier) |
+|----------------------------------------|---------------------------|------------------------------------------------------------------------|-----------------------------------|
 
 [^1]: Tomado o adaptado de https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15

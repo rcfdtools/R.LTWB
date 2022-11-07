@@ -93,7 +93,7 @@ def find_drop_outliers_ER(df, drop=True):
 
 # Function for Cap ER or Z-score outliers with specified limits (mean() +- k * std())
 def cap_outliers_ER_zscore(df, kz=3):
-    #kz: K-sigma or Z-score value.
+    # kz: K-sigma or Z-score value.
     column_headers = df.columns.values.tolist()
     index_list = list(df.index.values)
     lower_cap = df.mean() - kz * df.std()
@@ -111,6 +111,7 @@ def cap_outliers_ER_zscore(df, kz=3):
 
 # Function for impute ER or Z-score outliers with mean values
 def impute_outliers_ER_zscore(df, kz=3):
+    # kz: K-sigma or Z-score value.
     column_headers = df.columns.values.tolist()
     index_list = list(df.index.values)
     lower_cap = df.mean() - kz * df.std()
