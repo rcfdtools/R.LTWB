@@ -181,7 +181,7 @@ def impute_outliers_zscore(df):
 
 
 # General variables
-pivot_table_name = 'Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Pivot_TMX_CON.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Your local output path, use ../.datasets/IDEAM_Outlier/ for relative path
@@ -194,10 +194,10 @@ fig_size = 5  # Height size for figures plot
 print_table_sample = True
 show_plot = True
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-q1_val = 0.1  # Default is 0.25. Method 1.
-q3_val = 0.9  # Default is 0.75. Method 1.
-cap_multiplier = 4.5  # Replacement cap outlier value multiplier or k value, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules. . Method 1 & 2.
-zscore_threshold = 4.5  # Z-score threshold, default is 3. Method 3. If the threshold is equal to the cap_multiplier, the results are the same as Method 2.
+q1_val = 0.175  # Default is 0.25. Method 1.
+q3_val = 0.825  # Default is 0.75. Method 1.
+cap_multiplier = 3.6  # Replacement cap outlier value multiplier or k value, default is 3. e.j, mean() +- cap_multiplier * std(). k over empirical rules. . Method 1 & 2.
+zscore_threshold = 2.95  # Z-score threshold, default is 3. Method 3. If the threshold is equal to the cap_multiplier, the results are the same as Method 2.
 
 
 # Header
@@ -283,7 +283,7 @@ df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[dat
 ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
 plt.title('Method 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
-ax.set_ylabel('Values for %s' % pivot_table_name)
+ax.set_ylabel('Values for %s (%d recs.)' % (pivot_table_name, ideam_regs))
 plt.savefig(path + outlier_file + '.png')
 print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 if show_plot: plt.show()
@@ -343,7 +343,7 @@ df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[dat
 ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
 plt.title('Method 2 - ER or k-sigma outliers (k = %s) for %d stations (%d outliers)' % (str(cap_multiplier), df.shape[1], df_concat['OlCount'].sum()))
-ax.set_ylabel('Values for %s' % pivot_table_name)
+ax.set_ylabel('Values for %s (%d recs.)' % (pivot_table_name, ideam_regs))
 plt.savefig(path + outlier_file + '.png')
 print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 if show_plot: plt.show()
@@ -407,7 +407,7 @@ df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[dat
 ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
 plt.title('Method 3 - Z-score or standard core >= %s for %d stations (%d outliers)' % (str(zscore_threshold), df.shape[1], df_concat['OlCount'].sum()))
-ax.set_ylabel('Values for %s' % pivot_table_name)
+ax.set_ylabel('Values for %s (%d recs.)' % (pivot_table_name, ideam_regs))
 plt.savefig(path + outlier_file + '.png')
 print_log('\n![R.LTWB](%s)' % (outlier_file + '.png'), center_div=False)
 if show_plot: plt.show()

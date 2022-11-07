@@ -8,12 +8,11 @@ En esta actividad se obtienen los parámetros estadísticos de cada parámetro h
 
 ### Objetivos
 
-* Contar valores nulos en las colecciones de datos para cada parámetro hidroclimatológico.
 * Obtener estadísticas generales de cada estación para cada parámetro hidroclimatológico.
 * Identificar valores atípicos a través de diferentes métodos estadísticos (Rango intercuartil - IQR, regla empírica - ER y núcleo estándar Z-score).
-* Representar gráficamente las series de cada parámetro hidroclimatológico visualizando también los datos atípicos identificados.
-* Excluir valores atípicos de la matriz de estaciones para cada parámetro hidro-climatológica.
-* Reemplazar valores atípicos por valores límite definidos a partir de un rango de confianza ( $\mu$ +- %s * $\sigma$ ).
+* Representar gráficamente las series de cada parámetro visualizando también los datos atípicos identificados.
+* Excluir valores atípicos de la matriz de estaciones para cada parámetro.
+* Reemplazar valores atípicos por valores límite definidos a partir de un rango de confianza ( $\mu$ +- K * $\sigma$ ).
 * Imputar valores atípicos con el valor de la media de cada estación.
 
 
@@ -46,7 +45,7 @@ Funcionalidades del script
 * Definición manual del multiplicador `cap_multiplier` o K-sigma que permite definir los valores de reemplazo ( $\mu$ +- %s * $\sigma$ ).  
 * Definición manual del límite de exclusión `zscore_threshold` en el método de exclusión por núcleo estándar.
 * Análisis masivo de estaciones por parámetro hidroclimatológico con estadísticos, parámetros de evaluación y gráficas con marcado de atípicos.
-* Generación de reportes detallados Markdown por cada parámetro hidroclimatológico evaluado [IDEAM_Outlier](../../.datasets/IDEAM_Outlier).
+* Generación de reportes detallados Markdown por cada parámetro hidroclimatológico evaluado. [IDEAM_Outlier](../../.datasets/IDEAM_Outlier).
 * Para cada método y cada parámetro hidroclimatológico analizado, crea las siguientes tablas: datos atípicos identificados, datos de entrada sin datos atípicos (drop), datos de entrada con datos atípicos reemplazados (cap) y datos de entrada con datos atípicos imputados (impute). 
 
 > En el Método 3 ó núcleo estándar Z-score, se genera una tabla adicional para cada parámetro hidroclimatológico que contiene los puntajes a partir de los cuales se realiza la identificación de valores atípicos.   
@@ -61,7 +60,7 @@ Contenido del script
 
 2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hicroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
 
-> Para la identificación de valores atípicos no son requeridas las tablas de datos con nombre terminado en _correlation.csv.
+> Para la identificación de valores atípicos no son requeridas las tablas de datos de correlaciones identificadas con nombre terminado en _correlation.csv.
 
 3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\Outlier.py](../../.src/Outlier.py), y defina las siguientes variables:
 
@@ -85,7 +84,7 @@ Contenido del script
 
 ![R.LTWB](Screenshot/Windows11CMDCD.png)
 
-5. En él `CMD`, ejecute la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\Outlier.py"` que realizará el procesamiento y análisis de los datos. Durante la ejecución, podrá observar que en la consola se presenta el detalle de los procesos ejecutados para cada método, además de la previsualización de diferentes tablas en formato Markdown y gráficas .
+5. En él `CMD`, ejecute la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\Outlier.py"` que realizará el procesamiento y análisis de los datos. Durante la ejecución, podrá observar que en la consola se presenta el detalle de los procesos ejecutados para cada método, además de la previsualización de diferentes tablas en formato Markdown y gráficas.
 
 ![R.LTWB](Screenshot/Windows11CMDOutlier1.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier2.png)
@@ -96,12 +95,15 @@ Contenido del script
 ![R.LTWB](Screenshot/Windows11CMDOutlier7.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier8.png)
 
-Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.datasets\IDEAM_Outlier` se han generado diferentes archivos de resultados para la tabla de datos de precipitación mensual total Pivot_PTPM_TT_M.csv.
+Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.datasets\IDEAM_Outlier` se han generado diferentes archivos de resultados por cada método para la tabla de datos de precipitación mensual total Pivot_PTPM_TT_M.csv.
 
 ![R.LTWB](Screenshot/Windows11CMDOutlier9.png)
 
 Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md).
 
+![R.LTWB](Screenshot/Windows11CMDOutlier10.png)
+![R.LTWB](Screenshot/Windows11CMDOutlier11.png)
+![R.LTWB](Screenshot/Windows11CMDOutlier12.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier13.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier14.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier15.png)
@@ -110,15 +112,25 @@ Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los r
 ![R.LTWB](Screenshot/Windows11CMDOutlier18.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier19.png)
 
-Durante el proceso de ejecución del script, se genera automáticamente las gráficas de análisis, un reporte integrado de resultados en formato Markdown (.md) por cada parámetro hidroclimatológico y las siguientes tablas en formato .csv:
+6. Repita el procedimiento anterior para los datos de evaporación, caudal, temperatura mínima y máxima.
 
-| Tabla                             | Descripción  | Estaciones |
-|-----------------------------------|--------------|:----------:|
-|                                   |              |            |
+Durante el proceso de ejecución del script, se genera automáticamente para cada parámetro hidroclimatológico, un reporte integrado de resultados en formato Markdown (.md), gráficas de análisis y diferentes tablas en formato .csv.
 
+| Reporte                                                                                                | Descripción                                                                  | Estaciones | Registros | 1.IQR | 1.ER | 3.Z-Score | 
+|--------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|:----------:|:---------:|:-----:|:----:|:---------:|
+| [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md) | Precipitación mensual total, mm. q1=0.1, q3=0.9, k-sigma=4.5, Z-score=4.5    |    130     |    504    |  94   |  92  |    92     |
+| [Outlier_IQR_Pivot_EV_TT_D.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_EV_TT_D.csv.md)     | Evaporación diaria total, mm. q1=0.25, q3=0.75, k-sigma=0.45, Z-score=0.25   |     1      |   4821    |  781  | 706  |    714    |
+| [Outlier_IQR_Pivot_Q_MEDIA_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_Q_MEDIA_M.csv.md) | Caudal medio mensual, m³/s. q1=0.1, q3=0.9, k-sigma=3.85, Z-score=3.85       |     46     |    504    |  126  | 123  |    123    |
+| [Outlier_IQR_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMN_CON.csv.md)     | Temperatura diaria mínima, °C. q1=0.175, q3=0.825, k-sigma=3.5, Z-score=2.5  |     25     |   15341   |  403  | 410  |    396    |
+| [Outlier_IQR_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMX_CON.csv.md)     | Temperatura diaria máxima, °C. q1=0.175, q3=0.825, k-sigma=3.6, Z-score=2.95 |     25     |   15341   |  225  | 216  |    221    |
 
+> En la gráfica: 1.IQR: número de valores atípicos identificados en Método 1 - Rango interquartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score.
+> 
+> Nótese que para datos de temperatura mínima, los métodos 1-IQR y 2-ER identifican mayoritariamente valores atípicos en la zona inferior de la gráfica, y para el método de 3-Z-score los valores identificados se localizan en la parte superior de la gráfica. Lo anterior debido a las tendencias de distribución de los datos.
+> 
+> Nótese que para datos de temperatura máxima, los métodos 1-IQR y 2-ER identifican mayoritariamente valores atípicos en la zona inferior y superior de la gráfica, y para el método de 3-Z-score los valores identificados se localizan en la parte superior de la gráfica. Lo anterior debido a las tendencias de distribución de los datos.
 
-En este momento, dispone de un reporte detallado de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
+En este momento, dispone de reportes detallados de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
 
 
 ### Actividades complementarias:pencil2:
@@ -151,8 +163,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 | Versión    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                          | Autor                                      | Horas |
 |------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
 | 2022.10.31 | Ilustración cabecera y diagrama de procesos.                                                                                                                                                                                                                                                                                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)  |   1   |
-
-
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
