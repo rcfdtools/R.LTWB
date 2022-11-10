@@ -1,7 +1,7 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-10 10:50:36.508542
+* Execution date: 2022-11-10 11:00:42.992772
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.HydroTools', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -63,10 +63,14 @@ General statistics table - Initial file
 </div>
 
 
-### Method 1 - Imputing with mean values for 2 stations (363 missing values)
+### Method 1 - Imputing with mean values for 2 stations (0 missing values & 0 imputed)
 
 ![R.LTWB](Impute_Mean_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
-### Method 2 - Imputing with median values for 2 stations (363 missing values)
+### Method 2 - Imputing with median values for 2 stations (0 missing values)
 
 ![R.LTWB](Impute_Median_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
+### Method 3 - Imputing with LOCF values for 2 stations (0 missing values)
+
+![R.LTWB](Impute_LOCF_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)

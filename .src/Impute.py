@@ -29,7 +29,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 def plot_impute(df_org, df_impute, method, file_name):
     ax = df_impute.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
     df_org.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
-    plt.title('Impute with %s for %d stations (%d missing values)' % (method, df.shape[1], total_nuls))
+    plt.title('Impute with %s value for %d stations (%d missing values)' % (method, df.shape[1], total_nulls))
     ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
     plt.savefig(path + file_name + '.png')
     print_log('\n![R.LTWB](%s)' % (file_name + '.png'), center_div=False)
@@ -88,12 +88,12 @@ df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
 print_log(df_concat.to_markdown(), center_div=True)
-total_nuls = df_concat.T['Nulls'].sum()
-#print_log('\nTotal nulls values founded in the dataset: %d\n' % total_nuls, center_div=False)
+total_nulls = df_concat.T['Nulls'].sum()
+#print_log('\nTotal nulls values founded in the dataset: %d\n' % total_nulls, center_div=False)
 #nul_data = pd.DataFrame(df.isnull())
 #print_log(nul_data.to_markdown())
 ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
-plt.title('Original serie with %d stations (%d missing values)' % (df.shape[1], total_nuls))
+plt.title('Original serie with %d stations (%d missing values)' % (df.shape[1], total_nulls))
 ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
 plt.savefig(path + pivot_table_name + '.png')
 print_log('\n![R.LTWB](%s)' % (pivot_table_name + '.png'), center_div=False)
@@ -102,15 +102,24 @@ plt.close('all')
 print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
-# Impute missing values with mean values
-print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing values)' % (df.shape[1], total_nuls))
+# Method 1 - Impute missing values with mean values
 df_impute = df.fillna(df.mean())
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_nulls = df_isnull['Nulls'].sum()
+print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_nulls))
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'mean', impute_file)
 
+
 # Impute missing values with median values
-print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing values)' % (df.shape[1], total_nuls))
+print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing values)' % (df.shape[1], total_nulls))
 df_impute = df.fillna(df.median())
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'median', impute_file)
+
+# Impute missing values with Last Observation Carried Forward (LOCF)
+print_log('\n### Method 3 - Imputing with LOCF values for %d stations (%d missing values)' % (df.shape[1], total_nulls))
+df_impute = df.fillna(method = 'bfill')
+impute_file = 'Impute_LOCF_' + pivot_table_name
+plot_impute(df, df_impute, 'LOCF', impute_file)
 
