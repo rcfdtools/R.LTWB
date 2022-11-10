@@ -106,6 +106,6 @@ df.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*
 plt.title('Original serie for %s with %d stations (%d missing values)' % (pivot_table_name, df.shape[1], total_nuls))
 ax.set_ylabel('Values (%d recs.)' % ideam_regs)
 plt.savefig(path + impute_mean_file + '.png')
-print_log('\n![R.LTWB](%s)' % (pivot_table_name + '.png'), center_div=False)
+print_log('\n![R.LTWB](%s)' % (impute_mean_file + '.png'), center_div=False)
 if show_plot: plt.show()
 plt.close('all')
