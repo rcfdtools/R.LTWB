@@ -5,7 +5,7 @@ Task
 '28010090', '28025040'
 
 
-Station sample: 15015020
+Station sample monthly rain: 15015020
 	Mean stat
 	Origin: 59.718
 	M1 mean: 59.718	
@@ -14,6 +14,16 @@ Station sample: 15015020
 	M4 NOCB: 54.6675
 	M5 Linear Interpolation: 55.7429
 	M6 EWM: 64.0103
+	
+Station sample minimum daily temperatura: 15015020
+	Mean stat
+	Origin: 22.1889
+	M1 mean: 22.1889	
+	M2 median: 22.2629
+	M3 LOCF: 22.4437
+	M4 NOCB: 21.8967
+	M5 Linear Interpolation: 22.1279
+	M6 EWM: 21.9331
 
 
 

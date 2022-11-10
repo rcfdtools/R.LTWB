@@ -129,6 +129,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 1 - Imputing with mean values')
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'MEAN', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 2 - Impute missing values with median values
@@ -138,6 +139,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 2 - Imputing with median values')
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'MEDIAN', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 3 - Impute missing values with Last Observation Carried Forward (LOCF)
@@ -147,6 +149,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values')
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 4 - Impute missing values with Next Observation Carried Backward (NOCB)
@@ -156,6 +159,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values')
 impute_file = 'Impute_NOCB_' + pivot_table_name
 plot_impute(df, df_impute, 'NOCB', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 5 - Impute missing values with Linear Interpolation
@@ -165,6 +169,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 5 - Impute missing values with Linear Interpolation values')
 impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
 plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM
@@ -174,5 +179,6 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM')
 impute_file = 'Impute_MeanEWM_' + pivot_table_name
 plot_impute(df, df_impute, 'Exponential Weighted Moving - EWM', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 

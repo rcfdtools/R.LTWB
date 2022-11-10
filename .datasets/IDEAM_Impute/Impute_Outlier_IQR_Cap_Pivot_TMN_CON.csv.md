@@ -1,7 +1,7 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
-* Execution date: 2022-11-10 17:16:57.064466
+* Execution date: 2022-11-10 17:23:08.449861
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
@@ -92,6 +92,13 @@ General statistics table - Initial file
 
 <div align="center">
 
+General statistics table - Imputed file
+
+</div>
+
+
+<div align="center">
+
 |          |   count |    mean |       std |     min |     25% |     50% |     75% |     max |
 |---------:|--------:|--------:|----------:|--------:|--------:|--------:|--------:|--------:|
 | 15015020 |   15341 | 22.1889 | 1.29618   | 16.4    | 21.8    | 22.1889 | 22.8    | 26.8    |
@@ -129,6 +136,13 @@ General statistics table - Initial file
 ![R.LTWB](Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 ![R.LTWB](Missingno_Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+
+<div align="center">
+
+General statistics table - Imputed file
+
+</div>
+
 
 <div align="center">
 
@@ -172,6 +186,13 @@ General statistics table - Initial file
 
 <div align="center">
 
+General statistics table - Imputed file
+
+</div>
+
+
+<div align="center">
+
 |          |   count |    mean |      std |     min |   25% |   50% |    75% |     max |
 |---------:|--------:|--------:|---------:|--------:|------:|------:|-------:|--------:|
 | 15015020 |   12412 | 22.4437 | 1.60576  | 16.4    |  21.4 |  22.6 | 24     | 26.8    |
@@ -209,6 +230,13 @@ General statistics table - Initial file
 ![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 ![R.LTWB](Missingno_Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+
+<div align="center">
+
+General statistics table - Imputed file
+
+</div>
+
 
 <div align="center">
 
@@ -252,6 +280,13 @@ General statistics table - Initial file
 
 <div align="center">
 
+General statistics table - Imputed file
+
+</div>
+
+
+<div align="center">
+
 |          |   count |    mean |      std |     min |     25% |     50% |     75% |     max |
 |---------:|--------:|--------:|---------:|--------:|--------:|--------:|--------:|--------:|
 | 15015020 |   15341 | 22.1279 | 1.37931  | 16.4    | 21.4    | 22      | 23      | 26.8    |
@@ -289,6 +324,13 @@ General statistics table - Initial file
 ![R.LTWB](Impute_MeanEWM_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 ![R.LTWB](Missingno_Impute_MeanEWM_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+
+<div align="center">
+
+General statistics table - Imputed file
+
+</div>
+
 
 <div align="center">
 
