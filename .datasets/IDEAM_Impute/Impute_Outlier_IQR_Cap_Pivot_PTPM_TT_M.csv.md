@@ -1,7 +1,7 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-10 17:12:47.439274
+* Execution date: 2022-11-10 17:14:17.114974
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
@@ -40,6 +40,8 @@ Datatypes for station and nulls values in the initial file
 | Nulls | 165        | 17         | 117        | 1          | 0          | 261        | 177        | 0          | 67         | 350        | 195        | 32         | 207        | 37         | 358        | 3          | 1          | 22         | 2          | 3          | 9          | 4          | 37         | 68         | 2          | 38         | 0          | 7          | 14         | 21         | 12         | 86         | 1          | 29         | 20         | 0          | 13         | 27         | 12         | 14         | 316        | 298        | 36         | 44         | 61         | 62         | 38         | 51         | 34         | 165        | 145        | 6          | 72         | 30         | 382        | 249        | 33         | 489        | 12         | 34         | 3          | 5          | 34         | 73         | 238        | 223        | 47         | 56         | 12         | 6          | 56         | 36         | 10         | 333        | 0          | 157        | 4          | 0          | 103        | 42         | 30         | 12         | 0          | 5          | 364        | 10         | 11         | 20         | 38         | 398        | 317        | 20         | 24         | 147        | 17         | 0          | 1          | 146        | 276        | 1          | 5          | 12         | 2          | 3          | 0          | 0          | 1          | 16         | 15         | 1          | 4          | 84         | 21         | 3          | 246        | 134        | 63         | 5          | 3          | 20         | 255        | 0          | 252        | 14         | 43         | 144        | 62         | 382        | 14         | 92         |
 
 ![R.LTWB](Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
+![R.LTWB](Missingno_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
 <div align="center">
 
@@ -185,8 +187,6 @@ General statistics table - Initial file
 
 </div>
 
-
-![R.LTWB](Missingno_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
 
 ### Method 1 - Imputing with mean values

@@ -109,8 +109,6 @@ plt.savefig(path + pivot_table_name + '.png')
 print_log('\n![R.LTWB](%s)' % (pivot_table_name + '.png'), center_div=False)
 if show_plot: plt.show()
 plt.close('all')
-print_log('General statistics table - Initial file', center_div=True)
-print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 # Missingno plot
 msno.matrix(df, fontsize=16, figsize=(fig_size*3, fig_size*2.5))
 plt.title('Missing values diagram for %d stations (%d missing values)' % (df.shape[1], total_nulls))
@@ -119,6 +117,10 @@ plt.savefig(path + 'Missingno_' + pivot_table_name + '.png')
 print_log('\n![R.LTWB](%s)' % ('Missingno_' + pivot_table_name + '.png'), center_div=False)
 if show_plot: plt.show()
 plt.close('all')
+# General stats
+print_log('General statistics table - Initial file', center_div=True)
+print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
+
 
 # Method 1 - Impute missing values with mean values
 df_impute = df.fillna(df.mean())
