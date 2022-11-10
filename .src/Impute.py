@@ -37,7 +37,8 @@ def plot_impute(df_org, df_impute, method, file_name):
     if show_plot: plt.show()
     plt.close('all')
     # Missingno plot
-    msno.matrix(df_impute, fontsize=16, figsize=(fig_size * 4, fig_size * 2.5))
+    #msno.matrix(df_impute, fontsize=20, figsize=(fig_size * 4, fig_size * 2.5))
+    msno.matrix(df_impute)
     plt.title('Missing values diagram for %d stations (%d missing values & %d imputed with %s)' % (df.shape[1], total_nulls, total_imputed, method))
     plt.savefig(path + 'Missingno_' + file_name + '.png')
     print_log('\n![R.LTWB](%s)' % ('Missingno_' + file_name + '.png'), center_div=False)
