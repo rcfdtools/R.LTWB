@@ -1,7 +1,7 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-10 11:31:57.623646
+* Execution date: 2022-11-10 11:33:57.465241
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.HydroTools', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -191,6 +191,7 @@ General statistics table - Initial file
 </div>
 
 
+
 ### Method 1 - Imputing with mean values
 
 ![R.LTWB](Impute_Mean_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
@@ -331,6 +332,7 @@ General statistics table - Initial file
 | 29065030 |     504 | 121.007  | 110.357   |     0 |  23.95   | 121.007  | 162.425  |  637.9   |
 
 </div>
+
 
 
 ### Method 2 - Imputing with median values
@@ -475,6 +477,7 @@ General statistics table - Initial file
 </div>
 
 
+
 ### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values
 
 ![R.LTWB](Impute_LOCF_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
@@ -617,6 +620,7 @@ General statistics table - Initial file
 </div>
 
 
+
 ### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
 
 ![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
@@ -757,6 +761,7 @@ General statistics table - Initial file
 | 29065030 |     504 | 126.573  | 110.985  |     0 |  23.95  | 136.2  | 162.425 |  637.9   |
 
 </div>
+
 
 
 ### Method 5 - Impute missing values with Linear Interpolation values
