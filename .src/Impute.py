@@ -109,6 +109,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'MEAN', impute_file)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 2 - Impute missing values with median values
 df_impute = df.fillna(df.median())
@@ -117,6 +118,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'MEDIAN', impute_file)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 3 - Impute missing values with Last Observation Carried Forward (LOCF)
 df_impute = df.fillna(method='bfill')
@@ -125,6 +127,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 4 - Impute missing values with Next Observation Carried Backward (NOCB)
 df_impute = df.fillna(method='ffill')
@@ -133,6 +136,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_NOCB_' + pivot_table_name
 plot_impute(df, df_impute, 'NOCB', impute_file)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 5 - Impute missing values with Linear Interpolation
 df_impute = df.interpolate(method='linear')
@@ -141,4 +145,5 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n### Method 5 - Impute missing values with Linear Interpolation values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
 plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
