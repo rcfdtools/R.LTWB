@@ -29,7 +29,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 def plot_impute(df_org, df_impute, method, file_name):
     ax = df_impute.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
     df_org.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
-    plt.title('Impute with %s value for %d stations (%d missing values)' % (method, df.shape[1], total_nulls))
+    plt.title('Impute with %s value for %d stations (%d missing & %d imputed)' % (method, df.shape[1], total_nulls, total_imputed))
     ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
     plt.savefig(path + file_name + '.png')
     print_log('\n![R.LTWB](%s)' % (file_name + '.png'), center_div=False)
@@ -50,9 +50,9 @@ sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
-show_plot = True
-#station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_exclude = ['28010090', '28025040']  # Use ['station1', 'station2', '...',]
+show_plot = False
+station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+#station_exclude = ['28010090', '28025040']  # Use ['station1', 'station2', '...',]
 
 
 # Header
@@ -73,8 +73,8 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-df = df.loc[:, df.columns.isin(station_exclude)]
-#df = df.loc[:, ~df.columns.isin(station_exclude)]
+#df = df.loc[:, df.columns.isin(station_exclude)]
+df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -106,24 +106,39 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 df_impute = df.fillna(df.mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
+print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_Mean_' + pivot_table_name
-plot_impute(df, df_impute, 'mean', impute_file)
+plot_impute(df, df_impute, 'MEAN', impute_file)
 
-
-# Impute missing values with median values
+# Method 2 - Impute missing values with median values
 df_impute = df.fillna(df.median())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
+print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_Median_' + pivot_table_name
-plot_impute(df, df_impute, 'median', impute_file)
+plot_impute(df, df_impute, 'MEDIAN', impute_file)
 
-# Impute missing values with Last Observation Carried Forward (LOCF)
-df_impute = df.fillna(method = 'bfill')
+# Method 3 - Impute missing values with Last Observation Carried Forward (LOCF)
+df_impute = df.fillna(method='bfill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n### Method 3 - Imputing with LOCF values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
+print_log('\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
+
+# Method 4 - Impute missing values with Next Observation Carried Backward (NOCB)
+df_impute = df.fillna(method='ffill')
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
+impute_file = 'Impute_NOCB_' + pivot_table_name
+plot_impute(df, df_impute, 'NOCB', impute_file)
+
+# Method 5 - Impute missing values with Linear Interpolation
+df_impute = df.interpolate(method='linear')
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n### Method 5 - Impute missing values with Linear Interpolation values for %d stations (%d missing & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
+impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
+plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
 
