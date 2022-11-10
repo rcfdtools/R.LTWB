@@ -11,6 +11,7 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+import missingno as msno
 import tabulate  # required for print tables in Markdown using pandas
 from datetime import datetime
 
@@ -52,7 +53,7 @@ fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
 # station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_exclude = ['28010090', '28025040']  # Use ['station1', 'station2', '...',]
+station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
 
 
 # Header
@@ -101,6 +102,14 @@ if show_plot: plt.show()
 plt.close('all')
 print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
+# Missingno plot
+mat = msno.matrix(df, fontsize=10, figsize=(fig_size*4, fig_size*2))
+plt.title('Missing values diagram for %d stations (%d missing values)' % (df.shape[1], total_nulls))
+ax.set_ylabel('Records')
+plt.savefig(path + 'Missingno_' + pivot_table_name + '.png')
+print_log('\n![R.LTWB](%s)' % ('Missingno_' + pivot_table_name + '.png'), center_div=False)
+if show_plot: plt.show()
+
 
 # Method 1 - Impute missing values with mean values
 df_impute = df.fillna(df.mean())
