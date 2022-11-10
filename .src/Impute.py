@@ -36,6 +36,13 @@ def plot_impute(df_org, df_impute, method, file_name):
     print_log('\n![R.LTWB](%s)' % (file_name + '.png'), center_div=False)
     if show_plot: plt.show()
     plt.close('all')
+    # Missingno plot
+    msno.matrix(df_impute, fontsize=16, figsize=(fig_size * 4, fig_size * 2.5))
+    plt.title('Missing values diagram for %d stations (%d missing values & %d imputed with %s)' % (df.shape[1], total_nulls, total_imputed, method))
+    plt.savefig(path + 'Missingno_' + file_name + '.png')
+    print_log('\n![R.LTWB](%s)' % ('Missingno_' + file_name + '.png'), center_div=False)
+    if show_plot: plt.show()
+    plt.close('all')
 
 
 # General variables
@@ -104,13 +111,13 @@ plt.close('all')
 print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 # Missingno plot
-mat = msno.matrix(df, fontsize=16, figsize=(fig_size*4, fig_size*2.5))
+msno.matrix(df, fontsize=16, figsize=(fig_size*4, fig_size*2.5))
 plt.title('Missing values diagram for %d stations (%d missing values)' % (df.shape[1], total_nulls))
 ax.set_ylabel('Records')
 plt.savefig(path + 'Missingno_' + pivot_table_name + '.png')
 print_log('\n![R.LTWB](%s)' % ('Missingno_' + pivot_table_name + '.png'), center_div=False)
 if show_plot: plt.show()
-
+plt.close('all')
 
 # Method 1 - Impute missing values with mean values
 df_impute = df.fillna(df.mean())

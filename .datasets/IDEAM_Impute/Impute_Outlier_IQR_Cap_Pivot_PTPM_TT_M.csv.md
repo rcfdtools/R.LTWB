@@ -1,7 +1,7 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-10 16:56:35.851417
+* Execution date: 2022-11-10 17:02:01.120710
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
@@ -193,6 +193,8 @@ General statistics table - Initial file
 
 ![R.LTWB](Impute_Mean_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
+![R.LTWB](Missingno_Impute_Mean_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
 <div align="center">
 
 |          |   count |     mean |       std |   min |      25% |      50% |      75% |      max |
@@ -335,6 +337,8 @@ General statistics table - Initial file
 ### Method 2 - Imputing with median values
 
 ![R.LTWB](Impute_Median_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
+![R.LTWB](Missingno_Impute_Median_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
 <div align="center">
 
@@ -479,6 +483,8 @@ General statistics table - Initial file
 
 ![R.LTWB](Impute_LOCF_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
+![R.LTWB](Missingno_Impute_LOCF_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
 <div align="center">
 
 |          |   count |     mean |      std |   min |     25% |    50% |     75% |      max |
@@ -621,6 +627,8 @@ General statistics table - Initial file
 ### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
 
 ![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
+![R.LTWB](Missingno_Impute_NOCB_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
 <div align="center">
 
@@ -765,6 +773,8 @@ General statistics table - Initial file
 
 ![R.LTWB](Impute_InterpolateLinear_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
+![R.LTWB](Missingno_Impute_InterpolateLinear_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
 <div align="center">
 
 |          |   count |     mean |      std |   min |       25% |      50% |      75% |      max |
@@ -907,6 +917,8 @@ General statistics table - Initial file
 ### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM
 
 ![R.LTWB](Impute_MeanEWM_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
+![R.LTWB](Missingno_Impute_MeanEWM_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
 <div align="center">
 
