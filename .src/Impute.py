@@ -52,7 +52,7 @@ fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
 # station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
+station_exclude = ['28010090', '28025040']  # Use ['station1', 'station2', '...',]
 
 
 # Header
@@ -87,7 +87,7 @@ print_log('\nDatatypes for station and nulls values in the initial file', center
 df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
 df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
-print_log(df_concat.to_markdown(), center_div=True)
+print_log(df_concat.to_markdown(), center_div=False)
 total_nulls = df_concat.T['Nulls'].sum()
 #print_log('\nTotal nulls values founded in the dataset: %d\n' % total_nulls, center_div=False)
 #nul_data = pd.DataFrame(df.isnull())
@@ -139,11 +139,20 @@ plot_impute(df, df_impute, 'NOCB', impute_file)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 5 - Impute missing values with Linear Interpolation
-df_impute = df.interpolate(method='linear')
+df_impute = df.interpolate(method='linear')  # limit=1, limit_direction="forward"
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 5 - Impute missing values with Linear Interpolation values')
 impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
 plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
+print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+
+# Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM
+df_impute = df.fillna(df.ewm(halflife=3).mean())
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n\n### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM')
+impute_file = 'Impute_MeanEWM_' + pivot_table_name
+plot_impute(df, df_impute, 'Exponential Weighted Moving - EWM', impute_file)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
