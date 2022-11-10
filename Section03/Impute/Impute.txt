@@ -1,6 +1,20 @@
 Task
 
 
+'15015020', '15060050', '15060070', '15060080', '15060150'
+'28010090', '28025040'
+
+
+Station sample: 15015020
+	Mean stat
+	Origin: 59.718
+	M1 mean: 59.718	
+	M2 median: 50.0217
+	M3 LOCF: 70.1873
+	M4 NOCB: 54.6675
+	M5 Linear Interpolation: 55.7429
+
+
 
 
 * https://www.projectpro.io/recipes/deal-with-missing-values-in-timeseries-in-python
@@ -12,5 +26,7 @@ Task
 * https://www.section.io/engineering-education/missing-values-in-time-series/
 
 * https://www.kaggle.com/code/parulpandey/a-guide-to-handling-missing-values-in-python
+
+* https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html
 
 * https://towardsdatascience.com/imputing-missing-data-with-simple-and-advanced-techniques-f5c7b157fb87#:~:text=Time%20Series%20Imputation&text=One%20way%20to%20impute%20missing,with%20the%20previously%20observed%20value
