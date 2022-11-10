@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # Name: Outlier.py
 # Description: outliers detection and processing through statistical methods
-# Requirements: Python 3+, pandas, tabulate
+# Requirements: Python 3+, pandas, numpy, tabulate
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
 
@@ -238,7 +238,7 @@ df_concat = pd.concat([df_mean, df_std, df_q1, df_q3, df_IQR, df_lower_lim, df_u
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
+ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
 plt.title('Method 1 - IQR outliers (q1 = %s, q3 = %s) for %d stations (%d outliers)' % (str(q1_val), str(q3_val), df.shape[1], df_concat['OlCount'].sum()))
 ax.set_ylabel('Values for %s (%d recs.)' % (pivot_table_name, ideam_regs))
@@ -362,7 +362,7 @@ df_concat = pd.concat([df_mean, df_std, df_min, df_max, df_count, df_lower_cap, 
 print_log(df_concat.to_markdown(), center_div=True)
 # Plot values and outliers
 df_outlier = pd.read_csv(path + outlier_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(12, 6))  # colormap can be replaced by color='lightblue'
+ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
 df_outlier.plot(ax=ax, color='black', legend=False, figsize=(fig_size*2, fig_size+1))
 plt.title('Method 3 - Z-score or standard core >= %s for %d stations (%d outliers)' % (str(zscore_threshold), df.shape[1], df_concat['OlCount'].sum()))
 ax.set_ylabel('Values for %s (%d recs.)' % (pivot_table_name, ideam_regs))

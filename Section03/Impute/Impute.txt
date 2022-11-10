@@ -1,0 +1,16 @@
+Task
+
+
+
+
+* https://www.projectpro.io/recipes/deal-with-missing-values-in-timeseries-in-python
+
+* https://towardsdatascience.com/8-methods-for-handling-missing-values-with-python-pandas-842544cdf891
+
+* https://towardsdatascience.com/4-techniques-to-handle-missing-values-in-time-series-data-c3568589b5a8
+
+* https://www.section.io/engineering-education/missing-values-in-time-series/
+
+* https://www.kaggle.com/code/parulpandey/a-guide-to-handling-missing-values-in-python
+
+* https://towardsdatascience.com/imputing-missing-data-with-simple-and-advanced-techniques-f5c7b157fb87#:~:text=Time%20Series%20Imputation&text=One%20way%20to%20impute%20missing,with%20the%20previously%20observed%20value
