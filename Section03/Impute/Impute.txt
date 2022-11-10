@@ -13,7 +13,7 @@ Station sample: 15015020
 	M3 LOCF: 70.1873
 	M4 NOCB: 54.6675
 	M5 Linear Interpolation: 55.7429
-
+	M6 EWM: 64.0103
 
 
 
