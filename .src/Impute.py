@@ -27,7 +27,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 
 # General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
@@ -37,9 +37,11 @@ date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
+fig_alpha = 0.1  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = True
-station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+#station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+station_exclude = ['28010090', '28025040']  # Use ['station1', 'station2', '...',]
 
 
 # Header
@@ -60,7 +62,8 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-df = df.loc[:, ~df.columns.isin(station_exclude)]
+df = df.loc[:, df.columns.isin(station_exclude)]
+#df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -78,7 +81,7 @@ total_nuls = df_concat.T['Nulls'].sum()
 #print_log('\nTotal nulls values founded in the dataset: %d\n' % total_nuls, center_div=False)
 #nul_data = pd.DataFrame(df.isnull())
 #print_log(nul_data.to_markdown())
-ax = df.plot(colormap=plot_colormap, legend=False, alpha=0.1, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
+ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
 plt.title('Original serie for %s with %d stations (%d missing values)' % (pivot_table_name, df.shape[1], total_nuls))
 ax.set_ylabel('Values (%d recs.)' % ideam_regs)
 plt.savefig(path + pivot_table_name + '.png')
@@ -91,3 +94,18 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Impute missing values
 print_log('\n### Method 1 - Imputing with mean for %d stations (%d missing values)' % (df.shape[1], total_nuls))
+#print(df[['15015020', '15060050']])
+#df_impute_mean = df.assign(FillMean=df['15015020'].fillna(df['15015020'].mean()))
+df_impute_mean = df.fillna(df.mean())
+print(df_impute_mean)
+impute_mean_file = 'Impute_Mean_' + pivot_table_name
+#ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
+#df_impute_mean.plot(ax=ax, color='black', alpha=fig_alpha, legend=False, figsize=(fig_size*2, fig_size+1))
+ax = df_impute_mean.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)  # colormap can be replaced by color='lightblue'
+df.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
+plt.title('Original serie for %s with %d stations (%d missing values)' % (pivot_table_name, df.shape[1], total_nuls))
+ax.set_ylabel('Values (%d recs.)' % ideam_regs)
+plt.savefig(path + impute_mean_file + '.png')
+print_log('\n![R.LTWB](%s)' % (pivot_table_name + '.png'), center_div=False)
+if show_plot: plt.show()
+plt.close('all')
