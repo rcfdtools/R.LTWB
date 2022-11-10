@@ -61,7 +61,7 @@ fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-# station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
+#station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
 
 
 # Header
@@ -83,8 +83,8 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-#df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
 df = df.loc[:, ~df.columns.isin(station_exclude)]
+#df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
