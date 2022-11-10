@@ -25,6 +25,17 @@ def print_log(txt_print, on_screen=True, center_div=False):
     if center_div:
         file_log.write('\n</div>\n' + '\n')
 
+# Function for plot original and imputed series
+def plot_impute(df_org, df_impute, method, file_name):
+    ax = df_impute.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
+    df_org.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
+    plt.title('Impute with %s for %d stations (%d missing values)' % (method, df.shape[1], total_nuls))
+    ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
+    plt.savefig(path + file_name + '.png')
+    print_log('\n![R.LTWB](%s)' % (file_name + '.png'), center_div=False)
+    if show_plot: plt.show()
+    plt.close('all')
+
 
 # General variables
 pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
@@ -82,8 +93,8 @@ total_nuls = df_concat.T['Nulls'].sum()
 #nul_data = pd.DataFrame(df.isnull())
 #print_log(nul_data.to_markdown())
 ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
-plt.title('Original serie for %s with %d stations (%d missing values)' % (pivot_table_name, df.shape[1], total_nuls))
-ax.set_ylabel('Values (%d recs.)' % ideam_regs)
+plt.title('Original serie with %d stations (%d missing values)' % (df.shape[1], total_nuls))
+ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
 plt.savefig(path + pivot_table_name + '.png')
 print_log('\n![R.LTWB](%s)' % (pivot_table_name + '.png'), center_div=False)
 if show_plot: plt.show()
@@ -91,21 +102,15 @@ plt.close('all')
 print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 
+# Impute missing values with mean values
+print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing values)' % (df.shape[1], total_nuls))
+df_impute = df.fillna(df.mean())
+impute_file = 'Impute_Mean_' + pivot_table_name
+plot_impute(df, df_impute, 'mean', impute_file)
 
-# Impute missing values
-print_log('\n### Method 1 - Imputing with mean for %d stations (%d missing values)' % (df.shape[1], total_nuls))
-#print(df[['15015020', '15060050']])
-#df_impute_mean = df.assign(FillMean=df['15015020'].fillna(df['15015020'].mean()))
-df_impute_mean = df.fillna(df.mean())
-print(df_impute_mean)
-impute_mean_file = 'Impute_Mean_' + pivot_table_name
-#ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
-#df_impute_mean.plot(ax=ax, color='black', alpha=fig_alpha, legend=False, figsize=(fig_size*2, fig_size+1))
-ax = df_impute_mean.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)  # colormap can be replaced by color='lightblue'
-df.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
-plt.title('Original serie for %s with %d stations (%d missing values)' % (pivot_table_name, df.shape[1], total_nuls))
-ax.set_ylabel('Values (%d recs.)' % ideam_regs)
-plt.savefig(path + impute_mean_file + '.png')
-print_log('\n![R.LTWB](%s)' % (impute_mean_file + '.png'), center_div=False)
-if show_plot: plt.show()
-plt.close('all')
+# Impute missing values with median values
+print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing values)' % (df.shape[1], total_nuls))
+df_impute = df.fillna(df.median())
+impute_file = 'Impute_Median_' + pivot_table_name
+plot_impute(df, df_impute, 'median', impute_file)
+
