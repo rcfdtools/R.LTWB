@@ -38,7 +38,7 @@ def plot_impute(df_org, df_impute, method, file_name):
     plt.close('all')
     # Missingno plot
     #msno.matrix(df_impute, fontsize=20, figsize=(fig_size * 4, fig_size * 2.5))
-    msno.matrix(df_impute)
+    msno.matrix(df_impute, figsize=(fig_size * 3, fig_size * 3))
     plt.title('Missing values diagram for %d stations (%d missing values & %d imputed with %s)' % (df.shape[1], total_nulls, total_imputed, method))
     plt.savefig(path + 'Missingno_' + file_name + '.png')
     print_log('\n![R.LTWB](%s)' % ('Missingno_' + file_name + '.png'), center_div=False)
@@ -60,8 +60,8 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
-#station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
+station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+# station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
 
 
 # Header
@@ -83,8 +83,8 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
-#df = df.loc[:, ~df.columns.isin(station_exclude)]
+#df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
+df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -112,7 +112,7 @@ plt.close('all')
 print_log('General statistics table - Initial file', center_div=True)
 print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 # Missingno plot
-msno.matrix(df, fontsize=16, figsize=(fig_size*4, fig_size*2.5))
+msno.matrix(df, fontsize=16, figsize=(fig_size*3, fig_size*3))
 plt.title('Missing values diagram for %d stations (%d missing values)' % (df.shape[1], total_nulls))
 ax.set_ylabel('Records')
 plt.savefig(path + 'Missingno_' + pivot_table_name + '.png')
