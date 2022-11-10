@@ -105,21 +105,25 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 # Method 1 - Impute missing values with mean values
 df_impute = df.fillna(df.mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
-total_nulls = df_isnull['Nulls'].sum()
-print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_nulls))
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n### Method 1 - Imputing with mean values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'mean', impute_file)
 
 
 # Impute missing values with median values
-print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing values)' % (df.shape[1], total_nulls))
 df_impute = df.fillna(df.median())
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n### Method 2 - Imputing with median values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'median', impute_file)
 
 # Impute missing values with Last Observation Carried Forward (LOCF)
-print_log('\n### Method 3 - Imputing with LOCF values for %d stations (%d missing values)' % (df.shape[1], total_nulls))
 df_impute = df.fillna(method = 'bfill')
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n### Method 3 - Imputing with LOCF values for %d stations (%d missing values & %d imputed)' % (df.shape[1], total_nulls, total_imputed))
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
 
