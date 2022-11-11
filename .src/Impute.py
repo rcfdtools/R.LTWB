@@ -12,14 +12,17 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import missingno as msno
-from sklearn.impute import KNNImputer
 import sklearn
+from sklearn.impute import KNNImputer
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+from sklearn import linear_model
 import tabulate  # required for print tables in Markdown using pandas
 from datetime import datetime
 
 
 # General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
@@ -32,7 +35,7 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
-only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
+only_included = True  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
 
@@ -197,8 +200,9 @@ print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 7 - Impute missing values with Natural Neigborns - KNN Imputer from Scikit Learn
-n_neighbors = 6
-imputer = KNNImputer(n_neighbors=n_neighbors)
+n_neighbors = 5
+#imputer = KNNImputer(n_neighbors=n_neighbors)
+imputer = KNNImputer(n_neighbors=n_neighbors, weights='uniform', metric='nan_euclidean')
 column_headers = df.columns.values.tolist()
 index_list = list(df.index.values)
 df_impute = imputer.fit_transform(df)
@@ -212,6 +216,20 @@ plot_impute(df, df_impute, 'KNN Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
+# Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn
+imputer = IterativeImputer(estimator=linear_model.BayesianRidge(), n_nearest_features=None, imputation_order='ascending')
+column_headers = df.columns.values.tolist()
+index_list = list(df.index.values)
+df_impute = imputer.fit_transform(df)
+df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
+df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
+total_imputed = total_nulls - df_isnull['Nulls'].sum()
+print_log('\n\n### Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
+          '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled.')
+impute_file = 'Impute_MICE_' + pivot_table_name
+plot_impute(df, df_impute, 'MICE Imputer', impute_file)
+print_log('General statistics table - Imputed file', center_div=True)
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Comments
 print_log('\n> As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.')
