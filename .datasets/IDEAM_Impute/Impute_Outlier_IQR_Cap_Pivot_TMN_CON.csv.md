@@ -1,9 +1,9 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
-* Execution date: 2022-11-10 17:26:50.595022
+* Execution date: 2022-11-11 08:13:45.498111
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools']
+* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
 * numpy version: 1.23.2
@@ -85,6 +85,7 @@ General statistics table - Initial file
 
 
 ### Method 1 - Imputing with mean values
+According to this technique, the missing values are imputed using the mean value in each feature and the serie could be completed filled.
 
 ![R.LTWB](Impute_Mean_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -132,6 +133,7 @@ General statistics table - Imputed file
 
 
 ### Method 2 - Imputing with median values
+According to this technique, the missing values are imputed using the median value in each feature and the serie could be completed filled.
 
 ![R.LTWB](Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -179,57 +181,11 @@ General statistics table - Imputed file
 
 
 ### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values
+According to this technique, the missing values are imputed using the immediate values before it in the time series and .
 
 ![R.LTWB](Impute_LOCF_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 ![R.LTWB](Missingno_Impute_LOCF_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
-
-<div align="center">
-
-General statistics table - Imputed file
-
-</div>
-
-
-<div align="center">
-
-|          |   count |    mean |      std |     min |   25% |   50% |    75% |     max |
-|---------:|--------:|--------:|---------:|--------:|------:|------:|-------:|--------:|
-| 15015020 |   12412 | 22.4437 | 1.60576  | 16.4    |  21.4 |  22.6 | 24     | 26.8    |
-| 15065040 |   10417 | 22.6796 | 1.70147  | 16.828  |  22   |  22.8 | 23.8   | 27.8    |
-| 23215060 |    3013 | 22.2004 | 2.10938  | 19.4576 |  20.2 |  22   | 24     | 26.8    |
-| 25025002 |   15341 | 22.9827 | 1.40729  | 17.4722 |  22.2 |  23.2 | 24     | 27.2    |
-| 25025090 |   15341 | 23.4867 | 1.51685  | 18      |  22.2 |  23.4 | 24.8   | 28      |
-| 25025250 |   15341 | 22.5035 | 1.58455  | 17      |  21.4 |  22.6 | 24     | 27.1    |
-| 25025300 |   15341 | 22.7152 | 1.80086  | 16.6    |  21.2 |  23   | 24     | 27.8    |
-| 25025330 |   15340 | 22.7901 | 1.4873   | 16.8526 |  22.2 |  23   | 23.6   | 28.7057 |
-| 28015030 |    2921 | 22.6403 | 1.53327  | 18.282  |  21.7 |  22.7 | 23.8   | 26.8    |
-| 28015070 |   15341 | 22.4494 | 1.3322   | 17.2    |  21.6 |  22.5 | 23.5   | 26.2    |
-| 28025020 |   15341 | 20.5373 | 1.69397  | 14.4    |  19.6 |  20.8 | 21.6   | 26      |
-| 28025040 |    6080 | 19.3734 | 2.85405  | 11.271  |  18.2 |  19   | 20.6   | 26.077  |
-| 28025070 |   15341 | 23.8251 | 1.54866  | 18.2    |  22.8 |  24   | 25     | 28.6    |
-| 28025080 |   11682 | 21.5524 | 1.88707  | 15.2    |  20.2 |  22   | 23     | 27      |
-| 28025090 |   15341 | 22.5926 | 1.59598  | 16.5704 |  22   |  22.8 | 23.6   | 27.4    |
-| 28025502 |   14670 | 23.9223 | 1.27819  | 19.1    |  23   |  24   | 24.775 | 28.6    |
-| 28035010 |   15341 | 22.7463 | 2.09038  | 18.101  |  21.8 |  23.2 | 24     | 28.5546 |
-| 28035020 |   15341 | 22.5186 | 2.07687  | 16.4    |  21.4 |  23   | 23.8   | 28.6    |
-| 28035040 |   15341 | 24.2777 | 1.22452  | 19.9343 |  23.4 |  24.2 | 25     | 28.6    |
-| 28035070 |   12663 | 21.9733 | 0.793225 | 20.6    |  21.8 |  21.8 | 21.8   | 25.5931 |
-| 28045020 |    2677 | 19.6499 | 2.19033  | 15      |  17.6 |  19.8 | 21.2   | 26.4    |
-| 28045040 |    4992 | 23.0944 | 0.731317 | 18.6935 |  23   |  23   | 23.2   | 26.6    |
-| 29065010 |    2601 | 20.2872 | 1.67916  | 15.7072 |  19.4 |  19.6 | 21.2   | 25.2    |
-| 29065020 |   15341 | 22.2643 | 1.90037  | 15.6    |  21   |  22.6 | 23.6   | 27.4    |
-| 29065030 |   12539 | 21.7591 | 1.56649  | 16      |  20.6 |  22   | 23     | 27      |
-
-</div>
-
-
-
-### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
-
-![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
-
-![R.LTWB](Missingno_Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 <div align="center">
 
@@ -267,6 +223,54 @@ General statistics table - Imputed file
 | 29065010 |   15341 | 20.236  | 0.774914 | 15.7072 | 20      | 20      | 20      | 25.2    |
 | 29065020 |   15281 | 22.3611 | 1.87799  | 15.6    | 21.3    | 22.8    | 23.6    | 27.4    |
 | 29065030 |   15341 | 22.1951 | 1.70869  | 16      | 21      | 22.4    | 23.8    | 27      |
+
+</div>
+
+
+
+### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
+According to this technique, the missing values are imputed using the immediate values ahead it in the time series
+
+![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+
+![R.LTWB](Missingno_Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+
+<div align="center">
+
+General statistics table - Imputed file
+
+</div>
+
+
+<div align="center">
+
+|          |   count |    mean |      std |     min |   25% |   50% |    75% |     max |
+|---------:|--------:|--------:|---------:|--------:|------:|------:|-------:|--------:|
+| 15015020 |   12412 | 22.4437 | 1.60576  | 16.4    |  21.4 |  22.6 | 24     | 26.8    |
+| 15065040 |   10417 | 22.6796 | 1.70147  | 16.828  |  22   |  22.8 | 23.8   | 27.8    |
+| 23215060 |    3013 | 22.2004 | 2.10938  | 19.4576 |  20.2 |  22   | 24     | 26.8    |
+| 25025002 |   15341 | 22.9827 | 1.40729  | 17.4722 |  22.2 |  23.2 | 24     | 27.2    |
+| 25025090 |   15341 | 23.4867 | 1.51685  | 18      |  22.2 |  23.4 | 24.8   | 28      |
+| 25025250 |   15341 | 22.5035 | 1.58455  | 17      |  21.4 |  22.6 | 24     | 27.1    |
+| 25025300 |   15341 | 22.7152 | 1.80086  | 16.6    |  21.2 |  23   | 24     | 27.8    |
+| 25025330 |   15340 | 22.7901 | 1.4873   | 16.8526 |  22.2 |  23   | 23.6   | 28.7057 |
+| 28015030 |    2921 | 22.6403 | 1.53327  | 18.282  |  21.7 |  22.7 | 23.8   | 26.8    |
+| 28015070 |   15341 | 22.4494 | 1.3322   | 17.2    |  21.6 |  22.5 | 23.5   | 26.2    |
+| 28025020 |   15341 | 20.5373 | 1.69397  | 14.4    |  19.6 |  20.8 | 21.6   | 26      |
+| 28025040 |    6080 | 19.3734 | 2.85405  | 11.271  |  18.2 |  19   | 20.6   | 26.077  |
+| 28025070 |   15341 | 23.8251 | 1.54866  | 18.2    |  22.8 |  24   | 25     | 28.6    |
+| 28025080 |   11682 | 21.5524 | 1.88707  | 15.2    |  20.2 |  22   | 23     | 27      |
+| 28025090 |   15341 | 22.5926 | 1.59598  | 16.5704 |  22   |  22.8 | 23.6   | 27.4    |
+| 28025502 |   14670 | 23.9223 | 1.27819  | 19.1    |  23   |  24   | 24.775 | 28.6    |
+| 28035010 |   15341 | 22.7463 | 2.09038  | 18.101  |  21.8 |  23.2 | 24     | 28.5546 |
+| 28035020 |   15341 | 22.5186 | 2.07687  | 16.4    |  21.4 |  23   | 23.8   | 28.6    |
+| 28035040 |   15341 | 24.2777 | 1.22452  | 19.9343 |  23.4 |  24.2 | 25     | 28.6    |
+| 28035070 |   12663 | 21.9733 | 0.793225 | 20.6    |  21.8 |  21.8 | 21.8   | 25.5931 |
+| 28045020 |    2677 | 19.6499 | 2.19033  | 15      |  17.6 |  19.8 | 21.2   | 26.4    |
+| 28045040 |    4992 | 23.0944 | 0.731317 | 18.6935 |  23   |  23   | 23.2   | 26.6    |
+| 29065010 |    2601 | 20.2872 | 1.67916  | 15.7072 |  19.4 |  19.6 | 21.2   | 25.2    |
+| 29065020 |   15341 | 22.2643 | 1.90037  | 15.6    |  21   |  22.6 | 23.6   | 27.4    |
+| 29065030 |   12539 | 21.7591 | 1.56649  | 16      |  20.6 |  22   | 23     | 27      |
 
 </div>
 
