@@ -18,7 +18,8 @@ Station sample monthly rain: 15015020
 	M4 NOCB: 54.6675
 	M5 Linear Interpolation: 55.7429
 	M6 EWM: 64.0103
-	M7 KNN:  56.3452
+	M7 KNN: 56.3452
+	M7 MICE: 62.6732 
 	
 Station sample minimum daily temperatura: 15015020
 	Mean stat
@@ -29,6 +30,7 @@ Station sample minimum daily temperatura: 15015020
 	M4 NOCB: 21.8967
 	M5 Linear Interpolation: 22.1279
 	M6 EWM: 21.9331
+	M7 KNN: 
 
 
 
