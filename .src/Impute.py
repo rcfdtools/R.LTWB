@@ -62,7 +62,7 @@ fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
 #station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_exclude = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
+station_exclude = ['15015020', '15060070']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
 
 
 # Header
@@ -191,10 +191,12 @@ print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 7 - Impute missing values with Natural Neigborns - KNN Imputer from Scikit Learn
-n_neighbors = 2
+n_neighbors = 3
 imputer = KNNImputer(n_neighbors=n_neighbors)
-df_impute = df
-imputer.fit_transform(df_impute)
+column_headers = df.columns.values.tolist()
+index_list = list(df.index.values)
+df_impute = imputer.fit_transform(df)
+df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
@@ -203,7 +205,6 @@ impute_file = 'Impute_KNN_' + pivot_table_name
 plot_impute(df, df_impute, 'KNN Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
-
 
 
 # Comments
