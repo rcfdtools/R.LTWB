@@ -18,6 +18,25 @@ import tabulate  # required for print tables in Markdown using pandas
 from datetime import datetime
 
 
+# General variables
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
+path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
+station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
+path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
+file_log_name = path + 'Impute_' + pivot_table_name + '.md'  # Markdown file log
+file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
+date_record_name = 'Fecha'  # IDEAM date field name for the record values
+plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
+sample_records = 3  # Records to show in the sample table head and tail
+fig_size = 5  # Height size for figures plot
+fig_alpha = 0.75  # Alpha transparency color in plots
+print_table_sample = True
+show_plot = False
+only_included = True  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
+station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
+
+
 # Function for print and show results in a file
 def print_log(txt_print, on_screen=True, center_div=False):
     if on_screen:
@@ -31,7 +50,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 # Function for plot original and imputed series
 def plot_impute(df_org, df_imputed, method, file_name):
     ax1 = df_imputed.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
-    df_org.plot(ax=ax1, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
+    df_org.plot(ax=ax1, colormap=plot_colormap, alpha=fig_alpha, legend=False, figsize=(fig_size*2, fig_size+1))
     plt.title('Impute with %s values for %d stations (%d missing & %d imputed)' % (method, df.shape[1], total_nulls, total_imputed))
     ax1.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
     plt.savefig(path + file_name + '.png')
@@ -46,25 +65,6 @@ def plot_impute(df_org, df_imputed, method, file_name):
     print_log('\n![R.LTWB](%s)' % ('Missingno_' + file_name + '.png'), center_div=False)
     if show_plot: plt.show()
     plt.close('all')
-
-
-# General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # <<<<< Pivot table name to process
-path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
-station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
-path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
-file_log_name = path + 'Impute_' + pivot_table_name + '.md'  # Markdown file log
-file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
-date_record_name = 'Fecha'  # IDEAM date field name for the record values
-plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
-sample_records = 3  # Records to show in the sample table head and tail
-fig_size = 5  # Height size for figures plot
-fig_alpha = 0.5  # Alpha transparency color in plots
-print_table_sample = True
-show_plot = False
-only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
-station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
 
 
 # Header
