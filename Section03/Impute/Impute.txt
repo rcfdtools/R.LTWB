@@ -51,3 +51,5 @@ Station sample minimum daily temperatura: 15015020
 * https://towardsdatascience.com/imputing-missing-data-with-simple-and-advanced-techniques-f5c7b157fb87#:~:text=Time%20Series%20Imputation&text=One%20way%20to%20impute%20missing,with%20the%20previously%20observed%20value
 
 * https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html
+
+* https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html

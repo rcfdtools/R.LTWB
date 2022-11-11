@@ -38,6 +38,7 @@ show_plot = False
 only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
+min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
 
 
 # Function for print and show results in a file
@@ -217,7 +218,7 @@ print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn
-imputer = IterativeImputer(estimator=linear_model.BayesianRidge(), n_nearest_features=None, imputation_order='ascending')
+imputer = IterativeImputer(estimator=linear_model.BayesianRidge(), n_nearest_features=5, initial_strategy='mean', min_value=min_value, imputation_order='ascending')
 column_headers = df.columns.values.tolist()
 index_list = list(df.index.values)
 df_impute = imputer.fit_transform(df)
