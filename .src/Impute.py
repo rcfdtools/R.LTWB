@@ -126,7 +126,8 @@ print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
 df_impute = df.fillna(df.mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 1 - Imputing with mean values')
+print_log('\n\n### Method 1 - Imputing with mean values' +
+          '\nAccording to this technique, the missing values are imputed using the mean value in each feature and the serie could be completed filled.')
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'MEAN', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
@@ -136,27 +137,30 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transp
 df_impute = df.fillna(df.median())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 2 - Imputing with median values')
+print_log('\n\n### Method 2 - Imputing with median values' +
+          '\nAccording to this technique, the missing values are imputed using the median value in each feature and the serie could be completed filled.')
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'MEDIAN', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 3 - Impute missing values with Last Observation Carried Forward (LOCF)
-df_impute = df.fillna(method='bfill')
+df_impute = df.fillna(method='ffill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values')
+print_log('\n\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values' +
+          '\nAccording to this technique, the missing values are imputed using the immediate values before it in the time series and .')
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
 
 # Method 4 - Impute missing values with Next Observation Carried Backward (NOCB)
-df_impute = df.fillna(method='ffill')
+df_impute = df.fillna(method='bfill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values')
+print_log('\n\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values' +
+          '\nAccording to this technique, the missing values are imputed using the immediate values ahead it in the time series')
 impute_file = 'Impute_NOCB_' + pivot_table_name
 plot_impute(df, df_impute, 'NOCB', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
