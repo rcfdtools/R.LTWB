@@ -211,7 +211,8 @@ df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # 
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
-          '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.')
+          '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.' +
+          '\nImputer = %s' % imputer)
 impute_file = 'Impute_KNN_' + pivot_table_name
 plot_impute(df, df_impute, 'KNN Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
@@ -226,7 +227,8 @@ df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # 
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
-          '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled.')
+          '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled.' +
+          '\nImputer = %s' % imputer)
 impute_file = 'Impute_MICE_' + pivot_table_name
 plot_impute(df, df_impute, 'MICE Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
