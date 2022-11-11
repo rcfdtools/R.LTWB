@@ -5,4 +5,5 @@ matplotlib
 rasterio
 requests
 tabulate
+missingno
 #seaborn

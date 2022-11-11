@@ -1,7 +1,7 @@
 ## Impute missing values in time series through statistical methods
 
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
-* Execution date: 2022-11-11 08:13:45.498111
+* Execution date: 2022-11-11 08:35:34.563677
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki']
 * matplotlib version: 3.6.0
@@ -85,7 +85,7 @@ General statistics table - Initial file
 
 
 ### Method 1 - Imputing with mean values
-According to this technique, the missing values are imputed using the mean value in each feature and the serie could be completed filled.
+According to this technique, the missing values are imputed using the mean value in each feature and the serie has been completed filled.
 
 ![R.LTWB](Impute_Mean_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -133,7 +133,7 @@ General statistics table - Imputed file
 
 
 ### Method 2 - Imputing with median values
-According to this technique, the missing values are imputed using the median value in each feature and the serie could be completed filled.
+According to this technique, the missing values are imputed using the median value in each feature and the serie has been completed filled.
 
 ![R.LTWB](Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -181,7 +181,7 @@ General statistics table - Imputed file
 
 
 ### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values
-According to this technique, the missing values are imputed using the immediate values before it in the time series and .
+According to this technique, the missing values are imputed using the immediate values before it in the time series and the missing values at the start are not filled but the series are completed fillet to the end.
 
 ![R.LTWB](Impute_LOCF_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -229,7 +229,7 @@ General statistics table - Imputed file
 
 
 ### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
-According to this technique, the missing values are imputed using the immediate values ahead it in the time series
+According to this technique, the missing values are imputed using the immediate values after it in the time series and the missing values at the end are not filled but the series are completed fillet to the start.
 
 ![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -277,6 +277,7 @@ General statistics table - Imputed file
 
 
 ### Method 5 - Impute missing values with Linear Interpolation values
+According to this technique, the missing values are imputed using the linear interpolation between knowing pair values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.
 
 ![R.LTWB](Impute_InterpolateLinear_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -323,7 +324,8 @@ General statistics table - Imputed file
 
 
 
-### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM
+### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = 3
+According to this technique, the missing values are imputed using the moving average values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.
 
 ![R.LTWB](Impute_MeanEWM_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -368,3 +370,5 @@ General statistics table - Imputed file
 
 </div>
 
+
+> As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.

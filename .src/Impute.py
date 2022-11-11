@@ -27,18 +27,18 @@ def print_log(txt_print, on_screen=True, center_div=False):
         file_log.write('\n</div>\n' + '\n')
 
 # Function for plot original and imputed series
-def plot_impute(df_org, df_impute, method, file_name):
-    ax = df_impute.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
-    df_org.plot(ax=ax, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
+def plot_impute(df_org, df_imputed, method, file_name):
+    ax1 = df_imputed.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
+    df_org.plot(ax=ax1, colormap=plot_colormap, alpha=1, legend=False, figsize=(fig_size*2, fig_size+1))
     plt.title('Impute with %s values for %d stations (%d missing & %d imputed)' % (method, df.shape[1], total_nulls, total_imputed))
-    ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
+    ax1.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
     plt.savefig(path + file_name + '.png')
     print_log('\n![R.LTWB](%s)' % (file_name + '.png'), center_div=False)
     if show_plot: plt.show()
     plt.close('all')
     # Missingno plot
-    #msno.matrix(df_impute, fontsize=20, figsize=(fig_size * 4, fig_size * 2.5))
-    msno.matrix(df_impute, figsize=(fig_size * 3, fig_size * 2.5))
+    # msno.matrix(df_impute, fontsize=20, figsize=(fig_size * 4, fig_size * 2.5))
+    msno.matrix(df_imputed, figsize=(fig_size * 3, fig_size * 2.5))
     plt.title('Missing values diagram for %d stations (%d missing values & %d imputed with %s)' % (df.shape[1], total_nulls, total_imputed, method))
     plt.savefig(path + 'Missingno_' + file_name + '.png')
     print_log('\n![R.LTWB](%s)' % ('Missingno_' + file_name + '.png'), center_div=False)
@@ -84,7 +84,7 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 df = df.loc[:, ~df.columns.isin(station_exclude)]
-#df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
+# df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -96,7 +96,7 @@ if print_table_sample:
 print_log('\nDatatypes for station and nulls values in the initial file', center_div=False)
 df_dtypes = pd.DataFrame(df.dtypes, columns=['Dtype'])
 df_isnull = pd.DataFrame(df.isnull().sum(), columns=['Nulls'])
-df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T # .T for transpose
+df_concat = pd.concat([df_dtypes, df_isnull], axis='columns').T  # .T for transpose
 print_log(df_concat.to_markdown(), center_div=False)
 total_nulls = df_concat.T['Nulls'].sum()
 #print_log('\nTotal nulls values founded in the dataset: %d\n' % total_nulls, center_div=False)
@@ -119,7 +119,7 @@ if show_plot: plt.show()
 plt.close('all')
 # General stats
 print_log('General statistics table - Initial file', center_div=True)
-print_log(df.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 
 # Method 1 - Impute missing values with mean values
@@ -127,62 +127,67 @@ df_impute = df.fillna(df.mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 1 - Imputing with mean values' +
-          '\nAccording to this technique, the missing values are imputed using the mean value in each feature and the serie could be completed filled.')
+          '\nAccording to this technique, the missing values are imputed using the mean value in each feature and the serie has been completed filled.')
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'MEAN', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
-print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 2 - Impute missing values with median values
 df_impute = df.fillna(df.median())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 2 - Imputing with median values' +
-          '\nAccording to this technique, the missing values are imputed using the median value in each feature and the serie could be completed filled.')
+          '\nAccording to this technique, the missing values are imputed using the median value in each feature and the serie has been completed filled.')
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'MEDIAN', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
-print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 3 - Impute missing values with Last Observation Carried Forward (LOCF)
 df_impute = df.fillna(method='ffill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values' +
-          '\nAccording to this technique, the missing values are imputed using the immediate values before it in the time series and .')
+          '\nAccording to this technique, the missing values are imputed using the immediate values before it in the time series and the missing values at the start are not filled but the series are completed fillet to the end.')
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
-print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 4 - Impute missing values with Next Observation Carried Backward (NOCB)
 df_impute = df.fillna(method='bfill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values' +
-          '\nAccording to this technique, the missing values are imputed using the immediate values ahead it in the time series')
+          '\nAccording to this technique, the missing values are imputed using the immediate values after it in the time series and the missing values at the end are not filled but the series are completed fillet to the start.')
 impute_file = 'Impute_NOCB_' + pivot_table_name
 plot_impute(df, df_impute, 'NOCB', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
-print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 5 - Impute missing values with Linear Interpolation
 df_impute = df.interpolate(method='linear')  # limit=1, limit_direction="forward"
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 5 - Impute missing values with Linear Interpolation values')
+print_log('\n\n### Method 5 - Impute missing values with Linear Interpolation values' +
+          '\nAccording to this technique, the missing values are imputed using the linear interpolation between knowing pair values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.')
 impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
 plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
-print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM
-df_impute = df.fillna(df.ewm(halflife=3).mean())
+halflife = 3
+df_impute = df.fillna(df.ewm(halflife=halflife).mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM')
+print_log('\n\n### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = %d' % halflife +
+          '\nAccording to this technique, the missing values are imputed using the moving average values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.')
 impute_file = 'Impute_MeanEWM_' + pivot_table_name
 plot_impute(df, df_impute, 'Exponential Weighted Moving - EWM', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
-print_log(df_impute.describe().T.to_markdown(), center_div=True) # .T for transpose
+print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
+# Comments
+print_log('\n> As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.')
