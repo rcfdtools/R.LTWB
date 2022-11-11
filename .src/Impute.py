@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import missingno as msno
 from sklearn.impute import KNNImputer
+import sklearn
 import tabulate  # required for print tables in Markdown using pandas
 from datetime import datetime
 
@@ -48,7 +49,7 @@ def plot_impute(df_org, df_imputed, method, file_name):
 
 
 # General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
@@ -61,8 +62,9 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.5  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
-#station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
-station_exclude = ['15015020', '15060070']  # Use ['station1', 'station2', '...',]  # **** Test purpose ****
+only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
+station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
+station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
 
 
 # Header
@@ -75,7 +77,9 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
           '\n* pandas version: ' + str(pd.__version__) +
           '\n* numpy version: ' + str(np.__version__) +
           '\n* missingno version: ' + str(msno.__version__) +
+          '\n* sklearn version: ' + str(sklearn.__version__) +
           '\n* Stations exclude: ' + str(station_exclude) +
+          '\n* Stations include: ' + str(station_include) +
           '\n* Print table sample: ' + str(print_table_sample) +
           '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Impute'
           '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
@@ -84,8 +88,10 @@ print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' +
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
-#df = df.loc[:, ~df.columns.isin(station_exclude)]
-df = df.loc[:, df.columns.isin(station_exclude)]  # **** Test purpose ****
+if only_included:
+    df = df.loc[:, df.columns.isin(station_include)]
+else:
+    df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
 print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
@@ -191,7 +197,7 @@ print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 7 - Impute missing values with Natural Neigborns - KNN Imputer from Scikit Learn
-n_neighbors = 3
+n_neighbors = 6
 imputer = KNNImputer(n_neighbors=n_neighbors)
 column_headers = df.columns.values.tolist()
 index_list = list(df.index.values)
@@ -200,7 +206,7 @@ df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # 
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 print_log('\n\n### Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
-          '\nAccording to this technique, the missing values are imputed using the natural neighbors values.')
+          '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.')
 impute_file = 'Impute_KNN_' + pivot_table_name
 plot_impute(df, df_impute, 'KNN Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
