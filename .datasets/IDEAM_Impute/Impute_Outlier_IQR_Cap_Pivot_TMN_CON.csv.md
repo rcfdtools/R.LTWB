@@ -1,9 +1,9 @@
-## Impute missing values in time series through statistical methods
+# Impute missing values in time series through statistical methods
 
-* Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv](../IDEAM_EDA/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
-* Execution date: 2022-11-11 10:41:19.272355
+* Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv](../IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
+* Execution date: 2022-11-12 10:25:38.032109
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.GISPython', 'D:\\R.HydroTools.wiki']
+* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools.wiki', 'D:\\R.HydroTools', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
 * numpy version: 1.23.2
@@ -17,7 +17,7 @@
 * Credits: r.cfdtools@gmail.com
 
 
-### General dataframe information with 15341 IDEAM records for 25 stations
+## General dataframe information with 15341 IDEAM records for 25 stations
 
 Dataframe records head sample
 
@@ -86,8 +86,10 @@ General statistics table - Initial file
 
 
 
-### Method 1 - Imputing with mean values
+## Method 1 - Imputing with mean values
 According to this technique, the missing values are imputed using the mean value in each feature and the serie has been completed filled.
+
+Imputed file: [Impute_Mean_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_Mean_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_Mean_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -134,8 +136,10 @@ General statistics table - Imputed file
 
 
 
-### Method 2 - Imputing with median values
+## Method 2 - Imputing with median values
 According to this technique, the missing values are imputed using the median value in each feature and the serie has been completed filled.
+
+Imputed file: [Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_Median_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -182,8 +186,10 @@ General statistics table - Imputed file
 
 
 
-### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values
+## Method 3 - Imputing with Last Observation Carried Forward (LOCF) values
 According to this technique, the missing values are imputed using the immediate values before it in the time series and the missing values at the start are not filled but the series are completed fillet to the end.
+
+Imputed file: [Impute_LOCF_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_LOCF_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_LOCF_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -230,8 +236,10 @@ General statistics table - Imputed file
 
 
 
-### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
+## Method 4 - Imputing with Next Observation Carried Backward (NOCB) values
 According to this technique, the missing values are imputed using the immediate values after it in the time series and the missing values at the end are not filled but the series are completed fillet to the start.
+
+Imputed file: [Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_NOCB_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -278,8 +286,10 @@ General statistics table - Imputed file
 
 
 
-### Method 5 - Impute missing values with Linear Interpolation values
+## Method 5 - Impute missing values with Linear Interpolation values
 According to this technique, the missing values are imputed using the linear interpolation between knowing pair values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.
+
+Imputed file: [Impute_InterpolateLinear_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_InterpolateLinear_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_InterpolateLinear_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -326,8 +336,10 @@ General statistics table - Imputed file
 
 
 
-### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = 3
+## Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = 3
 According to this technique, the missing values are imputed using the moving average values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.
+
+Imputed file: [Impute_MeanEWM_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_MeanEWM_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_MeanEWM_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -374,10 +386,12 @@ General statistics table - Imputed file
 
 
 
-### Method 7 - Impute missing values with Natural Neigborns - KNN = 5 Imputer from Scikit Learn
+## Method 7 - Impute missing values with Natural Neigborns - KNN = 5 Imputer from Scikit Learn
 According to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.
 
-Imputer = KNNImputer()
+Imputer = KNNImputer(n_neighbors=n_neighbors, weights=uniform, metric=nan_euclidean)
+
+Imputed file: [Impute_KNN_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_KNN_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_KNN_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -424,10 +438,12 @@ General statistics table - Imputed file
 
 
 
-### Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn
+## Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn
 According to this technique, the missing values are imputed using MICE values and the serie has been completed filled.
 
 Imputer = IterativeImputer(estimator=BayesianRidge(), min_value=0, n_nearest_features=5)
+
+Imputed file: [Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)
 
 ![R.LTWB](Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
@@ -444,33 +460,35 @@ General statistics table - Imputed file
 
 |          |   count |    mean |      std |     min |     25% |     50% |     75% |     max |
 |---------:|--------:|--------:|---------:|--------:|--------:|--------:|--------:|--------:|
-| 15015020 |   15341 | 22.248  | 1.43432  | 16.4    | 21.4    | 22.4    | 23.2    | 26.8    |
-| 15065040 |   15341 | 23.1112 | 1.31074  | 15.9728 | 22.4    | 23.2    | 23.9681 | 27.8    |
-| 23215060 |   15341 | 23.7249 | 0.514074 | 19.4576 | 23.4569 | 23.7575 | 24.0252 | 26.8    |
-| 25025002 |   15341 | 22.9212 | 1.3855   | 17.4722 | 22.1736 | 23      | 23.8    | 27.2    |
-| 25025090 |   15341 | 23.5309 | 1.29778  | 18      | 22.8578 | 23.5973 | 24.2483 | 28      |
-| 25025250 |   15341 | 22.4588 | 1.50493  | 17      | 21.4    | 22.4728 | 23.6    | 27.1    |
-| 25025300 |   15341 | 22.9031 | 1.6368   | 15.3877 | 21.958  | 23.0539 | 24      | 27.9057 |
-| 25025330 |   15341 | 22.9053 | 1.43245  | 16.8526 | 22.2    | 23.0769 | 23.8    | 28.7057 |
-| 28015030 |   15341 | 23.1625 | 1.01923  | 18.282  | 22.5219 | 23.1997 | 23.856  | 26.8    |
-| 28015070 |   15341 | 22.3548 | 1.22983  | 17.2    | 21.6    | 22.5    | 23.1485 | 26.2    |
-| 28025020 |   15341 | 20.4944 | 1.66517  | 14.4    | 19.6    | 20.6121 | 21.6    | 26      |
-| 28025040 |   15341 | 18.3871 | 1.18792  | 11.271  | 17.9002 | 18.462  | 19      | 26.077  |
-| 28025070 |   15341 | 23.7806 | 1.49331  | 18.2    | 22.958  | 23.8    | 24.8    | 28.6    |
-| 28025080 |   15341 | 21.8729 | 1.43846  | 15.2    | 21.2    | 22.086  | 22.8    | 27      |
-| 28025090 |   15341 | 22.3538 | 1.5479   | 16.5704 | 21.5967 | 22.6    | 23.4    | 27.4    |
-| 28025502 |   15341 | 23.8844 | 1.19934  | 19.1    | 23.0986 | 23.8809 | 24.7    | 28.6    |
-| 28035010 |   15341 | 23.379  | 1.30263  | 18.101  | 22.7748 | 23.4507 | 24.2    | 28.5546 |
-| 28035020 |   15341 | 22.7176 | 1.70149  | 16.4    | 21.8    | 22.8    | 23.8    | 28.6    |
-| 28035040 |   15341 | 24.254  | 1.16664  | 19.9343 | 23.6    | 24.2    | 25      | 28.6    |
-| 28035070 |   15341 | 23.407  | 1.32126  | 17.9914 | 22.757  | 23.4836 | 24.2278 | 28.685  |
-| 28045020 |   15341 | 21.7364 | 1.28108  | 15      | 20.9745 | 21.8786 | 22.6358 | 26.4    |
-| 28045040 |   15341 | 23.1218 | 0.642649 | 18.6935 | 22.7482 | 23.1487 | 23.5208 | 26.6    |
-| 29065010 |   15341 | 21.4223 | 0.920875 | 15.7072 | 20.9033 | 21.5101 | 22.0299 | 25.2    |
-| 29065020 |   15341 | 22.3517 | 1.72996  | 15.6    | 21.4    | 22.6    | 23.5534 | 27.4    |
-| 29065030 |   15341 | 21.9564 | 1.41647  | 16      | 21.081  | 22.2    | 22.9452 | 27      |
+| 15015020 |   15341 | 22.3532 | 1.43527  | 13.8081 | 21.5413 | 22.5551 | 23.2288 | 27.5343 |
+| 15065040 |   15341 | 23.0357 | 1.25554  | 16.828  | 22.4    | 23.118  | 23.8    | 27.8    |
+| 23215060 |   15341 | 23.8433 | 0.560039 | 19.4576 | 23.5514 | 23.8698 | 24.1855 | 26.8    |
+| 25025002 |   15341 | 22.9692 | 1.39102  | 17.4722 | 22.2    | 23.0825 | 24      | 27.2    |
+| 25025090 |   15341 | 23.5255 | 1.31657  | 18      | 22.8    | 23.5942 | 24.3227 | 28      |
+| 25025250 |   15341 | 22.4709 | 1.51883  | 17      | 21.4    | 22.4113 | 23.6    | 27.1    |
+| 25025300 |   15341 | 22.9202 | 1.61235  | 16.6    | 22      | 23.0297 | 24      | 27.8    |
+| 25025330 |   15341 | 22.8418 | 1.41067  | 16.8526 | 22.1496 | 23      | 23.7877 | 28.7057 |
+| 28015030 |   15341 | 22.9912 | 0.944456 | 18.282  | 22.3908 | 23.043  | 23.6428 | 26.8    |
+| 28015070 |   15341 | 22.328  | 1.24535  | 17.2    | 21.5089 | 22.4048 | 23.17   | 26.2    |
+| 28025020 |   15341 | 20.5058 | 1.66015  | 14.4    | 19.6    | 20.7131 | 21.6    | 26      |
+| 28025040 |   15341 | 18.7167 | 1.17568  | 11.271  | 18.2497 | 18.8429 | 19.3409 | 26.077  |
+| 28025070 |   15341 | 23.7602 | 1.48699  | 18.2    | 22.8348 | 23.8    | 24.8    | 28.6    |
+| 28025080 |   15341 | 21.8645 | 1.44167  | 15.2    | 21.2    | 22.1    | 22.8    | 27      |
+| 28025090 |   15341 | 22.3658 | 1.56906  | 13.6791 | 21.6    | 22.6    | 23.4    | 28.8582 |
+| 28025502 |   15341 | 23.889  | 1.18998  | 19.1    | 23.1    | 23.8994 | 24.6978 | 28.6    |
+| 28035010 |   15341 | 23.3824 | 1.31677  | 18.101  | 22.7044 | 23.4515 | 24.2    | 28.5546 |
+| 28035020 |   15341 | 22.7593 | 1.67137  | 16.4    | 21.9514 | 22.9314 | 23.8    | 28.6    |
+| 28035040 |   15341 | 24.2426 | 1.17404  | 19.9343 | 23.4    | 24.2    | 25      | 28.6    |
+| 28035070 |   15341 | 21.7595 | 0.788097 | 18.8759 | 21.2427 | 21.7416 | 22.2623 | 25.5931 |
+| 28045020 |   15341 | 21.5279 | 1.12305  | 15      | 20.9293 | 21.6774 | 22.2895 | 26.4    |
+| 28045040 |   15341 | 23.1708 | 0.676043 | 18.6935 | 22.7836 | 23.1919 | 23.5998 | 26.6    |
+| 29065010 |   15341 | 21.3428 | 0.633311 | 15.7072 | 21.0352 | 21.3938 | 21.6988 | 25.2    |
+| 29065020 |   15341 | 22.3359 | 1.74339  | 15.6    | 21.4    | 22.6    | 23.6    | 27.4    |
+| 29065030 |   15341 | 21.9141 | 1.40558  | 16      | 21.0293 | 22.0934 | 22.8209 | 27      |
 
 </div>
 
+
+Complementary report with individual graphs for stations in [Impute_Station_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](Impute_Station_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)
 
 > As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.
