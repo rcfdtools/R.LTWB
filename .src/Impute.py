@@ -252,7 +252,7 @@ print_log('\nComplementary report with individual graphs for stations in [%s](%s
 
 
 # Create Markdown report with individual graphs for station
-station_file_log.write('## Impute missing values in time series through statistical methods - Complementary report' +
+station_file_log.write('# Impute missing values in time series through statistical methods - Complementary report' +
                        '\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
                        '\n* Execution date: ' + str(datetime.now()))
 column_headers = df.columns.values.tolist()
