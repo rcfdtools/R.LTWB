@@ -88,7 +88,7 @@ def plot_impute(df_org, df_imputed, method, file_name):
 
 # Header
 print_log('## Impute missing values in time series through statistical methods')
-print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_EDA/' + pivot_table_name) +
+print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
           '\n* Python path: ' + str(sys.path[0:5]) +
@@ -247,19 +247,25 @@ impute_file = 'Impute_MICE_' + pivot_table_name
 plot_impute(df, df_impute, 'MICE Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
+detailed_report = 'Impute_Station_' + pivot_table_name + '.md'
+print_log('\nDetailed report with individual graphs for stations in [R.LTWB](%s)' % detailed_report)
+
 
 # Create Markdown report with individual graphs for station
 column_headers = df.columns.values.tolist()
 if plot_stations:
     for station in column_headers:
-        station_file_log.write('\n\n### Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_LOCF_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_NOCB_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_InterpolateLinear_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_MeanEWM_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_KNN_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_MICE_' + pivot_table_name + '.png)')
+        station_file_log.write('## Impute missing values in time series through statistical methods' +
+                               '\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
+                               '\n* Execution date: ' + str(datetime.now()) +
+                               '\n\n### Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_LOCF_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_NOCB_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_InterpolateLinear_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_MeanEWM_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_KNN_' + pivot_table_name + '.png)' +
+                               '![R.LTWB](Graph/' + station + '_Impute_MICE_' + pivot_table_name + '.png)')
 
 # Comments
 print_log('\n> As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.')
