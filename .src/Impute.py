@@ -35,10 +35,12 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
-only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
+plot_stations = True  # True: plot individual graphs for each station
+min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
+n_neighbors = 5  # Number of natural neighbors for Natural Neigborns - KNN & Multivariate Imputation by Chained Equation - MICE
+only_included = True  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
-min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
 
 
 # Function for print and show results in a file
@@ -53,8 +55,8 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # Function for plot original and imputed series
 def plot_impute(df_org, df_imputed, method, file_name):
-    ax1 = df_imputed.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
-    df_org.plot(ax=ax1, colormap=plot_colormap, alpha=fig_alpha, legend=False, figsize=(fig_size*2, fig_size+1))
+    ax1 = df_imputed.plot(color='black', legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.5)
+    df_org.plot(ax=ax1, colormap=plot_colormap, alpha=fig_alpha, legend=False, figsize=(fig_size*2, fig_size+1), linewidth=0.85)
     plt.title('Impute with %s values for %d stations (%d missing & %d imputed)' % (method, df.shape[1], total_nulls, total_imputed))
     ax1.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
     plt.savefig(path + file_name + '.png')
@@ -69,6 +71,17 @@ def plot_impute(df_org, df_imputed, method, file_name):
     print_log('\n![R.LTWB](%s)' % ('Missingno_' + file_name + '.png'), center_div=False)
     if show_plot: plt.show()
     plt.close('all')
+    # Plot individual graphs for station
+    column_headers = df.columns.values.tolist()
+    if plot_stations:
+        for station in column_headers:
+            ax2 = df_imputed[station].plot(color='black', legend=True, alpha=1, figsize=(fig_size, fig_size), linewidth=0.5)
+            df_org[station].plot(ax=ax2, colormap=plot_colormap, alpha=1, legend=True, figsize=(fig_size, fig_size), linewidth=0.85)
+            ax2.legend(['Imputed', 'Value']);
+            plt.title('%s - Station %s' % (method, station))
+            ax2.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
+            plt.savefig(path + 'Graph/' + station + '_' + file_name + '.png')
+            plt.close('all')
 
 
 # Header
@@ -201,7 +214,6 @@ print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 7 - Impute missing values with Natural Neigborns - KNN Imputer from Scikit Learn
-n_neighbors = 5
 #imputer = KNNImputer(n_neighbors=n_neighbors)
 imputer = KNNImputer(n_neighbors=n_neighbors, weights='uniform', metric='nan_euclidean')
 column_headers = df.columns.values.tolist()
@@ -219,7 +231,7 @@ print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
 # Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn
-imputer = IterativeImputer(estimator=linear_model.BayesianRidge(), n_nearest_features=5, initial_strategy='mean', min_value=min_value, imputation_order='ascending')
+imputer = IterativeImputer(estimator=linear_model.BayesianRidge(), n_nearest_features=n_neighbors, initial_strategy='mean', min_value=min_value, imputation_order='ascending')
 column_headers = df.columns.values.tolist()
 index_list = list(df.index.values)
 df_impute = imputer.fit_transform(df)
