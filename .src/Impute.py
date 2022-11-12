@@ -29,7 +29,6 @@ path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.da
 file_log_name = path + 'Impute_' + pivot_table_name + '.md'  # Markdown file log
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 station_file_log_name = path + 'Impute_Station_' + pivot_table_name + '.md'  # Markdown file log
-station_file_log = open(station_file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 sample_records = 3  # Records to show in the sample table head and tail
@@ -37,7 +36,7 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
-plot_stations = False  # True: plot individual graphs for each station
+plot_stations = True  # True: plot individual graphs for each station and update the complementary report
 min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
 n_neighbors = 5  # Number of natural neighbors for Natural Neigborns - KNN & Multivariate Imputation by Chained Equation - MICE
 only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
@@ -252,11 +251,13 @@ print_log('\nComplementary report with individual graphs for stations in [%s](%s
 
 
 # Create Markdown report with individual graphs for station
-station_file_log.write('# Impute missing values in time series through statistical methods - Complementary report' +
-                       '\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
-                       '\n* Execution date: ' + str(datetime.now()))
 column_headers = df.columns.values.tolist()
 if plot_stations:
+    station_file_log = open(station_file_log_name, 'w+')  # w+ create the file if it doesn't exist
+    station_file_log.write('# Impute missing values in time series through statistical methods - Complementary report' +
+                           '\n* Processed file: [%s](%s)' % (
+                           str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
+                           '\n* Execution date: ' + str(datetime.now()))
     for station in column_headers:
         station_file_log.write('\n\n## Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
