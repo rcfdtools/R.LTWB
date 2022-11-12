@@ -22,7 +22,7 @@ from datetime import datetime
 
 
 # General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_TMX_CON.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
