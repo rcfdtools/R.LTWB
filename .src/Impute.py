@@ -40,7 +40,7 @@ show_plot = False
 plot_stations = True  # True: plot individual graphs for each station
 min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
 n_neighbors = 5  # Number of natural neighbors for Natural Neigborns - KNN & Multivariate Imputation by Chained Equation - MICE
-only_included = True  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
+only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
 station_exclude = ['28017140', '25027020', '25027410', '25027490', '25027330', '25027390', '25027630', '25027360', '25027320', '16067010', '25027420']  # Use ['station1', 'station2', '...',]
 station_include = ['15015020', '15060050', '15060070', '15060080', '15060150']  # Use ['station1', 'station2', '...',]
 
@@ -87,7 +87,7 @@ def plot_impute(df_org, df_imputed, method, file_name):
 
 
 # Header
-print_log('## Impute missing values in time series through statistical methods')
+print_log('# Impute missing values in time series through statistical methods')
 print_log('\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
@@ -112,7 +112,7 @@ if only_included:
 else:
     df = df.loc[:, ~df.columns.isin(station_exclude)]
 ideam_regs = df.shape[0]
-print_log('\n\n### General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
+print_log('\n\n## General dataframe information with %d IDEAM records for %d stations' % (ideam_regs, df.shape[1]))
 print(df.info())
 if print_table_sample:
     print_log('\nDataframe records head sample\n')
@@ -152,7 +152,7 @@ print_log(df.describe().T.to_markdown(), center_div=True)  # .T for transpose
 df_impute = df.fillna(df.mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 1 - Imputing with mean values' +
+print_log('\n\n## Method 1 - Imputing with mean values' +
           '\nAccording to this technique, the missing values are imputed using the mean value in each feature and the serie has been completed filled.')
 impute_file = 'Impute_Mean_' + pivot_table_name
 plot_impute(df, df_impute, 'MEAN', impute_file)
@@ -163,7 +163,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.fillna(df.median())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 2 - Imputing with median values' +
+print_log('\n\n## Method 2 - Imputing with median values' +
           '\nAccording to this technique, the missing values are imputed using the median value in each feature and the serie has been completed filled.')
 impute_file = 'Impute_Median_' + pivot_table_name
 plot_impute(df, df_impute, 'MEDIAN', impute_file)
@@ -174,7 +174,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.fillna(method='ffill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 3 - Imputing with Last Observation Carried Forward (LOCF) values' +
+print_log('\n\n## Method 3 - Imputing with Last Observation Carried Forward (LOCF) values' +
           '\nAccording to this technique, the missing values are imputed using the immediate values before it in the time series and the missing values at the start are not filled but the series are completed fillet to the end.')
 impute_file = 'Impute_LOCF_' + pivot_table_name
 plot_impute(df, df_impute, 'LOCF', impute_file)
@@ -185,7 +185,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.fillna(method='bfill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 4 - Imputing with Next Observation Carried Backward (NOCB) values' +
+print_log('\n\n## Method 4 - Imputing with Next Observation Carried Backward (NOCB) values' +
           '\nAccording to this technique, the missing values are imputed using the immediate values after it in the time series and the missing values at the end are not filled but the series are completed fillet to the start.')
 impute_file = 'Impute_NOCB_' + pivot_table_name
 plot_impute(df, df_impute, 'NOCB', impute_file)
@@ -196,7 +196,7 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.interpolate(method='linear')  # limit=1, limit_direction="forward"
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 5 - Impute missing values with Linear Interpolation values' +
+print_log('\n\n## Method 5 - Impute missing values with Linear Interpolation values' +
           '\nAccording to this technique, the missing values are imputed using the linear interpolation between knowing pair values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.')
 impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
 plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
@@ -208,7 +208,7 @@ halflife = 3
 df_impute = df.fillna(df.ewm(halflife=halflife).mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = %d' % halflife +
+print_log('\n\n## Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = %d' % halflife +
           '\nAccording to this technique, the missing values are imputed using the moving average values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.')
 impute_file = 'Impute_MeanEWM_' + pivot_table_name
 plot_impute(df, df_impute, 'Exponential Weighted Moving - EWM', impute_file)
@@ -224,7 +224,7 @@ df_impute = imputer.fit_transform(df)
 df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
+print_log('\n\n## Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
           '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.' +
           '\n\nImputer = %s' % str(imputer))
 impute_file = 'Impute_KNN_' + pivot_table_name
@@ -240,7 +240,7 @@ df_impute = imputer.fit_transform(df)
 df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-print_log('\n\n### Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
+print_log('\n\n## Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
           '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled.' +
           '\n\nImputer = %s' % str(imputer))
 impute_file = 'Impute_MICE_' + pivot_table_name
