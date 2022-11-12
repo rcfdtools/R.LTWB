@@ -28,6 +28,8 @@ station_file = path_input + pivot_table_name  # Current pivot IDEAM records file
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
 file_log_name = path + 'Impute_' + pivot_table_name + '.md'  # Markdown file log
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
+station_file_log_name = path + 'Impute_Station_' + pivot_table_name + '.md'  # Markdown file log
+station_file_log = open(station_file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 sample_records = 3  # Records to show in the sample table head and tail
@@ -245,6 +247,19 @@ impute_file = 'Impute_MICE_' + pivot_table_name
 plot_impute(df, df_impute, 'MICE Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
+
+# Create Markdown report with individual graphs for station
+column_headers = df.columns.values.tolist()
+if plot_stations:
+    for station in column_headers:
+        station_file_log.write('### Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + 'Impute_Median_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + 'Impute_LOCF_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + 'Impute_NOCB_' + pivot_table_name + '.png' +
+        '![R.LTWB](Graph/' + station + 'Impute_InterpolateLinear_' + pivot_table_name + '.png' +
+        '![R.LTWB](Graph/' + station + 'Impute_MeanEWM_' + pivot_table_name + '.png' +
+        '![R.LTWB](Graph/' + station + 'Impute_KNN_' + pivot_table_name + '.png' +
+        '![R.LTWB](Graph/' + station + 'Impute_MICE_' + pivot_table_name + '.png')
 
 # Comments
 print_log('\n> As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.')
