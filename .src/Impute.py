@@ -126,7 +126,7 @@ total_nulls = df_concat.T['Nulls'].sum()
 #print_log('\nTotal nulls values founded in the dataset: %d\n' % total_nulls, center_div=False)
 #nul_data = pd.DataFrame(df.isnull())
 #print_log(nul_data.to_markdown())
-ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1))  # colormap can be replaced by color='lightblue'
+ax = df.plot(colormap=plot_colormap, legend=False, alpha=fig_alpha, figsize=(fig_size*2, fig_size+1), linewidth=0.85)  # colormap can be replaced by color='lightblue'
 plt.title('Original serie with %d stations (%d missing values)' % (df.shape[1], total_nulls))
 ax.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
 plt.savefig(path + pivot_table_name + '.png')
