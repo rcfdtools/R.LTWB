@@ -248,7 +248,7 @@ plot_impute(df, df_impute, 'MICE Imputer', impute_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 detailed_report = 'Impute_Station_' + pivot_table_name + '.md'
-print_log('\nDetailed report with individual graphs for stations in [%s](%s)' % detailed_report, detailed_report)
+print_log('\nDetailed report with individual graphs for stations in [%s](%s)' % (detailed_report, detailed_report))
 
 
 # Create Markdown report with individual graphs for station
