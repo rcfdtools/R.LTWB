@@ -164,12 +164,12 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.fillna(df.median())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_Median_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_Median_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 2 - Imputing with median values' +
           '\nAccording to this technique, the missing values are imputed using the median value in each feature and the serie has been completed filled.' +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'MEDIAN', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'MEDIAN', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
@@ -177,12 +177,12 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.fillna(method='ffill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_LOCF_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_LOCF_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 3 - Imputing with Last Observation Carried Forward (LOCF) values' +
           '\nAccording to this technique, the missing values are imputed using the immediate values before it in the time series and the missing values at the start are not filled but the series are completed fillet to the end.' +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'LOCF', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'LOCF', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
@@ -190,12 +190,12 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.fillna(method='bfill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_NOCB_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_NOCB_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 4 - Imputing with Next Observation Carried Backward (NOCB) values' +
           '\nAccording to this technique, the missing values are imputed using the immediate values after it in the time series and the missing values at the end are not filled but the series are completed fillet to the start.' +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'NOCB', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'NOCB', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
@@ -203,12 +203,12 @@ print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for trans
 df_impute = df.interpolate(method='linear')  # limit=1, limit_direction="forward"
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_InterpolateLinear_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_InterpolateLinear_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 5 - Impute missing values with Linear Interpolation values' +
           '\nAccording to this technique, the missing values are imputed using the linear interpolation between knowing pair values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.' +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'Linear Interpolation', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'Linear Interpolation', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
@@ -217,12 +217,12 @@ halflife = 3
 df_impute = df.fillna(df.ewm(halflife=halflife).mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_MeanEWM_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_MeanEWM_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = %d' % halflife +
           '\nAccording to this technique, the missing values are imputed using the moving average values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.' +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'Exponential Weighted Moving - EWM', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'Exponential Weighted Moving - EWM', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
@@ -235,13 +235,13 @@ df_impute = imputer.fit_transform(df)
 df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_KNN_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_KNN_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
           '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.' +
           '\n\nImputer = KNNImputer(n_neighbors=n_neighbors, weights=uniform, metric=nan_euclidean)' +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'KNN Imputer', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'KNN Imputer', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 
@@ -253,13 +253,13 @@ df_impute = imputer.fit_transform(df)
 df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # Convert numpy array to a pandas dataframe
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
-impute_file = 'Impute_MICE_' + pivot_table_name
-df_impute.to_csv(path + impute_file)
+imputed_file = 'Impute_MICE_' + pivot_table_name
+df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
           '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled.' +
           '\n\nImputer = %s' % str(imputer) +
-          '\n\nImputed file: [%s](%s)' % (impute_file, impute_file))
-plot_impute(df, df_impute, 'MICE Imputer', impute_file)
+          '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
+plot_impute(df, df_impute, 'MICE Imputer', imputed_file)
 print_log('General statistics table - Imputed file', center_div=True)
 print_log(df_impute.describe().T.to_markdown(), center_div=True)  # .T for transpose
 detailed_report = 'Impute_Station_' + pivot_table_name + '.md'
