@@ -1,6 +1,6 @@
-## Impute missing values in time series through statistical methods
+## Impute missing values in time series through statistical methods - Complementary report
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_Outlier/Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-12 09:21:23.172215
+* Execution date: 2022-11-12 09:22:52.564553
 
 ### Station: 15015020
 
