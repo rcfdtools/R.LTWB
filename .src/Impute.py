@@ -258,7 +258,7 @@ station_file_log.write('# Impute missing values in time series through statistic
 column_headers = df.columns.values.tolist()
 if plot_stations:
     for station in column_headers:
-        station_file_log.write('\n\n##Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
+        station_file_log.write('\n\n## Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_LOCF_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_NOCB_' + pivot_table_name + '.png)' +
