@@ -255,11 +255,11 @@ if plot_stations:
         station_file_log.write('\n\n### Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
         '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
         '![R.LTWB](Graph/' + station + '_Impute_LOCF_' + pivot_table_name + '.png)' +
-        '![R.LTWB](Graph/' + station + '_Impute_NOCB_' + pivot_table_name + '.png' +
-        '![R.LTWB](Graph/' + station + '_Impute_InterpolateLinear_' + pivot_table_name + '.png' +
-        '![R.LTWB](Graph/' + station + '_Impute_MeanEWM_' + pivot_table_name + '.png' +
-        '![R.LTWB](Graph/' + station + '_Impute_KNN_' + pivot_table_name + '.png' +
-        '![R.LTWB](Graph/' + station + '_Impute_MICE_' + pivot_table_name + '.png')
+        '![R.LTWB](Graph/' + station + '_Impute_NOCB_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + '_Impute_InterpolateLinear_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + '_Impute_MeanEWM_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + '_Impute_KNN_' + pivot_table_name + '.png)' +
+        '![R.LTWB](Graph/' + station + '_Impute_MICE_' + pivot_table_name + '.png)')
 
 # Comments
 print_log('\n> As you notice, some of the techniques showed above can`t fill complete the missing values at the start or at the end, however, you can first choice a method and then apply another complementary method for get full filled the missin values.')
