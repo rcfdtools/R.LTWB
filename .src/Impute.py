@@ -252,13 +252,13 @@ print_log('\nDetailed report with individual graphs for stations in [%s](%s)' % 
 
 
 # Create Markdown report with individual graphs for station
+station_file_log.write('## Impute missing values in time series through statistical methods' +
+                       '\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
+                       '\n* Execution date: ' + str(datetime.now()))
 column_headers = df.columns.values.tolist()
 if plot_stations:
     for station in column_headers:
-        station_file_log.write('## Impute missing values in time series through statistical methods' +
-                               '\n* Processed file: [%s](%s)' % (str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
-                               '\n* Execution date: ' + str(datetime.now()) +
-                               '\n\n### Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
+        station_file_log.write('\n\n### Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_LOCF_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_NOCB_' + pivot_table_name + '.png)' +
