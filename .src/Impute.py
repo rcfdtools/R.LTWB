@@ -36,7 +36,7 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 print_table_sample = True
 show_plot = False
-plot_stations = True  # True: plot individual graphs for each station and update the complementary report
+plot_stations = False  # True: plot individual graphs for each station and update the complementary report
 min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
 n_neighbors = 5  # Number of natural neighbors for Natural Neigborns - KNN & Multivariate Imputation by Chained Equation - MICE
 only_included = False  # True: let the user run this script only for the stations included in the station_include array. False: process all the stations but not the ones in the station_exclude array.
@@ -238,7 +238,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_KNN_' + pivot_table_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
-          '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled.' +
+          '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled. More information in https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html' +
           '\n\nImputer = KNNImputer(n_neighbors=n_neighbors, weights=uniform, metric=nan_euclidean)' +
           '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
 plot_impute(df, df_impute, 'KNN Imputer', imputed_file)
@@ -256,7 +256,7 @@ total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_MICE_' + pivot_table_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
-          '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled.' +
+          '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled. More information in https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html' +
           '\n\nImputer = %s' % str(imputer) +
           '\n\nImputed file: [%s](%s)' % (imputed_file, imputed_file))
 plot_impute(df, df_impute, 'MICE Imputer', imputed_file)
@@ -272,7 +272,10 @@ if plot_stations:
     station_file_log.write('# Impute missing values in time series through statistical methods - Complementary report' +
                            '\n* Processed file: [%s](%s)' % (
                            str(station_file), '../IDEAM_Outlier/' + pivot_table_name) +
-                           '\n* Execution date: ' + str(datetime.now()))
+                           '\n* Execution date: ' + str(datetime.now()) +
+                           '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Impute'
+                           '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
+                           '\n* Credits: r.cfdtools@gmail.com')
     for station in column_headers:
         station_file_log.write('\n\n## Station: ' + station + '\n\n![R.LTWB](Graph/' + station + '_Impute_Mean_' + pivot_table_name + '.png)' +
                                '![R.LTWB](Graph/' + station + '_Impute_Median_' + pivot_table_name + '.png)' +
