@@ -1,5 +1,5 @@
 ## Identificación y procesamiento de datos atípicos - Outliers
-Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `Drop` `Capped` `Impute` `Interquartile-range` `Empirical-rule` `Z-score`
+Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `numpy` `dtypes` `isnull` `describe` `Drop` `Capped` `Impute` `Interquartile-range` `Empirical-rule` `Z-score`
 
 <div align="center"><img alt="R.LTWB" src="Graph/Outlier.png" width="95%"></div> 
 
@@ -466,7 +466,7 @@ print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analyt
           '\n[^3]: Adapted from: https://www.geeksforgeeks.org/z-score-for-outlier-detection-python/')
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hicroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
+2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hicroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
 
 > Para la identificación de valores atípicos no son requeridas las tablas de datos de correlaciones identificadas con nombre terminado en _correlation.csv.
 

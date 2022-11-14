@@ -22,7 +22,7 @@ from datetime import datetime
 
 
 # General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
@@ -35,7 +35,7 @@ sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 print_table_sample = True
-show_plot = False
+show_plot = True
 plot_stations = True  # True: plot individual graphs for each station and update the complementary report
 min_value = 0  # Minimum value for impute with Multivariate Imputation by Chained Equation - MICE from Scikit Learn. E.g.: 0 for rain, -inf for temperature.
 n_neighbors = 5  # Number of natural neighbors for Natural Neigborns - KNN & Multivariate Imputation by Chained Equation - MICE
