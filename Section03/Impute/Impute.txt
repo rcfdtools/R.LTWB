@@ -32,4 +32,7 @@ Station sample minimum daily temperatura: 15015020
 
 * https://library.wmo.int/doc_num.php?explnum_id=4167
 * https://library.wmo.int/index.php?lvl=notice_display&id=20130
+* https://library.wmo.int/doc_num.php?explnum_id=9521
+* https://library.wmo.int/doc_num.php?explnum_id=4549
+
 
