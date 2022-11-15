@@ -28,5 +28,8 @@ Station sample minimum daily temperatura: 15015020
 	M4 NOCB: 21.8967
 	M5 Linear Interpolation: 22.1279
 	M6 EWM: 21.9331
-	M7 KNN: 
+	M7 KNN:
+
+* https://library.wmo.int/doc_num.php?explnum_id=4167
+* https://library.wmo.int/index.php?lvl=notice_display&id=20130
 
