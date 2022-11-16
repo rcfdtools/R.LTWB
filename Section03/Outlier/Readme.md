@@ -534,6 +534,8 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 > En la tabla, 1.IQR: número de valores atípicos identificados en Método 1 - Rango intercuartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score. La columna _registros_ corresponde al número de registros de cada estación, incluidos los valores faltantes y/o nulos.
 >
 > Nótese que para datos de temperatura mínima, se han identificado por los 3 métodos, valores atípicos en la zona inferior de las gráficas. En el caso de la temperatura máxima se han identificado valores atípicos en la zona superior e inferior de las gráficas.
+> 
+> Dentro de cada reporte independiente por parámetro, se encuentran los enlaces a los archivos .csv imputados por cada método.
 
 Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, podrá observar los siguientes valores similares de media y desviación estándar:
 

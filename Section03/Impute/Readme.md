@@ -444,7 +444,9 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 
 > En la tabla anterior, las columnas M1 a M8 contienen el número de datos imputados por cada método utilizado.
 >
-> Para todos los parámetros se han utilizado 5 vecinos naturales para la generación de datos sintéticos por los métodos KNN y MICE.  
+> Para todos los parámetros se han utilizado 5 vecinos naturales para la generación de datos sintéticos por los métodos KNN y MICE.
+> 
+> Dentro de cada reporte independiente por parámetro, se encuentran los enlaces a los archivos .csv generados por cada método.
 
 Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mmm, podrá observar los siguientes valores de media y desviación estándar:
 
