@@ -48,7 +48,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
 1. Para realizar la identificación y procesamiento de datos atípicos, descargue el script [Impute.py](../../.src/Outlier.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
-Funcionalidades del script
+**Funcionalidades del script**
 
 * Completado y extendido de series por 8 métodos estadísticos.
 * Permite definir la tabla dinámica (pivot table original o con valores atípicos identificados, eliminados y/o ajustados) del parámetro hidroclimatológico a evaluar.

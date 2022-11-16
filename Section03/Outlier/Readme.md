@@ -41,7 +41,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
 1. Para realizar la identificación y procesamiento de datos atípicos, descargue el script [Outlier.py](../../.src/Outlier.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
-Funcionalidades del script
+**Funcionalidades del script**
 
 * Identificación de atípicos por 3 métodos estadísticos (Método 1 - Rango intercuartílico - IQR, Método 2 - Regla empírica - ER y Método 3 - núcleo estándar Z-score).
 * Permite definir la tabla dinámica (pivot table) del parámetro hidroclimatológico a evaluar.
