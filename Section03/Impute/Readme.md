@@ -430,6 +430,7 @@ Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los r
 
 6. Repita el procedimiento anterior para los datos de caudal, temperatura mínima y máxima.
 
+
 ### Tablas de resultados y análisis generales
 
 Durante el proceso de ejecución del script, se generan automáticamente para cada parámetro hidroclimatológico, un reporte integrado de resultados en formato Markdown (.md), gráficas de análisis y diferentes tablas en formato .csv.
