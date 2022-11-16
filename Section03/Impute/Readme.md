@@ -153,7 +153,7 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 >
 > Para todos los parámetros se han utilizado 5 vecinos naturales para la generación de datos sintéticos por los métodos KNN y MICE.  
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mmm, se pueden observar los siguientes valores de media y desviación estándar:
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mmm, podrá observar los siguientes valores de media y desviación estándar:
 
 <div align='center'>
 
@@ -174,7 +174,7 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 >  Evalúe los datos sintéticos de precipitación generados en las estaciones 28010280 (489 meses faltantes de 504 definidos en la ventana de tiempo), 28040170 y 28010130.
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15067080, correspondiente a datos de caudal medio mensual en m³/s, se pueden observar los siguientes valores de media y desviación estándar:
+Al revisar los estadísticos característicos, p. ej. de la estación 15067080, correspondiente a datos de caudal medio mensual en m³/s, podrá observar los siguientes valores de media y desviación estándar:
 
 ![R.LTWB](Screenshot/Windows11CMDImpute39.png)
 
@@ -182,16 +182,16 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15067080, 
 
 | Método                                                                                                   | $\mu$, media | $\sigma$, std |
 |:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                                                           | 59.7829      | 74.2829       |
-| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 59.718       | 73.9846       |
-| M1. Imputación con media, $\mu$                                                                          | 59.718       | 60.6479       |
-| M2. Imputación con mediana                                                                               | 50.0217      | 62.2231       |
-| M3. Imputación LOCF                                                                                      | 54.6675      | 68.6241       |
-| M4. Imputación NOCB                                                                                      | 70.1873      | 73.8053       |
-| M5. Imputación pir interpolación lineal                                                                  | 55.7429      | 70.1337       |
-| M6. Media móvil - EWM                                                                                    | 64.0103      | 61.0386       |
-| M7. Vecino natural - KNN                                                                                 | 56.6695      | 68.2329       |
-| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 59.5799      | 71.8106       |
+| Serie original                                                                                           | 2.17867      | 3.43166       |
+| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 2.10051      | 2.89856       |
+| M1. Imputación con media, $\mu$                                                                          | 2.10051      | 2.20089       |
+| M2. Imputación con mediana                                                                               | 1.62587      | 2.26987       |
+| M3. Imputación LOCF                                                                                      | 1.63324      | 2.55661       |
+| M4. Imputación NOCB                                                                                      | 2.10959      | 2.85675       |
+| M5. Imputación pir interpolación lineal                                                                  | 1.88085      | 2.52606       |
+| M6. Media móvil - EWM                                                                                    | 1.93414      | 2.39007       |
+| M7. Vecino natural - KNN                                                                                 | 2.1734       | 2.59388       |
+| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 2.14873      | 2.50686       |
 
 </div>
 

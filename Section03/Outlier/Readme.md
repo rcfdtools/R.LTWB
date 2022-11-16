@@ -532,7 +532,7 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 >
 > Nótese que para datos de temperatura mínima, se han identificado por los 3 métodos, valores atípicos en la zona inferior de las gráficas. En el caso de la temperatura máxima se han identificado valores atípicos en la zona superior e inferior de las gráficas.
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, se pueden observar los siguientes valores similares de media y desviación estándar:
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, podrá observar los siguientes valores similares de media y desviación estándar:
 
 <div align='center'>
 
