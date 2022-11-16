@@ -218,7 +218,7 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 </div>
 
-> Evalúe los datos sintéticos de caudal generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045020 y 29065010.
+> Evalúe los datos sintéticos de temperatura mínima generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045020 y 29065010.
 
 Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de temperatura máxima diaria en °C, podrá observar los siguientes valores de media y desviación estándar:
 
@@ -241,7 +241,7 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 </div>
 
-> Evalúe los datos sintéticos de caudal generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045040 y 29065010.
+> Evalúe los datos sintéticos de temperatura máxima generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045040 y 29065010.
 
 **Conclusión general**
 
@@ -276,9 +276,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción | Autor                                      | Horas |
-|------------|:------------|--------------------------------------------|:-----:|
-| 2022.11.07 |             | [rcfdtools](https://github.com/rcfdtools)  |  xx   |
+| Versión    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Autor                                       | Horas |
+|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|:-----:|
+| 2022.11.16 | Complementación documentación general con análisis descriptivos por parámetro.                                                                                                                                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)   |   4   |
+| 2022.11.14 | Inicio documentación general.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)   |   3   |
+| 2022.11.12 | Generador de 8 gráficas individuales de series por estación. Reporte complementario para visualización de gráficas por estación. Exportación de imputaciones a archivos .csv para cada método.                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)   |   4   |
+| 2022.11.11 | Method 7 - Impute missing values with Natural Neigborns - KNN = 5 Imputer from Scikit Learn. Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn.                                                                                                                                                                                                                                                                                                  | [rcfdtools](https://github.com/rcfdtools)   |   3   |
+| 2022.11.10 | Script versión inicial. Method 1 - Imputing with mean values. Method 2 - Imputing with median values. Method 3 - Imputing with Last Observation Carried Forward (LOCF) values. Method 4 - Imputing with Next Observation Carried Backward (NOCB) values. Method 5 - Impute missing values with Linear Interpolation values. Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM. Métodos con generación de reporte y gráficas sin exportación de datasets imputados a .csv. | [rcfdtools](https://github.com/rcfdtools)   |   5   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
