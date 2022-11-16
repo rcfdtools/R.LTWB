@@ -90,53 +90,53 @@ Contenido del script
 
 > Para visualizar durante la ejecución las gráficas generales de análisis, establezca la variable `show_plot = True`.
 
-![R.LTWB](Screenshot/Windows11CMDOutlier1.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier2.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier3.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier4.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier5.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier6.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier7.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier8.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier9.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier10.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier11.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier12.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier13.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier14.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier15.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier16.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier17.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier18.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier19.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier20.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier21.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier22.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier23.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier24.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier25.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier26.png)
+![R.LTWB](Screenshot/Windows11CMDImpute1.png)
+![R.LTWB](Screenshot/Windows11CMDImpute2.png)
+![R.LTWB](Screenshot/Windows11CMDImpute3.png)
+![R.LTWB](Screenshot/Windows11CMDImpute4.png)
+![R.LTWB](Screenshot/Windows11CMDImpute5.png)
+![R.LTWB](Screenshot/Windows11CMDImpute6.png)
+![R.LTWB](Screenshot/Windows11CMDImpute7.png)
+![R.LTWB](Screenshot/Windows11CMDImpute8.png)
+![R.LTWB](Screenshot/Windows11CMDImpute9.png)
+![R.LTWB](Screenshot/Windows11CMDImpute10.png)
+![R.LTWB](Screenshot/Windows11CMDImpute11.png)
+![R.LTWB](Screenshot/Windows11CMDImpute12.png)
+![R.LTWB](Screenshot/Windows11CMDImpute13.png)
+![R.LTWB](Screenshot/Windows11CMDImpute14.png)
+![R.LTWB](Screenshot/Windows11CMDImpute15.png)
+![R.LTWB](Screenshot/Windows11CMDImpute16.png)
+![R.LTWB](Screenshot/Windows11CMDImpute17.png)
+![R.LTWB](Screenshot/Windows11CMDImpute18.png)
+![R.LTWB](Screenshot/Windows11CMDImpute19.png)
+![R.LTWB](Screenshot/Windows11CMDImpute20.png)
+![R.LTWB](Screenshot/Windows11CMDImpute21.png)
+![R.LTWB](Screenshot/Windows11CMDImpute22.png)
+![R.LTWB](Screenshot/Windows11CMDImpute23.png)
+![R.LTWB](Screenshot/Windows11CMDImpute24.png)
+![R.LTWB](Screenshot/Windows11CMDImpute25.png)
+![R.LTWB](Screenshot/Windows11CMDImpute26.png)
 
 Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.datasets\IDEAM_Impute` se han generado diferentes archivos de resultados por cada método para la tabla de datos de precipitación mensual total Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.
 
-![R.LTWB](Screenshot/Windows11CMDOutlier27.png)
+![R.LTWB](Screenshot/Windows11CMDImpute27.png)
 
 De igual manera, en la carpeta local  `D:\R.LTWB\.datasets\IDEAM_Impute\Graph` se ha generado para cada estación, 8 gráficas de comparación de las series iniciales y las imputadas. Para las 130 estaciones, se han generado 1040 gráficas.
 
-![R.LTWB](Screenshot/Windows11CMDOutlier28.png)
+![R.LTWB](Screenshot/Windows11CMDImpute28.png)
 
 Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [Impute_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md) y el reporte complementario de gráficos por estación [Impute_Station_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md).
 
-![R.LTWB](Screenshot/Windows11CMDOutlier29.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier30.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier31.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier32.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier33.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier34.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier35.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier36.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier37.png)
-![R.LTWB](Screenshot/Windows11CMDOutlier38.png)
+![R.LTWB](Screenshot/Windows11CMDImpute29.png)
+![R.LTWB](Screenshot/Windows11CMDImpute30.png)
+![R.LTWB](Screenshot/Windows11CMDImpute31.png)
+![R.LTWB](Screenshot/Windows11CMDImpute32.png)
+![R.LTWB](Screenshot/Windows11CMDImpute33.png)
+![R.LTWB](Screenshot/Windows11CMDImpute34.png)
+![R.LTWB](Screenshot/Windows11CMDImpute35.png)
+![R.LTWB](Screenshot/Windows11CMDImpute36.png)
+![R.LTWB](Screenshot/Windows11CMDImpute37.png)
+![R.LTWB](Screenshot/Windows11CMDImpute38.png)
 
 6. Repita el procedimiento anterior para los datos de caudal, temperatura mínima y máxima.
 
@@ -153,7 +153,30 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 >
 > Para todos los parámetros se han utilizado 5 vecinos naturales para la generación de datos sintéticos por los métodos KNN y MICE.  
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual, se pueden observar los siguientes valores de media y desviación estándar:
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mmm, se pueden observar los siguientes valores de media y desviación estándar:
+
+<div align='center'>
+
+| Método                                                                                                   | $\mu$, media | $\sigma$, std |
+|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
+| Serie original                                                                                           | 59.7829      | 74.2829       |
+| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 59.718       | 73.9846       |
+| M1. Imputación con media, $\mu$                                                                          | 59.718       | 60.6479       |
+| M2. Imputación con mediana                                                                               | 50.0217      | 62.2231       |
+| M3. Imputación LOCF                                                                                      | 54.6675      | 68.6241       |
+| M4. Imputación NOCB                                                                                      | 70.1873      | 73.8053       |
+| M5. Imputación pir interpolación lineal                                                                  | 55.7429      | 70.1337       |
+| M6. Media móvil - EWM                                                                                    | 64.0103      | 61.0386       |
+| M7. Vecino natural - KNN                                                                                 | 56.6695      | 68.2329       |
+| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 59.5799      | 71.8106       |
+
+</div>
+
+>  Evalúe los datos sintéticos de precipitación generados en las estaciones 28010280 (489 meses faltantes de 504 definidos en la ventana de tiempo), 28040170 y 28010130.
+
+Al revisar los estadísticos característicos, p. ej. de la estación 15067080, correspondiente a datos de caudal medio mensual en m³/s, se pueden observar los siguientes valores de media y desviación estándar:
+
+![R.LTWB](Screenshot/Windows11CMDImpute39.png)
 
 <div align='center'>
 
@@ -174,7 +197,6 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 
 
-
 **Conclusión general**
 
 Existen diferentes metodologías estadísticas para el completado y extendido de series, su aplicación en hidrología depende del tipo de parámetro hidroclimatológico a estudiar, del número de datos faltantes, del número de estaciones simultáneas evaluadas y de la ventana de tiempo definida para los análisis. Si bien existen metodologías geo-estadísticas en las que se evalúan las relaciones espaciales (basadas en distancia y/o proximidad, bandas de elevación y correlación con otros parámetros) entre las estaciones utilizadas, con los métodos estadísticos vecino natural - KNN o multivariante - MICE, se pueden obtener datos sintéticos que mantienen la tendencia general de la zona estudiada a partir de las estaciones definidas. Para el desarrollo de las actividades posteriores de este curso, usaremos las series de datos completadas y extendidas por el Método 8 - Multivariante con ecuación de encadenamiento - MICE, debido a que permite mantener la tendencia general de los datos zonales y valores similares de media y desviación estándar. 
@@ -186,10 +208,10 @@ En este momento, dispone de reportes detallados de completado y extendido de dat
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                         |
-|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                         |
+|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | A partir del script [Impute.py](../../.src/Impute.py), realice el completado y extendido de los parámetros climatológicos definidos como actividad complementaria en [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
-|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Impute.py](../../.src/Impute.py), presente un análisis cualitativo e identifique en que estaciones no se han obtenido datos sintéticos consistentes para los métodos implementados.                                                                                      | 
+|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Impute.py](../../.src/Impute.py), presente un análisis cualitativo e identifique en que estaciones no se han obtenido datos sintéticos consistentes para los métodos implementados.                                                                      | 
 
 
 ### Referencias
