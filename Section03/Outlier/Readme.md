@@ -472,15 +472,11 @@ print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analyt
 
 3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\Outlier.py](../../.src/Outlier.py), y defina las siguientes variables:
 
-* pivot_table_name = 'Pivot_PTPM_TT_M.csv': corresponde a la tabla dinámica (pivot table) a procesar, p.ej., Pivot_PTPM_TT_M.csv corresponde a datos de precipitación mensual total, Pivot_EV_TT_D.csv corresponde a datos de evaporación diaria total, Pivot_Q_MEDIA_M.csv corresponde a datos de caudal medio mensual, Pivot_TMN_CON.csv corresponde a datos de temperatura mínima diaria y Pivot_TMX_CON.csv corresponde a datos de temperatura máxima diaria.
-
-* q1_val = 0.1: cuartil inferior, el valor por defecto es 0.25 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.1 para excluir precipitaciones totales altas atípicas.
-
-* q3_val = 0.9: cuartil inferior, el valor por defecto es 0.75 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.9 para excluir precipitaciones totales bajas atípicas.
-
-* cap_multiplier = 4.5: multiplicado K-sigma, el valor por defecto es 3. En el método 1 este valor es usado para definir el límite de reemplazo de valores y en el método 2 para identificación de valores atípicos.
-
-* zscore_threshold = 4.5: límite de exclusión en Z-score del método 3, el valor por defecto es 3.  
+* `pivot_table_name = 'Pivot_PTPM_TT_M.csv'`: corresponde a la tabla dinámica (pivot table) a procesar, p.ej., Pivot_PTPM_TT_M.csv corresponde a datos de precipitación mensual total, Pivot_EV_TT_D.csv corresponde a datos de evaporación diaria total, Pivot_Q_MEDIA_M.csv corresponde a datos de caudal medio mensual, Pivot_TMN_CON.csv corresponde a datos de temperatura mínima diaria y Pivot_TMX_CON.csv corresponde a datos de temperatura máxima diaria.
+* `q1_val = 0.1`: cuartil inferior, el valor por defecto es 0.25 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.1 para excluir precipitaciones totales altas atípicas.
+* `q3_val = 0.9`: cuartil inferior, el valor por defecto es 0.75 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.9 para excluir precipitaciones totales bajas atípicas.
+* `cap_multiplier = 4.5`: multiplicado K-sigma, el valor por defecto es 3. En el método 1 este valor es usado para definir el límite de reemplazo de valores y en el método 2 para identificación de valores atípicos.
+* `zscore_threshold = 4.5`: límite de exclusión en Z-score del método 3, el valor por defecto es 3.  
 
 > Para los datos ejemplo de precipitación mensual total, la identificación de valores atípicos en el rango intercuartílico 0.1 a 0.9 es similar a la obtenida en los métodos 2 y 3 definiendo K-sigma y el Z-score en 4.5.
 > 
