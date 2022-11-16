@@ -274,6 +274,9 @@ Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los r
 ![R.LTWB](Screenshot/Windows11CMDEDA16.png)
 ![R.LTWB](Screenshot/Windows11CMDEDA17.png)
 
+
+### Tablas de resultados y análisis generales
+
 Durante el proceso de ejecución del script, se genera automáticamente las gráficas de análisis que son almacenadas en la carpeta [IDEAM_EDA/Graph](../../.datasets/IDEAM_EDA/Graph), un reporte integrado de resultados en formato Markdown con el nombre [D:\R.LTWB\.datasets\IDEAM_EDA\EDA.md](../../.datasets/IDEAM_EDA/EDA.md) y las siguientes tablas en formato .csv:
 
 | Tabla                                                                                        | Descripción                                                      | Estaciones |
