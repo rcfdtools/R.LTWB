@@ -50,12 +50,11 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
 Funcionalidades del script
 
-* Identificación de atípicos por 8 métodos estadísticos.
-* Permite definir la tabla dinámica (pivot table original o con valores atípicos identificados y ajustados) del parámetro hidroclimatológico a evaluar.
+* Completado y extendido de series por 8 métodos estadísticos.
+* Permite definir la tabla dinámica (pivot table original o con valores atípicos identificados, eliminados y/o ajustados) del parámetro hidroclimatológico a evaluar.
 * El usuario puede excluir estaciones del análisis a través de la variable `station_exclude` o definir las estaciones a utilizar a través de las variables `station_include` y `only_included`.
 * Análisis masivo de estaciones por parámetro hidroclimatológico con estadísticos, parámetros de evaluación y gráficas generales y detalladas por estación con representación de datos completados y/o extendidos.
 * Generación de reportes detallados Markdown y reporte complementario gráfico por estación para cada parámetro hidroclimatológico evaluado. [IDEAM_Impute](../../.datasets/IDEAM_Impute).
-* 
 * Para cada método y cada parámetro hidroclimatológico analizado, crea tablas en formato de texto separado por comas .csv.
 
 > Para el ejemplo, se han excluido diferentes estaciones con registros de caudal sobre el Río Magdalena y otros ríos con caudales altos.
@@ -65,7 +64,7 @@ Contenido del script
 ```
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Impute` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que las carpetas locales `D:\R.LTWB\.datasets\IDEAM_EDA` o  `D:\R.LTWB\.datasets\IDEAM_Outlier`, contengan los archivos de las tablas dinámicas de cada parámetro hicroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) o [IDEAM_Outlier](../../.datasets/IDEAM_Outlier) que fueron obtenidas en las actividades denominadas [EDA](../EDA) y [EDA](../Outlier).
+2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Impute` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que las carpetas locales `D:\R.LTWB\.datasets\IDEAM_EDA` y/o  `D:\R.LTWB\.datasets\IDEAM_Outlier`, contengan los archivos de las tablas dinámicas de cada parámetro hicroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) o [IDEAM_Outlier](../../.datasets/IDEAM_Outlier) que fueron obtenidas en las actividades denominadas [EDA](../EDA) y [Outlier](../Outlier).
 
 > Para la identificación de valores atípicos no son requeridas las tablas de datos de correlaciones identificadas con nombre terminado en _correlation.csv.
 > 
