@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # Name: Impute.py
 # Description: impute missing values in time series through statistical methods
-# Requirements: Python 3+, pandas, tabulate
+# Requirements: Python 3+, pandas, tabulate, numpy, missingno, sklearn
 # Attention: do not convert the .csv file into an Excel file because you would need process more than 1048576 records.
 
 
