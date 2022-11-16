@@ -72,13 +72,13 @@ Contenido del script
 
 3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\Impute.py](../../.src/Impute.py), y defina las siguientes variables:
 
-* `pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'`: corresponde a la tabla dinámica (pivot table) a procesar, p.ej., Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv corresponde a datos de precipitación mensual total, Outlier_IQR_Cap_Pivot_EV_TT_D.csv corresponde a datos de evaporación diaria total, Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv corresponde a datos de caudal medio mensual, Outlier_IQR_Cap_Pivot_TMN_CON.csv corresponde a datos de temperatura mínima diaria y Outlier_IQR_Cap_Pivot_TMX_CON.csv corresponde a datos de temperatura máxima diaria, todos  con ajuste de valores atípicos a partir del método de rango intercuartílico - IQR y reemplazo Cap con $\mu$ - K * $\sigma$.
-* `min_value = 0`: corresponde al valor mínimo a imputar en el Método 8 - MICE, p.ej, para lluvia, evaporación y caudal, el valor mínimo es cero, pero dependiendo de la zona geográfica y para temperatura mínima y máxima, este valor puede ser negativo y puede ser establecido como menos infinito (-inf). Para los datos del caso de estudio utilizaremos cero debido a que no existen estaciones con registros de temperatura negativos.
+* `pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'`: corresponde a la tabla dinámica (pivot table) a procesar, p.ej., Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv corresponde a datos de precipitación mensual total, Outlier_IQR_Cap_Pivot_EV_TT_D.csv corresponde a datos de evaporación diaria total, Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv corresponde a datos de caudal medio mensual, Outlier_IQR_Cap_Pivot_TMN_CON.csv corresponde a datos de temperatura mínima diaria y Outlier_IQR_Cap_Pivot_TMX_CON.csv corresponde a datos de temperatura máxima diaria, todos  con ajuste de valores atípicos a partir del método de rango intercuartílico - IQR y reemplazo Cap con $\mu$ +- K * $\sigma$.
+* `min_value = 0`: corresponde al valor mínimo a imputar en el Método 8 - MICE, p.ej, para lluvia, evaporación y caudal, el valor mínimo es cero, pero dependiendo de la zona geográfica y para temperatura mínima y máxima, este valor puede ser negativo y puede ser establecido como menos infinito `-inf`. Para los datos del caso de estudio utilizaremos cero debido a que no existen estaciones con registros de temperatura negativos.
 * `n_neighbors = 5`: número de vecinos naturales a utilizar en el Método 7 - KNN y en el Método 8 - MICE. Este valor depende del número de estaciones disponibles en cada parámetro. 
 
 > Debido a que en evaporación solo disponemos de una estación, no se realizarán procesos de imputación de datos faltantes para este parámetro.
 > 
-> Los resultados del Método 8 - MICE pueden variar de ejecución a ejecución del script debido al tipo de imputador utilizado.
+> Tenga en cuenta que los resultados del Método 8 - MICE pueden variar de ejecución a ejecución del script debido al tipo de imputador utilizado.
 
 ![R.LTWB](Screenshot/NotepadPlusImputepy.png)
 
@@ -121,9 +121,12 @@ Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.data
 
 ![R.LTWB](Screenshot/Windows11CMDOutlier27.png)
 
-Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md).
+De igual manera, en la carpeta local  `D:\R.LTWB\.datasets\IDEAM_Impute\Graph` se ha generado para cada estación, 8 gráficas de comparación de las series iniciales y las imputadas. Para las 130 estaciones, se han generado 1040 gráficas.
 
 ![R.LTWB](Screenshot/Windows11CMDOutlier28.png)
+
+Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [Impute_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md) y el reporte complementario de gráficos por estación [Impute_Station_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md).
+
 ![R.LTWB](Screenshot/Windows11CMDOutlier29.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier30.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier31.png)
