@@ -172,7 +172,7 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 </div>
 
->  Evalúe los datos sintéticos de precipitación generados en las estaciones 28010280 (489 meses faltantes de 504 definidos en la ventana de tiempo), 28040170 y 28010130.
+> Evalúe los datos sintéticos de precipitación generados en las estaciones 28010280 (489 meses faltantes de 504 definidos en la ventana de tiempo), 28040170 y 28010130.
 
 Al revisar los estadísticos característicos, p. ej. de la estación 15067080, correspondiente a datos de caudal medio mensual en m³/s, podrá observar los siguientes valores de media y desviación estándar:
 
@@ -195,7 +195,53 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15067080, 
 
 </div>
 
+> Evalúe los datos sintéticos de caudal generados en las estaciones 15067210 (476 meses faltantes de 504 definidos en la ventana de tiempo), 28017150 y 28047080.
 
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de temperatura mínima diaria en °C, podrá observar los siguientes valores de media y desviación estándar:
+
+![R.LTWB](Screenshot/Windows11CMDImpute40.png)
+
+<div align='center'>
+
+| Método                                                                                                   | $\mu$, media | $\sigma$, std |
+|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
+| Serie original                                                                                           | 22.1888      | 1.60856       |
+| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 22.1889      | 1.60836       |
+| M1. Imputación con media, $\mu$                                                                          | 22.1889      | 1.29618       |
+| M2. Imputación con mediana                                                                               | 22.2629      | 1.30009       |
+| M3. Imputación LOCF                                                                                      | 21.8967      | 1.49166       |
+| M4. Imputación NOCB                                                                                      | 22.4437      | 1.60576       |
+| M5. Imputación pir interpolación lineal                                                                  | 22.1279      | 1.37931       |
+| M6. Media móvil - EWM                                                                                    | 21.9331      | 1.50143       |
+| M7. Vecino natural - KNN                                                                                 | 22.4928      | 1.50449       |
+| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 22.3708      | 1.43403       |
+
+</div>
+
+> Evalúe los datos sintéticos de caudal generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045020 y 29065010.
+
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de temperatura máxima diaria en °C, podrá observar los siguientes valores de media y desviación estándar:
+
+![R.LTWB](Screenshot/Windows11CMDImpute41.png)
+
+<div align='center'>
+
+| Método                                                                                                   | $\mu$, media | $\sigma$, std |
+|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
+| Serie original                                                                                           | 33.0729      | 1.48932       |
+| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 33.0737      | 1.48617       |
+| M1. Imputación con media, $\mu$                                                                          | 33.0737      | 1.12933       |
+| M2. Imputación con mediana                                                                               | 33.1271      | 1.13106       |
+| M3. Imputación LOCF                                                                                      | 32.8218      | 1.43228       |
+| M4. Imputación NOCB                                                                                      | 31.9541      | 2.32025       |
+| M5. Imputación pir interpolación lineal                                                                  | 32.316       | 1.62844       |
+| M6. Media móvil - EWM                                                                                    | 32.6945      | 1.36275       |
+| M7. Vecino natural - KNN                                                                                 | 33.1279      | 1.30787       |
+| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 33.2334      | 1.28619       |
+
+</div>
+
+> Evalúe los datos sintéticos de caudal generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045040 y 29065010.
 
 **Conclusión general**
 
