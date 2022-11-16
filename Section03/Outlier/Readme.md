@@ -536,15 +536,15 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 <div align='center'>
 
-| Método                                                             | $\mu$, media | $\sigma$, std |
-|:-------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                     | 59.7829      | 74.2829       |
-| 1. Rango intercuartílico - IQR. Reemplazo con $\mu$ - K * $\sigma$ | 59.718       | 73.9846       |
-| 1. Rango intercuartílico - IQR. Imputación con $\mu$               | 57.7459      | 69.3425       |
-| 2. Regla empírica - ER. Reemplazo con $\mu$ - K * $\sigma$         | 59.718       | 73.9846       |
-| 2. Regla empírica - ER. Imputación con $\mu$                       | 57.7459      | 69.3425       |
-| 3. Z-score o núcleo estándar. Reemplazo con $\mu$ - K * $\sigma$   | 59.718       | 73.9846       |
-| 3. Z-score o núcleo estándar. Imputación con $\mu$                 | 57.7459      | 69.3425       |
+| Método                                                              | $\mu$, media | $\sigma$, std |
+|:--------------------------------------------------------------------|:-------------|:--------------|
+| Serie original                                                      | 59.7829      | 74.2829       |
+| 1. Rango intercuartílico - IQR. Reemplazo con $\mu$ +- K * $\sigma$ | 59.718       | 73.9846       |
+| 1. Rango intercuartílico - IQR. Imputación con $\mu$                | 57.7459      | 69.3425       |
+| 2. Regla empírica - ER. Reemplazo con $\mu$ +- K * $\sigma$         | 59.718       | 73.9846       |
+| 2. Regla empírica - ER. Imputación con $\mu$                        | 57.7459      | 69.3425       |
+| 3. Z-score o núcleo estándar. Reemplazo con $\mu$ +- K * $\sigma$   | 59.718       | 73.9846       |
+| 3. Z-score o núcleo estándar. Imputación con $\mu$                  | 57.7459      | 69.3425       |
 
 </div>
 
@@ -559,10 +559,10 @@ En este momento, dispone de reportes detallados de análisis por cada parámetro
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                |
-|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir el script [Outlier.py](../../.src/Outlier.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
-|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../.src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                                                | 
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                 |
+|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | A partir del script [Outlier.py](../../.src/Outlier.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
+|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../.src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                                                 | 
 
 
 ### Referencias

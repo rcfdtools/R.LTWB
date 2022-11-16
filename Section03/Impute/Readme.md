@@ -149,7 +149,7 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 | [Impute_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)<br>[Impute_Station_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)          | Temperatura diaria mínima, °C.   |     25     |   15341   |  173702   | 173702 | 173702 | 148100 | 86276  | 148100 | 148100 | 173702 | 173702 |
 | [Impute_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md)<br>[Impute_Station_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md)          | Temperatura diaria máxima, °C.   |     25     |   15341   |  197676   | 197676 | 197676 | 169785 | 108658 | 169785 | 169785 | 197676 | 197676 |
 
-> En la tabla anterior, las columnas M1 a M8 contienen el número de datos imputados.
+> En la tabla anterior, las columnas M1 a M8 contienen el número de datos imputados por cada método utilizado.
 >
 > Para todos los parámetros se han utilizado 5 vecinos naturales para la generación de datos sintéticos por los métodos KNN y MICE.  
 
@@ -157,36 +157,39 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 <div align='center'>
 
-| Método                                                                                                  | $\mu$, media | $\sigma$, std |
-|:--------------------------------------------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                                                          | 59.7829      | 74.2829       |
-| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ - K * $\sigma$ | 59.718       | 73.9846       |
-| M1. Imputación con media, $\mu$                                                                         | 59.718       | 60.6479       |
-| M2. Imputación con mediana                                                                              | 50.0217      | 62.2231       |
-| M3. Imputación LOCF                                                                                     | 54.6675      | 68.6241       |
-| M4. Imputación NOCB                                                                                     | 70.1873      | 73.8053       |
-| M5. Imputación pir interpolación lineal                                                                 | 55.7429      | 70.1337       |
-| M6. Media móvil - EWM                                                                                   | 64.0103      | 61.0386       |
-| M7. Vecino natural - KNN                                                                                | 56.6695      | 68.2329       |
-| M8. Multivariante con ecuación de encadenamiento - MICE                                                 | 59.5799      | 71.8106       |
+| Método                                                                                                   | $\mu$, media | $\sigma$, std |
+|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
+| Serie original                                                                                           | 59.7829      | 74.2829       |
+| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 59.718       | 73.9846       |
+| M1. Imputación con media, $\mu$                                                                          | 59.718       | 60.6479       |
+| M2. Imputación con mediana                                                                               | 50.0217      | 62.2231       |
+| M3. Imputación LOCF                                                                                      | 54.6675      | 68.6241       |
+| M4. Imputación NOCB                                                                                      | 70.1873      | 73.8053       |
+| M5. Imputación pir interpolación lineal                                                                  | 55.7429      | 70.1337       |
+| M6. Media móvil - EWM                                                                                    | 64.0103      | 61.0386       |
+| M7. Vecino natural - KNN                                                                                 | 56.6695      | 68.2329       |
+| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 59.5799      | 71.8106       |
 
 </div>
 
+
+
+
 **Conclusión general**
 
-De acuerdo a los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen similares los estadísticos característicos.  
+Existen diferentes metodologías estadísticas para el completado y extendido de series, su aplicación en hidrología depende del tipo de parámetro hidroclimatológico a estudiar, del número de datos faltantes, del número de estaciones simultáneas evaluadas y de la ventana de tiempo definida para los análisis. Si bien existen metodologías geo-estadísticas en las que se evalúan las relaciones espaciales (basadas en distancia y/o proximidad, bandas de elevación y correlación con otros parámetros) entre las estaciones utilizadas, con métodos estadísticos como vecino natural - KNN o multivariante - MICE, se pueden obtener datos sintéticos que mantienen la tendencia general de la zona estudiada a partir de las estaciones definidas. Para el desarrollo de las actividades posteriores de este curso, usaremos las series de datos completadas y extendidas por el Método 8 Multivariante con ecuación de encadenamiento - MICE, debido a que permite mantener la tendencia general de los datos zonales y utiliza como semilla la media propia de cada estación. 
 
-En este momento, dispone de reportes detallados de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
+En este momento, dispone de reportes detallados de completado y extendido de datos por cada parámetro hidroclimatológico y diferentes tablas en formato de texto separado por comas `.csv` para los diferentes métodos implementados.
 
 
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                |
-|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir el script [Outlier.py](../../.src/Outlier.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
-|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../.src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                                                | 
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                               |
+|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | A partir del script [Impute.py](../../.src/Impute.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad. |
+|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Impute.py](../../.src/Impute.py), presente un análisis cualitativo e identifique en que estaciones no se han obtenido datos sintéticos consistentes para los métodos implementados.                                                                                            | 
 
 
 ### Referencias
@@ -205,13 +208,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                                                                                                                    | Autor                                      | Horas |
-|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.11.07 | Documentación general. Ejecución para precipitación, evaporación, caudal, temperatura mínima y temperatura máxima. Ajuste de valores de exclusión en método 3 a partir del valor absoluto Z-score obtenido para cada dato. Ilustración cabecera y diagrama de procesos.                                        | [rcfdtools](https://github.com/rcfdtools)  |  7.5  |
-| 2022.11.05 | Método 2: funciones para identificación, eliminación, reemplazo e imputación. Generador documento detallado análisis Markdown. Método 3: Z-Score. Idéntico al método 2 con la diferencia que se crea la tabla de puntajes. Al utilizar el k-sigma igual al Z-score threshold, se obtienen los mismos outliers. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
-| 2022.11.04 | Método 1: inclusión de reemplazo de outliers usando rango definido  (mean() +- cap_multiplier * std()).                                                                                                                                                                                                        | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-| 2022.11.03 | Método 1: inclusión de límites de reemplazo en tabla de parámetros IQR. Ajuste de datos descartando outliers identificados (drop). Método 2, borrador:  identificación de outliers y reemplaza con valores cap con  (mean() +- cap_multiplier * std())                                                         | [rcfdtools](https://github.com/rcfdtools)  |  4.5  |
-| 2022.11.02 | Método 1: Rango intercuartílico definido por usuario. Tabla de marcación. Tabla de análisis. Gráfico de análisis.                                                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)  |   8   |
+| Versión    | Descripción | Autor                                      | Horas |
+|------------|:------------|--------------------------------------------|:-----:|
+| 2022.11.07 |             | [rcfdtools](https://github.com/rcfdtools)  |  xx   |
+
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
@@ -220,6 +220,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Actividad anterior](../Outlier) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]() |
 |----------------------------------|---------------------------|---------------------------------------------------------------------------|-------------------------|
 
-[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
-[^2]: https://www.investopedia.com/terms/e/empirical-rule.asp
-[^3]: Adapted from: https://www.geeksforgeeks.org/z-score-for-outlier-detection-python/
