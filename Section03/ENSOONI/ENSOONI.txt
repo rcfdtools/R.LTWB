@@ -1,0 +1,27 @@
+
+
+Convert a string index values in integer list values x = list(map(int, df_out.index.values))
+
+
+
+* http://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt
+* https://www.climate.gov/maps-data/dataset/el-ni%C3%B1o-southern-oscillation-indicators
+* https://www.climate.gov/news-features/blogs/enso/what-el-ni%C3%B1o%E2%80%93southernoscillation-
+enso-nutshell
+* http://www.cpc.ncep.noaa.gov/products/precip/Cwlink/MJO/enso.shtml
+* http://www.cpc.ncep.noaa.gov/data/indices/
+* https://stackoverflow.com/questions/33509627/using-pandas-to-read-in-txt-file-using-delimiters-creates-nans-columns
+
+* https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php
+
+* https://stackoverflow.com/questions/43941245/line-plot-with-data-points-in-pandas
+
+* https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1
+
+* https://matplotlib.org/stable/gallery/color/named_colors.html
+
+Notice: This page is updated automatically on the first Thursday of each month. Because of the high frequency filter applied to the ERSSTv5 data (Huang et al. 2017, J.Climate), ONI values may change up to two months after the initial "real time" value is posted. Therefore, the most recent ONI values should be considered an estimate.
+
+DESCRIPTION: Warm (red) and cold (blue) periods based on a threshold of +/- 0.5oC for the Oceanic Niño Index (ONI) [3 month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5oN-5oS, 120o-170oW)], based on centered 30-year base periods updated every 5 years.
+
+For historical purposes, periods of below and above normal SSTs are colored in blue and red when the threshold is met for a minimum of 5 consecutive overlapping seasons. The ONI is one measure of the El Niño-Southern Oscillation, and other indices can confirm whether features consistent with a coupled ocean-atmosphere phenomenon accompanied these periods.
