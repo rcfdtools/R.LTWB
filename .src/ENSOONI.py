@@ -96,7 +96,7 @@ print_log('\n* Ascii file from: %s' % url_file +
           '\n* Records: %d' % records +
           '\n* Years: %f\n' % (records/ 12))
 print_log('\nTable records', center_div=True)
-print_log(df.to_markdown(), center_div=True)
+print_log(df.T.to_markdown(), center_div=True)
 # Plot historic values
 ax = df.plot(x='YR', y='TOTAL',  color='black', legend=False, figsize=(fig_size*2, fig_size*1.5), kind='line', grid=False, style='.-', ms=4, mfc='black', mec='black', linewidth=0.75)
 plt.title('ENSO ONI - Historic records')
