@@ -1,7 +1,7 @@
 # NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral
 
 * Processed file: [D:/R.LTWB/.datasets/ENSOONI/ONI_Ascii_20221118.txt](../ENSOONI/ONI_Ascii_20221118.txt)
-* Execution date: 2022-11-18 09:47:22.233899
+* Execution date: 2022-11-18 09:51:08.753600
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
@@ -1004,6 +1004,9 @@ Table records
 * Records: 873
 * Years: 72.750000
 
+
+<div align="center">
+
 |   YR |   NinaCount |   NinoCount |   NeutralCount | Event   |   EventMark |   EventLabel |
 |-----:|------------:|------------:|---------------:|:--------|------------:|-------------:|
 | 1950 |           7 |           0 |              5 | Niña    |          -1 |            7 |
@@ -1079,5 +1082,8 @@ Table records
 | 2020 |           5 |           1 |              6 | Niña    |          -1 |            5 |
 | 2021 |           4 |           0 |              8 | Neutral |           0 |            8 |
 | 2022 |           8 |           0 |              4 | Niña    |          -1 |            8 |
+
+</div>
+
 
 ![R.LTWB](ONI_Eval_NonConsecutive.png)
