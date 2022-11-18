@@ -76,6 +76,7 @@ print(file_download_text)
 
 # Header
 print_log('# NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral')
+print_log('\nThe following analysis are based on a threshold of +/- 0.5oC for the Oceanic Niño Index (ONI) [3 month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5oN-5oS, 120o-170oW)], based on centered 30-year base periods updated every 5 years.\nThe ONI is one measure of the El Niño-Southern Oscillation, and other indices can confirm whether features consistent with a coupled ocean-atmosphere phenomenon accompanied these periods.[^1]')
 print_log('\n* Processed file: [%s](%s)' % (str(file_save), '../ENSOONI/' + local_file + '_' + current_date_txt + file_extension) +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
@@ -90,7 +91,6 @@ print_log('\n* Processed file: [%s](%s)' % (str(file_save), '../ENSOONI/' + loca
 
 # General information
 print_log('\n## General ONI Ascii file information')
-#print_log(str(df.info()))
 print_log('\nAscii file from: %s' % url_file)
 print_log('\nTable records', center_div=True)
 print_log(df.to_markdown(), center_div=True)
@@ -256,3 +256,5 @@ plt.savefig(path + analysis_file + '_Consecutive.png', dpi=150)
 if show_plot: plt.show()
 plt.close('all')
 print_log('\n![R.LTWB](%s)' % (analysis_file + '_NonConsecutive.png'), center_div=False)
+
+print_log('\n[^1]: https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php')
