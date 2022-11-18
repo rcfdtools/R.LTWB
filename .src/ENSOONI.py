@@ -117,12 +117,12 @@ plt.close('all')
 
 
 # Processing n non-consecutive overlapping seasons
-print('\n\n## ENSO ONI yearly events classification with %s non-consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
+print_log('\n\n## ENSO ONI yearly events classification with %s non-consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
 columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
 df_out = pd.DataFrame(columns=columns)
 start_year = df['YR'].min()
 records = int(df.shape[0])
-print('\n* Records: %d' % records +
+print_log('\n* Records: %d' % records +
       '\n* Years: %f\n' % (records/ 12))
 nina_count, nino_count = 0, 0
 for i in range (records):
@@ -160,7 +160,7 @@ convert_dict = {'NinaCount': int,
                 'EventLabel': int
                 }
 df_out = df_out.astype(convert_dict)
-print(df_out.to_markdown())
+print_log(df_out.to_markdown(), center_div=True)
 df_out.to_csv(path + analysis_file + '_NonConsecutive.csv', encoding='latin-1')
 # Plot event graph
 x = np.arange(0, df_out.shape[0]-1, 1)
@@ -176,15 +176,16 @@ for index in range(df_out.shape[0]-1):
 plt.savefig(path + analysis_file + '_NonConsecutive.png', dpi=150)
 if show_plot: plt.show()
 plt.close('all')
+print_log('\n![R.LTWB](%s)' % (analysis_file + '_NonConsecutive.png'), center_div=False)
 
 
 # Processing n consecutive overlapping seasons
-print('\n\n## ENSO ONI yearly events classification with %s consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
+print_log('\n\n## ENSO ONI yearly events classification with %s consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
 columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
 df_out = pd.DataFrame(columns=columns)
 start_year = df['YR'].min()
 records = int(df.shape[0])
-print('\n* Records: %d' % records +
+print_log('\n* Records: %d' % records +
       '\n* Years: %f\n' % (records/ 12))
 nina_count, nino_count, nina_max, nino_max = 0, 0, 0, 0
 for i in range(records):
@@ -238,7 +239,7 @@ convert_dict = {'NinaCount': int,
                 'EventLabel': int
                 }
 df_out = df_out.astype(convert_dict)
-print(df_out.to_markdown())
+print_log(df_out.to_markdown())
 df_out.to_csv(path + analysis_file + '_Consecutive.csv', encoding='latin-1')
 # Plot event graph
 x = np.arange(0, df_out.shape[0]-1, 1)
@@ -254,3 +255,4 @@ for index in range(df_out.shape[0]-1):
 plt.savefig(path + analysis_file + '_Consecutive.png', dpi=150)
 if show_plot: plt.show()
 plt.close('all')
+print_log('\n![R.LTWB](%s)' % (analysis_file + '_NonConsecutive.png'), center_div=False)
