@@ -4,7 +4,7 @@ The following analysis are based on a threshold of +/- 0.5°C for the Oceanic Niñ
 The ONI is one measure of the El Niño-Southern Oscillation, and other indices can confirm whether features consistent with a coupled ocean-atmosphere phenomenon accompanied these periods.[^1]
 
 * Processed file: [D:/R.LTWB/.datasets/ENSOONI/ONI_Ascii_20221118.txt](../ENSOONI/ONI_Ascii_20221118.txt)
-* Execution date: 2022-11-18 10:12:32.682992
+* Execution date: 2022-11-18 10:13:55.184230
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
@@ -917,8 +917,12 @@ Table records
 
 ## ENSO ONI yearly events classification with 5 non-consecutive overlapping seasons and 0.5°C threshold
 
-* Records: 873
-* Years: 72.750000
+<div align="center">
+
+
+Table records
+
+</div>
 
 
 <div align="center">
@@ -1006,6 +1010,14 @@ Table records
 
 
 ## ENSO ONI yearly events classification with 5 consecutive overlapping seasons and 0.5°C threshold
+
+<div align="center">
+
+
+Table records
+
+</div>
+
 
 <div align="center">
 
