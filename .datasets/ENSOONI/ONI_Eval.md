@@ -1,7 +1,7 @@
 # NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral
 
 * Processed file: [D:/R.LTWB/.datasets/ENSOONI/ONI_Ascii_20221118.txt](../ENSOONI/ONI_Ascii_20221118.txt)
-* Execution date: 2022-11-18 09:38:12.895929
+* Execution date: 2022-11-18 09:38:44.817707
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython']
 * matplotlib version: 3.6.0
