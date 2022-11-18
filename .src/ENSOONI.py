@@ -256,6 +256,6 @@ for index in range(df_out.shape[0]-1):
 plt.savefig(path + analysis_file + '_Consecutive.png', dpi=150)
 if show_plot: plt.show()
 plt.close('all')
-print_log('\n![R.LTWB](%s)' % (analysis_file + '_NonConsecutive.png'), center_div=False)
+print_log('\n![R.LTWB](%s)' % (analysis_file + '_Consecutive.png'), center_div=False)
 
 print_log('\n[^1]: https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php')
