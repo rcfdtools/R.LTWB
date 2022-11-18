@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Name: ENSOONI.py
-# Description: get the NOOA oni.ascii.txt and classify the climatological phenomenas Niño, Niña and Neutral.
+# Description: get the NOAA oni.ascii.txt and classify the climatological events Niño, Niña and Neutral.
 # Requirements: Python 3+, pandas, tabulate, numpy, missingno, sklearn
 # SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
 
@@ -10,6 +10,7 @@ from datetime import datetime
 from datetime import date
 import requests
 import os.path
+import sys
 import pandas as pd
 import numpy as np
 import matplotlib
@@ -18,14 +19,27 @@ import matplotlib.pyplot as plt
 
 # General variables
 url_file = 'https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt'
-local_file = 'oni_ascii'
+local_file = 'ONI_Ascii'
 file_extension = '.txt'
 path = 'D:/R.LTWB/.datasets/ENSOONI/'  # Your local output path, use ../.datasets/ENSOONI/ for relative path
-analysis_File = 'oni_eval.csv'  # Output analysis file
+analysis_file = 'ONI_Eval'  # Output analysis file name
+file_log_name = path + analysis_file + '.md'  # Markdown file log
+file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 fig_size = 5  # Height size for figures plot
 show_plot = False  # Show plots in screen
 threshold = 0.5  # Temperature anomaly grader in °C
 consecutive_event = 5  # Number of consecutive events
+
+
+# Function for print and show results in a file
+def print_log(txt_print, on_screen=True, center_div=False):
+    if on_screen:
+        print(txt_print)
+    if center_div:
+        file_log.write('\n<div align="center">\n' + '\n')
+    file_log.write(txt_print + '\n')
+    if center_div:
+        file_log.write('\n</div>\n' + '\n')
 
 
 # Function for eval the count events
@@ -58,8 +72,48 @@ if file_request:
         file_download_text = 'File downloaded and updated = Yes'
 df = pd.read_csv(file_save, sep='\s+')
 print(file_download_text)
-#print(df.info())
-#print(df.to_markdown())
+
+
+# Header
+print_log('# NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral')
+print_log('\n* Processed file: [%s](%s)' % (str(file_save), '../ENSOONI/' + local_file + '_' + current_date_txt + file_extension) +
+          '\n* Execution date: ' + str(datetime.now()) +
+          '\n* Python version: ' + str(sys.version) +
+          '\n* Python path: ' + str(sys.path[0:5]) +
+          '\n* matplotlib version: ' + str(matplotlib.__version__) +
+          '\n* pandas version: ' + str(pd.__version__) +
+          '\n* numpy version: ' + str(np.__version__) +
+          '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI'
+          '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
+          '\n* Credits: r.cfdtools@gmail.com')
+
+
+# General information
+print_log('\n## General ONI Ascii file information')
+#print_log(str(df.info()))
+print_log('\nAscii file from: %s' % url_file)
+print_log('\nTable records')
+print_log(df.to_markdown(), center_div=True)
+# Plot historic values
+ax = df.plot(x='YR', y='TOTAL',  color='black', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=False, style='.-', ms=4, mfc='black', mec='black', linewidth=0.75)
+plt.title('ENSO ONI - Historic records')
+ax.set_ylabel('Seasonal value °C')
+plt.grid(color='silver', linestyle='-', linewidth=0.25, alpha=0.5)
+plt.savefig(path + local_file + file_extension + '_Historic.png', dpi=150)
+if show_plot: plt.show()
+plt.close('all')
+print_log('\n![R.LTWB](%s)' % (local_file + file_extension + '_Historic.png'), center_div=False)
+# Plot anomaly values
+ax = df.plot(x='YR', y='ANOM',  color='black', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=False, style='.-', ms=4, mfc='black', mec='black', linewidth=0.75)
+plt.title('ENSO ONI - Anomaly records')
+ax.set_ylabel('Seasonal value °C')
+plt.grid(color='silver', linestyle='-', linewidth=0.25, alpha=0.5)
+y_ticks = np.arange(-2.5, 3.5, 0.5)
+plt.yticks(y_ticks)
+plt.savefig(path + local_file + file_extension + '_Anomaly.png', dpi=150)
+if show_plot: plt.show()
+print_log('\n![R.LTWB](%s)' % (local_file + file_extension + '_Anomaly.png'), center_div=False)
+plt.close('all')
 
 
 # Processing n non-consecutive overlapping seasons
@@ -107,19 +161,19 @@ convert_dict = {'NinaCount': int,
                 }
 df_out = df_out.astype(convert_dict)
 print(df_out.to_markdown())
-df_out.to_csv(path + 'NonConsecutive_' + analysis_File, encoding='latin-1')
+df_out.to_csv(path + analysis_file + '_NonConsecutive.csv', encoding='latin-1')
 # Plot event graph
 x = np.arange(0, df_out.shape[0]-1, 1)
 x_label = np.arange(int(df_out.index.values.min()), int(df_out.index.values.max()), 1)
-ax = df_out.plot(y='EventMark',  color='skyblue', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=True, style='.-', ms=16, mfc='skyblue', mec='skyblue', linewidth=0.75)
-plt.title('ENSO ONI - Events with %s non consecutive overlapping seasons\n\n' % consecutive_event)
+ax = df_out.plot(y='EventMark',  color='silver', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=True, style='.-', ms=12, mfc='silver', mec='silver', linewidth=0.25)
+plt.title('ENSO ONI - Events with %s non consecutive overlapping seasons\n' % consecutive_event)
 plt.yticks([-1, 0, 1], ['Niña\n(cold & wet)\nAnom. ≤ -%s°C' % str(threshold), 'Neutro', 'Niño\n(hot & dry)\nAnom. ≥ %s°C' % str(threshold)])
 plt.xticks(x, x_label, rotation=90, size=9)
 ax.set_ylabel('Event')
-plt.grid(color='silver', linestyle='-', linewidth=0.25, alpha=0.5)
+plt.grid(color='silver', linestyle='-', linewidth=0.1, alpha=0.25)
 for index in range(df_out.shape[0]-1):
-    ax.text(x[index], df_out['EventMark'][index], str(x_label[index]) + ' (' + str(df_out['EventLabel'][index]) + ')', size=9, rotation=60)
-plt.savefig(path + 'NonConsecutive_' + analysis_File + '.png')
+    ax.text(x[index], df_out['EventMark'][index], str(x_label[index]) + ' (' + str(df_out['EventLabel'][index]) + ')', size=7, rotation=80)
+plt.savefig(path + analysis_file + '_NonConsecutive.png', dpi=150)
 if show_plot: plt.show()
 plt.close('all')
 
@@ -185,18 +239,18 @@ convert_dict = {'NinaCount': int,
                 }
 df_out = df_out.astype(convert_dict)
 print(df_out.to_markdown())
-df_out.to_csv(path + 'Consecutive_' + analysis_File, encoding='latin-1')
+df_out.to_csv(path + analysis_file + '_Consecutive.csv', encoding='latin-1')
 # Plot event graph
 x = np.arange(0, df_out.shape[0]-1, 1)
 x_label = np.arange(int(df_out.index.values.min()), int(df_out.index.values.max()), 1)
-ax = df_out.plot(y='EventMark',  color='skyblue', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=True, style='.-', ms=16, mfc='skyblue', mec='skyblue', linewidth=0.75)
-plt.title('ENSO ONI - Events with %s consecutive overlapping seasons\n\n' % consecutive_event)
+ax = df_out.plot(y='EventMark',  color='silver', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=True, style='.-', ms=12, mfc='silver', mec='silver', linewidth=0.25)
+plt.title('ENSO ONI - Events with %s consecutive overlapping seasons\n' % consecutive_event)
 plt.yticks([-1, 0, 1], ['Niña\n(cold & wet)\nAnom. ≤ -%s°C' % str(threshold), 'Neutro', 'Niño\n(hot & dry)\nAnom. ≥ %s°C' % str(threshold)])
 plt.xticks(x, x_label, rotation=90, size=9)
 ax.set_ylabel('Event')
-plt.grid(color='silver', linestyle='-', linewidth=0.25, alpha=0.5)
+plt.grid(color='silver', linestyle='-', linewidth=0.1, alpha=0.25)
 for index in range(df_out.shape[0]-1):
-    ax.text(x[index], df_out['EventMark'][index], str(x_label[index]) + ' (' + str(df_out['EventLabel'][index]) + ')', size=9, rotation=60)
-plt.savefig(path + 'Consecutive_' + analysis_File + '.png')
+    ax.text(x[index], df_out['EventMark'][index], str(x_label[index]) + ' (' + str(df_out['EventLabel'][index]) + ')', size=7, rotation=80)
+plt.savefig(path + analysis_file + '_Consecutive.png', dpi=150)
 if show_plot: plt.show()
 plt.close('all')
