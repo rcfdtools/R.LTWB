@@ -121,6 +121,7 @@ plt.close('all')
 
 # Processing n non-consecutive overlapping seasons
 print_log('\n\n## ENSO ONI yearly events classification with %s non-consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
+print_log('\nClassification file: [%s](%s)' % (analysis_file + '_NonConsecutive.csv', analysis_file + '_NonConsecutive.csv'))
 columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
 df_out = pd.DataFrame(columns=columns)
 start_year = df['YR'].min()
@@ -182,6 +183,7 @@ print_log('\n![R.LTWB](%s)' % (analysis_file + '_NonConsecutive.png'), center_di
 
 # Processing n consecutive overlapping seasons
 print_log('\n\n## ENSO ONI yearly events classification with %s consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
+print_log('\nClassification file: [%s](%s)' % (analysis_file + '_Consecutive.csv', analysis_file + '_Consecutive.csv'))
 columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
 df_out = pd.DataFrame(columns=columns)
 start_year = df['YR'].min()
