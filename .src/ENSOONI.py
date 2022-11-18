@@ -72,6 +72,7 @@ if file_request:
         file_download_text = 'File downloaded and updated = Yes'
 df = pd.read_csv(file_save, sep='\s+')
 print(file_download_text)
+records = int(df.shape[0])
 
 
 # Header
@@ -91,7 +92,9 @@ print_log('\n* Processed file: [%s](%s)' % (str(file_save), '../ENSOONI/' + loca
 
 # General information
 print_log('\n## General ONI Ascii file information')
-print_log('\nAscii file from: %s' % url_file)
+print_log('\n* Ascii file from: %s' % url_file +
+          '\n* Records: %d' % records +
+          '\n* Years: %f\n' % (records/ 12))
 print_log('\nTable records', center_div=True)
 print_log(df.to_markdown(), center_div=True)
 # Plot historic values
@@ -121,7 +124,6 @@ print_log('\n\n## ENSO ONI yearly events classification with %s non-consecutive 
 columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
 df_out = pd.DataFrame(columns=columns)
 start_year = df['YR'].min()
-records = int(df.shape[0])
 print_log('\n* Records: %d' % records +
       '\n* Years: %f\n' % (records/ 12))
 nina_count, nino_count = 0, 0
@@ -184,9 +186,6 @@ print_log('\n\n## ENSO ONI yearly events classification with %s consecutive over
 columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
 df_out = pd.DataFrame(columns=columns)
 start_year = df['YR'].min()
-records = int(df.shape[0])
-print_log('\n* Records: %d' % records +
-      '\n* Years: %f\n' % (records/ 12))
 nina_count, nino_count, nina_max, nino_max = 0, 0, 0, 0
 for i in range(records):
     start_year_aux = df['YR'][i]
