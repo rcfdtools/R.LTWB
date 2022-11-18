@@ -161,7 +161,7 @@ convert_dict = {'NinaCount': int,
                 'EventLabel': int
                 }
 df_out = df_out.astype(convert_dict)
-print_log('\nTable records', center_div=True)
+print_log('\nResults table', center_div=True)
 print_log(df_out.to_markdown(), center_div=True)
 df_out.to_csv(path + analysis_file + '_NonConsecutive.csv', encoding='latin-1')
 # Plot event graph
@@ -239,7 +239,7 @@ convert_dict = {'NinaCount': int,
                 'EventLabel': int
                 }
 df_out = df_out.astype(convert_dict)
-print_log('\nTable records', center_div=True)
+print_log('\nResults table', center_div=True)
 print_log(df_out.to_markdown(), center_div=True)
 df_out.to_csv(path + analysis_file + '_Consecutive.csv', encoding='latin-1')
 # Plot event graph
