@@ -1,24 +1,7 @@
 
 
-Convert a string index values in integer list values x = list(map(int, df_out.index.values))
+Sample for convert a string index values in integer list values x = list(map(int, df_out.index.values))
 
-
-
-* http://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt
-* https://www.climate.gov/maps-data/dataset/el-ni%C3%B1o-southern-oscillation-indicators
-* https://www.climate.gov/news-features/blogs/enso/what-el-ni%C3%B1o%E2%80%93southernoscillation-
-enso-nutshell
-* http://www.cpc.ncep.noaa.gov/products/precip/Cwlink/MJO/enso.shtml
-* http://www.cpc.ncep.noaa.gov/data/indices/
-* https://stackoverflow.com/questions/33509627/using-pandas-to-read-in-txt-file-using-delimiters-creates-nans-columns
-
-* https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php
-
-* https://stackoverflow.com/questions/43941245/line-plot-with-data-points-in-pandas
-
-* https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1
-
-* https://matplotlib.org/stable/gallery/color/named_colors.html
 
 Notice: This page is updated automatically on the first Thursday of each month. Because of the high frequency filter applied to the ERSSTv5 data (Huang et al. 2017, J.Climate), ONI values may change up to two months after the initial "real time" value is posted. Therefore, the most recent ONI values should be considered an estimate.
 
