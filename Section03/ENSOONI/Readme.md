@@ -36,7 +36,7 @@ Para la clasificación de los años con eventos de Niño, Niña o Neutros, en es
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para realizar la descarga, procesamiento y marcado de años por fenómeno climatológico, descargue el script [ENSOONI.py.py](../../.src/ENSOONI.py.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
+1. Para realizar la descarga, procesamiento y marcado de años por fenómeno climatológico, descargue el script [ENSOONI.py](../../.src/ENSOONI.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 **Funcionalidades del script**
 
@@ -327,12 +327,12 @@ print_log('\n[^1]: https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring
 
 El archivo oni.ascii.txt de la NOAA utiliza la siguiente estructura:
 
-| Atributo | Tipo   | Descripción                                                                                                               |
-|----------|--------|---------------------------------------------------------------------------------------------------------------------------|
-| SEAS     | object | Periodo correspondiente a la media móvil de 3 meses, p.ej. DJF corresponde a diciembre, enero y febrero                   |
-| YR       | int64  | Año asociado al periodo                                                                                                   |
-| TOTAL    | int64  | Temperatura en °C                                                                                                         |
-| ANOM     | int64  | Anomalía de temperatura en °C correspondiente a la diferencia entre la temperatura registrada y la media móvil de 30 años |
+| Atributo | Tipo   | Descripción                                                                                                                |
+|----------|--------|:---------------------------------------------------------------------------------------------------------------------------|
+| SEAS     | object | Periodo correspondiente a la media móvil de 3 meses, p.ej. DJF corresponde a diciembre, enero y febrero                    |
+| YR       | int64  | Año asociado al periodo                                                                                                    |
+| TOTAL    | int64  | Temperatura en °C                                                                                                          |
+| ANOM     | int64  | Anomalía de temperatura en °C correspondiente a la diferencia entre la temperatura registrada y la media móvil de 30 años  |
 
 ![R.LTWB](Screenshot/Windows11CMDENSOONI1.png)
 ![R.LTWB](Screenshot/Windows11CMDENSOONI2.png)
@@ -378,7 +378,7 @@ Los archivos de resultados .csv generados por el script utilizan la siguiente es
 
 > En la tabla anterior, el campo `Tipo` es asociado a los tipos obtenidos en el dataframe procesado por Pandas en Python.  
 
-En este momento, dispone de un reporte detallado de marcación de años por evento climatológico y dos tablas en formato de texto separado por comas `.csv` para la posterior segmentación de las series de parámetros hidroclimatológicos.
+En este momento, dispone del reporte detallado de marcación de años por evento climatológico [ONI_Eval.md](../../.datasets/ENSOONI/ONI_Eval.md) y dos tablas en formato de texto separado por comas `.csv` para la posterior segmentación de las series de parámetros hidroclimatológicos.
 
 
 ### Actividades complementarias:pencil2:
