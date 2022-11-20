@@ -327,12 +327,12 @@ print_log('\n[^1]: https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring
 
 El archivo oni.ascii.txt de la NOAA utiliza la siguiente estructura:
 
-| Atributo | Tipo   | Descripción                                                                                                                |
-|----------|--------|:---------------------------------------------------------------------------------------------------------------------------|
-| SEAS     | object | Periodo correspondiente a la media móvil de 3 meses, p.ej. DJF corresponde a diciembre, enero y febrero                    |
-| YR       | int64  | Año asociado al periodo                                                                                                    |
-| TOTAL    | int64  | Temperatura en °C                                                                                                          |
-| ANOM     | int64  | Anomalía de temperatura en °C correspondiente a la diferencia entre la temperatura registrada y la media móvil de 30 años  |
+| Atributo | Tipo   | Descripción                                                                                                                                                                              |
+|----------|--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SEAS     | object | Periodo correspondiente a la media móvil de 3 meses, p.ej. DJF corresponde a diciembre, enero y febrero                                                                                  |
+| YR       | int64  | Año asociado al periodo                                                                                                                                                                  |
+| TOTAL    | int64  | Temperatura en °C                                                                                                                                                                        |
+| ANOM     | int64  | Anomalía de temperatura en °C correspondiente a la diferencia entre la temperatura registrada y la media de temperatura centrada de 30 años basada en periodos actualizados cada 5 años. |
 
 ![R.LTWB](Screenshot/Windows11CMDENSOONI1.png)
 ![R.LTWB](Screenshot/Windows11CMDENSOONI2.png)
