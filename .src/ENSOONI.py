@@ -26,7 +26,7 @@ analysis_file = 'ONI_Eval'  # Output analysis file name
 file_log_name = path + analysis_file + '.md'  # Markdown file log
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 fig_size = 5  # Height size for figures plot
-show_plot = False  # Show plots in screen
+show_plot = True  # Show plots in screen
 threshold = 0.5  # Temperature anomaly grader in °C
 consecutive_event = 5  # Number of consecutive events
 

@@ -1,5 +1,5 @@
 ## Completado y extendido de series - Imputación
-Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `numpy` `missingo` `sklearn` `dtypes` `isnull` `describe` `Impute` 
+Keywords: `Impute` `matplotlib` `pandas` `tabulate` `numpy` `missingo` `sklearn` `dtypes` `isnull` `describe`  
 
 <div align="center"><img alt="R.LTWB" src="Graph/Impute.png" width="95%"></div> 
 
