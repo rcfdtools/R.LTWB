@@ -32,7 +32,7 @@ Para la clasificación de los años con eventos de Niño, Niña o Neutros, en es
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/ENSOONI.svg" width="100%"><br>
+<br><img alt="R.LTWB" src="Graph/ENSOONI.svg" width="75%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
