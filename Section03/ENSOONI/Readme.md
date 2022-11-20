@@ -42,13 +42,273 @@ Para la clasificación de los años con eventos de Niño, Niña o Neutros, en es
 
 * Descarga automática del archivo https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt.
 * A través de la variable `consecutive_event`, el usuario puede definir el número consecutivo de eventos para calificar un año como Niño, Niña o Neutro. El valor predeterminado es 5 eventos.
-* A través de la variable `threshold`, el usuario puede definir el valor límite de las anomalías para el conteo de eventos. El valor predeterminado es 0.5°C
+* A través de la variable `threshold`, el usuario puede definir el valor límite de las anomalías para el conteo de eventos. El valor predeterminado es 0.5 °C.
 * Generación de reporte detallado Markdown y tablas de marcado en formato de texto separado por comas .csv.
 
 Contenido del script
 
 ```
+# -*- coding: UTF-8 -*-
+# Name: ENSOONI.py
+# Description: get the NOAA oni.ascii.txt and classify the climatological events Niño, Niña and Neutral.
+# Requirements: Python 3+, pandas, tabulate, numpy, missingno, sklearn
+# SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
 
+
+# Libraries
+from datetime import datetime
+from datetime import date
+import requests
+import os.path
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+
+
+# General variables
+url_file = 'https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt'
+local_file = 'ONI_Ascii'
+file_extension = '.txt'
+path = 'D:/R.LTWB/.datasets/ENSOONI/'  # Your local output path, use ../.datasets/ENSOONI/ for relative path
+analysis_file = 'ONI_Eval'  # Output analysis file name
+file_log_name = path + analysis_file + '.md'  # Markdown file log
+file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
+fig_size = 5  # Height size for figures plot
+show_plot = True  # Show plots in screen
+threshold = 0.5  # Temperature anomaly grader in °C
+consecutive_event = 5  # Number of consecutive events
+
+
+# Function for print and show results in a file
+def print_log(txt_print, on_screen=True, center_div=False):
+    if on_screen:
+        print(txt_print)
+    if center_div:
+        file_log.write('\n<div align="center">\n' + '\n')
+    file_log.write(txt_print + '\n')
+    if center_div:
+        file_log.write('\n</div>\n' + '\n')
+
+
+# Function for eval the count events
+def enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event):
+    if nina_count >= consecutive_event:
+        event = 'Niña'
+        event_val = -1
+        event_label = nina_count
+    else:
+        if nino_count >= consecutive_event:
+            event = 'Niño'
+            event_val = 1
+            event_label = nino_count
+        else:
+            event = 'Neutral'
+            event_val = 0
+            event_label = neutral_count
+    return event, event_val, event_label
+
+
+# Downloading and reading the file
+file_download_text = 'File downloaded and updated = No (already exist)'
+current_date = date.today()
+current_date_txt = str(current_date.year).zfill(4)+str(current_date.month).zfill(2)+str(current_date.day).zfill(2)
+file_request = requests.get(url_file)
+file_save = path + local_file + '_' + current_date_txt + file_extension
+if file_request:
+    if os.path.isfile(file_save) == False:
+        open(file_save, 'wb').write(file_request.content)
+        file_download_text = 'File downloaded and updated = Yes'
+df = pd.read_csv(file_save, sep='\s+')
+print(file_download_text)
+records = int(df.shape[0])
+
+
+# Header
+print_log('# NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral')
+print_log('\nThe following analysis are based on a threshold of +/- 0.5°C for the Oceanic Niño Index (ONI) [3 month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5°N-5°S, 120°-170°W)], based on centered 30-year base periods updated every 5 years.\nThe ONI is one measure of the El Niño-Southern Oscillation, and other indices can confirm whether features consistent with a coupled ocean-atmosphere phenomenon accompanied these periods.[^1]')
+print_log('\n* Processed file: [%s](%s)' % (str(file_save), '../ENSOONI/' + local_file + '_' + current_date_txt + file_extension) +
+          '\n* Execution date: ' + str(datetime.now()) +
+          '\n* Python version: ' + str(sys.version) +
+          '\n* Python path: ' + str(sys.path[0:5]) +
+          '\n* matplotlib version: ' + str(matplotlib.__version__) +
+          '\n* pandas version: ' + str(pd.__version__) +
+          '\n* numpy version: ' + str(np.__version__) +
+          '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI'
+          '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
+          '\n* Credits: r.cfdtools@gmail.com')
+
+
+# General information
+print_log('\n## General ONI Ascii file information')
+print_log('\n* Ascii file from: %s' % url_file +
+          '\n* Records: %d' % records +
+          '\n* Years: %f\n' % (records/ 12))
+print_log('\nTable records', center_div=True)
+print_log(df.T.to_markdown(), center_div=True)  # .T for transpose the print
+# Plot historic values
+ax = df.plot(x='YR', y='TOTAL',  color='black', legend=False, figsize=(fig_size*2, fig_size*1.5), kind='line', grid=False, style='.-', ms=4, mfc='black', mec='black', linewidth=0.75)
+plt.title('ENSO ONI - Historic records')
+ax.set_ylabel('Seasonal value °C')
+plt.grid(color='silver', linestyle='-', linewidth=0.25, alpha=0.5)
+plt.savefig(path + local_file + file_extension + '_Historic.png', dpi=150)
+if show_plot: plt.show()
+plt.close('all')
+print_log('\n![R.LTWB](%s)' % (local_file + file_extension + '_Historic.png'), center_div=False)
+# Plot anomaly values
+ax = df.plot(x='YR', y='ANOM',  color='black', legend=False, figsize=(fig_size*2, fig_size*1.5), kind='line', grid=False, style='.-', ms=4, mfc='black', mec='black', linewidth=0.75)
+plt.title('ENSO ONI - Anomaly records')
+ax.set_ylabel('Seasonal value °C')
+plt.grid(color='silver', linestyle='-', linewidth=0.25, alpha=0.5)
+y_ticks = np.arange(-2.5, 3.5, 0.5)
+plt.yticks(y_ticks)
+plt.savefig(path + local_file + file_extension + '_Anomaly.png', dpi=150)
+if show_plot: plt.show()
+print_log('\n![R.LTWB](%s)' % (local_file + file_extension + '_Anomaly.png'), center_div=False)
+plt.close('all')
+
+
+# Processing n non-consecutive overlapping seasons
+print_log('\n\n## ENSO ONI yearly events classification with %s non-consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
+print_log('\nClassification file: [%s](%s)' % (analysis_file + '_NonConsecutive.csv', analysis_file + '_NonConsecutive.csv'))
+columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
+df_out = pd.DataFrame(columns=columns)
+start_year = df['YR'].min()
+nina_count, nino_count = 0, 0
+for i in range (records):
+    start_year_aux = df['YR'][i]
+    if start_year == start_year_aux:
+        if df['ANOM'][i] <= -threshold:
+            nina_count += 1
+        if df['ANOM'][i] >= threshold:
+            nino_count += 1
+    else:
+        neutral_count = 12 - nina_count - nino_count
+        event = enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event)[0]
+        event_val = enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event)[1]
+        event_label = enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event)[2]
+        df_eval = pd.DataFrame(np.array([[start_year, nina_count, nino_count, neutral_count, event, event_val, event_label]]), columns=columns)
+        df_out = pd.concat([df_out, df_eval], ignore_index=True)
+        start_year = df['YR'][i]
+        nina_count = 0
+        nino_count = 0
+        if df['ANOM'][i] <= -threshold:
+            nina_count += 1
+        if df['ANOM'][i] >= threshold:
+            nino_count += 1
+neutral_count = 12 - nina_count - nino_count
+event = enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event)[0]
+event_val = enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event)[1]
+event_label = enso_oni_tag(nina_count, nino_count, neutral_count, consecutive_event)[2]
+df_eval = pd.DataFrame(np.array([[start_year, nina_count, nino_count, neutral_count, event, event_val, event_label]]), columns=columns)
+df_out = pd.concat([df_out, df_eval], ignore_index=True)
+df_out = df_out.set_index('YR')
+convert_dict = {'NinaCount': int,
+                'NinoCount': int,
+                'NeutralCount': int,
+                'EventMark': int,
+                'EventLabel': int
+                }
+df_out = df_out.astype(convert_dict)
+print_log('\nResults table', center_div=True)
+print_log(df_out.to_markdown(), center_div=True)
+df_out.to_csv(path + analysis_file + '_NonConsecutive.csv', encoding='latin-1')
+# Plot event graph
+x = np.arange(0, df_out.shape[0]-1, 1)
+x_label = np.arange(int(df_out.index.values.min()), int(df_out.index.values.max()), 1)
+ax = df_out.plot(y='EventMark',  color='silver', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=True, style='.-', ms=12, mfc='silver', mec='silver', linewidth=0.75)
+plt.title('ENSO ONI - Events with %s non consecutive overlapping seasons\n\n' % consecutive_event)
+plt.yticks([-1, 0, 1], ['Niña\n(cold & wet)\nAnom. ≤ -%s°C' % str(threshold), 'Neutral', 'Niño\n(hot & dry)\nAnom. ≥ %s°C' % str(threshold)])
+plt.xticks(x, x_label, rotation=90, size=9)
+ax.set_ylabel('Event')
+plt.grid(color='silver', linestyle='-', linewidth=0.1, alpha=0.25)
+for index in range(df_out.shape[0]-1):
+    ax.text(x[index], df_out['EventMark'][index], str(x_label[index]) + ' (' + str(df_out['EventLabel'][index]) + ')', size=9, rotation=80)
+plt.savefig(path + analysis_file + '_NonConsecutive.png', dpi=150)
+if show_plot: plt.show()
+plt.close('all')
+print_log('\n![R.LTWB](%s)' % (analysis_file + '_NonConsecutive.png'), center_div=False)
+
+
+# Processing n consecutive overlapping seasons
+print_log('\n\n## ENSO ONI yearly events classification with %s consecutive overlapping seasons and %s°C threshold' % (consecutive_event, str(threshold)))
+print_log('\nClassification file: [%s](%s)' % (analysis_file + '_Consecutive.csv', analysis_file + '_Consecutive.csv'))
+columns=['YR', 'NinaCount', 'NinoCount', 'NeutralCount', 'Event', 'EventMark', 'EventLabel']
+df_out = pd.DataFrame(columns=columns)
+start_year = df['YR'].min()
+nina_count, nino_count, nina_max, nino_max = 0, 0, 0, 0
+for i in range(records):
+    start_year_aux = df['YR'][i]
+    if start_year == start_year_aux:
+        if df['ANOM'][i] <= -threshold and i < records - 1:
+            nina_count += 1
+            if nina_max < nina_count:
+                nina_max = nina_count
+        else:
+            nina_count = 0
+        if df['ANOM'][i] >= threshold and i < records - 1:
+            nino_count += 1
+            if nino_max < nino_count:
+                nino_max = nino_count
+        else:
+            nino_count = 0
+    else:
+        neutral_count = 12 - nina_max - nino_max
+        event = enso_oni_tag(nina_max, nino_max, neutral_count, consecutive_event)[0]
+        event_val = enso_oni_tag(nina_max, nino_max, neutral_count, consecutive_event)[1]
+        event_label = enso_oni_tag(nina_max, nino_max, neutral_count, consecutive_event)[2]
+        df_eval = pd.DataFrame(np.array([[start_year, nina_max, nino_max, neutral_count, event, event_val, event_label]]), columns=columns)
+        df_out = pd.concat([df_out, df_eval], ignore_index=True)
+        start_year = df['YR'][i]
+        #nina_max, nino_max = 0, 0
+        nina_count, nino_count, nina_max, nino_max = 0, 0, 0, 0
+        if df['ANOM'][i] <= -threshold and i < records - 1:
+            nina_count += 1
+            if nina_max < nina_count:
+                nina_max = nina_count
+        else:
+            nina_count = 0
+        if df['ANOM'][i] >= threshold and i < records - 1:
+            nino_count += 1
+            if nino_max < nino_count:
+                nino_max = nino_count
+        else:
+            nino_count = 0
+neutral_count = 12 - nina_max - nino_max
+event = enso_oni_tag(nina_max, nino_max, neutral_count, consecutive_event)[0]
+event_val = enso_oni_tag(nina_max, nino_max, neutral_count, consecutive_event)[1]
+event_label = enso_oni_tag(nina_max, nino_max, neutral_count, consecutive_event)[2]
+df_eval = pd.DataFrame(np.array([[start_year, nina_max, nino_max, neutral_count, event, event_val, event_label]]), columns=columns)
+df_out = pd.concat([df_out, df_eval], ignore_index=True)
+df_out = df_out.set_index('YR')
+convert_dict = {'NinaCount': int,
+                'NinoCount': int,
+                'NeutralCount': int,
+                'EventMark': int,
+                'EventLabel': int
+                }
+df_out = df_out.astype(convert_dict)
+print_log('\nResults table', center_div=True)
+print_log(df_out.to_markdown(), center_div=True)
+df_out.to_csv(path + analysis_file + '_Consecutive.csv', encoding='latin-1')
+# Plot event graph
+x = np.arange(0, df_out.shape[0]-1, 1)
+x_label = np.arange(int(df_out.index.values.min()), int(df_out.index.values.max()), 1)
+ax = df_out.plot(y='EventMark',  color='silver', legend=False, figsize=(fig_size*2.5, fig_size*1.25), kind='line', grid=True, style='.-', ms=12, mfc='silver', mec='silver', linewidth=0.75)
+plt.title('ENSO ONI - Events with %s consecutive overlapping seasons\n\n' % consecutive_event)
+plt.yticks([-1, 0, 1], ['Niña\n(cold & wet)\nAnom. ≤ -%s°C' % str(threshold), 'Neutral', 'Niño\n(hot & dry)\nAnom. ≥ %s°C' % str(threshold)])
+plt.xticks(x, x_label, rotation=90, size=9)
+ax.set_ylabel('Event')
+plt.grid(color='silver', linestyle='-', linewidth=0.1, alpha=0.25)
+for index in range(df_out.shape[0]-1):
+    ax.text(x[index], df_out['EventMark'][index], str(x_label[index]) + ' (' + str(df_out['EventLabel'][index]) + ')', size=9, rotation=80)
+plt.savefig(path + analysis_file + '_Consecutive.png', dpi=150)
+if show_plot: plt.show()
+plt.close('all')
+print_log('\n![R.LTWB](%s)' % (analysis_file + '_Consecutive.png'), center_div=False)
+
+print_log('\n[^1]: https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php')
 ```
 
 2. Cree una nueva carpeta en blanco con el nombre `ENSOONI` en su directorio de proyecto local `D:\R.LTWB\.datasets`.
@@ -61,9 +321,18 @@ Contenido del script
 
 ![R.LTWB](Screenshot/Windows11CMDCD.png)
 
-5. En él `CMD`, ejecute la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\ENSOONI.py"` que realizará el procesamiento de imputación de datos faltantes. Durante la ejecución, podrá observar que en la consola se presenta el detalle de los procesos ejecutados, además de la previsualización de diferentes tablas en formato Markdown.
+5. En él `CMD`, ejecute la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\ENSOONI.py"` que realizará el procesamiento y marcado de años por evento. Durante la ejecución, podrá observar que en la consola se presenta el detalle de los procesos ejecutados, además de la previsualización de diferentes tablas en formato Markdown.
 
 > Para visualizar durante la ejecución las gráficas generales de análisis, establezca la variable `show_plot = True`.
+
+El archivo oni.ascii.txt de la NOAA utiliza la siguiente estructura:
+
+| Atributo | Tipo   | Descripción                                                                                                               |
+|----------|--------|---------------------------------------------------------------------------------------------------------------------------|
+| SEAS     | object | Periodo correspondiente a la media móvil de 3 meses, p.ej. DJF corresponde a diciembre, enero y febrero                   |
+| YR       | int64  | Año asociado al periodo                                                                                                   |
+| TOTAL    | int64  | Temperatura en °C                                                                                                         |
+| ANOM     | int64  | Anomalía de temperatura en °C correspondiente a la diferencia entre la temperatura registrada y la media móvil de 30 años |
 
 ![R.LTWB](Screenshot/Windows11CMDENSOONI1.png)
 ![R.LTWB](Screenshot/Windows11CMDENSOONI2.png)
@@ -84,122 +353,32 @@ Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los r
 ![R.LTWB](Screenshot/Windows11CMDENSOONI11.png)
 ![R.LTWB](Screenshot/Windows11CMDENSOONI12.png)
 ![R.LTWB](Screenshot/Windows11CMDENSOONI13.png)
-![R.LTWB](Screenshot/Windows11CMDENSOONI14.png)
-![R.LTWB](Screenshot/Windows11CMDENSOONI15.png)
 
 
 ### Tablas de resultados y análisis generales
 
-Durante el proceso de ejecución del script, se generan automáticamente para cada parámetro hidroclimatológico, un reporte integrado de resultados en formato Markdown (.md), gráficas de análisis y diferentes tablas en formato .csv.
+Durante el proceso de ejecución del script, se generan automáticamente dos tablas en formato .csv con el marcado de años por evento para periodos no consecutivos y consecutivos.
 
-| Reporte                                                                                                                                                                                                                                                                     | Descripción                      | Estaciones | Registros | Faltantes |   M1   |   M2   |   M3   |   M4   |   M5   |   M6   |   M7   |   M8   |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|:----------:|:---------:|:---------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| [Impute_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md)<br>[Impute_Station_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md)  | Precipitación mensual total, mm. |    130     |    504    |   10157   | 10157  | 10157  |  8947  |  3143  |  8947  |  8947  | 10157  | 10157  |
-| [Impute_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md)<br>[Impute_Station_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md)  | Caudal medio mensual, m³/s.      |     46     |    504    |   6745    |  6745  |  6745  |  4682  |  4523  |  4682  |  4682  |  6745  |  6745  |
-| [Impute_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)<br>[Impute_Station_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)          | Temperatura diaria mínima, °C.   |     25     |   15341   |  173702   | 173702 | 173702 | 148100 | 86276  | 148100 | 148100 | 173702 | 173702 |
-| [Impute_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md)<br>[Impute_Station_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Impute/Impute_Station_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md)          | Temperatura diaria máxima, °C.   |     25     |   15341   |  197676   | 197676 | 197676 | 169785 | 108658 | 169785 | 169785 | 197676 | 197676 |
+| Tabla .csv                                                                         | Descripción                                                                                                   |
+|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| [ONI_Eval_NonConsecutive.csv](../../.datasets/ENSOONI/ONI_Eval_NonConsecutive.csv) | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos no consecutivos identificados. |
+| [ONI_Eval_Consecutive.csv](../../.datasets/ENSOONI/ONI_Eval_Consecutive.csv)       | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos consecutivos identificados.    |
 
-> En la tabla anterior, las columnas M1 a M8 contienen el número de datos imputados por cada método utilizado.
->
-> Para todos los parámetros se han utilizado 5 vecinos naturales para la generación de datos sintéticos por los métodos KNN y MICE.
-> 
-> Dentro de cada reporte independiente por parámetro, se encuentran los enlaces a los archivos .csv generados por cada método.
+Los archivos de resultados .csv generados por el script utilizan la siguiente estructura:
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mmm, podrá observar los siguientes valores de media y desviación estándar:
+| Atributo     | Tipo   | Descripción                                                               |
+|--------------|--------|---------------------------------------------------------------------------|
+| YR           | int64  | Año                                                                       |
+| NinaCount    | int64  | Conteo de eventos Niño (años calientes y secos)                           |
+| NinoCount    | int64  | Conteo de eventos Niña (años fríos y húmedos)                             |
+| NeutralCount | int64  | Conteo de eventos Neutro                                                  |
+| Event        | object | Nombre del evento                                                         |
+| EventMark    | int64  | Marcación para gráfica: -1 para Niñas, 0 para Neutros, 1 para Niño        |
+| EventLabel   | int64  | Conteo de eventos del fenómeno asociado a utilizar como rótulo en gráfica |
 
-<div align='center'>
+> En la tabla anterior, el campo `Tipo` es asociado a los tipos obtenidos en el dataframe procesado por Pandas en Python.  
 
-| Método                                                                                                   | $\mu$, media | $\sigma$, std |
-|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                                                           | 59.7829      | 74.2829       |
-| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 59.718       | 73.9846       |
-| M1. Imputación con media, $\mu$                                                                          | 59.718       | 60.6479       |
-| M2. Imputación con mediana                                                                               | 50.0217      | 62.2231       |
-| M3. Imputación LOCF                                                                                      | 54.6675      | 68.6241       |
-| M4. Imputación NOCB                                                                                      | 70.1873      | 73.8053       |
-| M5. Imputación pir interpolación lineal                                                                  | 55.7429      | 70.1337       |
-| M6. Media móvil - EWM                                                                                    | 64.0103      | 61.0386       |
-| M7. Vecino natural - KNN                                                                                 | 56.6695      | 68.2329       |
-| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 59.5799      | 71.8106       |
-
-</div>
-
-> Evalúe los datos sintéticos de precipitación generados en las estaciones 28010280 (489 meses faltantes de 504 definidos en la ventana de tiempo), 28040170 y 28010130.
-
-Al revisar los estadísticos característicos, p. ej. de la estación 15067080, correspondiente a datos de caudal medio mensual en m³/s, podrá observar los siguientes valores de media y desviación estándar:
-
-![R.LTWB](Screenshot/Windows11CMDENSOONI39.png)
-
-<div align='center'>
-
-| Método                                                                                                   | $\mu$, media | $\sigma$, std |
-|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                                                           | 2.17867      | 3.43166       |
-| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 2.10051      | 2.89856       |
-| M1. Imputación con media, $\mu$                                                                          | 2.10051      | 2.20089       |
-| M2. Imputación con mediana                                                                               | 1.62587      | 2.26987       |
-| M3. Imputación LOCF                                                                                      | 1.63324      | 2.55661       |
-| M4. Imputación NOCB                                                                                      | 2.10959      | 2.85675       |
-| M5. Imputación pir interpolación lineal                                                                  | 1.88085      | 2.52606       |
-| M6. Media móvil - EWM                                                                                    | 1.93414      | 2.39007       |
-| M7. Vecino natural - KNN                                                                                 | 2.1734       | 2.59388       |
-| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 2.14873      | 2.50686       |
-
-</div>
-
-> Evalúe los datos sintéticos de caudal generados en las estaciones 15067210 (476 meses faltantes de 504 definidos en la ventana de tiempo), 28017150 y 28047080.
-
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de temperatura mínima diaria en °C, podrá observar los siguientes valores de media y desviación estándar:
-
-![R.LTWB](Screenshot/Windows11CMDENSOONI40.png)
-
-<div align='center'>
-
-| Método                                                                                                   | $\mu$, media | $\sigma$, std |
-|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                                                           | 22.1888      | 1.60856       |
-| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 22.1889      | 1.60836       |
-| M1. Imputación con media, $\mu$                                                                          | 22.1889      | 1.29618       |
-| M2. Imputación con mediana                                                                               | 22.2629      | 1.30009       |
-| M3. Imputación LOCF                                                                                      | 21.8967      | 1.49166       |
-| M4. Imputación NOCB                                                                                      | 22.4437      | 1.60576       |
-| M5. Imputación pir interpolación lineal                                                                  | 22.1279      | 1.37931       |
-| M6. Media móvil - EWM                                                                                    | 21.9331      | 1.50143       |
-| M7. Vecino natural - KNN                                                                                 | 22.4928      | 1.50449       |
-| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 22.3708      | 1.43403       |
-
-</div>
-
-> Evalúe los datos sintéticos de temperatura mínima generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045020 y 29065010.
-
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de temperatura máxima diaria en °C, podrá observar los siguientes valores de media y desviación estándar:
-
-![R.LTWB](Screenshot/Windows11CMDENSOONI41.png)
-
-<div align='center'>
-
-| Método                                                                                                   | $\mu$, media | $\sigma$, std |
-|:---------------------------------------------------------------------------------------------------------|:-------------|:--------------|
-| Serie original                                                                                           | 33.0729      | 1.48932       |
-| Serie con atípicos identificados con rango intercuartílico - IQR.<br>Reemplazo con $\mu$ +- K * $\sigma$ | 33.0737      | 1.48617       |
-| M1. Imputación con media, $\mu$                                                                          | 33.0737      | 1.12933       |
-| M2. Imputación con mediana                                                                               | 33.1271      | 1.13106       |
-| M3. Imputación LOCF                                                                                      | 32.8218      | 1.43228       |
-| M4. Imputación NOCB                                                                                      | 31.9541      | 2.32025       |
-| M5. Imputación pir interpolación lineal                                                                  | 32.316       | 1.62844       |
-| M6. Media móvil - EWM                                                                                    | 32.6945      | 1.36275       |
-| M7. Vecino natural - KNN                                                                                 | 33.1279      | 1.30787       |
-| M8. Multivariante con ecuación de encadenamiento - MICE                                                  | 33.2334      | 1.28619       |
-
-</div>
-
-> Evalúe los datos sintéticos de temperatura máxima generados en las estaciones 28035070 (15299 dias faltantes de 15341 definidos en la ventana de tiempo), 28045040 y 29065010.
-
-**Conclusión general**
-
-Existen diferentes metodologías estadísticas para el completado y extendido de series, su aplicación en hidrología depende del tipo de parámetro hidroclimatológico a estudiar, del número de datos faltantes, del número de estaciones simultáneas evaluadas y de la ventana de tiempo definida para los análisis. Si bien existen metodologías geo-estadísticas en las que se evalúan las relaciones espaciales (basadas en distancia y/o proximidad, bandas de elevación y correlación con otros parámetros) entre las estaciones utilizadas, con los métodos estadísticos vecino natural - KNN o multivariante - MICE, se pueden obtener datos sintéticos que mantienen la tendencia general de la zona estudiada a partir de las estaciones definidas. Para el desarrollo de las actividades posteriores de este curso, usaremos las series de datos completadas y extendidas por el Método 8 - Multivariante con ecuación de encadenamiento - MICE, debido a que permite mantener la tendencia general de los datos zonales y valores similares de media y desviación estándar. 
-
-En este momento, dispone de reportes detallados de completado y extendido de datos por cada parámetro hidroclimatológico y diferentes tablas en formato de texto separado por comas `.csv` para los diferentes métodos implementados.
+En este momento, dispone de un reporte detallado de marcación de años por evento climatológico y dos tablas en formato de texto separado por comas `.csv` para la posterior segmentación de las series de parámetros hidroclimatológicos.
 
 
 ### Actividades complementarias:pencil2:
@@ -208,40 +387,35 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir del script [Impute.py](../../.src/Impute.py), realice el completado y extendido de los parámetros climatológicos definidos como actividad complementaria en [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad.                                                                                               |
-|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Impute.py](../../.src/Impute.py), presente un análisis cualitativo e identifique en que estaciones no se han obtenido datos sintéticos consistentes para los métodos implementados.                                                                                                                                                                    | 
-|     3     | A partir de los datos de precipitación media mensual, identifique una estación que contenga una serie continua cercana a 41 años, analice los estadísticos de 10 años consecutivos de datos, elimínelos de la serie y genere datos sintéticos por el método KNN y MICE. Luego, grafique la serie original y la serie sintética, obtenga los estadísticos y realice una análisis cualitativo de similitud y correlación, explicando que tan similares son los datos generados. |
+|     1     | Investigue y documente otros indicadores de la NOAA aplicables a regiones diferentes de zonas inter-tropicales y tropicales.                                                                                                                                                                                                                                                                                                                                                  |
+|     2     | Cree un script que permita procesar uno de los indicadores investigados y que realice la marcación o asociación de eventos climatológicos para cada año.                                                                                                                                                                                                                                                                                                                      | 
+
 
 ### Referencias
 
-* https://www.projectpro.io/recipes/deal-with-missing-values-in-timeseries-in-python
-* https://towardsdatascience.com/8-methods-for-handling-missing-values-with-python-pandas-842544cdf891
-* https://towardsdatascience.com/4-techniques-to-handle-missing-values-in-time-series-data-c3568589b5a8
-* https://www.section.io/engineering-education/missing-values-in-time-series/
-* https://www.kaggle.com/code/parulpandey/a-guide-to-handling-missing-values-in-python
-* https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html
-* https://github.com/ResidentMario/missingno
-* https://towardsdatascience.com/imputing-missing-data-with-simple-and-advanced-techniques-f5c7b157fb87#:~:text=Time%20Series%20Imputation&text=One%20way%20to%20impute%20missing,with%20the%20previously%20observed%20value
-* https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html
-* https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html
+* http://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt
+* https://www.climate.gov/maps-data/dataset/el-ni%C3%B1o-southern-oscillation-indicators
+* http://www.cpc.ncep.noaa.gov/data/indices/
+* https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php
+* https://stackoverflow.com/questions/33509627/using-pandas-to-read-in-txt-file-using-delimiters-creates-nans-columns
+* https://stackoverflow.com/questions/43941245/line-plot-with-data-points-in-pandas
+* https://towardsdatascience.com/how-to-label-the-values-plots-with-matplotlib-c9b7db0fd2e1
+* https://matplotlib.org/stable/gallery/color/named_colors.html
 
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Autor                                       | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|:-----:|
-| 2022.11.16 | Complementación documentación general con análisis descriptivos por parámetro. Ilustración cabecera y diagrama de procesos.                                                                                                                                                                                                                                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)   |   4   |
-| 2022.11.14 | Inicio documentación general.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)   |   3   |
-| 2022.11.12 | Generador de 8 gráficas individuales de series por estación. Reporte complementario para visualización de gráficas por estación. Exportación de imputaciones a archivos .csv para cada método.                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)   |   4   |
-| 2022.11.11 | Method 7 - Impute missing values with Natural Neigborns - KNN = 5 Imputer from Scikit Learn. Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn.                                                                                                                                                                                                                                                                                                  | [rcfdtools](https://github.com/rcfdtools)   |   3   |
-| 2022.11.10 | Script versión inicial. Method 1 - Imputing with mean values. Method 2 - Imputing with median values. Method 3 - Imputing with Last Observation Carried Forward (LOCF) values. Method 4 - Imputing with Next Observation Carried Backward (NOCB) values. Method 5 - Impute missing values with Linear Interpolation values. Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM. Métodos con generación de reporte y gráficas sin exportación de datasets imputados a .csv. | [rcfdtools](https://github.com/rcfdtools)   |   5   |
+| Versión    | Descripción  | Autor                                       | Horas |
+|------------|:-------------|---------------------------------------------|:-----:|
+| 2022.11.XX |              | [rcfdtools](https://github.com/rcfdtools)   |  xx   |
+
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../Outlier) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/25) | [Actividad siguiente]() |
-|----------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------|
+| [Actividad anterior](../Impute) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente]() |
+|---------------------------------|---------------------------|--------------------------------------------------------------------------|-------------------------|
 
 [^1]: https://es.wikipedia.org/
