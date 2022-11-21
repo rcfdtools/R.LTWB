@@ -30,7 +30,7 @@ plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.or
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
-show_plot = True
+show_plot = False
 monthly_to_year_agg = 'sum'  # Aggregation function, E.G. sum for total monthly rain values, mean for average monthly flow values.
 
 
@@ -120,7 +120,7 @@ for i in event_mark_unique:
             df_agg = df_yearly_agg.mean()
             df_agg.index.name = 'Station'
             df_agg.name = 'AggNina'
-            print(df_agg.to_markdown())
+            print(df_agg.T.to_markdown())
         case 0:
             df_ensooni_neutral = df_ensooni[df_ensooni['EventMark'] == 0]
             print('\n### Neutral events table (%d years)\n' % df_ensooni_neutral.shape[0])
@@ -135,7 +135,7 @@ for i in event_mark_unique:
             df_agg = df_yearly_agg.mean()
             df_agg.index.name = 'Station'
             df_agg.name = 'AggNeutral'
-            print(df_agg.to_markdown())
+            print(df_agg.T.to_markdown())
         case 1:
             df_ensooni_nino = df_ensooni[df_ensooni['EventMark'] == 1]
             print('\n### Niño events table (%d years)\n' % df_ensooni_nino.shape[0])
@@ -150,7 +150,7 @@ for i in event_mark_unique:
             df_agg = df_yearly_agg.mean()
             df_agg.index.name = 'Station'
             df_agg.name = 'AggNino'
-            print(df_agg.to_markdown())
+            print(df_agg.T.to_markdown())
 
 
 
