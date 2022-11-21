@@ -1,11 +1,7 @@
-Task
-
-
 Stations test sample
 	'15015020', '15060050', '15060070', '15060080', '15060150'
 	'28010090', '28025040'
 	'15015020', '15060070'
-
 
 Station sample monthly rain: 15015020
 	Mean stat
@@ -30,9 +26,5 @@ Station sample minimum daily temperatura: 15015020
 	M6 EWM: 21.9331
 	M7 KNN:
 
-* https://library.wmo.int/doc_num.php?explnum_id=4167
-* https://library.wmo.int/index.php?lvl=notice_display&id=20130
-* https://library.wmo.int/doc_num.php?explnum_id=9521
-* https://library.wmo.int/doc_num.php?explnum_id=4549
 
 

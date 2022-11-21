@@ -51,7 +51,7 @@ Contenido del script
 # -*- coding: UTF-8 -*-
 # Name: ENSOONI.py
 # Description: get the NOAA oni.ascii.txt and classify the climatological events Niño, Niña and Neutral.
-# Requirements: Python 3+, pandas, tabulate, numpy, missingno, sklearn
+# Requirements: Python 3+, pandas, tabulate, numpy
 # SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
 
 

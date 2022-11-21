@@ -1,6 +1,9 @@
 # Impute missing values in time series through statistical methods - Complementary report
 * Processed file: [D:/R.LTWB/.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv](../IDEAM_Outlier/Outlier_IQR_Cap_Pivot_TMN_CON.csv)
-* Execution date: 2022-11-12 10:27:39.537990
+* Execution date: 2022-11-21 10:20:20.903757
+* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Impute
+* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md
+* Credits: r.cfdtools@gmail.com
 
 ## Station: 15015020
 

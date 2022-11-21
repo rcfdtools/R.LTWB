@@ -1,0 +1,18 @@
+Statistical aggregations
+
+* https://library.wmo.int/doc_num.php?explnum_id=4167
+* https://library.wmo.int/index.php?lvl=notice_display&id=20130
+* https://library.wmo.int/doc_num.php?explnum_id=9521
+* https://library.wmo.int/doc_num.php?explnum_id=4549
+* https://stackoverflow.com/questions/11391969/how-to-group-pandas-dataframe-entries-by-date-in-a-non-unique-column
+
+
+
+#print(station_df)
+#df = station_df.groupby('CodigoEstacion')
+#df = station_df.groupby('CodigoEstacion').mean()
+#print('\n' + df.to_markdown())
+
+date_record_name = 'Fecha'  # IDEAM date field name for the record values
+df_impute.index.name = 'Fecha'
+df_impute.index.name = date_record_name
