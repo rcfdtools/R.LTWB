@@ -86,7 +86,7 @@ from datetime import datetime
 
 
 # General variables
-pivot_table_name = 'Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # <<<<< Pivot table name to process
+pivot_table_name = 'Outlier_IQR_Cap_Pivot_TMX_CON.csv'  # <<<<< Pivot table name to process
 path_input = 'D:/R.LTWB/.datasets/IDEAM_Outlier/'  # Current location from pivot tables
 station_file = path_input + pivot_table_name  # Current pivot IDEAM records file for a specified parameter
 path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Your local output path, use ../.datasets/IDEAM_Impute/ for relative path
@@ -216,6 +216,7 @@ df_impute = df.fillna(df.mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 impute_file = 'Impute_Mean_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + impute_file)
 print_log('\n\n## Method 1 - Imputing with mean values' +
           '\nAccording to this technique, the missing values are imputed using the mean value in each feature and the serie has been completed filled.' +
@@ -229,6 +230,7 @@ df_impute = df.fillna(df.median())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_Median_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 2 - Imputing with median values' +
           '\nAccording to this technique, the missing values are imputed using the median value in each feature and the serie has been completed filled.' +
@@ -242,6 +244,7 @@ df_impute = df.fillna(method='ffill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_LOCF_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 3 - Imputing with Last Observation Carried Forward (LOCF) values' +
           '\nAccording to this technique, the missing values are imputed using the immediate values before it in the time series and the missing values at the start are not filled but the series are completed fillet to the end.' +
@@ -255,6 +258,7 @@ df_impute = df.fillna(method='bfill')
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_NOCB_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 4 - Imputing with Next Observation Carried Backward (NOCB) values' +
           '\nAccording to this technique, the missing values are imputed using the immediate values after it in the time series and the missing values at the end are not filled but the series are completed fillet to the start.' +
@@ -268,6 +272,7 @@ df_impute = df.interpolate(method='linear')  # limit=1, limit_direction="forward
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_InterpolateLinear_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 5 - Impute missing values with Linear Interpolation values' +
           '\nAccording to this technique, the missing values are imputed using the linear interpolation between knowing pair values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.' +
@@ -282,6 +287,7 @@ df_impute = df.fillna(df.ewm(halflife=halflife).mean())
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_MeanEWM_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 6 - Impute missing values with Exponential (Weighted) Moving Average - EWM = %d' % halflife +
           '\nAccording to this technique, the missing values are imputed using the moving average values in the time series and the missing values at the start are not filled but the series are completed fillet to the end.' +
@@ -300,6 +306,7 @@ df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # 
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_KNN_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 7 - Impute missing values with Natural Neigborns - KNN = %d Imputer from Scikit Learn' % n_neighbors +
           '\nAccording to this technique, the missing values are imputed using the natural neighbors values and the serie has been completed filled. More information in https://scikit-learn.org/stable/modules/generated/sklearn.impute.KNNImputer.html' +
@@ -318,6 +325,7 @@ df_impute = pd.DataFrame(df_impute, columns=column_headers, index=index_list) # 
 df_isnull = pd.DataFrame(df_impute.isnull().sum(), columns=['Nulls'])
 total_imputed = total_nulls - df_isnull['Nulls'].sum()
 imputed_file = 'Impute_MICE_' + pivot_table_name
+df_impute.index.name = date_record_name
 df_impute.to_csv(path + imputed_file)
 print_log('\n\n## Method 8 - Impute missing values with Multivariate Imputation by Chained Equation - MICE from Scikit Learn' +
           '\nAccording to this technique, the missing values are imputed using MICE values and the serie has been completed filled. More information in https://scikit-learn.org/stable/modules/generated/sklearn.impute.IterativeImputer.html' +

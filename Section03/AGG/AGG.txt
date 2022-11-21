@@ -5,6 +5,10 @@ Statistical aggregations
 * https://library.wmo.int/doc_num.php?explnum_id=9521
 * https://library.wmo.int/doc_num.php?explnum_id=4549
 * https://stackoverflow.com/questions/11391969/how-to-group-pandas-dataframe-entries-by-date-in-a-non-unique-column
+* https://stackoverflow.com/questions/5283649/plot-smooth-line-with-pyplot
+* https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/
+* https://www.geeksforgeeks.org/pandas-find-unique-values-from-multiple-columns/
+* https://www.geeksforgeeks.org/ways-to-filter-pandas-dataframe-by-column-values/
 
 
 
@@ -16,3 +20,9 @@ Statistical aggregations
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 df_impute.index.name = 'Fecha'
 df_impute.index.name = date_record_name
+
+Rain 15015020
+Composite 706.038
+Niña 901.937
+Niño 499.405
+Neutral 690.832
