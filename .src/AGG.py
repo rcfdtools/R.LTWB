@@ -31,8 +31,19 @@ plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.or
 sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
-show_plot = True
+show_plot = False
 monthly_to_year_agg = 'sum'  # Aggregation function, E.G. sum for total monthly rain values, mean for average monthly flow values.
+
+
+# Function for print and show results in a file
+def print_log(txt_print, on_screen=True, center_div=False):
+    if on_screen:
+        print(txt_print)
+    if center_div:
+        file_log.write('\n<div align="center">\n' + '\n')
+    file_log.write(txt_print + '\n')
+    if center_div:
+        file_log.write('\n</div>\n' + '\n')
 
 
 # Function for plot series
@@ -63,47 +74,47 @@ df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[dat
 #df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 ideam_regs = df.shape[0]
 #df.reset_index(drop=True, inplace=True)
-print('Records in stations file: %d' % ideam_regs)
+print_log('Records in stations file: %d' % ideam_regs)
 #print(df)
 
 # Composite aggregations for total monthly values
-#print(df[date_record_name].dt.year)
-#print(df.groupby(df[date_record_name].dt.year).agg(['sum', 'mean', 'max']).to_markdown())
-print('\n## Composite - Yearly values per station from total monthly values (%s)\n' % monthly_to_year_agg)
+#print_log(df[date_record_name].dt.year)
+#print_log(df.groupby(df[date_record_name].dt.year).agg(['sum', 'mean', 'max']).to_markdown())
+print_log('\n## Composite - Yearly values per station from total monthly values (%s)\n' % monthly_to_year_agg)
 df_yearly_agg = monthly_to_year_agg_func(df)
 df_yearly_agg.index.name = 'Year'
-print(df_yearly_agg.to_markdown())
+print_log(df_yearly_agg.to_markdown())
 plot_df(df_yearly_agg, 'Composite - Yearly values per station from total monthly values (%s)\n%s' % (monthly_to_year_agg, station_file), 'Values', kind='line')
-print('\nComposite - Aggregation value per station from yearly aggregations (mean)\n')
+print_log('\nComposite - Aggregation value per station from yearly aggregations (mean)\n')
 df_agg = df_yearly_agg.mean()
 df_agg.index.name = 'Station'
 df_agg.name = 'AggComposite'
-print(df_agg.T.to_markdown())
+print_log(df_agg.T.to_markdown())
 plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar')
-print('\nComposite - Monthly values per station from total monthly values (mean)\n')
+print_log('\nComposite - Monthly values per station from total monthly values (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
 df_monthly_val.index.name = 'Month'
-print(df_monthly_val.to_markdown())
+print_log(df_monthly_val.to_markdown())
 plot_df(df_monthly_val, 'Composite - Monthly values per station from total monthly values (mean)\n%s' % station_file, 'Values', kind='line')
 '''
-print('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
+print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
 df_agg = df_monthly_val.sum()
 df_agg.index.name = 'Station'
 df_agg.name = 'Agg'
-print(df_agg.to_markdown())
+print_log(df_agg.to_markdown())
 plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n%s' % station_file, 'Values', kind='bar')
 '''
 
 
 # Aggregation values with the ENSO-ONI year classifier
-print('\n## ENSO-ONI Events - Yearly values per station from total monthly values (%s)\n' % monthly_to_year_agg)
+print_log('\n## ENSO-ONI Events - Yearly values per station from total monthly values (%s)\n' % monthly_to_year_agg)
 df_ensooni = pd.read_csv(ENSOONI_path + ENSOONI_file, low_memory=False, encoding='latin-1', index_col=False)
 df_ensooni.index.name = 'Id'
 enso_oni_regs = df_ensooni.shape[0]
-#print(df_ensooni.to_markdown())
-print('* Records in ENSO-ONI file: %d' % enso_oni_regs)
+#print_log(df_ensooni.to_markdown())
+print_log('* Records in ENSO-ONI file: %d' % enso_oni_regs)
 event_mark_unique = df_ensooni['EventMark'].unique()
-print('* ENSO-ONI eventMark unique values: ' + str(event_mark_unique))
+print_log('* ENSO-ONI eventMark unique values: ' + str(event_mark_unique))
 for i in event_mark_unique:
     match int(i):
         case -1:
@@ -116,24 +127,24 @@ for i in event_mark_unique:
             ensooni_tag = 'Niño'
             agg_name = 'AggNino'
     df_ensooni_eval = df_ensooni[df_ensooni['EventMark'] == i]
-    print('\n### %s events table (%d years)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
-    print(df_ensooni_eval.to_markdown())
+    print_log('\n### %s events table (%d years)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
+    print_log(df_ensooni_eval.to_markdown())
     df_ensooni_unique = df_ensooni_eval['YR'].unique()
     df_yearly_agg = monthly_to_year_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
     df_yearly_agg.index.name = 'Year'
-    print('\nTable aggregations (%s)\n' % monthly_to_year_agg)
-    print(df_yearly_agg.to_markdown())
+    print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, monthly_to_year_agg))
+    print_log(df_yearly_agg.to_markdown())
     plot_df(df_yearly_agg, '%s - Yearly values per station from total monthly values (%s)\n%s' % (ensooni_tag, monthly_to_year_agg, station_file), 'Values', kind='line')
-    print('\nAggregation value per station from yearly aggregations (mean)\n')
+    print_log('\n%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag)
     df_agg = df_yearly_agg.mean()
     df_agg.index.name = 'Station'
     df_agg.name = agg_name
-    print(df_agg.T.to_markdown())
-    print('\nComposite - Monthly values per station from total monthly values (mean)\n')
+    print_log(df_agg.T.to_markdown())
+    print_log('\n%s - Monthly values per station from total monthly values (mean)\n' % ensooni_tag)
     df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
     df_monthly_val = df.groupby(df_monthly_filter[date_record_name].dt.month).mean()
     df_monthly_val.index.name = 'Month'
-    print(df_monthly_val.to_markdown())
+    print_log(df_monthly_val.to_markdown())
     plot_df(df_monthly_val,'%s - Monthly values per station from total monthly values (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='line')
 
 
