@@ -47,7 +47,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 
 # Function for plot series
-def plot_df(df, title='No assignment title', ylabel='Value', kind='line'):
+def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_save_name='xxxxx'):
     match kind:
         case 'line':
             ax = df.plot(colormap=plot_colormap, legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.5)
@@ -57,6 +57,9 @@ def plot_df(df, title='No assignment title', ylabel='Value', kind='line'):
     plt.title(title)
     ax.set_ylabel(ylabel)
     if show_plot: plt.show()
+    plt_name = plt_save_name + '_' + station_file + '.png'
+    plt.savefig(path + 'Graph/' + plt_name, dpi=150)
+    print_log('\n![R.LTWB](%s)' % ('Graph/' + plt_name), center_div=False)
     plt.close('all')
 
 # Function for monthly to year aggregations
@@ -84,21 +87,18 @@ print_log('\n## Composite - Yearly values per station from total monthly values 
 df_yearly_agg = monthly_to_year_agg_func(df)
 df_yearly_agg.index.name = 'Year'
 print_log(df_yearly_agg.to_markdown())
-plot_df(df_yearly_agg, 'Composite - Yearly values per station from total monthly values (%s)\n%s' % (monthly_to_year_agg, station_file), 'Values', kind='line')
-plt_name = 'Agg_Yearly_' + monthly_to_year_agg + '_' + station_file + '.png'
-plt.savefig(path + 'Graph/' + plt_name)
-print_log('\n![R.LTWB](%s)' % ('Graph/' + plt_name), center_div=False)
+plot_df(df_yearly_agg, 'Composite - Yearly values per station from total monthly values (%s)\n%s' % (monthly_to_year_agg, station_file), 'Values', kind='line', plt_save_name='AggComposite_Yearly_%s' % monthly_to_year_agg)
 print_log('\nComposite - Aggregation value per station from yearly aggregations (mean)\n')
 df_agg = df_yearly_agg.mean()
 df_agg.index.name = 'Station'
 df_agg.name = 'AggComposite'
 print_log(df_agg.T.to_markdown())
-plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar')
+plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggComposite_Yearly_mean')
 print_log('\nComposite - Monthly values per station from total monthly values (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
 df_monthly_val.index.name = 'Month'
 print_log(df_monthly_val.to_markdown())
-plot_df(df_monthly_val, 'Composite - Monthly values per station from total monthly values (mean)\n%s' % station_file, 'Values', kind='line')
+plot_df(df_monthly_val, 'Composite - Monthly values per station from total monthly values (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggComposite_Monthly_mean')
 '''
 print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
 df_agg = df_monthly_val.sum()
@@ -137,7 +137,7 @@ for i in event_mark_unique:
     df_yearly_agg.index.name = 'Year'
     print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, monthly_to_year_agg))
     print_log(df_yearly_agg.to_markdown())
-    plot_df(df_yearly_agg, '%s - Yearly values per station from total monthly values (%s)\n%s' % (ensooni_tag, monthly_to_year_agg, station_file), 'Values', kind='line')
+    plot_df(df_yearly_agg, '%s - Yearly values per station from total monthly values (%s)\n%s' % (ensooni_tag, monthly_to_year_agg, station_file), 'Values', kind='line', plt_save_name='%s_Yearly_%s' % (agg_name,monthly_to_year_agg))
     print_log('\n%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag)
     df_agg = df_yearly_agg.mean()
     df_agg.index.name = 'Station'
@@ -148,6 +148,6 @@ for i in event_mark_unique:
     df_monthly_val = df.groupby(df_monthly_filter[date_record_name].dt.month).mean()
     df_monthly_val.index.name = 'Month'
     print_log(df_monthly_val.to_markdown())
-    plot_df(df_monthly_val,'%s - Monthly values per station from total monthly values (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='line')
+    plot_df(df_monthly_val,'%s - Monthly values per station from total monthly values (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='line', plt_save_name='%s_Monthly_mean' % agg_name)
 
 
