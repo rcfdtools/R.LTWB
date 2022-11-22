@@ -103,11 +103,7 @@ df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
 df_monthly_val.index.name = 'Month'
 print_log(df_monthly_val.to_markdown())
 plot_df(df_monthly_val, 'Composite - Monthly values per station from total monthly values (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggComposite_Monthly_mean')
-#df_agg_full = pd.merge(df_agg_full, df_agg)
 df_agg_full = df_agg
-print('\n\nXXXXXXXXXX')
-print(df_agg_full.info())
-print(df_agg_full)
 '''
 print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
 df_agg = df_monthly_val.sum()
@@ -152,14 +148,14 @@ for i in (-1, 1, 0):
     df_agg = df_yearly_agg.mean()
     df_agg.index.name = 'Station'
     df_agg.name = agg_name
-    print_log(df_agg.to_markdown())
+    df_agg = df_agg.to_frame()
+    print_log(df_agg.T.to_markdown())
     print_log('\n%s - Monthly values per station from total monthly values (mean)\n' % ensooni_tag)
     df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
     df_monthly_val = df.groupby(df_monthly_filter[date_record_name].dt.month).mean()
     df_monthly_val.index.name = 'Month'
     print_log(df_monthly_val.to_markdown())
     plot_df(df_monthly_val,'%s - Monthly values per station from total monthly values (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='line', plt_save_name='%s_Monthly_mean' % agg_name)
-    df_agg = df_agg.to_frame()  # xxxxxxxxxxxxxxxxxxxxxxx
     df_agg_full = pd.concat([df_agg_full, df_agg], axis=1)
-
-print(df_agg_full.to_markdown())
+print_log('\n\n## Yearly aggregation matrix values per station from total monthly values (mean)\n')
+print_log(df_agg_full.to_markdown(), center_div=True)
