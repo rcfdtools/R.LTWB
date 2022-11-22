@@ -85,6 +85,9 @@ df_yearly_agg = monthly_to_year_agg_func(df)
 df_yearly_agg.index.name = 'Year'
 print_log(df_yearly_agg.to_markdown())
 plot_df(df_yearly_agg, 'Composite - Yearly values per station from total monthly values (%s)\n%s' % (monthly_to_year_agg, station_file), 'Values', kind='line')
+plt_name = 'Agg_Yearly_' + monthly_to_year_agg + '_' + station_file + '.png'
+plt.savefig(path + 'Graph/' + plt_name)
+print_log('\n![R.LTWB](%s)' % ('Graph/' + plt_name), center_div=False)
 print_log('\nComposite - Aggregation value per station from yearly aggregations (mean)\n')
 df_agg = df_yearly_agg.mean()
 df_agg.index.name = 'Station'
