@@ -210,7 +210,10 @@ Composite - Monthly values per station from total monthly values (mean)
 * Records in ENSO-ONI file: 73
 * ENSO-ONI eventMark unique values: [-1  1  0]
 
-### Niña events table (24 years)
+### Niña events analysis (24 years)
+
+
+<div align="center">
 
 |   Id |   YR |   NinaCount |   NinoCount |   NeutralCount | Event   |   EventMark |   EventLabel |
 |-----:|-----:|------------:|------------:|---------------:|:--------|------------:|-------------:|
@@ -238,6 +241,9 @@ Composite - Monthly values per station from total monthly values (mean)
 |   66 | 2016 |           5 |           4 |              3 | Niña    |          -1 |            5 |
 |   70 | 2020 |           5 |           1 |              6 | Niña    |          -1 |            5 |
 |   72 | 2022 |           8 |           0 |              4 | Niña    |          -1 |            8 |
+
+</div>
+
 
 Niña - Table aggregations (sum)
 
@@ -413,7 +419,10 @@ Niña - Monthly values per station from total monthly values (mean)
 
 ![R.LTWB](Graph/AggNina_Monthly_mean_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
-### Niño events table (19 years)
+### Niño events analysis (19 years)
+
+
+<div align="center">
 
 |   Id |   YR |   NinaCount |   NinoCount |   NeutralCount | Event   |   EventMark |   EventLabel |
 |-----:|-----:|------------:|------------:|---------------:|:--------|------------:|-------------:|
@@ -436,6 +445,9 @@ Niña - Monthly values per station from total monthly values (mean)
 |   59 | 2009 |           3 |           5 |              4 | Niño    |           1 |            5 |
 |   65 | 2015 |           0 |          10 |              2 | Niño    |           1 |           10 |
 |   69 | 2019 |           0 |           5 |              7 | Niño    |           1 |            5 |
+
+</div>
+
 
 Niño - Table aggregations (sum)
 
@@ -609,7 +621,10 @@ Niño - Monthly values per station from total monthly values (mean)
 
 ![R.LTWB](Graph/AggNino_Monthly_mean_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
 
-### Neutral events table (30 years)
+### Neutral events analysis (30 years)
+
+
+<div align="center">
 
 |   Id |   YR |   NinaCount |   NinoCount |   NeutralCount | Event   |   EventMark |   EventLabel |
 |-----:|-----:|------------:|------------:|---------------:|:--------|------------:|-------------:|
@@ -643,6 +658,9 @@ Niño - Monthly values per station from total monthly values (mean)
 |   67 | 2017 |           3 |           0 |              9 | Neutral |           0 |            9 |
 |   68 | 2018 |           4 |           3 |              5 | Neutral |           0 |            5 |
 |   71 | 2021 |           4 |           0 |              8 | Neutral |           0 |            8 |
+
+</div>
+
 
 Neutral - Table aggregations (sum)
 
