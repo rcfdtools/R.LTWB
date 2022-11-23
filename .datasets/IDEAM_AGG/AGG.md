@@ -5,7 +5,7 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 * Station records file: [Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
 * Records in stations file: 504
 * Aggregation function: sum
-* Execution date: 2022-11-23 09:47:59.415235
+* Execution date: 2022-11-23 09:56:59.477586
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython.wiki']
 * matplotlib version: 3.6.0
@@ -462,7 +462,7 @@ Neutral - Zonal monthly values (mean)
 
 
 
-## Yearly aggregation matrix values per station from yearly values (mean)
+## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)
 
 
 <div align="center">
@@ -604,3 +604,25 @@ Neutral - Zonal monthly values (mean)
 
 
 ![R.LTWB](Graph/AggMatrix_Yearly_mean_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
+
+<div align="center">
+
+|   Month |   AggCompositeZonal |   AggNinaZonal |   AggNinoZonal |   AggNeutralZonal |
+|--------:|--------------------:|---------------:|---------------:|------------------:|
+|       1 |             21.6115 |        16.8432 |        21.3334 |           25.2253 |
+|       2 |             29.2086 |        30.7623 |        25.0014 |           30.6576 |
+|       3 |             62.7065 |        66.5326 |        52.7161 |           66.0485 |
+|       4 |            143.845  |       136.693  |       137.104  |          153.132  |
+|       5 |            204.935  |       207.713  |       186.782  |          214.022  |
+|       6 |            147.428  |       169.648  |       126.368  |          144.25   |
+|       7 |            128.637  |       167.23   |       103.287  |          116.257  |
+|       8 |            177.899  |       229.036  |       119.246  |          176.809  |
+|       9 |            210.897  |       251.274  |       188.544  |          195.397  |
+|      10 |            260.045  |       286.782  |       213.131  |          269.404  |
+|      11 |            177.661  |       218.159  |       133.032  |          175.685  |
+|      12 |             60.639  |        90.7734 |        34.6854 |           54.7358 |
+
+</div>
+
+
+![R.LTWB](Graph/AggZonal_Monthly_mean_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)

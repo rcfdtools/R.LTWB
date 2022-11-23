@@ -31,6 +31,7 @@ fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
+df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
 monthly_to_year_agg = 'sum'  # Aggregation function, E.G. sum for total monthly rain values, mean for average monthly flow values.
 
 
@@ -45,12 +46,12 @@ def print_log(txt_print, on_screen=True, center_div=False):
         file_log.write('\n</div>\n' + '\n')
 
 # Function for plot series
-def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_save_name='xxxxx'):
+def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_save_name='xxxxx', legend=False):
     match kind:
         case 'line':
-            ax = df.plot(colormap=plot_colormap, legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.5)
+            ax = df.plot(colormap=plot_colormap, legend=legend, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.5)
         case 'bar':
-            ax = df.plot.bar(colormap=plot_colormap, legend=True, stacked=True, figsize=(fig_size*3, fig_size*1.75), width=0.8)
+            ax = df.plot.bar(colormap=plot_colormap, legend=legend, stacked=True, figsize=(fig_size*3, fig_size*1.75), width=0.8)
             plt.xticks(rotation=90, size=8)
     plt.title(title)
     ax.set_ylabel(ylabel)
@@ -112,11 +113,12 @@ df_monthly_val.index.name = 'Month'
 print_log(df_monthly_val.to_markdown())
 plot_df(df_monthly_val, 'Composite - Monthly values per station (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggComposite_Monthly_mean')
 print_log('\nComposite - Zonal monthly values (mean)\n', center_div=True)
-df_monthly_zone = df_monthly_val.mean(axis=1)
-df_monthly_zone.name = 'AggCompositeZonal'
-df_monthly_zone = df_monthly_zone.to_frame()
-print_log(df_monthly_zone.to_markdown(), center_div=True)
+df_monthly_zonal = df_monthly_val.mean(axis=1)
+df_monthly_zonal.name = 'AggCompositeZonal'
+df_monthly_zonal = df_monthly_zonal.to_frame()
+print_log(df_monthly_zonal.to_markdown(), center_div=True)
 df_agg_full = df_agg
+df_agg_zonal = df_monthly_zonal
 '''
 print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
 df_agg = df_monthly_val.sum()
@@ -172,12 +174,16 @@ for i in (-1, 1, 0):
     plot_df(df_monthly_val,'%s - Monthly values per station (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='line', plt_save_name='%s_Monthly_mean' % agg_name)
     df_agg_full = pd.concat([df_agg_full, df_agg], axis=1)
     print_log('\n%s - Zonal monthly values (mean)\n' % ensooni_tag, center_div=True)
-    df_monthly_zone = df_monthly_val.mean(axis=1)
-    df_monthly_zone.name = agg_name + 'Zonal'
-    df_monthly_zone = df_monthly_zone.to_frame()
-    print_log(df_monthly_zone.to_markdown(), center_div=True)
+    df_monthly_zonal = df_monthly_val.mean(axis=1)
+    df_monthly_zonal.name = agg_name + 'Zonal'
+    df_monthly_zonal = df_monthly_zonal.to_frame()
+    print_log(df_monthly_zonal.to_markdown(), center_div=True)
+    df_agg_zonal = pd.concat([df_agg_zonal, df_monthly_zonal], axis=1)
+
 
 # Yearly aggregation matrix
-print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean)\n')
+print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
 print_log(df_agg_full.to_markdown(), center_div=True)
-plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean')
+plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean', legend=True)
+print_log(df_agg_zonal.to_markdown(), center_div=True)
+plot_df(df_agg_zonal, 'Zonal aggregation values (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggZonal_Monthly_mean', legend=True)
