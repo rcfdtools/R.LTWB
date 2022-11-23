@@ -50,7 +50,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_save_name='xxxxx', legend=False):
     match kind:
         case 'line':
-            ax = df.plot(colormap=plot_colormap, legend=legend, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.75)
+            ax = df.plot(colormap=plot_colormap, legend=legend, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.65)
         case 'bar':
             ax = df.plot.bar(colormap=plot_colormap, legend=legend, stacked=True, figsize=(fig_size*3, fig_size*1.75), width=0.8)
             plt.xticks(rotation=90, size=8)
