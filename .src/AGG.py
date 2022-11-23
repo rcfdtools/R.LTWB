@@ -18,8 +18,7 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-#station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
-station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # Current IDEAM records file
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
@@ -83,8 +82,8 @@ print_log('# Statistical aggregations for hydro-climatological composite series 
 print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological yearly events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
           '\n* ENSO-ONI year file: [%s](%s)' % (str(ENSOONI_file), '../ENSOONI/' + ENSOONI_file) +
-          '\n* Records in stations file: %d' % ideam_regs +
-          '\n* Daily series: %s' % daily_serie +
+          '\n* Records in station file: %d' % ideam_regs +
+          '\n* Daily serie: %s' % daily_serie +
           '\n* Aggregation function: %s' % monthly_to_year_agg +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
