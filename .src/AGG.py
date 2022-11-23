@@ -54,7 +54,7 @@ def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_sa
             ax = df.plot.bar(colormap=plot_colormap, legend=legend, stacked=True, figsize=(fig_size*3, fig_size*1.75), width=0.8)
             plt.xticks(rotation=90, size=8)
     plt.title(title)
-    ax.set_ylabel(ylabel)
+    ax.set_ylabel(ylabel + '\n' + station_file + '\n' + ENSOONI_file)
     if show_plot: plt.show()
     plt_name = plt_save_name + '_' + station_file + '.png'
     plt.savefig(path + 'Graph/' + plt_name, dpi=150)
@@ -100,19 +100,19 @@ print_log('\n## Composite - Yearly values per station from monthly values (%s)\n
 df_yearly_agg = monthly_to_year_agg_func(df)
 df_yearly_agg.index.name = 'Year'
 print_log(df_yearly_agg.to_markdown())
-plot_df(df_yearly_agg, 'Composite - Yearly values per station from monthly values (%s)\n%s' % (monthly_to_year_agg, station_file), 'Values', kind='line', plt_save_name='AggComposite_Yearly_%s' % monthly_to_year_agg)
+plot_df(df_yearly_agg, 'Composite - Yearly values per station from monthly values (%s)\n' % monthly_to_year_agg, 'Values', kind='line', plt_save_name='AggComposite_Yearly_%s' % monthly_to_year_agg)
 print_log('\nComposite - Aggregation value per station from yearly aggregations (mean)\n')
 df_agg = df_yearly_agg.mean()  # Results as list
 df_agg.index.name = 'Station'
 df_agg.name = 'AggComposite'
 df_agg = df_agg.to_frame()  # List to frame
 print_log(df_agg.T.to_markdown())
-plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggComposite_Yearly_mean')
+plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggComposite_Yearly_mean')
 print_log('\nComposite - Monthly values per station (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
 df_monthly_val.index.name = 'Month'
 print_log(df_monthly_val.to_markdown())
-plot_df(df_monthly_val, 'Composite - Monthly values per station (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggComposite_Monthly_mean')
+plot_df(df_monthly_val, 'Composite - Monthly values per station (mean)\n', 'Values', kind='line', plt_save_name='AggComposite_Monthly_mean')
 print_log('\nComposite - Zonal monthly values (mean)\n', center_div=True)
 df_monthly_zonal = df_monthly_val.mean(axis=1)
 df_monthly_zonal.name = 'AggCompositeZonal'
@@ -126,7 +126,7 @@ df_agg = df_monthly_val.sum()
 df_agg.index.name = 'Station'
 df_agg.name = 'Agg'
 print_log(df_agg.to_markdown())
-plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n%s' % station_file, 'Values', kind='bar')
+plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n', 'Values', kind='bar')
 '''
 
 
@@ -159,20 +159,20 @@ for i in (-1, 1, 0):
     df_yearly_agg.index.name = 'Year'
     print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, monthly_to_year_agg))
     print_log(df_yearly_agg.to_markdown())
-    plot_df(df_yearly_agg, '%s - Yearly values per station from monthly values (%s)\n%s' % (ensooni_tag, monthly_to_year_agg, station_file), 'Values', kind='line', plt_save_name='%s_Yearly_%s' % (agg_name,monthly_to_year_agg))
+    plot_df(df_yearly_agg, '%s - Yearly values per station from monthly values (%s)\n' % (ensooni_tag, monthly_to_year_agg), 'Values', kind='line', plt_save_name='%s_Yearly_%s' % (agg_name,monthly_to_year_agg))
     print_log('\n%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag)
     df_agg = df_yearly_agg.mean()  # Results as list
     df_agg.index.name = 'Station'
     df_agg.name = agg_name
     df_agg = df_agg.to_frame()  # List to frame
     print_log(df_agg.T.to_markdown())
-    plot_df(df_agg, '%s - Aggregation value per station from yearly aggregations (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='bar', plt_save_name='%s_Yearly_mean' % agg_name)
+    plot_df(df_agg, '%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag, 'Values', kind='bar', plt_save_name='%s_Yearly_mean' % agg_name)
     print_log('\n%s - Monthly values per station (mean)\n' % ensooni_tag)
     df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
     df_monthly_val = df.groupby(df_monthly_filter[date_record_name].dt.month).mean()
     df_monthly_val.index.name = 'Month'
     print_log(df_monthly_val.to_markdown())
-    plot_df(df_monthly_val,'%s - Monthly values per station (mean)\n%s' % (ensooni_tag, station_file), 'Values', kind='line', plt_save_name='%s_Monthly_mean' % agg_name)
+    plot_df(df_monthly_val,'%s - Monthly values per station (mean)\n' % ensooni_tag, 'Values', kind='line', plt_save_name='%s_Monthly_mean' % agg_name)
     df_agg_full = pd.concat([df_agg_full, df_agg], axis=1)
     print_log('\n%s - Zonal monthly values (mean)\n' % ensooni_tag, center_div=True)
     df_monthly_zonal = df_monthly_val.mean(axis=1)
@@ -186,7 +186,7 @@ for i in (-1, 1, 0):
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
 print_log('\nYearly matrix values per station\n', center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
-plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean', legend=True)
+plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean', legend=True)
 print_log('\nZonal values\n', center_div=True)
 print_log(df_agg_zonal.to_markdown(), center_div=True)
-plot_df(df_agg_zonal, 'Zonal aggregation values (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggZonal_Monthly_mean', legend=True)
+plot_df(df_agg_zonal, 'Zonal aggregation values (mean)\n', 'Values', kind='line', plt_save_name='AggZonal_Monthly_mean', legend=True)
