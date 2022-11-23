@@ -1,6 +1,6 @@
 Statistical aggregations
-	Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv
-	Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv
+	Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, monthly_to_year_agg = 'Sum'
+	Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean' 
 
 
 

@@ -18,7 +18,7 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # Current IDEAM records file
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
@@ -32,8 +32,8 @@ fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
-daily_serie = True  # The stations series contain daily values
-monthly_to_year_agg = 'Mean'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
+daily_serie = False  # The stations series contain daily values
+monthly_to_year_agg = 'Sum'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
 
 
 # Function for print and show results in a file
