@@ -54,7 +54,7 @@ def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_sa
         case 'line':
             ax = df.plot(colormap=plot_colormap, legend=False, alpha=1, figsize=(fig_size*2, fig_size+1), linewidth=0.5)
         case 'bar':
-            ax = df.plot.bar(color='silver', legend=False, figsize=(fig_size*3, fig_size*1.75), width=0.8)
+            ax = df.plot.bar(colormap=plot_colormap, legend=True, stacked=True, figsize=(fig_size*3, fig_size*1.75), width=0.8)
             plt.xticks(rotation=90, size=8)
     plt.title(title)
     ax.set_ylabel(ylabel)
@@ -161,3 +161,4 @@ for i in (-1, 1, 0):
 # Yearly aggregation matrix
 print_log('\n\n## Yearly aggregation matrix values per station from total monthly values (mean)\n')
 print_log(df_agg_full.to_markdown(), center_div=True)
+plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean')

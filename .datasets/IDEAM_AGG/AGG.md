@@ -472,3 +472,5 @@ Neutral - Monthly values per station from total monthly values (mean)
 
 </div>
 
+
+![R.LTWB](Graph/AggMatrix_Yearly_mean_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.png)
