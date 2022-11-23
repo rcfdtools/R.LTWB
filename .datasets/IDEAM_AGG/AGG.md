@@ -6,7 +6,7 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 * ENSO-ONI year file: [ONI_Eval_Consecutive.csv](../ENSOONI/ONI_Eval_Consecutive.csv)
 * Records in stations file: 504
 * Aggregation function: sum
-* Execution date: 2022-11-23 10:18:47.987083
+* Execution date: 2022-11-23 10:30:06.919842
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython.wiki']
 * matplotlib version: 3.6.0
@@ -469,7 +469,7 @@ Neutral - Zonal monthly values (mean)
 <div align="center">
 
 
-Yearly matrix values per station
+Yearly matrix values per station (required for spatial interpolations) 
 
 
 </div>
@@ -618,7 +618,7 @@ Yearly matrix values per station
 <div align="center">
 
 
-Zonal values
+Monthly zonal values
 
 
 </div>

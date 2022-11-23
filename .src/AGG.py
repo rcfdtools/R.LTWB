@@ -184,9 +184,9 @@ for i in (-1, 1, 0):
 
 # Yearly aggregation matrix
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
-print_log('\nYearly matrix values per station\n', center_div=True)
+print_log('\nYearly matrix values per station (required for spatial interpolations) \n', center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
 plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean', legend=True)
-print_log('\nZonal values\n', center_div=True)
+print_log('\nMonthly zonal values\n', center_div=True)
 print_log(df_agg_zonal.to_markdown(), center_div=True)
-plot_df(df_agg_zonal, 'Zonal aggregation values (mean)\n', 'Values', kind='line', plt_save_name='AggZonal_Monthly_mean', legend=True)
+plot_df(df_agg_zonal, 'Zonal aggregation values per month (mean)\n', 'Values', kind='line', plt_save_name='AggZonal_Monthly_mean', legend=True)
