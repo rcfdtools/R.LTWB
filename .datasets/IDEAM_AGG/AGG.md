@@ -1,10 +1,11 @@
-Records in stations file: 504
 # Statistical aggregations for hydro-climatological composite series and year events Niño, Niña and Neutral
 
 For further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI
 
 * Station records file: [Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
-* Execution date: 2022-11-23 08:48:48.533544
+* Records in stations file: 504
+* Aggregation function: sum
+* Execution date: 2022-11-23 08:53:28.264576
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.TeachingResearchGuide', 'D:\\R.GISPython.wiki']
 * matplotlib version: 3.6.0

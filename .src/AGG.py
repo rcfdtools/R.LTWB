@@ -27,11 +27,9 @@ file_log_name = path + 'AGG.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
-sample_records = 3  # Records to show in the sample table head and tail
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
-#cols = ['Station', 'AggComposite', 'AggNina', 'AggNino', 'AggNeutral']
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
 monthly_to_year_agg = 'sum'  # Aggregation function, E.G. sum for total monthly rain values, mean for average monthly flow values.
 
@@ -74,17 +72,15 @@ def monthly_to_year_agg_func(df1):
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[date_record_name])
-#df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[date_record_name], index_col=date_record_name)
 ideam_regs = df.shape[0]
-#df.reset_index(drop=True, inplace=True)
-print_log('Records in stations file: %d' % ideam_regs)
-#print(df)
 
 
 # Header
 print_log('# Statistical aggregations for hydro-climatological composite series and year events Niño, Niña and Neutral')
 print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
+          '\n* Records in stations file: %d' % ideam_regs +
+          '\n* Aggregation function: %s' % monthly_to_year_agg +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
           '\n* Python path: ' + str(sys.path[0:5]) +
