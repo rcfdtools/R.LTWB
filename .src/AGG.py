@@ -32,7 +32,7 @@ fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
-daily_serie = True  # The stations series contain daily values
+daily_serie = False  # The stations series contain daily values
 monthly_to_year_agg = 'Sum'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
 
 
