@@ -128,7 +128,7 @@ df_agg.index.name = 'Station'
 df_agg.name = 'AggComposite'
 df_agg = df_agg.to_frame()  # List to frame
 print_log(df_agg.T.to_markdown())
-plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggComposite_Yearly_Mean')
+plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggComposite_Station_Mean')
 print_log('\nComposite - Monthly values per station (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
 df_monthly_val.index.name = 'Month'
@@ -186,7 +186,7 @@ for i in (-1, 1, 0):
     df_agg.name = agg_name
     df_agg = df_agg.to_frame()  # List to frame
     print_log(df_agg.T.to_markdown())
-    plot_df(df_agg, '%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag, 'Values', kind='bar', plt_save_name='%s_Yearly_Mean' % agg_name)
+    plot_df(df_agg, '%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag, 'Values', kind='bar', plt_save_name='%s_Station_Mean' % agg_name)
     print_log('\n%s - Monthly values per station (mean)\n' % ensooni_tag)
     df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
     df_monthly_val = df.groupby(df_monthly_filter[date_record_name].dt.month).mean()

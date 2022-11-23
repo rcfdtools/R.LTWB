@@ -7,7 +7,7 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 * Records in station file: 15341
 * Daily serie: True
 * Aggregation function: Mean
-* Execution date: 2022-11-23 17:47:09.645068
+* Execution date: 2022-11-23 17:54:03.634343
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki']
 * matplotlib version: 3.6.0
@@ -71,7 +71,7 @@ Composite - Aggregation value per station from yearly aggregations (mean)
 |:-------------|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|
 | AggComposite |    22.2996 |    23.0681 |    23.8428 |    22.9158 |    23.5256 |    22.4481 |    22.9625 |    22.8583 |    23.1644 |    22.3255 |    20.5313 |    18.7094 |    23.7725 |    21.8289 |    22.3886 |    23.8917 |    23.3564 |    22.7066 |    24.2491 |    23.3778 |    21.8137 |    23.0935 |     21.298 |    22.3456 |    21.9463 |
 
-![R.LTWB](Graph/AggComposite_Yearly_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+![R.LTWB](Graph/AggComposite_Station_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 Composite - Monthly values per station (mean)
 
@@ -187,7 +187,7 @@ Niña - Aggregation value per station from yearly aggregations (mean)
 |:--------|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|
 | AggNina |    22.0436 |    22.9191 |    23.7392 |    22.7263 |    23.3436 |    22.3656 |    22.7319 |     22.867 |    23.0266 |    22.1103 |    20.4985 |    18.5795 |     23.739 |    22.0664 |    22.2964 |    23.7044 |    23.1769 |    22.7331 |    24.2129 |    23.1898 |    21.6979 |     22.998 |    21.1941 |    22.1409 |    21.6281 |
 
-![R.LTWB](Graph/AggNina_Yearly_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+![R.LTWB](Graph/AggNina_Station_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 Niña - Monthly values per station (mean)
 
@@ -291,7 +291,7 @@ Niño - Aggregation value per station from yearly aggregations (mean)
 |:--------|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|
 | AggNino |     22.606 |    23.2273 |    23.9567 |    22.9966 |    23.7047 |    22.6318 |    23.0218 |     22.982 |    23.3927 |    22.5625 |    20.6613 |    18.8954 |    23.9698 |    21.6682 |    22.5229 |    24.1758 |    23.5887 |    22.8839 |    24.2814 |    23.6186 |     21.921 |      23.24 |    21.2323 |    22.2866 |    21.9363 |
 
-![R.LTWB](Graph/AggNino_Yearly_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+![R.LTWB](Graph/AggNino_Station_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 Niño - Monthly values per station (mean)
 
@@ -413,7 +413,7 @@ Neutral - Aggregation value per station from yearly aggregations (mean)
 |:-----------|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|-----------:|
 | AggNeutral |    22.2972 |    23.0784 |     23.848 |    23.0033 |    23.5476 |    22.3954 |    23.0929 |    22.7764 |    23.1244 |     22.336 |    20.4756 |    18.6896 |    23.6763 |    21.7556 |    22.3731 |    23.8534 |     23.344 |    22.5792 |    24.2554 |    23.3664 |    21.8317 |    23.0729 |    21.4132 |    22.5295 |    22.1823 |
 
-![R.LTWB](Graph/AggNeutral_Yearly_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
+![R.LTWB](Graph/AggNeutral_Station_Mean_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.png)
 
 Neutral - Monthly values per station (mean)
 
