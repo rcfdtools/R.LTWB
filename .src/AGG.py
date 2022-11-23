@@ -26,7 +26,7 @@ path = 'D:/R.LTWB/.datasets/IDEAM_AGG/'  # Your local output files path, use ../
 file_log_name = path + 'AGG.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
-plot_colormap = 'autumn'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
+plot_colormap = 'Spectral'  # Color theme for plot graphics (E.g. autumn), https://matplotlib.org/stable/tutorials/colors/colormaps.html
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
@@ -80,6 +80,7 @@ ideam_regs = df.shape[0]
 print_log('# Statistical aggregations for hydro-climatological composite series and yearly events Niño, Niña and Neutral')
 print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological yearly events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
+          '\n* ENSO-ONI year file: [%s](%s)' % (str(ENSOONI_file), '../ENSOONI/' + ENSOONI_file) +
           '\n* Records in stations file: %d' % ideam_regs +
           '\n* Aggregation function: %s' % monthly_to_year_agg +
           '\n* Execution date: ' + str(datetime.now()) +
