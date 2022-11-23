@@ -10,6 +10,9 @@ Statistical aggregations
 * https://www.geeksforgeeks.org/pandas-find-unique-values-from-multiple-columns/
 * https://www.geeksforgeeks.org/ways-to-filter-pandas-dataframe-by-column-values/
 * https://www.geeksforgeeks.org/how-to-concatenate-two-or-more-pandas-dataframes/
+* https://stackoverflow.com/questions/29550414/how-can-i-split-a-column-of-tuples-in-a-pandas-dataframe
+* https://www.geeksforgeeks.org/convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe/
+* https://www.geeksforgeeks.org/how-to-drop-one-or-multiple-columns-in-pandas-dataframe/
 
 
 

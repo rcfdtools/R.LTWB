@@ -18,7 +18,8 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
+#station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
@@ -32,7 +33,8 @@ fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
-monthly_to_year_agg = 'sum'  # Aggregation function, E.G. sum for total monthly rain values, mean for average monthly flow values.
+daily_serie = True  # The stations series contain daily values
+monthly_to_year_agg = 'Mean'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
 
 
 # Function for print and show results in a file
@@ -64,9 +66,9 @@ def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_sa
 # Function for monthly to year aggregations
 def monthly_to_year_agg_func(df1):
     match monthly_to_year_agg:
-        case 'sum':  # Typical for total monthly rain
+        case 'Sum':  # Typical for total monthly rain
             df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).sum()
-        case 'mean':  # Typical for average monthly flow
+        case 'Mean':  # Typical for average monthly flow
             df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).mean()
     return df_yearly_agg
 
@@ -82,6 +84,7 @@ print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) 
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
           '\n* ENSO-ONI year file: [%s](%s)' % (str(ENSOONI_file), '../ENSOONI/' + ENSOONI_file) +
           '\n* Records in stations file: %d' % ideam_regs +
+          '\n* Daily series: %s' % daily_serie +
           '\n* Aggregation function: %s' % monthly_to_year_agg +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
@@ -91,6 +94,25 @@ print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_I
           '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/AGG'
           '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
           '\n* Credits: r.cfdtools@gmail.com')
+
+
+# Aggregations from daily to monthly values
+if daily_serie:
+    print_log('\n\n## Daily values to monthly aggregation (%s)\n' % monthly_to_year_agg)
+    match monthly_to_year_agg:
+        case 'Sum':  # Typical for total daily rain
+            df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).sum()
+        case 'Mean':  # Typical for average daily flow, daily temperature
+            df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).mean()
+    df.index.name = 'Group'
+    df['Aux'] = df.index
+    df[date_record_name] = df.Aux.str[0].astype(str) + '-' + df.Aux.str[1].astype(str) + '-01'
+    df[date_record_name] = df[date_record_name].astype('datetime64[ns]')
+    df = df.drop(['Aux'], axis=1)
+    df = df.reset_index(drop=True)
+    df.index.name = 'Id'
+    df.insert(0, date_record_name, df.pop(date_record_name))
+    print(df.to_markdown())
 
 
 # Composite aggregations for monthly values
@@ -120,14 +142,13 @@ df_monthly_zonal = df_monthly_zonal.to_frame()
 print_log(df_monthly_zonal.to_markdown(), center_div=True)
 df_agg_full = df_agg
 df_agg_zonal = df_monthly_zonal
-'''
-print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
-df_agg = df_monthly_val.sum()
-df_agg.index.name = 'Station'
-df_agg.name = 'Agg'
-print_log(df_agg.to_markdown())
-plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n', 'Values', kind='bar')
-'''
+#print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
+#df_agg = df_monthly_val.sum()
+#df_agg.index.name = 'Station'
+#df_agg.name = 'Agg'
+#print_log(df_agg.to_markdown())
+#plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n', 'Values', kind='bar')
+
 
 
 # Aggregation values with the ENSO-ONI year classifier
