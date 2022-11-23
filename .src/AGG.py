@@ -24,7 +24,7 @@ station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
 path = 'D:/R.LTWB/.datasets/IDEAM_AGG/'  # Your local output files path, use ../.datasets/IDEAM_AGG/ for relative path
-file_log_name = path + 'AGG.md'
+file_log_name = path + 'AGG_' + station_file + '.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'Spectral'  # Color theme for plot graphics (E.g. autumn), https://matplotlib.org/stable/tutorials/colors/colormaps.html
@@ -112,7 +112,7 @@ if daily_serie:
     df = df.reset_index(drop=True)
     df.index.name = 'Id'
     df.insert(0, date_record_name, df.pop(date_record_name))
-    print(df.to_markdown())
+    print_log(df.to_markdown())
 
 
 # Composite aggregations for monthly values
