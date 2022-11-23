@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Name: AGG.py
-# Description: statistical aggregations for hydro climatological series
+# Description: statistical aggregations for hydro-climatological series
 # Requirements: Python 3+, pandas, tabulate, numpy
 # SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
 
@@ -8,7 +8,6 @@
 # Libraries
 from datetime import datetime
 from datetime import date
-import requests
 import os.path
 import sys
 import pandas as pd
@@ -47,7 +46,6 @@ def print_log(txt_print, on_screen=True, center_div=False):
     if center_div:
         file_log.write('\n</div>\n' + '\n')
 
-
 # Function for plot series
 def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_save_name='xxxxx'):
     match kind:
@@ -81,6 +79,21 @@ ideam_regs = df.shape[0]
 #df.reset_index(drop=True, inplace=True)
 print_log('Records in stations file: %d' % ideam_regs)
 #print(df)
+
+
+# Header
+print_log('# Statistical aggregations for hydro-climatological composite series and year events Niño, Niña and Neutral')
+print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
+print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
+          '\n* Execution date: ' + str(datetime.now()) +
+          '\n* Python version: ' + str(sys.version) +
+          '\n* Python path: ' + str(sys.path[0:5]) +
+          '\n* matplotlib version: ' + str(matplotlib.__version__) +
+          '\n* pandas version: ' + str(pd.__version__) +
+          '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/AGG'
+          '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
+          '\n* Credits: r.cfdtools@gmail.com')
+
 
 # Composite aggregations for total monthly values
 #print_log(df[date_record_name].dt.year)
