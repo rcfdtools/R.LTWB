@@ -152,7 +152,7 @@ for i in (-1, 1, 0):
             ensooni_tag = 'Niño'
             agg_name = 'AggNino'
     df_ensooni_eval = df_ensooni[df_ensooni['EventMark'] == i]
-    print_log('\n### %s events analysis (%d years)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
+    print_log('\n### %s events analysis (%d years identified)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
     print_log(df_ensooni_eval.to_markdown(), center_div=True)
     df_ensooni_unique = df_ensooni_eval['YR'].unique()
     df_yearly_agg = monthly_to_year_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
