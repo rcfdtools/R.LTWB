@@ -110,6 +110,11 @@ print_log('\nComposite - Monthly values per station (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
 df_monthly_val.index.name = 'Month'
 print_log(df_monthly_val.to_markdown())
+print_log('\nComposite - Zonal monthly values per station (mean)\n')
+df_monthly_zone = df_monthly_val.mean(axis=1)
+df_monthly_zone.name = 'AggCompositeZonal'
+df_monthly_zone = df_monthly_zone.to_frame()
+print_log(df_monthly_zone.to_markdown(), center_div=True)
 plot_df(df_monthly_val, 'Composite - Monthly values per station (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggComposite_Monthly_mean')
 df_agg_full = df_agg
 '''
