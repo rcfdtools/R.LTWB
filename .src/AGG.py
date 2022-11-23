@@ -33,7 +33,7 @@ show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
 daily_serie = True  # The stations series contain daily values
-monthly_to_year_agg = 'Mean'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
+monthly_to_year_agg = 'Sum'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
 
 
 # Function for print and show results in a file
