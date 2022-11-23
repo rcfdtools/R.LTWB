@@ -7,7 +7,7 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 * Records in station file: 15341
 * Daily serie: True
 * Aggregation function: Mean
-* Execution date: 2022-11-23 18:00:19.572449
+* Execution date: 2022-11-23 18:09:48.233577
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki']
 * matplotlib version: 3.6.0
