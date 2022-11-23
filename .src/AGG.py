@@ -20,7 +20,7 @@ import tabulate  # required for print tables in Markdown using pandas
 # General variables
 station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
-ENSOONI_file = 'ONI_Eval_Consecutive.csv'
+ENSOONI_file = 'ONI_Eval_NonConsecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
 path = 'D:/R.LTWB/.datasets/IDEAM_AGG/'  # Your local output files path, use ../.datasets/IDEAM_AGG/ for relative path
 file_log_name = path + 'AGG.md'
@@ -184,7 +184,9 @@ for i in (-1, 1, 0):
 
 # Yearly aggregation matrix
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
+print_log('\nYearly matrix values per station\n', center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
 plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n%s' % station_file, 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_mean', legend=True)
+print_log('\nZonal values\n', center_div=True)
 print_log(df_agg_zonal.to_markdown(), center_div=True)
 plot_df(df_agg_zonal, 'Zonal aggregation values (mean)\n%s' % station_file, 'Values', kind='line', plt_save_name='AggZonal_Monthly_mean', legend=True)
