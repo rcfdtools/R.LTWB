@@ -76,7 +76,7 @@ ideam_regs = df.shape[0]
 
 
 # Header
-print_log('# Statistical aggregations for hydro-climatological composite series and year events Niño, Niña and Neutral')
+print_log('# Statistical aggregations for hydro-climatological composite series and yearly events Niño, Niña and Neutral')
 print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
           '\n* Records in stations file: %d' % ideam_regs +
