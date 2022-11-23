@@ -97,7 +97,7 @@ print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_I
 
 # Aggregations from daily to monthly values
 if daily_serie:
-    print_log('\n\n## Daily values to monthly aggregation (%s)\n' % monthly_to_year_agg)
+    #print_log('\n\n## Daily values to monthly aggregation (%s)\n' % monthly_to_year_agg)
     match monthly_to_year_agg:
         case 'Sum':  # Typical for total daily rain
             df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).sum()
@@ -111,7 +111,7 @@ if daily_serie:
     df = df.reset_index(drop=True)
     df.index.name = 'Id'
     df.insert(0, date_record_name, df.pop(date_record_name))
-    print_log(df.to_markdown())
+    #print_log(df.to_markdown())
 
 
 # Composite aggregations for monthly values

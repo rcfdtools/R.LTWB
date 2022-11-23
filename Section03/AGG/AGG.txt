@@ -1,4 +1,8 @@
 Statistical aggregations
+	Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv
+	Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv
+
+
 
 * https://library.wmo.int/doc_num.php?explnum_id=4167
 * https://library.wmo.int/index.php?lvl=notice_display&id=20130
@@ -13,6 +17,7 @@ Statistical aggregations
 * https://stackoverflow.com/questions/29550414/how-can-i-split-a-column-of-tuples-in-a-pandas-dataframe
 * https://www.geeksforgeeks.org/convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe/
 * https://www.geeksforgeeks.org/how-to-drop-one-or-multiple-columns-in-pandas-dataframe/
+* https://www.geeksforgeeks.org/how-to-move-a-column-to-first-position-in-pandas-dataframe/
 
 
 
