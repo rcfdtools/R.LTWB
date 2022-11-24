@@ -1,17 +1,14 @@
 # -*- coding: UTF-8 -*-
 # Name: Agg.py
 # Description: statistical aggregations for hydro-climatological series
-# Requirements: Python 3+, pandas, tabulate, numpy
+# Requirements: Python 3+, pandas, tabulate
 # SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
 
 
 # Libraries
 from datetime import datetime
-from datetime import date
-import os.path
 import sys
 import pandas as pd
-import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
 import tabulate  # required for print tables in Markdown using pandas
