@@ -36,7 +36,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 * [missingno](https://github.com/ResidentMario/missingno) para Python
 * [scikit-learn](https://scikit-learn.org) para Python
 * [Notepad++](https://notepad-plus-plus.org/), editor de texto y código.
-* Tablas dinámicas (pivot tables) con series de datos discretos con outliers identificados y ajustados de estaciones terrestres  del IDEAM por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Outlier)
+* Tablas dinámicas (pivot tables) con series de datos discretos con outliers identificados y ajustados de estaciones terrestres del IDEAM por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Outlier)
 
 
 ### Procedimiento general
