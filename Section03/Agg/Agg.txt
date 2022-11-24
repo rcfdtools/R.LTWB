@@ -1,11 +1,11 @@
 Station files and parameters
 	D:/R.LTWB/.datasets/IDEAM_Impute/
-		Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, monthly_to_year_agg = 'Sum'
-		Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean' 
-		Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean' 
-		Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv, daily_serie = False, monthly_to_year_agg = 'Mean'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, monthly_to_year_agg = 'Sum', unit = 'Rain, mm'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean', unit = 'Min temperature, °C'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean', unit = 'Max temperature, °C'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv, daily_serie = False, monthly_to_year_agg = 'Mean', unit = 'Flow, m³/s'
 	D:/R.LTWB/.datasets/IDEAM_Outlier/
-		Outlier_IQR_Cap_Pivot_EV_TT_D.csv, daily_serie = True, monthly_to_year_agg = 'Sum'
+		Outlier_IQR_Cap_Pivot_EV_TT_D.csv, daily_serie = True, monthly_to_year_agg = 'Sum', unit = 'Potential evaporation, mm'
 
 Aggregations for mean multianual values
 	Total monthly rain: sum per year, mean.
