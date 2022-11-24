@@ -24,7 +24,7 @@ Aggregations for mean multianual values
 
 Aggregations for maximun multianual values
 	Total daily rain: max per month per year, max per year, mean. (correspond with PMax24hr)
-	Max monthly rain: max per year, mean. (correspond with PMax24hr)
+	Max monthly rain (max from total daily rain): max per year, mean. (correspond with PMax24hr)
 	
 
 
@@ -44,6 +44,12 @@ Aggregations for maximun multianual values
 * https://www.geeksforgeeks.org/how-to-move-a-column-to-first-position-in-pandas-dataframe/
 
 
+Total monthly rain sample in 15015020
+	Composite 706.038
+	Niña 901.937
+	Niño 499.405
+	Neutral 690.832
+
 
 #print(station_df)
 #df = station_df.groupby('CodigoEstacion')
@@ -55,8 +61,9 @@ df_impute.index.name = 'Fecha'
 df_impute.index.name = date_record_name
 
 
-Total monthly rain sample in 15015020
-	Composite 706.038
-	Niña 901.937
-	Niño 499.405
-	Neutral 690.832
+#print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
+#df_agg = df_monthly_val.sum()
+#df_agg.index.name = 'Station'
+#df_agg.name = 'Agg'
+#print_log(df_agg.to_markdown())
+#plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n', 'Values', kind='bar')

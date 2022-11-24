@@ -82,7 +82,7 @@ df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[dat
 
 # Header
 print_log('# Statistical aggregations for hydro-climatological composite series and yearly events Niño, Niña and Neutral')
-print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological yearly events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
+print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological yearly events Niño, Niña and Neutral, check this activity https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
           '\n* ENSO-ONI year file: [%s](%s)' % (str(ENSOONI_file), '../ENSOONI/' + ENSOONI_file) +
           '\n* Stations: %d' % (df.shape[1] - 1) +
@@ -132,6 +132,14 @@ df_agg.index.name = 'Station'
 df_agg.name = 'AggComposite'
 df_agg = df_agg.to_frame()  # List to frame
 print_log(df_agg.T.to_markdown())
+
+print_log('\nComposite - Aggregation value per station from yearly aggregations (std - standard deviation)\n')
+df_agg_std = df_yearly_agg.std()  # Results as list
+df_agg_std.index.name = 'Station'
+df_agg_std.name = 'AggCompositeStd'
+df_agg_std = df_agg_std.to_frame()  # List to frame
+print_log(df_agg_std.T.to_markdown())
+
 plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggComposite_Station_Mean')
 print_log('\nComposite - Monthly values per station (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
@@ -145,13 +153,6 @@ df_monthly_zonal = df_monthly_zonal.to_frame()
 print_log(df_monthly_zonal.to_markdown(), center_div=True)
 df_agg_full = df_agg
 df_agg_zonal = df_monthly_zonal
-#print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
-#df_agg = df_monthly_val.sum()
-#df_agg.index.name = 'Station'
-#df_agg.name = 'Agg'
-#print_log(df_agg.to_markdown())
-#plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n', 'Values', kind='bar')
-
 
 
 # Aggregation values with the ENSO-ONI year classifier
@@ -190,6 +191,14 @@ for i in (-1, 1, 0):
     df_agg.name = agg_name
     df_agg = df_agg.to_frame()  # List to frame
     print_log(df_agg.T.to_markdown())
+
+    print_log('\n%s - Aggregation value per station from yearly aggregations (std - standard deviation)\n' % ensooni_tag)
+    df_agg_std = df_yearly_agg.std()  # Results as list
+    df_agg_std.index.name = 'Station'
+    df_agg_std.name = 'AggCompositeStd'
+    df_agg_std = df_agg_std.to_frame()  # List to frame
+    print_log(df_agg_std.T.to_markdown())
+
     plot_df(df_agg, '%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag, 'Values', kind='bar', plt_save_name='%s_Station_Mean' % agg_name)
     print_log('\n%s - Monthly values per station (mean)\n' % ensooni_tag)
     df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
