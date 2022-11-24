@@ -74,7 +74,6 @@ def monthly_to_year_agg_func(df1):
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[date_record_name])
-ideam_regs = df.shape[0]
 
 
 # Header
@@ -82,7 +81,8 @@ print_log('# Statistical aggregations for hydro-climatological composite series 
 print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological yearly events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
           '\n* ENSO-ONI year file: [%s](%s)' % (str(ENSOONI_file), '../ENSOONI/' + ENSOONI_file) +
-          '\n* Records in station file: %d' % ideam_regs +
+          '\n* Stations in file: %d' % df.shape[1] +
+          '\n* Records in station file: %d' % df.shape[0] +
           '\n* Daily serie: %s' % daily_serie +
           '\n* Aggregation function: %s' % monthly_to_year_agg +
           '\n* Execution date: ' + str(datetime.now()) +

@@ -4,12 +4,13 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 
 * Station records file: [Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)
 * ENSO-ONI year file: [ONI_Eval_Consecutive.csv](../ENSOONI/ONI_Eval_Consecutive.csv)
+* Stations in file: 26
 * Records in station file: 15341
 * Daily serie: True
 * Aggregation function: Mean
-* Execution date: 2022-11-23 18:09:48.233577
+* Execution date: 2022-11-24 07:46:47.657660
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
-* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki']
+* Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide']
 * matplotlib version: 3.6.0
 * pandas version: 1.4.3
 * Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/AGG
