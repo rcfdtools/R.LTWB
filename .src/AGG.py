@@ -215,10 +215,12 @@ for i in (-1, 1, 0):
 
 
 # Yearly aggregation matrix
+df_agg_full.to_csv(path + 'AGG_' + station_file)
+df_agg_std_full.to_csv(path + 'AGGStd_' + station_file)
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
-print_log('\nYearly matrix values per station (required for spatial interpolations)\n', center_div=True)
+print_log('\nYearly matrix values per station (required for spatial interpolations)\nFile: [%s](%s)\n' % ('AGG_' + station_file, 'AGG_' + station_file), center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
-print_log('\nYearly matrix standard deviations per station\n', center_div=True)
+print_log('\nYearly matrix standard deviations per statio\nFile: [%s](%s)\n' % ('AGGStd_' + station_file, 'AGGStd_' + station_file), center_div=True)
 print_log(df_agg_std_full.to_markdown(), center_div=True)
 plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_Mean', legend=True)
 print_log('\nMonthly zonal values\n', center_div=True)
