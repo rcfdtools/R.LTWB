@@ -18,7 +18,7 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv'  # Current IDEAM records file
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
@@ -32,8 +32,8 @@ fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
-daily_serie = True  # The stations series contain daily values
-monthly_to_year_agg = 'Mean'  # Aggregation function, E.G. Sum for total monthly rain values, Mean for average monthly flow values.
+daily_serie = False  # The stations series contain daily values
+agg_func = 'Sum'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
 
 
 # Function for print and show results in a file
@@ -63,12 +63,16 @@ def plot_df(df, title='No assignment title', ylabel='Value', kind='line', plt_sa
     plt.close('all')
 
 # Function for monthly to year aggregations
-def monthly_to_year_agg_func(df1):
-    match monthly_to_year_agg:
+def monthly_to_yearly_agg_func(df1):
+    match agg_func:
         case 'Sum':  # Typical for total monthly rain
             df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).sum()
         case 'Mean':  # Typical for average monthly flow
             df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).mean()
+        case 'Max':  # Typical for PMax24hr from total daily rain
+            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).max()
+        case 'Min':  # Typical for average monthly flow
+            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).min()
     return df_yearly_agg
 
 
@@ -81,10 +85,10 @@ print_log('# Statistical aggregations for hydro-climatological composite series 
 print_log('\nFor further information about the NOAA - Oceanic Niño Index (ONI) classifier for climatological yearly events Niño, Niña and Neutral, check this activitie https://github.com/rcfdtools/R.LTWB/tree/main/Section03/ENSOONI')
 print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_Impute/' + station_file) +
           '\n* ENSO-ONI year file: [%s](%s)' % (str(ENSOONI_file), '../ENSOONI/' + ENSOONI_file) +
-          '\n* Stations in file: %d' % df.shape[1] +
-          '\n* Records in station file: %d' % df.shape[0] +
+          '\n* Stations: %d' % (df.shape[1] - 1) +
+          '\n* Records: %d' % df.shape[0] +
           '\n* Daily serie: %s' % daily_serie +
-          '\n* Aggregation function: %s' % monthly_to_year_agg +
+          '\n* Aggregation function: %s' % agg_func +
           '\n* Execution date: ' + str(datetime.now()) +
           '\n* Python version: ' + str(sys.version) +
           '\n* Python path: ' + str(sys.path[0:5]) +
@@ -97,8 +101,8 @@ print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_I
 
 # Aggregations from daily to monthly values
 if daily_serie:
-    #print_log('\n\n## Daily values to monthly aggregation (%s)\n' % monthly_to_year_agg)
-    match monthly_to_year_agg:
+    #print_log('\n\n## Daily values to monthly aggregation (%s)\n' % agg_func)
+    match agg_func:
         case 'Sum':  # Typical for total daily rain
             df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).sum()
         case 'Mean':  # Typical for average daily flow, daily temperature
@@ -117,11 +121,11 @@ if daily_serie:
 # Composite aggregations for monthly values
 #print_log(df[date_record_name].dt.year)
 #print_log(df.groupby(df[date_record_name].dt.year).agg(['sum', 'mean', 'max']).to_markdown())
-print_log('\n## Composite - Yearly values per station from monthly values (%s)\n' % monthly_to_year_agg)
-df_yearly_agg = monthly_to_year_agg_func(df)
+print_log('\n## Composite - Yearly values per station from monthly values (%s)\n' % agg_func)
+df_yearly_agg = monthly_to_yearly_agg_func(df)
 df_yearly_agg.index.name = 'Year'
 print_log(df_yearly_agg.to_markdown())
-plot_df(df_yearly_agg, 'Composite - Yearly values per station from monthly values (%s)\n' % monthly_to_year_agg, 'Values', kind='line', plt_save_name='AggComposite_Yearly_%s' % monthly_to_year_agg)
+plot_df(df_yearly_agg, 'Composite - Yearly values per station from monthly values (%s)\n' % agg_func, 'Values', kind='line', plt_save_name='AggComposite_Yearly_%s' % agg_func)
 print_log('\nComposite - Aggregation value per station from yearly aggregations (mean)\n')
 df_agg = df_yearly_agg.mean()  # Results as list
 df_agg.index.name = 'Station'
@@ -151,7 +155,7 @@ df_agg_zonal = df_monthly_zonal
 
 
 # Aggregation values with the ENSO-ONI year classifier
-print_log('\n## ENSO-ONI Events - Yearly values per station from monthly values (%s)\n' % monthly_to_year_agg)
+print_log('\n## ENSO-ONI Events - Yearly values per station from monthly values (%s)\n' % agg_func)
 df_ensooni = pd.read_csv(ENSOONI_path + ENSOONI_file, low_memory=False, encoding='latin-1', index_col=False)
 df_ensooni.index.name = 'Id'
 enso_oni_regs = df_ensooni.shape[0]
@@ -175,11 +179,11 @@ for i in (-1, 1, 0):
     print_log('\n### %s events analysis (%d years identified)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
     print_log(df_ensooni_eval.to_markdown(), center_div=True)
     df_ensooni_unique = df_ensooni_eval['YR'].unique()
-    df_yearly_agg = monthly_to_year_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
+    df_yearly_agg = monthly_to_yearly_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
     df_yearly_agg.index.name = 'Year'
-    print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, monthly_to_year_agg))
+    print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, agg_func))
     print_log(df_yearly_agg.to_markdown())
-    plot_df(df_yearly_agg, '%s - Yearly values per station from monthly values (%s)\n' % (ensooni_tag, monthly_to_year_agg), 'Values', kind='line', plt_save_name='%s_Yearly_%s' % (agg_name,monthly_to_year_agg))
+    plot_df(df_yearly_agg, '%s - Yearly values per station from monthly values (%s)\n' % (ensooni_tag, agg_func), 'Values', kind='line', plt_save_name='%s_Yearly_%s' % (agg_name,agg_func))
     print_log('\n%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag)
     df_agg = df_yearly_agg.mean()  # Results as list
     df_agg.index.name = 'Station'
