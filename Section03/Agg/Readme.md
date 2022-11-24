@@ -147,7 +147,20 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Referencias
 
-*
+* https://library.wmo.int/doc_num.php?explnum_id=4167
+* https://library.wmo.int/index.php?lvl=notice_display&id=20130
+* https://library.wmo.int/doc_num.php?explnum_id=9521
+* https://library.wmo.int/doc_num.php?explnum_id=4549
+* https://stackoverflow.com/questions/11391969/how-to-group-pandas-dataframe-entries-by-date-in-a-non-unique-column
+* https://stackoverflow.com/questions/5283649/plot-smooth-line-with-pyplot
+* https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/
+* https://www.geeksforgeeks.org/pandas-find-unique-values-from-multiple-columns/
+* https://www.geeksforgeeks.org/ways-to-filter-pandas-dataframe-by-column-values/
+* https://www.geeksforgeeks.org/how-to-concatenate-two-or-more-pandas-dataframes/
+* https://stackoverflow.com/questions/29550414/how-can-i-split-a-column-of-tuples-in-a-pandas-dataframe
+* https://www.geeksforgeeks.org/convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe/
+* https://www.geeksforgeeks.org/how-to-drop-one-or-multiple-columns-in-pandas-dataframe/
+* https://www.geeksforgeeks.org/how-to-move-a-column-to-first-position-in-pandas-dataframe/
 
 
 ### Control de versiones

@@ -1,40 +1,24 @@
 Station files and parameters
 	D:/R.LTWB/.datasets/IDEAM_Impute/
-		Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, monthly_to_year_agg = 'Sum', unit = 'Rain, mm'
-		Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean', unit = 'Min temperature, °C'
-		Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean', unit = 'Max temperature, °C'
-		Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv, daily_serie = False, monthly_to_year_agg = 'Mean', unit = 'Flow, m³/s'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, agg_func = 'Sum', unit = 'Rain, mm'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, agg_func = 'Mean', unit = 'Min temperature, °C'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv, daily_serie = True, agg_func = 'Mean', unit = 'Max temperature, °C'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv, daily_serie = False, agg_func = 'Mean', unit = 'Flow, m³/s'
 	D:/R.LTWB/.datasets/IDEAM_Outlier/
 		Outlier_IQR_Cap_Pivot_EV_TT_D.csv, daily_serie = True, monthly_to_year_agg = 'Sum', unit = 'Potential evaporation, mm'
+
 
 Aggregations for mean multianual values
 	Total monthly rain: sum per year, mean.
 	Mean monthly flow: mean per year, mean.
-	Daily max temperature: mean per month per year, mean per year, mean.
-	Daily min temperature: mean per month per year, mean per year, mean.
+	Daily max temperature: mean per month & per year, mean per year, mean.
+	Daily min temperature: mean per month & per year, mean per year, mean.
 	Total Daily Evaporation: sum per month per year, sum per year, mean.
 
 Aggregations for maximun multianual values
 	Total daily rain: max per month per year, max per year, mean. (correspond to PMax24hr)
 	Max monthly rain (max from total daily rain): max per year, mean. (correspond to PMax24hr)
 	
-
-
-* https://library.wmo.int/doc_num.php?explnum_id=4167
-* https://library.wmo.int/index.php?lvl=notice_display&id=20130
-* https://library.wmo.int/doc_num.php?explnum_id=9521
-* https://library.wmo.int/doc_num.php?explnum_id=4549
-* https://stackoverflow.com/questions/11391969/how-to-group-pandas-dataframe-entries-by-date-in-a-non-unique-column
-* https://stackoverflow.com/questions/5283649/plot-smooth-line-with-pyplot
-* https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/
-* https://www.geeksforgeeks.org/pandas-find-unique-values-from-multiple-columns/
-* https://www.geeksforgeeks.org/ways-to-filter-pandas-dataframe-by-column-values/
-* https://www.geeksforgeeks.org/how-to-concatenate-two-or-more-pandas-dataframes/
-* https://stackoverflow.com/questions/29550414/how-can-i-split-a-column-of-tuples-in-a-pandas-dataframe
-* https://www.geeksforgeeks.org/convert-the-column-type-from-string-to-datetime-format-in-pandas-dataframe/
-* https://www.geeksforgeeks.org/how-to-drop-one-or-multiple-columns-in-pandas-dataframe/
-* https://www.geeksforgeeks.org/how-to-move-a-column-to-first-position-in-pandas-dataframe/
-
 
 Total monthly rain sample in 15015020
 	Composite 706.038
