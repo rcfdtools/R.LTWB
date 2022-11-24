@@ -133,14 +133,12 @@ df_agg.index.name = 'Station'
 df_agg.name = 'AggComposite'
 df_agg = df_agg.to_frame()  # List to frame
 print_log(df_agg.T.to_markdown())
-
 print_log('\nComposite - Aggregation value per station from yearly aggregations (std - standard deviation)\n')
 df_agg_std = df_yearly_agg.std()  # Results as list
 df_agg_std.index.name = 'Station'
-df_agg_std.name = 'AggCompositeStd'
+df_agg_std.name = 'StdAggComposite'
 df_agg_std = df_agg_std.to_frame()  # List to frame
 print_log(df_agg_std.T.to_markdown())
-
 plot_df(df_agg, 'Composite - Aggregation value per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggComposite_Station_Mean')
 print_log('\nComposite - Monthly values per station (mean)\n')
 df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
@@ -193,14 +191,12 @@ for i in (-1, 1, 0):
     df_agg.name = agg_name
     df_agg = df_agg.to_frame()  # List to frame
     print_log(df_agg.T.to_markdown())
-
     print_log('\n%s - Aggregation value per station from yearly aggregations (std - standard deviation)\n' % ensooni_tag)
     df_agg_std = df_yearly_agg.std()  # Results as list
     df_agg_std.index.name = 'Station'
-    df_agg_std.name = agg_name + 'Std'
+    df_agg_std.name = 'Std' + agg_name
     df_agg_std = df_agg_std.to_frame()  # List to frame
     print_log(df_agg_std.T.to_markdown())
-
     plot_df(df_agg, '%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag, 'Values', kind='bar', plt_save_name='%s_Station_Mean' % agg_name)
     print_log('\n%s - Monthly values per station (mean)\n' % ensooni_tag)
     df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
@@ -220,9 +216,9 @@ for i in (-1, 1, 0):
 
 # Yearly aggregation matrix
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
-print_log('\nYearly matrix values per station (required for spatial interpolations) \n', center_div=True)
+print_log('\nYearly matrix values per station (required for spatial interpolations)\n', center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
-print_log('\nYearly matrix standard deviations per station (required for spatial interpolations) \n', center_div=True)
+print_log('\nYearly matrix standard deviations per station\n', center_div=True)
 print_log(df_agg_std_full.to_markdown(), center_div=True)
 plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_Mean', legend=True)
 print_log('\nMonthly zonal values\n', center_div=True)

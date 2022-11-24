@@ -1,7 +1,6 @@
 Task
 	Export monthly serie from daily serie to .csv.
 	Export matrix to .csv
-	Std.dev. matrix.
 	
 
 
