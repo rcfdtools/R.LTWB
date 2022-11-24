@@ -1,6 +1,5 @@
 Task
 	Export monthly serie from daily serie to .csv.
-	Export matrix to .csv
 	
 
 
@@ -58,6 +57,8 @@ Total monthly rain sample in 15015020
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 df_impute.index.name = 'Fecha'
 df_impute.index.name = date_record_name
+#print_log(df[date_record_name].dt.year)
+#print_log(df.groupby(df[date_record_name].dt.year).agg(['sum', 'mean', 'max']).to_markdown())
 
 
 #print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')

@@ -102,7 +102,6 @@ print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_I
 
 # Aggregations from daily to monthly values
 if daily_serie:
-    #print_log('\n\n## Daily values to monthly aggregation (%s)\n' % agg_func)
     match agg_func:
         case 'Sum':  # Typical for total daily rain
             df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).sum()
@@ -116,13 +115,13 @@ if daily_serie:
     df = df.reset_index(drop=True)
     df.index.name = 'Id'
     df.insert(0, date_record_name, df.pop(date_record_name))
-    #print_log(df.to_markdown())
+    df.to_csv(path + 'Agg_YM_' + station_file)  # YM means yearly and monthly
 
 
 # Composite aggregations for monthly values
-#print_log(df[date_record_name].dt.year)
-#print_log(df.groupby(df[date_record_name].dt.year).agg(['sum', 'mean', 'max']).to_markdown())
 print_log('\n## Composite - Yearly values per station from monthly values (%s)\n' % agg_func)
+if daily_serie:
+    print_log('\nDaily values to year-month aggregation (%s) file: [%s](%s)\n' % (agg_func, 'Agg_YM_' + station_file, 'Agg_YM_' + station_file ))
 df_yearly_agg = monthly_to_yearly_agg_func(df)
 df_yearly_agg.index.name = 'Year'
 print_log(df_yearly_agg.to_markdown())
