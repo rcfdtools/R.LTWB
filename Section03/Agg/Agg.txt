@@ -1,9 +1,4 @@
-Task
-	Export monthly serie from daily serie to .csv.
-	
-
-
-Statistical aggregations
+Station files and parameters
 	D:/R.LTWB/.datasets/IDEAM_Impute/
 		Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, monthly_to_year_agg = 'Sum'
 		Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, monthly_to_year_agg = 'Mean' 
@@ -11,7 +6,6 @@ Statistical aggregations
 		Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv, daily_serie = False, monthly_to_year_agg = 'Mean'
 	D:/R.LTWB/.datasets/IDEAM_Outlier/
 		Outlier_IQR_Cap_Pivot_EV_TT_D.csv, daily_serie = True, monthly_to_year_agg = 'Sum'
-
 
 Aggregations for mean multianual values
 	Total monthly rain: sum per year, mean.
@@ -21,8 +15,8 @@ Aggregations for mean multianual values
 	Total Daily Evaporation: sum per month per year, sum per year, mean.
 
 Aggregations for maximun multianual values
-	Total daily rain: max per month per year, max per year, mean. (correspond with PMax24hr)
-	Max monthly rain (max from total daily rain): max per year, mean. (correspond with PMax24hr)
+	Total daily rain: max per month per year, max per year, mean. (correspond to PMax24hr)
+	Max monthly rain (max from total daily rain): max per year, mean. (correspond to PMax24hr)
 	
 
 
