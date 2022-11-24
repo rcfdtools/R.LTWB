@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Name: AGG.py
+# Name: Agg.py
 # Description: statistical aggregations for hydro-climatological series
 # Requirements: Python 3+, pandas, tabulate, numpy
 # SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
@@ -22,8 +22,8 @@ station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEA
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
-path = 'D:/R.LTWB/.datasets/IDEAM_AGG/'  # Your local output files path, use ../.datasets/IDEAM_AGG/ for relative path
-file_log_name = path + 'AGG_' + station_file + '.md'
+path = 'D:/R.LTWB/.datasets/IDEAM_Agg/'  # Your local output files path, use ../.datasets/IDEAM_Agg/ for relative path
+file_log_name = path + 'Agg_' + station_file + '.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'Spectral'  # Color theme for plot graphics (E.g. autumn), https://matplotlib.org/stable/tutorials/colors/colormaps.html
@@ -95,7 +95,7 @@ print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_I
           '\n* Python path: ' + str(sys.path[0:5]) +
           '\n* matplotlib version: ' + str(matplotlib.__version__) +
           '\n* pandas version: ' + str(pd.__version__) +
-          '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/AGG'
+          '\n* Instructions & script: https://github.com/rcfdtools/R.LTWB/tree/main/Section03/Agg'
           '\n* License: https://github.com/rcfdtools/R.LTWB/blob/main/LICENSE.md'
           '\n* Credits: r.cfdtools@gmail.com')
 
@@ -215,12 +215,12 @@ for i in (-1, 1, 0):
 
 
 # Yearly aggregation matrix
-df_agg_full.to_csv(path + 'AGG_' + station_file)
-df_agg_std_full.to_csv(path + 'AGGStd_' + station_file)
+df_agg_full.to_csv(path + 'Agg_' + station_file)
+df_agg_std_full.to_csv(path + 'Agg_Std_' + station_file)
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
-print_log('\nYearly matrix values per station (required for spatial interpolations)<br>File: [%s](%s)\n' % ('AGG_' + station_file, 'AGG_' + station_file), center_div=True)
+print_log('\nYearly matrix values per station (required for spatial interpolations)<br>File: [%s](%s)\n' % ('Agg_' + station_file, 'Agg_' + station_file), center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
-print_log('\nYearly matrix standard deviations per station<br>File: [%s](%s)\n' % ('AGGStd_' + station_file, 'AGGStd_' + station_file), center_div=True)
+print_log('\nYearly matrix standard deviations per station<br>File: [%s](%s)\n' % ('Agg_Std_' + station_file, 'Agg_Std_' + station_file), center_div=True)
 print_log(df_agg_std_full.to_markdown(), center_div=True)
 plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_Mean', legend=True)
 print_log('\nMonthly zonal values\n', center_div=True)
