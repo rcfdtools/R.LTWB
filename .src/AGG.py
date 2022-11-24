@@ -195,7 +195,7 @@ for i in (-1, 1, 0):
     print_log('\n%s - Aggregation value per station from yearly aggregations (std - standard deviation)\n' % ensooni_tag)
     df_agg_std = df_yearly_agg.std()  # Results as list
     df_agg_std.index.name = 'Station'
-    df_agg_std.name = 'AggCompositeStd'
+    df_agg_std.name = agg_name + 'Std'
     df_agg_std = df_agg_std.to_frame()  # List to frame
     print_log(df_agg_std.T.to_markdown())
 
