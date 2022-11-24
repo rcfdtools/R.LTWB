@@ -18,7 +18,7 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
@@ -33,8 +33,8 @@ show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations values
 df_agg_std_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations standard deviationss
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
-daily_serie = False  # The stations series contain daily values
-agg_func = 'Sum'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
+daily_serie = True  # The stations series contain daily values
+agg_func = 'Mean'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
 
 
 # Function for print and show results in a file
@@ -119,9 +119,9 @@ if daily_serie:
 
 
 # Composite aggregations for monthly values
-print_log('\n## Composite - Yearly values per station from monthly values (%s)\n' % agg_func)
+print_log('\n\n## Composite - Yearly values per station from monthly values (%s)\n' % agg_func)
 if daily_serie:
-    print_log('\nDaily values to year-month aggregation (%s) file: [%s](%s)\n' % (agg_func, 'Agg_YM_' + station_file, 'Agg_YM_' + station_file ))
+    print_log('Daily values to year-month aggregation (%s) file: [%s](%s)\n' % (agg_func, 'Agg_YM_' + station_file, 'Agg_YM_' + station_file ))
 df_yearly_agg = monthly_to_yearly_agg_func(df)
 df_yearly_agg.index.name = 'Year'
 print_log(df_yearly_agg.to_markdown())
