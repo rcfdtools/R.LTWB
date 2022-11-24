@@ -30,7 +30,8 @@ plot_colormap = 'Spectral'  # Color theme for plot graphics (E.g. autumn), https
 fig_size = 5  # Height size for figures plot
 fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
-df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations
+df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations values
+df_agg_std_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations standard deviationss
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
 daily_serie = False  # The stations series contain daily values
 agg_func = 'Sum'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
@@ -152,6 +153,7 @@ df_monthly_zonal.name = 'AggCompositeZonal'
 df_monthly_zonal = df_monthly_zonal.to_frame()
 print_log(df_monthly_zonal.to_markdown(), center_div=True)
 df_agg_full = df_agg
+df_agg_std_full = df_agg_std
 df_agg_zonal = df_monthly_zonal
 
 
@@ -207,6 +209,7 @@ for i in (-1, 1, 0):
     print_log(df_monthly_val.to_markdown())
     plot_df(df_monthly_val,'%s - Monthly values per station (mean)\n' % ensooni_tag, 'Values', kind='line', plt_save_name='%s_Monthly_Mean' % agg_name)
     df_agg_full = pd.concat([df_agg_full, df_agg], axis=1)
+    df_agg_std_full = pd.concat([df_agg_std_full, df_agg_std], axis=1)
     print_log('\n%s - Zonal monthly values (mean)\n' % ensooni_tag, center_div=True)
     df_monthly_zonal = df_monthly_val.mean(axis=1)
     df_monthly_zonal.name = agg_name + 'Zonal'
@@ -219,6 +222,8 @@ for i in (-1, 1, 0):
 print_log('\n\n## Yearly aggregation matrix values per station from yearly values (mean) and zonal monthly values (mean)\n')
 print_log('\nYearly matrix values per station (required for spatial interpolations) \n', center_div=True)
 print_log(df_agg_full.to_markdown(), center_div=True)
+print_log('\nYearly matrix standard deviations per station (required for spatial interpolations) \n', center_div=True)
+print_log(df_agg_std_full.to_markdown(), center_div=True)
 plot_df(df_agg_full, 'Aggregation value matrix stacked per station from yearly aggregations (mean)\n', 'Values', kind='bar', plt_save_name='AggMatrix_Yearly_Mean', legend=True)
 print_log('\nMonthly zonal values\n', center_div=True)
 print_log(df_agg_zonal.to_markdown(), center_div=True)
