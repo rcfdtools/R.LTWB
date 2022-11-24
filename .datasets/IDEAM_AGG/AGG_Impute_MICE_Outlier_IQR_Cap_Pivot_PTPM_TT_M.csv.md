@@ -8,7 +8,7 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 * Records: 504
 * Daily serie: False
 * Aggregation function: Sum
-* Execution date: 2022-11-24 09:45:34.295315
+* Execution date: 2022-11-24 09:47:04.205659
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.HydroTools', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide']
 * matplotlib version: 3.6.0
@@ -495,8 +495,7 @@ Neutral - Zonal monthly values (mean)
 <div align="center">
 
 
-Yearly matrix values per station (required for spatial interpolations)
-File: [AGG_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](AGG_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
+Yearly matrix values per station (required for spatial interpolations)<br>File: [AGG_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](AGG_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
 
 
 </div>
@@ -643,8 +642,7 @@ File: [AGG_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](AGG_Impute_MICE_Outl
 <div align="center">
 
 
-Yearly matrix standard deviations per statio
-File: [AGGStd_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](AGGStd_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
+Yearly matrix standard deviations per station<br>File: [AGGStd_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](AGGStd_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)
 
 
 </div>
