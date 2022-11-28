@@ -3,13 +3,13 @@ Keywords: `Compuesto` `El Niño` `La Niña` `Neutro` `matplotlib` `pandas` `Agre
 
 <div align="center"><img alt="R.LTWB" src="Graph/Agg.png" width="95%"></div> 
 
-Luego de validadas y completadas las series, y de realizada la marcación de años por fenómeno climatológico, se efectúa el proceso de agregación estadística para obtener los valores promedio multianuales requeridos en cada estación para su interpolación espacial.
+Luego de validadas y completadas las series, y de realizada la marcación de años por fenómeno climatológico, se efectúa el proceso de agregación estadística para obtener los valores promedio multianuales requeridos en cada estación por parámetro hidro-climatológico para su interpolación espacial.
 
 
 ### Objetivos
 
 * Agregar estadísticamente los registros de cada estación para obtener los valores promedio multianuales requeridos para la creación de mapas continuos interpolados.
-* Segmentar las series de datos por parámetro por fenómeno climatológico (El Niño, La Niña y Neutro) y realizar su agregación a valores promedio multianual.
+* Segmentar las series de datos por parámetro y por fenómeno climatológico (El Niño, La Niña y Neutro) y realizar su agregación a valores promedio multianuales.
 * Graficar los registros agregados mensuales y anuales de cada parámetro para todas las estaciones del arreglo de datos.
 * Graficar los valores agregados de promedio multianual para datos compuestos y por fenómeno.
 * Obtener y graficar valores zonales para cada parámetro estudiado. 
@@ -35,7 +35,7 @@ Luego de validadas y completadas las series, y de realizada la marcación de añ
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-Para el desarrollo de esta actividad, realizaremos diferentes tipos de agregaciones utilizando los siguientes parámetros:
+Para el desarrollo de esta actividad, realizaremos diferentes tipos de agregaciones utilizando los siguientes parámetros en el script de procesamiento:
 
 | Parámetro / Datos                                                                                                                                              | daily_serie | agg_func | unit label                |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|----------|---------------------------|
@@ -45,9 +45,9 @@ Para el desarrollo de esta actividad, realizaremos diferentes tipos de agregacio
 | Caudal medio mensual<>br[Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)        | False       | Mean     | Flow, m³/s                |
 | Evaporación total diaria<br>[Outlier_IQR_Cap_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_EV_TT_D.csv)                               | False       | Sum      | Potential evaporation, mm |
 
-> Las variables `daily_serie`, `agg_func` y `unit` deben ser definidas dentro del script de análisis en Python, para la agregación correcta de cada parámetro hidro-climatológico.
+> Las variables `daily_serie`, `agg_func` y `unit` deben ser definidas dentro del script de análisis en Python para la agregación correcta de cada parámetro hidro-climatológico.
 > 
-> Por defecto, el directorio de archivos con registros por parámetro completados y extendidos por estación se encuentra en el directorio `D:/R.LTWB/.datasets/IDEAM_Impute/`. En caso de que requiera realizar este análisis sin datos completados o extendidos e incluso con las series de datos originales, modifique la variable `station_path` del script.
+> Por defecto, el directorio de archivos con registros por parámetro completados y extendidos por estación se encuentra en el directorio `D:/R.LTWB/.datasets/IDEAM_Impute/`. En caso de que requiera realizar este análisis sin datos completados o extendidos e incluso con las series de datos originales, modifique la variable `station_path` del script indicando la ruta correspondiente.
 
 1. Para realizar las agregaciones estadísticas, descargue el script [Agg.py](../../.src/Agg.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
@@ -55,8 +55,8 @@ Para el desarrollo de esta actividad, realizaremos diferentes tipos de agregacio
 
 * Agregación estadística de datos diarios a mensuales y anuales.
 * Agregación estadística de datos mensuales a anuales.
-* Segmentación de series por fenómenos climatológicos.
-* Agregación mensual.
+* Segmentación y agregación de series por fenómenos climatológicos.
+* Agregación mensual multianual.
 * Generación de gráficas de análisis.
 * Generación de reporte detallado Markdown y tablas de valores agregados y desviaciones estándar en formato de texto separado por comas .csv.
 
