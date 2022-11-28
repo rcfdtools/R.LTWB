@@ -2,7 +2,6 @@
 # Name: Agg.py
 # Description: statistical aggregations for hydro-climatological series
 # Requirements: Python 3+, pandas, tabulate
-# SEAS: season, YR: year, TOTAL: average temperature, ANOM: anomaly value.
 
 
 # Libraries
@@ -15,7 +14,7 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv'  # Current IDEAM records file
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
@@ -25,14 +24,13 @@ file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
 plot_colormap = 'Spectral'  # Color theme for plot graphics (E.g. autumn), https://matplotlib.org/stable/tutorials/colors/colormaps.html
 fig_size = 5  # Height size for figures plot
-fig_alpha = 0.75  # Alpha transparency color in plots
 show_plot = False
 df_agg_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations values
 df_agg_std_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggregations standard deviationss
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
 daily_serie = False  # The stations series contain daily values
-agg_func = 'Mean'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
-unit = 'Flow, m³/s'
+agg_func = 'Sum'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
+unit = 'Rain, mm'
 
 # Function for print and show results in a file
 def print_log(txt_print, on_screen=True, center_div=False):
