@@ -147,7 +147,11 @@ Los archivos de resultados .csv generados por el script con el prefijo `Agg_Impu
 | AggNino      | float64 | Valor promedio multianual de eventos en año marcado como niño   |
 | AggNeutral   | float64 | Valor promedio multianual de eventos en año marcado como neutro |
 
-> En la tabla anterior, el campo `Tipo` es asociado a los tipos obtenidos en el dataframe procesado por Pandas en Python. En el caso de las estaciones IDEAM, los códigos se interpretan como un valor entero.   
+> En la tabla anterior, el campo `Tipo` es asociado a los tipos obtenidos en el dataframe procesado por Pandas en Python. En el caso de las estaciones IDEAM, los códigos se interpretan como un valor entero.
+> 
+> La tabla de desviaciones estándar utiliza la misma estructura anterior y en los nombres de campo se ha incluido el prefijo Std, p.ej., para valores compuestos, el nombre asociado es `AggComposite`.
+> 
+> La tabla de agregaciones diarias a valores mensuales sigue la misma estructura de los datos de entrada de las tablas de imputación, la primera columna contiene el índice de registro (valores de 0 a n), la segunda columna contiene la fecha asociada a cada dato discreto por estación y las demás columnas contienen los valores agregados en cada estación.
 
 En este momento, dispone de reportes detallados de valores agregados y de las tablas en formato de texto separado por comas `.csv` para realizar los posteriores procesos de interpolación espacial.
 
