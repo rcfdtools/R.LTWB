@@ -57,6 +57,8 @@ Contenido del script
 
 3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\Agg.py](../../.src/Agg.py), verifique y defina las siguientes variables por parámetro:
 
+<div align="center">
+
 | Parámetro / Datos (station_file)                                                                                                                                | daily_serie  | agg_func  | unit label                 |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:----------|:---------------------------|
 | Precipitación total mensual<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)  | False        | Sum       | Rain, mm                   |
@@ -64,6 +66,8 @@ Contenido del script
 | Temperatura máxima diaria<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)        | True         | Mean      | Max temperature, °C        |
 | Caudal medio mensual<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)         | False        | Mean      | Flow, m³/s                 |
 | Evaporación total diaria<br>[Outlier_IQR_Cap_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_EV_TT_D.csv)                                | False        | Sum       | Potential evaporation, mm  |
+
+</div>
 
 > Las variables `station_file`, `daily_serie`, `agg_func` y `unit` deben ser definidas dentro del script de análisis en Python para la agregación correcta de cada parámetro hidro-climatológico.
 > 
@@ -139,6 +143,8 @@ Durante el proceso de ejecución del script, se generaron automáticamente los s
 
 Los archivos de resultados .csv generados por el script con el prefijo `Agg_Impute` utilizan la siguiente estructura:
 
+<div align="center">
+
 | Atributo     | Tipo    | Descripción                                                     |
 |--------------|---------|-----------------------------------------------------------------|
 | Station      | int64   | Código de la estación                                           |
@@ -146,6 +152,8 @@ Los archivos de resultados .csv generados por el script con el prefijo `Agg_Impu
 | AggNina      | float64 | Valor promedio multianual de eventos en año marcado como niña   |
 | AggNino      | float64 | Valor promedio multianual de eventos en año marcado como niño   |
 | AggNeutral   | float64 | Valor promedio multianual de eventos en año marcado como neutro |
+
+</div>
 
 > En la tabla anterior, el campo `Tipo` es asociado a los tipos obtenidos en el dataframe procesado por Pandas en Python. En el caso de las estaciones IDEAM, los códigos se interpretan como un valor entero.
 > 
