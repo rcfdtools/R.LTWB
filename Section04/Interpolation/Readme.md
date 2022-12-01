@@ -63,8 +63,28 @@ Luego del proceso de exportación, será cargada la tabla .dbf al mapa. Remover 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3CalculateFieldCODIGO.png)
 
-8. 
+8. En la capa de estaciones CNE_IDEAM_OE_ZE.shp, realice una unión (clic derecho sobre la capa geográfica / Join) con los datos de la tabla de agregación Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf, utilice como llave de unión el campo `CODIGO`.
 
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainJoinCODIGO.png)
+
+9. Abra la tabla de atributos de la capa CNE_IDEAM_OE_ZE.shp y verifique los datos asociados mediante la unión, podrá observar que existen datos de precipitación en 130 de las 440 estaciones seleccionadas para la zona de estudio.
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainJoinCODIGOTable.png)
+
+10. Desde las propiedades de la capa CNE_IDEAM_OE_ZE.shp, realice un filtro (Definition Query con `Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.OID >= 0`) para códigos OID mayores o iguales a cero correspondientes a los identificadores de ordenamiento de la tabla .dbf de agregaciones. Luego de dar clic en _Ok_ podrá observar en pantalla la localización de las estaciones con datos de precipitación y los registros correspondientes en la tabla de atributos.
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainJoinDefinitionQuery.png)
+
+11. Utilizando el método del valor inverso de la distancia o IDW, realice la interpolación espacial de la precipitación para los valores agregados compuestos y por fenómeno climatológico. Geoprocessing / Spatial Analys Tools / Interpolation / IDW, con los siguientes parámetros:
+
+* Z value field: AggComposi, AggNina, AggNino, AggNeutral.
+* Output raster: RainTotalComposite.tif, RainTotalNino.tif, RainTotalNina.tif, RainTotalNeutral.tif.
+* 
+
+
+
+
+> Si bien el método IDW no permite generar isoyetas con apariencia suavizada como el método de líneas espirales, permite obtener valores interpolados cercanos al rango de valores de las estaciones utilizadas.
 
 
 En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
