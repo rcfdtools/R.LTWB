@@ -8,7 +8,7 @@ For further information about the NOAA - Oceanic Niño Index (ONI) classifier for
 * Records: 504
 * Daily serie: False
 * Aggregation function: Sum
-* Execution date: 2022-12-03 10:14:50.318378
+* Execution date: 2022-12-03 11:32:34.947026
 * Python version: 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)]
 * Python path: ['D:\\R.LTWB\\.src', 'D:\\R.LTWB', 'D:\\R.GISPython.wiki', 'D:\\R.TeachingResearchGuide', 'D:\\R.HydroTools']
 * matplotlib version: 3.6.0
