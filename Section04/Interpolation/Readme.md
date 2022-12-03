@@ -1,5 +1,5 @@
 ## Interpolación espacial de variables climatológicas - Precipitación total
-Keywords: `DEM` `IDW`
+Keywords: `DEM` `IDW` `Rain`
 
 ![R.LTWB](Screenshot/Intepolate.png)
 
@@ -22,7 +22,7 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 * Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../../Section03/Agg)
 
 
-### Procedimiento general para interpolación de precipitación
+### Procedimiento general para interpolación de precipitación total
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/Interpolate.png" width="80%"><br>
@@ -113,7 +113,7 @@ Resultados para valores neutros
 
 Tabla de grillas obtenidas y de comparación de resultados
 | Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla                                                                                                 | Tamaño sin compresión |
-|-----------|:-----------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
+|-----------|:---------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
 | Compuesto | 363.2           | 4933.6             | 363.234          | 4933.619         | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) | 1.2 GB                |
 | Niño      | 252.7              | 4590.4             | 252.749          | 4590.447         | [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)           | 1.2 GB                |
 | Niña      | 536.3              | 5420.7             | 536.31           | 5420.688         | [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)           | 1.2 GB                |
@@ -133,7 +133,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Actividad | Alcance                                                                                                                                                                                    |
 |:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice la interpolación de la precipitación total en ArcGIS for Desktop y en QGIS y compare con los valores obtenidos en ArcGIS Pro.                                                      |
+|     1     | Realice la interpolación de la precipitación total en ArcGIS for Desktop y en QGIS, compare con los valores obtenidos en ArcGIS Pro.                                                     |
 |     2     | Investigue e interpole la precipitación total compuesta por 3 métodos diferentes (p.ej., Spline, Natural Neghbor, Kriging, Tred) y compare los resultados con los obtenidos en ArcGIS Pro. |
 
 
@@ -151,9 +151,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción     | Autor                                      | Horas |
-|------------|:----------------|--------------------------------------------|:-----:|
-| 2022.07.20 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   0   |
+| Versión    | Descripción                                                                                                                    | Autor                                      | Horas |
+|------------|:-------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.12.03 | Comparación de rangos con valores mínimos y máximos de series de datos discretos. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
+| 2022.12.01 | Versión inicial interpolación de precipitación total.                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
