@@ -83,21 +83,36 @@ Luego del proceso de exportación, será cargada la tabla .dbf al mapa. Remover 
 * Power: 2
 * Search radius: Variable
 * Number of points: 12
-* En la pestaña Enviroments, definir el sistema de proyección de coordenadas 9377, correspondiente a MAGNA-SIRGAS_Origen-Nacional de Colombia.
+* En la pestaña Environments, definir el sistema de proyección de coordenadas 9377, correspondiente a MAGNA-SIRGAS_Origen-Nacional de Colombia.
 
 > En el repositorio de datos, crear la carpeta `D:\R.LTWB\.grid` para el volcado de las grillas generadas.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainIDW.png)
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainIDWCRS.png)
 
+Luego de terminada la ejecución de los mapas interpolados, estos serán cargados automáticamente al proyecto. Como puede observar, los mapas creados cubren la totalidad de la zona de estudio.
 
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainIDWComposite.png)
 
+12. Desde la tabla de atributos y utilizando estadísticas de campo, verifique los valores obtenidos en las diferentes grillas y compare con los valores mínimos y máximos de las estaciones.
 
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainCompositeStats.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainNinoStats.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainNinaStats.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainNeutralStats.png)
 
-> Si bien el método IDW no permite generar isoyetas con apariencia suavizada como el método de líneas espirales, permite obtener valores interpolados cercanos al rango de valores de las estaciones utilizadas.
+| Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla                                                                                                 | Tamaño sin compresión |
+|-----------|--------------------|--------------------|------------------|------------------|--------------------------------------------------------------------------------------------------------|-----------------------|
+| Compuesto | 363.2              | 4933.6             | 363.234          | 4933.619         | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) | 1.2 GB                |
+| Niño      | 252.7              | 4590.4             | 252.749          | 4590.447         | [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)           | 1.2 GB                |
+| Niña      | 536.3              | 5420.7             | 536.31           | 5420.688         | [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)           | 1.2 GB                |
+| Neutro    | 305.8              | 4891.5             | 305.754          | 4891.527         | [Part1](../../.grid/RainTotalNeutral.part01.rar), [Part2](../../.grid/RainTotalNeutral.part02.rar)     | 1.2 GB                |
 
+> Debido al tamaño de los archivos generados, cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
+>
+> Si bien el método IDW no permite generar isoyetas con apariencia suavizada como el método de líneas espirales, permite obtener valores interpolados próximos al rango de valores de las estaciones utilizadas.
 
-En este momento ya dispone de la grilla de terreno reacondicionada requerida para el relleno de sumideros.
+En este momento dispone de las grillas interpoladas de precipitación requeridas para el balance hidrológico de largo plazo.
 
 
 ### Actividades complementarias:pencil2:
