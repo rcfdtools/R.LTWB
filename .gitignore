@@ -95,6 +95,8 @@ HECGeoHMS/Layers/ALOSStr.tif
 HECGeoHMS/Layers/ALOSStr.tif.*
 .datasets/IDEAM/*.csv
 .datasets/CHIRPS/IDEAMJoined.csv
+.grid/*.tif
+.grid/*.tif.*
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files

@@ -81,6 +81,7 @@ Luego del proceso de exportación, será cargada la tabla .dbf al mapa. Remover 
 * Output raster: RainTotalComposite.tif, RainTotalNino.tif, RainTotalNina.tif, RainTotalNeutral.tif.
 * 
 
+> En el repositorio de datos, crear la carpeta `D:\R.LTWB\.grid` para el volcado de las grillas generadas.
 
 
 
