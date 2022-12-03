@@ -1,9 +1,9 @@
-## Interpolación espacial de variables climatológicas
+## Interpolación espacial de variables climatológicas - precipitación total
 Keywords: `DEM` `IDW`
 
 ![R.LTWB](Screenshot/Intepolate.png)
 
-En los procesos de interpolación de variables climatológicas y partir de la localización de estaciones terrestres para los fenómenos asociados a cambio climático, se generan diferentes mapas continuos que permitirán obtener caudales medios de datos compuestos, neutros y para fenómenos extremos de Niña y Niño.
+A partir de la localización espacial de estaciones terrestres y de los valores obtenidos, validados, imputados y extendidos de las series de datos recopiladas, se generan los mapas continuos interpolados para series compuestas y por fenómeno climatológico, requeridos para el balance hidrológico de largo plazo.
 
 
 ### Objetivos
