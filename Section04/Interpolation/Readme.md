@@ -131,20 +131,22 @@ En este momento dispone de las grillas interpoladas de precipitación requeridas
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance |
-|:---------:|:--------|
-|     1     | ....    | 
+| Actividad | Alcance                                                                                                                                                                                    |
+|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice la interpolación de la precipitación total en ArcGIS for Desktop y en QGIS y compare con los valores obtenidos en ArcGIS Pro.                                                      |
+|     2     | Investigue e interpole la precipitación total compuesta por 3 métodos diferentes (p.ej., Spline, Natural Neghbor, Kriging, Tred) y compare los resultados con los obtenidos en ArcGIS Pro. |
 
 
 ### Referencias
 
-* 
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/idw.htm
+* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/idw.htm
+* https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/spatial_analysis_interpolation.html
 
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para de digitalización con opciones de encajado o snapping.
-* 
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de interpolación espacial.
 
 
 ### Control de versiones
