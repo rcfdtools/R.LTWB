@@ -1,4 +1,4 @@
-## Interpolación espacial de variables climatológicas - precipitación total
+## Interpolación espacial de variables climatológicas - Precipitación total
 Keywords: `DEM` `IDW`
 
 ![R.LTWB](Screenshot/Intepolate.png)
@@ -8,7 +8,9 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 
 ### Objetivos
 
-* Crear mapas interpolados de precipitación mensual total a partir de agregaciones compuestas por estación y por fenómeno climatológico. 
+* Crear mapas interpolados de precipitación mensual total a partir de agregaciones compuestas por estación y por fenómeno climatológico.
+* Proyectar las grillas utilizando el sistema de coordenadas 9733, correspondiente a MAGNA-SIRGAS Origen-Nacional
+* Comparar el rango de los valores obtenidos en las grillas interpoladas, con los rangos de valores discretos de las estaciones. 
 
 
 ### Requerimientos
