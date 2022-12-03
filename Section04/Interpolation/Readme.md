@@ -77,11 +77,20 @@ Luego del proceso de exportación, será cargada la tabla .dbf al mapa. Remover 
 
 11. Utilizando el método del valor inverso de la distancia o IDW, realice la interpolación espacial de la precipitación para los valores agregados compuestos y por fenómeno climatológico. Geoprocessing / Spatial Analys Tools / Interpolation / IDW, con los siguientes parámetros:
 
-* Z value field: AggComposi, AggNina, AggNino, AggNeutral.
-* Output raster: RainTotalComposite.tif, RainTotalNino.tif, RainTotalNina.tif, RainTotalNeutral.tif.
-* 
+* Z value field: AggComposi, AggNina, AggNino, AggNeutral
+* Output raster: RainTotalComposite.tif, RainTotalNino.tif, RainTotalNina.tif, RainTotalNeutral.tif
+* Output cell size: 12.5 metros (correspondiente a la resolución del modelo de terreno ALOS Palsar.)
+* Power: 2
+* Search radius: Variable
+* Number of points: 12
+* En la pestaña Enviroments, definir el sistema de proyección de coordenadas 9377, correspondiente a MAGNA-SIRGAS_Origen-Nacional de Colombia.
 
 > En el repositorio de datos, crear la carpeta `D:\R.LTWB\.grid` para el volcado de las grillas generadas.
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainIDW.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RainIDWCRS.png)
+
+
 
 
 
