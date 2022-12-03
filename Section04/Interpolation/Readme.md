@@ -29,6 +29,7 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
+
 1. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection04.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3NewMapProject.png)
@@ -49,11 +50,11 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3AddRainCsv.png)
 
-5. Dando clic derecho sobre la tabla desde la tabla de contenido, y mediante la opción _Data / Export Table_, exporte el archivo a un archivo DBase .dbf en la misma ruta original y con el nombre [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf)
+5. Dando clic derecho sobre la tabla desde la tabla de contenido, y mediante la opción _Data / Export Table_, exporte el archivo a un archivo dBase .dbf en la misma ruta original y con el nombre [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf)
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3AddRainCsvToDbf.png)
 
-> El proceso de conversión es requerido debido a que es necesario modificar la estructura de la tabla agregando un campo de atributos tipo texto que contendrá el código de la estación, lo anterior debido a que el campo Station es interpretado como un campo numérico entero y el código de las estaciones del catálogo del IDEAM utiliza texto.
+> El proceso de conversión es requerido debido a que es necesario modificar la estructura de la tabla agregando un campo de atributos tipo texto que contendrá el código de la estación, lo anterior debido a que el campo Station es interpretado como un campo numérico entero y el código de las estaciones del catálogo del IDEAM ha sido definido como cadena de texto.
 
 Luego del proceso de exportación, será cargada la tabla .dbf al mapa. Remover el archivo .csv de la tabla de contenido y abrir el archivo .dbf.
 
@@ -98,11 +99,19 @@ Luego de terminada la ejecución de los mapas interpolados, estos serán cargado
 
 12. Desde la tabla de atributos y utilizando estadísticas de campo, verifique los valores obtenidos en las diferentes grillas y compare con los valores mínimos y máximos de las estaciones.
 
+Resultados para valores compuestos
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainCompositeStats.png)
+
+Resultados para valores asociados al fenómeno de El Niño
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainNinoStats.png)
+
+Resultados para valores asociados al fenómeno de La Niña
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainNinaStats.png)
+
+Resultados para valores neutros
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainNeutralStats.png)
 
+Tabla de grillas obtenidas y de comparación de resultados
 | Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla                                                                                                 | Tamaño sin compresión |
 |-----------|--------------------|--------------------|------------------|------------------|--------------------------------------------------------------------------------------------------------|-----------------------|
 | Compuesto | 363.2              | 4933.6             | 363.234          | 4933.619         | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) | 1.2 GB                |
