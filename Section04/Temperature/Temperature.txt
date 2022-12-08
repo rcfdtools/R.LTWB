@@ -1,0 +1,31 @@
+
+Task
+	Convert Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv to .dbf
+	Create the Text field in .dbf: CODIGO
+	Populate CODIGO with Station in .dbf
+	Join .dbf with stations
+	Query for .dbf OID >=0
+
+DEM ALOS Palsar: APFBSRT1MosaicArcGISProZE.tif
+Stations: CNE_IDEAM_OE_ZE.shp, elevations from ALOS Palsar
+Study zones: ZonaEstudio.shp, ZonaEstudioEnvelopeBufferDEM.shp
+
+
+Station Temperature exclusions
+28025020
+28025040
+28035070
+
+"Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.OID" >= 0 and "CNE_IDEAM_OE_ZE.CODIGO" not in ( '28025020','28025040','28035070')
+
+The correlation don't get back a right lineal equation, use the Cenicafe. Cháves y Jaramillo, 1998.
+Atlantic region
+Tm = 27.72 - 0.0055H
+Tmax = 33.06 - 0.0062H
+Tmin = 23.10 - 0.0061H
+Elevation from 2m to 4000m.
+
+
+References
+* https://biblioteca.cenicafe.org/bitstream/10778/860/1/arc%2049%283%29224-230.pdf
+* https://biblioteca.cenicafe.org/bitstream/10778/859/8/6.%20Temperatura.pdf
