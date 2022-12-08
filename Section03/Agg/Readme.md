@@ -394,6 +394,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | Para los parámetros hidro-climatológicos presentados en esta actividad, realice el proceso de agregación utilizando los datos originalmente descargados del IDEAM (sin validación de valores atípicos y sin procesos de completado y extendido), compare los resultados obtenidos y presente un análisis descriptivo de las diferencias encontradas. |
 |     2     | Utilizando el script Agg.py, realice el análisis de las variables definidas como actividad complementaria en la actividad de descarga de datos hidroclimatológicos, correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad.                                              | 
+|     3     | Implemente en el script Agg.py, agregaciones a partir de datos horarios para cualquier tipo de parámetro hidroclimatológico. Tenga en cuenta que para datos de precipitación máxima díaria, primero debe sumar los valores horarios para obtener el valor total diario y luego deberá evaluar el máximo díario mensual.                              | 
 
 
 ### Referencias
