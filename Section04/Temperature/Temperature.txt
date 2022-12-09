@@ -34,7 +34,6 @@ Tmax = 33.06 - 0.0062H
 Tmin = 23.10 - 0.0061H
 Elevation from 2m to 4000m.
 
-
 References
 * https://biblioteca.cenicafe.org/bitstream/10778/860/1/arc%2049%283%29224-230.pdf
 * https://biblioteca.cenicafe.org/bitstream/10778/859/8/6.%20Temperatura.pdf

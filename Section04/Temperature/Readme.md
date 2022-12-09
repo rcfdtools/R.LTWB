@@ -160,15 +160,32 @@ En el libro de Microsoft Excel [Temperature.xlsx](Temperature.xlsx), hemos inclu
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedZonalVsRegional.png)
 
 
-### Mapa de temperatura
+### Mapas de temperatura
 
-Para la creación del mapa de temperatura utilizaremos la expresión de Cenicafé para altitudes iguales o superiores a 700 msnm y la expresión zonal para elevaciones inferiores a esta altitud.
+Con el propósito de realizar balances hidrológicos compuestos y por fenómeno climatológico, la creación de los mapas de temperatura será realizada utilizando las expresiones zonales obtenidas a partir de series IDEAM.
 
-1. En ArcGIS Pro, agregue desde la carpeta `D:\R.LTWB\.dem\ALOS` el modelo de terreno _APFBSRT1MosaicArcGISProZE.tif_
+Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible observar que la tendencia es similar, sin embargo, la pendiente de los datos zonales es menor, por lo que la diferencia para altitudes cercanas a la cota máxima es de hasta 1.98 °C.  
 
+> Opcionalmente, para la creación del mapa de temperatura podríamos utilizar la expresión de Cenicafé para altitudes iguales o superiores a 700 msnm y la expresión zonal para elevaciones inferiores a esta altitud, sin embargo, las series corresponden a periodos diferentes de análisis.
 
+1. En ArcGIS Pro, agregue desde la carpeta `D:\R.LTWB\.dem\ALOS` el modelo de terreno _APFBSRT1MosaicArcGISProZE.tif_, modifique la simbología de representación a _Shaded Relief_ con la rampa de color continua denominada _Greens_. Establezca el color de las estaciones en negro.  
 
+![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSPALSAR.png)
 
+> Previamente en la Sección 2 de este curso, realizamos la descarga y procesamiento del modelo de terreno y asignamos el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
+
+2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de temperatura a partir del modelo digital de elevación ALOS PALSAR, utilice las siguientes expresiones y nombres de archivos dentro de la carpeta `D:\R.LTWB\.grid`:
+
+<div align="center">
+
+| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         |
+|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|
+| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif |
+| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      |
+| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      |
+| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   |
+
+</div>
 
 
 
