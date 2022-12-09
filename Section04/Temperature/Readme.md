@@ -180,12 +180,12 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 <div align="center">
 
-| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         | Rango °C    | Grilla                                                                                                           |
-|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|-------------|------------------------------------------------------------------------------------------------------------------|
+| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         |  Rango °C   |                                                      Grilla                                                      |
+|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|:-----------:|:----------------------------------------------------------------------------------------------------------------:|
 | Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../.grid/TemperatureMedComposite.part01.rar), [Part2](../../.grid/TemperatureMedComposite.part02.rar) |
-| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 | [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)           |
-| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 | [Part1](../../.grid/TemperatureMedNino.part01.rar), [Part2](../../.grid/TemperatureMedNino.part02.rar)           |
-| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 | [Part1](../../.grid/TemperatureMedNeutral.part01.rar), [Part2](../../.grid/TemperatureMedNeutral.part02.rar)     |
+| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 |      [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)      |
+| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 |      [Part1](../../.grid/TemperatureMedNino.part01.rar), [Part2](../../.grid/TemperatureMedNino.part02.rar)      |
+| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 |   [Part1](../../.grid/TemperatureMedNeutral.part01.rar), [Part2](../../.grid/TemperatureMedNeutral.part02.rar)   |
 
 </div>
 
