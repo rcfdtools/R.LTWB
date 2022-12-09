@@ -1,5 +1,5 @@
-## Análisis de temperatura
-Keywords: `Elevation` `Temperature` `Correlation`
+## Análisis y mapa de temperatura media
+Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line`
 
 ![R.LTWB](Graph/Temperature.png)
 
@@ -102,7 +102,7 @@ Luego del proceso de exportación, serán cargadas la tabla .dbf al mapa. Remove
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedDEMALOSTMedCompCorrelation.png)
 
-Como puede observar en la correlación, dos de las estaciones se encuentran dispersas dentro del conjunto de datos incluidos en el análisis. La estación derecha presenta una temperatura de 29.19 °C con altitud 1285 msnm, y la estación en la parte inferior de a gráfica 24.29 °C con altitud 1285 msnm. 
+Como puede observar en la regresion, dos de las estaciones se encuentran dispersas dentro del conjunto de datos incluidos en el análisis. La estación derecha presenta una temperatura de 29.19 °C con altitud 1285 msnm, y la estación en la parte inferior de a gráfica 24.29 °C con altitud 1285 msnm. 
 
 15. Utilizando la tecla <kbd>Ctrl</kbd>, seleccione estas dos estaciones e identifique sus códigos en la tabla de atributos, observará que corresponden a las estaciones 28025040 y 28035070. Utilizando el _Definition Query_ de la capa, exclúyalas utilizando la expresión `CODIGO NOT IN ('28025040', '28035070')`
 
@@ -122,6 +122,8 @@ Para la exclusión realizada, la tendencia presenta la ecuación lineal `y = 28.
 | Neutro    | y = 28.6 - 0.0025 x  | 0.095 |
 
 > Como puede observar, los valores obtenidos de los coeficientes de determinación R² son bajos debido a la alta dispersión que existe entre los datos.
+> 
+> De acuerdo a las elevaciones DEMALOS de la tabla de atributos, los valores presentados en las expresiones únicamente son válidos para estaciones dentro del rango de elevaciones de 
 
 ## 
 
