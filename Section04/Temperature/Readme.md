@@ -69,7 +69,7 @@ Luego del proceso de exportación, serán cargadas la tabla .dbf al mapa. Remove
 
 > Tenga en cuenta que los nombres de los campos de atributos AggComposi, AggNina, AggNino y AggNeutral son idénticos en las tablas de agregaciones de datos de temperatura máxima y mínima. Las uniones mantendrán el nombre de las tablas originales antes del nombre del campo, para que pueda identificar su correspondencia, para lo cual, las primeras columnas corresponderán a los datos de temperatura mínima y las columnas finales a temperatura máxima.
 
-9. Abra la tabla de atributos de la capa _CNE_IDEAM_OE_ZE_TempMinMax_ y verifique los datos asociados mediante la unión, podrá observar que existen datos de temperatura  en 25 de las 440 estaciones seleccionadas para la zona de estudio.
+9. Abra la tabla de atributos de la capa _CNE_IDEAM_OE_ZE_TempMinMax_ y verifique los datos asociados mediante la unión, podrá observar que existen datos de temperatura en 25 de las 440 estaciones seleccionadas para la zona de estudio.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TempJoinCODIGOTable.png)
 
@@ -98,7 +98,7 @@ Luego del proceso de exportación, serán cargadas la tabla .dbf al mapa. Remove
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedTable.png)
 
-14. En la tabla de contenido, de clic derecho en la capa _CNE_IDEAM_OE_ZE_TempMinMax_ y seleccione la opción _Create Chart / Scatter Plot_. En el eje X seleccione el campo de atributos `DEMALOS` correspondiente a las elevaciones de las estaciones a partir del modelo digital de elevación ALOS PALSAR, en el eje Y seleccione el campo `TMedComp` correspondiente a valores de temperatura compuesta.
+14. En la tabla de contenido, de clic derecho en la capa _CNE_IDEAM_OE_ZE_TempMinMax_ y, seleccione la opción _Create Chart / Scatter Plot_. En el eje X seleccione el campo de atributos `DEMALOS` correspondiente a las elevaciones de las estaciones a partir del modelo digital de elevación ALOS PALSAR, en el eje Y seleccione el campo `TMedComp` correspondiente a valores de temperatura compuesta.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedDEMALOSTMedCompCorrelation.png)
 
@@ -205,10 +205,10 @@ Mapa de temperatura media - Niño
 Mapa de temperatura media - Neutral
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureMedNeutral.png)
 
-> Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por grilla), cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
+> Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 
 
-En este momento dispone de grillas de temperatura media, requeridas para la generación de los mapas intepolados de evapotranspiración potencial.
+En este momento dispone de grillas de temperatura media, requeridas para la generación de los mapas de evapotranspiración potencial.
 
 
 ### Actividades complementarias:pencil2:
@@ -244,5 +244,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
-|---------------------------|---------------------------|---------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../Rain) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
+|-------------------------------|---------------------------|---------------------------------------------------------------------------|--------------------------|

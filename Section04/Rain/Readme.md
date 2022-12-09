@@ -10,7 +10,7 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 
 * Crear mapas interpolados de precipitación mensual total a partir de agregaciones compuestas por estación y por fenómeno climatológico.
 * Proyectar las grillas utilizando el sistema de coordenadas 9733, correspondiente a MAGNA-SIRGAS Origen-Nacional
-* Comparar el rango de los valores obtenidos en las grillas interpoladas, con los rangos de valores discretos de las estaciones. 
+* Comparar el rango de los valores obtenidos de las grillas interpoladas, con los rangos de valores discretos de las estaciones. 
 
 
 ### Requerimientos
