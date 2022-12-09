@@ -217,10 +217,10 @@ En este momento dispone de grillas de temperatura media, requeridas para la gene
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                          |
-|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Investigue y documente otras ecuaciones regionales a partir de las cuales se puedan construir mapas de temperatura media compuesta y por fenómeno climatológico.                                                                                                                 |
-|     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de temperatura y con algebra de mapas realice el análisis de diferencias de temperatura. Evalúe e implemente en su caso de estudio propio, los mapas de temperatura qye mejor representen su zona de estudio. |
+| Actividad | Alcance                                                                                                                                                                                                                                                                   |
+|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Investigue y documente otras ecuaciones regionales a partir de las cuales se puedan construir mapas de temperatura media compuesta y por fenómeno climatológico.                                                                                                          |
+|     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de temperatura y con algebra de mapas realice el análisis de diferencias de temperatura. Evalúe e implemente en su caso de estudio, los mapas de temperatura que mejor representen su zona de estudio. |
 
 
 ### Referencias
@@ -245,5 +245,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../Rain) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
-|-------------------------------|---------------------------|---------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../Rain) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/29) | [Actividad siguiente]()  |
+|-------------------------------|---------------------------|------------------------------------------------------------------------|--------------------------|
