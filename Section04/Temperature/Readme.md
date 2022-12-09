@@ -176,27 +176,40 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 > Previamente en la Sección 2 de este curso, realizamos la descarga y procesamiento del modelo de terreno y asignamos el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 
-2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de temperatura a partir del modelo digital de elevación ALOS PALSAR, utilice las siguientes expresiones y nombres de archivos dentro de la carpeta `D:\R.LTWB\.grid`:
+2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de temperatura a partir del modelo digital de elevación ALOS PALSAR, utilice las siguientes expresiones y archivos dentro de la carpeta `D:\R.LTWB\.grid`:
 
 <div align="center">
 
-| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         |
-|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|
-| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif |
-| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      |
-| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      |
-| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   |
+| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         | Rango °C    | Grilla                                                                                                           | Tamaño sin compresión |
+|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|-------------|------------------------------------------------------------------------------------------------------------------|-----------------------|
+| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../.grid/TemperatureMedComposite.part01.rar), [Part2](../../.grid/TemperatureMedComposite.part02.rar) | 1.1 GB                |
+| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 | [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)           | 1.1 GB                |
+| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 | [Part1](../../.grid/TemperatureMedNino.part01.rar), [Part2](../../.grid/TemperatureMedNino.part02.rar)           | 1.1 GB                |
+| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 | [Part1](../../.grid/TemperatureMedNeutral.part01.rar), [Part2](../../.grid/TemperatureMedNeutral.part02.rar)     | 1.1 GB                |
 
 </div>
 
+Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Temperature_ y establezca transparencia en 50%.
+
+Mapa de temperatura media - Compuesto
+![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureMedComposite.png)
+
+Mapa de temperatura media - Niña
+![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureMedNina.png)
+
+Mapa de temperatura media - Niño
+![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureMedNino.png)
+
+Mapa de temperatura media - Neutral
+![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureMedNeutral.png)
 
 
 
 
 Tabla de grillas obtenidas y de comparación de resultados
 | Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla                                                                                                 | Tamaño sin compresión |
-|-----------|:---------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
-| Compuesto | 363.2           | 4933.6             | 363.234          | 4933.619         | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) | 1.2 GB                |
+|-----------|:----------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
+| Compuesto | 363.2           | 4933.6             | 363.234          | 4933.619         |  | 1.2 GB                |
 | Niño      | 252.7              | 4590.4             | 252.749          | 4590.447         | [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)           | 1.2 GB                |
 | Niña      | 536.3              | 5420.7             | 536.31           | 5420.688         | [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)           | 1.2 GB                |
 | Neutro    | 305.8              | 4891.5             | 305.754          | 4891.527         | [Part1](../../.grid/RainTotalNeutral.part01.rar), [Part2](../../.grid/RainTotalNeutral.part02.rar)     | 1.2 GB                |
