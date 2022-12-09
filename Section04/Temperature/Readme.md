@@ -180,14 +180,16 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 <div align="center">
 
-| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         | Rango °C    | Grilla                                                                                                           | Tamaño sin compresión |
-|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|-------------|------------------------------------------------------------------------------------------------------------------|-----------------------|
-| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../.grid/TemperatureMedComposite.part01.rar), [Part2](../../.grid/TemperatureMedComposite.part02.rar) | 1.1 GB                |
-| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 | [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)           | 1.1 GB                |
-| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 | [Part1](../../.grid/TemperatureMedNino.part01.rar), [Part2](../../.grid/TemperatureMedNino.part02.rar)           | 1.1 GB                |
-| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 | [Part1](../../.grid/TemperatureMedNeutral.part01.rar), [Part2](../../.grid/TemperatureMedNeutral.part02.rar)     | 1.1 GB                |
+| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         | Rango °C    | Grilla                                                                                                           |
+|-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|-------------|------------------------------------------------------------------------------------------------------------------|
+| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../.grid/TemperatureMedComposite.part01.rar), [Part2](../../.grid/TemperatureMedComposite.part02.rar) |
+| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 | [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)           |
+| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 | [Part1](../../.grid/TemperatureMedNino.part01.rar), [Part2](../../.grid/TemperatureMedNino.part02.rar)           |
+| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 | [Part1](../../.grid/TemperatureMedNeutral.part01.rar), [Part2](../../.grid/TemperatureMedNeutral.part02.rar)     |
 
 </div>
+
+> Como observa en las expresiones utilizadas para la creación de los mapas, temperaturas con valores inferiores a 0 °C han sido establecidas en 0 °C, debido al sistema de unidades utilizado y debido a la localización específica de la zona de estudio en la cual se encuentran celdas de terreno con valores negativos, correspondientes a zonas de explotación a cielo abierto de carbón.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Temperature_ y establezca transparencia en 50%.
 
@@ -203,22 +205,10 @@ Mapa de temperatura media - Niño
 Mapa de temperatura media - Neutral
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureMedNeutral.png)
 
+> Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por grilla), cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 
 
-
-Tabla de grillas obtenidas y de comparación de resultados
-| Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla                                                                                                 | Tamaño sin compresión |
-|-----------|:----------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
-| Compuesto | 363.2           | 4933.6             | 363.234          | 4933.619         |  | 1.2 GB                |
-| Niño      | 252.7              | 4590.4             | 252.749          | 4590.447         | [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)           | 1.2 GB                |
-| Niña      | 536.3              | 5420.7             | 536.31           | 5420.688         | [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)           | 1.2 GB                |
-| Neutro    | 305.8              | 4891.5             | 305.754          | 4891.527         | [Part1](../../.grid/RainTotalNeutral.part01.rar), [Part2](../../.grid/RainTotalNeutral.part02.rar)     | 1.2 GB                |
-
-> Debido al tamaño de los archivos generados, cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
->
-> Si bien el método IDW no permite generar isoyetas con apariencia suavizada como el método de líneas espirales, permite obtener valores interpolados próximos al rango de valores de las estaciones utilizadas.
-
-En este momento dispone de grillas interpoladas de precipitación total, requeridas para el balance hidrológico de largo plazo.
+En este momento dispone de grillas de temperatura media, requeridas para la generación de los mapas intepolados de evapotranspiración potencial.
 
 
 ### Actividades complementarias:pencil2:
