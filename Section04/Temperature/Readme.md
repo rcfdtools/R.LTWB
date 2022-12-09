@@ -102,30 +102,62 @@ Luego del proceso de exportación, serán cargadas la tabla .dbf al mapa. Remove
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedDEMALOSTMedCompCorrelation.png)
 
-Como puede observar en la regresion, dos de las estaciones se encuentran dispersas dentro del conjunto de datos incluidos en el análisis. La estación derecha presenta una temperatura de 29.19 °C con altitud 1285 msnm, y la estación en la parte inferior de a gráfica 24.29 °C con altitud 1285 msnm. 
+Como puede observar en la regresión, una de las estaciones se encuentra dispersa dentro del conjunto de datos incluidos en el análisis con temperatura de 29.19 °C y altitud 1285 msnm.
 
-15. Utilizando la tecla <kbd>Ctrl</kbd>, seleccione estas dos estaciones e identifique sus códigos en la tabla de atributos, observará que corresponden a las estaciones 28025040 y 28035070. Utilizando el _Definition Query_ de la capa, exclúyalas utilizando la expresión `CODIGO NOT IN ('28025040', '28035070')`
+15. Utilizando la tecla <kbd>Ctrl</kbd>, seleccione la estación e identifique su código en la tabla de atributos, observará que corresponde a la estación 28035070. Utilizando el _Definition Query_ de la capa, exclúyala utilizando la expresión `CODIGO NOT IN ('28035070')`
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedDefinitionQuery1.png)
 
-Para la exclusión realizada, la tendencia presenta la ecuación lineal `y = 28.6 + -0.00238 x` con R² = 0.083, donde `x` representa el valor de la altura y `y` corresponde a la temperatura.
+Para la exclusión realizada, la tendencia presenta la ecuación lineal `y = 28.9 - 0.0053 x` con R² = 0.53, donde `x` representa el valor de la altura y `y` corresponde a temperatura.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TMedDEMALOSTMedCompCorrelationQuery.png)
 
-16. Utilizando el mismo filtro de exclusión de las estaciones 28025040 y 28035070, obtenga las ecuaciones características lineales para los datos de temperatura correspondientes a fenómenos climatológicos, para todas lasseries obtendrá las siguientes expresiones:
+16. Utilizando el mismo filtro de exclusión de la estación 28035070, obtenga las ecuaciones características lineales para los datos de temperatura correspondientes a fenómenos climatológicos, para todas las series obtendrá las siguientes expresiones zonales:
 
-| Fenómeno  | Expresión            | R²    |
-|-----------|----------------------|-------|
-| Compuesto | y = 28.6 - 0.00238 x | 0.083 |
-| Niña      | y = 28.5 - 0.0025 x  | 0.093 |
-| Niño      | y = 28.8 - 0.00203 x | 0.054 |
-| Neutro    | y = 28.6 - 0.0025 x  | 0.095 |
+| Fenómeno  | Expresión            | R²   |
+|-----------|----------------------|------|
+| Compuesto | y = 28.9 - 0.0053 x  | 0.53 |
+| Niña      | y = 28.7 - 0.0054 x  | 0.55 |
+| Niño      | y = 29.1 - 0.0053 x  | 0.49 |
+| Neutro    | y = 28.8 - 0.0054 x  | 0.55 |
 
-> Como puede observar, los valores obtenidos de los coeficientes de determinación R² son bajos debido a la alta dispersión que existe entre los datos.
+> Como puede observar, los valores obtenidos de los coeficientes de determinación R² son bajos debido a la alta dispersión que existe entre los datos y a que disponemos solo de 24 estaciones IDEAM en la zona de estudio.
 > 
-> De acuerdo a las elevaciones DEMALOS de la tabla de atributos, los valores presentados en las expresiones únicamente son válidos para estaciones dentro del rango de elevaciones de 
+> De acuerdo a las elevaciones DEMALOS de la tabla de atributos, los valores presentados en las expresiones corresponden a estaciones dentro del rango de elevaciones de 8 a 699 msnm.
 
-## 
+![R.LTWB](Screenshot/ArcGISPro3.0.3DEMALOSStat.png)
+
+
+### Ecuaciones regionales 
+
+Las expresiones obtenidas previamente, permiten describir la temperatura media en un rango limitado de elevaciones y debido a que para el balance hidrológico son requeridos datos de temperatura (para la estimación de la evapotranspiración potencial) con cobertura sobre toda la zona de estudio y para elevaciones superiores a la altitud 699 msnm, es necesario el uso de ecuaciones regionales.
+
+El [Centro Nacional de Investigaciones de Café - Cenicafé](https://www.cenicafe.org/) de Colombia - Suramérica, ha realizado diferentes estudios relacionados con variables climatológicas, obteniendo ecuaciones que describen el comportamiento de la temperatura en función de la altitud para valores máximos, mínimos y medios. Las expresiones obtenidas para la región Atlántica dentro de la cual se encuentra la zona de estudio son:
+
+| Expresión              | Altitud, m | R²   |
+|------------------------|------------|------|
+| Tm = 27.72 - 0.0055H   | 2 - 4000   | 0.99 |
+| Tmax = 33.06 - 0.0062H | 2 - 4000   | 0.79 |
+| Tmin = 23.10 - 0.0061H | 2 - 4000   | 0.90 |
+
+> Las ecuaciones de Cenicafé describen el comportamiento compuesto de los datos de temperatura en un amplio rango de elevaciones y con coeficientes de determinación altos, sin embargo, los valores corresponden a datos analizados antes o hasta el año 1998.
+
+Al comparar los valores estimados a partir de la ecuación regional de temperatura media de Cenicafé y la ecuación compuesta zonal obtenida a partir de 24 de las 25 estaciones de la zona de estudio, podemos observar una tendencia similar, sin embargo, las temperaturas de Cenicafé son inferiores en aproximadamente 1.25 °C respecto a las zonales evaluadas a partir de las series procesadas en este curso.
+
+> La diferencia de temperatura puede ser asociada a diferentes factores, por una parte, el análisis de temperatura media realizado por Cenicafé fué realizado a partir los registros de 239 estaciones, por otra parte, los análisis zonales realizados utilizan series hasta el año 2021 y pueden evidenciar el aumento en la temperatura media de la zona debida a los efectos del calentamiento global.
+
+En el libro de Microsoft Excel [Temperature.xlsx](Temperature.xlsx), hemos incluido un análisis comparativo entre datos proyectados utilizando la ecuación regional de Cenicafé y la ecuación zonal obtenida, se puede observar que la pendiente de las gráficas es similar y la banda de diferencias para valores entre la cota 0 y 700 msnm.
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3TMedZonalVsRegional.png)
+
+
+### Mapa de temperatura
+
+
+
+
+
+
 
 
 
@@ -149,15 +181,16 @@ En este momento dispone de grillas interpoladas de precipitación total, requeri
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                                    |
-|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice la interpolación de la precipitación total en ArcGIS for Desktop y en QGIS, compare con los valores obtenidos en ArcGIS Pro.                                                     |
-|     2     | Investigue e interpole la precipitación total compuesta por 3 métodos diferentes (p.ej., Spline, Natural Neghbor, Kriging, Tred) y compare los resultados con los obtenidos en ArcGIS Pro. |
+| Actividad | Alcance |
+|:---------:|:--------|
+|     1     | xxx     |
+|     2     | xxx     |
 
 
 ### Referencias
 
-* 
+* https://biblioteca.cenicafe.org/bitstream/10778/860/1/arc%2049%283%29224-230.pdf
+* https://biblioteca.cenicafe.org/bitstream/10778/859/8/6.%20Temperatura.pdf
 
 
 ### Compatibilidad
