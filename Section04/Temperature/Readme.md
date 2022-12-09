@@ -3,15 +3,15 @@ Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line`
 
 ![R.LTWB](Graph/Temperature.png)
 
-A partir de las series agregadas de temperatura máxima y mínima a nivel anual, se estima la temperatura media anual en cada estación y se crea el mapa de temperatura, requerido para la estimación de la evapotranspiración potencial.
+A partir de las series agregadas de temperatura máxima y mínima a nivel anual, se estima la temperatura media anual en cada estación y se crea el mapa de temperatura requerido para la estimación de la evapotranspiración potencial.
 
 
 ### Objetivos
 
 * Calcular la temperatura media multianual en cada estación a partir del promedio de la temperatura máxima y mínima.
 * Evaluar el rango de elevaciones y la localización de las estaciones con datos de temperatura disponible. 
-* A partir de relación entre los datos de temperatura y elevación, obtener ecuaciones características.
-* A partir de ecuaciones regionales o zonales, crear los mapas de temperatura compuestos y por fenómeno climatológico de la zona de estudio, a partir de las elevaciones del modelo digital de elevación.
+* A partir de relación entre los datos de temperatura y elevación, obtener ecuaciones zonales características.
+* A partir de ecuaciones regionales o zonales, crear mapas de temperatura compuestos y por fenómeno climatológico de la zona de estudio, a partir de las elevaciones del modelo digital de elevación.
 
 
 ### Requerimientos
@@ -21,6 +21,7 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 * [QGIS 3+](https://qgis.org/) (opcional)
 * Estaciones hidroclimatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../../Section03/CNEStationElevation)
 * Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../../Section03/Agg)
+* Modelo digital de elevación ALOS PALSAR. [:mortar_board:Aprender.](../../Section02/DEMAlos)
 
 
 ### Procedimiento general para interpolación de precipitación total
@@ -37,7 +38,7 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 
 > Tenga en cuenta que previamente asignamos al mapa el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 
-2. Desde la tabla de contenido del mapa, renombre la clase de entidad _CNE_IDEAM_OE_ZE_ como _CNE_IDEAM_OE_ZE_Rain_ para conservar la unión y los filtros previamente realizados con los datos de precipitación.
+2. Desde la tabla de contenido del mapa, renombre la clase de entidad _CNE_IDEAM_OE_ZE_ como _CNE_IDEAM_OE_ZE_Rain_, para conservar la unión y los filtros previamente realizados con los datos de precipitación.
 
 3. Desde la tabla de contenido del mapa y dando clic derecho en _CNE_IDEAM_OE_ZE_Rain_, cree una copia de esta capa y nómbrela como _CNE_IDEAM_OE_ZE_TempMinMax_, luego elimine las uniones, gráficas y filtros existentes asociados a la capa copiada.
 
@@ -134,9 +135,9 @@ Para la exclusión realizada, la tendencia presenta la ecuación lineal `y = 28.
 
 ### Ecuaciones regionales 
 
-Las expresiones obtenidas previamente, permiten describir la temperatura media en un rango limitado de elevaciones y debido a que para el balance hidrológico son requeridos datos de temperatura (para la estimación de la evapotranspiración potencial) con cobertura sobre toda la zona de estudio y para elevaciones superiores a la altitud 699 msnm, es necesario el uso de ecuaciones regionales.
+Las expresiones obtenidas previamente, permiten describir la temperatura media en un rango limitado de elevaciones y debido a que para el balance hidrológico son requeridos datos de temperatura (para la estimación de la evapotranspiración potencial) con cobertura sobre toda la zona de estudio y para elevaciones superiores a la altitud 699 msnm, puede ser necesario el uso de ecuaciones regionales.
 
-El [Centro Nacional de Investigaciones de Café - Cenicafé](https://www.cenicafe.org/) de Colombia - Suramérica, ha realizado diferentes estudios relacionados con variables climatológicas, obteniendo ecuaciones que describen el comportamiento de la temperatura en función de la altitud para valores máximos, mínimos y medios. Las expresiones obtenidas para la región Atlántica dentro de la cual se encuentra la zona de estudio son:
+El [Centro Nacional de Investigaciones de Café - Cenicafé](https://www.cenicafe.org/) de Colombia - Suramérica, ha realizado diferentes estudios relacionados con variables climatológicas, obteniendo ecuaciones que describen el comportamiento de la temperatura en función de la altitud para valores máximos, mínimos y medios. Las expresiones compuestas obtenidas para la región Atlántica dentro de la cual se encuentra la zona de estudio son:
 
 <div align="center">
 
@@ -189,7 +190,7 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 </div>
 
-> Como observa en las expresiones utilizadas para la creación de los mapas, temperaturas con valores inferiores a 0 °C han sido establecidas en 0 °C, debido al sistema de unidades utilizado y debido a la localización específica de la zona de estudio en la cual se encuentran celdas de terreno con valores negativos, correspondientes a zonas de explotación a cielo abierto de carbón.
+> Como observa en las expresiones utilizadas para la creación de los mapas, temperaturas con valores inferiores a 0 °C han sido establecidas en 0 °C, debido al sistema de unidades utilizado y debido a la localización específica de la zona de estudio en la cual se presentan celdas de terreno con valores negativos, correspondientes a zonas de explotación a cielo abierto de carbón.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Temperature_ y establezca transparencia en 50%.
 
@@ -216,10 +217,10 @@ En este momento dispone de grillas de temperatura media, requeridas para la gene
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance |
-|:---------:|:--------|
-|     1     | xxx     |
-|     2     | xxx     |
+| Actividad | Alcance                                                                                                                                                                                                                                                                          |
+|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Investigue y documente otras ecuaciones regionales a partir de las cuales se puedan construir mapas de temperatura media compuesta y por fenómeno climatológico.                                                                                                                 |
+|     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de temperatura y con algebra de mapas realice el análisis de diferencias de temperatura. Evalúe e implemente en su caso de estudio propio, los mapas de temperatura qye mejor representen su zona de estudio. |
 
 
 ### Referencias
