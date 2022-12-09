@@ -3,15 +3,15 @@ Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line`
 
 ![R.LTWB](Graph/Temperature.png)
 
-A partir de las series agregadas de temperatura máxima y mínima a nivel anual, se estima la temperatura media anual en cada estación, requerida para la estimación de la evapotranspiración potencial.
+A partir de las series agregadas de temperatura máxima y mínima a nivel anual, se estima la temperatura media anual en cada estación y se crea el mapa de temperatura, requerido para la estimación de la evapotranspiración potencial.
 
 
 ### Objetivos
 
 * Calcular la temperatura media multianual en cada estación a partir del promedio de la temperatura máxima y mínima.
 * Evaluar el rango de elevaciones y la localización de las estaciones con datos de temperatura disponible. 
-* A partir de relación entre los datos de temperatura y elevación, obtener y evaluar ecuaciones características.
-* A partir de ecuaciones regionales, crear el mapa de temperatura de la zona de estudio a partir del modelo digital de elevación.
+* A partir de relación entre los datos de temperatura y elevación, obtener ecuaciones características.
+* A partir de ecuaciones regionales o zonales, crear los mapas de temperatura compuestos y por fenómeno climatológico de la zona de estudio, a partir de las elevaciones del modelo digital de elevación.
 
 
 ### Requerimientos
