@@ -1,5 +1,5 @@
 ## Mapa de evapotranspiración potencial - ETP
-Keywords: `ETo` `Cenicafé`
+Keywords: `ETP` `Cenicafé` `Raster-calculator`
 
 ![R.LTWB](Graph/ETP.png)
 
@@ -12,6 +12,8 @@ ETP = 1017.17 exp(-0,0002 h)
 </div>
 
 Donde, ETP es la evapotranspiración potencial (mm/año) y h es la elevación (m). 
+
+> Durante el proceso de recolección y análisis de información a partir de estaciones terrestres del IDEAM, se obtuvo la serie de evapotranspiración potencial solo en una estación, la cual no es suficiente para generar un mapa que cubra la totalidad de la zona de estudio. Por tal motivo se recurre a la expresión propuesta por Cenicafé para Colombia.
 
 
 ### Objetivos
@@ -55,7 +57,6 @@ Luego de creados los mapas, modifique la simbología de representación utilizan
 En el mapa creado, podrá observar que los valores de evapotranspiración obtenidos se encuentran entre 542.69 y 1715.57 mm / año.
 
 > Es importante tener en cuenta que el mapa obtenido corresponde a estimaciones compuestas que no han sido segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro).
-
 
 En este momento dispone de la grilla de evapotranspiración potencial, requerida para la generación de los mapas de evapotranspiración real.
 

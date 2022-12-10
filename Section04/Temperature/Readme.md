@@ -1,5 +1,5 @@
 ## Mapa de temperatura media
-Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line` `Cenicafé`
+Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line` `Cenicafé` `Raster-calculator`
 
 ![R.LTWB](Graph/Temperature.png)
 
