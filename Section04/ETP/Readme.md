@@ -11,7 +11,9 @@ ETP = 1017.17 exp(-0,0002 h)
 
 </div>
 
-Donde, ETP es la evapotranspiración potencial (mm/año) y h es la elevación (m). 
+Donde, 
+* ETP: evapotranspiración potencial, mm/año
+* h: elevación, m 
 
 > Durante el proceso de recolección y análisis de información a partir de estaciones terrestres del IDEAM, se obtuvo la serie de evapotranspiración potencial solo en una estación, la cual no es suficiente para generar un mapa que cubra la totalidad de la zona de estudio. Por tal motivo se recurre a la expresión propuesta por Cenicafé para Colombia.
 
