@@ -27,7 +27,7 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 ### Procedimiento general para interpolación de precipitación total
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/Temperature.svg" width="85%"><br>
+<br><img alt="R.LTWB" src="Graph/Temperature.svg" width="95%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

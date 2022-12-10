@@ -90,9 +90,9 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción | Autor                                     | Horas |
-|------------|:------------|-------------------------------------------|:-----:|
-| 2022.12.10 | xxx         | [rcfdtools](https://github.com/rcfdtools) |   2   |
+| Versión    | Descripción                                                         | Autor                                     | Horas |
+|------------|:--------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.10 | Documentación general. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   2   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
