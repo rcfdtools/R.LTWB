@@ -1,5 +1,5 @@
-## Interpolación espacial de variables climatológicas - Precipitación total
-Keywords: `DEM` `IDW` `Rain`
+## Mapa de precipitación total
+Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
 ![R.LTWB](Graph/Interpolation.png)
 
