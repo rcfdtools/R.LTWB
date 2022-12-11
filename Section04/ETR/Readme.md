@@ -1,7 +1,7 @@
 ## Mapa de evapotranspiración real - ETR
 Keywords: `ETR` `Cenicafé` `Budyco` `Turc` `Dekop` `Raster-calculator`
 
-![R.LTWB](Graph/ETP.png)
+![R.LTWB](Graph/ETR.png)
 
 En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Turc y Dekop.
 
