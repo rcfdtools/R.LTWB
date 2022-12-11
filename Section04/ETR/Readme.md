@@ -50,18 +50,26 @@ Donde,
 
 2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
 
-| Mapa                   | Expresión Raster Calculator                                                                                                                                                                                            | Rango mm/año     | Grilla |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|--------|
-| ETRBudycoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"*TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 |        |
-|                        |                                                                                                                                                                                                                        |                  |        |
-
-* Grilla: [Part1](../../.grid/ETPCenicafe.part01.rar), [Part2](../../.grid/ETPCenicafe.part02.rar), [Part3](../../.grid/ETPCenicafe.part03.rar)  
+| Mapa                   | Expresión Raster Calculator                                                                                                                                                                                            | Rango mm/año     | Grilla                                                                                                                                                                                                         |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"*TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../.grid/ETRBudycoComposite.part01.rar), [Part2](../../.grid/ETRBudycoComposite.part02.rar), [Part3](../../.grid/ETRBudycoComposite.part03.rar), [Part4](../../.grid/ETRBudycoComposite.part04.rar) |
+|                        |                                                                                                                                                                                                                        |                  |                                                                                                                                                                                                                |
 
 > Debido al tamaño del archivo generado (aproximadamente 1.1 GB), la grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
 
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopComposite.png)
+ETR Budyko Compuesto
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoComposite.png)
+
+ETR Budyko La Niña
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNina.png)
+
+ETR Budyko El Niño
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNino.png)
+
+ETR Budyko Neutro
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNeutro.png)
 
 > Es importante tener en cuenta que el mapa obtenido corresponde a estimaciones compuestas que no han sido segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro).
 
@@ -89,10 +97,10 @@ En este momento dispone de la grilla de evapotranspiración potencial, requerida
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                    |
-|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Investigue y documente otras ecuaciones regionales a partir de las cuales se puedan construir mapas de evapotranspiración potencial.                                                                                                                                                       |
-|     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de evapotranspiración potencial y con algebra de mapas realice el análisis de diferencias. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio. |
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                  |
+|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Investigue y documente otras ecuaciones regionales a partir de las cuales se puedan construir mapas de evapotranspiración real.                                                                                                                                                                          |
+|     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de evapotranspiración real y con algebra de mapas realice el análisis de diferencias respecto a los mapas obtenidos en esta actividad. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio. |
 
 
 ### Referencias
