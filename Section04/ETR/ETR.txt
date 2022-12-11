@@ -1,0 +1,42 @@
+Task
+
+Required grids
+	ETPCenicafe.tif
+	RainTotalComposite.tif
+	RainTotalNina.tif
+	RainTotalNino.tif
+	RainTotalNeutral.tif
+	TemperatureMedComposite.tif
+	TemperatureMedNina.tif
+	TemperatureMedNino.tif
+	TemperatureMedNeutral.tif
+	
+
+ETR DEKOP
+
+	ETRDekopComposite.tif: "ETPCenicafe.tif" * TanH("RainTotalComposite.tif"/"ETPCenicafe.tif")
+	ETRDekopNina.tif: "ETPCenicafe.tif" * TanH("RainTotalNina.tif"/"ETPCenicafe.tif")
+	ETRDekopNino.tif: "ETPCenicafe.tif" * TanH("RainTotalNino.tif"/"ETPCenicafe.tif")
+	ETRDekopNeutral.tif: "ETPCenicafe.tif" * TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif")
+
+
+ETR BUDYCO
+
+	ETRBudycoComposite.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"*TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))
+
+	ETRBudycoNina.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalNina.tif"*TanH("RainTotalNina.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalNina.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalNina.tif"))))
+
+	ETRBudycoNino.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalNino.tif"*TanH("RainTotalNino.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalNino.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalNino.tif"))))
+
+	ETRBudycoNeutral.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalNeutral.tif"*TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))))
+
+
+ETR TURC
+
+	ETRTurcComposite.tif: Con((("RainTotalComposite.tif"/(300+(25*"TemperatureMedComposite.tif ")+(0.05*(Power("TemperatureMedComposite.tif",3)))))>0.316), ("RainTotalComposite.tif"/(SquareRoot(0.9+(Power("RainTotalComposite.tif",2)/Power((300+(25*"TemperatureMedComposite.tif ")+(0.05*Power("TemperatureMedComposite.tif ",3))),2))))),("RainTotalComposite.tif"))
+	
+	ETRTurcNina.tif: Con((("RainTotalNina.tif"/(300+(25*"TemperatureMedNina.tif ")+(0.05*(Power("TemperatureMedNina.tif",3)))))>0.316), ("RainTotalNina.tif"/(SquareRoot(0.9+(Power("RainTotalNina.tif",2)/Power((300+(25*"TemperatureMedNina.tif ")+(0.05*Power("TemperatureMedNina.tif ",3))),2))))),("RainTotalNina.tif"))
+	
+	ETRTurcNino.tif: Con((("RainTotalNino.tif"/(300+(25*"TemperatureMedNino.tif ")+(0.05*(Power("TemperatureMedNino.tif",3)))))>0.316), ("RainTotalNino.tif"/(SquareRoot(0.9+(Power("RainTotalNino.tif",2)/Power((300+(25*"TemperatureMedNino.tif ")+(0.05*Power("TemperatureMedNino.tif ",3))),2))))),("RainTotalNino.tif"))
+
+	ETRTurcNeutral.tif: Con((("RainTotalNeutral.tif"/(300+(25*"TemperatureMedNeutral.tif ")+(0.05*(Power("TemperatureMedNeutral.tif",3)))))>0.316), ("RainTotalNeutral.tif"/(SquareRoot(0.9+(Power("RainTotalNeutral.tif",2)/Power((300+(25*"TemperatureMedNeutral.tif ")+(0.05*Power("TemperatureMedNeutral.tif ",3))),2))))),("RainTotalNeutral.tif"))
