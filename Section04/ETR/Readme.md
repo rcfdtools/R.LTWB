@@ -1,4 +1,4 @@
-## Mapa de evapotranspiración potencial - ETP
+## Mapa de evapotranspiración real - ETR
 Keywords: `ETR` `Cenicafé` `Budyco` `Turc` `Dekop` `Raster-calculator`
 
 ![R.LTWB](Graph/ETP.png)
