@@ -177,17 +177,17 @@ Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
 
-ETR Dekop Compuesto
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopComposite.png)
+ETR Turc Compuesto
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRTurcComposite.png)
 
-ETR Dekop La Niña
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNina.png)
+ETR Turc La Niña
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRTurcNina.png)
 
-ETR Dekop El Niño
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNino.png)
+ETR Turc El Niño
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRTurcNino.png)
 
-ETR Dekop Neutro
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNeutral.png)
+ETR Turc Neutro
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRTurcNeutral.png)
 
 
 
