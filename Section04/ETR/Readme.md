@@ -83,7 +83,7 @@ La expresión de Dekop es una simplificación de la ecuación de Budyko (1974) q
 
 <div align="center">
 
-ETR = ETP * tanh( P / ETP )
+ETR = ETP * tanh(P / ETP)
 
 </div>
 
