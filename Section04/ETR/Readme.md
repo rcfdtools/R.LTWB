@@ -32,7 +32,7 @@ En esta actividad y a partir de los mapas de precipitación total, temperatura y
 
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/Budyko.svg" width="70%"><br><br>
+<br><img alt="R.LTWB" src="Graph/Budyko.png" width="70%"><br><br>
 </div>
 
 
