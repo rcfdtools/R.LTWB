@@ -26,39 +26,60 @@ En esta actividad y a partir de los mapas de precipitación total, temperatura y
 ### Procedimiento general ETR Budyko
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/ETRBudyko.svg" width="70%"><br>
+<br><img alt="R.LTWB" src="Graph/ETRBudyko.svg" width="60%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
+
+La expresión de Budyko (1974), permite transformar la evapotranspiración potencial en evapotranspiración real, 
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/Budyko.png" width="70%"><br><br>
 </div>
 
-
+Donde,
+* ETP: evapotranspiración potencial, mm/año
+* P: precipitación total, mm/año 
 
 
 1. En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fué creado en la primera actividad de la sección 4 de este curso.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenProject.png)
 
-> Tenga en cuenta que previamente asignamos al mapa el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional y que en la actividad anterior agregamos al proyecto el modelo digital de elevación ALOS PALSAR que ha sido referenciado con este mismo sistema.
+> Tenga en cuenta que previamente asignamos al mapa el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional y que en actividades anteriores generamos los mapas de temperatura y precipitación que han sido referenciados con este mismo sistema.
 
-2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree el mapa de evapotranspiración potencial a partir del modelo digital de elevación ALOS PALSAR, utilice la siguiente expresión y nombre de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
+2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
 
-* Expresión Raster Calculator: `1700.17*Exp((-0.0002*"APFBSRT1MosaicArcGISProZE.tif"))`
-* Mapa: ETPCenicafe.tif
+| Mapa                   | Expresión Raster Calculator                                                                                                                                                                                            | Rango mm/año     | Grilla |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|--------|
+| ETRBudycoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"*TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 |        |
+|                        |                                                                                                                                                                                                                        |                  |        |
+
 * Grilla: [Part1](../../.grid/ETPCenicafe.part01.rar), [Part2](../../.grid/ETPCenicafe.part02.rar), [Part3](../../.grid/ETPCenicafe.part03.rar)  
 
 > Debido al tamaño del archivo generado (aproximadamente 1.1 GB), la grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
 
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETPCenicafe.png)
-
-En el mapa creado, podrá observar que los valores de evapotranspiración obtenidos se encuentran entre 542.69 y 1715.57 mm/año.
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopComposite.png)
 
 > Es importante tener en cuenta que el mapa obtenido corresponde a estimaciones compuestas que no han sido segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 En este momento dispone de la grilla de evapotranspiración potencial, requerida para la generación de los mapas de evapotranspiración real.
 

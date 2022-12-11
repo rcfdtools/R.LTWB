@@ -12,14 +12,6 @@ Required grids
 	TemperatureMedNeutral.tif
 	
 
-ETR DEKOP
-
-	ETRDekopComposite.tif: "ETPCenicafe.tif" * TanH("RainTotalComposite.tif"/"ETPCenicafe.tif")
-	ETRDekopNina.tif: "ETPCenicafe.tif" * TanH("RainTotalNina.tif"/"ETPCenicafe.tif")
-	ETRDekopNino.tif: "ETPCenicafe.tif" * TanH("RainTotalNino.tif"/"ETPCenicafe.tif")
-	ETRDekopNeutral.tif: "ETPCenicafe.tif" * TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif")
-
-
 ETR BUDYCO
 
 	ETRBudycoComposite.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"*TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))
@@ -29,6 +21,14 @@ ETR BUDYCO
 	ETRBudycoNino.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalNino.tif"*TanH("RainTotalNino.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalNino.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalNino.tif"))))
 
 	ETRBudycoNeutral.tif: SquareRoot(("ETPCenicafe.tif"*"RainTotalNeutral.tif"*TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))))
+
+
+ETR DEKOP
+
+	ETRDekopComposite.tif: "ETPCenicafe.tif" * TanH("RainTotalComposite.tif"/"ETPCenicafe.tif")
+	ETRDekopNina.tif: "ETPCenicafe.tif" * TanH("RainTotalNina.tif"/"ETPCenicafe.tif")
+	ETRDekopNino.tif: "ETPCenicafe.tif" * TanH("RainTotalNino.tif"/"ETPCenicafe.tif")
+	ETRDekopNeutral.tif: "ETPCenicafe.tif" * TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif")
 
 
 ETR TURC
