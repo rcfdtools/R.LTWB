@@ -3,7 +3,7 @@ Keywords: `ETR` `Cenicafé` `Budyco` `Turc` `Dekop` `Raster-calculator`
 
 ![R.LTWB](Graph/ETP.png)
 
-En esta actividad se presentan diferentes metodologías para la obtención de mapas de evapotranspiración real a partir de métodos de regionalización como Budyco, Turc y Dekop.
+En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Turc y Dekop.
 
 
 ### Objetivos
