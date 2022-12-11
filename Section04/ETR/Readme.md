@@ -127,7 +127,7 @@ ETR Dekop Neutro
 La expresión de Turc permite transformar la evapotranspiración potencial en evapotranspiración real a partir de los valores de la temperatura media y la precipitación media anual con la siguiente expresión:  
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/Turc.png" width="15%"><br><br>
+<br><img alt="R.LTWB" src="Graph/Turc.png" width="17.5%"><br><br>
 </div>
 
 Donde,
@@ -153,7 +153,7 @@ Para esta fórmula, el cálculo está condicionado de acuerdo con:
 Sí, P/L > 0.316 
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/Turc1.png" width="30%"><br><br>
+<br><img alt="R.LTWB" src="Graph/Turc1.png" width="27.5%"><br><br>
 </div>
 
 Sí, P/L <= 0.316
