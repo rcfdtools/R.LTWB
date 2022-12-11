@@ -69,7 +69,7 @@ ETR Budyko El Niño
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNino.png)
 
 ETR Budyko Neutro
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNeutro.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNeutral.png)
 
 > Es importante tener en cuenta que los mapas obtenidos corresponden a estimaciones segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro), sin embargo, el mapa de ETR potencial utilizado corresponde a valores compuestos.
 
