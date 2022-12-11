@@ -30,7 +30,7 @@ En esta actividad y a partir de los mapas de precipitación total, temperatura y
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-La expresión de Budyko (1974), permite transformar la evapotranspiración potencial en evapotranspiración real, 
+La expresión de Budyko (1974), permite transformar la evapotranspiración potencial en evapotranspiración real con la siguiente expresión:
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/Budyko.png" width="70%"><br><br>
@@ -79,7 +79,7 @@ ETR Budyko Neutro
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-La expresión de Dekop es una simplificación de la ecuación de Budyko (1974) que no tiene en cuenta condiciones extremas de las variables consideradas y permite transformar la evapotranspiración potencial en evapotranspiración real, 
+La expresión de Dekop es una simplificación de la ecuación de Budyko (1974) que no tiene en cuenta condiciones extremas de las variables consideradas y permite transformar la evapotranspiración potencial en evapotranspiración real con la siguiente expresión: 
 
 <div align="center">
 
@@ -117,6 +117,77 @@ ETR Dekop Neutro
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNeutral.png)
 
 
+### Procedimiento general ETR Turc
+
+<div align="center">
+<br><img alt="R.LTWB" src="Graph/ETRTurc.svg" width="50%"><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
+</div>
+
+La expresión de Turc permite transformar la evapotranspiración potencial en evapotranspiración real a partir de los valores de la temperatura media y la precipitación media anual con la siguiente expresión:  
+
+<div align="center">
+<br><img alt="R.LTWB" src="Graph/Turc.png" width="70%"><br><br>
+</div>
+
+Donde,
+* P: precipitación total, mm/año
+* L: es una variable que está en función de la temperatura media T, °C
+
+<div align="center">
+
+L = 300 + 25T + 0.05T³
+
+</div>
+
+y consecuentemente,
+
+<div align="center">
+
+P/L= P / (300 + 25T + 0.05T³)
+
+</div>
+
+Para esta fórmula, el cálculo está condicionado de acuerdo con:
+
+Sí, P/L > 0.316 
+
+<div align="center">
+<br><img alt="R.LTWB" src="Graph/Turc1.png" width="30%"><br><br>
+</div>
+
+Sí, P/L <= 0.316
+
+<div align="center">
+
+ETR = P
+
+</div>
+
+Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
+
+| Mapa                 | Expresión Raster Calculator                                                                                                                                                                                                                                                                                                                       | Rango mm/año | Grilla                                                                                                                                                                                                 |
+|:---------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ETRTurcComposite.tif | Con((("RainTotalComposite.tif"/(300+(25*"TemperatureMedComposite.tif") +(0.05*(Power("TemperatureMedComposite.tif",3)))))>0.316), ("RainTotalComposite.tif"/(SquareRoot(0.9+(Power ("RainTotalComposite.tif",2)/Power((300+(25* "TemperatureMedComposite.tif")+(0.05*Power("TemperatureMedComposite.tif" ,3))),2))))),("RainTotalComposite.tif")) | xxx - xxx    | [Part1](../../.grid/ETRTurcComposite.part01.rar), [Part2](../../.grid/ETRTurcComposite.part02.rar), [Part3](../../.grid/ETRTurcComposite.part03.rar), [Part4](../../.grid/ETRTurcComposite.part04.rar) |
+| ETRTurcNina.tif      | Con((("RainTotalNina.tif"/(300+(25*"TemperatureMedNina.tif") +(0.05*(Power("TemperatureMedNina.tif",3)))))>0.316), ("RainTotalNina.tif"/(SquareRoot(0.9+(Power ("RainTotalNina.tif",2)/Power((300+(25* "TemperatureMedNina.tif ")+(0.05*Power("TemperatureMedNina.tif" ,3))),2))))),("RainTotalNina.tif"))                                        | xxx - xxx    | [Part1](../../.grid/ETRTurcNina.part01.rar), [Part2](../../.grid/ETRTurcNina.part02.rar), [Part3](../../.grid/ETRTurcNina.part03.rar), [Part4](../../.grid/ETRTurcNina.part04.rar)                     |
+| ETRTurcNino.tif      | Con((("RainTotalNino.tif"/(300+(25*"TemperatureMedNino.tif") +(0.05*(Power("TemperatureMedNino.tif",3)))))>0.316), ("RainTotalNino.tif"/(SquareRoot(0.9+(Power ("RainTotalNino.tif",2)/Power((300+(25* "TemperatureMedNino.tif ")+(0.05*Power("TemperatureMedNino.tif" ,3))),2))))),("RainTotalNino.tif"))                                        | xxx - xxx    | [Part1](../../.grid/ETRTurcNino.part01.rar), [Part2](../../.grid/ETRTurcNino.part02.rar), [Part3](../../.grid/ETRTurcNino.part03.rar), [Part4](../../.grid/ETRTurcNino.part04.rar)                     |
+| ETRTurcNeutral.tif   | Con((("RainTotalNeutral.tif"/(300+(25*"TemperatureMedNeutral.tif") +(0.05*(Power("TemperatureMedNeutral.tif",3)))))>0.316), ("RainTotalNeutral.tif"/(SquareRoot(0.9+(Power ("RainTotalNeutral.tif",2)/Power((300+(25* "TemperatureMedNeutral.tif ")+(0.05*Power("TemperatureMedNeutral.tif" ,3))),2))))),("RainTotalNeutral.tif"))                | xxx - xxx    | [Part1](../../.grid/ETRTurcNeutral.part01.rar), [Part2](../../.grid/ETRTurcNeutral.part02.rar), [Part3](../../.grid/ETRTurcNeutral.part03.rar), [Part4](../../.grid/ETRTurcNeutral.part04.rar)         |
+
+> Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
+
+Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
+
+ETR Dekop Compuesto
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopComposite.png)
+
+ETR Dekop La Niña
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNina.png)
+
+ETR Dekop El Niño
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNino.png)
+
+ETR Dekop Neutro
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNeutral.png)
 
 
 
