@@ -26,7 +26,7 @@ En esta actividad y a partir de los mapas de precipitación total, temperatura y
 ### Procedimiento general ETR Budyko
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/ETRBudyko.svg" width="50%"><br>
+<br><img alt="R.LTWB" src="Graph/ETRBudyko.svg" width="40%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -75,7 +75,7 @@ ETR Budyko Neutro
 ### Procedimiento general ETR Dekop
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/ETRDekop.svg" width="50%"><br>
+<br><img alt="R.LTWB" src="Graph/ETRDekop.svg" width="40%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -171,7 +171,7 @@ Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de
 | ETRTurcComposite.tif | `Con((("RainTotalComposite.tif"/(300+(25*"TemperatureMedComposite.tif") +(0.05*(Power("TemperatureMedComposite.tif",3)))))>0.316), ("RainTotalComposite.tif"/(SquareRoot(0.9+(Power ("RainTotalComposite.tif",2)/Power((300+(25* "TemperatureMedComposite.tif")+(0.05*Power("TemperatureMedComposite.tif" ,3))),2))))),("RainTotalComposite.tif"))` | 296.83 - 2041.01 | [Part1](../../.grid/ETRTurcComposite.part01.rar), [Part2](../../.grid/ETRTurcComposite.part02.rar), [Part3](../../.grid/ETRTurcComposite.part03.rar), [Part4](../../.grid/ETRTurcComposite.part04.rar) |
 | ETRTurcNina.tif      | `Con((("RainTotalNina.tif"/(300+(25*"TemperatureMedNina.tif") +(0.05*(Power("TemperatureMedNina.tif",3)))))>0.316), ("RainTotalNina.tif"/(SquareRoot(0.9+(Power ("RainTotalNina.tif",2)/Power((300+(25* "TemperatureMedNina.tif ")+(0.05*Power("TemperatureMedNina.tif" ,3))),2))))),("RainTotalNina.tif"))`                                        | 297.42 - 2044.30 | [Part1](../../.grid/ETRTurcNina.part01.rar), [Part2](../../.grid/ETRTurcNina.part02.rar), [Part3](../../.grid/ETRTurcNina.part03.rar), [Part4](../../.grid/ETRTurcNina.part04.rar)                     |
 | ETRTurcNino.tif      | `Con((("RainTotalNino.tif"/(300+(25*"TemperatureMedNino.tif") +(0.05*(Power("TemperatureMedNino.tif",3)))))>0.316), ("RainTotalNino.tif"/(SquareRoot(0.9+(Power ("RainTotalNino.tif",2)/Power((300+(25* "TemperatureMedNino.tif ")+(0.05*Power("TemperatureMedNino.tif" ,3))),2))))),("RainTotalNino.tif"))`                                        | 295.58 - 2038.32 | [Part1](../../.grid/ETRTurcNino.part01.rar), [Part2](../../.grid/ETRTurcNino.part02.rar), [Part3](../../.grid/ETRTurcNino.part03.rar), [Part4](../../.grid/ETRTurcNino.part04.rar)                     |
-| ETRTurcNeutral.tif   | `Con((("RainTotalNeutral.tif"/(300+(25*"TemperatureMedNeutral.tif") +(0.05*(Power("TemperatureMedNeutral.tif",3)))))>0.316), ("RainTotalNeutral.tif"/(SquareRoot(0.9+(Power ("RainTotalNeutral.tif",2)/Power((300+(25* "TemperatureMedNeutral.tif ")+(0.05*Power("TemperatureMedNeutral.tif" ,3))),2))))),("RainTotalNeutral.tif"))`                | xxx - xxx        | [Part1](../../.grid/ETRTurcNeutral.part01.rar), [Part2](../../.grid/ETRTurcNeutral.part02.rar), [Part3](../../.grid/ETRTurcNeutral.part03.rar), [Part4](../../.grid/ETRTurcNeutral.part04.rar)         |
+| ETRTurcNeutral.tif   | `Con((("RainTotalNeutral.tif"/(300+(25*"TemperatureMedNeutral.tif") +(0.05*(Power("TemperatureMedNeutral.tif",3)))))>0.316), ("RainTotalNeutral.tif"/(SquareRoot(0.9+(Power ("RainTotalNeutral.tif",2)/Power((300+(25* "TemperatureMedNeutral.tif ")+(0.05*Power("TemperatureMedNeutral.tif" ,3))),2))))),("RainTotalNeutral.tif"))`                | 296.88 - 2026.64 | [Part1](../../.grid/ETRTurcNeutral.part01.rar), [Part2](../../.grid/ETRTurcNeutral.part02.rar), [Part3](../../.grid/ETRTurcNeutral.part03.rar), [Part4](../../.grid/ETRTurcNeutral.part04.rar)         |
 
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
@@ -189,24 +189,9 @@ ETR Turc El Niño
 ETR Turc Neutro
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRTurcNeutral.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 > Es importante tener en cuenta que los mapas obtenidos corresponden a estimaciones segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro), sin embargo, el mapa de ETR potencial utilizado corresponde a valores compuestos.
 
-En este momento dispone de la grilla de evapotranspiración potencial, requerida para la generación de los mapas de evapotranspiración real.
+En este momento dispone de grillas de evapotranspiración potencial, requeridas para el balance hidrológico de largo plazo.
 
 
 ### Actividades complementarias:pencil2:
@@ -214,10 +199,10 @@ En este momento dispone de la grilla de evapotranspiración potencial, requerida
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                  |
-|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Investigue y documente otras ecuaciones regionales a partir de las cuales se puedan construir mapas de evapotranspiración real.                                                                                                                                                                          |
-|     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de evapotranspiración real y con algebra de mapas realice el análisis de diferencias respecto a los mapas obtenidos en esta actividad. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio. |
+| Actividad | Alcance                                                                                                                                                                                                                                                                                       |
+|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Investigue y documente otras ecuaciones a partir de las cuales se puedan construir mapas de evapotranspiración real, p.ej, Factor regional, Countagne, Thornthwaite, García y López.                                                                                                          |
+|     2     | A partir de las ecuaciones investigadas, cree los mapas de evapotranspiración real y con algebra de mapas realice el análisis de diferencias respecto a los mapas obtenidos en esta actividad. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio. |
 
 
 ### Referencias
@@ -242,7 +227,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../Temperature) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/30) | [Actividad siguiente]()  |
-|--------------------------------------|---------------------------|------------------------------------------------------------------------|--------------------------|
-
-[^1]: http://julianrojo.weebly.com/uploads/1/2/0/0/12008328/metodos_estimacion_de_et.pdf
+| [Actividad anterior](../ETP) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente]()  |
+|------------------------------|---------------------------|--------------------------------------------------------------------------|--------------------------|
