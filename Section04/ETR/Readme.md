@@ -40,20 +40,20 @@ Donde,
 * ETP: evapotranspiración potencial, mm/año
 * P: precipitación total, mm/año 
 
-1. En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fué creado en la primera actividad de la sección 4 de este curso.
+En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fué creado en la primera actividad de la sección 4 de este curso.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenProject.png)
 
 > Tenga en cuenta que previamente asignamos al mapa el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional y que en actividades anteriores generamos los mapas de temperatura y precipitación que han sido referenciados con este mismo sistema.
 
-2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
+Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
 
 | Mapa                   | Expresión Raster Calculator                                                                                                                                                                                               | Rango mm/año     | Grilla                                                                                                                                                                                                         |
-|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"* TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../.grid/ETRBudycoComposite.part01.rar), [Part2](../../.grid/ETRBudycoComposite.part02.rar), [Part3](../../.grid/ETRBudycoComposite.part03.rar), [Part4](../../.grid/ETRBudycoComposite.part04.rar) |
-| ETRBudykoNina.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNina.tif"* TanH("RainTotalNina.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNina.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNina.tif"))))`                     | 510.62 - 1568.72 | [Part1](../../.grid/ETRBudycoNina.part01.rar), [Part2](../../.grid/ETRBudycoNina.part02.rar), [Part3](../../.grid/ETRBudycoNina.part03.rar), [Part4](../../.grid/ETRBudycoNina.part04.rar)                     |
-| ETRBudykoNino.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNino.tif"* TanH("RainTotalNino.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNino.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNino.tif"))))`                     | 500.67 - 1543.08 | [Part1](../../.grid/ETRBudycoNino.part01.rar), [Part2](../../.grid/ETRBudycoNino.part02.rar), [Part3](../../.grid/ETRBudycoNino.part03.rar), [Part4](../../.grid/ETRBudycoNino.part04.rar)                     |
-| ETRBudykoNeutral.tif   | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNeutral.tif"* TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNeutral.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))))`         | 510.62 - 1568.72 | [Part1](../../.grid/ETRBudycoNeutral.part01.rar), [Part2](../../.grid/ETRBudycoNeutral.part02.rar), [Part3](../../.grid/ETRBudycoNeutral.part03.rar), [Part4](../../.grid/ETRBudycoNeutral.part04.rar)         |
+|:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"* TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../.grid/ETRBudykoComposite.part01.rar), [Part2](../../.grid/ETRBudykoComposite.part02.rar), [Part3](../../.grid/ETRBudykoComposite.part03.rar), [Part4](../../.grid/ETRBudykoComposite.part04.rar) |
+| ETRBudykoNina.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNina.tif"* TanH("RainTotalNina.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNina.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNina.tif"))))`                     | 510.62 - 1568.72 | [Part1](../../.grid/ETRBudykoNina.part01.rar), [Part2](../../.grid/ETRBudykoNina.part02.rar), [Part3](../../.grid/ETRBudykoNina.part03.rar), [Part4](../../.grid/ETRBudykoNina.part04.rar)                     |
+| ETRBudykoNino.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNino.tif"* TanH("RainTotalNino.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNino.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNino.tif"))))`                     | 500.67 - 1543.08 | [Part1](../../.grid/ETRBudykoNino.part01.rar), [Part2](../../.grid/ETRBudykoNino.part02.rar), [Part3](../../.grid/ETRBudykoNino.part03.rar), [Part4](../../.grid/ETRBudykoNino.part04.rar)                     |
+| ETRBudykoNeutral.tif   | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNeutral.tif"* TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNeutral.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))))`         | 507.28 - 1553.99 | [Part1](../../.grid/ETRBudykoNeutral.part01.rar), [Part2](../../.grid/ETRBudykoNeutral.part02.rar), [Part3](../../.grid/ETRBudykoNeutral.part03.rar), [Part4](../../.grid/ETRBudykoNeutral.part04.rar)         |
 
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
@@ -71,23 +71,69 @@ ETR Budyko El Niño
 ETR Budyko Neutro
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNeutral.png)
 
+
+### Procedimiento general ETR Dekop
+
+<div align="center">
+<br><img alt="R.LTWB" src="Graph/ETRDekop.svg" width="50%"><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
+</div>
+
+La expresión de Dekop es una simplificación de la ecuación de Budyko (1974) que no tiene en cuenta condiciones extremas de las variables consideradas y permite transformar la evapotranspiración potencial en evapotranspiración real, 
+
+<div align="center">
+
+ETR = ETP * tanh( P / ETP )
+
+</div>
+
+Donde,
+* ETP: evapotranspiración potencial, mm/año
+* P: precipitación total, mm/año 
+
+Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
+
+| Mapa                  | Expresión Raster Calculator                                            | Rango mm/año     | Grilla                                                                                                                                                                                                         |
+|:----------------------|:-----------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ETRDekopComposite.tif | `"ETPCenicafe.tif" * TanH("RainTotalComposite.tif"/"ETPCenicafe.tif")` | 541.99 - 1686.86 | [Part1](../../.grid/ETRDekopComposite.part01.rar), [Part2](../../.grid/ETRDekopComposite.part02.rar), [Part3](../../.grid/ETRDekopComposite.part03.rar), [Part4](../../.grid/ETRDekopComposite.part04.rar) |
+| ETRDekopNina.tif      | `"ETPCenicafe.tif" * TanH("RainTotalNina.tif"/"ETPCenicafe.tif")`      | 542.43 - 1691.67 | [Part1](../../.grid/ETRDekopNina.part01.rar), [Part2](../../.grid/ETRDekopNina.part02.rar), [Part3](../../.grid/ETRDekopNina.part03.rar), [Part4](../../.grid/ETRDekopNina.part04.rar)                     |
+| ETRDekopNino.tif      | `"ETPCenicafe.tif" * TanH("RainTotalNino.tif"/"ETPCenicafe.tif")`      | 538.11 - 1680.25 | [Part1](../../.grid/ETRDekopNino.part01.rar), [Part2](../../.grid/ETRDekopNino.part02.rar), [Part3](../../.grid/ETRDekopNino.part03.rar), [Part4](../../.grid/ETRDekopNino.part04.rar)                     |
+| ETRDekopNeutral.tif   | `"ETPCenicafe.tif" * TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif")`   | 542.04 - 1686.36 | [Part1](../../.grid/ETRDekopNeutral.part01.rar), [Part2](../../.grid/ETRDekopNeutral.part02.rar), [Part3](../../.grid/ETRDekopNeutral.part03.rar), [Part4](../../.grid/ETRDekopNeutral.part04.rar)         |
+
+> Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
+
+Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
+
+ETR Dekop Compuesto
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopComposite.png)
+
+ETR Dekop La Niña
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNina.png)
+
+ETR Dekop El Niño
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNino.png)
+
+ETR Dekop Neutro
+![R.LTWB](Screenshot/ArcGISPro3.0.3ETRDekopNeutral.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 > Es importante tener en cuenta que los mapas obtenidos corresponden a estimaciones segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro), sin embargo, el mapa de ETR potencial utilizado corresponde a valores compuestos.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 En este momento dispone de la grilla de evapotranspiración potencial, requerida para la generación de los mapas de evapotranspiración real.
 
