@@ -40,7 +40,6 @@ Donde,
 * ETP: evapotranspiración potencial, mm/año
 * P: precipitación total, mm/año 
 
-
 1. En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fué creado en la primera actividad de la sección 4 de este curso.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenProject.png)
@@ -49,12 +48,12 @@ Donde,
 
 2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de evapotranspiración real, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
 
-| Mapa                   | Expresión Raster Calculator                                                                                                                                                                                            | Rango mm/año     | Grilla                                                                                                                                                                                                         |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"*TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))*((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif"))+(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../.grid/ETRBudycoComposite.part01.rar), [Part2](../../.grid/ETRBudycoComposite.part02.rar), [Part3](../../.grid/ETRBudycoComposite.part03.rar), [Part4](../../.grid/ETRBudycoComposite.part04.rar) |
-|                        |                                                                                                                                                                                                                        |                  |                                                                                                                                                                                                                |
+| Mapa                   | Expresión Raster Calculator                                                                                                                                                                                               | Rango mm/año     | Grilla                                                                                                                                                                                                         |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"* TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../.grid/ETRBudycoComposite.part01.rar), [Part2](../../.grid/ETRBudycoComposite.part02.rar), [Part3](../../.grid/ETRBudycoComposite.part03.rar), [Part4](../../.grid/ETRBudycoComposite.part04.rar) |
+|                        |                                                                                                                                                                                                                           |                  |                                                                                                                                                                                                                |
 
-> Debido al tamaño del archivo generado (aproximadamente 1.1 GB), la grilla ha sido comprimida en archivos .rar en partes de 95 MB.
+> Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grilla han sido comprimidas en archivos .rar en partes de 95 MB.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
 
@@ -70,7 +69,7 @@ ETR Budyko El Niño
 ETR Budyko Neutro
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNeutro.png)
 
-> Es importante tener en cuenta que el mapa obtenido corresponde a estimaciones compuestas que no han sido segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro).
+> Es importante tener en cuenta que los mapas obtenidos corresponden a estimaciones segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro), sin embargo, el mapa de ETR potencial utilizado corresponde a valores compuestos.
 
 
 
@@ -115,9 +114,9 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                         | Autor                                     | Horas |
-|------------|:--------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2022.12.10 | Documentación general. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   2   |
+| Versión    | Descripción                                                                            | Autor                                     | Horas |
+|------------|:---------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.10 | Revisión general de ecuaciones y definición de expresiones para la calculadora ráster. | [rcfdtools](https://github.com/rcfdtools) |   1   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
