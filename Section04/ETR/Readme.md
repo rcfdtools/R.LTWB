@@ -120,7 +120,7 @@ ETR Dekop Neutro
 ### Procedimiento general ETR Turc
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/ETRTurc.svg" width="80%"><br>
+<br><img alt="R.LTWB" src="Graph/ETRTurc.svg" width="75%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
