@@ -26,10 +26,9 @@ En esta actividad y a partir de los mapas de precipitación total, temperatura y
 ### Procedimiento general ETR Budyko
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/ETRBudyko.svg" width="60%"><br>
+<br><img alt="R.LTWB" src="Graph/ETRBudyko.svg" width="50%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
-
 
 La expresión de Budyko (1974), permite transformar la evapotranspiración potencial en evapotranspiración real, 
 
