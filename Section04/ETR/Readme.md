@@ -153,7 +153,7 @@ Para esta fórmula, el cálculo está condicionado de acuerdo con:
 Sí, P/L > 0.316 
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/Turc1.png" width="25%"><br><br>
+<br><img alt="R.LTWB" src="Graph/Turc1.png" width="30%"><br><br>
 </div>
 
 Sí, P/L <= 0.316
