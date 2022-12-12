@@ -98,5 +98,5 @@ _Clonación: para compatibilidad completa de las rutas utilizadas en los scripts
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Iniciar curso...](Section01) |
-|-------------------------------|
+| [Iniciar curso](Section01) | [Explora otros cursos](https://github.com/rcfdtools) |
+|-------------------------------|------------------------------------------------------|
