@@ -7,7 +7,7 @@
 
 ## Sección 3 - Descarga, procesamiento y análisis de datos hidroclimatológicos
 
-En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico.
+En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico. Complementariamente, implementaremos scripts en Python para automatizar varias de las actividades desarrolladas, facilitando su replicación a otros casos de estudio o a proyectos particulares.
 
 
 ##

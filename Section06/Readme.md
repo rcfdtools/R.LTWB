@@ -5,10 +5,9 @@
 </div>
 
 
-## Sección 6 - Automatización de procesos geográficos
+## Sección 6 - Modelos de pronóstico
 
-En esta sección implementaremos modeladores de procesos y scripts para automatizar algunas de las actividades desarrolladas a lo largo del curso que facilitaran su replicación a otros casos de estudio o a proyectos particulares.
-
+Para finalizar, en esta sección implementaremos modelos de pronóstico para evaluar el posible comportamiento futuro de las variables climatológicas utilizadas y su implicación en el balance.
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 

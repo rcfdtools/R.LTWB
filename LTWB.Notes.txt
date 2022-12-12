@@ -31,6 +31,20 @@ Extract Values to Points
 Extract Multi Values to Points
 
 
+La automatización Python ha sido integrada en diferentes secciones del curso. Los modeladores de procesos han sido asignados como actividad complementaria de investigación e implementación.
+## Sección xxx - Automatización de procesos geográficos
+
+En esta sección implementaremos modeladores de procesos y scripts para automatizar algunas de las actividades desarrolladas a lo largo del curso que facilitaran su replicación a otros casos de estudio o a proyectos particulares.
+
+| Actividad                              | Alcance                                                                                                                                                                                                                                                                                    |
+|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Automatización de procesos geográficos | Luego de la ejecución de diferentes geo-procesos durante el desarrollo del balance hidrológico, se pueden identificar diferentes etapas que pueden ser automatizadas mediante modeladores de procesos, simplificando su aplicación en otros casos de estudio.                              |
+| Automatización usando Python           | Los procesos de descarga de información, análisis de series, aplicación de algoritmos para identificación de valores atípicos, completado o imputación, extensión de series y análisis estadístico descriptivo, puede ser automatizado a través de la implementación de scripts en Python. |
+
+
+
+
+
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 
 General update.

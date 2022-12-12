@@ -3,7 +3,7 @@
   <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
 </div>
 
-Es este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno y grillas interpoladas de precipitación media y evaporación real utilizando sistemas de información geográfica.
+Es este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evaporación real, utilizando sistemas de información geográfica.
 
 
 ## Sección 1 - Introducción y fundamentos
@@ -39,7 +39,7 @@ En esta sección realizaremos la descarga y procesamiento de diferentes tipos de
 
 ## Sección 3 - Descarga, procesamiento y análisis de datos hidroclimatológicos
 
-En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico.
+En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico. Complementariamente, implementaremos scripts en Python para automatizar varias de las actividades desarrolladas, facilitando su replicación a otros casos de estudio o a proyectos particulares.
 
 | Actividad                                                                                                                       | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos
 
 ## Sección 4 - Análisis espacial de variables climatológicas
 
-Durante el proceso de conformación de información para el desarrollo del balance hidrológico, es necesaria la construcción de mapas continuos que representen espacialmente el comportamiento de las diferentes variables requeridas a nivel medio multianual. En la sección 4 crearemos los mapas continuos interpolados de las diferentes variables requeridas y fenómenos asociados.
+Durante el proceso de conformación de información para el desarrollo del balance hidrológico, es necesaria la construcción de mapas continuos e interpolados que representen espacialmente el comportamiento de las diferentes variables requeridas y fenómenos climatológicos asociados a nivel multianual.
 
 | Actividad                                                   | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -78,18 +78,7 @@ En esta sección ejecutaremos el balance hidrológico distribuido, identificarem
 | Cálculo y creación del mapa de isorendimiento medio                    | Utilizando los valores de caudal medio y área obtenida para los diferentes puntos de interés de la red de drenaje, se construye el mapa de isorendimientos medios y una función de regresión que permite estimar los caudales en función del área de aportación requerida aplicable a la zona de estudio.                                                                                                                      |
 | Balance hidrológico a partir de cuencas delimitadas                    | Cuando existen zonas delimitadas a partir de polígonos como cuencas hidrográficas, es posible estimar manualmente mediante estadísticos zonales, el balance hidrológico a partir de los valores de precipitación media y evapotranspiración real.                                                                                                                                                                              |
 
-
-## Sección 6 - Automatización de procesos geográficos
-
-En esta sección implementaremos modeladores de procesos y scripts para automatizar algunas de las actividades desarrolladas a lo largo del curso que facilitaran su replicación a otros casos de estudio o a proyectos particulares.
-
-| Actividad                              | Alcance                                                                                                                                                                                                                                                                                    |
-|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Automatización de procesos geográficos | Luego de la ejecución de diferentes geo-procesos durante el desarrollo del balance hidrológico, se pueden identificar diferentes etapas que pueden ser automatizadas mediante modeladores de procesos, simplificando su aplicación en otros casos de estudio.                              |
-| Automatización usando Python           | Los procesos de descarga de información, análisis de series, aplicación de algoritmos para identificación de valores atípicos, completado o imputación, extensión de series y análisis estadístico descriptivo, puede ser automatizado a través de la implementación de scripts en Python. |
-
-
-## Sección 7 - Modelos de pronóstico
+## Sección 6 - Modelos de pronóstico
 
 Para finalizar, en esta sección implementaremos modelos de pronóstico para evaluar el posible comportamiento futuro de las variables climatológicas utilizadas y su implicación en el balance.
 
