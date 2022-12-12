@@ -181,7 +181,7 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 <div align="center">
 
-| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         |  Rango °C   |                                                      Grilla                                                      |
+| Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         |  Rango °C   |                                            Grilla :open_file_folder:                                             |
 |-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|:-----------:|:----------------------------------------------------------------------------------------------------------------:|
 | Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../.grid/TemperatureMedComposite.part01.rar), [Part2](../../.grid/TemperatureMedComposite.part02.rar) |
 | Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 |      [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)      |
