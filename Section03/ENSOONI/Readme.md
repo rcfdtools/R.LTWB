@@ -359,7 +359,7 @@ Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los r
 
 Durante el proceso de ejecución del script, se generan automáticamente dos tablas en formato .csv con el marcado de años por evento para periodos no consecutivos y consecutivos.
 
-| Tabla .csv                                                                         | Descripción                                                                                                   |
+| Tabla .csv :open_file_folder:                                                      | Descripción                                                                                                   |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | [ONI_Eval_NonConsecutive.csv](../../.datasets/ENSOONI/ONI_Eval_NonConsecutive.csv) | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos no consecutivos identificados. |
 | [ONI_Eval_Consecutive.csv](../../.datasets/ENSOONI/ONI_Eval_Consecutive.csv)       | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos consecutivos identificados.    |
