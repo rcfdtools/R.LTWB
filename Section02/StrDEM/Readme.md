@@ -100,7 +100,7 @@ Resultados, ventana de ejecución grilla ALOS (dt: 06'52")
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMALOSLog.png)
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMALOS.png)
 
-> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terrreno, son localizadas a lo largo y en la diagonal de los píxeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red, pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
+> A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terreno, son localizadas a lo largo y en la diagonal de los píxeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red, pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
 
 4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _[ASTERStrNode.shp](../../.shp/ASTERStrNode.zip)_, _[SRTMStrNode.shp](../../.shp/SRTMStrNode.zip)_ y _[ALOSStrNode.shp](../../.shp/ALOSStrNode.zip)_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
 

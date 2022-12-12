@@ -15,6 +15,7 @@ https://github.com/uecijg-ceh
 # -*- coding: windows-1252 -*-
 
 ✓✕
+:open_file_folder:
 
 Pending tasks
     Remove personal name from all the ArcGIS Pro screenshots.
@@ -41,8 +42,9 @@ En esta sección implementaremos modeladores de procesos y scripts para automati
 | Automatización de procesos geográficos | Luego de la ejecución de diferentes geo-procesos durante el desarrollo del balance hidrológico, se pueden identificar diferentes etapas que pueden ser automatizadas mediante modeladores de procesos, simplificando su aplicación en otros casos de estudio.                              |
 | Automatización usando Python           | Los procesos de descarga de información, análisis de series, aplicación de algoritmos para identificación de valores atípicos, completado o imputación, extensión de series y análisis estadístico descriptivo, puede ser automatizado a través de la implementación de scripts en Python. |
 
+Localización de puntos para lectura de caudales y áreas de aportación: Luego de la obtención de los mapas continuos de caudales medios de largo plazo para los diferentes fenómenos climatológicos estudiados, es necesaria la lectura de valores discretos de caudal y número de celdas acumuladas en diferentes localizaciones de la red de drenaje, tales como puntos unión y puntos de interés como captaciones, vertimientos o concesiones.
 
-
+Luego de la ejecución de diferentes geo-procesos durante el desarrollo del balance hidrológico, se pueden identificar diferentes etapas que pueden ser automatizadas mediante modeladores de procesos, simplificando su aplicación en otros casos de estudio.
 
 
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
