@@ -150,7 +150,7 @@ Catálogo de objetos en Subzonas [^4]
 
 > Recuerde que en ArcGIS for Desktop es necesario desde el catálogo, realizar la conexión a la unidad de disco o a una carpeta específica para poder agregar datos al mapa.
 
-4. A partir de las Subzonas Hidrográficas y utilizando la expresión `"COD_ZH" = 28`, filtre los polígonos del caso de estudio correspondientes a la Subzona 28 - Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar y Río Ariguaní. Cambie la simbología de representación a relleno color gris al 20%.
+4. A partir de las Subzonas Hidrográficas y utilizando la expresión `"COD_ZH" = 28`, filtre los polígonos del caso de estudio correspondientes a la Zona 28 - Cesar. Abra la tabla de atributos, podrá observar que contiene las subzonas Alto Cesar, Medio Cesar, Bajo Cesar y Río Ariguaní. Cambie la simbología de representación a relleno color gris al 20%.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
