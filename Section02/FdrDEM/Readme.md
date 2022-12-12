@@ -1,7 +1,7 @@
 ##  Direcciones de Flujo – Flow Direction – FDR
 Keywords: `FDR DEM` `Flow direction` `Fill DEM` `Map Algebra` `Raster Calculator` `Spatial Analyst Tools` `Arc Hydro Tools`
 
-![R.LTWB](Screenshot/FdrDEM.png)
+![R.LTWB](Graph/FdrDEM.png)
 
 Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
 
@@ -28,7 +28,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/FdrDEMFlowchart.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/FdrDEM.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

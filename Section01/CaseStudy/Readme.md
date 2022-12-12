@@ -31,7 +31,7 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo a su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/CaseStudyFlowchart.svg" width="70%"><br>
+<br><img alt="R.LTWB" src="Graph/CaseStudy.svg" width="70%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

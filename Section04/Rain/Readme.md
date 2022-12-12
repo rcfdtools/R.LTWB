@@ -1,7 +1,7 @@
 ## Mapa de precipitación total
 Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
-![R.LTWB](Graph/Interpolation.png)
+![R.LTWB](Graph/Rain.png)
 
 A partir de la localización espacial de estaciones terrestres y de los valores obtenidos, validados, imputados y extendidos de las series de datos recopiladas, se generan los mapas continuos interpolados para series compuestas y por fenómeno climatológico, requeridos para el balance hidrológico de largo plazo.
 
@@ -25,7 +25,7 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 ### Procedimiento general para interpolación de precipitación total
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/Interpolation.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/Rain.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

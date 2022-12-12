@@ -1,7 +1,7 @@
 ## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
 Keywords: `AgreeDEM` `DEM Reconditioning` `DEM burning` `Buffer` `Feature Envelope To Polygon` `Raster Clip` `HEC-HMS` `HEC-GeoHMS` `Arc Hydro Tools Pro` `Feature to Raster`
 
-![R.LTWB](Screenshot/AgreeDEM.png)
+![R.LTWB](Graph/AgreeDEM.png)
 
 Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar los modelos digitales de elevación DEM incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
 
@@ -37,7 +37,7 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/AgreeDEMFlowchart.svg" width="75%"><br>
+<br><img alt="R.LTWB" src="Graph/AgreeDEM.svg" width="75%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

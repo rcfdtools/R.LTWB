@@ -4,7 +4,7 @@ Keywords: `NASA` `EarthData` `User creation`
 Para la descarga de los modelos de terreno y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5 m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.[^1]
 
 <div align="center">
-  <img alt="R.LTWB" src="../../.icons/NASA.png" width="250px">
+  <img alt="R.LTWB" src="Graph/UserCreation.png" width="250px">
 </div>
 
 
@@ -24,7 +24,7 @@ Para la descarga de los modelos de terreno y la información climatológica obte
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/UserCreationEarthdataFlowchart.svg" width="60%"><br>
+<br><img alt="R.LTWB" src="Graph/UserCreation.svg" width="60%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

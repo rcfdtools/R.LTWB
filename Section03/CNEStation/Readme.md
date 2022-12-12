@@ -36,7 +36,7 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 El siguiente diagrama representa los procedimientos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/CNEStationFlowchart.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/CNEStation.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

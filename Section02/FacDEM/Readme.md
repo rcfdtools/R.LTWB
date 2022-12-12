@@ -1,7 +1,7 @@
 ##  Acumulación de Flujo - Flow Accumulation - FAC
 Keywords: `FAC DEM` `Flow accumulation` `Flow direction` `Spatial Analyst Tools` `Arc Hydro Tools` `Display XY Data` `Extract Multi Values to Points`
 
-![R.LTWB](Screenshot/FacDEM.png)
+![R.LTWB](Graph/FacDEM.png)
 
 Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje puede calcularse multiplicando el valor de acumulación por el área de cada celda.
 
@@ -31,7 +31,7 @@ Esta grilla representa para una celda dada, el número de celdas acumuladas agua
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/FacDEMFlowchart.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/FacDEM.svg" width="65%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 

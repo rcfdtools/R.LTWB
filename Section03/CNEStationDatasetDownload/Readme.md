@@ -1,7 +1,7 @@
 ## Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
 Keywords: `IDEAM` `Weather Station` `DHIME` `Rain` `Air Temperature` `Evaporation` `Water Flow` `Python` `Pandas` `os.path.isfile` `os.remove` `glob` `ZipFile` `os.rename` `pd.concat` `to_csv`
 
-![R.LTWB](Screenshot/CNEStationDatasetDownload.png)
+![R.LTWB](Graph/CNEStationDatasetDownload.png)
 
 Para la creación de los mapas requeridos para la realización del balance hidrológico, es necesario a partir de las estaciones seleccionadas para la zona de estudio, obtener las series de valores discretos de precipitación total mensual, temperatura máxima diaria, temperatura mínima diaria y evaporación total diaria. Para la comparación de los caudales obtenidos, también son requeridas las series de caudal medio mensual.                       
 
@@ -29,7 +29,7 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 El siguiente diagrama representa los procesos generales requeridos para el desarrollo de esta actividad.
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/CNEStationDatasetDownloadFlowchart.svg" width="75%"><br>
+<br><img alt="R.LTWB" src="Graph/CNEStationDatasetDownload.svg" width="75%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo y procesos manuales en amarillo. Líneas con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -259,7 +259,7 @@ Al finalizar la descarga de todos los registros para todos los parámetros reque
 Diagrama de flujo
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/CNEStationCSVJoinFlowchart.svg" width="50%"><br>
+<br><img alt="R.LTWB" src="Graph/CNEStationCSVJoin.svg" width="50%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
