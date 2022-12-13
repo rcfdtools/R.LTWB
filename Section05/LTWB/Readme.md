@@ -81,11 +81,11 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 
 </div>
 
-4. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 4 [Mapas de precipitación total](../../Section04/Rain) creados en la primera actividad de la sección 4 y que fueron nombrados como RainTotalComposite.tif, RainTotalNina.tif, RainTotalNino.tif y RainTotalNeutral.tif. Seleccione los 4 mapas y establezca transparencia del 50%. [Descargar archivos.](../../.grid).
+4. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 4 [Mapas de precipitación total](../../Section04/Rain) creados en la primera actividad de la sección 4 y que fueron nombrados como RainTotalComposite.tif, RainTotalNina.tif, RainTotalNino.tif y RainTotalNeutral.tif. Seleccione los 4 mapas y establezca transparencia del 50%. [:open_file_folder: Descargar archivos](../../.grid).
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainGrid.png)
 
-5. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 12 [Mapas de evapotranspiración real - ETR](../../Section04/ETR) creados en la última actividad de la sección 4, correspondientes a series compuestas y por fenómeno climatológico usando las expresiones de Budyko, Dekop y Turc. Seleccione los 4 mapas y establezca transparencia del 50%. [Descargar archivos.](../../.grid).
+5. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 12 [Mapas de evapotranspiración real - ETR](../../Section04/ETR) creados en la última actividad de la sección 4, correspondientes a series compuestas y por fenómeno climatológico usando las expresiones de Budyko, Dekop y Turc. Seleccione los 4 mapas y establezca transparencia del 50%. [:open_file_folder: Descargar archivos](../../.grid).
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRGrid.png)
 
