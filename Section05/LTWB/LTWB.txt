@@ -1,22 +1,22 @@
 LTWB BUDYCO mm/year
 
-	RunoffPBudykoComposite.tif = (("RainTotalComposite.tif"-"ETRBudykoComposite.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPBudykoNina.tif = (("RainTotalNina.tif"-"ETRBudykoNina.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPBudykoNino.tif = (("RainTotalNino.tif"-"ETRBudykoNino.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPBudykoNino.tif = (("RainTotalNeutral.tif"-"ETRBudykoNeutral.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
+	RunoffPBudykoComposite.tif = (("RainTotalComposite.tif"-"ETRBudykoComposite.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPBudykoNina.tif = (("RainTotalNina.tif"-"ETRBudykoNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPBudykoNino.tif = (("RainTotalNino.tif"-"ETRBudykoNino.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPBudykoNeutral.tif = (("RainTotalNeutral.tif"-"ETRBudykoNeutral.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 	
 
 ETR DEKOP
 
-	RunoffPDekopComposite.tif = (("RainTotalComposite.tif"-"ETRDekopComposite.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPDekopNina.tif = (("RainTotalNina.tif"-"ETRDekopNina.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPDekopNino.tif = (("RainTotalNino.tif"-"ETRDekopNino.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPDekopNino.tif = (("RainTotalNeutral.tif"-"ETRDekopNeutral.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
+	RunoffPDekopComposite.tif = (("RainTotalComposite.tif"-"ETRDekopComposite.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPDekopNina.tif = (("RainTotalNina.tif"-"ETRDekopNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPDekopNino.tif = (("RainTotalNino.tif"-"ETRDekopNino.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPDekopNeutral.tif = (("RainTotalNeutral.tif"-"ETRDekopNeutral.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 
 
 ETR TURC
 
-	RunoffPTurcComposite.tif = (("RainTotalComposite.tif"-"ETRTurcComposite.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPTurcNina.tif = (("RainTotalNina.tif"-"ETRDTurcNina.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPTurcNino.tif = (("RainTotalNino.tif"-"ETRTurcNino.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
-	RunoffPTurcNino.tif = (("RainTotalNeutral.tif"-"ETRTurcNeutral.tif")/1000)*(27.7778*27.7778)/(365*24*60*60)
+	RunoffPTurcComposite.tif = (("RainTotalComposite.tif"-"ETRTurcComposite.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPTurcNina.tif = (("RainTotalNina.tif"-"ETRDTurcNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPTurcNino.tif = (("RainTotalNino.tif"-"ETRTurcNino.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPTurcNeutral.tif = (("RainTotalNeutral.tif"-"ETRTurcNeutral.tif")/1000)*(12.5*12.5)/(365*24*60*60)
