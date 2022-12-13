@@ -120,7 +120,7 @@ Potencial de escurrimiento Budyko Neutro, mm/año
 
 
 
-En este momento dispone de grillas de potencial de escurrimiento o pesos distribuidos y de las grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
+En este momento dispone de las grillas de potencial de escurrimiento o pesos distribuidos y de las grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
 
 
 ### Actividades complementarias:pencil2:
