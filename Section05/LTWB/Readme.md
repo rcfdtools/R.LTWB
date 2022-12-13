@@ -100,8 +100,8 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 | RunoffPBudykoNino.tif      | `(("RainTotalNino.tif"-"ETRBudykoNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`           | 1.13E-07 - 1.53E-05 | [Part1](../../.grid/RunoffPBudykoNino.part01.rar), [Part2](../../.grid/RunoffPBudykoNino.part02.rar), [Part3](../../.grid/RunoffPBudykoNino.part03.rar), [Part4](../../.grid/RunoffPBudykoNino.part04.rar), [Part5](../../.grid/RunoffPBudykoNino.part05.rar)                          |
 | RunoffPBudykoNeutral.tif   | `(("RainTotalNeutral.tif"-"ETRBudykoNeutral.tif")/1000) *(12.5*12.5)/(365*24*60*60)`     | 2.58E-07 - 1.69E-05 | [Part1](../../.grid/RunoffPBudykoNeutral.part01.rar), [Part2](../../.grid/RunoffPBudykoNeutral.part02.rar), [Part3](../../.grid/RunoffPBudykoNeutral.part03.rar), [Part4](../../.grid/RunoffPBudykoNeutral.part04.rar), [Part5](../../.grid/RunoffPBudykoNeutral.part05.rar)           |
 | RunoffPDekopComposite.tif  | `(("RainTotalComposite.tif"-"ETRDekopComposite.tif")/1000) *(12.5*12.5)/(365*24*60*60)`  | 2.51E-07 - 1.65E-05 | [Part1](../../.grid/RunoffPDekopComposite.part01.rar), [Part2](../../.grid/RunoffPDekopComposite.part02.rar), [Part3](../../.grid/RunoffPDekopComposite.part03.rar), [Part4](../../.grid/RunoffPDekopComposite.part04.rar), [Part5](../../.grid/RunoffPDekopComposite.part05.rar)      |
-| RunoffPDekopNina.tif       | `(("RainTotalNina.tif"-"ETRDekopNina.tif")/1000) *(12.5*12.5)/(365*24*60*60)`            | xxx - xxx           | [Part1](../../.grid/RunoffPDekopNina.part01.rar), [Part2](../../.grid/RunoffPDekopNina.part02.rar), [Part3](../../.grid/RunoffPDekopNina.part03.rar), [Part4](../../.grid/RunoffPDekopNina.part04.rar), [Part5](../../.grid/RunoffPDekopNina.part05.rar)                               |
-| RunoffPDekopNino.tif       | `(("RainTotalNino.tif"-"ETRDekopNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`            | xxx - xxx           | [Part1](../../.grid/RunoffPDekopNino.part01.rar), [Part2](../../.grid/RunoffPDekopNino.part02.rar), [Part3](../../.grid/RunoffPDekopNino.part03.rar), [Part4](../../.grid/RunoffPDekopNino.part04.rar), [Part5](../../.grid/RunoffPDekopNino.part05.rar)                               |
+| RunoffPDekopNina.tif       | `(("RainTotalNina.tif"-"ETRDekopNina.tif")/1000) *(12.5*12.5)/(365*24*60*60)`            | 3.60E-07 - 1.88E-05           | [Part1](../../.grid/RunoffPDekopNina.part01.rar), [Part2](../../.grid/RunoffPDekopNina.part02.rar), [Part3](../../.grid/RunoffPDekopNina.part03.rar), [Part4](../../.grid/RunoffPDekopNina.part04.rar), [Part5](../../.grid/RunoffPDekopNina.part05.rar)                               |
+| RunoffPDekopNino.tif       | `(("RainTotalNino.tif"-"ETRDekopNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`            | 9.60E-08 - 9.46E-08           | [Part1](../../.grid/RunoffPDekopNino.part01.rar), [Part2](../../.grid/RunoffPDekopNino.part02.rar), [Part3](../../.grid/RunoffPDekopNino.part03.rar), [Part4](../../.grid/RunoffPDekopNino.part04.rar), [Part5](../../.grid/RunoffPDekopNino.part05.rar)                               |
 | RunoffPDekopNeutral.tif    | `(("RainTotalNeutral.tif"-"ETRDekopNeutral.tif")/1000) *(12.5*12.5)/(365*24*60*60)`      | xxx - xxx           | [Part1](../../.grid/RunoffPDekopNeutral.part01.rar), [Part2](../../.grid/RunoffPDekopNeutral.part02.rar), [Part3](../../.grid/RunoffPDekopNeutral.part03.rar), [Part4](../../.grid/RunoffPDekopNeutral.part04.rar), [Part5](../../.grid/RunoffPDekopNeutral.part05.rar)                |
 
 
@@ -110,6 +110,8 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Prediction_ y establezca transparencia en 50%.
+
+**Bydyko**
 
 Potencial de escurrimiento Budyko Compuesto, mm/año
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoComposite.png)
@@ -122,6 +124,8 @@ Potencial de escurrimiento Budyko El Niño, mm/año
 
 Potencial de escurrimiento Budyko Neutro, mm/año
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNeutral.png)
+
+**Dekop**
 
 Potencial de escurrimiento Dekop Compuesto, mm/año
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPDekopComposite.png)
