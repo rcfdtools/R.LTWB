@@ -100,23 +100,23 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 | RunoffPBudykoNino.tif      | `(("RainTotalNino.tif"-"ETRBudykoNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`           | xxxxxx - xxxxxx     | [Part1](../../.grid/RunoffPBudykoNino.part01.rar), [Part2](../../.grid/RunoffPBudykoNino.part02.rar), [Part3](../../.grid/RunoffPBudykoNino.part03.rar), [Part4](../../.grid/RunoffPBudykoNino.part04.rar), [Part5](../../.grid/RunoffPBudykoNino.part05.rar) |
 | RunoffPBudykoNeutral.tif   | `(("RainTotalNeutral.tif"-"ETRBudykoNeutral.tif")/1000) *(12.5*12.5)/(365*24*60*60)`     | xxxxxx - xxxxxx     | [Part1](../../.grid/RunoffPBudykoNeutral.part01.rar), [Part2](../../.grid/RunoffPBudykoNeutral.part02.rar), [Part3](../../.grid/RunoffPBudykoNeutral.part03.rar), [Part4](../../.grid/RunoffPBudykoNeutral.part04.rar), [Part5](../../.grid/RunoffPBudykoNeutral.part05.rar) |
 
-> Recuerde que el tamaño de celdas definido para la creación de los diferentes mapas de parámetros climatológicos fué de 12.5 metros.
+> Recuerde que el tamaño de celdas definido para la creación de los diferentes mapas de parámetros climatológicos fué de 12.5 metros correspondiente al mismo tamaño de celda de los modelos digital de elevación ALOS PALSAR.
 > 
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Prediction_ y establezca transparencia en 50%.
 
 Potencial de escurrimiento Budyko Compuesto, mm/año
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoComposite.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoComposite.png)
 
 Potencial de escurrimiento Budyko La Niña, mm/año
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNina.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNina.png)
 
 Potencial de escurrimiento Budyko El Niño, mm/año
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNino.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNino.png)
 
 Potencial de escurrimiento Budyko Neutro, mm/año
-![R.LTWB](Screenshot/ArcGISPro3.0.3ETRBudykoNeutral.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNeutral.png)
 
 
 
