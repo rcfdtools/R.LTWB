@@ -1,4 +1,6 @@
 Long-term water balance
+Clasees: 24 de 35 a 2022.12.12
+Fecha entrega: 2023.02.28
 
 R.LTWB
 https://github.com/rcfdtools/R.LTWB.git
@@ -7,6 +9,7 @@ Clone local directory D:\R.LTWB
 R.LTWB.wiki
 https://github.com/rcfdtools/R.LTWB.wiki.git
 Clone local directory D:\R.LTWB.wiki
+(suspended, now is integrated in each class)
 
 Organization
 https://github.com/uecijg-ceh
