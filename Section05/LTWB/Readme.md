@@ -41,11 +41,11 @@ Qm = (( P – E ) * A) / t
 
 Donde,
 
-Qm: caudal medio, m³/s
-P: precipitación, mm/año
-E: evapotranspiración real, mm/año
-A: área de cada celda, m²
-t: tiempo en segundos en un año, (365 dias x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
+* Qm: caudal medio, m³/s
+* P: precipitación, mm/año
+* E: evapotranspiración real, mm/año
+* A: área de cada celda, m²
+* t: tiempo en segundos en un año, (365 dias x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
 
 1. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection05.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
