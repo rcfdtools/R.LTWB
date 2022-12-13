@@ -59,7 +59,7 @@ Donde,
 > 
 > Para la correcta interpolación espacial de los parámetros climatológicos, es necesario disponer de un sistema proyectado con unidades lineales en metros.
 
-3. Desde la carpeta _HECGeoHMS_ disponible en el catálogo, agregue al proyecto la grilla de direcciones de flujo - FDR [ALOSFdr.tif](../../HECGeoHMS/Layers/ALOSFdr.tif). Modifique la simbología de representación a _Unique Values_ con el esquema de color _Aspect_ y establezca transparencia en 50%.
+3. Desde la carpeta _HECGeoHMS_ disponible en el catálogo, agregue al proyecto la grilla de direcciones de flujo denominada [ALOSFdr.tif](../../HECGeoHMS/Layers). Modifique la simbología de representación a _Unique Values_ con el esquema de color _Aspect_ y establezca transparencia en 50%.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3DEMAlosPalsarFDR.png)
 
