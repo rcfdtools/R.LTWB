@@ -95,15 +95,21 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 
 | Mapa                       | Expresión Raster Calculator                                                              | Rango mm/año        | Grilla :open_file_folder:                                                                                                                                                                                                                                                              |
 |:---------------------------|:-----------------------------------------------------------------------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Budyko**                 |                                                                                          |                     |                                                                                                                                                                                                                                                                                        |
 | RunoffPBudykoComposite.tif | `(("RainTotalComposite.tif"-"ETRBudykoComposite.tif")/1000) *(12.5*12.5)/(365*24*60*60)` | 3.46E-07 - 1.71E-05 | [Part1](../../.grid/RunoffPBudykoComposite.part01.rar), [Part2](../../.grid/RunoffPBudykoComposite.part02.rar), [Part3](../../.grid/RunoffPBudykoComposite.part03.rar), [Part4](../../.grid/RunoffPBudykoComposite.part04.rar), [Part5](../../.grid/RunoffPBudykoComposite.part05.rar) |
 | RunoffPBudykoNina.tif      | `(("RainTotalNina.tif"-"ETRBudykoNina.tif")/1000) *(12.5*12.5)/(365*24*60*60)`           | 5.06E-07 - 1.94E-05 | [Part1](../../.grid/RunoffPBudykoNina.part01.rar), [Part2](../../.grid/RunoffPBudykoNina.part02.rar), [Part3](../../.grid/RunoffPBudykoNina.part03.rar), [Part4](../../.grid/RunoffPBudykoNina.part04.rar), [Part5](../../.grid/RunoffPBudykoNina.part05.rar)                          |
 | RunoffPBudykoNino.tif      | `(("RainTotalNino.tif"-"ETRBudykoNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`           | 1.13E-07 - 1.53E-05 | [Part1](../../.grid/RunoffPBudykoNino.part01.rar), [Part2](../../.grid/RunoffPBudykoNino.part02.rar), [Part3](../../.grid/RunoffPBudykoNino.part03.rar), [Part4](../../.grid/RunoffPBudykoNino.part04.rar), [Part5](../../.grid/RunoffPBudykoNino.part05.rar)                          |
 | RunoffPBudykoNeutral.tif   | `(("RainTotalNeutral.tif"-"ETRBudykoNeutral.tif")/1000) *(12.5*12.5)/(365*24*60*60)`     | 2.58E-07 - 1.69E-05 | [Part1](../../.grid/RunoffPBudykoNeutral.part01.rar), [Part2](../../.grid/RunoffPBudykoNeutral.part02.rar), [Part3](../../.grid/RunoffPBudykoNeutral.part03.rar), [Part4](../../.grid/RunoffPBudykoNeutral.part04.rar), [Part5](../../.grid/RunoffPBudykoNeutral.part05.rar)           |
+| **Dekop**                  |                                                                                          |                     |                                                                                                                                                                                                                                                                                        |
 | RunoffPDekopComposite.tif  | `(("RainTotalComposite.tif"-"ETRDekopComposite.tif")/1000) *(12.5*12.5)/(365*24*60*60)`  | 2.51E-07 - 1.65E-05 | [Part1](../../.grid/RunoffPDekopComposite.part01.rar), [Part2](../../.grid/RunoffPDekopComposite.part02.rar), [Part3](../../.grid/RunoffPDekopComposite.part03.rar), [Part4](../../.grid/RunoffPDekopComposite.part04.rar), [Part5](../../.grid/RunoffPDekopComposite.part05.rar)      |
 | RunoffPDekopNina.tif       | `(("RainTotalNina.tif"-"ETRDekopNina.tif")/1000) *(12.5*12.5)/(365*24*60*60)`            | 3.60E-07 - 1.88E-05 | [Part1](../../.grid/RunoffPDekopNina.part01.rar), [Part2](../../.grid/RunoffPDekopNina.part02.rar), [Part3](../../.grid/RunoffPDekopNina.part03.rar), [Part4](../../.grid/RunoffPDekopNina.part04.rar), [Part5](../../.grid/RunoffPDekopNina.part05.rar)                               |
 | RunoffPDekopNino.tif       | `(("RainTotalNino.tif"-"ETRDekopNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`            | 9.60E-08 - 9.46E-08 | [Part1](../../.grid/RunoffPDekopNino.part01.rar), [Part2](../../.grid/RunoffPDekopNino.part02.rar), [Part3](../../.grid/RunoffPDekopNino.part03.rar), [Part4](../../.grid/RunoffPDekopNino.part04.rar), [Part5](../../.grid/RunoffPDekopNino.part05.rar)                               |
 | RunoffPDekopNeutral.tif    | `(("RainTotalNeutral.tif"-"ETRDekopNeutral.tif")/1000) *(12.5*12.5)/(365*24*60*60)`      | 1.92E-07 - 1.63E-05 | [Part1](../../.grid/RunoffPDekopNeutral.part01.rar), [Part2](../../.grid/RunoffPDekopNeutral.part02.rar), [Part3](../../.grid/RunoffPDekopNeutral.part03.rar), [Part4](../../.grid/RunoffPDekopNeutral.part04.rar), [Part5](../../.grid/RunoffPDekopNeutral.part05.rar)                |
-
+| **Turc**                   |                                                                                          |                     |                                                                                                                                                                                                                                                                                        |
+| RunoffPTurcComposite.tif   | `(("RainTotalComposite.tif"-"ETRTurcComposite.tif")/1000) *(12.5*12.5)/(365*24*60*60)`   | 2.51E-07 - 1.65E-05 | [Part1](../../.grid/RunoffPTurcComposite.part01.rar), [Part2](../../.grid/RunoffPTurcComposite.part02.rar), [Part3](../../.grid/RunoffPTurcComposite.part03.rar), [Part4](../../.grid/RunoffPTurcComposite.part04.rar), [Part5](../../.grid/RunoffPTurcComposite.part05.rar)           |
+| RunoffPTurcNina.tif        | `(("RainTotalNina.tif"-"ETRTurcNina.tif")/1000) *(12.5*12.5)/(365*24*60*60)`             | 3.60E-07 - 1.88E-05 | [Part1](../../.grid/RunoffPTurcNina.part01.rar), [Part2](../../.grid/RunoffPTurcNina.part02.rar), [Part3](../../.grid/RunoffPTurcNina.part03.rar), [Part4](../../.grid/RunoffPTurcNina.part04.rar), [Part5](../../.grid/RunoffPTurcNina.part05.rar)                                    |
+| RunoffPTurcNino.tif        | `(("RainTotalNino.tif"-"ETRTurcNino.tif")/1000) *(12.5*12.5)/(365*24*60*60)`             | 9.60E-08 - 9.46E-08 | [Part1](../../.grid/RunoffPTurcNino.part01.rar), [Part2](../../.grid/RunoffPTurcNino.part02.rar), [Part3](../../.grid/RunoffPTurcNino.part03.rar), [Part4](../../.grid/RunoffPTurcNino.part04.rar), [Part5](../../.grid/RunoffPTurcNino.part05.rar)                                    |
+| RunoffPTurcNeutral.tif     | `(("RainTotalNeutral.tif"-"ETRTurcNeutral.tif")/1000) *(12.5*12.5)/(365*24*60*60)`       | 1.92E-07 - 1.63E-05 | [Part1](../../.grid/RunoffPTurcNeutral.part01.rar), [Part2](../../.grid/RunoffPTurcNeutral.part02.rar), [Part3](../../.grid/RunoffPTurcNeutral.part03.rar), [Part4](../../.grid/RunoffPTurcNeutral.part04.rar), [Part5](../../.grid/RunoffPTurcNeutral.part05.rar)                     |
 
 > Recuerde que el tamaño de celdas definido para la creación de los diferentes mapas de parámetros climatológicos fué de 12.5 metros correspondiente al mismo tamaño de celda de los modelos digital de elevación ALOS PALSAR.
 > 
@@ -139,9 +145,21 @@ Potencial de escurrimiento Dekop El Niño, mm/año
 Potencial de escurrimiento Dekop Neutro, mm/año
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPDekopNeutral.png)
 
+**Turc**
 
+Potencial de escurrimiento Turc Compuesto, mm/año
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcComposite.png)
 
-En este momento dispone de las grillas de potencial de escurrimiento o pesos distribuidos y de las grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
+Potencial de escurrimiento Turc La Niña, mm/año
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNina.png)
+
+Potencial de escurrimiento Turc El Niño, mm/año
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNino.png)
+
+Potencial de escurrimiento Turc Neutro, mm/año
+![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNeutral.png)
+
+En este momento dispone de grillas de potencial de escurrimiento o pesos distribuidos y de grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
 
 
 ### Actividades complementarias:pencil2:
