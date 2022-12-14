@@ -218,10 +218,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                        | Autor                                     | Horas |
-|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2022.12.11 | Documentación general. Creació de mapas Budyko, Dekop y Turc compuestos y por fenómeno climatológico. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   5   |
-| 2022.12.10 | Revisión general de ecuaciones y definición de expresiones para la calculadora ráster.                                                             | [rcfdtools](https://github.com/rcfdtools) |   1   |
+| Versión    | Descripción                                                                                                                                         | Autor                                     | Horas |
+|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.11 | Documentación general. Creación de mapas Budyko, Dekop y Turc compuestos y por fenómeno climatológico. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   5   |
+| 2022.12.10 | Revisión general de ecuaciones y definición de expresiones para la calculadora ráster.                                                              | [rcfdtools](https://github.com/rcfdtools) |   1   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
