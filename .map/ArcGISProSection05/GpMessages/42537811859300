@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Wednesday, December 14, 2022 07:02:36</msg><msg code="0" type="0">((Raster(r"RainTotalNina.tif")-Raster(r"ETRTurcNina.tif"))/1000)*(12.5*12.5)/(365*24*60*60)</msg><msg code="0" type="3">Succeeded at Wednesday, December 14, 2022 07:02:57 (Elapsed Time: 20.97 seconds)</msg></messages>
