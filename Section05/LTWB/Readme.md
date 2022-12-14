@@ -91,9 +91,9 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRGrid.png)
 
-6. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de potencial escurrimiento o grillas de pesos distribuidos, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
+6. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Map Algebra / Raster Calculator_, cree los mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
 
-| Mapa                       | Expresión Raster Calculator                                                              | Rango mm/año         | Grilla :open_file_folder:                                                                                                                                                                                                                                                              |
+| Mapa                       | Expresión Raster Calculator                                                              | Rango m³/s           | Grilla :open_file_folder:                                                                                                                                                                                                                                                              |
 |:---------------------------|:-----------------------------------------------------------------------------------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Budyko**                 |                                                                                          |                      |                                                                                                                                                                                                                                                                                        |
 | RunoffPBudykoComposite.tif | `(("RainTotalComposite.tif"-"ETRBudykoComposite.tif")/1000) *(12.5*12.5)/(365*24*60*60)` | 3.46E-07 - 1.71E-05  | [Part1](../../.grid/RunoffPBudykoComposite.part01.rar), [Part2](../../.grid/RunoffPBudykoComposite.part02.rar), [Part3](../../.grid/RunoffPBudykoComposite.part03.rar), [Part4](../../.grid/RunoffPBudykoComposite.part04.rar), [Part5](../../.grid/RunoffPBudykoComposite.part05.rar) |
@@ -119,50 +119,115 @@ Luego de creados los mapas, modifique la simbología de representación utilizan
 
 **Bydyko**
 
-Potencial de escurrimiento Budyko Compuesto, mm/año
+Flujo potencial de escurrimiento Budyko Compuesto, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoComposite.png)
 
-Potencial de escurrimiento Budyko La Niña, mm/año
+Flujo potencial de escurrimiento Budyko La Niña, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNina.png)
 
-Potencial de escurrimiento Budyko El Niño, mm/año
+Flujo potencial de escurrimiento Budyko El Niño, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNino.png)
 
-Potencial de escurrimiento Budyko Neutro, mm/año
+Flujo potencial de escurrimiento Budyko Neutro, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoNeutral.png)
 
 **Dekop**
 
-Potencial de escurrimiento Dekop Compuesto, mm/año
+Flujo potencial de escurrimiento Dekop Compuesto, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPDekopComposite.png)
 
-Potencial de escurrimiento Dekop La Niña, mm/año
+Flujo potencial de escurrimiento Dekop La Niña, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPDekopNina.png)
 
-Potencial de escurrimiento Dekop El Niño, mm/año
+Flujo potencial de escurrimiento Dekop El Niño, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPDekopNino.png)
 
-Potencial de escurrimiento Dekop Neutro, mm/año
+Flujo potencial de escurrimiento Dekop Neutro, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPDekopNeutral.png)
 
 **Turc**
 
-Potencial de escurrimiento Turc Compuesto, mm/año
+Flujo potencial de escurrimiento Turc Compuesto, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcComposite.png)
 
-Potencial de escurrimiento Turc La Niña, mm/año
+Flujo potencial de escurrimiento Turc La Niña, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNina.png)
 
-Potencial de escurrimiento Turc El Niño, mm/año
+Flujo potencial de escurrimiento Turc El Niño, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNino.png)
 
-Potencial de escurrimiento Turc Neutro, mm/año
+Flujo potencial de escurrimiento Turc Neutro, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNeutral.png)
 
+7. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Hydrology / Flow Accumulation_, cree los mapas de caudales medios de largo plazo dentro de la carpeta `D:\R.LTWB\.grid`:
 
-7. Utilizando la herramienta _xxxx_, cree los mapas de potencial escurrimiento o grillas de pesos distribuidos, utilice las siguientes expresiones y nombres de archivo de salida dentro de la carpeta `D:\R.LTWB\.grid`:
+> En el parámetro _Input flow direction type_, seleccione la opción _D8_ correspondiente a las 8 posibles direcciones convencionales de flujo que han sido asignadas al mapa FDR.
 
+| Mapa                    | Rango m³/s           | Grilla :open_file_folder:                                                                                                                                                                                                                                                                                                                                                         |
+|:------------------------|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Budyko**              |                      |                                                                                                                                                                                                                                                                                                                                                                                   |
+| LTWBBudykoComposite.tif | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBBudykoComposite.part01.rar), [Part2](../../.grid/LTWBBudykoComposite.part02.rar), [Part3](../../.grid/LTWBBudykoComposite.part03.rar), [Part4](../../.grid/LTWBBudykoComposite.part04.rar), [Part5](../../.grid/LTWBBudykoComposite.part05.rar), [Part6](../../.grid/LTWBBudykoComposite.part06.rar), [Part7](../../.grid/LTWBBudykoComposite.part07.rar) |
+| LTWBBudykoNina.tif      | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBBudykoNina.part01.rar), [Part2](../../.grid/LTWBBudykoNina.part02.rar), [Part3](../../.grid/LTWBBudykoNina.part03.rar), [Part4](../../.grid/LTWBBudykoNina.part04.rar), [Part5](../../.grid/LTWBBudykoNina.part05.rar), [Part6](../../.grid/LTWBBudykoNina.part06.rar), [Part7](../../.grid/LTWBBudykoNina.part07.rar)                                    |
+| LTWBBudykoNino.tif      | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBBudykoNino.part01.rar), [Part2](../../.grid/LTWBBudykoNino.part02.rar), [Part3](../../.grid/LTWBBudykoNino.part03.rar), [Part4](../../.grid/LTWBBudykoNino.part04.rar), [Part5](../../.grid/LTWBBudykoNino.part05.rar), [Part6](../../.grid/LTWBBudykoNino.part06.rar), [Part7](../../.grid/LTWBBudykoNino.part07.rar)                                    |
+| LTWBBudykoNeutral.tif   | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBBudykoNeutral.part01.rar), [Part2](../../.grid/LTWBBudykoNeutral.part02.rar), [Part3](../../.grid/LTWBBudykoNeutral.part03.rar), [Part4](../../.grid/LTWBBudykoNeutral.part04.rar), [Part5](../../.grid/LTWBBudykoNeutral.part05.rar), [Part6](../../.grid/LTWBBudykoNeutral.part06.rar), [Part7](../../.grid/LTWBBudykoNeutral.part07.rar)               |
+| **Dekop**               |                      |                                                                                                                                                                                                                                                                                                                                                                                   |
+| LTWBDekopComposite.tif  | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBDekopComposite.part01.rar), [Part2](../../.grid/LTWBDekopComposite.part02.rar), [Part3](../../.grid/LTWBDekopComposite.part03.rar), [Part4](../../.grid/LTWBDekopComposite.part04.rar), [Part5](../../.grid/LTWBDekopComposite.part05.rar)                                                                                                                |
+| LTWBDekopNina.tif       | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBDekopNina.part01.rar), [Part2](../../.grid/LTWBDekopNina.part02.rar), [Part3](../../.grid/LTWBDekopNina.part03.rar), [Part4](../../.grid/LTWBDekopNina.part04.rar), [Part5](../../.grid/LTWBDekopNina.part05.rar)                                                                                                                                         |
+| LTWBDekopNino.tif       | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBDekopNino.part01.rar), [Part2](../../.grid/LTWBDekopNino.part02.rar), [Part3](../../.grid/LTWBDekopNino.part03.rar), [Part4](../../.grid/LTWBDekopNino.part04.rar), [Part5](../../.grid/LTWBDekopNino.part05.rar)                                                                                                                                         |
+| LTWBDekopNeutral.tif    | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBDekopNeutral.part01.rar), [Part2](../../.grid/LTWBDekopNeutral.part02.rar), [Part3](../../.grid/LTWBDekopNeutral.part03.rar), [Part4](../../.grid/LTWBDekopNeutral.part04.rar), [Part5](../../.grid/LTWBDekopNeutral.part05.rar)                                                                                                                          |
+| **Turc**                |                      |                                                                                                                                                                                                                                                                                                                                                                                   |
+| LTWBTurcComposite.tif   | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBTurcComposite.part01.rar), [Part2](../../.grid/LTWBTurcComposite.part02.rar), [Part3](../../.grid/LTWBTurcComposite.part03.rar), [Part4](../../.grid/LTWBTurcComposite.part04.rar), [Part5](../../.grid/LTWBTurcComposite.part05.rar)                                                                                                                     |
+| LTWBTurcNina.tif        | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBTurcNina.part01.rar), [Part2](../../.grid/LTWBTurcNina.part02.rar), [Part3](../../.grid/LTWBTurcNina.part03.rar), [Part4](../../.grid/LTWBTurcNina.part04.rar), [Part5](../../.grid/LTWBTurcNina.part05.rar)                                                                                                                                              |
+| LTWBTurcNino.tif        | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBTurcNino.part01.rar), [Part2](../../.grid/LTWBTurcNino.part02.rar), [Part3](../../.grid/LTWBTurcNino.part03.rar), [Part4](../../.grid/LTWBTurcNino.part04.rar), [Part5](../../.grid/LTWBTurcNino.part05.rar)                                                                                                                                              |
+| LTWBTurcNeutral.tif     | XXXXXXXX - XXXXXXXXX | [Part1](../../.grid/LTWBTurcNeutral.part01.rar), [Part2](../../.grid/LTWBTurcNeutral.part02.rar), [Part3](../../.grid/LTWBTurcNeutral.part03.rar), [Part4](../../.grid/LTWBTurcNeutral.part04.rar), [Part5](../../.grid/LTWBTurcNeutral.part05.rar)                                                                                                                               |
 
+Luego de creadas las grillas de caudales medios, cambie la simbología de representación a _Stretch_ utilizando la paleta de color _Temperature_ y _Stretch type: Histogram Equalize_, luego, acérquese a escala 1:35.000, y con la herramienta _Go To XY_, desplácese a la coordenada 4964032.70E, 2617759.27N. Podrá observar varios drenajes y su conectividad a través de los valores de caudal medio obtenidos. 
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBSymbology.png)
+
+**Bydyko**
+
+Caudal medio Budyko Compuesto, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoComposite.png)
+
+Caudal medio Budyko La Niña, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoNina.png)
+
+Caudal medio Budyko El Niño, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoNino.png)
+
+Caudal medio Budyko Neutro, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoNeutral.png)
+
+**Dekop**
+
+Caudal medio Dekop Compuesto, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBDekopComposite.png)
+
+Caudal medio Dekop La Niña, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBDekopNina.png)
+
+Caudal medio Dekop El Niño, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBDekopNino.png)
+
+Caudal medio Dekop Neutro, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBDekopNeutral.png)
+
+**Turc**
+
+Caudal medio Turc Compuesto, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBTurcComposite.png)
+
+Caudal medio Turc La Niña, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBTurcNina.png)
+
+Caudal medio Turc El Niño, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBTurcNino.png)
+
+Caudal medio Turc Neutro, m³/s
+![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBTurcNeutral.png)
+
+> Debido al tamaño de los archivos generados (aproximadamente 900 MB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
 En este momento dispone de grillas de potencial de escurrimiento o pesos distribuidos y de grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
 
@@ -180,7 +245,8 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Referencias
 
-* 
+* https://hess.copernicus.org/articles/24/1975/2020/#:~:text=3.1%20Long%2Dterm%20water%20balance,precipitation%20(%E2%80%9Csupply%E2%80%9D)
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-direction.htm
 
 
 ### Compatibilidad
