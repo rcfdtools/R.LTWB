@@ -247,6 +247,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | Utilizando los mapas de direcciones de flujo - FDR generados en la sección 2 a partir de los modelos de terreno ASTER GDEM y SRTM, realice los balances hidrológicos de largo plazo y compare los resultados obtenidos con los obtenidos en esta actividad. |
 |     2     | Para los mapas complementarios de evapotranspiración real asignados como actividad complementaria en la sección 4, realice los balances hidrológicos y compare con los resultados obtenidos en esta actividad.                                              |
+|     3     | Para los mapas compuestos de evapotranspiración real - ETR, realice el balance hidrológico en ArcGIS for Desktop y en QGIS, compare los resultados con los obtenidos en esta actividad.                                                                     |
 
 
 ### Referencias
