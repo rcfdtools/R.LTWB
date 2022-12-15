@@ -27,7 +27,7 @@ Spatial Analyst Tools de ArcGIS for Desktop y ArcGIS Pro, dispone de un grupo de
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/LTWB.svg" width="45%"><br>
+<br><img alt="R.LTWB" src="Graph/LTWB.svg" width="55%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
