@@ -262,11 +262,11 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                 | Autor                                     | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2022.12.14 | Creación mapas balance hidrológico largo plazo. Compresión y publicación. Documentación.                                    | [rcfdtools](https://github.com/rcfdtools) |   7   |
-| 2022.12.13 | Finalización creación mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos. Compresión y publicación.  | [rcfdtools](https://github.com/rcfdtools) |   5   |
-| 2022.12.12 | Inicio documentación y creación mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos                   | [rcfdtools](https://github.com/rcfdtools) |   2   |
+| Versión    | Descripción                                                                                                                            | Autor                                     | Horas |
+|------------|:---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.14 | Creación mapas balance hidrológico largo plazo. Compresión y publicación. Documentación. Ilustración cabecera y diagrama de procesos.  | [rcfdtools](https://github.com/rcfdtools) |   8   |
+| 2022.12.13 | Finalización creación mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos. Compresión y publicación.             | [rcfdtools](https://github.com/rcfdtools) |   5   |
+| 2022.12.12 | Inicio documentación y creación mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos                              | [rcfdtools](https://github.com/rcfdtools) |   2   |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
