@@ -235,7 +235,7 @@ Caudal medio Turc Neutro, m³/s
 
 > Debido al tamaño de los archivos generados (aproximadamente 900 MB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
-En este momento dispone de grillas de potencial de escurrimiento o pesos distribuidos y de grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
+En este momento dispone de grillas de potencial de escurrimiento o pesos distribuidos y grillas de caudal medio obtenidas del balance hidrológico de largo plazo.
 
 
 ### Actividades complementarias:pencil2:
@@ -243,10 +243,10 @@ En este momento dispone de grillas de potencial de escurrimiento o pesos distrib
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance |
-|:---------:|:--------|
-|     1     | xxx     |
-|     2     | xxx     |
+| Actividad | Alcance                                                                                                                                                                                                                                                     |
+|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Utilizando los mapas de direcciones de flujo - FDR generados en la sección 2 a partir de los modelos de terreno ASTER GDEM y SRTM, realice los balances hidrológicos de largo plazo y compare los resultados obtenidos con los obtenidos en esta actividad. |
+|     2     | Para los mapas complementarios de evapotranspiración real asignados como actividad complementaria en la sección 4, realice los balances hidrológicos y compare con los resultados obtenidos en esta actividad.                                              |
 
 
 ### Referencias
@@ -257,20 +257,20 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas y acumulación de flujo que incluyan grillas de pesos distribuidos.
 
 
 ### Control de versiones
 
-| Versión    | Descripción | Autor                                     | Horas |
-|------------|:------------|-------------------------------------------|:-----:|
-| 2022.12.13 | xxx         | [rcfdtools](https://github.com/rcfdtools) |   5   |
-
-
+| Versión    | Descripción                                                                                                                 | Autor                                     | Horas |
+|------------|:----------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.14 | Creación mapas balance hidrológico largo plazo. Compresión y publicación. Documentación.                                    | [rcfdtools](https://github.com/rcfdtools) |   7   |
+| 2022.12.13 | Finalización creación mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos. Compresión y publicación.  | [rcfdtools](https://github.com/rcfdtools) |   5   |
+| 2022.12.12 | Inicio documentación y creación mapas de flujo potencial de escurrimiento o grillas de pesos distribuidos                   | [rcfdtools](https://github.com/rcfdtools) |   2   |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente](../../Section05) |
-|---------------------------|---------------------------|--------------------------------------------------------------------------|----------------------------------------|
+| [Actividad anterior](../) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente](../../xxx) |
+|---------------------------|---------------------------|--------------------------------------------------------------------------|----------------------------------|
