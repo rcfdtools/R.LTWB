@@ -131,14 +131,14 @@ Matriz de dispersión Turc Neutro
 
 </div>
 
-En la ecuación, `y` corresponde al valor del caudal en m³/s y `x` corresponde al valor del área.
+> En la ecuación, `y` corresponde al valor del caudal en m³/s y `x` corresponde al valor del área.
 
 7. A partir de las ecuaciones características y en Microsoft Excel, cree una tabla y gráficas que permitan estimar el caudal medio en función de las áreas de aportación.
 
 ![R.LTWB](Screenshot/MicrosoftExcel365Table.png)
 ![R.LTWB](Screenshot/MicrosoftExcel365Graph.png)
 
-En este momento dispone de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
+En este momento dispone para la zona de estudio de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
 
 
 ### Actividades complementarias:pencil2:
@@ -146,10 +146,10 @@ En este momento dispone de ecuaciones características a partir de las cuales se
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                           |
-|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características. |
-|     2     | xxx                                                                                                                                                                               |
+| Actividad | Alcance                                                                                                                                                                                                                                                                          |
+|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características segmentadas que permitan, por ejemplo, analizar caudales medios en cuencas inferiores a 25 km². |
+|     2     | A partir de los mapas de caudal medio obtenidos para los métodos de evapotranspiración real investigados, realice la extracción de los caudales en nodos característicos, analice y cree ecuaciones.                                                                             |
 
 
 ### Referencias
@@ -173,5 +173,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../LTWB) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente](../../xxx) |
-|----------------------------|---------------------------|--------------------------------------------------------------------------|----------------------------------|
+| [Actividad anterior](../LTWB) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999)  | [Actividad siguiente](../../xxx) |
+|-------------------------------|---------------------------|---------------------------------------------------------------------------|----------------------------------|
