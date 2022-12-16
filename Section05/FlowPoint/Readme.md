@@ -111,35 +111,29 @@ Matriz de dispersión Turc Neutro
 
 <div align="center">
 
-| Caudal medio        | Tendencia lineal        | R²    |
-|---------------------|-------------------------|-------|
-| **Budyko**          |                         |       |
-| LTWBBudykoComposite | y = 0.38263 + 0.0159 x  | 0.88  |
-| LTWBBudykoNina      | y = 0.44716 + 0.02044 x | 0.90  |
-| LTWBBudykoNino      | y = 0.29555 + 0.01091 x | 0.83  |
-| LTWBBudykoNeutral   | y = 0.3915 + 0.01603 x  | 0.87  |
-| **Dekop**           |                         |       |
-| LTWBDekopComposite  | y = 0.36494 + 0.01292 x | 0.84  |
-| LTWBDekopoNina      | y = 0.43502 + 0.01703 x | 0.87  |
-| LTWBDekopNino       | y = 0.27466 + 0.00856 x | 0.77  |
+| Caudal medio        | Tendencia lineal        | R²   |
+|---------------------|-------------------------|------|
+| **Budyko**          |                         |      |
+| LTWBBudykoComposite | y = 0.38263 + 0.0159 x  | 0.88 |
+| LTWBBudykoNina      | y = 0.44716 + 0.02044 x | 0.90 |
+| LTWBBudykoNino      | y = 0.29555 + 0.01091 x | 0.83 |
+| LTWBBudykoNeutral   | y = 0.3915 + 0.01603 x  | 0.87 |
+| **Dekop**           |                         |      |
+| LTWBDekopComposite  | y = 0.36494 + 0.01292 x | 0.84 |
+| LTWBDekopoNina      | y = 0.43502 + 0.01703 x | 0.87 |
+| LTWBDekopNino       | y = 0.27466 + 0.00856 x | 0.77 |
 | LTWBDekopNeutral    | y = 0.37332 + 0.01305 x | 0.83 |
-| **Turc**            |                         |       |
-| LTWBTurcComposite   | y = 0.38263 + 0.0159 x  | 0.88  |
-| LTWBTurcNina        | y = 0.44716 + 0.02044 x | 0.90  |
-| LTWBTurcNino        | y = 0.29555 + 0.01091 x | 0.83  |
-| LTWBTurcNeutral     | y = 0.3915 + 0.01603 x  | 0.87  |
+| **Turc**            |                         |      |
+| LTWBTurcComposite   | y = 0.37412 + 0.01189 x | 0.82 |
+| LTWBTurcNina        | y = 0.4466 + 0.01609 x  | 0.86 |
+| LTWBTurcNino        | y = 0.28372 + 0.0076 x  | 0.73 |
+| LTWBTurcNeutral     | y = 0.38552 + 0.01222 x | 0.82 |
 
 </div>
 
 En la ecuación, `y` corresponde al valor del caudal en m³/s y `x` corresponde al valor del área.
 
-
-
-
-
-
-
-En este momento dispone de ecuaciones características que xxxxxxxxxxxxxxxxxxxx.
+En este momento dispone de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
 
 
 ### Actividades complementarias:pencil2:
@@ -147,15 +141,15 @@ En este momento dispone de ecuaciones características que xxxxxxxxxxxxxxxxxxxx.
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                          |
-|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características |
-|     2     | xxx                                                                                                                                                                              |
+| Actividad | Alcance                                                                                                                                                                           |
+|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características. |
+|     2     | xxx                                                                                                                                                                               |
 
 
 ### Referencias
 
-* 
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/extract-multi-values-to-points.htm
 
 
 ### Compatibilidad
