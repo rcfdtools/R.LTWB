@@ -164,9 +164,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción | Autor                                     | Horas |
-|------------|:------------|-------------------------------------------|:-----:|
-| 2022.12.14 | xxx         | [rcfdtools](https://github.com/rcfdtools) |  xx  |
+| Versión    | Descripción                                                                                                                                                                                                                                                                         | Autor                                     | Horas |
+|------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.16 | Documentación. Extracción de valores en nodos característicos a partir de las 12 grillas de caudal medio. Histograma. Matriz de dispersión, ecuación de tendencia lineal, estimación y comparación de valores a partir de ecuaciones.  Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   5   |
+| 2022.12.15 | Inicio documentación. Cargue y verificación de capas requeridas en proyecto ArcGIS Pro.                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools) |   2   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
