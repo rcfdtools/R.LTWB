@@ -1,5 +1,5 @@
 ## Lectura y análisis de caudales y áreas de aportación en nodos característicos
-Keywords: `LTWB` `Flow` `Extract-multi-values-to-points`
+Keywords: `LTWB` `Flow` `Extract-multi-values-to-points` `Linear-trend` `Histogram`
 
 ![R.LTWB](Graph/FlowPoint.png)
 
@@ -8,7 +8,7 @@ Una vez obtenida la red de puntos característicos para lectura de resultados qu
 ### Objetivos
 
 * A partir de puntos característicos identificados sobre la red de drenaje de la zona de estudio, realizar la lectura o extracción de los valores obtenidos en las grillas de caudal medio.
-* A partir de las áreas de aportación estimadas en puntos característicos y los valores de caudal extraídos por punto, crear la matriz de dispersión y obtener una ecuación característica que permita estimar el caudal compuesto y por fenómeno climatológico en función del área de aportación.
+* A partir de las áreas de aportación estimadas en puntos característicos y los valores de caudal extraídos por punto, crear la matriz de dispersión y obtener ecuaciones características que permitan aestimar el caudal compuesto y por fenómeno climatológico en función del área de aportación.
 
 
 ### Requerimientos
@@ -53,7 +53,7 @@ Acérquese a la red de drenaje y verifique que la localización de las líneas y
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ExtractMultiValuesToPoints.png)
 
-> Debido a que la extracción de los valores de las celdas correspondientes a cada nodo se realizará dentro de una clase de entidad alojada dentro de una base de datos espacial, el nombre de los campos podrá contener más de 10 caracteres. Para extracciones usando archivos Shapefile, asegúrese de que los nombres de campos no contengas más de 10 caracteres.
+> Debido a que la extracción de los valores de las celdas correspondientes a cada nodo se realizará dentro de una clase de entidad alojada dentro de una base de datos espacial, el nombre de los campos podrá contener más de 10 caracteres. Para extracciones usando archivos Shapefile, asegúrese de que los nombres de campos no contengan más de 10 caracteres.
 > 
 > En caso de ser necesario y utilizando la herramienta _Zonal Statistics As Table_, podrá obtener en una nueva tabla los valores en cada nodo característico a partir de una única grilla.   
 
@@ -138,7 +138,7 @@ Matriz de dispersión Turc Neutro
 ![R.LTWB](Screenshot/MicrosoftExcel365Table.png)
 ![R.LTWB](Screenshot/MicrosoftExcel365Graph.png)
 
-En este momento dispone para la zona de estudio de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
+En este momento dispone para la zona de estudio, de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
 
 
 ### Actividades complementarias:pencil2:
@@ -149,7 +149,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 | Actividad | Alcance                                                                                                                                                                                                                                                                          |
 |:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características segmentadas que permitan, por ejemplo, analizar caudales medios en cuencas inferiores a 25 km². |
-|     2     | A partir de los mapas de caudal medio obtenidos para los métodos de evapotranspiración real investigados, realice la extracción de los caudales en nodos característicos, analice y cree ecuaciones.                                                                             |
+|     2     | A partir de los mapas de caudal medio obtenidos para los métodos de evapotranspiración real investigados, realice la extracción de los caudales en nodos característicos, analice, cree ecuaciones y compare con los valores obtenidos en la presente actividad.                 |
 
 
 ### Referencias
