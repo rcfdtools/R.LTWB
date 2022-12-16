@@ -1,4 +1,4 @@
-LTWB BUDYCO mm/year
+Potential Runoff BUDYCO, m³/s
 
 	RunoffPBudykoComposite.tif = (("RainTotalComposite.tif"-"ETRBudykoComposite.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 	RunoffPBudykoNina.tif = (("RainTotalNina.tif"-"ETRBudykoNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
@@ -6,7 +6,7 @@ LTWB BUDYCO mm/year
 	RunoffPBudykoNeutral.tif = (("RainTotalNeutral.tif"-"ETRBudykoNeutral.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 	
 
-ETR DEKOP
+Potential Runoff DEKOP, m³/s
 
 	RunoffPDekopComposite.tif = (("RainTotalComposite.tif"-"ETRDekopComposite.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 	RunoffPDekopNina.tif = (("RainTotalNina.tif"-"ETRDekopNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
@@ -14,9 +14,9 @@ ETR DEKOP
 	RunoffPDekopNeutral.tif = (("RainTotalNeutral.tif"-"ETRDekopNeutral.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 
 
-ETR TURC
+Potential Runoff TURC, m³/s
 
 	RunoffPTurcComposite.tif = (("RainTotalComposite.tif"-"ETRTurcComposite.tif")/1000)*(12.5*12.5)/(365*24*60*60)
-	RunoffPTurcNina.tif = (("RainTotalNina.tif"-"ETRDTurcNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
+	RunoffPTurcNina.tif = (("RainTotalNina.tif"-"ETRTurcNina.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 	RunoffPTurcNino.tif = (("RainTotalNino.tif"-"ETRTurcNino.tif")/1000)*(12.5*12.5)/(365*24*60*60)
 	RunoffPTurcNeutral.tif = (("RainTotalNeutral.tif"-"ETRTurcNeutral.tif")/1000)*(12.5*12.5)/(365*24*60*60)

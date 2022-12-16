@@ -1,0 +1,5 @@
+
+Requirements
+	alosstr.shp
+	ALOSStrNode.shp
+	

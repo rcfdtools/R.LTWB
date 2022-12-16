@@ -57,9 +57,7 @@ Donde,
 
 > Tenga en cuenta que automáticamente ha sido asignado el sistema de coordenadas geográficas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional, debido a que el DEM contiene integrado este sistema.
 > 
-> Para la correcta interpolación espacial de los parámetros climatológicos, es necesario disponer de un sistema proyectado con unidades lineales en metros.
-> 
-> Recuerde que el tamaño de celdas en las grillas DEM ALOS PALSAR es de 12.5 metros.
+> Recuerde que el tamaño de celdas de las grillas DEM ALOS PALSAR es de 12.5 metros.
 
 3. Desde la carpeta _HECGeoHMS_ disponible en el catálogo, agregue al proyecto la grilla de direcciones de flujo denominada [ALOSFdr.tif](../../HECGeoHMS/Layers). Modifique la simbología de representación a _Unique Values_ con el esquema de color _Aspect_ y establezca transparencia en 50%.
 
