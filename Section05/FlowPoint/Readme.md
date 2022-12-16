@@ -133,6 +133,11 @@ Matriz de dispersión Turc Neutro
 
 En la ecuación, `y` corresponde al valor del caudal en m³/s y `x` corresponde al valor del área.
 
+7. A partir de las ecuaciones características y en Microsoft Excel, cree una tabla y gráficas que permitan estimar el caudal medio en función de las áreas de aportación.
+
+![R.LTWB](Screenshot/MicrosoftExcel365Table.png)
+![R.LTWB](Screenshot/MicrosoftExcel365Graph.png)
+
 En este momento dispone de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
 
 
