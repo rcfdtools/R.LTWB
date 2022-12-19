@@ -56,24 +56,36 @@ Donde,
 
 Expresión algebra de mapas: `FlowPerfBudykoComposite.tif = "LTWBBudykoComposite.tif"*1000/("ALOSFac.tif"*12.5*12.5/1000000)`
 
-Modifique la simbología de representación a _Classify_ utilizando la paleta de color _Spectrum by Wavelength - Fullbright_ y _Method: Quantile_ en 12 clases
+Una vez obtenido elmapa, modifique la simbología de representación a _Classify_ utilizando la paleta de color _Spectrum by Wavelength - Fullbright_ y _Method: Quantile_ en 12 clases
 
 Matriz de isorendimiento Budyko Compuesto
 ![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoComposite.png)
 
-Como observa en la ilustración, se han obtenido valores de hasta 109.113 lps/km² y los rendimientos cercanos a este valor se encuentran localizados en la zona norte sobre la Sierra Nevada de Santa Marta y al sur este en la zona de la cordillera oriental.
+Como observa en la ilustración, se han obtenido valores de hasta 109.113 lps/km² y los rendimientos cercanos a este valor se encuentran localizados en la zona norte sobre la Sierra Nevada de Santa Marta y al sur-este en la zona de la cordillera oriental.
 
-4. Abra la tabla de atributos de la clase de entidad _ALOSStrNodeGDB_ contenida en la geodatabase del proyecto creado en ArcGIS Pro para la sección 5, podrá observar que contiene los valores leídos de las diferentes grillas de caudal.
+4. Abra la tabla de atributos de la clase de entidad _ALOSStrNodeGDB_ contenida en la Geodatabase del proyecto, creado en ArcGIS Pro para la sección 5, podrá observar que contiene el número de celdas acumuladas, los valores de área de aportación calculados a partir de la resolución de la grilla y los valores leídos de las diferentes grillas de caudal.
 
-![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBLTWBValues.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDB.png)
 
-5. A partir de la capa _ALOSStrNodeGDB_, cree gráficos de dispersión relacionando el área de aportación `Akm2` con los valores de caudal medio obtenidos. Obtenga los parámetros de la tendencia lineal y los valores del coeficiente de determinación R².
+5. En la tabla de atributos de la clase de entidad _ALOSStrNodeGDB_, cree un campo de atributos numérico doble con el nombre `FlowPerfBudykoComposite`
 
-Matriz de dispersión Budyko Compuesto
-![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoComposite.png)
+![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBAddField.png)
 
+6. Utilizando el calculador de campo, calcule en el campo `FlowPerfBudykoComposite`, el isorendimiento medio de cada nodo característicos de la red de drenaje, utilicd la expresión `(!LTWBBudykoComposite!*1000)/!Akm2!`
 
-En este momento dispone para la zona de estudio, de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
+![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBFieldCalculator.png)
+
+7. A partir de los valores obtenidos en el campo `FlowPerfBudykoComposite`, cree un histograma con 12 bandas y analice los resultados obtenidos. Podrá observar que de 31879 nodos, 9697 presentan valores cercanos a la media en la banda comprendida entre 2.2 y 29 lps/km².
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBHistogram.png)
+
+9. Utilizando los valores contenidos en la tabla, cree un gráfico de dispersión relacionando el área de aportación `Akm2` con los valores de isorendimiento medio obtenidos. Obtenga los parámetros de la tendencia lineal y el valor del coeficiente de determinación R². Filtre los valores de área inferiores o iguales a 1000 km² e isorendimientos medios mayores a cero, utilice la expresión SQL `Akm2 <= 1000 And FlowPerfBudykoComposite > 0`
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBScatterPlot.png)
+
+Como puede observar en la gráfica, no existe una correlación general que permita establecer que la ecuación `y = 24.7 + 0.00085 x` con coeficiente de determinación R² = 0.000017, describe el cambio en el isorendimiento en función del área de aportación. Lo anterior debido a que esta relación depende de múltiples factores, tales como el régimen hidrológico de la zona y su distribución espacial, el tipo de geomorfometría de la red de drenaje, la inclinación del terreno y el tipo de regionalización empleada para la estimación de losmapas de temperatura, evapotranspiración potencial y real.
+
+En este momento dispone para la zona de estudio, de un mapa de isorendimientos que permite entender la relación entre las acumulaciones de flujo y los valores obtenidos de caudal medio.
 
 
 ### Actividades complementarias:pencil2:
