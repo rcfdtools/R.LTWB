@@ -4,6 +4,6 @@ Layers
 	ALOSFac.tif
 	LTWBBudykoComposite.tif
 
-FP = F / A
+Fp = F / A
 
 FlowPerfBudykoComposite.tif = "LTWBBudykoComposite.tif"*1000/("ALOSFac.tif"*12.5*12.5/1000000)
