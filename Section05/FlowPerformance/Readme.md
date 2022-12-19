@@ -38,7 +38,9 @@ Utilizando los valores de caudal medio, número de celdas y área de aportación
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3FACAlosPalsar.png)
 
-3. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Map Algebra / Raster Calculator_, cree mapas de isorendimiento y almacénelos dentro de la carpeta `D:\R.LTWB\.grid`. Para este ejemplo, generaremos el mapa de isorendimiento a partir de los caudales medios obtenidos con el mapa de evapotranspiración real compuesta de Budyko utilizando la siguiente expresión:
+3. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Map Algebra / Raster Calculator_, cree mapas de isorendimiento y almacénelos dentro de la carpeta `D:\R.LTWB\.grid`. 
+
+> Para este ejemplo, generaremos el mapa de isorendimiento a partir de los caudales medios obtenidos con el mapa de evapotranspiración real compuesta de Budyko utilizando la siguiente expresión:
 
 <div align="center">
 
@@ -52,7 +54,7 @@ Donde,
 * Qm: caudal medio, lps
 * A: área de aportación,km²
 
-`FlowPerfBudykoComposite.tif = "LTWBBudykoComposite.tif"*1000/("ALOSFac.tif"*12.5*12.5/1000000)`
+Expresión algebra de mapas: `FlowPerfBudykoComposite.tif = "LTWBBudykoComposite.tif"*1000/("ALOSFac.tif"*12.5*12.5/1000000)`
 
 Modifique la simbología de representación a _Classify_ utilizando la paleta de color _Spectrum by Wavelength - Fullbright_ y _Method: Quantile_ en 12 clases
 
