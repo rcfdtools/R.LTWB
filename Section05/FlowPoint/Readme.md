@@ -8,7 +8,7 @@ Una vez obtenida la red de puntos característicos para lectura de resultados qu
 ### Objetivos
 
 * A partir de puntos característicos identificados sobre la red de drenaje de la zona de estudio, realizar la lectura o extracción de los valores obtenidos en las grillas de caudal medio.
-* A partir de las áreas de aportación estimadas en puntos característicos y los valores de caudal extraídos por punto, crear la matriz de dispersión y obtener ecuaciones características que permitan aestimar el caudal compuesto y por fenómeno climatológico en función del área de aportación.
+* A partir de las áreas de aportación estimadas en puntos característicos y los valores de caudal extraídos por punto, crear la matriz de dispersión y obtener ecuaciones características que permitan estimar el caudal compuesto y por fenómeno climatológico en función del área de aportación.
 
 
 ### Requerimientos
