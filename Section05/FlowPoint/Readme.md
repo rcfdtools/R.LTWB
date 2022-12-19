@@ -27,7 +27,7 @@ Una vez obtenida la red de puntos característicos para lectura de resultados qu
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. En ArcGIS Pro, abra el mapa _ArcGISProSection05.aprx_ creado y almacenado en la actividad anterior en la ruta _D:\R.LTWB\\.map_.
+1. En ArcGIS Pro, abra el proyecto _ArcGISProSection05.aprx_ creado y almacenado en la actividad anterior en la ruta _D:\R.LTWB\\.map_.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenMapProject.png)
 
