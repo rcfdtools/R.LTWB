@@ -71,7 +71,7 @@ Como observa en la ilustración, se han obtenido valores de hasta 109.113 lps/km
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBAddField.png)
 
-6. Utilizando el calculador de campo, calcule en el campo `FlowPerfBudykoComposite`, el isorendimiento medio de cada nodo característicos de la red de drenaje, utilicd la expresión `(!LTWBBudykoComposite!*1000)/!Akm2!`
+6. Utilizando el calculador de campo, calcule en el campo `FlowPerfBudykoComposite`, el isorendimiento medio de cada nodo característicos de la red de drenaje, utilice la expresión `(!LTWBBudykoComposite!*1000)/!Akm2!`
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBFieldCalculator.png)
 
@@ -83,7 +83,7 @@ Como observa en la ilustración, se han obtenido valores de hasta 109.113 lps/km
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBScatterPlot.png)
 
-Como puede observar en la gráfica, no existe una correlación general que permita establecer que la ecuación `y = 24.7 + 0.00085 x` con coeficiente de determinación R² = 0.000017, describe el cambio en el isorendimiento en función del área de aportación. Lo anterior debido a que esta relación depende de múltiples factores, tales como el régimen hidrológico de la zona y su distribución espacial, el tipo de geomorfometría de la red de drenaje, la inclinación del terreno y el tipo de regionalización empleada para la estimación de losmapas de temperatura, evapotranspiración potencial y real.
+Como puede observar en la gráfica, no existe una correlación general que permita establecer que la ecuación `y = 24.7 + 0.00085 x` con coeficiente de determinación `R² = 0.000017`, describe el cambio en el isorendimiento en función del área de aportación. Lo anterior debido a que esta relación depende de múltiples factores, tales como el régimen hidrológico de la zona y su distribución espacial, el tipo de geomorfometría de la red de drenaje, la inclinación del terreno y el tipo de regionalización empleada para la estimación de los mapas de temperatura, evapotranspiración potencial y real.
 
 En este momento dispone para la zona de estudio, de un mapa de isorendimientos que permite entender la relación entre las acumulaciones de flujo y los valores obtenidos de caudal medio.
 
@@ -93,32 +93,32 @@ En este momento dispone para la zona de estudio, de un mapa de isorendimientos q
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance |
-|:---------:|:--------|
-|     1     | xxx     |
-|     2     | xxx     |
+| Actividad | Alcance                                                                                                                                                                                                                         |
+|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Utilizando los valores obtenidos de caudal medio por fenómeno climatológico a partir de la ecuación de Budyko, cree mapas de isorendimientos y analice las diferencias obtenidas respecto al mapa de isorendimientos compuesto. |
+|     2     | Investigue y documente la utilidad y aplicabilidad de los mapas de isorendimientos medios.                                                                                                                                      |
 
 
 ### Referencias
 
-* 
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/raster-calculator.htm
 
 
 ### Compatibilidad
 
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de extracción o estadísticas zonales.
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
 
 
 ### Control de versiones
 
 | Versión    | Descripción | Autor                                     | Horas |
 |------------|:------------|-------------------------------------------|:-----:|
-| 2022.12.16 | xxx         | [rcfdtools](https://github.com/rcfdtools) |   x   |
+| 2022.12.19 | xxx         | [rcfdtools](https://github.com/rcfdtools) |   x   |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../FlowPoint) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/999) | [Actividad siguiente](../../xxx) |
-|------------------------------------|---------------------------|-------------------------------------------------------------------------|----------------------------------|
+| [Actividad anterior](../FlowPoint) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Actividad siguiente](../../xxx) |
+|------------------------------------|---------------------------|--------------------------------------------------------------------------|----------------------------------|
 
