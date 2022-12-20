@@ -94,6 +94,9 @@ Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la
 | neutro / Subzona hidrográfica - SZH              | ETRTurcNeutralSZH     | N/A                      | 988.173          | 1135.232         | 1167.591         | 1414.003         |
 
 
+<div align="center">
+
+**Zona de estudio**
 | Fenómeno / Zona                                  | Tabla zonal           | Promedio, mm/año |
 |--------------------------------------------------|-----------------------|:----------------:|
 | **Precipitación zona de estudio**                |                       |                  |
@@ -118,7 +121,7 @@ Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la
 | Niño / Zona estudio - ZE                         | ETRTurcNinoZE         |     1072.555     |
 | neutro / Zona estudio - ZE                       | ETRTurcNeutralZE      |     1192.169     |
 
-
+<div align="center">
 
 
 
