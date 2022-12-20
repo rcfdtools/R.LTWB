@@ -48,28 +48,29 @@ Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la
 <div align="center">
 
 **Zona de estudio - ZE**
-| Fenómeno / Zona                                  | Tabla zonal           | General, mm/año |
-|--------------------------------------------------|-----------------------|:----------------:|
-| **Precipitación**                                |                       |                  |
-| Compuesto / Zona estudio - ZE                    | RainTotalCompositeZE  |     1545.077     |
-| Niña / Zona estudio - ZE                         | RainTotalNinaZE       |     1760.878     |
-| Niño / Zona estudio - ZE                         | RainTotalNinoZE       |     1280.771     |
-| neutro / Zona estudio - ZE                       | RainTotalNeutralZE    |     1550.741     |
-| **ETR Budyko**                                   |                       |                  |
-| Compuesto / Zona estudio - ZE                    | ETRBudykoCompositeZE  |     1053.944     |
-| Niña / Zona estudio - ZE                         | ETRBudykoNinaZE       |     1118.535     |
-| Niño / Zona estudio - ZE                         | ETRBudykoNinoZE       |     956.504      |
-| neutro / Zona estudio - ZE                       | ETRBudykoNeutralZE    |     1054.165     |
-| **ETR Dekop**                                    |                       |                  |
-| Compuesto / Zona estudio - ZE                    | ETRDekopCompositeZE   |     1152.198     |
-| Niña / Zona estudio - ZE                         | ETRDekopNinaZE        |     1231.288     |
-| Niño / Zona estudio - ZE                         | ETRDekopNinoZE        |     1032.202     |
-| neutro / Zona estudio - ZE                       | ETRDekopNeutralZE     |     1152.373     |
-| **ETR Turc**                                     |                       |                  |
-| Compuesto / Zona estudio - ZE                    | ETRTurcCompositeZE    |     1197.412     |
-| Niña / Zona estudio - ZE                         | ETRTurcNinaZE         |     1276.271     |
-| Niño / Zona estudio - ZE                         | ETRTurcNinoZE         |     1072.555     |
-| neutro / Zona estudio - ZE                       | ETRTurcNeutralZE      |     1192.169     |
+
+| Fenómeno / Zona               | Tabla zonal          | General, mm/año |
+|-------------------------------|----------------------|:---------------:|
+| **Precipitación**             |                      |                 |
+| Compuesto / Zona estudio - ZE | RainTotalCompositeZE |    1545.077     |
+| Niña / Zona estudio - ZE      | RainTotalNinaZE      |    1760.878     |
+| Niño / Zona estudio - ZE      | RainTotalNinoZE      |    1280.771     |
+| neutro / Zona estudio - ZE    | RainTotalNeutralZE   |    1550.741     |
+| **ETR Budyko**                |                      |                 |
+| Compuesto / Zona estudio - ZE | ETRBudykoCompositeZE |    1053.944     |
+| Niña / Zona estudio - ZE      | ETRBudykoNinaZE      |    1118.535     |
+| Niño / Zona estudio - ZE      | ETRBudykoNinoZE      |     956.504     |
+| neutro / Zona estudio - ZE    | ETRBudykoNeutralZE   |    1054.165     |
+| **ETR Dekop**                 |                      |                 |
+| Compuesto / Zona estudio - ZE | ETRDekopCompositeZE  |    1152.198     |
+| Niña / Zona estudio - ZE      | ETRDekopNinaZE       |    1231.288     |
+| Niño / Zona estudio - ZE      | ETRDekopNinoZE       |    1032.202     |
+| neutro / Zona estudio - ZE    | ETRDekopNeutralZE    |    1152.373     |
+| **ETR Turc**                  |                      |                 |
+| Compuesto / Zona estudio - ZE | ETRTurcCompositeZE   |    1197.412     |
+| Niña / Zona estudio - ZE      | ETRTurcNinaZE        |    1276.271     |
+| Niño / Zona estudio - ZE      | ETRTurcNinoZE        |    1072.555     |
+| neutro / Zona estudio - ZE    | ETRTurcNeutralZE     |    1192.169     |
 
 </div>
 
@@ -79,28 +80,29 @@ Ejemplo para evapotranspiración real por subzona hidrográfica
 <div align="center">
 
 **Subzona hidrográfica - SZH**
-| Fenómeno / Zona                                  | Tabla zonal           | SZH 2801, mm/año<br>Alto Cesar | SZH 2802, mm/año<br>Medio Cesar | SZH 2804, mm/año<br>Río Ariguaní | SZH 2805, mm/añoBajo Cesar |
-|--------------------------------------------------|-----------------------|:----------------:|:----------------:|:----------------:|:----------------:|
-| **Precipitación**                                |                       |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH           | RainTotalCompositeSZH | 1465.465         | 1453.047         | 1405.987         | 1847.385         |
-| Niña / Subzona hidrográfica - SZH                | RainTotalNinaSZH      | 1634.776         | 1656.346         | 1583.920         | 2142.350         |
-| Niño / Subzona hidrográfica - SZH                | RainTotalNinoSZH      | 1226.379         | 1216.649         | 1224.506         | 1453.897         |
-| neutro / Subzona hidrográfica - SZH              | RainTotalNeutralSZH   | 1489.294         | 1450.687         | 1388.385         | 1874.819         |
-| **ETR Budyko**                                   |                       |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH           | ETRBudykoCompositeSZH | 927.518          | 1018.556         | 1035.483         | 1194.497         |
-| Niña / Subzona hidrográfica - SZH                | ETRBudykoNinaSZH      | 975.774          | 1083.929         | 1101.484         | 1266.270         |
-| Niño / Subzona hidrográfica - SZH                | ETRBudykoNinoSZH      | 846.433          | 925.474          | 956.467          | 1064.636         |
-| neutro / Subzona hidrográfica - SZH              | ETRBudykoNeutralSZH   | 933.802          | 1017.041         | 1027.893         | 1200.701         |
-| **ETR Dekop**                                    |                       |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH           | ETRDekopCompositeSZH  | 1009.092         | 1111.204         | 1123.905         | 1319.326         |
-| Niña / Subzona hidrográfica - SZH                | ETRDekopNinaSZH       |  1066.989        | 1191.660         | 1205.908         | 1406.253         |
-| Niño / Subzona hidrográfica - SZH                | ETRDekopNinoSZH       | 911.979          | 996.538          | 1026.379         | 1158.047         |
-| neutro / Subzona hidrográfica - SZH              | ETRDekopNeutralSZH    | 1016.598         | 1109.342         | 1114.481         | 1326.785         |
-| **ETR Turc**                                     |                       |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH           | ETRTurcCompositeSZH   | 988.219          | 1142.803         | 1181.816         | 1410.862         |
-| Niña / Subzona hidrográfica - SZH                | ETRTurcNinaSZH        | 1035.541         | 1219.644         | 1264.568         | 1507.486         |
-| Niño / Subzona hidrográfica - SZH                | ETRTurcNinoSZH        | 896.375          | 1027.607         | 1080.938         | 1231.332         |
-| neutro / Subzona hidrográfica - SZH              | ETRTurcNeutralSZH     | 988.173          | 1135.232         | 1167.591         | 1414.003         |
+
+| Fenómeno / Zona                        | Tabla zonal           | SZH 2801, mm/año<br>Alto Cesar | SZH 2802, mm/año<br>Medio Cesar | SZH 2804, mm/año<br>Río Ariguaní | SZH 2805, mm/añoBajo Cesar |
+|----------------------------------------|-----------------------|:------------------------------:|:-------------------------------:|:--------------------------------:|:--------------------------:|
+| **Precipitación**                      |                       |                                |                                 |                                  |                            |
+| Compuesto / Subzona hidrográfica - SZH | RainTotalCompositeSZH |            1465.465            |            1453.047             |             1405.987             |          1847.385          |
+| Niña / Subzona hidrográfica - SZH      | RainTotalNinaSZH      |            1634.776            |            1656.346             |             1583.920             |          2142.350          |
+| Niño / Subzona hidrográfica - SZH      | RainTotalNinoSZH      |            1226.379            |            1216.649             |             1224.506             |          1453.897          |
+| neutro / Subzona hidrográfica - SZH    | RainTotalNeutralSZH   |            1489.294            |            1450.687             |             1388.385             |          1874.819          |
+| **ETR Budyko**                         |                       |                                |                                 |                                  |                            |
+| Compuesto / Subzona hidrográfica - SZH | ETRBudykoCompositeSZH |            927.518             |            1018.556             |             1035.483             |          1194.497          |
+| Niña / Subzona hidrográfica - SZH      | ETRBudykoNinaSZH      |            975.774             |            1083.929             |             1101.484             |          1266.270          |
+| Niño / Subzona hidrográfica - SZH      | ETRBudykoNinoSZH      |            846.433             |             925.474             |             956.467              |          1064.636          |
+| neutro / Subzona hidrográfica - SZH    | ETRBudykoNeutralSZH   |            933.802             |            1017.041             |             1027.893             |          1200.701          |
+| **ETR Dekop**                          |                       |                                |                                 |                                  |                            |
+| Compuesto / Subzona hidrográfica - SZH | ETRDekopCompositeSZH  |            1009.092            |            1111.204             |             1123.905             |          1319.326          |
+| Niña / Subzona hidrográfica - SZH      | ETRDekopNinaSZH       |            1066.989            |            1191.660             |             1205.908             |          1406.253          |
+| Niño / Subzona hidrográfica - SZH      | ETRDekopNinoSZH       |            911.979             |             996.538             |             1026.379             |          1158.047          |
+| neutro / Subzona hidrográfica - SZH    | ETRDekopNeutralSZH    |            1016.598            |            1109.342             |             1114.481             |          1326.785          |
+| **ETR Turc**                           |                       |                                |                                 |                                  |                            |
+| Compuesto / Subzona hidrográfica - SZH | ETRTurcCompositeSZH   |            988.219             |            1142.803             |             1181.816             |          1410.862          |
+| Niña / Subzona hidrográfica - SZH      | ETRTurcNinaSZH        |            1035.541            |            1219.644             |             1264.568             |          1507.486          |
+| Niño / Subzona hidrográfica - SZH      | ETRTurcNinoSZH        |            896.375             |            1027.607             |             1080.938             |          1231.332          |
+| neutro / Subzona hidrográfica - SZH    | ETRTurcNeutralSZH     |            988.173             |            1135.232             |             1167.591             |          1414.003          |
 
 </div>
 
