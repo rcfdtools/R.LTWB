@@ -48,50 +48,50 @@ Ejemplo para evapotranspiración real en subzona hidrográfica
 
 Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la siguiente tabla y almacene dentro de la Geodatabase del proyecto _ArcGISProSection05.aprx_ en `D:\R.LTWB\\.map`. Registre los valores medios obtenidos.
 
-| Fenómeno / Zona                              | Tabla zonal           | Promedio general, mm/año | SZH 2801, mm/año | SZH 2802, mm/año | SZH 2804, mm/año | SZH 2805, mm/año |
-|----------------------------------------------|-----------------------|--------------------------|------------------|------------------|------------------|------------------|
-| **Precipitación zona de estudio**            |                       |                          |                  |                  |                  |                  |
-| Compuesto / Zona estudio - ZE                | RainTotalCompositeZE  | 1545.077                 |                  |                  |                  |                  |
-| Niña / Zona estudio - ZE                     | RainTotalNinaZE       | 1760.878                 |                  |                  |                  |                  |
-| Niño / Zona estudio - ZE                     | RainTotalNinoZE       | 1280.771                 |                  |                  |                  |                  |
-| neutro / Zona estudio - ZE                   | RainTotalNeutralZE    | 1550.741                 |                  |                  |                  |                  |
-| **Precipitación subzona hidrográfica**       |                       |                          |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH       | RainTotalCompositeSZH |                          |                  |                  |                  |                  |
-| Niña / Subzona hidrográfica - SZH            | RainTotalNinaSZH      |                          |                  |                  |                  |                  |
-| Niño / Subzona hidrográfica - SZH            | RainTotalNinoSZH      |                          |                  |                  |                  |                  |
-| neutro / Subzona hidrográfica - SZH          | RainTotalNeutralSZH   |                          |                  |                  |                  |                  |
-| **Evapotranspiración zona de estudio**       |                       |                          |                  |                  |                  |                  |
-| **Budyko**                                   |                       |                          |                  |                  |                  |                  |
-| Compuesto / Zona estudio - ZE                | ETRBudykoCompositeZE  |                          |                  |                  |                  |                  |
-| Niña / Zona estudio - ZE                     | ETRBudykoNinaZE       |                          |                  |                  |                  |                  |
-| Niño / Zona estudio - ZE                     | ETRBudykoNinoZE       |                          |                  |                  |                  |                  |
-| neutro / Zona estudio - ZE                   | ETRBudykoNeutralZE    |                          |                  |                  |                  |                  |
-| **Dekop**                                    |                       |                          |                  |                  |                  |                  |
-| Compuesto / Zona estudio - ZE                | ETRDekopCompositeZE   |                          |                  |                  |                  |                  |
-| Niña / Zona estudio - ZE                     | ETRDekopNinaZE        |                          |                  |                  |                  |                  |
-| Niño / Zona estudio - ZE                     | ETRDekopNinoZE        |                          |                  |                  |                  |                  |
-| neutro / Zona estudio - ZE                   | ETRDekopNeutralZE     |                          |                  |                  |                  |                  |
-| **Turc**                                     |                       |                          |                  |                  |                  |                  |
-| Compuesto / Zona estudio - ZE                | ETRTurcCompositeZE    |                          |                  |                  |                  |                  |
-| Niña / Zona estudio - ZE                     | ETRTurcNinaZE         |                          |                  |                  |                  |                  |
-| Niño / Zona estudio - ZE                     | ETRTurcNinoZE         |                          |                  |                  |                  |                  |
-| neutro / Zona estudio - ZE                   | ETRTurcNeutralZE      |                          |                  |                  |                  |                  |
-| **Evapotranspiración  subzona hidrográfica** |                       |                          |                  |                  |                  |                  |
-| **Budyko**                                   |                       |                          |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH       | ETRBudykoCompositeSZH |                          |                  |                  |                  |                  |
-| Niña / Subzona hidrográfica - SZH            | ETRBudykoNinaSZH      |                          |                  |                  |                  |                  |
-| Niño / Subzona hidrográfica - SZH            | ETRBudykoNinoSZH      |                          |                  |                  |                  |                  |
-| neutro / Subzona hidrográfica - SZH          | ETRBudykoNeutralSZH   |                          |                  |                  |                  |                  |
-| **Dekop**                                    |                       |                          |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH       | ETRDekopCompositeSZH  |                          |                  |                  |                  |                  |
-| Niña / Subzona hidrográfica - SZH            | ETRDekopNinaSZH       |                          |                  |                  |                  |                  |
-| Niño / Subzona hidrográfica - SZH            | ETRDekopNinoSZH       |                          |                  |                  |                  |                  |
-| neutro / Subzona hidrográfica - SZH          | ETRDekopNeutralSZH    |                          |                  |                  |                  |                  |
-| **Turc**                                     |                       |                          |                  |                  |                  |                  |
-| Compuesto / Subzona hidrográfica - SZH       | ETRTurcCompositeSZH   |                          |                  |                  |                  |                  |
-| Niña / Subzona hidrográfica - SZH            | ETRTurcNinaSZH        |                          |                  |                  |                  |                  |
-| Niño / Subzona hidrográfica - SZH            | ETRTurcNinoSZH        |                          |                  |                  |                  |                  |
-| neutro / Subzona hidrográfica - SZH          | ETRTurcNeutralSZH     |                          |                  |                  |                  |                  |
+| Fenómeno / Zona                             | Tabla zonal           | Promedio general, mm/año | SZH 2801, mm/año | SZH 2802, mm/año | SZH 2804, mm/año | SZH 2805, mm/año |
+|---------------------------------------------|-----------------------|--------------------------|------------------|------------------|------------------|------------------|
+| **Precipitación zona de estudio**           |                       |                          |                  |                  |                  |                  |
+| Compuesto / Zona estudio - ZE               | RainTotalCompositeZE  | 1545.077                 | N/A              | N/A              | N/A              | N/A              |
+| Niña / Zona estudio - ZE                    | RainTotalNinaZE       | 1760.878                 | N/A              | N/A              | N/A              | N/A              |
+| Niño / Zona estudio - ZE                    | RainTotalNinoZE       | 1280.771                 | N/A              | N/A              | N/A              | N/A              |
+| neutro / Zona estudio - ZE                  | RainTotalNeutralZE    | 1550.741                 | N/A              | N/A              | N/A              | N/A              |
+| **Precipitación subzona hidrográfica**      |                       |                          |                  |                  |                  |                  |
+| Compuesto / Subzona hidrográfica - SZH      | RainTotalCompositeSZH | N/A                      | 1465.465         | 1453.047         | 1405.987         | 1847.385         |
+| Niña / Subzona hidrográfica - SZH           | RainTotalNinaSZH      | N/A                      | 1634.776         | 1656.346         | 1583.920         | 2142.350         |
+| Niño / Subzona hidrográfica - SZH           | RainTotalNinoSZH      | N/A                      | 1226.379         | 1216.649         | 1224.506         | 1453.897         |
+| neutro / Subzona hidrográfica - SZH         | RainTotalNeutralSZH   | N/A                      | 1489.294         | 1450.687         | 1388.385         | 1874.819         |
+| **Evapotranspiración zona de estudio**      |                       |                          |                  |                  |                  |                  |
+| **Budyko**                                  |                       |                          |                  |                  |                  |                  |
+| Compuesto / Zona estudio - ZE               | ETRBudykoCompositeZE  | 1053.944                 | N/A              | N/A              | N/A              | N/A              |
+| Niña / Zona estudio - ZE                    | ETRBudykoNinaZE       | 1118.535                 | N/A              | N/A              | N/A              | N/A              |
+| Niño / Zona estudio - ZE                    | ETRBudykoNinoZE       | 956.504                  | N/A              | N/A              | N/A              | N/A              |
+| neutro / Zona estudio - ZE                  | ETRBudykoNeutralZE    | 1054.165                 | N/A              | N/A              | N/A              | N/A              |
+| **Dekop**                                   |                       |                          |                  |                  |                  |                  |
+| Compuesto / Zona estudio - ZE               | ETRDekopCompositeZE   | 1152.198                 | N/A              | N/A              | N/A              | N/A              |
+| Niña / Zona estudio - ZE                    | ETRDekopNinaZE        | 1231.288                 | N/A              | N/A              | N/A              | N/A              |
+| Niño / Zona estudio - ZE                    | ETRDekopNinoZE        | 1032.202                 | N/A              | N/A              | N/A              | N/A              |
+| neutro / Zona estudio - ZE                  | ETRDekopNeutralZE     | 1152.373                 | N/A              | N/A              | N/A              | N/A              |
+| **Turc**                                    |                       |                          |                  |                  |                  |                  |
+| Compuesto / Zona estudio - ZE               | ETRTurcCompositeZE    | 1197.412                 | N/A              | N/A              | N/A              | N/A              |
+| Niña / Zona estudio - ZE                    | ETRTurcNinaZE         | 1276.271                 | N/A              | N/A              | N/A              | N/A              |
+| Niño / Zona estudio - ZE                    | ETRTurcNinoZE         | 1072.555                 | N/A              | N/A              | N/A              | N/A              |
+| neutro / Zona estudio - ZE                  | ETRTurcNeutralZE      | 1192.169                 | N/A              | N/A              | N/A              | N/A              |
+| **Evapotranspiración subzona hidrográfica** |                       |                          |                  |                  |                  |                  |
+| **Budyko**                                  |                       |                          |                  |                  |                  |                  |
+| Compuesto / Subzona hidrográfica - SZH      | ETRBudykoCompositeSZH | N/A                      | 927.518          | 1018.556         | 1035.483         | 1194.497         |
+| Niña / Subzona hidrográfica - SZH           | ETRBudykoNinaSZH      | N/A                      | 975.774          | 1083.929         | 1101.484         | 1266.270         |
+| Niño / Subzona hidrográfica - SZH           | ETRBudykoNinoSZH      | N/A                      | 846.433          | 925.474          | 956.467          | 1064.636         |
+| neutro / Subzona hidrográfica - SZH         | ETRBudykoNeutralSZH   | N/A                      | 933.802          | 1017.041         | 1027.893         | 1200.701         |
+| **Dekop**                                   |                       |                          |                  |                  |                  |                  |
+| Compuesto / Subzona hidrográfica - SZH      | ETRDekopCompositeSZH  | N/A                      | 1009.092         | 1111.204         | 1123.905         | 1319.326         |
+| Niña / Subzona hidrográfica - SZH           | ETRDekopNinaSZH       | N/A                      | 1066.989         | 1191.660         | 1205.908         | 1406.253         |
+| Niño / Subzona hidrográfica - SZH           | ETRDekopNinoSZH       | N/A                      | 911.979          | 996.538          | 1026.379         | 1158.047         |
+| neutro / Subzona hidrográfica - SZH         | ETRDekopNeutralSZH    | N/A                      | 1016.598         | 1109.342         | 1114.481         | 1326.785         |
+| **Turc**                                    |                       |                          |                  |                  |                  |                  |
+| Compuesto / Subzona hidrográfica - SZH      | ETRTurcCompositeSZH   | N/A                      | 988.219          | 1142.803         | 1181.816         | 1410.862         |
+| Niña / Subzona hidrográfica - SZH           | ETRTurcNinaSZH        | N/A                      | 1035.541         | 1219.644         | 1264.568         | 1507.486         |
+| Niño / Subzona hidrográfica - SZH           | ETRTurcNinoSZH        | N/A                      | 896.375          | 1027.607         | 1080.938         | 1231.332         |
+| neutro / Subzona hidrográfica - SZH         | ETRTurcNeutralSZH     | N/A                      | 988.173          | 1135.232         | 1167.591         | 1414.003         |
 
 
 
