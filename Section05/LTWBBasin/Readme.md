@@ -94,29 +94,29 @@ Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la
 | neutro / Subzona hidrográfica - SZH              | ETRTurcNeutralSZH     | N/A                      | 988.173          | 1135.232         | 1167.591         | 1414.003         |
 
 
-| Fenómeno / Zona                                  | Tabla zonal           | Promedio general, mm/año |
-|--------------------------------------------------|-----------------------|--------------------------|
-| **Precipitación zona de estudio**                |                       |                          |
-| Compuesto / Zona estudio - ZE                    | RainTotalCompositeZE  | 1545.077                 |
-| Niña / Zona estudio - ZE                         | RainTotalNinaZE       | 1760.878                 |
-| Niño / Zona estudio - ZE                         | RainTotalNinoZE       | 1280.771                 |
-| neutro / Zona estudio - ZE                       | RainTotalNeutralZE    | 1550.741                 |
-| **Evapotranspiración real zona de estudio**      |                       |                          |
-| **Budyko**                                       |                       |                          |
-| Compuesto / Zona estudio - ZE                    | ETRBudykoCompositeZE  | 1053.944                 |
-| Niña / Zona estudio - ZE                         | ETRBudykoNinaZE       | 1118.535                 |
-| Niño / Zona estudio - ZE                         | ETRBudykoNinoZE       | 956.504                  |
-| neutro / Zona estudio - ZE                       | ETRBudykoNeutralZE    | 1054.165                 |
-| **Dekop**                                        |                       |                          |
-| Compuesto / Zona estudio - ZE                    | ETRDekopCompositeZE   | 1152.198                 |
-| Niña / Zona estudio - ZE                         | ETRDekopNinaZE        | 1231.288                 |
-| Niño / Zona estudio - ZE                         | ETRDekopNinoZE        | 1032.202                 |
-| neutro / Zona estudio - ZE                       | ETRDekopNeutralZE     | 1152.373                 |
-| **Turc**                                         |                       |                          |
-| Compuesto / Zona estudio - ZE                    | ETRTurcCompositeZE    | 1197.412                 |
-| Niña / Zona estudio - ZE                         | ETRTurcNinaZE         | 1276.271                 |
-| Niño / Zona estudio - ZE                         | ETRTurcNinoZE         | 1072.555                 |
-| neutro / Zona estudio - ZE                       | ETRTurcNeutralZE      | 1192.169                 |
+| Fenómeno / Zona                                  | Tabla zonal           | Promedio, mm/año |
+|--------------------------------------------------|-----------------------|:----------------:|
+| **Precipitación zona de estudio**                |                       |                  |
+| Compuesto / Zona estudio - ZE                    | RainTotalCompositeZE  |     1545.077     |
+| Niña / Zona estudio - ZE                         | RainTotalNinaZE       |     1760.878     |
+| Niño / Zona estudio - ZE                         | RainTotalNinoZE       |     1280.771     |
+| neutro / Zona estudio - ZE                       | RainTotalNeutralZE    |     1550.741     |
+| **Evapotranspiración real zona de estudio**      |                       |                  |
+| **Budyko**                                       |                       |                  |
+| Compuesto / Zona estudio - ZE                    | ETRBudykoCompositeZE  |     1053.944     |
+| Niña / Zona estudio - ZE                         | ETRBudykoNinaZE       |     1118.535     |
+| Niño / Zona estudio - ZE                         | ETRBudykoNinoZE       |     956.504      |
+| neutro / Zona estudio - ZE                       | ETRBudykoNeutralZE    |     1054.165     |
+| **Dekop**                                        |                       |                  |
+| Compuesto / Zona estudio - ZE                    | ETRDekopCompositeZE   |     1152.198     |
+| Niña / Zona estudio - ZE                         | ETRDekopNinaZE        |     1231.288     |
+| Niño / Zona estudio - ZE                         | ETRDekopNinoZE        |     1032.202     |
+| neutro / Zona estudio - ZE                       | ETRDekopNeutralZE     |     1152.373     |
+| **Turc**                                         |                       |                  |
+| Compuesto / Zona estudio - ZE                    | ETRTurcCompositeZE    |     1197.412     |
+| Niña / Zona estudio - ZE                         | ETRTurcNinaZE         |     1276.271     |
+| Niño / Zona estudio - ZE                         | ETRTurcNinoZE         |     1072.555     |
+| neutro / Zona estudio - ZE                       | ETRTurcNeutralZE      |     1192.169     |
 
 
 
