@@ -79,7 +79,7 @@ Ejemplo para evapotranspiración real por subzona hidrográfica
 <div align="center">
 
 **Subzona hidrográfica - SZH**
-| Fenómeno / Zona                                  | Tabla zonal           | SZH 2801, mm/año | SZH 2802, mm/año | SZH 2804, mm/año | SZH 2805, mm/año |
+| Fenómeno / Zona                                  | Tabla zonal           | SZH 2801, mm/año<br>Alto Cesar | SZH 2802, mm/año<br>Medio Cesar | SZH 2804, mm/año<br>Río Ariguaní | SZH 2805, mm/añoBajo Cesar |
 |--------------------------------------------------|-----------------------|:----------------:|:----------------:|:----------------:|:----------------:|
 | **Precipitación**                                |                       |                  |                  |                  |                  |
 | Compuesto / Subzona hidrográfica - SZH           | RainTotalCompositeSZH | 1465.465         | 1453.047         | 1405.987         | 1847.385         |
