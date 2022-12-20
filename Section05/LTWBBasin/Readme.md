@@ -40,17 +40,21 @@ Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediant
 
 3. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Zonal / Zonal Statistics as Table_, obtenga los estadísticos zonales para la zona de estudio a partir de los mapas de precipitación total y evapotranspiración real.
 
-![R.LTWB](Screenshot/ArcGISPro3.0.3ZonalStatisticsAsTable.png)
+Ejemplo para precipitación total compuesta en zona de estudio 
+![R.LTWB](Screenshot/ArcGISPro3.0.3ZonalStatisticsAsTableZE.png)
+
+Ejemplo para evapotranspiración real en subzona hidrográfica 
+![R.LTWB](Screenshot/ArcGISPro3.0.3ZonalStatisticsAsTableSZH.png)
 
 Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la siguiente tabla y almacene dentro de la Geodatabase del proyecto _ArcGISProSection05.aprx_ en `D:\R.LTWB\\.map`. Registre los valores medios obtenidos.
 
 | Fenómeno / Zona                              | Tabla zonal           | Promedio general, mm/año | SZH 2801, mm/año | SZH 2802, mm/año | SZH 2804, mm/año | SZH 2805, mm/año |
 |----------------------------------------------|-----------------------|--------------------------|------------------|------------------|------------------|------------------|
 | **Precipitación zona de estudio**            |                       |                          |                  |                  |                  |                  |
-| Compuesto / Zona estudio - ZE                | RainTotalCompositeZE  |                          |                  |                  |                  |                  |
-| Niña / Zona estudio - ZE                     | RainTotalNinaZE       |                          |                  |                  |                  |                  |
-| Niño / Zona estudio - ZE                     | RainTotalNinoZE       |                          |                  |                  |                  |                  |
-| neutro / Zona estudio - ZE                   | RainTotalNeutralZE    |                          |                  |                  |                  |                  |
+| Compuesto / Zona estudio - ZE                | RainTotalCompositeZE  | 1545.077                 |                  |                  |                  |                  |
+| Niña / Zona estudio - ZE                     | RainTotalNinaZE       | 1760.878                 |                  |                  |                  |                  |
+| Niño / Zona estudio - ZE                     | RainTotalNinoZE       | 1280.771                 |                  |                  |                  |                  |
+| neutro / Zona estudio - ZE                   | RainTotalNeutralZE    | 1550.741                 |                  |                  |                  |                  |
 | **Precipitación subzona hidrográfica**       |                       |                          |                  |                  |                  |                  |
 | Compuesto / Subzona hidrográfica - SZH       | RainTotalCompositeSZH |                          |                  |                  |                  |                  |
 | Niña / Subzona hidrográfica - SZH            | RainTotalNinaSZH      |                          |                  |                  |                  |                  |
