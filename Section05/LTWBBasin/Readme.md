@@ -121,7 +121,7 @@ Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de la
 | Niño / Zona estudio - ZE                         | ETRTurcNinoZE         |     1072.555     |
 | neutro / Zona estudio - ZE                       | ETRTurcNeutralZE      |     1192.169     |
 
-<div align="center">
+</div>
 
 
 
