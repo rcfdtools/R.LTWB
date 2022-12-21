@@ -77,15 +77,6 @@ En esta sección ejecutaremos el balance hidrológico distribuido, identificarem
 | [Mapa de isorendimiento medio](Section05/FlowPerformance)                                            | Utilizando los valores de caudal medio, número de celdas y área de aportación en las diferentes localizaciones de la red de drenaje, se construye el mapa de isorendimientos medios y se obtienen ecuaciones características que permiten estimar rendimientos en función del área de aportación.                                                                                                                              |
 | [Balance hidrológico a partir de cuencas delimitadas](Section05/LTWBBasin)<br>(_Versión borrador_)   | Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediante estadísticos zonales, estimar manualmente el balance hidrológico a partir de los mapas de precipitación media y evapotranspiración real.                                                                                                                                                                              |
 
-## Sección 6 - Modelos de pronóstico
-
-Para finalizar, en esta sección implementaremos modelos de pronóstico para evaluar el posible comportamiento futuro de las variables climatológicas utilizadas y su implicación en el balance.
-
-| Actividad                              | Alcance                                                                                                                                                                                                                                                                                                                          |
-|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Modelos de correlación lineal múltiple | A través del conocimiento adquirido en los diferentes procesos realizados para la obtención de los mapas de balance y el estudio de las series utilizadas, se puede evidenciar la correlación entre las variables y los fenómenos evaluados, permitiendo entender su dinámica para la implementación de un modelo de pronóstico. |
-| Modelos de inteligencia artificial     | Utilizando técnicas de inteligencia artificial para el análisis de series, implementar modelos que permitan realizar el pronóstico de las variables estudiadas para su posterior utilización en la realización de balances hidrológicos.                                                                                         |
-
 
 ##
 

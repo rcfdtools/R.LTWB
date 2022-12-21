@@ -49,6 +49,19 @@ Localización de puntos para lectura de caudales y áreas de aportación: Luego 
 
 Luego de la ejecución de diferentes geo-procesos durante el desarrollo del balance hidrológico, se pueden identificar diferentes etapas que pueden ser automatizadas mediante modeladores de procesos, simplificando su aplicación en otros casos de estudio.
 
+Nueva sección a implementar.
+## Sección 6 - Modelos de pronóstico
+
+Para finalizar, en esta sección implementaremos modelos de pronóstico para evaluar el posible comportamiento futuro de las variables climatológicas utilizadas y su implicación en el balance.
+
+| Actividad                              | Alcance                                                                                                                                                                                                                                                                                                                          |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Modelos de correlación lineal múltiple | A través del conocimiento adquirido en los diferentes procesos realizados para la obtención de los mapas de balance y el estudio de las series utilizadas, se puede evidenciar la correlación entre las variables y los fenómenos evaluados, permitiendo entender su dinámica para la implementación de un modelo de pronóstico. |
+| Modelos de inteligencia artificial     | Utilizando técnicas de inteligencia artificial para el análisis de series, implementar modelos que permitan realizar el pronóstico de las variables estudiadas para su posterior utilización en la realización de balances hidrológicos.                                                                                         |
+
+
+
+
 
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 
