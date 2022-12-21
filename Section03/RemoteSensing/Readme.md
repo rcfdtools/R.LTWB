@@ -1,5 +1,5 @@
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
-Keywords: `Remote-sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter plot` `pandas` `rasterio` `requests` `tabulate`
+Keywords: `Remote-sensing` `Chirps` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter-plot` `pandas` `rasterio` `requests` `tabulate`
 
 <div align="center"><img alt="R.LTWB" src="Graph/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br><br></div> 
 
