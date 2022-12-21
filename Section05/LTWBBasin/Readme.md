@@ -138,7 +138,11 @@ Resultados para el polígono de la zona de estudio - ZE
 Resultados en polígonos de subzonas hidrográficas - SZH
 ![R.LTWB](Screenshot/MicrosoftExcel365LTWBSZH.png)
 
-En este momento dispone para la zona de estudio, de un mapa de isorendimientos que permite entender la relación entre las acumulaciones de flujo y los valores obtenidos de caudal medio.
+Como puede observar en los resultados, los caudales medios obtenidos por fenómeno a partir del mapa de evapotranspiración real de Budyko, son mayores a los obtenidos por el Dekop y Turc. Para el área de aportación de 22892.03 km² de la zona de estudio, se ha obtenido un caudal medio compuesto por Budyko de 356.51 m³/s.
+ 
+Con respecto a las subzonas hidrográficas, Bajo Cesar identificada con el código 2805 y área de aportación de 5869.81 km², no es la subzona de mayor extensión pero si la subzona con mayor oferta hídrica superficial, con un caudal medio compuesto por Budyko de 121.52 m³/s. 
+
+En este momento dispone de valores de caudal medio obtenidos del balance hidrológico de largo plazo para el polígono que delimita la zona de estudio y por subzona hidrográfica.
 
 
 ### Actividades complementarias:pencil2:
