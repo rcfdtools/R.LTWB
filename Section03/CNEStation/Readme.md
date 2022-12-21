@@ -1,5 +1,5 @@
 ## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
-Keywords: `IDEAM` `Weather Station` `Display XY Data` `Buffer` `Merge` `Bar graph` `Select By Location` `Python` `LYearS` `LYearSTW` `Definition Query` `Normal distribution` `Statistics`
+Keywords: `IDEAM` `Weather-station` `Display-XY-Data` `Buffer` `Merge` `Bar-graph` `Select-By-Location` `Python` `LYearS` `LYearSTW` `Definition-Query` `Normal-distribution` `Statistics`
 
 ![R.LTWB](Graph/CNEStation.png)
 

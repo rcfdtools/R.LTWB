@@ -1,5 +1,5 @@
 ## Análisis de cambio climático para segmentación de series
-Keywords: `ENSO` `ONI` `El Niño` `La Niña` `Neutro` `matplotlib` `pandas` `numpy` 
+Keywords: `ENSO` `ONI` `El-Niño` `La-Niña` `Neutro` `matplotlib` `pandas` `numpy` 
 
 <div align="center"><img alt="R.LTWB" src="Graph/ENSOONI.png" width="95%"></div> 
 

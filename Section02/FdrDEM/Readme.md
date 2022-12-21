@@ -1,5 +1,5 @@
 ##  Direcciones de Flujo – Flow Direction – FDR
-Keywords: `FDR DEM` `Flow-direction` `Fill-DEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
+Keywords: `FDR-DEM` `Flow-direction` `Fill-DEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
 
 ![R.LTWB](Graph/FdrDEM.png)
 
