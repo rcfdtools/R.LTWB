@@ -1,5 +1,5 @@
 ## Balance hidrológico a partir de cuencas delimitadas
-Keywords: `LTWB` `Flow` `Zonal-statistics-as-table`
+Keywords: `LTWB` `Flow` `Zonal-statistics-as-table` `Add-field` `Calculate-geometry`
 
 ![R.LTWB](Graph/LTWBBasin.png)
 
@@ -25,7 +25,7 @@ Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediant
 ### Procedimiento general
 
 <div align="center">
-<br><img alt="R.LTWB" src="Graph/LTWBBasin.svg" width="65%"><br>
+<br><img alt="R.LTWB" src="Graph/LTWBBasin.svg" width="85%"><br>
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
@@ -150,15 +150,16 @@ En este momento dispone de valores de caudal medio obtenidos del balance hidrol�
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance |
-|:---------:|:--------|
-|     1     | xxx     |
-|     2     | xxx     |
+| Actividad | Alcance                                                                                                                                                                                   |
+|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Para los métodos de evapotranspiración real asignados como actividad complementaria en la sección 4, realice el balance hidrológico por cuencas delimitadas.                              |
+|     2     | Compare los valores de los métodos complementarios con los obtenidos en la presente actividad e indique y justifique cuales caudales utilizaría para el diseño de estructuras ecológicas. |
 
 
 ### Referencias
 
-* 
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/zonal-statistics-as-table.htm
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-geometry-attributes.htm
 
 
 ### Compatibilidad
@@ -168,9 +169,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción | Autor                                     | Horas |
-|------------|:------------|-------------------------------------------|:-----:|
-| 2022.12.20 | xxx         | [rcfdtools](https://github.com/rcfdtools) |   x   |
+| Versión    | Descripción                                                                                                                                    | Autor                                     | Horas |
+|------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2022.12.21 | Libro de Microsoft Excel con balance hidrológico zona de estudio y por subzonas hidrográficas. Ilustración cabecera y diagrama de procesos.    | [rcfdtools](https://github.com/rcfdtools) |   3   |
+| 2022.12.20 | Documentación. Estadísticas zonales como tabla para precipitación total y evapotranspiración potencial compuesta y por fenómeno climatológico. | [rcfdtools](https://github.com/rcfdtools) |   4   |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
