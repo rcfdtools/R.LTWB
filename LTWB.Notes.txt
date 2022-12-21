@@ -1,5 +1,5 @@
 Long-term water balance
-Clasees: 24 de 35 a 2022.12.12
+Clases: 28 de 32 a 2022.12.21
 Fecha entrega: 2023.02.28
 
 R.LTWB
@@ -21,21 +21,15 @@ https://github.com/uecijg-ceh
 :open_file_folder:
 
 Pending tasks
-    Remove personal name from all the ArcGIS Pro screenshots.
+    Keywords with - separators
+	Remove personal name from all the ArcGIS Pro screenshots.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, puntual.
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
-	Python script for flow direction conversion HEC-HMS to ArcGIS.
-	Correlation test for weather variables.
-	At the end of each class show a table with all the created files.
 	https://blog.ciat.cgiar.org/es/rclimtool-una-aplicacion-libre-para-el-llenado-y-analisis-de-datos-de-clima/
 
-CNE_IDEAM_OE_ZE.shp
-Extract Values to Points
-Extract Multi Values to Points
 
-
-La automatización Python ha sido integrada en diferentes secciones del curso. Los modeladores de procesos han sido asignados como actividad complementaria de investigación e implementación.
+Atención: la automatización Python ha sido integrada en diferentes secciones del curso. Los modeladores de procesos han sido asignados como actividad complementaria de investigación e implementación.
 ## Sección xxx - Automatización de procesos geográficos
 
 En esta sección implementaremos modeladores de procesos y scripts para automatizar algunas de las actividades desarrolladas a lo largo del curso que facilitaran su replicación a otros casos de estudio o a proyectos particulares.
