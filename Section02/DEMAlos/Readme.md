@@ -1,5 +1,5 @@
 ## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
-Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell script .sh` `Earthdata` `Mosaic to New Raster`
+Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster`
 
 ![R.LTWB](Graph/DEMAlos.png)
 

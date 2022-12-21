@@ -1,5 +1,5 @@
 ## Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
-Keywords: `IGAC` `GDB` `1:100000` `Pairwise Clip` `Clip` `Polygon to Centerline` `Merge` `HCMGIS` `Skeleton Medial Axis` `Edit` `Extend`
+Keywords: `IGAC` `GDB` `1:100000` `Pairwise-Clip` `Clip` `Polygon-to-Centerline` `Merge` `HCMGIS` `Skeleton-Medial-Axis` `Edit` `Extend`
 
 ![R.LTWB](Graph/GDB100k.png)
 
