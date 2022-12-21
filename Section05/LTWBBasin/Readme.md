@@ -16,6 +16,7 @@ Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediant
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
+* Polígono envolvente que delimita la zona de estudio. [:mortar_board:Aprender.](../../Section01/CaseStudy)
 * Subzonas hidrográficas IDEAM - Colombia. [:mortar_board:Aprender.](../../Section01/CaseStudy) 
 * Mapas de precipitación total. [:mortar_board:Aprender.](../../Section04/Rain)
 * Mapa de evapotranspiración real. [:mortar_board:Aprender.](../../Section04/ETR)
@@ -40,10 +41,11 @@ Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediant
 
 3. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Zonal / Zonal Statistics as Table_, obtenga los estadísticos zonales para la zona de estudio a partir de los mapas de precipitación total y evapotranspiración real.
 
-Ejemplo para precipitación total compuesta en zona de estudio 
+Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de las siguientes tablas y almacene dentro de la Geodatabase del proyecto _ArcGISProSection05.aprx_ en `D:\R.LTWB\\.map`. Registre los valores medios obtenidos.
+
+Ejemplo para precipitación total compuesta en zona de estudio
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ZonalStatisticsAsTableZE.png)
 
-Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de las siguientes tablas y almacene dentro de la Geodatabase del proyecto _ArcGISProSection05.aprx_ en `D:\R.LTWB\\.map`. Registre los valores medios obtenidos.
 
 <div align="center">
 
@@ -106,6 +108,35 @@ Ejemplo para evapotranspiración real por subzona hidrográfica
 
 </div>
 
+4. En las tablas de atributos de las capas ZonaEstudio.shp y Zonificacion_hidrografica_2013.shp, cree un campo de atributos numérico doble con el nombre `Am2` y a través del calculador de geometría de campo, calcule el área planar en m² de cada polígono. Utilice para la medición el sistema de coordenadas 9377.
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3CalculateGeometryZE.png)
+
+![R.LTWB](Screenshot/ArcGISPro3.0.3CalculateGeometrySZH.png)
+
+5. Una vez obtenidos los valores promedio de precipitación, evaporación y áreas de aportación por polígono, en un libro de Microsoft Excel, realice el cálculo del balance hidrológico.
+
+<div align="center">
+
+Qm = (( P – E ) * A) / t
+
+</div>
+
+Donde,
+
+* Qm: caudal medio, m³/s
+* P: precipitación, mm/año
+* E: evapotranspiración real, mm/año
+* A: área de cada celda, m²
+* t: tiempo en segundos en un año, (365 dias x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
+
+Ejemplo de formulación en Excel: `=((D4-D8)/1000)*$D$2/(365*24*60*60)`
+
+Resultados para el polígono de la zona de estudio - ZE
+![R.LTWB](Screenshot/MicrosoftExcel365LTWBZH.png)
+
+Resultados en polígonos de subzonas hidrográficas - SZH
+![R.LTWB](Screenshot/MicrosoftExcel365LTWBSZH.png)
 
 En este momento dispone para la zona de estudio, de un mapa de isorendimientos que permite entender la relación entre las acumulaciones de flujo y los valores obtenidos de caudal medio.
 
