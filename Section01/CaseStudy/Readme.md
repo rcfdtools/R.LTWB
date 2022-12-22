@@ -40,12 +40,16 @@ Para la definición de la zona de estudio es necesario descargar la zonificació
 
 Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la red de estaciones terrestres hidroclimatológicas del [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia](http://www.ideam.gov.co/). A nivel particular se estudiará a detalle la zona hidrográfica 28, denominada _Cesar_ que hace parte del área hidrográfica principal 2, correspondiente a _Magdalena - Cauca_ que se compone de las siguientes subzonas:
 
+<div align="center">
+
 | SZH  | Subzona Hidrográfica |
 |------|----------------------|
 | 2801 | Alto Cesar           |
 | 2802 | Medio Cesar          |
 | 2804 | Río Ariguaní         |
 | 2805 | Bajo Cesar           |
+
+</div>
 
 > Estudiantes que aplicaron para curso certificado, desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
@@ -56,6 +60,8 @@ La zonificación hidrográfica de Colombia desde el punto de vista hidrológico,
 
 La zonificación de cuencas hidrográficas corresponde a tres niveles de jerarquía: áreas, zonas y subzonas hidrográficas. Las áreas hidrográficas corresponden a las regiones hidrográficas o vertientes que, en sentido estricto, son las grandes cuencas que agrupan un conjunto de ríos con sus afluentes que desembocan en un mismo mar. Ahora bien, en Colombia se distinguen cuatro vertientes, dos de ellas asociadas a ríos de importancia continental (vertiente del Orinoco y vertiente del Amazonas) y las vertientes del Atlántico y del Pacífico. Se delimita adicionalmente como áea hidrográfica la cuenca Magdalena-Cauca, que aunque tributa y forma parte de la vertiente del Atlántico, tiene importancia socioeconómica por su alto poblamiento y aporte al producto interno bruto.[^2]
 
+<div align="center">
+
 | AH  | Área Hidrográfica |
 |-----|-------------------|
 | 1   | Caribe            |
@@ -64,9 +70,13 @@ La zonificación de cuencas hidrográficas corresponde a tres niveles de jerarqu
 | 4   | Amazonas          |
 | 5   | Pacífico          |
 
+</div>
+
 ![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/ZonaHidrografica2013.png)
 
 Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales directamente de una área hidrográfica se denominaran zonas hidrográficas. Agrupan varias cuencas que se presentan como un subsistema hídrico con características de relieve y drenaje homogéneo y sus aguas tributan a través de un afluente principal hacia un área hidrográfica. Están integradas por cuencas de las partes altas, medias o bajas de una zona hidrográfica que captan agua y sedimentos de los tributarios de diferente orden tales como nacimientos de agua, arroyos, quebradas y ríos. Las cuencas que tributan sus aguas a su vez a las zonas hidrográficas se denomina subzonas hidrográficas. Ahora bien, respecto a la toponimia con que se identifican zonas y subzonas hidrográficas, a estas unidades se les asignó la toponimia de acuerdo con el nombre de la corriente más representativa o río principal o con el nombre heredado de la zonificación del HIMAT, que puede corresponder al espacio geográfico o región a la cual drenan las aguas superficiales.[^2]
+
+<div align="center">
 
 | AH  | Área Hidrográfica | ZH  | Zona Hidrográfica                  |
 |-----|-------------------|-----|------------------------------------|
@@ -110,6 +120,8 @@ Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales dir
 | 5   | Pacífico          | 55  | Baudó - Directos Pacífico          |
 | 5   | Pacífico          | 56  | Pacífico - Directos                |
 | 5   | Pacífico          | 57  | Islas del Pacífico                 |
+
+</div>
 
 > En el presente análisis no se han incluido resultados para la ZH - zona hidrográfica 57, correspondiente a las Islas del Pacífico, debido a que la capa geográfica SZH - subzonas hidrográficas no contiene el polígono de delimitación. 
 
