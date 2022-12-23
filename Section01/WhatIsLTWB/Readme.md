@@ -15,8 +15,8 @@ Los balances hidrológicos de largo plazo son frecuentemente utilizados en estud
 * Estimar el caudal medio superficial disponible en cuencas hidrográficas o en localizaciones particulares de la red de drenaje.
 * Obtener ecuaciones características que relacionan áreas de aportación vs. caudales medios.
 * Estimar isorendimientos medios.
-* Estimarcaudales ecológicos.
 * Estimar caudales para concesión por captación y vertimiento.
+* Estimar caudales ecológicos.
 * Obtener valores de referencia para el diseño de estructuras ecológicas.
 
 
@@ -42,6 +42,8 @@ Donde,
 * A: área de cada celda, m²
 * t: tiempo en segundos en un año, (365 dias x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
 
+El cálculo computacional del LTWB, puede ser desarrollado con cualquier software SIG que disponga de herramientas para reacondicionamiento de modelos de terreno, creación de mosaicos, algebra de mapas y herramientas de análisis espacial. Algunas de las actividades de este curso han sido desarrolladas utilizando QGIS, ArcGIS for Desktop, ArcGIS Pro, HEC-GeoHMS y HEC-HMS.
+
 
 ### Precipitación [^1]
 
@@ -64,11 +66,6 @@ En general cuando se aborda el tema de la evapotranspiración real, se hace refe
 * [Unesco. (1981). Métodos de cálculo del balance hídrico.](https://unesdoc.unesco.org/ark:/48223/pf0000137771)
 * [UPM. Evapotranspiración real](http://ocw.upm.es/pluginfile.php/675/mod_label/intro/Evapotranspiracion-real.pdf)
 
-
-### Compatibilidad
-
-* Este curso puede ser desarrollado con cualquier software SIG que disponga de herramientas para reacondicionamiento de modelos de terreno, creación de mosaicos, algebra de mapas y herramientas de análisis espacial. Algunas de las actividades han sido desarrolladas utilizando QGIS, ArcGIS for Desktop y ArcGIS Pro.
- 
 
 ### Control de versiones
 
