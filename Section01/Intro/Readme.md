@@ -3,7 +3,7 @@ Keywords: `Long-term-water-balance` `Hydrology` `Evapotranspiration` `Rain` `Are
 
 <div align="center"><br><img alt="R.LTWB" src="Graph/Intro.png" width="75%"><br></div>
 
-Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG. Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas que podrá aplicar en proyectos y casos de estudio propios.
+Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG. Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
 
 ## Objetivos generales
