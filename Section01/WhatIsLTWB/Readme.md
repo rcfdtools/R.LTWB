@@ -70,9 +70,10 @@ En general cuando se aborda el tema de la evapotranspiración real, se hace refe
 
 ### Control de versiones
 
-| Versión    | Descripción     | Autor                                      | Horas |
-|------------|:----------------|--------------------------------------------|:-----:|
-| 2022.12.22 | Versión inicial | [rcfdtools](https://github.com/rcfdtools)  |   0   |
+| Versión    | Descripción                            | Autor                                      | Horas |
+|------------|:---------------------------------------|--------------------------------------------|:-----:|
+| 2022.12.23 | Documentación.                         | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.12.22 | Versión inicial, inicio documentación. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
