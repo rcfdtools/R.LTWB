@@ -38,6 +38,7 @@ Los contenidos presentados en este curso, están dirigidos a estudiantes y profe
 
 * Estudiantes de pregrado y posgrado en ingeniería.
 * Ingenieros y especialistas.
+* Técnicos y tecnólogos en ingeniería civil y afines. 
 * Funcionarios públicos con conocimientos en hidrología.
 * Gestores territoriales con conocimientos en hidrología.
 
