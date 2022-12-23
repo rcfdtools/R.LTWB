@@ -27,14 +27,7 @@ Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimaci�
 
 El curso inicia con una introducción y explicación general metodología, requerimientos y herramientas computacionales a emplear. Luego, cada estudiante procede al desarrollo de las diferentes actividades prácticas documentadas en cada sección a través de un caso de estudio general, correspondiente a la estimación del balance hidrológico en la Zona Hidrográfica 28 del IDEAM, de la cuenca del Río Cesar.
 
-Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas de Colombia - Suramérica, los cuales son asignados por el tutor.
-
-
-## Estructura de directorios
-
-
-
-
+Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas de Colombia - Suramérica, los cuales son asignados por el instructor.
 
 
 
@@ -49,6 +42,8 @@ Los contenidos presentados en este curso, están dirigidos a estudiantes y profe
 * Gestores territoriales con conocimientos en hidrología.
 
 Es requerido un nivel básico del idioma inglés debido a que utilizaremos las interfaces de usuario y programación en Python en este idioma.
+
+## Estructura de directorios
 
 
 ### Control de versiones
