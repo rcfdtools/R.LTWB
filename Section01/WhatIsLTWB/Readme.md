@@ -10,6 +10,8 @@ Para la ejecución completa de un balance hidrológico de largo plazo a nivel an
 
 ## Utilidad y campo de aplicación de los LTWB en ingeniería
 
+Los balances hidrológicos de largo plazo son frecuentemente utilizados en estudios hidrológicos y ambientales debido a través de ellos se puede realizar: 
+
 * Estimación del caudal medio superficial disponible en cuencas hidrográficas o en localizaciones particulares de la red de drenaje.
 * Obtención de ecuaciones características relacionando áreas de aportación vs. caudales medios.
 * Estimación de isorendimientos medios.
