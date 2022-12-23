@@ -62,12 +62,12 @@ Cuanto mayor es la evapotranspiración real de una zona mayor es la formación d
 ### Referencias
 
 * [Unesco. (1981). Métodos de cálculo del balance hídrico.](https://unesdoc.unesco.org/ark:/48223/pf0000137771)
-* 
+* [UPM. Evapotranspiración real](http://ocw.upm.es/pluginfile.php/675/mod_label/intro/Evapotranspiracion-real.pdf)
 
 
 ### Compatibilidad
 
-* Este curso puede ser desarrollado con cualquier software SIG que disponga de herramientas para reacondicionamiento de modelos de terreno, creación de mosaicos, algebra de mapas y herramientas de análisis espacial.
+* Este curso puede ser desarrollado con cualquier software SIG que disponga de herramientas para reacondicionamiento de modelos de terreno, creación de mosaicos, algebra de mapas y herramientas de análisis espacial. Algunas de las actividades han sido desarrolladas utilizando QGIS, ArcGIS for Desktop y ArcGIS Pro.
  
 
 
