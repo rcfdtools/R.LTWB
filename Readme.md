@@ -30,7 +30,7 @@ Este curso ha sido dividido en diferentes secciones y actividades secuenciales, 
 
 El curso inicia con una introducción y explicación general de la metodología, requerimientos y herramientas computacionales a emplear. Luego, cada estudiante procede al desarrollo de las diferentes actividades prácticas documentadas en cada sección a través de un caso de estudio general, correspondiente a la estimación del balance hidrológico en la Zona Hidrográfica 28 del IDEAM, de la cuenca del Río Cesar - Colombia - Suramérica.
 
-:1st_place_medal: Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas, las cuales son asignados por el instructor. Para el desarrollo de las diferentes entregas de avance, los estudiantes deben crear un repositorio en GitHUB siguiendo la misma estructura de este curso. Aprende como a través de la [:mortar_board:Guía para enseñanza e investigación colaborativa con GitHUB.](https://github.com/rcfdtools/R.TeachingResearchGuide).
+:1st_place_medal: Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas, las cuales son asignados por el instructor. Para el desarrollo de las diferentes entregas de avance, los estudiantes deben crear un repositorio siguiendo la misma estructura de este curso. Aprende como a través de la [:mortar_board:Guía para enseñanza e investigación colaborativa con GitHUB.](https://github.com/rcfdtools/R.TeachingResearchGuide).
 
 
 ## Dirigido a
