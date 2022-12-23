@@ -1,5 +1,5 @@
 ## ¿Qué son y para qué sirven los balances hidrológicos de largo plazo – LTWB?
-Keywords: `Long-term-water-balance` `Hydraulics` `Hydrology`
+Keywords: `Long-term-water-balance` `Hydrology` `Evapotranspiration` `Rain` `Area`
 
 ![R.LTWB](Graph/WhatIsLTWB.png)
 
