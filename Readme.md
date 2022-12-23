@@ -3,6 +3,8 @@
   <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
 </div>
 
+<div align="center"><br><img alt="R.LTWB" src=".icons/WhatIsLTWB.png" width="75%"><br></div>
+
 _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. Es este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
@@ -30,7 +32,7 @@ Este curso ha sido dividido en diferentes secciones y actividades secuenciales, 
 
 El curso inicia con una introducción y explicación general de la metodología, requerimientos y herramientas computacionales a emplear. Luego, cada estudiante procede al desarrollo de las diferentes actividades prácticas documentadas en cada sección a través de un caso de estudio general, correspondiente a la estimación del balance hidrológico en la Zona Hidrográfica 28 del IDEAM, de la cuenca del Río Cesar - Colombia - Suramérica.
 
-:1st_place_medal: Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas, las cuales son asignados por el instructor. Para el desarrollo de las diferentes entregas de avance, los estudiantes deben crear un repositorio siguiendo la misma estructura de este curso. Aprende como a través de la [:mortar_board:Guía para enseñanza e investigación colaborativa con GitHUB.](https://github.com/rcfdtools/R.TeachingResearchGuide).
+:1st_place_medal: Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas, las cuales son asignados por el instructor. Para el desarrollo de las diferentes entregas de avance, los estudiantes deben crear un repositorio siguiendo la misma estructura de este curso. Aprende como a través de la [:mortar_board:Guía para enseñanza e investigación colaborativa con GitHUB.](https://github.com/rcfdtools/R.TeachingResearchGuide)
 
 
 ## Dirigido a
