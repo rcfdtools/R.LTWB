@@ -47,7 +47,7 @@ El cálculo computacional del LTWB, puede ser desarrollado con cualquier softwar
 
 ### Precipitación [^1]
 
-La precipitación es normalmente, la única fuente de humedad que tiene la capa superficial del suelo y por eso es conveniente que su medida y cálculo se hagan con gran precisión, pues de ello depende, en gran manera, la exactitud de todos los cálculos del balance hídrico.
+La precipitación es normalmente, la única fuente de humedad que tiene la capa superficial del suelo y por eso es conveniente que su medida y cálculo se hagan con gran precisión, pues de ello depende, en gran manera, la exactitud de todos los cálculos del balance hidrológico.
 
 La cantidad media de precipitación en una cuenca o en cualquier otra zona, se obtiene a partir de los datos de pluviómetros, pluviógrafos o totalizadores instalados en la zona en estudio.
 
@@ -65,6 +65,7 @@ En general cuando se aborda el tema de la evapotranspiración real, se hace refe
 
 * [Unesco. (1981). Métodos de cálculo del balance hídrico.](https://unesdoc.unesco.org/ark:/48223/pf0000137771)
 * [UPM. Evapotranspiración real](http://ocw.upm.es/pluginfile.php/675/mod_label/intro/Evapotranspiracion-real.pdf)
+* [Sociedad Geográfica de Lima. (2011). Balance hídrico superficial.](https://www.gwp.org/globalassets/global/gwp-sam_files/publicaciones/varios/balance_hidrico.pdf)
 
 
 ### Control de versiones
@@ -82,4 +83,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 |-------------------------------|---------------------------|------------------------------------------------------------------------|-----------------------------|
 
 [^1]: Tomado o adaptado de: [Unesco. (1981). Métodos de cálculo del balance hídrico.](https://unesdoc.unesco.org/ark:/48223/pf0000137771)
-[^2]: Tomado o adaptado de: http://ocw.upm.es/pluginfile.php/675/mod_label/intro/Evapotranspiracion-real.pdf
+[^2]: Tomado o adaptado de: [UPM. Evapotranspiración real](http://ocw.upm.es/pluginfile.php/675/mod_label/intro/Evapotranspiracion-real.pdf)
