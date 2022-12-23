@@ -26,7 +26,7 @@ Para la estimación de caudales medios, se realiza un balance hidrológico de la
 
 > Es importante tener en cuenta que en algunas zonas particulares, se pueden obtener déficits debido a que el valor estimado o medido de la evapotranspiración puede ser mayor al valor de precipitación disponible.
 
-La siguiente expresión permite determinar el caudal medio en cada celda de terreno, en el que, al valor estimado de precipitación, se le resta la abstracción correspondiente a la evapotranspiración real. El valor correspondiente al área sobre el cual se estima el caudal, corresponde al total de celdas convergentes (en cada localizacioón del terreno) multiplicadas por el tamaño de cada pixel, el cual es definido por la resolución espacial de las grillas utilizadas.
+La siguiente expresión permite determinar el caudal medio en cada celda de terreno, en el que, al valor estimado de precipitación, se le resta la abstracción correspondiente a la evapotranspiración real. El valor correspondiente al área sobre la cual se estima el caudal, corresponde al total de celdas convergentes (en cada localización del terreno) multiplicadas por el tamaño de cada pixel, el cual es definido por la resolución espacial de las grillas utilizadas.
 
 <div align="center">
 
@@ -47,18 +47,16 @@ Donde,
 
 La precipitación es normalmente, la única fuente de humedad que tiene la capa superficial del suelo y por eso es conveniente que su medida y cálculo se hagan con gran precisión, pues de ello depende, en gran manera, la exactitud de todos los cálculos del balance hídrico.
 
-La cantidad media de precipitación en una cuenca o en cualquier otra zona, se obtiene a partir de los datos de pluviómetros, pluviógrafos o totalizadores instalados en la zona en estudio. Cuanto más corto sea el período de cálculo del balance hídrico, más densa debe ser la red de medida de la precipitación.
+La cantidad media de precipitación en una cuenca o en cualquier otra zona, se obtiene a partir de los datos de pluviómetros, pluviógrafos o totalizadores instalados en la zona en estudio.
 
-Para calcular balances hídricos medios son necesarias series extensas de precipitación (alrededor de 25 - 50 años). Para estimar los datos que faltan es aconsejable establecer relaciones de datos observados en estaciones vecinas o usar correlaciones.
+Para calcular balances hidrológicos medios son necesarias series extensas de precipitación (alrededor de 25 - 50 años). Para estimar los datos que faltan es aconsejable establecer relaciones de datos observados en estaciones vecinas o usar correlaciones.
 
 
 ### Evapotranspiración [^2]
 
-En los balances hidrológicos de largoplazo, la evapotranspiración real es la cantidad de agua, expresada en mm/año, que es efectivamente evaporada desde la superficie del suelo y transpirada por la cubierta vegetal. 
+En los balances hidrológicos de largo plazo, la evapotranspiración real es la cantidad de agua, expresada en mm/año, que es efectivamente evaporada desde la superficie del suelo y transpirada por las coberturas vegetales. 
 
-En general cuando se aborda el punto de la evapotranspiración real se hace referencia a la que se obtiene en un balance de humedad en el suelo. En un balance hídrico, la evapotranspiración potencial (o de referencia) solo se lleva a cabo cuando el suelo dispone de bastante agua para suplirla, de modo que en los períodos sin humedad en el suelo el valor de la pérdida de humedad puede ser menor que el calculado, es lo que se conoce como evapotranspiración real, que para un mes en concreto sería la suma de la precipitación en ese periodo y la reserva de agua del suelo al inicio del mismo. Únicamente cuando el valor anterior supera a la evaporación potencial (o referencia), puede satisfacerse esta y, en este caso, coincide con la real, el exceso de agua permanece como reserva del suelo. En los períodos más húmedos, dicho exceso, puede superar a la capacidad de reserva y existirá una evacuación de la sobrante por drenaje o escorrentía superficial si la permeabilidad del suelo es inferior a la intensidad de la precipitación.
-
-Cuanto mayor es la evapotranspiración real de una zona mayor es la formación de biomasa vegetal en la misma, si bien existe una limitación en función de la fertilidad del suelo, que podría constituirse en el factor limitante del crecimiento. 
+En general cuando se aborda el tema de la evapotranspiración real, se hace referencia a la que se obtiene en un balance de humedad en el suelo. En un balance hidrológico, la evapotranspiración potencial (o de referencia) solo se lleva a cabo cuando el suelo dispone de bastante agua para suplirla, de modo que en los períodos sin humedad en el suelo el valor de la pérdida de humedad puede ser menor que el calculado, es lo que se conoce como evapotranspiración real, que para un año en concreto sería la suma de la precipitación en ese periodo y la reserva de agua del suelo al inicio del mismo. Únicamente cuando el valor anterior supera a la evaporación potencial (o de referencia), puede satisfacerse esta y, en este caso, coincide con la real, el exceso de agua permanece como reserva del suelo. En los períodos más húmedos, dicho exceso, puede superar a la capacidad de reserva y existirá una evacuación de la sobrante por drenaje o escorrentía superficial si la permeabilidad del suelo es inferior a la intensidad de la precipitación o si el suelo se encuentra completamente saturado.
 
 
 ### Referencias
@@ -72,7 +70,6 @@ Cuanto mayor es la evapotranspiración real de una zona mayor es la formación d
 * Este curso puede ser desarrollado con cualquier software SIG que disponga de herramientas para reacondicionamiento de modelos de terreno, creación de mosaicos, algebra de mapas y herramientas de análisis espacial. Algunas de las actividades han sido desarrolladas utilizando QGIS, ArcGIS for Desktop y ArcGIS Pro.
  
 
-
 ### Control de versiones
 
 | Versión    | Descripción     | Autor                                      | Horas |
@@ -84,8 +81,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../xxxx) | [Inicio](../../) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/99999) | [Actividad siguiente]()  |
-|-------------------------------|------------------|---------------------------------------------------------------------------|--------------------------|
+| [Actividad anterior](../xxxx) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/38) | [Actividad siguiente](../Requirement) |
+|-------------------------------|---------------------------|------------------------------------------------------------------------|-----------------------------|
 
 [^1]: Tomado o adaptado de: [Unesco. (1981). Métodos de cálculo del balance hídrico.](https://unesdoc.unesco.org/ark:/48223/pf0000137771)
 [^2]: Tomado o adaptado de: http://ocw.upm.es/pluginfile.php/675/mod_label/intro/Evapotranspiracion-real.pdf
