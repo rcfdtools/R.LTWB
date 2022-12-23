@@ -1,7 +1,7 @@
 ## ¿Qué son y para qué sirven los balances hidrológicos de largo plazo – LTWB?
 Keywords: `Long-term-water-balance` `Hydrology` `Evapotranspiration` `Rain` `Area`
 
-<div align="center"><img alt="R.LTWB" src=".icons/R.LTWB.svg" width="250px"></div>
+<div align="center"><img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px"></div>
 
 Explicación general de la metodología para la realización de balances hidrológicos e identificación de información base requerida. En esta clase también se listan algunas de las aplicaciones generales de los caudales medios de largo plazo en la realización de estudios de ingeniería y estudios ambientales
 
