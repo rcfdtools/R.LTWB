@@ -10,7 +10,7 @@ Para la ejecución completa de un balance hidrológico de largo plazo a nivel an
 
 ## Utilidad y campo de aplicación de los LTWB en ingeniería
 
-Los balances hidrológicos de largo plazo son frecuentemente utilizados en estudios hidrológicos y ambientales debido a través de ellos se puede realizar: 
+Los balances hidrológicos de largo plazo son frecuentemente utilizados en estudios hidrológicos y ambientales debido a que a través de ellos se puede realizar: 
 
 * Estimación del caudal medio superficial disponible en cuencas hidrográficas o en localizaciones particulares de la red de drenaje.
 * Obtención de ecuaciones características relacionando áreas de aportación vs. caudales medios.
@@ -22,11 +22,11 @@ Los balances hidrológicos de largo plazo son frecuentemente utilizados en estud
 
 ## Metodología para estimación del caudal medio
 
-Para la estimación de caudales medios, se realiza un balance hidrológico de largo plazo en cada una de las celdas que cubre la zona de estudio. Se denomina de largo plazo, debido a que se asume que luego de ser saturado el suelo, la escorrentía se produce por los excedentes obtenidos de precipitación que no son evapotranspirados.
+Para la estimación de caudales medios, se realiza un balance hidrológico de largo plazo en cada una de las celdas que cubre la zona de estudio. Se denomina de largo plazo, debido a que se asume que luego de ser saturado el suelo, la escorrentía se produce por los excedentes de precipitación que no son evapotranspirados.
 
 > Es importante tener en cuenta que en algunas zonas particulares, se pueden obtener déficits debido a que el valor estimado o medido de la evapotranspiración puede ser mayor al valor de precipitación disponible.
 
-La siguiente expresión permite determinar el caudal medio en cada celda de terreno, en el que, al valor estimado de precipitación, se le resta la abstracción correspondiente a la evapotranspiración real. El valor correspondiente al área sobre el cual se estima el caudal corresponde al total de celdas convergentes multiplicadas por el tamaño de cada pixel, el cual es definido por la resolución espacial de las grillas utilizadas.
+La siguiente expresión permite determinar el caudal medio en cada celda de terreno, en el que, al valor estimado de precipitación, se le resta la abstracción correspondiente a la evapotranspiración real. El valor correspondiente al área sobre el cual se estima el caudal, corresponde al total de celdas convergentes (en cada localizacioón del terreno) multiplicadas por el tamaño de cada pixel, el cual es definido por la resolución espacial de las grillas utilizadas.
 
 <div align="center">
 
