@@ -3,26 +3,26 @@
   <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
 </div>
 
-_Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando Sistemas de Información Geográfica - SIG_. Es este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
+_Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. Es este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
 
 ## Objetivos generales
 
-* Realizar balances hidrológicos de largo plazo distribuidos y a partir de cuencas o zonas geográficas delimitadas correspondientes a las subzonas hidrográficas del IDEAM - Colombia - Suramérica.
 * Comprender la utilidad de los LTWB en los campos de ingeniería aplicada.
-* Delimitar zonas de estudio y descargar y procesar la red de drenaje.
+* Delimitar zonas de estudio, descargar y procesar redes de drenaje.
 * A partir de la delimitación de la zona de estudio, descargar y procesar los modelos de terreno ASTER GDEM, SRTM y ALOS PALSAR.
 * Utilizando técnicas de hidrología computacional, reajustar el modelo de terreno incrustando la red de drenaje, luego rellenar los sumideros, determinar las direcciones de flujo, calcular las acumulaciones de área, demarcar los drenajes y obtener puntos característicos sobre toda la red de drenaje.
 * A partir de la zona de estudio, identificar las estaciones hidroclimatológicas terrestres, analizar su densidad y cobertura.
-* A partir de la red de estaciones, descargar y procesar series temporales a través de técnicas de ciencia de datos. El procesamiento incluye la exploración y análisis de series y su representación gráfica, la identificación y ajuste de valores atípicos y el completado y extendido para obtener series homogéneas.
+* A partir de la red de estaciones, descargar y procesar series temporales a través de técnicas de ciencia de datos. El procesamiento incluye la exploración y análisis de series, su representación gráfica, la identificación y ajuste de valores atípicos y el completado y extendido para obtener series homogéneas.
 * Comparar series terrestres con series obtenidas a través de sensores remotos  satelitales.
 * Segmentar las series compuestas en series por fenómeno climatológico (El Niño, La Niña y Neutro) a partir del indicador ENSO-ONI o El Niño-Oscilación del Sur de la National Oceanic and Atmospheric Administration - NOAA de los Estados Unidos de América.
 * A partir de las series validadas y de la marcación de años por fenómeno climatológico, realizar agregaciones estadísticas a nivel multianual.
 * Analizar y crear mapas continuos y por fenómeno climatológico de las variables climatológicas requeridas para el balance hidrológico. Para la generación de los mapas de evapotranspiración potencial, utilizaremos ecuaciones regionales que dependen de la elevación del terreno, temperatura y precipitación total.
+* Realizar balances hidrológicos de largo plazo distribuidos y a partir de cuencas o zonas geográficas delimitadas como las subzonas hidrográficas del IDEAM - Colombia - Suramérica.
 * A partir de los puntos característicos obtenidos sobre la red de drenaje, de sus áreas de aportación correspondientes y de los mapas de caudal medio, obtener ecuaciones características compuestas y por fenómeno climatológico.
-* Estimar y evaluar los isorendimientos medios en la zona de estudio y por subzona hidrográfica.
+* Estimar y evaluar los isorendimientos medios de la zona de estudio y por subzona hidrográfica.
 
 
 ## Metodología
