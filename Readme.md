@@ -34,7 +34,7 @@ El curso inicia con una introducción y explicación general de la metodología,
 
 ## Dirigido a
 
-Los contenidos presentados en este curso, están dirigidos a estudiantes y profesionales de diferentes disciplinas, que requieran aprender y/o fortalecer sus conocimientos en hidrología computacional y sistemas de información geográfica, tales como:
+Los contenidos presentados en este curso, están dirigidos a estudiantes y profesionales de diferentes disciplinas que requieran aprender y/o fortalecer sus conocimientos en hidrología computacional y sistemas de información geográfica, tales como:
 
 * Estudiantes de pregrado y posgrado en ingeniería.
 * Ingenieros y especialistas.
@@ -45,7 +45,7 @@ Los contenidos presentados en este curso, están dirigidos a estudiantes y profe
 
 ## Sección 1 - Introducción y fundamentos
 
- En esta sección se presenta la introducción y fundamentos generales, el caso de estudio y los requerimientos generales para el desarrollo de las diferentes actividades prácticas.
+ En esta sección se presenta la utilidad de los LTWB en el campo de la ingeniería, se delimita el caso de estudio y se establecen los requerimientos generales para el desarrollo de las diferentes actividades prácticas incluidas en el curso.
 
 | Actividad                                                                                           | Alcance                                                                                                                                                                                                                                                                                                            |
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
