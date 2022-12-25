@@ -3,7 +3,7 @@ Keywords: `FDR-DEM` `Flow-direction` `Fill-DEM` `Map-Algebra` `Raster-Calculator
 
 ![R.LTWB](Graph/FdrDEM.png)
 
-Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
+Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros - FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
 
 
 ### Objetivos
