@@ -3,7 +3,7 @@ Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
 ![R.LTWB](Graph/Rain.png)
 
-A partir de la localización espacial de estaciones terrestres y de los valores obtenidos, validados, imputados y extendidos de las series de datos recopiladas, se generan los mapas continuos interpolados para series compuestas y por fenómeno climatológico, requeridos para el balance hidrológico de largo plazo.
+A partir de la localización espacial de estaciones terrestres y de los valores obtenidos, validados, imputados y extendidos de las series de datos recopiladas, se generan los mapas continuos interpolados de precipitación para series compuestas y por fenómeno climatológico, necesarios para el balance hidrológico de largo plazo.
 
 
 ### Objetivos
