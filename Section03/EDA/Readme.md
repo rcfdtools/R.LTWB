@@ -3,7 +3,7 @@ Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `u
 
 <div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="95%"></div> 
 
-Durante el proceso de revisión, validación y comprensión de los datos, es necesario utilizar diferentes técnicas que permitan identificar discontinuidades, cambios en el comportamiento temporal y en general revisar los paramétricos de cada serie por parámetro.
+Durante el proceso de revisión, validación y comprensión de los datos, es necesario utilizar diferentes técnicas que permitan identificar discontinuidades, cambios en el comportamiento temporal y en general revisar los estadísticos característicos de cada serie por parámetro.
 
 **¿Qué es y para que sirve la EDA?** [^1]
 
