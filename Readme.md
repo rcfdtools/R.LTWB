@@ -5,7 +5,7 @@
 
 <div align="center"><br><img alt="R.LTWB" src=".icons/LTWB.png" width="85%"><br></div>
 
-_Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. Es este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
+_Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. En este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
@@ -23,8 +23,8 @@ Este curso ha sido dividido en diferentes secciones y actividades secuenciales, 
 * Analizar y crear mapas continuos por fenómeno climatológico de las variables climatológicas requeridas para el balance hidrológico. Para la generación de los mapas de evapotranspiración potencial, utilizaremos ecuaciones regionales que dependen de la elevación del terreno, temperatura y precipitación total.
 * Realizar balances hidrológicos de largo plazo distribuidos y a partir de cuencas o zonas geográficas delimitadas como las subzonas hidrográficas del IDEAM - Colombia - Suramérica.
 * A partir de los puntos característicos obtenidos sobre la red de drenaje, de sus áreas de aportación y de los mapas de caudal medio, obtener ecuaciones características compuestas y por fenómeno climatológico.
-* Estimar y evaluar isorendimientos medios de la zona de estudio y por subzona hidrográfica.
-* Fortalecer habilidades en automatización de datos y procesos geográficos utilizando el lenguaje de programación Python.
+* Estimar y evaluar mapas de isorendimientos medios.
+* Obtener habilidades en automatización de análisis de datos y de procesos geográficos utilizando el lenguaje de programación Python.
 
 
 ## Metodología
@@ -53,7 +53,7 @@ Los contenidos presentados en este curso, están dirigidos a estudiantes y profe
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [¿Qué son y para qué sirven los balances hidrológicos de largo plazo – LTWB?](Section01/WhatIsLTWB) | Explicación general de la metodología para la realización de balances hidrológicos e identificación de información base requerida. En esta clase también se listan algunas de las aplicaciones generales de los caudales medios de largo plazo en la realización de estudios de ingeniería y estudios ambientales. |
 | [Requerimientos](Section01/Requirement)<br>(_Versión borrador_)                                     | En esta actividad se listan los requerimientos académicos y computacionales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las herramientas requeridas.                                                  |
-| [Caso de estudio](Section01/CaseStudy)                                                              | Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en los diferentes mapas y capas geográficas.                                                   |
+| [Caso de estudio](Section01/CaseStudy)                                                              | Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia - Suramérica, con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en la creación y procesamiento de los diferentes mapas y capas geográficas.      |
 
 
 ## Sección 2 - Descarga y procesamiento de modelos digitales de elevación
