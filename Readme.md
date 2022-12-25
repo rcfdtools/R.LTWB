@@ -105,7 +105,7 @@ Durante el proceso de conformación de información para el desarrollo del balan
 
 ## Sección 5 - Balance hidrológico de largo plazo - LTWB
 
-En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, realizaremos el mapa de isorendimientos medios y un balance a partir de cuencas o áreas de aportación delimitadas.
+En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, crearemos el mapa de isorendimientos medios y desarrolaremos el balance a partir de cuencas o áreas de aportación delimitadas.
 
 | Actividad                                                                                            | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
