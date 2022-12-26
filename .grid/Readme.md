@@ -4,7 +4,7 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 
 ### Grillas de [precipitación total](../Section04/Rain)
 
-| Fenómeno  | Grilla                 | Archivo :open_file_folder:                                                     |
+| Fenómeno  | Mapa                   | Archivo :open_file_folder:                                                     |
 |-----------|------------------------|--------------------------------------------------------------------------------|
 | Compuesto | RainTotalComposite.tif | [Part1](RainTotalComposite.part01.rar), [Part2](RainTotalComposite.part02.rar) |
 | Niña      | RainTotalNina.tif      | [Part1](RainTotalNina.part01.rar), [Part2](RainTotalNina.part02.rar)           |
@@ -14,12 +14,12 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 
 ### Grillas de [temperatura media](../Section04/Te)
 
-| Fenómeno  | Mapa de temperatura         | Grilla :open_file_folder:                                                                   |
-|-----------|-----------------------------|---------------------------------------------------------------------------------------------|
-| Compuesto | TemperatureMedComposite.tif | [Part1](TemperatureMedComposite.part01.rar), [Part2](TemperatureMedComposite.part02.rar)    |
-| Niña      | TemperatureMedNina.tif      | [Part1](TemperatureMedNina.part01.rar), [Part2](TemperatureMedNina.part02.rar)              |
-| Niño      | TemperatureMedNino.tif      | [Part1](TemperatureMedNino.part01.rar), [Part2](TemperatureMedNino.part02.rar)              |
-| Neutro    | TemperatureMedNeutral.tif   | [Part1](TemperatureMedNeutral.part01.rar), [Part2](TemperatureMedNeutral.part02.rar)        |
+| Fenómeno  | Mapa                        | Archivo :open_file_folder:                                                               |
+|-----------|-----------------------------|------------------------------------------------------------------------------------------|
+| Compuesto | TemperatureMedComposite.tif | [Part1](TemperatureMedComposite.part01.rar), [Part2](TemperatureMedComposite.part02.rar) |
+| Niña      | TemperatureMedNina.tif      | [Part1](TemperatureMedNina.part01.rar), [Part2](TemperatureMedNina.part02.rar)           |
+| Niño      | TemperatureMedNino.tif      | [Part1](TemperatureMedNino.part01.rar), [Part2](TemperatureMedNino.part02.rar)           |
+| Neutro    | TemperatureMedNeutral.tif   | [Part1](TemperatureMedNeutral.part01.rar), [Part2](TemperatureMedNeutral.part02.rar)     |
 
 
 ##
