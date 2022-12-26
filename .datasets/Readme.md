@@ -2,7 +2,7 @@
 
 Esta carpeta contiene datos base y datos generados que han sido utilizados para el desarrollo del caso de estudio.
 
-| Dataset                                                                                                            | Enlace                                                                   | Actividad                                   |
+| Dataset                                                                                                            | Enlace local                                                             | Actividad                                   |
 |:-------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|:--------------------------------------------|
 | Tabla con puntos de muestreo para lectura de valores de acumulación de celdas                                      | [FacDEMTablaMuestra.xlsx](FacDEMTablaMuestra.xlsx)                       | [FacDEM](../Section02/FacDEM)               |
 | Catálogo nacional de estaciones del IDEAM Colombia [v20220731](http://dhime.ideam.gov.co/atencionciudadano/)       | [CNE_IDEAM.xls](CNE_IDEAM.xls)                                           | [CNEStation](../Section03/CNEStation)       |
