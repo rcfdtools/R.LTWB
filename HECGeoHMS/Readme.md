@@ -12,6 +12,8 @@ La carpeta _/Layers_, contiene los archivos generados durante el proceso de prep
 | SinkLocations    | Celdas con sifones o empozamientos a rellenar usando Fil                |     ✓      |      |             |
 
 > Archivos con tamaño superior a 100 MB, han sido comprimidos en partes de 95 MB para la publicación en este repositorio.
+> 
+> Para más información, consulte la [Sección 2](../Section02) de este curso.
 
  
 ##
