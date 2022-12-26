@@ -26,18 +26,18 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 
 | Mapa                         | Archivo :open_file_folder:                                                                                                            |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| ETPCenicafe.tif              | [Part1](../../.grid/ETPCenicafe.part01.rar), [Part2](../../.grid/ETPCenicafe.part02.rar), [Part3](../../.grid/ETPCenicafe.part03.rar) |
+| ETPCenicafe.tif              | [Part1](ETPCenicafe.part01.rar), [Part2](ETPCenicafe.part02.rar), [Part3](ETPCenicafe.part03.rar) |
 
 
 ### [Evapotranspiración real - ETR, mm/año](../Section04/ETR)
 
-| Mapa                    | Rango mm/año                                                                                                                                                                                                      | Grilla :open_file_folder:                                                                                                                                                                                      |
-|:------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Budyko**              |                                                                                                                                                                                                                   |
-| ETRBudykoComposite.tif  | [Part1](../../.grid/ETRBudykoComposite.part01.rar), [Part2](../../.grid/ETRBudykoComposite.part02.rar), [Part3](../../.grid/ETRBudykoComposite.part03.rar), [Part4](../../.grid/ETRBudykoComposite.part04.rar)    |
-| ETRBudykoNina.tif       | [Part1](../../.grid/ETRBudykoNina.part01.rar), [Part2](../../.grid/ETRBudykoNina.part02.rar), [Part3](../../.grid/ETRBudykoNina.part03.rar), [Part4](../../.grid/ETRBudykoNina.part04.rar)                        |
-| ETRBudykoNino.tif       | [Part1](../../.grid/ETRBudykoNino.part01.rar), [Part2](../../.grid/ETRBudykoNino.part02.rar), [Part3](../../.grid/ETRBudykoNino.part03.rar), [Part4](../../.grid/ETRBudykoNino.part04.rar)                        |
-| ETRBudykoNeutral.tif    | [Part1](../../.grid/ETRBudykoNeutral.part01.rar), [Part2](../../.grid/ETRBudykoNeutral.part02.rar), [Part3](../../.grid/ETRBudykoNeutral.part03.rar), [Part4](../../.grid/ETRBudykoNeutral.part04.rar)         |
+| Mapa                    | Archivo :open_file_folder:                                                                                                                                     |
+|:------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Budyko**              |                                                                                                                                                                |
+| ETRBudykoComposite.tif  | [Part1](ETRBudykoComposite.part01.rar), [Part2](ETRBudykoComposite.part02.rar), [Part3](ETRBudykoComposite.part03.rar), [Part4](ETRBudykoComposite.part04.rar) |
+| ETRBudykoNina.tif       | [Part1](ETRBudykoNina.part01.rar), [Part2](ETRBudykoNina.part02.rar), [Part3](ETRBudykoNina.part03.rar), [Part4](ETRBudykoNina.part04.rar)                     |
+| ETRBudykoNino.tif       | [Part1](ETRBudykoNino.part01.rar), [Part2](ETRBudykoNino.part02.rar), [Part3](ETRBudykoNino.part03.rar), [Part4](ETRBudykoNino.part04.rar)                     |
+| ETRBudykoNeutral.tif    | [Part1](ETRBudykoNeutral.part01.rar), [Part2](ETRBudykoNeutral.part02.rar), [Part3](ETRBudykoNeutral.part03.rar), [Part4](ETRBudykoNeutral.part04.rar)         |
 
 
 
