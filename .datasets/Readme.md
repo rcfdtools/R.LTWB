@@ -1,4 +1,4 @@
-## Datasets
+## Datasets o conjuntos de datos
 
 Esta carpeta contiene datos base y datos generados que han sido utilizados para el desarrollo del caso de estudio.
 
