@@ -4,7 +4,7 @@ Esta carpeta contiene los mapas de documento creados en aplicaciones SIG en dife
 
 * .mxd: mapa de ArcGIS for Desktop
 * .sxd: escena de  ArcGIS for Desktop
-* .aprx: mapa de ArcGIS Pro, localizado directamente dentro una carpeta nombrada como _ArcGISPro_
+* .aprx: mapa de ArcGIS Pro, localizado directamente dentro de carpetas con prefijo _ArcGISPro_
 * .qgz: mapa de QGIS
 
 
@@ -12,22 +12,23 @@ Esta carpeta contiene los mapas de documento creados en aplicaciones SIG en dife
 
 **R.LTWB.mxd**
 
-Escalas
+Mapa nivel nacional área y zonas hidrográficas  
 
-Mapa nivel nacional area y zonas hidrográficas  
-\Section01\CaseStudy\Graph  
-ZonaHidrografica2013.png  
-1:7.000.000  
+* \Section01\CaseStudy\Graph  
+* ZonaHidrografica2013.png  
+* 1:7.000.000  
 
 Mapa caso de estudio zona hidrografica 28  
-\Section01\CaseStudy\Graph  
-CaseStudy.png  
-1:1.250.000  
+
+* \Section01\CaseStudy\Graph  
+* CaseStudy.png  
+* 1:1.250.000  
 	
 Mapa localización estaciones hidrometeorológicas  
-\Section01\CaseStudy\Graph  
-CNE_IDEAM.png  
-1:1.500.000
+
+* \Section01\CaseStudy\Graph  
+* CNE_IDEAM.png  
+* 1:1.500.000
 
 
 ##
@@ -36,5 +37,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.LTWB) |
-|-------------------------------------------------------|
+| [:house: Inicio](../Readme.md) |
+|--------------------------------|
