@@ -1,4 +1,7 @@
 ## Requerimientos
+Keywords: `Requirements` `ArcGIS-for-Desktop` `ArcGIS-Pro` `QGIS` `HEC-HMS` `HEC-GeoHMS` `Python`
+
+![R.LTWB](Graph/Requirement.png)
 
 En esta actividad se listan los requerimientos académicos y computacionales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las herramientas requeridas.
 
@@ -11,8 +14,8 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Requerimientos computacionales generales
 
+* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
-* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) 
 * Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
 * [QGIS 3+](https://qgis.org/) (opcional)
@@ -39,7 +42,16 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 * Conocimientos básicos en sistemas de información geográfica
 * Conocimientos básicos en hidrología
-* Conocimientos básicos en programación usando Python
+* Conocimientos básicos de programación usando Python
+
+
+### Estructura de directorios
+
+En la siguiente tabla encontrará la estructura y descripción general de las carpetas a utilizar durante el desarrollo de las actividades del curso, relacionadas con el caso de estudio general y el caso asignado bajo la modalidad de curso certificado.
+
+
+
+
 
 
 ### Configuración del sistema operativo
@@ -62,10 +74,6 @@ La apertura de proyectos existentes puede ser realizada correctamente si su sist
 
 * 
 
-
-### Compatibilidad
-
-* 
 
 
 ### Control de versiones
