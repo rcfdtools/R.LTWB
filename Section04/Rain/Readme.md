@@ -111,7 +111,7 @@ Resultados para valores asociados al fenómeno de La Niña
 Resultados para valores neutros
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainNeutralStats.png)
 
-Tabla de grillas obtenidas y de comparación de resultados
+Tabla de grillas obtenidas y comparación de resultados
 | Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla :open_file_folder:                                                                                                  | Tamaño sin compresión |
 |-----------|:---------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
 | Compuesto | 363.2           | 4933.6             | 363.234          | 4933.619         | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) | 1.2 GB                |

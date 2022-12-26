@@ -49,11 +49,12 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 En la siguiente tabla encontrará la estructura y descripción general de las carpetas a utilizar durante el desarrollo de las actividades del curso, relacionadas con el caso de estudio general y el caso asignado bajo la modalidad de curso certificado.
 
-| Directorio                   | Descripción                                                                             | Subdirectorios                                                           | Formato                                  |
-|------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------|
-| [.datasets](../../.datasets) | Tablas y series de datos base y generados                                               | CHIPS, ENSOONI, IDEAM, IDEAM_Agg, IDEAM_EDA, IDEAM_Impute, IDEAM_Outlier | .xls, .xlsx, .dbf, .csv, .png, .md, .zip |
-| [.dem](../../.dem)           | Grillas base y grillas producidas de los modelos digitales de terreno                   | ALOS, ASTER, SRTM                                                        | .tif, .rar                               |
-| [.gdb](../../.gdb)           | GDB descargada del Instituto Geográfico Agustín Codazzi - IGAC de Colombia - Suramérica |                                                                          | .gdb                                     |
+| Directorio                   | Descripción                                                                                                                                                           | Subdirectorios                                                           | Formato                                  |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------|
+| [.datasets](../../.datasets) | Tablas y series de datos base y generados                                                                                                                             | CHIPS, ENSOONI, IDEAM, IDEAM_Agg, IDEAM_EDA, IDEAM_Impute, IDEAM_Outlier | .xls, .xlsx, .dbf, .csv, .png, .md, .zip |
+| [.dem](../../.dem)           | Grillas base y grillas producidas de los modelos digitales de terreno                                                                                                 | ALOS, ASTER, SRTM                                                        | .tif, .rar                               |
+| [.gdb](../../.gdb)           | GDB descargada del Instituto Geográfico Agustín Codazzi - IGAC de Colombia - Suramérica                                                                               | N/A                                                                      | .gdb                                     |
+| [.grid](../../.grid)         | Grillas en formato GeoTIFF producidas en la sección 4 y 5 de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos | N/A                                                                      | .tif, .rar                               |
 
 
 
