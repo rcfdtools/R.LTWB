@@ -28,9 +28,11 @@ Esta carpeta contiene los vectores base y los vectores producidos en el desarrol
 | [CNE_IDEAM_OE_ZE.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/CNE_IDEAM_OE_ZE.zip)                                                | Punto      | Combinación de archivos de formas CNE_IDEAM_ZE.shp y CNE_OE_ZE.shp en una única capa geográfica de estaciones de la zona de estudio.                                                             | GCS_MAGNA                    | [CNEStation](https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation)  | 
 
 
+##
+
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Inicio](https://github.com/rcfdtools/R.LTWB/wiki) |
-|----------------------------------------------------|
+| [:house: Inicio](https://github.com/rcfdtools/R.LTWB) |
+|-------------------------------------------------------|
