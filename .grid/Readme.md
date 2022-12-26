@@ -31,14 +31,23 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 
 ### [Evapotranspiración real - ETR, mm/año](../Section04/ETR)
 
-| Mapa                    | Archivo :open_file_folder:                                                                                                                                     |
-|:------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Budyko**              |                                                                                                                                                                |
-| ETRBudykoComposite.tif  | [Part1](ETRBudykoComposite.part01.rar), [Part2](ETRBudykoComposite.part02.rar), [Part3](ETRBudykoComposite.part03.rar), [Part4](ETRBudykoComposite.part04.rar) |
-| ETRBudykoNina.tif       | [Part1](ETRBudykoNina.part01.rar), [Part2](ETRBudykoNina.part02.rar), [Part3](ETRBudykoNina.part03.rar), [Part4](ETRBudykoNina.part04.rar)                     |
-| ETRBudykoNino.tif       | [Part1](ETRBudykoNino.part01.rar), [Part2](ETRBudykoNino.part02.rar), [Part3](ETRBudykoNino.part03.rar), [Part4](ETRBudykoNino.part04.rar)                     |
-| ETRBudykoNeutral.tif    | [Part1](ETRBudykoNeutral.part01.rar), [Part2](ETRBudykoNeutral.part02.rar), [Part3](ETRBudykoNeutral.part03.rar), [Part4](ETRBudykoNeutral.part04.rar)         |
-
+| Mapa                   | Archivo :open_file_folder:                                                                                                                                     |
+|:-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Budyko**             |                                                                                                                                                                |
+| ETRBudykoComposite.tif | [Part1](ETRBudykoComposite.part01.rar), [Part2](ETRBudykoComposite.part02.rar), [Part3](ETRBudykoComposite.part03.rar), [Part4](ETRBudykoComposite.part04.rar) |
+| ETRBudykoNina.tif      | [Part1](ETRBudykoNina.part01.rar), [Part2](ETRBudykoNina.part02.rar), [Part3](ETRBudykoNina.part03.rar), [Part4](ETRBudykoNina.part04.rar)                     |
+| ETRBudykoNino.tif      | [Part1](ETRBudykoNino.part01.rar), [Part2](ETRBudykoNino.part02.rar), [Part3](ETRBudykoNino.part03.rar), [Part4](ETRBudykoNino.part04.rar)                     |
+| ETRBudykoNeutral.tif   | [Part1](ETRBudykoNeutral.part01.rar), [Part2](ETRBudykoNeutral.part02.rar), [Part3](ETRBudykoNeutral.part03.rar), [Part4](ETRBudykoNeutral.part04.rar)         |
+| **Dekop**              |                                                                                                                                                                |
+| ETRDekopComposite.tif  | [Part1](ETRDekopComposite.part01.rar), [Part2](ETRDekopComposite.part02.rar), [Part3](ETRDekopComposite.part03.rar), [Part4](ETRDekopComposite.part04.rar)     |
+| ETRDekopNina.tif       | [Part1](ETRDekopNina.part01.rar), [Part2](ETRDekopNina.part02.rar), [Part3](ETRDekopNina.part03.rar), [Part4](ETRDekopNina.part04.rar)                         |
+| ETRDekopNino.tif       | [Part1](ETRDekopNino.part01.rar), [Part2](ETRDekopNino.part02.rar), [Part3](ETRDekopNino.part03.rar), [Part4](ETRDekopNino.part04.rar)                         |
+| ETRDekopNeutral.tif    | [Part1](ETRDekopNeutral.part01.rar), [Part2](ETRDekopNeutral.part02.rar), [Part3](ETRDekopNeutral.part03.rar), [Part4](ETRDekopNeutral.part04.rar)             |
+| **Cenicafé**           |                                                                                                                                                                |
+| ETRTurcComposite.tif   | [Part1](ETRTurcComposite.part01.rar), [Part2](ETRTurcComposite.part02.rar), [Part3](ETRTurcComposite.part03.rar), [Part4](ETRTurcComposite.part04.rar)         |
+| ETRTurcNina.tif        | [Part1](ETRTurcNina.part01.rar), [Part2](ETRTurcNina.part02.rar), [Part3](ETRTurcNina.part03.rar), [Part4](ETRTurcNina.part04.rar)                             |
+| ETRTurcNino.tif        | [Part1](ETRTurcNino.part01.rar), [Part2](ETRTurcNino.part02.rar), [Part3](ETRTurcNino.part03.rar), [Part4](ETRTurcNino.part04.rar)                             |
+| ETRTurcNeutral.tif     | [Part1](ETRTurcNeutral.part01.rar), [Part2](ETRTurcNeutral.part02.rar), [Part3](ETRTurcNeutral.part03.rar), [Part4](ETRTurcNeutral.part04.rar)                 |
 
 
 ##
