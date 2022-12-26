@@ -1,6 +1,6 @@
 ## Archivos de modelos digitales de elevación DEM
 
-Esta carpeta contiene las grillas base y grillas producidas en el desarrollo del caso de estudio.
+Esta carpeta contiene las grillas base y grillas producidas de los modelos digitales de terreno utilizadas en el desarrollo del caso de estudio.
 
 | Carpeta        | Grilla                           | Descripción                                                                                                                                                                                     | Actividad                                                                      |
 |:---------------|:---------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
