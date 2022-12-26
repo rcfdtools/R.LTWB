@@ -2,25 +2,24 @@
 
 Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 4](../Section04) y [Sección 5](../Section05) de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos.
 
-### Grillas de precipitación total
+### Grillas de [precipitación total](../Section04/Rain)
 
-| Fenómeno  | Grilla :open_file_folder:                                                      |
-|-----------|--------------------------------------------------------------------------------|
-| Compuesto | [Part1](RainTotalComposite.part01.rar), [Part2](RainTotalComposite.part02.rar) |
-| Niño      | [Part1](RainTotalNino.part01.rar), [Part2](RainTotalNino.part02.rar)           |
-| Niña      | [Part1](RainTotalNina.part01.rar), [Part2](RainTotalNina.part02.rar)           |
-| Neutro    | [Part1](RainTotalNeutral.part01.rar), [Part2](RainTotalNeutral.part02.rar)     |
-
-
-### Grillas de temperatura media
+| Fenómeno  | Grilla                 | Archivo :open_file_folder:                                                     |
+|-----------|------------------------|--------------------------------------------------------------------------------|
+| Compuesto | RainTotalComposite.tif | [Part1](RainTotalComposite.part01.rar), [Part2](RainTotalComposite.part02.rar) |
+| Niña      | RainTotalNina.tif      | [Part1](RainTotalNina.part01.rar), [Part2](RainTotalNina.part02.rar)           |
+| Niño      | RainTotalNino.tif      | [Part1](RainTotalNino.part01.rar), [Part2](RainTotalNino.part02.rar)           |
+| Neutro    | RainTotalNeutral.tif   | [Part1](RainTotalNeutral.part01.rar), [Part2](RainTotalNeutral.part02.rar)     |
 
 
-| Fenómeno  | Mapa de temperatura         |  Rango °C   | Grilla :open_file_folder:                                                                   |
-|-----------|-----------------------------|:-----------:|---------------------------------------------------------------------------------------------|
-| Compuesto | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](TemperatureMedComposite.part01.rar), [Part2](TemperatureMedComposite.part02.rar)    |
-| Niña      | TemperatureMedNina.tif      | 0 - 28.9592 | [Part1](TemperatureMedNina.part01.rar), [Part2](TemperatureMedNina.part02.rar)              |
-| Niño      | TemperatureMedNino.tif      | 0 - 29.3544 | [Part1](TemperatureMedNino.part01.rar), [Part2](TemperatureMedNino.part02.rar)              |
-| Neutro    | TemperatureMedNeutral.tif   | 0 - 29.0592 | [Part1](TemperatureMedNeutral.part01.rar), [Part2](TemperatureMedNeutral.part02.rar)        |
+### Grillas de [temperatura media](../Section04/Te)
+
+| Fenómeno  | Mapa de temperatura         | Grilla :open_file_folder:                                                                   |
+|-----------|-----------------------------|---------------------------------------------------------------------------------------------|
+| Compuesto | TemperatureMedComposite.tif | [Part1](TemperatureMedComposite.part01.rar), [Part2](TemperatureMedComposite.part02.rar)    |
+| Niña      | TemperatureMedNina.tif      | [Part1](TemperatureMedNina.part01.rar), [Part2](TemperatureMedNina.part02.rar)              |
+| Niño      | TemperatureMedNino.tif      | [Part1](TemperatureMedNino.part01.rar), [Part2](TemperatureMedNino.part02.rar)              |
+| Neutro    | TemperatureMedNeutral.tif   | [Part1](TemperatureMedNeutral.part01.rar), [Part2](TemperatureMedNeutral.part02.rar)        |
 
 
 ##

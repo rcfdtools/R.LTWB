@@ -112,12 +112,13 @@ Resultados para valores neutros
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainNeutralStats.png)
 
 Tabla de grillas obtenidas y comparación de resultados
-| Fenómeno  | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla | Grilla :open_file_folder:                                                                                                  | Tamaño sin compresión |
-|-----------|:---------------:|:---------------:|:------------------:|:------------------:|:--------------------------------------------------------------------------------------------------------:|:-----------------------:|
-| Compuesto | 363.2           | 4933.6             | 363.234          | 4933.619         | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) | 1.2 GB                |
-| Niño      | 252.7              | 4590.4             | 252.749          | 4590.447         | [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)           | 1.2 GB                |
-| Niña      | 536.3              | 5420.7             | 536.31           | 5420.688         | [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)           | 1.2 GB                |
-| Neutro    | 305.8              | 4891.5             | 305.754          | 4891.527         | [Part1](../../.grid/RainTotalNeutral.part01.rar), [Part2](../../.grid/RainTotalNeutral.part02.rar)     | 1.2 GB                |
+
+| Fenómeno  | Grilla                 | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla |                                       Archivo :open_file_folder:                                       | Tamaño sin compresión |
+|-----------|:-----------------------|:------------------:|:------------------:|:----------------:|:----------------:|:------------------------------------------------------------------------------------------------------:|:---------------------:|
+| Compuesto | RainTotalComposite.tif |       363.2        |       4933.6       |     363.234      |     4933.619     | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) |        1.2 GB         |
+| Niña      | RainTotalNina.tif      |       536.3        |       5420.7       |      536.31      |     5420.688     |      [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)      |        1.2 GB         |
+| Niño      | RainTotalNino.tif      |       252.7        |       4590.4       |     252.749      |     4590.447     |      [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)      |        1.2 GB         |
+| Neutro    | RainTotalNeutral.tif   |       305.8        |       4891.5       |     305.754      |     4891.527     |   [Part1](../../.grid/RainTotalNeutral.part01.rar), [Part2](../../.grid/RainTotalNeutral.part02.rar)   |        1.2 GB         |
 
 > Debido al tamaño de los archivos generados, cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 >
