@@ -2,6 +2,8 @@
 
 Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 4](../Section04) y [Sección 5](../Section05) de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos.
 
+<div align="center">
+
 ### [Precipitación total - P, mm/año](../Section04/Rain)
 
 | Mapa por fenómeno      | Archivo :open_file_folder:                                                     |
@@ -92,6 +94,7 @@ Caudal medio
 | LTWBTurcNino.tif         | [Part1](LTWBTurcNino.part01.rar), [Part2](LTWBTurcNino.part02.rar), [Part3](LTWBTurcNino.part03.rar), [Part4](LTWBTurcNino.part04.rar), [Part5](LTWBTurcNino.part05.rar), [Part6](LTWBTurcNino.part06.rar), [Part7](LTWBTurcNino.part07.rar), [Part8](LTWBTurcNino.part08.rar), [Part9](LTWBTurcNino.part09.rar)                                                               |
 | LTWBTurcNeutral.tif      | [Part1](LTWBTurcNeutral.part01.rar), [Part2](LTWBTurcNeutral.part02.rar), [Part3](LTWBTurcNeutral.part03.rar), [Part4](LTWBTurcNeutral.part04.rar), [Part5](LTWBTurcNeutral.part05.rar), [Part6](LTWBTurcNeutral.part06.rar), [Part7](LTWBTurcNeutral.part07.rar), [Part8](LTWBTurcNeutral.part08.rar), [Part9](LTWBTurcNeutral.part09.rar)                                    | 
 
+</div>
 
 ##
 
