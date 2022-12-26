@@ -1,6 +1,6 @@
 ## Datasets
 
-Esta carpeta contiene los archivos generados durante el proceso de preprocesamiento hidrológico, a través del cual se obtienen por cada modelo digital de terreno - DTM las grillas de:
+Esta carpeta contiene los archivos generados durante el proceso de preprocesamiento hidrológico, a través del cual se obtienen por modelo digital de terreno - DTM las grillas de:
 
 | Prefijo / Sufijo | Descripción                                                             | ASTER GDEM | SRTM | ALOS PALSAR | 
 |------------------|-------------------------------------------------------------------------|:----------:|:----:|:-----------:|
