@@ -1,6 +1,6 @@
 ## Datasets
 
-Esta carpeta contiene los datos base y datos generados que han sido utilizados para el desarrollo del caso de estudio.
+Esta carpeta contiene datos base y datos generados que han sido utilizados para el desarrollo del caso de estudio.
 
 | Dataset                                                                                                            | Enlace                                                                   | Actividad                                   |
 |:-------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|:--------------------------------------------|
