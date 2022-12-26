@@ -55,6 +55,7 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 | [.dem](../../.dem)           | Grillas base y grillas producidas de los modelos digitales de terreno                                                                                                 | ALOS, ASTER, SRTM                                                        | .tif, .rar                               |
 | [.gdb](../../.gdb)           | GDB descargada del Instituto Geográfico Agustín Codazzi - IGAC de Colombia - Suramérica                                                                               | N/A                                                                      | .gdb                                     |
 | [.grid](../../.grid)         | Grillas en formato GeoTIFF producidas en la sección 4 y 5 de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos | N/A                                                                      | .tif, .rar                               |
+| [.icons](../../.icons)       | iconografía general de este repositorio                                                                                                                               | N/A                                                                      | .png, .cdr, .glb, .svg                   |
 
 
 

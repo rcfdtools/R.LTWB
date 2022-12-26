@@ -2,14 +2,16 @@
 
 Esta carpeta contiene la iconografía general de este repositorio.
 
-| Icono                                                                                   | Descripción                                                |
-|:----------------------------------------------------------------------------------------|:-----------------------------------------------------------|
-| [Cygwin.png](https://www.pngwing.com/)                                                  | [Cygwin shell terminal](https://www.cygwin.com/)           |
-| [NASA.png](https://www.pngwing.com/)                                                    | [NASA](https://www.nasa.gov/)                              |
-| [LTWB_Corner.png](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/LTWB_Corner.png) | R.LTWB texto esquina superior derecha, creación propia.    |
-| [LTWB_Corner.svg](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.svg)      | R.LTWB vector logo, creación propia.                       |
-| [LTWB_Corner.cdr](https://github.com/rcfdtools/R.LTWB/blob/main/.icons/R.LTWB.cdr)      | R.LTWB vector logo fuente CorelDraw 2021, creación propia. |
-| [CHC_newlogo_edit.png](https://www.chc.ucsb.edu/data/chirps)                            | Chrips logo                                                |
+| Icono                                                        | Descripción                                                                                     |
+|:-------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
+| [LTWB.png](LTWB.png)                                         | R.LTWB ilustración balance hidrológico largo plazo, creación propia usando objetos Paint 3D.    |
+| [LTWB.glb](LTWB.glb)                                         | R.LTWB ilustración 3D balance hidrológico largo plazo, creación propia usando objetos Paint 3D. |
+| [Cygwin.png](https://www.pngwing.com/)                       | [Cygwin shell terminal](https://www.cygwin.com/)                                                |
+| [NASA.png](https://www.pngwing.com/)                         | [NASA](https://www.nasa.gov/)                                                                   |
+| [LTWB_Corner.png](LTWB_Corner.png)                           | R.LTWB texto esquina superior derecha, creación propia.                                         |
+| [R.LTWB.svg](R.LTWB.svg)                                     | R.LTWB vector logo, creación propia.                                                            |
+| [R.LTWB.cdr](R.LTWB.cdr)                                     | R.LTWB vector logo fuente CorelDraw 2021, creación propia.                                      |
+| [CHC_newlogo_edit.png](https://www.chc.ucsb.edu/data/chirps) | Chrips logo                                                                                     |
 
 ##
 
@@ -17,5 +19,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.LTWB) |
-|-------------------------------------------------------|
+| [:house: Inicio](../Readme.md) |
+|--------------------------------|
