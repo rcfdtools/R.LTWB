@@ -1,6 +1,6 @@
 ## HEC-GeoHMS
 
-Esta carpeta contiene los archivos generados durante el proceso de preprocesamiento hidrológico, a través del cual se obtienen por modelo digital de terreno - DTM dentro de la carpeta _/Layers_, las grillas de:
+La carpeta _/Layers_, contiene los archivos generados durante el proceso de preprocesamiento hidrológico de los modelos digitales de terreno - DTM. Utilizando HEC-GeoHMS para ArcGIS for Desktop, se han generado las siguientes grillas:
 
 | Prefijo / Sufijo | Descripción                                                             | ASTER GDEM | SRTM | ALOS PALSAR | 
 |------------------|-------------------------------------------------------------------------|:----------:|:----:|:-----------:|
