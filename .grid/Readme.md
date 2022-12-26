@@ -50,7 +50,9 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 | ETRTurcNeutral.tif     | [Part1](ETRTurcNeutral.part01.rar), [Part2](ETRTurcNeutral.part02.rar), [Part3](ETRTurcNeutral.part03.rar), [Part4](ETRTurcNeutral.part04.rar)                 |
 
 
-### [Caudal medio, m³/s](../Section05/LTWB)
+### [Poencial de escurrimiento y caudal medio, m³/s](../Section05/LTWB)
+
+Potencial de escurrimiento
 
 | Mapa                       | Archivos potencial de escurrimiento :open_file_folder:                                                                                                                                                                     |
 |:---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -69,6 +71,8 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 | RunoffPTurcNina.tif        | [Part1](RunoffPTurcNina.part01.rar), [Part2](RunoffPTurcNina.part02.rar), [Part3](RunoffPTurcNina.part03.rar), [Part4](RunoffPTurcNina.part04.rar), [Part5](RunoffPTurcNina.part05.rar)                                    |
 | RunoffPTurcNino.tif        | [Part1](RunoffPTurcNino.part01.rar), [Part2](RunoffPTurcNino.part02.rar), [Part3](RunoffPTurcNino.part03.rar), [Part4](RunoffPTurcNino.part04.rar), [Part5](RunoffPTurcNino.part05.rar)                                    |
 | RunoffPTurcNeutral.tif     | [Part1](RunoffPTurcNeutral.part01.rar), [Part2](RunoffPTurcNeutral.part02.rar), [Part3](RunoffPTurcNeutral.part03.rar), [Part4](RunoffPTurcNeutral.part04.rar), [Part5](RunoffPTurcNeutral.part05.rar)                     |
+
+Caudal medio
 
 | Mapa                     | Archivos caudal medio :open_file_folder:                                                                                                                                                                                                                                                                                                                                        |
 |:-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
