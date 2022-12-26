@@ -1,6 +1,6 @@
 ## IDEAM
 
-* Para más información, consulte la actividad: [CNEStationDatasetDownload](../../Section03/CNEStationDatasetDownload.
+* Para más información, consulte la actividad: [CNEStationDatasetDownload](../../Section03/CNEStationDatasetDownload).
 
 
 ##
