@@ -4,12 +4,12 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 
 ### Grillas de precipitación total
 
-| Fenómeno  | Grilla :open_file_folder:                                                      |  Tamaño sin compresión   |
-|-----------|--------------------------------------------------------------------------------|:------------------------:|
-| Compuesto | [Part1](RainTotalComposite.part01.rar), [Part2](RainTotalComposite.part02.rar) |          1.2 GB          |
-| Niño      | [Part1](RainTotalNino.part01.rar), [Part2](RainTotalNino.part02.rar)           |          1.2 GB          |
-| Niña      | [Part1](RainTotalNina.part01.rar), [Part2](RainTotalNina.part02.rar)           |          1.2 GB          |
-| Neutro    | [Part1](RainTotalNeutral.part01.rar), [Part2](RainTotalNeutral.part02.rar)     |          1.2 GB          |
+| Fenómeno  | Grilla :open_file_folder:                                                      |
+|-----------|--------------------------------------------------------------------------------|
+| Compuesto | [Part1](RainTotalComposite.part01.rar), [Part2](RainTotalComposite.part02.rar) |
+| Niño      | [Part1](RainTotalNino.part01.rar), [Part2](RainTotalNino.part02.rar)           |
+| Niña      | [Part1](RainTotalNina.part01.rar), [Part2](RainTotalNina.part02.rar)           |
+| Neutro    | [Part1](RainTotalNeutral.part01.rar), [Part2](RainTotalNeutral.part02.rar)     |
 
 
 ### Grillas de temperatura media
