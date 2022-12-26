@@ -49,11 +49,11 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 En la siguiente tabla encontrará la estructura y descripción general de las carpetas a utilizar durante el desarrollo de las actividades del curso, relacionadas con el caso de estudio general y el caso asignado bajo la modalidad de curso certificado.
 
-| Directorio                   | Descripción                                                                                                        | Subdirectorios                                                           | Formato               |
-|------------------------------|--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|-----------------------|
-| [.datasets](../../.datasets) | Esta carpeta contiene datos base y datos generados que han sido utilizados para el desarrollo del caso de estudio. | CHIPS, ENSOONI, IDEAM, IDEAM_Agg, IDEAM_EDA, IDEAM_Impute, IDEAM_Outlier | .xls, .dbf, .csv, .md |
-|                              |                                                                                                                    |                                                                          |                       |
-|                              |                                                                                                                    |                                                                          |                       |
+| Directorio                   | Descripción                                                           | Subdirectorios                                                           | Formato                                  |
+|------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------|
+| [.datasets](../../.datasets) | Tablas y series de datos base y generados                             | CHIPS, ENSOONI, IDEAM, IDEAM_Agg, IDEAM_EDA, IDEAM_Impute, IDEAM_Outlier | .xls, .xlsx, .dbf, .csv, .png, .md, .zip |
+| [.dem](../../.dem)           | Grillas base y grillas producidas de los modelos digitales de terreno | ALOS, ASTER, SRTM                                                        | .tif, .rar                               |
+|                              |                                                                       |                                                                          |                                          |
 
 
 
