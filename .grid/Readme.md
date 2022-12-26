@@ -50,6 +50,31 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 | ETRTurcNeutral.tif     | [Part1](ETRTurcNeutral.part01.rar), [Part2](ETRTurcNeutral.part02.rar), [Part3](ETRTurcNeutral.part03.rar), [Part4](ETRTurcNeutral.part04.rar)                 |
 
 
+### [Caudal medio, mm/año](../Section05/LTWB)
+
+Mapas de flujo potencial de escurrimiento, m³/s
+
+
+| Mapa                       | Grilla raster :open_file_folder:                                                                                                                                                                                           |
+|:---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Budyko**                 |                                                                                                                                                                                                                            |
+| RunoffPBudykoComposite.tif | [Part1](RunoffPBudykoComposite.part01.rar), [Part2](RunoffPBudykoComposite.part02.rar), [Part3](RunoffPBudykoComposite.part03.rar), [Part4](RunoffPBudykoComposite.part04.rar), [Part5](RunoffPBudykoComposite.part05.rar) |
+| RunoffPBudykoNina.tif      | [Part1](RunoffPBudykoNina.part01.rar), [Part2](RunoffPBudykoNina.part02.rar), [Part3](RunoffPBudykoNina.part03.rar), [Part4](RunoffPBudykoNina.part04.rar), [Part5](RunoffPBudykoNina.part05.rar)                          |
+| RunoffPBudykoNino.tif      | [Part1](RunoffPBudykoNino.part01.rar), [Part2](RunoffPBudykoNino.part02.rar), [Part3](RunoffPBudykoNino.part03.rar), [Part4](RunoffPBudykoNino.part04.rar), [Part5](RunoffPBudykoNino.part05.rar)                          |
+| RunoffPBudykoNeutral.tif   | [Part1](RunoffPBudykoNeutral.part01.rar), [Part2](RunoffPBudykoNeutral.part02.rar), [Part3](RunoffPBudykoNeutral.part03.rar), [Part4](RunoffPBudykoNeutral.part04.rar), [Part5](RunoffPBudykoNeutral.part05.rar)           |
+| **Dekop**                  |                                                                                                                                                                                                                            |
+| RunoffPDekopComposite.tif  | [Part1](RunoffPDekopComposite.part01.rar), [Part2](RunoffPDekopComposite.part02.rar), [Part3](RunoffPDekopComposite.part03.rar), [Part4](RunoffPDekopComposite.part04.rar), [Part5](RunoffPDekopComposite.part05.rar)      |
+| RunoffPDekopNina.tif       | [Part1](RunoffPDekopNina.part01.rar), [Part2](RunoffPDekopNina.part02.rar), [Part3](RunoffPDekopNina.part03.rar), [Part4](RunoffPDekopNina.part04.rar), [Part5](RunoffPDekopNina.part05.rar)                               |
+| RunoffPDekopNino.tif       | [Part1](RunoffPDekopNino.part01.rar), [Part2](RunoffPDekopNino.part02.rar), [Part3](RunoffPDekopNino.part03.rar), [Part4](RunoffPDekopNino.part04.rar), [Part5](RunoffPDekopNino.part05.rar)                               |
+| RunoffPDekopNeutral.tif    | [Part1](RunoffPDekopNeutral.part01.rar), [Part2](RunoffPDekopNeutral.part02.rar), [Part3](RunoffPDekopNeutral.part03.rar), [Part4](RunoffPDekopNeutral.part04.rar), [Part5](RunoffPDekopNeutral.part05.rar)                |
+| **Turc**                   |                                                                                                                                                                                                                            |
+| RunoffPTurcComposite.tif   | [Part1](RunoffPTurcComposite.part01.rar), [Part2](RunoffPTurcComposite.part02.rar), [Part3](RunoffPTurcComposite.part03.rar), [Part4](RunoffPTurcComposite.part04.rar), [Part5](RunoffPTurcComposite.part05.rar)           |
+| RunoffPTurcNina.tif        | [Part1](RunoffPTurcNina.part01.rar), [Part2](RunoffPTurcNina.part02.rar), [Part3](RunoffPTurcNina.part03.rar), [Part4](RunoffPTurcNina.part04.rar), [Part5](RunoffPTurcNina.part05.rar)                                    |
+| RunoffPTurcNino.tif        | [Part1](RunoffPTurcNino.part01.rar), [Part2](RunoffPTurcNino.part02.rar), [Part3](RunoffPTurcNino.part03.rar), [Part4](RunoffPTurcNino.part04.rar), [Part5](RunoffPTurcNino.part05.rar)                                    |
+| RunoffPTurcNeutral.tif     | [Part1](RunoffPTurcNeutral.part01.rar), [Part2](RunoffPTurcNeutral.part02.rar), [Part3](RunoffPTurcNeutral.part03.rar), [Part4](RunoffPTurcNeutral.part04.rar), [Part5](RunoffPTurcNeutral.part05.rar)                     |
+
+
+
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
