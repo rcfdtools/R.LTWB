@@ -1,6 +1,6 @@
 ## HEC-HMS
 
-Esta carpeta contiene los archivos del modelo prototipo hidrológico HEC-HMS, utilizados para el reacondicionamiento de uno de los modelos de terreno - [DEM Reconditioning – AgreeDEM](../Section02/AgreeDEM). 
+Esta carpeta contiene los archivos del modelo prototipo hidrológico HEC-HMS, utilizados para el reacondicionamiento de uno de los modelos de terreno. Para más información, consulte la actividad [DEM Reconditioning – AgreeDEM](../Section02/AgreeDEM). 
 
  
 ##
