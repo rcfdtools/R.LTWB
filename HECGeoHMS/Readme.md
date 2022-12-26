@@ -11,7 +11,7 @@ Esta carpeta contiene los archivos generados durante el proceso de preprocesamie
 | Str              | Celdas de drenajes                                                      |     ✓      |  ✓   |      ✓      |
 | SinkLocations    | Celdas con sifones o empozamientos a rellenar usando Fil                |     ✓      |      |             |
 
-> Para la publicación en este repositorio, archivos con tamaño superior a 100 MB han sido comprimidos en partes de 95 MB.
+> Archivos con tamaño superior a 100 MB, han sido comprimidos en partes de 95 MB para la publicación en este repositorio.
 
  
 ##
