@@ -1,6 +1,6 @@
 ## Base de datos geográfica IGAC
 
-Esta carpeta contiene una copia comprimida de la GDB descargada del IGAC a fecha 2022.07.18.
+Esta carpeta contiene una copia comprimida de la GDB descargada del Instituto Geográfico Agustín Codazzi - IGAC de Colombia - Suramérica a fecha 2022.07.18.
 
 * Para más información, consulte la actividad [GDB100k](../Section02/GDB100k).
 
