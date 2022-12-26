@@ -1,6 +1,6 @@
 ## ENSO-ONI
 
-* Para más información, consulte la actividad: [ENSO ONI](../../Section03/ENSOONI).
+* Para más información, consulte la actividad [ENSO ONI](../../Section03/ENSOONI).
 * Reporte detallado: [NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral](ONI_Eval.md).
 
 

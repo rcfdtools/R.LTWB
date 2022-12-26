@@ -1,6 +1,6 @@
 ## Series de datos agregados IDEAM
 
-* Para más información, consulte la actividad [IDEAM_Agg](../../Section03/Agg).
+* Para más información, consulte la actividad [Agg](../../Section03/Agg).
 
 
 ##
