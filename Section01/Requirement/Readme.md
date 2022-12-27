@@ -59,6 +59,7 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 | [.map](../../.map)                       | Mapas de documento y proyectos geográficos creados en aplicaciones SIG                                                                                                | ArcGISPro, ArcGISProSection03, ArcGISProSection04, ArcGISProSection05    | .mxd, .sxd, .aprx, .qgz, .zip            |
 | [.projectionfile](../../.projectionfile) | Archivos independientes de proyección de coordenadas en formato .prj aplicables a Colombia - Suramérica                                                               | N/A                                                                      | .prj                                     |
 | [.refs](../../.refs)                     | Documentos y artículos de uso libre descargados y citados en la documentación o en las referencias particulares de las diferentes actividades                         | GitHubRefs                                                               | .pdf, .zip                               |
+| [.shp](../../.shp)                       | Vectores base y vectores producidos en formato Shapefile (.shp)                                                                                                       | N/A                                                                      | .shp, .zip                               |
 
 
 

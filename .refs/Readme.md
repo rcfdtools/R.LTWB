@@ -2,7 +2,7 @@
 
 Esta carpeta contiene los archivos de documentos y artículos de uso libre descargados y citados en la documentación o en las referencias particulares de las diferentes actividades del curso. 
 
-> [Consulta referencias generales aquí.](../References.md)
+> [Consulta las referencias generales del curso.](../References.md)
 
 | Archivo local                                                                                                                                                         | Referencia y enlace público                                                                                                                                                                                                                                                                                                                               |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
