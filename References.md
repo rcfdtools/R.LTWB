@@ -2,7 +2,7 @@
 
 Esta carpeta contiene documentos, artículos y enlaces de referencia relacionados con el contenido general de este repositorio. Dentro de cada actividad pueden existir carpetas de referencias específicas.
 
-> Consulta [Aquí](.refs) los documentos de uso libre descargados e incluidos en este repositorio.
+> [Consulta  los documentos de uso libre descargados](.refs)e incluidos en este repositorio.
 
 
 ### Enlaces de interés
@@ -71,3 +71,13 @@ Se recomienda revisar y validar a detalle los contenidos, modelos, datos y metod
 * [ArcPy - Evapotranspiracion Real Metodo de Turc - ETP](https://www.youtube.com/watch?v=Q5amoxRNZj0)
 * [Balance Hidrico Superficial Thornthwaite y Hargreaves](https://www.youtube.com/watch?v=a9DwqZESK68)
 * [Descargar datos meteorológicos (horarios, diarios) de la NASA de cualquier parte del mundo](https://youtu.be/aw-jtT9tmpE)
+
+
+##
+
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](../Readme.md) |
+|--------------------------------|
