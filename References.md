@@ -1,6 +1,8 @@
+## Referencias
+
 Esta carpeta contiene documentos, artículos y enlaces de referencia relacionados con el contenido general de este repositorio. Dentro de cada actividad pueden existir carpetas de referencias específicas.
 
-> Consulta [Aquí](https://github.com/rcfdtools/R.LTWB/tree/main/.refs) los documentos de uso libre descargados e incluidos en este repositorio.
+> Consulta [Aquí](.refs) los documentos de uso libre descargados e incluidos en este repositorio.
 
 
 ### Enlaces de interés
