@@ -2,9 +2,9 @@
 
 Esta carpeta contiene archivos ejemplo y archivos temporales generados en procesos intermedios.
 
-* ExcelTableToMarkDownSample.xlsx: libro de Microsoft Excel para conversión de tablas a formato Markdown para diferente número de columnas.
-* LTWB.Contenido.docx: documento con propuesta inicial de contenido del curso a 2022.06.12.
-* ReadmeTemplate.md: plantilla Markdown para desarrollo de actividades.
+* [ExcelTableToMarkDownSample.xlsx](ExcelTableToMarkDownSample.xlsx): libro de Microsoft Excel para conversión de tablas a formato Markdown para diferente número de columnas.
+* [LTWB.Contenido.docx](LTWB.Contenido.docx): documento con propuesta inicial de contenido del curso a 2022.06.12.
+* [ReadmeTemplate.md](ReadmeTemplate.md): plantilla Markdown para desarrollo de actividades.
 
 
 ##
