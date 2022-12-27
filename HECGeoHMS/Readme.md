@@ -1,6 +1,6 @@
 ## HEC-GeoHMS
 
-La carpeta _/Layers_, contiene los archivos generados durante el proceso de preprocesamiento hidrológico de los modelos digitales de terreno - DTM. Utilizando HEC-GeoHMS para ArcGIS for Desktop, se han generado las siguientes grillas:
+La carpeta _HECGeoHMS/Layers_, contiene los archivos generados durante el proceso de preprocesamiento hidrológico de los modelos digitales de elevación - DEM. Utilizando HEC-GeoHMS para ArcGIS for Desktop, se han generado las siguientes grillas:
 
 | Prefijo / Sufijo | Descripción                                                             | ASTER GDEM | SRTM | ALOS PALSAR | 
 |------------------|-------------------------------------------------------------------------|:----------:|:----:|:-----------:|
@@ -22,5 +22,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](https://github.com/rcfdtools/R.LTWB) |
-|-------------------------------------------------------|
+| [:house: Inicio](../Readme.md) |
+|--------------------------------|
