@@ -56,7 +56,7 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 | [.gdb](../../.gdb)           | GDB descargada del Instituto Geográfico Agustín Codazzi - IGAC de Colombia - Suramérica                                                                               | N/A                                                                      | .gdb                                     |
 | [.grid](../../.grid)         | Grillas en formato GeoTIFF producidas en la sección 4 y 5 de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos | N/A                                                                      | .tif, .rar                               |
 | [.icons](../../.icons)       | Iconografía general de este repositorio                                                                                                                               | N/A                                                                      | .png, .cdr, .glb, .svg                   |
-| [.map](../../.map)           | Mapas de documento y proyectos geográficos creados en aplicaciones SIG                                                                                                | N/A                                                                      | .mxd, .sxd, .aprx, .qgz, .zip            |
+| [.map](../../.map)           | Mapas de documento y proyectos geográficos creados en aplicaciones SIG                                                                                                | ArcGISPro, ArcGISProSection03, ArcGISProSection04, ArcGISProSection05    | .mxd, .sxd, .aprx, .qgz, .zip            |
 
 
 
