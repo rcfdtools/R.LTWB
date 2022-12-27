@@ -7,10 +7,10 @@ Esta carpeta contiene los mapas de documento y proyectos geográficos creados en
 * .aprx: mapa de ArcGIS Pro, localizado directamente dentro de carpetas con prefijo _ArcGISPro_
 * .qgz: mapa de QGIS
 
+> El proyecto _ArcGISPro_ contiene las capas y archivos procesados en la Sección 1 y 2 del curso. Las secciones 3 a 5 disponen de proyectos independientes en ArcGIS Pro y han sido nombrados como _ArcGISProSection03_, _ArcGISProSection04_ y _ArcGISProSection05_.
 
-### Especificaciones de mapas
 
-**R.LTWB.mxd**
+### Especificaciones de mapas generados con _R.LTWB.mxd_
 
 Mapa nivel nacional área y zonas hidrográficas  
 
