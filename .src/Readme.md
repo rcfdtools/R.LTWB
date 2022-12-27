@@ -1,6 +1,6 @@
 ## Source code files
 
-Esta carpeta contiene scripts y librerías independientes de uso general
+Esta carpeta contiene scripts independientes de uso general en lenguaje Python y Shell script.
 
 
 ### Extensiones
@@ -23,7 +23,7 @@ Esta carpeta contiene scripts y librerías independientes de uso general
 | [Impute.py](Impute.py)                       | Completado y extendido de series - Imputación                                                                                                                                                             | Python       | [Impute](../Section03/Impute)                                       |
 | [ENSOONI.py](ENSOONI.py)                     | Análisis de cambio climático para segmentación de series                                                                                                                                                  | Python       | [ENSOONI](../Section03/ENSOONI)                                     |
 | [Agg.py](Agg.py)                             | Agregación estadística para obtención de promedios multianuales compuestos y por fenómeno climatológico                                                                                                   | Python       | [Agg](../Section03/Agg)                                             |
-| [Test.py](Test.py)                           | Archivo para pruebas de ejecución                                                                                                                                                                         | Python       | N/A                                                                 |
+| [Test.py](Test.py)                           | Scripts y librerías independientes de uso general                                                                                                                                                         | Python       | N/A                                                                 |
 
 
 ##
