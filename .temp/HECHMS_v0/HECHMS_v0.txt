@@ -1,3 +1,3 @@
 Prototipo para validación de tiempos de ejecución en procesos derivados de restitución hidrológica.
 
-Este modelo ha sido utilizado solo para pruebas funcionales y los vectores y grillas obtenidos no hacen parte de las actividades del curso R.LTWB.
+Este modelo ha sido utilizado solo para pruebas funcionales, los vectores y grillas obtenidos no hacen parte de las actividades del curso R.LTWB.
