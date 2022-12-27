@@ -6,6 +6,8 @@ Esta carpeta contiene archivos ejemplo y archivos temporales generados en proces
 * [LTWB.Contenido.docx](LTWB.Contenido.docx): documento con propuesta inicial de contenido del curso a 2022.06.12.
 * [ReadmeTemplate.md](ReadmeTemplate.md): plantilla Markdown para desarrollo de actividades.
 
+> La carpeta HECHMS_v0 contiene un prototipo para validación de tiempos de ejecución en procesos derivados de restitución hidrológica. Este modelo ha sido utilizado solo para pruebas funcionales y los vectores y grillas obtenidos no hacen parte de las actividades del curso R.LTWB.
+
 
 ##
 
