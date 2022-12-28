@@ -104,7 +104,9 @@ Para la correcta ejecución de las herramientas computacionales a utilizar duran
 
 ### Instalación y configuración de ArcGIS for Desktop
 
-Para el desarrollo de varias de las actividades del curso, utilizaremos la versión 10.2.2 de ArcGIS for Desktop que permite ejecutar correctamente todas las herramientas disponibles en la extensión HEC-GeoHMS, especialmente las herramientas de reacondicionamiento de modelos de terreno para la incrustación de las celdas correspondientes a líneas de drenaje. Si bien, las versiones recientes de HEC-HMS permiten realizar el reacondicionamiento de terreno, el tiempo computacional de ejecución para modelos digitales de terreno de gran extensión y alta resolución (como los modelos ALOS PALSAR o los LIDAR) puede ser excesivamente alto debido a su motor de ejecución.
+Para el desarrollo de varias de las actividades del curso, utilizaremos la versión 10.2.2 de ArcGIS for Desktop, que permite ejecutar correctamente todas las herramientas disponibles en la extensión HEC-GeoHMS, especialmente las herramientas de reacondicionamiento de modelos de terreno para la incrustación de las celdas correspondientes a líneas de drenaje. 
+
+> Si bien, las versiones recientes de HEC-HMS permiten realizar el reacondicionamiento de terreno, el tiempo computacional de ejecución para modelos digitales de terreno de gran extensión y alta resolución (como los modelos ALOS PALSAR o los LIDAR) puede ser excesivamente alto debido a su motor de ejecución.
 
 Para la instalación de esta herramienta, es requerida una licencia comercial activa que permita la descarga, instalación y ejecución de la versión Desktop. Para más información consulte al administrador de licencias de su campus universitario.
 
@@ -128,6 +130,8 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2Extensions.png)
 
+> Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
+
 
 ### Instalación y configuración de ArcGIS Pro
 
@@ -145,7 +149,7 @@ https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students
 
 ### Referencias
 
-* 
+* https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/brochures/pdfs/arcgisextbro.pdf
 
 
 
