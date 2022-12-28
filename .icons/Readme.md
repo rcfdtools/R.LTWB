@@ -12,6 +12,7 @@ Esta carpeta contiene la iconografía general de este repositorio.
 | [R.LTWB.svg](R.LTWB.svg)                                     | R.LTWB vector logo, creación propia.                                                            |
 | [R.LTWB.cdr](R.LTWB.cdr)                                     | R.LTWB vector logo fuente CorelDraw 2021, creación propia.                                      |
 | [CHC_newlogo_edit.png](https://www.chc.ucsb.edu/data/chirps) | Chrips logo                                                                                     |
+| [python-logo-inkscape.svg](python-logo-inkscape.svg)         | [Python logo SVG format (generic SVG export from Inkscape)](https://www.python.org/static/community_logos/python-logo-inkscape.svg)          |
 
 ##
 

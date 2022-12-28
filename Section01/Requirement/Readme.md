@@ -179,17 +179,40 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 > La apertura de proyectos existentes, puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
 
 
-### Instalación y configuración de QGIS
+### Python y librerías requeridas
 
+Desde el portal https://www.python.org/, descargue e instale la última versión disponible de Python. 
 
-### Instalación y configuración de Python con entornos virtuales
+Al realizar las instalaciones de ArcGIS y QGIS, automáticamente es instalado Python como intérprete de comandos, por ejemplo:
+
+* En ArcGIS for Desktop (p.e, 10.2.2), la versión integrada de Python es 2.7.5 y por defecto se instala en Microsoft Windows en el directorio C:\Python27.
+* En ArcGIS Pro (p.e, 2.9.0), la versión integrada de Python es 3.7.11, por defecto se instala en C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3 y por clonación en el directorio de usuario (p.e, Admin) en C:\Users\Admin\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone.
+* En QGIS (p.e, 3.22.1), la versión integrada de Python es la 3.9.5, por defecto se instalan en Microsoft Windows en el directorio de archivos de programa localizado en C:\Program Files\QGIS 3.10\apps cuando se trata de versiones de 64 bits.
+
+Para el desarrollo de este curso, son requeridas las siguientes librerías de Python:
+
+* numpy
+* scipy
+* pandas
+* matplotlib
+* rasterio
+* requests
+* tabulate
+* missingno
+* scikit-learn
+
+> Para facilitar el proceso de instalación, en la raíz del repositorio cree un archivo de texto con el nombre _requirements.txt_ e incluya las librerías indicadas. 
+
+Para la instalación detalladade las extensiones, siga las instrucciones disponibles en:
+
+* https://github.com/rcfdtools/R.TeachingResearchGuide/tree/main/Section02/Python
+* https://github.com/rcfdtools/R.GISPython/tree/main/InstallPackageGraph
 
 
 ### Referencias
 
 * https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/brochures/pdfs/arcgisextbro.pdf
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
-
 
 
 ### Control de versiones
