@@ -8,12 +8,11 @@ Esta carpeta contiene documentos, artículos y enlaces de referencia relacionado
 
 ### Enlaces de interés
 
-* [ArcGIS](https://www.arcgis.com/)
+* [Esri ArcGIS](https://www.arcgis.com/)
 * [QGIS](https://qgis.org/)
 * [HEC-HMS](https://www.hec.usace.army.mil/software/hec-hms/)
 * [IDEAM - Descarga de datos hidroclimatológicos de Colombia](http://dhime.ideam.gov.co/atencionciudadano/)
 * [Python.org](https://www.python.org/)
-* [Enlaces y referencias complementarias](https://github.com/rcfdtools/R.LTWB/wiki/Referencias)
 
 
 ### Hidrología & SIG
