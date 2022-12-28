@@ -42,7 +42,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 ### Requisitos académicos
 
-* Conocimientos básicos en sistemas de información geográfica
+* Conocimientos básicos en sistemas de información geográfica - SIG
 * Conocimientos básicos en hidrología
 * Conocimientos básicos de programación usando Python
 
@@ -103,6 +103,30 @@ Para la correcta ejecución de las herramientas computacionales a utilizar duran
 
 
 ### Instalación y configuración de ArcGIS for Desktop
+
+Para el desarrollo de varias de las actividades del curso, utilizaremos la versión 10.2.2 de ArcGIS for Desktop que permite ejecutar correctamente todas las herramientas disponibles en la extensión HEC-GeoHMS, especialmente las herramientas de reacondicionamiento de modelos de terreno para la incrustación de las celdas correspondientes a líneas de drenaje. Si bien, las versiones recientes de HEC-HMS permiten realizar el reacondicionamiento de terreno, el tiempo computacional de ejecución para modelos digitales de terreno de gran extensión y alta resolución (como los modelos ALOS PALSAR o los LIDAR) puede ser excesivamente alto debido a su motor de ejecución.
+
+Para la instalación de esta herramienta, es requerida una licencia comercial activa que permita la descarga, instalación y ejecución de la versión Desktop. Para más información consulte al administrador de licencias de su campus universitario.
+
+> Actualmente, ESRI no permite a usuarios independientes, la descarga y ejecución de licencias académicas de 21 días para el paquete ArcGIS for Desktop.
+
+**Configuración preliminar de ArcGIS for Desktop**
+
+1. En ArcMap, desactive las opciones de geoprocesamiento en segundo plano. Ir al menú _Geoprocessing - Options_ y desactive la casilla _Background Processing_.
+
+> Debido a que los procesos de reacondicionamiento y procesamiento de modelos digitales de elevación - DEM, requieren de al menos 8GB para su ejecución, la desactivación de procesos en segundo plano previene el volcado de los procesos en memoria.
+
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2GeoprocessingOptions.png)
+
+2. En ArcMap, configure las rutas relativas entre mapas y archivos de datos. Configure la rueda del apuntador o mouse para que al desplazar hacia arriba se haga un acercamiento al mapa. 
+
+> Rutas relativas le permitirán cambiar la localización del mapa y sus datos a memorias USB u otras localizaciones en su equipo local sin perder la conexión entre ellos. En el menú _Customize_ seleccionar _ArcMap Options_ y en la pestaña _General_, realizar la configuración recomendada.
+
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2CustomizeOptions.png)
+
+3. Activar o desactivar extensiones en ArcGIS for Desktop. Las extensiones de ArcMAP requieren de una licencia adicional y son grupos de herramientas especializadas que permiten ejecutar tareas, por ejemplo, de análisis espacial, análisis 3D o geoestadística. En ArcMAP, ir al menú _Customize_ y seleccionar la opción _Extensions_.
+
+![R.LTWB](Screenshot/ArcGISDesktop10.2.2Extensions.png)
 
 
 ### Instalación y configuración de ArcGIS Pro
