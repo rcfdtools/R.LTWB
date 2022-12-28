@@ -28,8 +28,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * [Microsoft Excel from Office 64 bits](https://aka.ms/office-install)
 * [Notepad++](https://notepad-plus-plus.org)
-* [Python 3+](https://www.python.org/)
-* [Pandas para Python 3+](https://pandas.pydata.org/)
+* [Python 3+ y extensiones](https://www.python.org/)
 
 > Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido especificadas en cada actividad del curso.
 
@@ -191,15 +190,15 @@ Al realizar las instalaciones de ArcGIS y QGIS, automáticamente es instalado Py
 
 Para el desarrollo de este curso, son requeridas las siguientes librerías de Python:
 
-* numpy
-* scipy
-* pandas
-* matplotlib
-* rasterio
-* requests
-* tabulate
-* missingno
-* scikit-learn
+* [numpy](https://numpy.org/)
+* [scipy](https://scipy.org/)
+* [pandas](https://pandas.pydata.org/)
+* [matplotlib](https://matplotlib.org/)
+* [rasterio](https://rasterio.readthedocs.io/en/latest/)
+* [requests](https://pypi.org/project/requests/)
+* [tabulate](https://pypi.org/project/tabulate/)
+* [missingno](https://pypi.org/project/missingno/)
+* [scikit-learn](https://scikit-learn.org/stable/)
 
 > Para facilitar el proceso de instalación, en la raíz del repositorio cree un archivo de texto con el nombre _requirements.txt_ e incluya las librerías indicadas. 
 
