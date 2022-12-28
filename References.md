@@ -2,8 +2,7 @@
 
 Esta carpeta contiene documentos, artículos y enlaces de referencia relacionados con el contenido general de este repositorio. Dentro de cada actividad pueden existir carpetas de referencias específicas.
 
-> [Consulta los documentos de uso libre descargados](.refs) e incluidos en este repositorio.
-> 
+> [Consulta los documentos de uso libre descargados](.refs) e incluidos en este repositorio.<br>
 > [Consulta abreviaturas, definiciones y extensiones](Definitios.md) relacionadas con en este repositorio.
 
 
