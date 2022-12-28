@@ -31,11 +31,13 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [Python 3+](https://www.python.org/)
 * [Pandas para Python 3+](https://pandas.pydata.org/)
 
-> Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones son especificadas en cada actividad del curso.
+> Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones, son especificadas en cada actividad del curso.
+
 
 ### Servicios y plataformas
 
 * Cuenta de usuario en [Eathdata](../../Section02/UserCreation) de la NASA.
+* Cuenta de usuario [Esri](https://www.esri.com/en-us/home).
 
 
 ### Requisitos académicos
@@ -69,6 +71,32 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 
 ### Configuración del sistema operativo
 
+Para la correcta ejecución de las herramientas computacionales a utilizar durante el desarrollo de las actividades del curso, es recomendable realizar los siguientes ajustes en Microsoft Windows.
+
+1. En el escritorio de Microsoft Windows, oprima la combinación de teclas <kbd>Windows</kbd>+<kbd>R</kbd> para abrir la ventana de ejecución de comandos e ingrese _Control_. 
+
+![R.LTWB](Screenshot/Windows11RunControl.png)
+
+2. En el _Panel de Control_ de clic en la opción _View by:_ y seleccione _Large Icons_, luego de clic en la opción _Region_. Verifique y establezca el formato de fecha como `d/M/yyyy` y hora como `HH:mm`.
+
+![R.LTWB](Screenshot/Windows11ControlPanel.png)
+
+3. En _Región_ de clic en el botón _Configuración adicional..._
+
+![R.LTWB](Screenshot/Windows11ControlPanelAdditionalSettings.png)
+
+4. En _Configuración adicional..._ establezca la siguiente configuración y de clic en el botón _Apply_ y _Ok_
+
+* Separador decimal: punto
+* Símbolo de separación de miles: coma
+* Separador de listas: coma
+
+![R.LTWB](Screenshot/Windows11ControlPanelAdditionalSettingsSymbol.png)
+
+5. Una vez establecida la configuración regional, abra el Explorador de Windows y en el menú _View / Show_, seleccione la opción _File name extensions_ que le permitirá visualizar las extensiones de todos los archivos. Esta opción es especialmente útil al buscar archivos específicos que tienen el mismo nombre y diferentes extesiones, tales como los archivos de formas Shapefile que utilizan nativamente las extensiones .shp, shx, .dbf y .prj.
+
+![R.LTWB](Screenshot/Windows11FileNameExtensions.png)
+
 
 ### Instalación y configuración de ArcGIS for Desktop
 
@@ -76,6 +104,10 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 ### Instalación y configuración de ArcGIS Pro
 
 La apertura de proyectos existentes puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
+
+1. Ingrese al portal    
+
+https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students
 
 ### Instalación y configuración de QGIS
 
@@ -100,5 +132,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../WhatIsLTWB) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/999) | [Siguiente](../CaseStudy) |
-|---------------------------|-----------------------------------|------------------------------------------------------------------------------------|---------------------------|
+| [Anterior](../WhatIsLTWB) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Siguiente](../CaseStudy) |
+|---------------------------|-----------------------------------|-------------------------------------------------------------------------------------|---------------------------|
