@@ -12,7 +12,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Establecer los requisitos académicos mínimos y listar algunos recursos complementarios para su nivelación.
 
 
-### Requerimientos computacionales generales
+### Herramientas computacionales requeridas
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
@@ -31,7 +31,17 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [Python 3+](https://www.python.org/)
 * [Pandas para Python 3+](https://pandas.pydata.org/)
 
-> Las herramientas computacionales específicas requeridas, librerías, complementos y sus versiones, son especificadas en cada actividad del curso.
+> Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido especificadas en cada actividad del curso.
+
+
+## Equipo de cómputo
+
+* Sistema operativo: Microsoft Windows 10 o superior.
+* Memoria RAM: 8GB mínimo, óptimo 16 o superior.
+* Procesador: Intel Core i5 o superior (serie H o superior recomendado), AMD Ryzen (serie X recomendado)
+* Almacenamiento: 150 GB libres en disco de estado sólido (m.2 recomendado) . El procesamiento de los modelos de terreno y mapas de variables climatológicas y de balance, requiere de al menos el espacio indicado en disco,
+* Monitor: FHD 1920x1080p (recomendado 2 monitores).
+* Video: 2 GB independiente (tarjeta aceleradora 4 GB o superior recomendada)
 
 
 ### Servicios y plataformas
@@ -136,7 +146,7 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ### Instalación de ArcGIS Pro
 
-1. Ingrese al portal https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students, seleccione la opción _Free Trial_ y realice el registro de usuario a través de la opción _Sing up for the trial_.
+1. Ingrese al portal https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students, seleccione la opción _Free Trial_ que le permitirá obtener una licencia de prueba por 21 días y realice el registro de usuario a través de la opción _Sing up for the trial_.
 
 ![R.LTWB](Screenshot/ESRIArcGISPro3Trial.png)
 
