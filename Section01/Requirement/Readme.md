@@ -17,7 +17,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) 
-* Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
+* Para el cargue de archivos de Microsoft Excel en formato .xlsx dentro de ArcGIS for Desktop, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
 * [QGIS 3+](https://qgis.org/) (opcional)
 * QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
@@ -107,16 +107,17 @@ Para la correcta ejecución de las herramientas computacionales a utilizar duran
 Para el desarrollo de varias de las actividades del curso, utilizaremos la versión 10.2.2 de ArcGIS for Desktop, que permite ejecutar correctamente todas las herramientas disponibles en la extensión HEC-GeoHMS, especialmente las herramientas de reacondicionamiento de modelos de terreno para la incrustación de las celdas correspondientes a líneas de drenaje. 
 
 > Si bien, las versiones recientes de HEC-HMS permiten realizar el reacondicionamiento de terreno, el tiempo computacional de ejecución para modelos digitales de terreno de gran extensión y alta resolución (como los modelos ALOS PALSAR o los LIDAR) puede ser excesivamente alto debido a su motor de ejecución.
-
-Para la instalación de esta herramienta, es requerida una licencia comercial activa que permita la descarga, instalación y ejecución de la versión Desktop. Para más información consulte al administrador de licencias de su campus universitario.
-
+> 
 > Actualmente, ESRI no permite a usuarios independientes, la descarga y ejecución de licencias académicas de 21 días para el paquete ArcGIS for Desktop.
+
+Para la instalación de esta herramienta, es requerida una licencia comercial activa que permita la descarga, instalación y ejecución de la versión Desktop. Para más información, consulte al administrador de licencias de su campus universitario.
+
 
 **Configuración preliminar de ArcGIS for Desktop**
 
 1. En ArcMap, desactive las opciones de geoprocesamiento en segundo plano. Ir al menú _Geoprocessing - Options_ y desactive la casilla _Background Processing_.
 
-> Debido a que los procesos de reacondicionamiento y procesamiento de modelos digitales de elevación - DEM, requieren de al menos 8GB para su ejecución, la desactivación de procesos en segundo plano previene el volcado de los procesos en memoria.
+> Debido a que los procesos de reacondicionamiento y procesamiento de modelos digitales de elevación - DEM, requieren de al menos 8GB para su ejecución, la desactivación de procesos en segundo plano previene el volcado de los procesos existentes en la memoria RAM de su equipo.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2GeoprocessingOptions.png)
 
@@ -126,20 +127,41 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2CustomizeOptions.png)
 
-3. Activar o desactivar extensiones en ArcGIS for Desktop. Las extensiones de ArcMAP requieren de una licencia adicional y son grupos de herramientas especializadas que permiten ejecutar tareas, por ejemplo, de análisis espacial, análisis 3D o geoestadística. En ArcMAP, ir al menú _Customize_ y seleccionar la opción _Extensions_.
+3. Activar o desactivar extensiones en ArcGIS for Desktop. Las extensiones de ArcMAP requieren de una licencia adicional y son grupos de herramientas especializadas que permiten ejecutar tareas, por ejemplo, de análisis espacial, análisis 3D o geoestadística. En ArcMAP, ir al menú _Customize_ y seleccionar la opción _Extensions_. Para este curso son requeridas las extensiones 3D Analyst y Spatial Analyst.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2Extensions.png)
 
-> Para el cargue de archivos de Microsoft Excel en formato .xls, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
+> Para el cargue de archivos de Microsoft Excel en formato .xlsx dentro de ArcGIS for Desktop, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
 
 
-### Instalación y configuración de ArcGIS Pro
+### Instalación de ArcGIS Pro
 
-La apertura de proyectos existentes puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
+1. Ingrese al portal https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students, seleccione la opción _Free Trial_ y realice el registro de usuario a través de la opción _Sing up for the trial_.
 
-1. Ingrese al portal    
+![R.LTWB](Screenshot/ESRIArcGISProTrial.png)
 
-https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students
+> La apertura de proyectos existentes, puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
+
+2. Rellene el formulario de registro de usuario y siga las instrucciones en pantalla.
+
+![R.LTWB](Screenshot/ESRIArcGISProSignUp.png)
+
+3. Con su cuenta de usuario, ingrese al portal de Esri.
+
+![R.LTWB](Screenshot/ESRIArcGISProSignIn.png)
+
+4. Con su cuenta de usuario, ingrese al enlace de descargas de My Esri https://my.esri.com/#/downloads y de clic en la opción _Account Settings_.
+
+![R.LTWB](Screenshot/MyEsri.png)
+
+5. En _Account Settings_, visualice a la izquierda las opciones de licencias disponibles, de clic en el enlace _Download ArcGIS Pro_.
+
+![R.LTWB](Screenshot/MyEsriLicensing.png)
+
+
+
+
+
 
 ### Instalación y configuración de QGIS
 
@@ -150,6 +172,7 @@ https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students
 ### Referencias
 
 * https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/brochures/pdfs/arcgisextbro.pdf
+* [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 
 
