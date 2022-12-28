@@ -138,7 +138,7 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 1. Ingrese al portal https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students, seleccione la opción _Free Trial_ y realice el registro de usuario a través de la opción _Sing up for the trial_.
 
-![R.LTWB](Screenshot/ESRIArcGISProTrial.png)
+![R.LTWB](Screenshot/ESRIArcGISPro3Trial.png)
 
 > La apertura de proyectos existentes, puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
 
