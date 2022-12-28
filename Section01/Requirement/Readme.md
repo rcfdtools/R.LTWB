@@ -97,6 +97,8 @@ Para la correcta ejecución de las herramientas computacionales a utilizar duran
 
 ![R.LTWB](Screenshot/Windows11FileNameExtensions.png)
 
+> Opcionalmente, puede activar la visualización de archivos ocultos que le permitirá eliminar archivos temporales no visibles regularmente a usuarios.
+
 
 ### Instalación y configuración de ArcGIS for Desktop
 
