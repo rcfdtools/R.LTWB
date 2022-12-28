@@ -140,8 +140,6 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ![R.LTWB](Screenshot/ESRIArcGISPro3Trial.png)
 
-> La apertura de proyectos existentes, puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
-
 2. Rellene el formulario de registro de usuario y siga las instrucciones en pantalla.
 
 ![R.LTWB](Screenshot/ESRIArcGISProSignUp.png)
@@ -158,9 +156,15 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ![R.LTWB](Screenshot/MyEsriLicensing.png)
 
+6. Seleccione y descargue la versión más reciente disponible.
 
+![R.LTWB](Screenshot/MyEsriDownloadArcGISPro.png)
 
+7. Ejecute la instalación y siga las instruccione en pantalla.
 
+> Algunas versiones de ArcGIS Pro requieren de la instalación previa de [.NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+> 
+> La apertura de proyectos existentes, puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
 
 
 ### Instalación y configuración de QGIS
