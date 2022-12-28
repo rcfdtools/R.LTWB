@@ -39,9 +39,11 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Sistema operativo: Microsoft Windows 10 o superior.
 * Memoria RAM: 8GB mínimo, óptimo 16 o superior.
 * Procesador: Intel Core i5 o superior (serie H o superior recomendado), AMD Ryzen (serie X recomendado)
-* Almacenamiento: 150 GB libres en disco de estado sólido (m.2 recomendado) . El procesamiento de los modelos de terreno y mapas de variables climatológicas y de balance, requiere de al menos el espacio indicado en disco,
+* Almacenamiento: 150 GB libres en disco de estado sólido (m.2 recomendado).
 * Monitor: FHD 1920x1080p (recomendado 2 monitores).
 * Video: 2 GB independiente (tarjeta aceleradora 4 GB o superior recomendada)
+
+> El procesamiento de los modelos de terreno y mapas de variables climatológicas y de balance, requiere de al menos el espacio indicado en disco.
 
 
 ### Servicios y plataformas
