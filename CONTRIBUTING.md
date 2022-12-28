@@ -1,3 +1,5 @@
+## Contribuye con este proyecto 
+
 Crea tu cuenta de usuario en GitHub y marca este repositorio como favorito con la opción `⭐` o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub, de esta forma podrás acceder y participar en las discusiones y en la [_zona de reporte de fallos y soporte_](https://github.com/rcfdtools/R.LTWB/issues).
 
 ### Foros de discusión
@@ -20,3 +22,13 @@ Con tu cuenta de usuario y a través de la opción _[Issues](https://github.com/
 
 ### Comparte tus repositorios
 Colabora con este proyecto compartiendo y publicando tus propias herramientas y repositorios. Si dispones de un proyecto propio en GitHub o en otra plataforma de desarrollo colaborativo y está relacionada con el alcance de los temas de R.LTWB, envíanos desde _[Issues](https://github.com/rcfdtools/R.LTWB/issues)_ el link de acceso. Una vez revisemos la funcionalidad y su aplicabilidad dentro del contexto de temas asociados a sistemas de información geográfica - SIG, podremos incluir un enlace directo en este proyecto para que otros estudiantes e investigadores puedan acceder a tús desarrollos. 
+
+
+##
+
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](Readme.md) |
+|-----------------------------|
