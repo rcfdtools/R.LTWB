@@ -3,8 +3,8 @@
 | Abreviatura | Significado                                                                                                                                                          |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | SO, OS      | [Sistema operativo.](https://en.wikipedia.org/wiki/Operating_system)                                                                                                 |
-| CMD         | [Command o intérprete de comandos del SO.](https://en.wikipedia.org/wiki/Cmd.exe)                                                                                 |
-| GUI         | [Graphical user interface. Interfaz gráfica de usuario.](https://en.wikipedia.org/wiki/Graphical_user_interface)                                                    |
+| CMD         | [Command o intérprete de comandos del SO.](https://en.wikipedia.org/wiki/Cmd.exe)                                                                                    |
+| GUI         | [Graphical user interface. Interfaz gráfica de usuario.](https://en.wikipedia.org/wiki/Graphical_user_interface)                                                     |
 | WMO         | [World Meteorological Organization.](https://public.wmo.int/en)                                                                                                      |
 | OMM         | [Organización Meteorológica Mundial.](https://public.wmo.int/es)                                                                                                     |
 | IDEAM       | [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia                                                         |
@@ -19,6 +19,7 @@
 | SIG         | [Sistema de información geográfica](https://www.esri.com/es-es/what-is-gis/overview)                                                                                 |
 | GIS         | [Geographical information system](https://www.esri.com/en-us/what-is-gis/overview)                                                                                   |
 | m.s.n.m     | Elevación inversa o cota en metros sobre el nivel del mar.                                                                                                           |
+| N/A         | No aplica.                                                                                                                                                           |
 
 
 ### Definiciones
@@ -53,3 +54,10 @@
 | [.tfw](https://fileinfo.com/extension/tfw) | TIFF world file                                                                  |
 | [.csv](https://fileinfo.com/extension/csv) | Comma separated values file                                                      |
 
+
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
+
+_¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
+
+| [:house: Inicio](Readme.md) |
+|-----------------------------|
