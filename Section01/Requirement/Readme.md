@@ -160,7 +160,7 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ![R.LTWB](Screenshot/MyEsriDownloadArcGISPro.png)
 
-7. Ejecute la instalación y siga las instruccione en pantalla.
+7. Ejecute la instalación y siga las instrucciones en pantalla o las siguientes instrucciones detalladas https://pro.arcgis.com/en/pro-app/latest/get-started/install-and-sign-in-to-arcgis-pro.htm.
 
 > Algunas versiones de ArcGIS Pro requieren de la instalación previa de [.NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 > 
