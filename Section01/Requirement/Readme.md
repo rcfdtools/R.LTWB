@@ -15,7 +15,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 ### Herramientas computacionales requeridas
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
-* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) 
 * Para el cargue de archivos de Microsoft Excel en formato .xlsx dentro de ArcGIS for Desktop, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
 * [QGIS 3+](https://qgis.org/) (opcional)
@@ -29,6 +29,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [Microsoft Excel from Office 64 bits](https://aka.ms/office-install)
 * [Notepad++](https://notepad-plus-plus.org)
 * [Python 3+ y extensiones](https://www.python.org/)
+* [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo (opcional)
 
 > Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido especificadas en cada actividad del curso.
 
