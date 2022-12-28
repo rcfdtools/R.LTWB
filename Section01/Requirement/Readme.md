@@ -34,7 +34,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 > Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido especificadas en cada actividad del curso.
 
 
-## Equipo de cómputo
+### Equipo de cómputo
 
 * Sistema operativo: Microsoft Windows 10 o superior.
 * Memoria RAM: 8GB mínimo, óptimo 16 o superior.
