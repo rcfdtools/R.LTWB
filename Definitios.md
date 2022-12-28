@@ -7,7 +7,7 @@
 | GUI         | [Graphical user interface. Interfaz gráfica de usuario.](https://en.wikipedia.org/wiki/Graphical_user_interface)                                                     |
 | WMO         | [World Meteorological Organization.](https://public.wmo.int/en)                                                                                                      |
 | OMM         | [Organización Meteorológica Mundial.](https://public.wmo.int/es)                                                                                                     |
-| IDEAM       | [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia                                                         |
+| IDEAM       | [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM](http://www.ideam.gov.co/) de Colombia - Suramérica                                            |
 | LTWB        | [Long-term water balance](https://github.com/rcfdtools/R.LTWB)                                                                                                       |
 | DEM         | [Digital elevation model. Modelo digital de elevación.](https://pro.arcgis.com/en/pro-app/2.8/tool-reference/spatial-analyst/exploring-digital-elevation-models.htm) |
 | CRS         | [Coordinate reference system.](https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)                                         |
@@ -18,16 +18,16 @@
 | EPSG        | [Geodetic Parameter Dataset](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset)                                                                          |
 | SIG         | [Sistema de información geográfica](https://www.esri.com/es-es/what-is-gis/overview)                                                                                 |
 | GIS         | [Geographical information system](https://www.esri.com/en-us/what-is-gis/overview)                                                                                   |
-| m.s.n.m     | Elevación inversa o cota en metros sobre el nivel del mar.                                                                                                           |
-| N/A         | No aplica.                                                                                                                                                           |
+| m.s.n.m     | Elevación inversa o cota en metros sobre el nivel del mar                                                                                                            |
+| N/A         | No aplica                                                                                                                                                            |
 
 
 ### Definiciones
 
-| Definición                                                       | Descripción                                                                                                                          |
-|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| [Standalone](https://en.wikipedia.org/wiki/Standalone_software)  | Instalación independiente.                                                                                                           |
-| [Datum](https://en.wikipedia.org/wiki/Geodetic_datum)            | Un sistema de referencia geodésico es un recurso matemático que permite asignar coordenadas a puntos sobre la superficie terrestre.  |
+| Definición                                                       | Descripción                                                                                                                        |
+|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| [Standalone](https://en.wikipedia.org/wiki/Standalone_software)  | Instalación independiente                                                                                                          |
+| [Datum](https://en.wikipedia.org/wiki/Geodetic_datum)            | Un sistema de referencia geodésico es un recurso matemático que permite asignar coordenadas a puntos sobre la superficie terrestre |
 
 
 ### Extensiones y tipos de archivos
@@ -50,6 +50,7 @@
 | .ovr                                       | Raster pyramid format for raster files in a GIS                                  |
 | [.xml](https://fileinfo.com/extension/xml) | Extensible Markup Language for Application programming interface                 |
 | .vrt                                       | [Format driver for GDAL -  XML schema](https://gdal.org/drivers/raster/vrt.html) |
+| [.py](https://fileinfo.com/extension/py)   | Python script files                                                             |
 | [.pyc](https://fileinfo.com/extension/pyc) | Compiled Python Files                                                            |
 | [.tfw](https://fileinfo.com/extension/tfw) | TIFF world file                                                                  |
 | [.csv](https://fileinfo.com/extension/csv) | Comma separated values file                                                      |
