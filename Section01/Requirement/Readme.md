@@ -217,14 +217,16 @@ Para la instalación detalladade las extensiones, siga las instrucciones disponi
 
 ### Control de versiones
 
-| Versión     | Descripción                                              | Autor                                      | Horas  |
-|-------------|:---------------------------------------------------------|--------------------------------------------|:------:|
-| 2022.07.13  | Versión inicial con lista preliminar de requerimientos.  | [rcfdtools](https://github.com/rcfdtools)  |  0.5   |
+| Versión    | Descripción                                                                                     | Autor                                      | Horas |
+|------------|:------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.12.28 | Instalación y configuración básica de herramientas requeridas. Requerimientos computacionales.  | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| 2022.12.27 | Estructura de directorios.                                                                      | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| 2022.07.13 | Versión inicial con lista preliminar de requerimientos.                                         | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../WhatIsLTWB) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/9999) | [Siguiente](../CaseStudy) |
-|---------------------------|-----------------------------------|-------------------------------------------------------------------------------------|---------------------------|
+| [Anterior](../WhatIsLTWB) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/39) | [Siguiente](../CaseStudy) |
+|---------------------------|-----------------------------------|-----------------------------------------------------------------------------------|---------------------------|
