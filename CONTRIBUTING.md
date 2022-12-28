@@ -9,7 +9,7 @@ A través de la pestaña _[Discussions](https://github.com/rcfdtools/R.LTWB/disc
 
 ### Reportar un error o fallo
 
-En la parte inferior de cada sección y actividad, encontrará un enlace con el nombre `:beginner: Ayuda / Colabora` que le permitirá directamente reportar errores identificados en la formulación, en los valores de entrada de los casos de estudio utilizados como ejemplo, en la documentación y en general en cualquier elemento. A través de la misma opción proponga y envíe referencias complementarias a la actividad indicando sus enlaces.
+En la parte inferior de cada sección y actividad, encontrará un enlace con el nombre _:beginner: Ayuda / Colabora_ que le permitirá directamente reportar errores identificados en la formulación, en los valores de entrada de los casos de estudio utilizados como ejemplo, en la documentación y en general en cualquier elemento. A través de la misma opción proponga y envíe referencias complementarias a la actividad indicando sus enlaces.
 
 
 ### Proponer una actividad adicional
