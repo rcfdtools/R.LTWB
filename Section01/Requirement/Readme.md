@@ -93,6 +93,8 @@ Para la correcta ejecución de las herramientas computacionales a utilizar duran
 
 ![R.LTWB](Screenshot/Windows11ControlPanelAdditionalSettingsSymbol.png)
 
+> La definición de separador de lista como _coma_, le permitirá trabajar fácilmente con bases de datos almacenadas en archivos de texto separado por comas .csv, tales como los archivos de series de datos hidroclimatológicas obtenidas del IDEAM - Colombia.
+
 5. Una vez establecida la configuración regional, abra el Explorador de Windows y en el menú _View / Show_, seleccione la opción _File name extensions_ que le permitirá visualizar las extensiones de todos los archivos. Esta opción es especialmente útil al buscar archivos específicos que tienen el mismo nombre y diferentes extesiones, tales como los archivos de formas Shapefile que utilizan nativamente las extensiones .shp, shx, .dbf y .prj.
 
 ![R.LTWB](Screenshot/Windows11FileNameExtensions.png)
