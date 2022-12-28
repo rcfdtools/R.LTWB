@@ -3,6 +3,7 @@
 Esta carpeta contiene los archivos de documentos y artículos de uso libre descargados y citados en la documentación o en las referencias particulares de las diferentes actividades del curso. 
 
 > [Consulta las referencias generales del curso.](../References.md)
+> [Consulta abreviaturas, definiciones y extensiones](Definitios.md) relacionadas con en este repositorio.
 
 | Archivo local                                                                                                                                                         | Referencia y enlace público                                                                                                                                                                                                                                                                                                                               |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
