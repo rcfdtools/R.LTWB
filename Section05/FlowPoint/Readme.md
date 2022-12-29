@@ -138,6 +138,21 @@ Matriz de dispersión Turc Neutro
 ![R.LTWB](Screenshot/MicrosoftExcel365Table.png)
 ![R.LTWB](Screenshot/MicrosoftExcel365Graph.png)
 
+
+### Caudales medios LTWB vs. Caudales medios estaciones
+
+En la siguiente tabla encontrará la lectura de los valores medios obtenidos en el balance hidrológico en las localizaciones específicas de algunas de las estaciones del IDEAM.
+
+| Estación            | Latitud, ° | Longitud, ° | Área ap., km² | Qm IDEAM, m³/s | Qm Budyko, m³/s | Qm Dekop, m³/s | Qm Turc, m³/s |
+|---------------------|------------|-------------|---------------|----------------|-----------------|----------------|---------------|
+| BECERRIL [28027050] | 9.686611   | -73.279194  | 538.274       | 10.159         | 9.569801        | 7.785855       | 8.092049      |
+|                     |            |             |               |                |                 |                |               |
+|                     |            |             |               |                |                 |                |               |
+
+> Los caudales medios registrados en la tabla corresponden a caudales compuestos. [Caudales medios IDEAM](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv) obtenidos por agregación estadística.
+> 
+> Las áreas de aportación han sido obtenidas a partir de la lectura del número de celdas de la grilla [ALOSFac.tif](../../.grid) del modelo de acumulación FAC correspondientes al modelo digital de elevación ALOS PALSAR 
+
 En este momento dispone para la zona de estudio, de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
 
 
@@ -146,11 +161,11 @@ En este momento dispone para la zona de estudio, de ecuaciones características 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                            |
-|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características segmentadas que permitan, por ejemplo, analizar caudales medios en cuencas inferiores a 25 km².                                                                                                                   |
-|     2     | A partir de los mapas de caudal medio obtenidos para los métodos de evapotranspiración real investigados, realice la extracción de los caudales en nodos característicos, analice, cree ecuaciones y compare con los valores obtenidos en la presente actividad.                                                                                                                                   |
-|     3     | Compare los [caudales medios multianuales agregados estadísticamente](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md) a partir de los datos registrados en estaciones limnimétricas, con los datos obtenidos a partir del balance hidrológico de largo plazo. Para esta comparación es necesario identificar el nodo característico más próximo a cada estación. |
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características segmentadas que permitan, por ejemplo, analizar caudales medios en cuencas inferiores a 25 km².                                                                                                                                                                                                                                                                     |
+|     2     | A partir de los mapas de caudal medio obtenidos para los métodos de evapotranspiración real investigados, realice la extracción de los caudales en nodos característicos, analice, cree ecuaciones y compare con los valores obtenidos en la presente actividad.                                                                                                                                                                                                                                                                                     |
+|     3     | A través de una matriz de dispersión, compare en 20 localizaciones diferentes, los [caudales medios multianuales agregados estadísticamente](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md) a partir de los datos registrados en estaciones limnimétricas, con los datos obtenidos a partir del balance hidrológico de largo plazo. Para esta comparación es necesario identificar el nodo característico más próximo a cada estación o realizar la lectura en el pixel más próximo de las grillas de resultados. |
 
 
 ### Referencias
