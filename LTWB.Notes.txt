@@ -22,11 +22,9 @@ https://github.com/uecijg-ceh
 
 Pending tasks
 	Estimate time per activitie.
-	Diagrama de procesos en cada sección.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, puntual.
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
-	https://blog.ciat.cgiar.org/es/rclimtool-una-aplicacion-libre-para-el-llenado-y-analisis-de-datos-de-clima/
 
 
 Atención: la automatización Python ha sido integrada en diferentes secciones del curso. Los modeladores de procesos han sido asignados como actividad complementaria de investigación e implementación.

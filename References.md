@@ -39,6 +39,7 @@ Esta carpeta contiene documentos, artículos y enlaces de referencia relacionado
 * https://learn.arcgis.com/es/projects/get-started-with-arcgis-pro/
 * [Directrices de la Organización Meteorológica Mundial sobre el cálculo de las normales climáticas](https://library.wmo.int/doc_num.php?explnum_id=4167)
 * [Excel Avanzado: Graficar por fechas, por AltoCódigo](https://www.youtube.com/watch?v=dQ19rKbA05o)
+* https://blog.ciat.cgiar.org/es/rclimtool-una-aplicacion-libre-para-el-llenado-y-analisis-de-datos-de-clima/
 
 
 ### Datos climatológicos
