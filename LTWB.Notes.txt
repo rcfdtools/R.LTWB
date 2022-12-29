@@ -21,7 +21,6 @@ https://github.com/uecijg-ceh
 :open_file_folder:
 
 Pending tasks
-	Estimate time per activitie.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, puntual.
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
