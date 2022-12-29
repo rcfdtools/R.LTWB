@@ -22,7 +22,6 @@ https://github.com/uecijg-ceh
 
 Pending tasks
 	Estimate time per activitie.
-	Compare gauge flows vs LTWB flows over some basins.
 	Diagrama de procesos en cada sección.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, puntual.
