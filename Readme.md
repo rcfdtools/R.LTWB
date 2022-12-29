@@ -117,7 +117,7 @@ En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos 
 | [Mapa de isorendimiento medio](Section05/FlowPerformance)                                            | Utilizando los valores de caudal medio, número de celdas y área de aportación en las diferentes localizaciones de la red de drenaje, se construye el mapa de isorendimientos medios y se obtienen ecuaciones características que permiten estimar rendimientos en función del área de aportación                                                                                                                              |           0.75           |
 | [Balance hidrológico a partir de cuencas delimitadas](Section05/LTWBBasin)                           | Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediante estadísticos zonales, estimar manualmente el balance hidrológico a partir de los mapas de precipitación media y evapotranspiración real                                                                                                                                                                                                      |           1.25           |
 
-> Los tiempos de dedicación corresponden al tiempo que el estudiante debe dedicar al desarrollo de la actividad y las actividades complementarias indicadas al final de cada clase. 
+> Los tiempos de dedicación corresponden al los tiempos que el estudiante debe dedicar al desarrollo del caso de estudio del curso y a las actividades complementarias indicadas al final de cada clase. Estudiantes bajo el esquema de certificación y caso de estudio propio, requerirán de al menos 96 horas de trabajo. 
 
 
 ##
