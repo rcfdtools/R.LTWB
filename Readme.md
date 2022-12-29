@@ -24,7 +24,7 @@ Este curso ha sido dividido en diferentes secciones y actividades secuenciales, 
 * Segmentar las series compuestas en series por fenómeno climatológico (El Niño, La Niña y Neutro) a partir del indicador ENSO-ONI o El Niño-Oscilación del Sur de la National Oceanic and Atmospheric Administration - NOAA de los Estados Unidos de América.
 * A partir de series validadas y de la marcación de años por fenómeno climatológico, realizar agregaciones estadísticas a nivel multianual.
 * Analizar y crear mapas continuos por fenómeno climatológico de las variables climatológicas requeridas para el balance hidrológico. Para la generación de los mapas de evapotranspiración potencial, utilizaremos ecuaciones regionales que dependen de la elevación del terreno, temperatura y precipitación total.
-* Realizar balances hidrológicos de largo plazo distribuidos y a partir de cuencas o zonas geográficas delimitadas como las subzonas hidrográficas del IDEAM - Colombia - Suramérica.
+* Realizar balances hidrológicos de largo plazo distribuidos y para cuencas o zonas geográficas delimitadas como las subzonas hidrográficas del IDEAM - Colombia - Suramérica.
 * A partir de los puntos característicos obtenidos sobre la red de drenaje, de sus áreas de aportación y de los mapas de caudal medio, obtener ecuaciones características compuestas y por fenómeno climatológico.
 * Estimar y evaluar mapas de isorendimientos medios.
 * Obtener habilidades en automatización de análisis de datos y de procesos geográficos utilizando el lenguaje de programación Python.
@@ -128,5 +128,5 @@ _Clonación: para compatibilidad completa de las rutas utilizadas en los scripts
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:sun_with_face: Iniciar curso](Section01) | [:infinity: Otros cursos](https://github.com/rcfdtools) | [:notebook: Referencias](References.md) | [:label: Abreviaturas y definiciones](Definitios.md) 
-|--------------------------------------------|---------------------------------------------------------|-----------------------------------------|----------------------------------------------|
+| [:sun_with_face: Iniciar curso](Section01) | [:infinity: Otros cursos](https://github.com/rcfdtools) | [:notebook: Referencias](References.md) | [:label: Abreviaturas y definiciones](Definitios.md) |
+|--------------------------------------------|---------------------------------------------------------|-----------------------------------------|------------------------------------------------------|
