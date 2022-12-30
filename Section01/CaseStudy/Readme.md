@@ -309,6 +309,14 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de geoprocesamiento para disolución de polígonos y creación de polígonos envolventes.
 
 
+### Referencias
+
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/feature-envelope-to-polygon.htm
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/h-how-dissolve-data-management-works.htm
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-field.htm
+* https://docs.qgis.org/2.18/en/docs/user_manual/processing_algs/qgis/vector_geometry_tools.html
+
+
 ### Control de versiones
 
 | Versión    | Descripción                                                                                          | Autor                                      | Horas |

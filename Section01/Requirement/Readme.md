@@ -127,7 +127,7 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 **Configuración preliminar de ArcGIS for Desktop**
 
-1. En ArcMap, desactive las opciones de geoprocesamiento en segundo plano. Ir al menú _Geoprocessing - Options_ y desactive la casilla _Background Processing_.
+1. En ArcMap, desactive las opciones de geoprocesamiento en segundo plano. Ir al menú _Geoprocessing - Options_ y, desactive la casilla _Background Processing_.
 
 > Debido a que los procesos de reacondicionamiento y procesamiento de modelos digitales de elevación - DEM, requieren de al menos 8GB para su ejecución, la desactivación de procesos en segundo plano previene el volcado de los procesos existentes en la memoria RAM de su equipo.
 
@@ -203,7 +203,7 @@ Para el desarrollo de este curso, son requeridas las siguientes librerías de Py
 
 > Para facilitar el proceso de instalación, en la raíz del repositorio cree un archivo de texto con el nombre _requirements.txt_ e incluya las librerías indicadas. 
 
-Para la instalación detalladade las extensiones, siga las instrucciones disponibles en:
+Para la instalación detallada de las extensiones, siga las instrucciones disponibles en:
 
 * https://github.com/rcfdtools/R.TeachingResearchGuide/tree/main/Section02/Python
 * https://github.com/rcfdtools/R.GISPython/tree/main/InstallPackageGraph

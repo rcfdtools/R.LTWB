@@ -218,14 +218,6 @@ Ejemplo de raster calculator sobre QGIS
 En este momento, dispone de grillas de demarcación de drenajes, líneas de drenajes y puntos característicos de la red con el total de celdas convergentes y las áreas de aportación para la posterior lectura de los valores de caudal medio y cálculo de isorendimientos. 
 
 
-### Referencias
-
-* https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html
-* https://desktop.arcgis.com/en/arcmap/10.4/tools/spatial-analyst-toolbox/identifying-stream-networks.htm
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/identifying-stream-networks.htm
-* https://docs.qgis.org/2.8/en/docs/user_manual/working_with_raster/raster_calculator.html
-
-
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
@@ -239,7 +231,15 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 ### Compatibilidad
 
 * Se recomienda desarrollar la demarcación de celdas de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si la grilla de acumulación fué generada directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las celdas marcadas STR con las mismas herramientas.  
- 
+
+
+### Referencias
+
+* https://docs.qgis.org/3.22/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html
+* https://desktop.arcgis.com/en/arcmap/10.4/tools/spatial-analyst-toolbox/identifying-stream-networks.htm
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/identifying-stream-networks.htm
+* https://docs.qgis.org/2.8/en/docs/user_manual/working_with_raster/raster_calculator.html 
+
 
 ### Control de versiones
 
