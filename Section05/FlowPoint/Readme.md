@@ -175,14 +175,14 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     3     | A través de una matriz de dispersión, compare en 20 localizaciones diferentes, los [caudales medios multianuales agregados estadísticamente](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md) a partir de los datos registrados en estaciones limnimétricas, con los datos obtenidos a partir del balance hidrológico de largo plazo. Para esta comparación es necesario identificar el nodo característico más próximo a cada estación o realizar la lectura en el pixel más próximo de las grillas de resultados. |
 
 
-### Referencias
-
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/extract-multi-values-to-points.htm
-
-
 ### Compatibilidad
 
 * Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de extracción o estadísticas zonales.
+
+
+### Referencias
+
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/extract-multi-values-to-points.htm
 
 
 ### Control de versiones

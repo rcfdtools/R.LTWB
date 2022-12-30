@@ -254,17 +254,6 @@ En este momento dispone del mapa grillado integrado de elevación SRTM que cubre
 
 </div>
 
-### Referencias
-
-* https://gdal.org/drivers/raster/srtmhgt.html
-* https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1.003
-* https://lpdaac.usgs.gov
-* https://www2.jpl.nasa.gov/srtm/index.html
-* https://asterweb.jpl.nasa.gov/gdem.asp
-* [NASA Shuttle Radar Topography Mission Global 3 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C204582037-LPDAAC_ECS)
-* [NASA Shuttle Radar Topography Mission Global 3 arc second V003](https://search.earthdata.nasa.gov/search/granules?p=C204582034-LPDAAC_ECS)
-* [NASA Shuttle Radar Topography Mission Global 1 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C1000000260-LPDAAC_ECS)
-
 
 ### Actividades complementarias:pencil2:
 
@@ -281,6 +270,18 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para la creación de mosaicos o unión de imágenes.
 * Para la descarga puede utilizar cualquier navegador de Internet actualizado.
 * Descargas mediante script pueden ser realizadas en Linux, subsistemas de Linux para Windows o desde terminales emuladoras como Cygwin.
+
+
+### Referencias
+
+* https://gdal.org/drivers/raster/srtmhgt.html
+* https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1.003
+* https://lpdaac.usgs.gov
+* https://www2.jpl.nasa.gov/srtm/index.html
+* https://asterweb.jpl.nasa.gov/gdem.asp
+* [NASA Shuttle Radar Topography Mission Global 3 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C204582037-LPDAAC_ECS)
+* [NASA Shuttle Radar Topography Mission Global 3 arc second V003](https://search.earthdata.nasa.gov/search/granules?p=C204582034-LPDAAC_ECS)
+* [NASA Shuttle Radar Topography Mission Global 1 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C1000000260-LPDAAC_ECS)
 
 
 ### Control de versiones

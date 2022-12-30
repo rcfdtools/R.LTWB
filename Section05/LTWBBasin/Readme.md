@@ -156,15 +156,15 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     2     | Compare los valores de los métodos complementarios con los obtenidos en la presente actividad e indique y justifique cuales caudales utilizaría para el diseño de estructuras ecológicas. |
 
 
+### Compatibilidad
+
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de estadística zonal.
+
+
 ### Referencias
 
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/zonal-statistics-as-table.htm
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-geometry-attributes.htm
-
-
-### Compatibilidad
-
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de estadística zonal.
 
 
 ### Control de versiones

@@ -294,12 +294,6 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 
 </div>
 
-### Referencias
-
-* [ALOS_PALSAR_LEVEL1.0](https://search.earthdata.nasa.gov/search/granules?p=C1206485320-ASF)
-* [ALOS_PALSAR_LEVEL1.1](https://search.earthdata.nasa.gov/search/granules?p=C1206485527-ASF)
-* [ALOS_PALSAR_RTC_LOW_RES](https://search.earthdata.nasa.gov/search/granules?p=C1206487217-ASF)
-
 
 ### Actividades complementarias:pencil2:
 
@@ -316,6 +310,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para la creación de mosaicos o unión de imágenes.
 * Para la descarga puede utilizar cualquier navegador de Internet actualizado.
 * Descargas mediante script pueden ser realizadas en Linux, subsistemas de Linux para Windows o desde terminales emuladoras como Cygwin.
+
+
+### Referencias
+
+* [ALOS_PALSAR_LEVEL1.0](https://search.earthdata.nasa.gov/search/granules?p=C1206485320-ASF)
+* [ALOS_PALSAR_LEVEL1.1](https://search.earthdata.nasa.gov/search/granules?p=C1206485527-ASF)
+* [ALOS_PALSAR_RTC_LOW_RES](https://search.earthdata.nasa.gov/search/granules?p=C1206487217-ASF)
 
 
 ### Control de versiones

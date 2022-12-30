@@ -168,13 +168,6 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 En este momento dispone de grillas de acumulación de flujo para obtener las celdas de los drenajes sobre los diferentes modelos digitales de elevación.
 
 
-### Referencias
-
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-accumulation.htm
-* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/flow-accumulation.htm
-* https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
-
-
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
@@ -189,6 +182,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 * Se recomienda desarrollar la acumulación de celdas con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las acumulaciones con las mismas herramientas _Terrain Processing_.  
  
+
+### Referencias
+
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-accumulation.htm
+* https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/flow-accumulation.htm
+* https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
+
 
 ### Control de versiones
 

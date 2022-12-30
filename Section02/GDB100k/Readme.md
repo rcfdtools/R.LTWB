@@ -181,18 +181,6 @@ En este momento ya dispone de la red de drenaje que será utilizada para la rect
 </div>
 
 
-### Referencias
-
-* http://www.ideam.gov.co/capas-geo
-* http://www.siac.gov.co/catalogo-de-mapas
-* http://visor.ideam.gov.co/geovisor/#!/profiles/3
-* https://www.igac.gov.co/sites/igac.gov.co/files/anexo_1.1_catalogo_objetos_cartografiabasica_v1.0_.pdf
-* http://sites.tufts.edu/gis/files/2013/11/Watershed-and-Drainage-Delineation-by-Pour-Point.pdf
-* https://gisrsstudy.com/drainage-density-arcgis/
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/topographic-production/polygon-to-centerline.htm
-* [Línea central de un polígono en QGIS](https://www.youtube.com/watch?v=aVWnMI-QdSs)
-
-
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
@@ -207,6 +195,18 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 * Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas para de digitalización con opciones de encajado o snapping.
 * Para la descarga puede utilizar cualquier navegador de Internet actualizado.
+
+
+### Referencias
+
+* http://www.ideam.gov.co/capas-geo
+* http://www.siac.gov.co/catalogo-de-mapas
+* http://visor.ideam.gov.co/geovisor/#!/profiles/3
+* https://www.igac.gov.co/sites/igac.gov.co/files/anexo_1.1_catalogo_objetos_cartografiabasica_v1.0_.pdf
+* http://sites.tufts.edu/gis/files/2013/11/Watershed-and-Drainage-Delineation-by-Pour-Point.pdf
+* https://gisrsstudy.com/drainage-density-arcgis/
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/topographic-production/polygon-to-centerline.htm
+* [Línea central de un polígono en QGIS](https://www.youtube.com/watch?v=aVWnMI-QdSs)
 
 
 ### Control de versiones

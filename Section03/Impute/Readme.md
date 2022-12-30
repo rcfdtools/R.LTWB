@@ -563,6 +563,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Impute.py](../../.src/Impute.py), presente un análisis cualitativo e identifique en que estaciones no se han obtenido datos sintéticos consistentes para los métodos implementados.                                                                                                                                                                    | 
 |     3     | A partir de los datos de precipitación media mensual, identifique una estación que contenga una serie continua cercana a 41 años, analice los estadísticos de 10 años consecutivos de datos, elimínelos de la serie y genere datos sintéticos por el método KNN y MICE. Luego, grafique la serie original y la serie sintética, obtenga los estadísticos y realice una análisis cualitativo de similitud y correlación, explicando que tan similares son los datos generados. |
 
+
 ### Referencias
 
 * https://www.projectpro.io/recipes/deal-with-missing-values-in-timeseries-in-python

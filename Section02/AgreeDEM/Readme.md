@@ -267,12 +267,6 @@ El reacondicionamiento de terreno con QGIS puede ser realizado con la herramient
 En este momento dispone de grillas de terreno reacondicionadas para relleno de sumideros.
 
 
-### Referencias
-
-* https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu
-* https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
-
-
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
@@ -286,6 +280,12 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 ### Compatibilidad
 
 * Esta actividad puede ser desarrollada en versiones standalone de HEC-HMS 4.9 o superior, en HEC-GeoHMS sobre ArcGIS 10.2.2 y en QGIS. 
+
+
+### Referencias
+
+* https://www.hec.usace.army.mil/confluence/hmsdocs/hmsum/4.9/geographic-information/gis-menu
+* https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
 
 
 ### Control de versiones

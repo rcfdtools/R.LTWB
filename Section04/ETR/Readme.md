@@ -205,15 +205,15 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     2     | A partir de las ecuaciones investigadas, cree los mapas de evapotranspiración real y con algebra de mapas realice el análisis de diferencias respecto a los mapas obtenidos en esta actividad. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio. |
 
 
+### Compatibilidad
+
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
+
+
 ### Referencias
 
 * http://julianrojo.weebly.com/uploads/1/2/0/0/12008328/metodos_estimacion_de_et.pdf
 * https://hess.copernicus.org/articles/23/4983/2019/
-
-
-### Compatibilidad
-
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
 
 
 ### Control de versiones

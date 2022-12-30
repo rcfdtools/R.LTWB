@@ -223,15 +223,15 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     2     | A partir de las ecuaciones regionales investigadas, cree los mapas de temperatura y con algebra de mapas realice el análisis de diferencias. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio.                              |
 
 
+### Compatibilidad
+
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
+
+
 ### Referencias
 
 * https://biblioteca.cenicafe.org/bitstream/10778/860/1/arc%2049%283%29224-230.pdf
 * https://biblioteca.cenicafe.org/bitstream/10778/859/8/6.%20Temperatura.pdf
-
-
-### Compatibilidad
-
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
 
 
 ### Control de versiones

@@ -138,16 +138,16 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     2     | Investigue e interpole la precipitación total compuesta por 3 métodos diferentes (p.ej., Spline, Natural Neghbor, Kriging, Tred) y compare los resultados con los obtenidos en ArcGIS Pro. |
 
 
+### Compatibilidad
+
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de interpolación espacial.
+
+
 ### Referencias
 
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/idw.htm
 * https://desktop.arcgis.com/en/arcmap/latest/tools/spatial-analyst-toolbox/idw.htm
 * https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/spatial_analysis_interpolation.html
-
-
-### Compatibilidad
-
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de interpolación espacial.
 
 
 ### Control de versiones

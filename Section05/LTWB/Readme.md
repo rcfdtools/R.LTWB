@@ -248,15 +248,15 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     3     | Para los mapas compuestos de evapotranspiración real - ETR, realice el balance hidrológico en ArcGIS for Desktop y en QGIS, compare los resultados con los obtenidos en esta actividad.                                                                     |
 
 
+### Compatibilidad
+
+* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas y acumulación de flujo que incluyan grillas de pesos distribuidos.
+
+
 ### Referencias
 
 * https://hess.copernicus.org/articles/24/1975/2020/#:~:text=3.1%20Long%2Dterm%20water%20balance,precipitation%20(%E2%80%9Csupply%E2%80%9D)
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/flow-direction.htm
-
-
-### Compatibilidad
-
-* Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas y acumulación de flujo que incluyan grillas de pesos distribuidos.
 
 
 ### Control de versiones

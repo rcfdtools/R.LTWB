@@ -99,14 +99,14 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |     2     | Investigue y documente la utilidad y aplicabilidad de los mapas de isorendimientos medios.                                                                                                                                      |
 
 
-### Referencias
-
-* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/raster-calculator.htm
-
-
 ### Compatibilidad
 
 * Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
+
+
+### Referencias
+
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/raster-calculator.htm
 
 
 ### Control de versiones
