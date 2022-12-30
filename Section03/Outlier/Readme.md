@@ -582,6 +582,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://www.statology.org/pandas-exclude-column/
 * https://www.investopedia.com/terms/e/empirical-rule.asp
 * https://latex-tutorial.com/symbols/greek-alphabet/
+* https://medium.com/geekculture/detecting-anomalies-in-time-series-based-on-the-seasonal-pattern-bc4734a2c45e
 
 
 ### Control de versiones
