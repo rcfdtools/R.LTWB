@@ -416,21 +416,6 @@ En este momento dispone de grillas integradas de elevación ASTER que cubren tod
 </div>
 
 
-### Referencias
-
-* https://doi.org/10.5067/ASTER/ASTGTM.003
-* https://lpdaac.usgs.gov
-* https://asterweb.jpl.nasa.gov/
-* https://pro.arcgis.com/en/pro-app/2.8/help/mapping/navigation/profile-viewing.htm
-* https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/elevation-surfaces.htm
-* https://www.qgistutorials.com/en/docs/3/raster_mosaicing_and_clipping.html
-* [Using the Profile Tool plugin in QGIS](https://www.youtube.com/watch?v=UD0Oumv5y1w)
-* [ASTER Global Water Bodies Database NetCDF V001](https://search.earthdata.nasa.gov/search/granules?p=C1575734501-LPDAAC_ECS)
-* [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
-* [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
-* Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012.
-
-
 ### Actividades complementarias:pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
@@ -447,6 +432,23 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * Esta actividad puede ser desarrollada con cualquier herramienta SIG que disponga de herramientas de visualización 3D.
 * Para la descarga puede utilizar cualquier navegador de Internet actualizado.
 * Descargas mediante script pueden ser realizadas en Linux, subsistemas de Linux para Windows o desde terminales emuladoras como Cygwin.
+
+
+### Referencias
+
+* https://doi.org/10.5067/ASTER/ASTGTM.003
+* https://lpdaac.usgs.gov
+* https://asterweb.jpl.nasa.gov/
+* https://pro.arcgis.com/en/pro-app/2.8/help/mapping/navigation/profile-viewing.htm
+* https://pro.arcgis.com/en/pro-app/latest/help/mapping/layer-properties/elevation-surfaces.htm
+* https://www.qgistutorials.com/en/docs/3/raster_mosaicing_and_clipping.html
+* [Using the Profile Tool plugin in QGIS](https://www.youtube.com/watch?v=UD0Oumv5y1w)
+* [ASTER Global Water Bodies Database NetCDF V001](https://search.earthdata.nasa.gov/search/granules?p=C1575734501-LPDAAC_ECS)
+* [ASTER Global Digital Elevation Model Attributes NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575733858-LPDAAC_ECS)
+* [ASTER Global Digital Elevation Model NetCDF V003](https://search.earthdata.nasa.gov/search/granules?p=C1575731655-LPDAAC_ECS)
+* Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012.
+* https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/mosaic-to-new-raster.htm
+* https://pro.arcgis.com/en/pro-app/latest/help/analysis/raster-functions/hillshade-function.htm
 
 
 ### Control de versiones
