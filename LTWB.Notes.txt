@@ -21,6 +21,7 @@ https://github.com/uecijg-ceh
 :open_file_folder:
 
 Pending tasks
+	Microsoft subsystem for Linux for run .sh DEM downloads instead of CGWIN.
     Map layout with Hydrological zones and granules.
 	Hydrological scales: mundial, regional, zonal, local, puntual.
 	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
@@ -65,3 +66,10 @@ _Realice o publique aquí consultas, ideas, comentarios, preguntas y respuestas 
 </div>
 
 <br>(_Versión borrador_)
+
+
+Time Series Analysis in Python | Time Series Forecasting | Data Science with Python
+https://www.youtube.com/watch?v=e8Yw4alG16Q
+
+Time Series Forecasting with XGBoost - Use python and machine learning to predict energy consumption
+https://www.youtube.com/watch?v=vV12dGe_Fho
