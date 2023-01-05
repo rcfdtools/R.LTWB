@@ -208,6 +208,8 @@ Para la instalación detallada de las extensiones, siga las instrucciones dispon
 * https://github.com/rcfdtools/R.TeachingResearchGuide/tree/main/Section02/Python
 * https://github.com/rcfdtools/R.GISPython/tree/main/InstallPackageGraph
 
+Para la instalación de las demás herramientas requeridas, de clic en los enlaces disponibles en esta actividad en el literal _["Herramientas computacionales requeridas"](Requirement#herramientas-computacionales-requeridas)_
+
 
 ### Referencias
 
