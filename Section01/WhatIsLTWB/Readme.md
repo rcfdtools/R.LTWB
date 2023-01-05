@@ -5,7 +5,7 @@ Keywords: `Long-term-water-balance` `Hydrology` `Evapotranspiration` `Rain` `Are
 
 Explicación general del procedimiento para la realización de balances hidrológicos e identificación de información base requerida. En esta clase también se listan algunas de las aplicaciones generales de los caudales medios de largo plazo en la realización de estudios de ingeniería y estudios ambientales
 
-Para la ejecución completa de un balance hidrológico de largo plazo a nivel anual, es necesario definir primero el límite espacial de la zona de estudio para luego obtener los mapas de terreno, redes de drenaje y series hidroclimatológicas necesarias para la producción de mapas continuos. 
+Los balances hidrológicos de largo plazo permiten cuantificar la oferta hídrica superficial o el caudal medio en cualquier localización particular o sobre un área específica de interés. Para la ejecución completa de un balance hidrológico de largo plazo a nivel anual, es necesario definir primero el límite espacial de la zona de estudio para luego obtener los mapas de terreno, redes de drenaje y series hidroclimatológicas necesarias para la producción de mapas continuos.
 
 
 ## Utilidad y campo de aplicación de los LTWB en ingeniería
@@ -70,10 +70,10 @@ En general cuando se aborda el tema de la evapotranspiración real, se hace refe
 
 ### Control de versiones
 
-| Versión    | Descripción                            | Autor                                      | Horas |
-|------------|:---------------------------------------|--------------------------------------------|:-----:|
-| 2022.12.23 | Documentación.                         | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.12.22 | Versión inicial, inicio documentación. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| Versión    | Descripción                                       | Autor                                      | Horas |
+|------------|:--------------------------------------------------|--------------------------------------------|:-----:|
+| 2022.12.23 | Lectura y revisión de referencias. Documentación. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.12.22 | Versión inicial, inicio documentación.            | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
