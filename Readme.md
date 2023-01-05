@@ -39,7 +39,7 @@ El curso inicia con una introducción y explicación general de la metodología,
 
 ## Dirigido a
 
-Los contenidos presentados en este curso, están dirigidos a estudiantes y profesionales de diferentes disciplinas que requieran aprender y/o fortalecer sus conocimientos en hidrología computacional y sistemas de información geográfica, tales como:
+Los contenidos presentados en este curso están dirigidos a estudiantes y profesionales de diferentes disciplinas que requieran aprender y/o fortalecer sus conocimientos en hidrología computacional y sistemas de información geográfica, tales como:
 
 * Estudiantes de pregrado y posgrado en ingeniería.
 * Ingenieros y especialistas.
@@ -48,7 +48,7 @@ Los contenidos presentados en este curso, están dirigidos a estudiantes y profe
 * Gestores territoriales con conocimientos en hidrología.
 
 
-## [Sección 1](Section01/Readme.md) - Introducción y fundamentos
+## Sección 1 - Introducción y fundamentos [:link:](Section01/Readme.md)
 
  En esta sección se presenta la utilidad de los LTWB en el campo de la ingeniería, se delimita el caso de estudio y se establecen los requerimientos generales para el desarrollo de las diferentes actividades prácticas incluidas en el curso.
 
@@ -59,7 +59,7 @@ Los contenidos presentados en este curso, están dirigidos a estudiantes y profe
 | [Caso de estudio](Section01/CaseStudy)                                                              | Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia - Suramérica, con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en la creación y procesamiento de los diferentes mapas y capas geográficas.      |             1             | 
 
 
-## Sección 2 - Descarga y procesamiento de modelos digitales de elevación
+## Sección 2 - Descarga y procesamiento de modelos digitales de elevación [:link:](Section02/Readme.md)
 
 En esta sección realizaremos la descarga y procesamiento de diferentes tipos de modelos digitales de elevación, incluido el reacondicionamiento o ajuste a partir de la incrustación de los vectores de drenaje.
 
@@ -77,7 +77,7 @@ En esta sección realizaremos la descarga y procesamiento de diferentes tipos de
 | [Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos](Section02/StrDEM)                           | A partir de grillas de acumulación de flujo, se pueden identificar las celdas que hacen parte de la red de drenaje principal. Para ello se especifica el área de aportación, p. ej. entre 1 y 4 km² o el número equivalente de celdas en función de su resolución, considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel. Es importante tener en cuenta que algunos de los tramos obtenidos, corresponderán a áreas de aportación inferiores al valor de aportación definido, específicamente en cuencas intermedias o cuencas de tránsito entre dos puntos de unión próximos. En esta actividad, también se obtienen los nodos característicos de la red y sus áreas de aportación para la posterior lectura de caudales medios. |             2              |
 
 
-## Sección 3 - Descarga, procesamiento y análisis de datos hidroclimatológicos
+## Sección 3 - Descarga, procesamiento y análisis de datos hidroclimatológicos [:link:](Section03/Readme.md)
 
 En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico. Complementariamente, implementaremos scripts en Python para automatizar varias de las actividades desarrolladas, facilitando su replicación a otros casos de estudio o a proyectos particulares.
 
@@ -94,7 +94,7 @@ En esta sección se obtienen, procesan y analizan los datos hidroclimatológicos
 | [Agregación estadística para obtención de promedios multianuales compuestos y por fenómeno climatológico](Section03/Agg)        | Luego de validadas y completadas las series, y de realizada la marcación de años por fenómeno climatológico, se efectúa el proceso de agregación estadística para obtener los valores promedio multianuales requeridos en cada estación por parámetro hidro-climatológico para su interpolación espacial.                                                                                                                                                                                                                                           |             2             |
 
 
-## Sección 4 - Análisis espacial de variables climatológicas
+## Sección 4 - Análisis espacial de variables climatológicas [:link:](Section04/Readme.md)
 
 Durante el proceso de conformación de información para el desarrollo del balance hidrológico, es necesaria la construcción de mapas continuos e interpolados que representen espacialmente el comportamiento de las diferentes variables requeridas y fenómenos climatológicos asociados a nivel multianual.
 
@@ -106,7 +106,7 @@ Durante el proceso de conformación de información para el desarrollo del balan
 | [Mapa de evapotranspiración real - ETR](Section04/ETR)      | En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Turc y Dekop.                                                                                                                                                                                                                                                       |           2            |
 
 
-## Sección 5 - Balance hidrológico de largo plazo - LTWB
+## Sección 5 - Balance hidrológico de largo plazo - LTWB [:link:](Section05/Readme.md)
 
 En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, crearemos el mapa de isorendimientos medios y desarrolaremos el balance a partir de cuencas o áreas de aportación delimitadas.
 
