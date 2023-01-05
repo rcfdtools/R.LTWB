@@ -73,3 +73,19 @@ https://www.youtube.com/watch?v=e8Yw4alG16Q
 
 Time Series Forecasting with XGBoost - Use python and machine learning to predict energy consumption
 https://www.youtube.com/watch?v=vV12dGe_Fho
+
+
+TTS
+Text to Speech Converter - FREE & No Limits
+https://www.youtube.com/watch?v=kfqpFKdDVMU
+http://balabolka.site/balabolka.htm
+
+
+Create audio files from text - TTS
+	1. Create a Microsoft Word document with the TTS text.
+	2. Convert the .docx file to an .pdf file.
+	3. Open the .pdf file with Microsoft Edge.
+	4. Open the Window Sound Recorder and choose the Stereo Mix sound system. Start the record.
+	5. En Microsoft Edge, clic the option Read Aloud and let read all the file.
+	5. Stop the recording.
+	

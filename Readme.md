@@ -10,18 +10,18 @@
 
 _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. En este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
 
-Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
+Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas, que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
 
 ## Objetivos generales
 
-* Comprender la utilidad de los LTWB en los campos de ingeniería aplicada.
+* Comprender la utilidad de los balances hidrológicos de largo plazo en los campos de ingeniería aplicada.
 * Delimitar la zona de estudio para descargar y procesar las redes de drenaje y los modelos digitales de elevación ASTER GDEM, SRTM y ALOS PALSAR.
 * Utilizando técnicas de hidrología computacional, reajustar los modelos digitales de elevación incrustando la red de drenaje, rellenar sumideros, determinar las direcciones de flujo, calcular las acumulaciones, demarcar los drenajes y obtener puntos característicos sobre toda la red de drenaje.
 * A partir de la zona de estudio, identificar las estaciones hidroclimatológicas terrestres para analizar su densidad y cobertura.
 * A partir de la red de estaciones, descargar y procesar series temporales a través de técnicas de ciencia de datos. El procesamiento incluye la exploración y análisis de series, su representación gráfica, la identificación y ajuste de valores atípicos, el completado y extendido para obtener series homogéneas.
 * Comparar series terrestres con series obtenidas a través de sensores remotos satelitales.
-* Segmentar las series compuestas en series por fenómeno climatológico (El Niño, La Niña y Neutro) a partir del indicador ENSO-ONI o El Niño-Oscilación del Sur de la National Oceanic and Atmospheric Administration - NOAA de los Estados Unidos de América.
+* Segmentar las series compuestas en series por fenómeno climatológico (El Niño, La Niña y Neutro) a partir del indicador ENSO-ONI o El Niño-Oscilación del Sur, de la National Oceanic and Atmospheric Administration - NOAA de los Estados Unidos de América.
 * A partir de series validadas y de la marcación de años por fenómeno climatológico, realizar agregaciones estadísticas a nivel multianual.
 * Analizar y crear mapas continuos por fenómeno climatológico de las variables climatológicas requeridas para el balance hidrológico. Para la generación de los mapas de evapotranspiración potencial, utilizaremos ecuaciones regionales que dependen de la elevación del terreno, temperatura y precipitación total.
 * Realizar balances hidrológicos de largo plazo distribuidos y para cuencas o zonas geográficas delimitadas como las subzonas hidrográficas del IDEAM - Colombia - Suramérica.
