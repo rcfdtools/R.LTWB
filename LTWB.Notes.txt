@@ -88,4 +88,13 @@ Create audio files from text - TTS
 	4. Open the Window Sound Recorder and choose the Stereo Mix sound system. Start the record.
 	5. En Microsoft Edge, clic the option Read Aloud and let read all the file.
 	5. Stop the recording.
-	
+
+Animated face
+	https://www.nvidia.com/en-us/omniverse/download/
+	user: r.cfdtools@gmail.com
+	Pass: P****************2***********
+	https://www.youtube.com/watch?v=MbsFBukGOZE
+	https://www.descript.com/download/windows
+	user: r.cfdtools@gmail.com
+	Pass: P****************2***********
+	https://www.freeconvert.com/wav-to-mov/download	
