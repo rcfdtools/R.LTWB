@@ -81,13 +81,18 @@ https://www.youtube.com/watch?v=kfqpFKdDVMU
 http://balabolka.site/balabolka.htm
 
 
-Create audio files from text - TTS
-	1. Create a Microsoft Word document with the TTS text.
+Create audio files from text - TTS using Microsoft Edge
+	1. Create a Microsoft Word document with the TTS text script.
 	2. Convert the .docx file to an .pdf file.
 	3. Open the .pdf file with Microsoft Edge.
 	4. Open the Window Sound Recorder and choose the Stereo Mix sound system. Start the record.
-	5. En Microsoft Edge, clic the option Read Aloud and let read all the file.
+	5. En Microsoft Edge, clic the option Read Aloud and let read all the file. Voice: Microsoft Gonzalo
 	5. Stop the recording.
+	
+Create audio files from text - TTS using Microsoft Windows may required
+	1. In Microsoft Windows, go to Setting / Time & Language / Speech / Manage voices / Add voices / Spanish
+	2. In Microsoft Windows, go to Setting / Accessibility / Narraton / Choose a voice / 
+
 
 Animated face
 	https://www.nvidia.com/en-us/omniverse/download/
@@ -98,3 +103,7 @@ Animated face
 	user: r.cfdtools@gmail.com
 	Pass: P****************2***********
 	https://www.freeconvert.com/wav-to-mov/download	
+	How to Generate Human Speech in any Language in Adobe Audition CC (2017)
+	https://www.youtube.com/watch?v=8qrZi0YmCcs
+	DaVinci Resolve 18 - Full Tutorial for Beginners
+	https://www.youtube.com/watch?v=EEksPdEc7aI
