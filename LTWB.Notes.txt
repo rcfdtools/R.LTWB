@@ -1,5 +1,4 @@
-Long-term water balance
-Clases: 28 de 32 a 2022.12.21
+LTWB: Long-term water balance
 Fecha entrega: 2023.02.28
 
 R.LTWB
@@ -94,16 +93,11 @@ Create audio files from text - TTS using Microsoft Windows may required
 	2. In Microsoft Windows, go to Setting / Accessibility / Narraton / Choose a voice / 
 
 
-Animated face
+Tools
 	https://www.nvidia.com/en-us/omniverse/download/
-	user: r.cfdtools@gmail.com
-	Pass: P****************2***********
 	https://www.youtube.com/watch?v=MbsFBukGOZE
-	https://www.descript.com/download/windows
 	user: r.cfdtools@gmail.com
 	Pass: P****************2***********
 	https://www.freeconvert.com/wav-to-mov/download	
-	How to Generate Human Speech in any Language in Adobe Audition CC (2017)
-	https://www.youtube.com/watch?v=8qrZi0YmCcs
 	DaVinci Resolve 18 - Full Tutorial for Beginners
 	https://www.youtube.com/watch?v=EEksPdEc7aI
