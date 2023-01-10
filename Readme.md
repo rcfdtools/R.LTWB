@@ -49,7 +49,7 @@ Los contenidos presentados en este curso están dirigidos a estudiantes y profes
 * Funcionarios públicos y/o gestores territoriales con conocimientos en hidrología.
 
 
-## Sección 1 - Introducción y fundamentos [:link:](Section01/Readme.md)
+## Sección 1 - Introducción y fundamentos [:hook:](Section01/Readme.md)
 
  En esta sección se presenta la utilidad de los LTWB en el campo de la ingeniería, se delimita el caso de estudio y se establecen los requerimientos generales para el desarrollo de las diferentes actividades prácticas incluidas en el curso.
 
