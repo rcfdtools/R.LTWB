@@ -28,6 +28,7 @@ Este curso ha sido dividido en diferentes secciones y actividades secuenciales, 
 * A partir de los puntos característicos obtenidos sobre la red de drenaje, de sus áreas de aportación y de los mapas de caudal medio, obtener ecuaciones características compuestas y por fenómeno climatológico.
 * Estimar y evaluar mapas de isorendimientos medios.
 * Obtener habilidades en automatización de análisis de datos y de procesos geográficos utilizando el lenguaje de programación Python.
+* Para las diferentes etapas de procesamiento de información hidroclimatológica, generar y publicar de forma automática, reportes detallados en formato Markdown.
 
 
 ## Metodología
