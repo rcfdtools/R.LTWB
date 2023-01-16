@@ -181,7 +181,7 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ### Instalación de QGIS
 
-Desde el portal https://qgis.org/, descargue la última versión, p.ej la 3.28. Ejecute el instalador y siga las instrucciones en pantalla.
+Desde el portal https://qgis.org/, descargue la última versión disponible de QGIS, p.ej la 3.28.2 (enero 2023). Ejecute el instalador y siga las instrucciones en pantalla.
 
 ![R.LTWB](Screenshot/QGISDownload.png)
 
