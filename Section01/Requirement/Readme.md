@@ -144,9 +144,9 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 ### Instalación de ArcGIS Pro
 
-> [ArcGIS Pro 3.0.0 requiere de .NET Desktop Runtime 6.0.6 para su instalación.](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+> ArcGIS Pro 3.0.0 requiere de [.NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) para su instalación.
 > 
-> [Algunas de las actividades para el procesarimiento de modelos de terreno requieren de Arc Hydro Tools para ArcGIS Pro.](http://downloads.esri.com/archydro/archydro/setup/Pro/) 
+> Algunas de las actividades para el procesarimiento de modelos de terreno requieren de [Arc Hydro Tools para ArcGIS Pro.](http://downloads.esri.com/archydro/archydro/setup/Pro/) 
 
 1. Ingrese al portal https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students, seleccione la opción _Free Trial_ que le permitirá obtener una licencia de prueba por 21 días y realice el registro de usuario a través de la opción _Sing up for the trial_.
 
