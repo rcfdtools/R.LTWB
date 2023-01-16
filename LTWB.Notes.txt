@@ -93,6 +93,11 @@ Create audio files from text - TTS using Microsoft Windows may required
 	2. In Microsoft Windows, go to Setting / Accessibility / Narraton / Choose a voice / 
 
 
+DaVinci Resolve 18
+	1. Velocity to 95%
+	2. Velocity Final logo 130%
+
+
 Tools
 	https://www.nvidia.com/en-us/omniverse/download/
 	https://www.youtube.com/watch?v=MbsFBukGOZE
@@ -102,3 +107,7 @@ Tools
 	DaVinci Resolve 18 - Full Tutorial for Beginners
 	https://www.youtube.com/watch?v=EEksPdEc7aI
 	mp3 to mp4 with AnyMP4 Video Converter.
+
+
+Youtube credits
+
