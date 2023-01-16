@@ -16,20 +16,14 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
-* [ArcGIS Pro 3.0.0 setup requires .NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) 
-* Para el cargue de archivos de Microsoft Excel en formato .xlsx dentro de ArcGIS for Desktop, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
-* [QGIS 3+](https://qgis.org/) (opcional)
-* QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
-* QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
-* QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
-* [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
-* [Cygwin terminal for Windows](https://www.cygwin.com/)
+* [QGIS 3+](https://qgis.org/)
+* [Cygwin terminal for Windows](https://www.cygwin.com/) para la descarga por consola de los modelos digitales de elevación
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * [Microsoft Excel from Office 64 bits](https://aka.ms/office-install)
-* [Notepad++](https://notepad-plus-plus.org)
-* [Python 3+ y extensiones](https://www.python.org/)
-* [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo (opcional)
+* [Notepad++](https://notepad-plus-plus.org) como editor de código complementario
+* [Python 3+ y extensiones](https://www.python.org/) indicadas en esta actividad
+* [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo para el desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
 
 > Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido especificadas en cada actividad del curso.
 
@@ -43,7 +37,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * Monitor: FHD 1920x1080p (recomendado 2 monitores).
 * Video: 2 GB independiente (tarjeta aceleradora 4 GB o superior recomendada)
 
-> El procesamiento de los modelos de terreno y mapas de variables climatológicas y de balance, requiere de al menos el espacio indicado en disco.
+> El procesamiento de los modelos digitales de elevación - DEM y mapas de variables climatológicas y de balance, requiere de al menos el espacio indicado en disco.
 
 
 ### Servicios y plataformas
@@ -66,7 +60,7 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 | Directorio                               | Descripción                                                                                                                                                           | Subdirectorios                                                           | Formato                                                          |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------|
 | [.datasets](../../.datasets)             | Tablas y series de datos base y generados                                                                                                                             | CHIPS, ENSOONI, IDEAM, IDEAM_Agg, IDEAM_EDA, IDEAM_Impute, IDEAM_Outlier | .xls, .xlsx, .dbf, .csv, .png, .md, .zip                         |
-| [.dem](../../.dem)                       | Grillas base y grillas producidas de los modelos digitales de terreno                                                                                                 | ALOS, ASTER, SRTM                                                        | .tif, .rar                                                       |
+| [.dem](../../.dem)                       | Grillas base y grillas producidas de los modelos digitales de elevación                                                                                               | ALOS, ASTER, SRTM                                                        | .tif, .rar                                                       |
 | [.gdb](../../.gdb)                       | GDB descargada del Instituto Geográfico Agustín Codazzi - IGAC de Colombia - Suramérica                                                                               | N/A                                                                      | .gdb                                                             |
 | [.grid](../../.grid)                     | Grillas en formato GeoTIFF producidas en la sección 4 y 5 de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos | N/A                                                                      | .tif, .rar                                                       |
 | [.icons](../../.icons)                   | Iconografía general de este repositorio                                                                                                                               | N/A                                                                      | .png, .cdr, .glb, .svg                                           |
@@ -121,6 +115,8 @@ Para el desarrollo de varias de las actividades del curso, utilizaremos la versi
 > Si bien, las versiones recientes de HEC-HMS permiten realizar el reacondicionamiento de terreno, el tiempo computacional de ejecución para modelos digitales de terreno de gran extensión y alta resolución (como los modelos ALOS PALSAR o los LIDAR) puede ser excesivamente alto debido a su motor de ejecución.
 > 
 > Actualmente, ESRI no permite a usuarios independientes, la descarga y ejecución de licencias académicas de 21 días para el paquete ArcGIS for Desktop.
+> 
+> Para el cargue de archivos de Microsoft Excel en formato .xlsx dentro de ArcGIS for Desktop, se requiere del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920).
 
 Para la instalación de esta herramienta, es requerida una licencia comercial activa que permita la descarga, instalación y ejecución de la versión Desktop. Para más información, consulte al administrador de licencias de su campus universitario.
 
@@ -147,6 +143,10 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 
 
 ### Instalación de ArcGIS Pro
+
+> [ArcGIS Pro 3.0.0 requiere de .NET Desktop Runtime 6.0.6 para su instalación.](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+> 
+> [Algunas de las actividades para el procesarimiento de modelos de terreno requieren de Arc Hydro Tools para ArcGIS Pro.](http://downloads.esri.com/archydro/archydro/setup/Pro/) 
 
 1. Ingrese al portal https://www.esri.com/en-us/arcgis/products/arcgis-pro/trial#students, seleccione la opción _Free Trial_ que le permitirá obtener una licencia de prueba por 21 días y realice el registro de usuario a través de la opción _Sing up for the trial_.
 
@@ -177,6 +177,23 @@ Para la instalación de esta herramienta, es requerida una licencia comercial ac
 > Algunas versiones de ArcGIS Pro requieren de la instalación previa de [.NET Desktop Runtime 6.0.6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 > 
 > La apertura de proyectos existentes, puede ser realizada correctamente si su sistema operativo dispone del [Driver de Microsoft Access Database Engine](https://www.microsoft.com/en-us/download/confirmation.aspx?id=54920). Cuando la apertura de un proyecto de ArcGIS Pro presenta demoras excesivas se debe a que no se han podido resolver los permisos de lectura sobre los datos o que no se dispone de los drivers necesarios para la apertura de archivos provenientes de Microsoft Excel.
+
+
+### Instalación de QGIS
+
+Desde el portal https://qgis.org/, descargue la última versión, p.ej la 3.28. Ejecute el instalador y siga las instrucciones en pantalla.
+
+![R.LTWB](Screenshot/QGISDownload.png)
+
+Luego de terminada la instalación, abra QGIS, ingrese al menú _Plugins_, seleccione la opción _Manage and Install Plugins..._ e instale los siguientes complementos:
+
+* [Profile tool](https://plugins.qgis.org/plugins/profiletool/): visualizador de perfiles a partir de modelos digitales de elevación.
+* [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/): visualizador 3D.
+* [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/): visualización de mapas base y generación de líneas centrales en polígonos de cuerpos de agua alargados como ríos anchos.
+
+![R.LTWB](Screenshot/QGISPlugins.png)
+
+> Algunas de las actividades de este curso han sido desarrolladas utilizando la versión 3.26 de QGIS. Se recomienda instalar y ejecutar con la última versión disponible.
 
 
 ### Python y librerías requeridas
