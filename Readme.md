@@ -5,7 +5,7 @@
 
 
 <div align="center">
-<br><img alt="R.LTWB" src=".icons/LTWB.png" width="85%"><br>
+<br><img alt="R.LTWB" src=".icons/LTWB.png" width="75%"><br>
 <sub>Fuente: propia, creada con el catálogo de objetos de Microsoft Paint 3D.</sub><br><br>
 </div>
 
