@@ -13,7 +13,7 @@ _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimaci
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas, que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src=".icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="480" border="0" /></a><sub><br>https://www.youtube.com/watch?v=6eu-mLKVcOw</sub><br><br></div>
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src=".icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=6eu-mLKVcOw</sub><br><br></div>
 
 
 ## Objetivos generales
