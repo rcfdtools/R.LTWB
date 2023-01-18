@@ -15,7 +15,7 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 ### Herramientas computacionales requeridas
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
-* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
+* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (recomendado 10.2.2)
 * [QGIS 3+](https://qgis.org/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/) para la descarga por consola de los modelos digitales de elevación
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
