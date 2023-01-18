@@ -3,7 +3,7 @@ Keywords: `Requirements` `ArcGIS-for-Desktop` `ArcGIS-Pro` `QGIS` `HEC-HMS` `HEC
 
 ![R.LTWB](Graph/Requirement.png)
 
-En esta actividad se listan los requerimientos académicos y computacionales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las herramientas requeridas.
+En esta actividad se listan los requerimientos académicos y computacionales generales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las principales herramientas requeridas.
 
 
 ### Objetivos
@@ -25,7 +25,7 @@ En esta actividad se listan los requerimientos académicos y computacionales par
 * [Python 3+ y extensiones](https://www.python.org/) indicadas en esta actividad
 * [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo para el desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
 
-> Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido especificadas en cada actividad del curso.
+> Las herramientas computacionales requeridas tales como librerías, complementos y sus versiones han sido indicadas en cada actividad del curso.
 
 
 ### Equipo de cómputo
