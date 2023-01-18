@@ -73,7 +73,7 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 | [HECGeoHMS](../../HECGeoHMS)             | _/Layers_, contiene los archivos generados durante el proceso de preprocesamiento hidrológico de los modelos digitales de elevación - DEM                             | Layers                                                                    | .mxd, .tif, .rar                                                 |
 | [HECHMS](../../HECHMS)                   | Archivos del modelo prototipo hidrológico HEC-HMS, utilizados para el reacondicionamiento del modelo digital de elevación ASTER GDEM                                  | maps                                                                      | .basin, .sqlite, .access, ,dss, .hms, .log, .out, .terrain, .xml |
 
-
+> Las carpetas con el prefijo `Section` corresponden a las secciones del curso, dentro de las cuales se encuentran las actividades o clases.
 
 ### Configuración básica del sistema operativo
 

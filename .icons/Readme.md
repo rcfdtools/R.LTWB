@@ -13,6 +13,9 @@ Esta carpeta contiene la iconografía general de este repositorio.
 | [R.LTWB.cdr](R.LTWB.cdr)                                     | R.LTWB vector logo fuente CorelDraw 2021, creación propia.                                      |
 | [CHC_newlogo_edit.png](https://www.chc.ucsb.edu/data/chirps) | Chrips logo                                                                                     |
 | [python-logo-inkscape.svg](python-logo-inkscape.svg)         | [Python logo SVG format (generic SVG export from Inkscape)](https://www.python.org/static/community_logos/python-logo-inkscape.svg)          |
+| [ArcGISPngItem_3943504.png](ArcGISPngItem_3943504.png)       | [ArcGIS for Desktop logo)](https://www.pngitem.com/middle/hThihbb_esri-logo-hd-png-download/)          |
+| [qgis-logo.svg](qgis-logo.svg)       | [QGIS logo)](https://qgis.org/en/site/getinvolved/styleguide.html)          |
+| [ESRI_Logo.png](ESRI_Logo.png)       | [ESRI logo)](https://www.seekpng.com/idown/u2e6y3i1r5t4a9a9_esri-logo/)          |
 
 ##
 
