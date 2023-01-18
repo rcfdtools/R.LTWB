@@ -23,7 +23,7 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 * [Microsoft Excel from Office 64 bits](https://aka.ms/office-install)
 * [Notepad++](https://notepad-plus-plus.org) como editor de código complementario
 * [Python 3+ y extensiones](https://www.python.org/) indicadas en esta actividad
-* [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo para el desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
+* [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
 
 > Requerimientos específicos, tales como librerías, complementos y sus versiones han sido indicadas en cada actividad del curso.
 
@@ -75,7 +75,7 @@ En la siguiente tabla encontrará la estructura y descripción general de las ca
 
 
 
-### Configuración del sistema operativo
+### Configuración básica del sistema operativo
 
 Para la correcta ejecución de las herramientas computacionales a utilizar durante el desarrollo de las actividades del curso, es recomendable realizar los siguientes ajustes en Microsoft Windows.
 
