@@ -43,7 +43,7 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 ### Servicios y plataformas
 
 * Cuenta de usuario en [Eathdata](../../Section02/UserCreation) de la NASA.
-* Cuenta de usuario [Esri](https://www.esri.com/en-us/home).
+* Cuenta de usuario [Esri](https://www.esri.com/en-us/home) para la descarga e instalación de la versión académica de prueba de ArcGIS Pro.
 
 
 ### Requisitos académicos
