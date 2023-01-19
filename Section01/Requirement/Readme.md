@@ -5,6 +5,7 @@ Keywords: `Requirements` `ArcGIS-for-Desktop` `ArcGIS-Pro` `QGIS` `HEC-HMS` `HEC
 
 En esta actividad se listan los requerimientos académicos y computacionales generales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las principales herramientas requeridas.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=XKPqqupkGyg" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=XKPqqupkGyg</sub><br><br></div>
 
 ### Objetivos
 

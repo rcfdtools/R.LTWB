@@ -80,6 +80,8 @@ https://www.youtube.com/watch?v=kfqpFKdDVMU
 http://balabolka.site/balabolka.htm
 
 
+
+
 Create audio files from text - TTS using Microsoft Edge
 	1. Create a Microsoft Word document with the TTS text script.
 	2. Convert the .docx file to an .pdf file.
@@ -93,8 +95,8 @@ Create audio files from text - TTS using Microsoft Windows may required
 	2. In Microsoft Windows, go to Setting / Accessibility / Narraton / Choose a voice / 
 
 
-DaVinci Resolve 18
-	1. Velocity to 95%
+DaVinci Resolve 18 from PowerPoint slides
+	1. General Velocity to 95%
 	2. Velocity Final logo 130%
 
 
