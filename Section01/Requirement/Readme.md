@@ -3,7 +3,7 @@ Keywords: `Requirements` `ArcGIS-for-Desktop` `ArcGIS-Pro` `QGIS` `HEC-HMS` `HEC
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/Requirement.png" width="65%"><br>
-<sub>[Iconografía de referencia.](../../.icons)</sub><br><br>
+<sub>https://github.com/rcfdtools/R.LTWB/blob/main/.icons/Readme.md</sub><br><br>
 </div>
 
 En esta actividad se listan los requerimientos académicos y computacionales generales para el desarrollo de las diferentes actividades del curso, se define y crea la estructura de directorios y se realiza la instalación y configuración de las principales herramientas requeridas.
