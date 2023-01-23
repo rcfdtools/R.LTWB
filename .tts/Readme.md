@@ -1,8 +1,8 @@
 ## Text to speach - TTS
 
-Esta carpeta contiene el guión de texto y el archivo de audio generado TTS utilizado para la creación del video de esta actividad.
+Esta carpeta contiene el guion de texto y el archivo de audio generado TTS utilizado para la creación del video de esta actividad.
 
-
+Atención: los textos disponibles en el documento de script son utilizados únicamente para la conversión de texto a voz y en varias de las palabras se ha utilizado escritura fonémica para su pronunciación en idioma español.
 
 ##
 
