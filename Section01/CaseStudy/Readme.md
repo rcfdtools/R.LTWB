@@ -28,7 +28,7 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 
 ### Diagrama general de procesos
 
-Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo a su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
+Para la definición de la zona de estudio es necesario descargar la zonificación hidrográfica de Colombia, realizar filtros de acuerdo con su jerarquía, disolver y crear el polígono envolvente como se describe en el siguiente diagrama:
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/CaseStudy.svg" width="70%"><br>
@@ -38,7 +38,7 @@ Para la definición de la zona de estudio es necesario descargar la zonificació
 
 ### Alcance y conceptos generales
 
-Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio la Zonificación Hidrográfica de Colombia y la red de estaciones terrestres hidroclimatológicas del [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia](http://www.ideam.gov.co/). A nivel particular se estudiará a detalle la zona hidrográfica 28, denominada _Cesar_ que hace parte del área hidrográfica principal 2, correspondiente a _Magdalena - Cauca_ que se compone de las siguientes subzonas:
+Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term water balance), se ha definido como caso de estudio general la Zonificación Hidrográfica de Colombia y la red de estaciones terrestres hidroclimatológicas del [Instituto de Hidrología, Meteorología y Estudios Ambientales - IDEAM de Colombia](http://www.ideam.gov.co/). A nivel particular se estudiará a detalle la zona hidrográfica 28, denominada _Cesar_ que hace parte del área hidrográfica principal 2, correspondiente a _Magdalena - Cauca_ que se compone de las siguientes subzonas:
 
 <div align="center">
 
@@ -51,7 +51,7 @@ Para la realización del Balance Hidrológico de Largo Plazo o LTWB (Long-term w
 
 </div>
 
-> Estudiantes que aplicaron para curso certificado, desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
+> Estudiantes que aplicaron para curso certificado desarrollan casos de estudio individuales asignados para zonas hidrográficas específicas.  
 
 
 #### Zonificación hidrográfica de Colombia
