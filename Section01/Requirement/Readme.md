@@ -240,11 +240,12 @@ Para la instalación de las demás herramientas requeridas, de clic en los enlac
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                     | Autor                                      | Horas |
-|------------|:------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.12.28 | Instalación y configuración básica de herramientas requeridas. Requerimientos computacionales.  | [rcfdtools](https://github.com/rcfdtools)  |   3   |
-| 2022.12.27 | Estructura de directorios.                                                                      | [rcfdtools](https://github.com/rcfdtools)  |   3   |
-| 2022.07.13 | Versión inicial con lista preliminar de requerimientos.                                         | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| Versión    | Descripción                                                                                    | Autor                                      | Horas |
+|------------|:-----------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.19 | Guión, audio y video.                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.12.28 | Instalación y configuración básica de herramientas requeridas. Requerimientos computacionales. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| 2022.12.27 | Estructura de directorios.                                                                     | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| 2022.07.13 | Versión inicial con lista preliminar de requerimientos.                                        | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._

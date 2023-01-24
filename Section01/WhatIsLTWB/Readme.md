@@ -72,6 +72,7 @@ En general cuando se aborda el tema de la evapotranspiración real, se hace refe
 
 | Versión    | Descripción                                       | Autor                                      | Horas |
 |------------|:--------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.13 | Guión, audio y video.                             | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.12.23 | Lectura y revisión de referencias. Documentación. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.12.22 | Versión inicial, inicio documentación.            | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 
