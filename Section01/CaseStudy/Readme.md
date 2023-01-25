@@ -3,6 +3,8 @@ Keywords: `Case-study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona-hidrogeográfi
 
 Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia - Suramérica, con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en la creación y procesamiento de los diferentes mapas y capas geográficas.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=fI-MUrWTGus " target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=fI-MUrWTGus</sub><br><br></div>
+
 ![R.LTWB](Graph/CaseStudy.png)
 
 > En la ilustración, _COD_ZH_ corresponde al código de la Zona Hidrográfica.
