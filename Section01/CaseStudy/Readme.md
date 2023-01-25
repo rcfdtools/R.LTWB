@@ -323,6 +323,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                          | Autor                                      | Horas |
 |------------|:-----------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.25 | Guión, audio y video.                                                                                | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.08.11 | Inclusión de actividades complementarias.                                                            | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2022.07.20 | Inclusión de diagrama de procesos.                                                                   | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2022.07.09 | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                | [rcfdtools](https://github.com/rcfdtools)  |   2   |
