@@ -7,6 +7,8 @@ Para la descarga de los modelos digitales de elevación y la información climat
   <img alt="R.LTWB" src="Graph/UserCreation.png" width="250px">
 </div>
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=4_wUlzMQWag" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=4_wUlzMQWag<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -80,10 +82,11 @@ Su cuenta ha sido creada, validada y está lista para ser utilizada en el buscad
 
 ### Control de versiones
 
-| Versión     | Descripción                                           | Autor                                      | Horas |
-|-------------|:------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.20  | Inclusión de diagrama de procesos.                    | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.07  | Versión inicial creación de cuenta en NASA EarthData. | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
+| Versión    | Descripción                                           | Autor                                      | Horas |
+|------------|:------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.25 | Guión, audio y video.                                 | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.20 | Inclusión de diagrama de procesos.                    | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.07 | Versión inicial creación de cuenta en NASA EarthData. | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 
 
 ##
