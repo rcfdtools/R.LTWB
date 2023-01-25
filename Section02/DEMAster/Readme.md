@@ -3,15 +3,17 @@ Keywords: `NASA` `jpl` `ASTER` `ArcScene` `3D-view` `Cygwin` `Shell-script-.sh` 
 
 ![R.LTWB](Graph/DEMAster.png)
 
-Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestos por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o píxeles con variaciones cada 1 metro.
+Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflection Radiometer o ASTER, proveen imágenes de alta resolución del Planeta Tierra y las capturas están compuestas por 14 diferentes bandas del espectro electromagnético en el rango visible de la luz termal infrarroja. Las imágenes son capturadas en resoluciones entre 15 y 90 metros permitiendo crear mapas detallados de la temperatura y elevación de la tierra en celdas o píxeles con variaciones cada 1 metro.
 
 A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo, como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
+
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=pkMGY6RbG20" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=pkMGY6RbG20<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
 
 
 ### Objetivos
 
 * Descargar manualmente imágenes de terreno para la zona de estudio.
-* Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
+* Descargar masivamente imágenes desde la consola Cygwin a través del script downloadASTER.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 * Visualizar perfiles de elevación.

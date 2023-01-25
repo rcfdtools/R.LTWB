@@ -99,6 +99,9 @@ DaVinci Resolve 18 from PowerPoint slides
 	1. General Velocity to 95%
 	2. Velocity Final logo 130%
 
+Audio
+	Grabado en Core i9 utilizar ganancia +7.5db.
+
 
 Tools
 	https://www.nvidia.com/en-us/omniverse/download/
