@@ -14,7 +14,7 @@ Definición de la zona de estudio a partir de la cobertura de subzonas hidrográ
 * Crear una capa geográfica que delimite la zona geográfica de estudio.
 * Crear el polígono regular del dominio espacial que envuelve la zona de estudio.
 * Calcular el área y perímetro de la zona de estudio y su dominio espacial.
-* Definir el sistema de proyección de coordenadas a utilizar en los mapas y capas geográficas.
+* Definir el sistema de proyección de coordenadas a utilizar en mapas y capas geográficas.
 
 > El polígono regular permitirá en actividades posteriores del curso, realizar la descarga de información satelital y seleccionar las estaciones hidroclimatológicas de la zona de estudio. 
 
@@ -32,7 +32,7 @@ Para la definición de la zona de estudio es necesario descargar la zonificació
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/CaseStudy.svg" width="70%"><br>
-<sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
+<sub>Convenciones generales en diagramas: clases de entidad en azul, datasets en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
 
