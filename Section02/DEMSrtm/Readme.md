@@ -10,7 +10,7 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 ### Objetivos
 
 * Descargar manualmente imágenes de terreno para la zona de estudio.
-* Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
+* Descargar masivamente imágenes desde la consola Cygwin a través del script downloadSRTM.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 
