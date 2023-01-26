@@ -7,6 +7,9 @@ Shuttle Radar Topography Mission (SRTM), dispone de mapas topográficos de alta 
 
 A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encuentra disponible para descarga por el servidor EarthData de la NASA, buscar como "NASA Shuttle Radar Topography Mission Global 1 arc second V003".
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=cXFhcGraQE8" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=cXFhcGraQE8<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
+
 ### Objetivos
 
 * Descargar manualmente imágenes de terreno para la zona de estudio.
@@ -286,11 +289,12 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión     | Descripción                                                       | Autor                                      | Horas |
-|-------------|:------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.20  | Inclusión de diagrama de procesos.                                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.13  | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.12  | Versión inicial con descarga manual y con script.                 | [rcfdtools](https://github.com/rcfdtools)  |   1   |
+| Versión    | Descripción                                                       | Autor                                      | Horas |
+|------------|:------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.26 | Guión, audio y video.                                             | [rcfdtools](https://github.com/rcfdtools)  |   1   |
+| 2022.07.20 | Inclusión de diagrama de procesos.                                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.13 | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.12 | Versión inicial con descarga manual y con script.                 | [rcfdtools](https://github.com/rcfdtools)  |   1   |
 
 
 ##
