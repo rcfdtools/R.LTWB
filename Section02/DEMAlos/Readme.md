@@ -5,6 +5,8 @@ Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell-script-.sh` `Earthdata` 
 
 ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=IRZQ-9P4Ox4" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=IRZQ-9P4Ox4<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 <div align="center">
 
 Especificaciones técnicas y modos de captura  
@@ -24,7 +26,7 @@ Especificaciones técnicas y modos de captura
 ### Objetivos
 
 * Descargar manualmente imágenes de terreno para la zona de estudio.
-* Descargar masivamente imágenes desde la consola Cygwin a través del script download.sh.
+* Descargar masivamente imágenes desde la consola Cygwin a través del script downloadALOS.sh.
 * Cargar y visualizar imágenes satelitales en herramientas SIG.
 * Crear y reproyectar el mosaico de terreno a partir de las imágenes individuales obtenidas.
 
@@ -77,15 +79,13 @@ Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en forma
 
 ![R.LTWB](Screenshot/EarthdataSearchByShapefile.png)
 
-3. En la casilla de búsqueda ingresar **ALOS_PALSAR_RTC_HIGH_RES** para descargas en resolución de 12.5 metros. Para la zona de estudio se obtendrán 23 imágenes.
+3. En la casilla de búsqueda ingresar **ALOS_PALSAR_RTC_HIGH_RES** para descargas en resolución de 12.5 metros. Para la zona de estudio se obtendrán 23 imágenes únicas, de las 38 mostradas en los resultados para las fechas requeridas.
 
 En el panel izquierdo, definir el rango de fechas requerido, para la zona de estudio utilizaremos las últimas trayectorias obtenidas entre el 10 de febrero y el 22 de marzo de 2011.
 
 Como podrá observar, al localizarse sobre el mapa y desplazar el puntero sobre la imagen, las cuadrículas contienen traslapos debido a que corresponde a un modelo no integrado y recortado por cuadrantes de 1 grado. 
 
 ![R.LTWB](Screenshot/EarthdataSearchResults.png)
-
-Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 23 archivos requeridos que tienen un peso aproximado de 5.3 GB (222 MB por archivo comprimido y 71 MB para cada archivo .dem.tif aproximadamente) y de clic en _Done_ y _Download Data_.
 
@@ -317,15 +317,20 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [ALOS_PALSAR_LEVEL1.0](https://search.earthdata.nasa.gov/search/granules?p=C1206485320-ASF)
 * [ALOS_PALSAR_LEVEL1.1](https://search.earthdata.nasa.gov/search/granules?p=C1206485527-ASF)
 * [ALOS_PALSAR_RTC_LOW_RES](https://search.earthdata.nasa.gov/search/granules?p=C1206487217-ASF)
+* [NASA ARSET: Basics of Synthetic Aperture Radar (SAR), Session 1/4 (Youtube video)](https://www.youtube.com/watch?v=Xemo2ZpduHA)
+* https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/
+* https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/alos-palsar-about/
+* https://learningzone.rspsoc.org.uk/index.php/Datasets/Palsar/Introduction-ALOS-PALSAR
 
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                         | Autor                                      | Horas |
-|-------------|:--------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.20  | Inclusión de diagrama de procesos.                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.17  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.13  | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
+| Versión    | Descripción                                                                                                         | Autor                                      | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.28 | Guión, audio, video, edición y publicación.                                                                         | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
+| 2022.07.20 | Inclusión de diagrama de procesos.                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
+| 2022.07.17 | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.07.13 | Versión inicial con descarga manual y con script. Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   3   |
 
 
 ##

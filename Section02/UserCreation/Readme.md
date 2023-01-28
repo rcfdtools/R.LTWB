@@ -84,7 +84,7 @@ Su cuenta ha sido creada, validada y está lista para ser utilizada en el buscad
 
 | Versión    | Descripción                                           | Autor                                      | Horas |
 |------------|:------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.25 | Guión, audio y video.                                 | [rcfdtools](https://github.com/rcfdtools)  |   1   |
+| 2023.01.25 | Guión, audio, video, edición y publicación.           | [rcfdtools](https://github.com/rcfdtools)  |   1   |
 | 2022.07.20 | Inclusión de diagrama de procesos.                    | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2022.07.07 | Versión inicial creación de cuenta en NASA EarthData. | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 

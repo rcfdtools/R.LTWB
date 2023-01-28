@@ -72,7 +72,7 @@ Como puede observar, las cuadrículas son ortogonales y no contienen traslapos d
 
 ![R.LTWB](Screenshot/EarthdataSearchResults.png)
 
-Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
+> Cada archivo o cuadrante seleccionado será uno de los 22600 cuadrantes de la superficie terrestre que han sido divididos en grados de 1º x 1º que aproximadamente cubren 111.11 km x 111.11 km de superficie.
 
 4. Verifique en el mapa de previsualización que las celdas solicitadas corresponden al polígono de la zona de estudio y de clic en la opción de descarga de datos _Download All_. Seleccione _Direct Download_ para obtener los 9 archivos requeridos que tienen un peso aproximado de 100.9 MB y de clic en _Done_ y _Download Data_.
 
@@ -291,7 +291,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                       | Autor                                      | Horas |
 |------------|:------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.26 | Guión, audio y video.                                             | [rcfdtools](https://github.com/rcfdtools)  |   1   |
+| 2023.01.26 | Guión, audio, video, edición y publicación.                       | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 | 2022.07.20 | Inclusión de diagrama de procesos.                                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
 | 2022.07.13 | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.07.12 | Versión inicial con descarga manual y con script.                 | [rcfdtools](https://github.com/rcfdtools)  |   1   |
