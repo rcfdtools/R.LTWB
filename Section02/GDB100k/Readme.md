@@ -232,5 +232,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|--------------------------|
 
 [^1]: https://www.igac.gov.co/sites/igac.gov.co/files/anexo_1.1_catalogo_objetos_cartografiabasica_v1.0_.pdf
-
-.
