@@ -299,11 +299,13 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                  |
-|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                              |
-|     2     | Investigue y documente otros tipos de modelos digitales de elevación que puedan ser utilizados en el desarrollo de proyectos hidrológicos, p. ej. Lidar. |
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                |
+|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                                                                                                                                                                                                                                                            |
+|     2     | Sobre el DEM, trace una linea de muestreo, divida en 20 partes iguales y realice el abscisado de los segmentos. Obtenga los nodos iniciales de los segmentos y estime las elevación en cada nodo para los modelos ASTER, SRTM y ALOS. Cree un gráfico de abscisa vs. elevación que permita comparar los perfiles obtenidos y cree una matriz de dispersión entre los 3 valores de elevación obtenidos. |
+|     3     | Investigue y documente otros tipos de modelos digitales de elevación que puedan ser utilizados en el desarrollo de proyectos hidrológicos, p. ej. Lidar.                                                                                                                                                                                                                                               |
 
+> Para la obtención simultánea de los valores de elevación de los 3 modelos de terreno sobre los nodos de muestreo, utilice la herramienta _Extract Values to Points_ de _Spatial Analyst Tools_ de ArcGIS.
 
 ### Compatibilidad
 
