@@ -5,16 +5,16 @@ Keywords: `IGAC` `GDB` `1:100000` `Pairwise-Clip` `Clip` `Polygon-to-Centerline`
 
 Para los procesos de reacondicionamiento del modelo de terreno que garantice el flujo de todas las celdas del modelo hacia celdas específicas de la red de drenaje, es necesaria la descarga y complementación de las líneas de drenaje pertenecientes a la zona de estudio.
 
-Los drenajes corresponden al flujo de agua superficial que depende de la precipitación pluvial y/o afloramiento de aguas subterráneas y van a desembocar en otra corriente, en una laguna o en el mar. Los drenajes dispersos son aquellos que no desembocan en otro cuerpo de agua, o desaparecen al ser no fotointerpretables, por ejemplo en corrientes subterráneas.[^1]
+Los drenajes corresponden al flujo de agua superficial que depende de la precipitación pluvial y/o afloramiento de aguas subterráneas y van a desembocar en otra corriente, en una laguna o en el mar. Los drenajes dispersos son aquellos que no desembocan en otro cuerpo de agua, o desaparecen al ser no fotointerpretables, por ejemplo, en corrientes subterráneas.[^1]
 
 ### Objetivos
 
-* Descargar la GDB IGAC a escala 1:100.000
+* Descargar la GDB IGAC a escala 1:100.000.
 * Identificar las redes de drenaje de la zona de estudio.
 * Conocer el catálogo de objetos de la clase de entidad Drenaje_Sencillo del IGAC.
 * Conocer los subtipos asociados al dominio de estados de drenaje del IGAC.
 * Extender los tramos de drenajes sencillos hasta el eje central de drenajes dobles.
-* Completar redes de drenaje por ausencia de digitalización.
+* Completar o ajustar las redes de drenaje por ausencia de digitalización, errores de conexión y bucles.
 
 
 ### Requerimientos
@@ -41,6 +41,8 @@ Para la obtención de la red de drenaje definitiva que será utilizada para el r
 1. Ingrese al portal https://www.colombiaenmapas.gov.co/, en temática seleccione _Cartografía Básica_ y busque _Base de datos vectorial básica. Colombia. Escala 1:100.000_ del año 2022. En la parte inferior del _Detalle del Servicio_ seleccione en _Formato de descarga Geodatabase_ y de clic en _Descargar_, automáticamente iniciará la descarga a través de una orden de servicio. La GDB comprimida tiene un tamaño aproximado de 665 MB.
 
 ![R.LTWB](Screenshot/IGACGDB100k.png)
+
+> En caso de que el portal indique que requiere de una cuenta de usuario, ingrese al portal, p.ej, con su cuenta de correo de Google.
 
 2. Descomprima la base de datos geográfica en la carpeta de descargas de su equipo, luego, abra el mapa _D:\R.LTWB\.map\R.LTWB.mxd_ de ArcGIS for Desktop o _D:\R.LTWB\.map\ArcGISPro\ArcGISPro.aprx_ de ArcGIS Pro, agregue el mapa base _World Light Gray Canvas Base_ y desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Sencillo_. Podrá observar que la capa se simboliza automáticamente en drenajes _Permanentes_ e _Intermitentes_ a partir del dominio _Estado_Drenaje_. La versión descargada contiene 426964 entidades para todo el territorio nacional.
 
