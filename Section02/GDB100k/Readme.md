@@ -7,6 +7,8 @@ Para los procesos de reacondicionamiento del modelo de terreno que garantice el 
 
 Los drenajes corresponden al flujo de agua superficial que depende de la precipitación pluvial y/o afloramiento de aguas subterráneas y van a desembocar en otra corriente, en una laguna o en el mar. Los drenajes dispersos son aquellos que no desembocan en otro cuerpo de agua, o desaparecen al ser no fotointerpretables, por ejemplo, en corrientes subterráneas.[^1]
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=n_fRhFfK6xc" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=n_fRhFfK6xc<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 ### Objetivos
 
 * Descargar la GDB IGAC a escala 1:100.000.
@@ -215,6 +217,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                                                                                                                                                                                          | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.29 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
 | 2022.07.18 | Identificación de bucles, digitalización de tramos faltantes, actualización general de ilustraciones. Incorporación de diagrama de procesos.                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)  |  3.5  |
 | 2022.07.17 | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000, extracción de drenajes sencillos y dobles de la zona de estudio, obtención de líneas centrales en drenajes dobles, integración, edición y conexión de tramos laterales a cauces principales. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
 
