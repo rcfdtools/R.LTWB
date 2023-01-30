@@ -5,6 +5,8 @@ Keywords: `AgreeDEM` `DEM-Reconditioning` `DEM-burning` `Buffer` `Feature-Envelo
 
 Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar los modelos digitales de elevación DEM incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=erJAdeoRWYA" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=erJAdeoRWYA<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -266,6 +268,8 @@ El reacondicionamiento de terreno con QGIS puede ser realizado con la herramient
 
 En este momento dispone de grillas de terreno reacondicionadas para relleno de sumideros.
 
+> Recuerde que los modelos reacondicionados, únicamente serán utilizados para resolver las direcciones y acumulaciones de flujo, por lo que no se recomienda utilizar estos modelos, para el cálculo de parámetros morfométricos en cuencas o en drenajes.
+
 
 ### Actividades complementarias:pencil2:
 
@@ -290,10 +294,11 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                                                                                                                                                | Autor                                      | Horas |
-|-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.21  | Reacondicionamiento de grillas ASTER, SRTM y ALOS con HEC-GeoHMS. Visualización de perfiles con 3D Analyst sobre ArcGIS for Desktop. Documentación general de la actividad.                                                                | [rcfdtools](https://github.com/rcfdtools)  | 5.5  |
-| 2022.07.20  | Versión inicial con creación de polígono buffer a envolvente zona de estudio, recorte de grillas de terreno, creación de modelo HEC-HMS, creación de modelos de cuencas, asociación de modelos de terreno, reacondicionamiento ASTER GDEM. | [rcfdtools](https://github.com/rcfdtools)  |  6.5  |
+| Versión    | Descripción                                                                                                                                                                                                                                | Autor                                      | Horas |
+|------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.01.30 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
+| 2022.07.21 | Reacondicionamiento de grillas ASTER, SRTM y ALOS con HEC-GeoHMS. Visualización de perfiles con 3D Analyst sobre ArcGIS for Desktop. Documentación general de la actividad.                                                                | [rcfdtools](https://github.com/rcfdtools)  |  5.5  |
+| 2022.07.20 | Versión inicial con creación de polígono buffer a envolvente zona de estudio, recorte de grillas de terreno, creación de modelo HEC-HMS, creación de modelos de cuencas, asociación de modelos de terreno, reacondicionamiento ASTER GDEM. | [rcfdtools](https://github.com/rcfdtools)  |  6.5  |
 
 
 ##

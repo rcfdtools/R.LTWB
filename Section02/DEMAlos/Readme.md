@@ -23,6 +23,7 @@ Especificaciones técnicas y modos de captura
 
 > PALSAR no realiza captura de información por encima de la latitud 87.8° norte y 75.9° sur cuando el ángulo off-nadir es 41.5°.
 
+
 ### Objetivos
 
 * Descargar manualmente imágenes de terreno para la zona de estudio.

@@ -9,6 +9,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 
 <div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=n_fRhFfK6xc" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=n_fRhFfK6xc<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
 
+
 ### Objetivos
 
 * Descargar la GDB IGAC a escala 1:100.000.
