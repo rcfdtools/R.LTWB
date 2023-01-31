@@ -5,7 +5,7 @@ Keywords: `Fill-DEM` `AgreeDEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analy
 
 Cuando una celda se encuentra rodeada por celdas de mayor elevación, la escorrentía es retenida y no fluye. El relleno de sumideros eleva estas celdas utilizando como referencia los valores en altura de las celdas circundantes, garantizando que las celdas de la superficie del terreno drenen hacia una localización más baja.
 
-Los modelos digitales de elevación obtenidos a partir de información satelital, contienen información relacionada con la superficie terrestre (Digital Surface model – DSM, cubiertas de construcciones, línea superior del canopy en vegetación) y no a las elevaciones más bajas en el terreno. Es por ello por lo que al ejecutar el procedimiento de relleno de sumideros se pueden identificar múltiples localizaciones y áreas que pueden producir encharcamiento interrumpiendo el drenaje continuo a largo plazo.
+Los modelos digitales de elevación obtenidos a partir de información satelital, contienen información relacionada con la superficie terrestre (Digital Surface model – DSM, cubiertas de construcciones, línea superior del canopy en vegetación) y no a las elevaciones más bajas en el terreno. Es por ello que al ejecutar el procedimiento de relleno de sumideros se pueden identificar múltiples localizaciones y áreas que pueden producir encharcamiento interrumpiendo el drenaje continuo a largo plazo.
 
 
 ### Objetivos
@@ -120,7 +120,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Compatibilidad
 
-* Se recomienda desarrollar el relleno de sumideros - Fil con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.
+* Se recomienda desarrollar el relleno de sumideros - Fil con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fue generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, ejecute el relleno con las mismas herramientas _Terrain Processing_.
 
 
 ### Referencias
