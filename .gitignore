@@ -32,6 +32,9 @@ Lib/
 *.tif.vat.dbf
 *Copia_de_seguridad_de*
 
+# Video exclusions
+Section02/FdrDEM/FdrDEM.mp4
+
 
 # Large files exclusions
 .dem/ASTER/ASTGTMV003Mosaic.tif

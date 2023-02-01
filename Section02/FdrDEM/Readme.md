@@ -5,6 +5,8 @@ Keywords: `FDR-DEM` `Flow-direction` `Fill-DEM` `Map-Algebra` `Raster-Calculator
 
 Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros - FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=yLZksRnCgiI" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=yLZksRnCgiI<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -88,7 +90,7 @@ Resultados, ventana de ejecución grilla ALOS (dt: 09'08")
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOSLog.png)
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMALOS.png)
 
-> Para saber si las grillas FDR han sido creadas correctamente, en la simbología de representación desplegada en la tabla de atributos, únicamente deben ser visibles las direcciones 1, 2, 4, 8, 16, 32, 64, 128 y 255 que corresponde a celdas sin dirección. En caso de que aparezcan números consecutivos 1, 2, 3, 4... hasta 255, deberá revisar y volver a generar el mapa de relleno de sumideros debido a que existen múltiples zonas con depresiones o sifones que no drenan sobre la superficie del modelo de elevación a una localización más baja.
+> Para saber si las grillas FDR han sido creadas correctamente, en la simbología de representación desplegada en la tabla de atributos, únicamente deben ser visibles las direcciones 1, 2, 4, 8, 16, 32, 64, 128 y 255 que corresponde a celdas sin dirección. En caso de que aparezcan números consecutivos 1, 2, 3, 4... hasta 255, deberá revisar y volver a generar el mapa de relleno de sumideros debido a que existen múltiples zonas con depresiones o sifones que no drenan sobre la superficie del modelo de elevación hacia una localización más baja.
 
 <div align="center">
 
@@ -172,7 +174,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Compatibilidad
 
-* Se recomienda desarrollar la marcación de direcciones de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fué generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las direcciones con las mismas herramientas _Terrain Processing_.  
+* Se recomienda desarrollar la marcación de direcciones de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si el AgreeDEM fue generado directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las direcciones con las mismas herramientas _Terrain Processing_.  
  
 
 ### Referencias
@@ -188,9 +190,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión     | Descripción                                                                                                                           | Autor                                      | Horas |
-|-------------|:--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.07.26  | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS. Algebra de mapas para recodificación FDR. Diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
+| Versión    | Descripción                                                                                                                           | Autor                                      | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.02.01 | Guión, audio, video, edición y publicación.                                                                                           | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
+| 2022.07.26 | Versión inicial con direcciones de flujo para DEM ASTER, SRTM y ALOS. Algebra de mapas para recodificación FDR. Diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
 
 ##
