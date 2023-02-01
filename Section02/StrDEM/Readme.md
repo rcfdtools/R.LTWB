@@ -9,7 +9,7 @@ A partir de grillas de acumulación de flujo, se pueden identificar las celdas q
 ### Objetivos
 
 * Marcar las celdas o píxeles correspondientes a cada cuenca de drenaje para un área de aportación determinada.
-* Convertir el mapa binarizado en un red de drenaje vectorizada.
+* Convertir el mapa binarizado en una red de drenaje vectorizada.
 * Obtener los puntos de inicio y confluencia característicos de toda la red obtenida.
 * Eliminar nodos duplicados.
 * Para cada punto característico obtener el total de celdas acumuladas y calcular las áreas de aportación. 
