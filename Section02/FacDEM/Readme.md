@@ -3,12 +3,12 @@ Keywords: `FAC-DEM` `Flow-accumulation` `Flow-direction` `Spatial-Analyst-Tools`
 
 ![R.LTWB](Graph/FacDEM.png)
 
-Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje puede calcularse multiplicando el valor de acumulación por el área de cada celda.
+Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje en cualquier celda puede calcularse multiplicando el valor de acumulación por el área de cada celda.
 
 
 ### Objetivos
 
-* Crear y validar el mapa de acumulación de flujo o acumulación celdas.
+* Crear y validar el mapa de acumulación de celdas.
 * Calcular el número de celdas y el área de aportación en diferentes localizaciones de muestreo y para diferentes modelos digitales de elevación DEM.
 
 
@@ -83,7 +83,7 @@ Parámetros para representación
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreak.png)
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassifiedBreakMap.png)
 
-4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o calda más próximo a un cauce, calcule el total de celdas acumuladas a partir de la grilla de acumulación ASTER 
+4. Para los 10 puntos de muestra indicados en la siguiente tabla y sobre el pixel o celda más próximo a un cauce, calcule el total de celdas acumuladas a partir de la grilla de acumulación ASTER 
 
 <div align="center">
 
@@ -172,10 +172,11 @@ En este momento dispone de grillas de acumulación de flujo para obtener las cel
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                               |
-|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                                           |
-|     2     | En ArcGIS Pro, acumule la GRILLA Fil obtenida a partir del DEM ASTER utilizando los métodos D8, MDF y DINF y compare los resultados obtenidos en 10 puntos de confluencia diferentes. |
+| Actividad | Alcance                                                                                                                                                                                      |
+|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                                                  |
+|     2     | Para los puntos de muestreo, estime el total de celdas acumuladas en los modelos SRTM y ALOS PALSAR y compare las áreas obtenidas en el modelo ASTER GDEM, presente un análisis descriptivo. |
+|     3     | En ArcGIS Pro, acumule la GRILLA Fil obtenida a partir del DEM ASTER utilizando los métodos D8, MDF y DINF y compare los resultados obtenidos en 10 puntos de confluencia diferentes.        |
 
 
 ### Compatibilidad
