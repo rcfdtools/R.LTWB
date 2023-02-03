@@ -5,6 +5,8 @@ Keywords: `STR-DEM` `Stream-definition` `FAC-DEM` `Flow-accumulation` `Arc-Hydro
 
 A partir de grillas de acumulación de flujo, se pueden identificar las celdas que hacen parte de la red de drenaje principal. Para ello se especifica el área de aportación, p. ej. entre 1 y 4 km² o el número equivalente de celdas en función de su resolución, considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel. Es importante tener en cuenta que algunos de los tramos obtenidos, corresponderán a áreas de aportación inferiores al valor de aportación definido, específicamente en cuencas intermedias o cuencas de tránsito entre dos puntos de unión próximos. En esta actividad, también se obtienen los nodos característicos de la red y sus áreas de aportación para la posterior lectura de caudales medios.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=V8Fn8aDfGas" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=V8Fn8aDfGas<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -245,6 +247,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                                                                                                                                                                                                       | Autor                                      | Horas |
 |------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.02.03 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   3   |
 | 2022.07.30 | Finalización documentación versión inicial. Procedimiento demarcación de drenajes - SRT con otras herramientas. Diagrama de procesos.                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.07.29 | Versión inicial demarcación de drenajes para áreas de aportación de 1km² para acumulaciones de flujo DEM ASTER, SRTM y ALOS. Conversión de celdas a vectores de drenaje y obtención de puntos característicos con lectura de valores acumulados y cálculo de áreas de aportación. | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 
