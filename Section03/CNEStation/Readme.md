@@ -3,7 +3,7 @@ Keywords: `IDEAM` `Weather-station` `Display-XY-Data` `Buffer` `Merge` `Bar-grap
 
 ![R.LTWB](Graph/CNEStation.png)
 
-Luego de la definición del caso de estudio realizada en la Sección 1, es necesario identificar la red de estaciones terrestres que serán utilizadas para el estudio de las diferentes variables hidroclimatológicas en la zona estudio.                       
+Luego de la definición del caso de estudio realizada en la Sección 1, es necesario identificar la red de estaciones terrestres que serán utilizadas para el análisis de las diferentes variables hidroclimatológicas en la zona estudio.                       
 
 > En la ilustración, _CNE_IDEAM_ corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y _CNE_IDEAM_ZE_ corresponde al grupo de estaciones prototipo en la zona de estudio. COD_ZH corresponde al código de la zona hidrográfica en estudio.
 
@@ -12,7 +12,7 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 
 * Descargar el catálogo nacional de estaciones - CNE del IDEAM Colombia.
 * Descargar el catálogo nacional de estaciones - CNE de otras entidades de Colombia.
-* Conocer las categorías de las estaciones hiroclimatológicas y que tipo de observaciones realizan.
+* Conocer las categorías de las estaciones hidroclimatológicas y que tipo de observaciones realizan.
 * Conocer los estados, tecnologías y niveles de aprobación de los datos en estaciones.
 * Identificar los atributos contenidos en el catálogo de objetos del CNE.
 * Crear el polígono aferente a la envolvente de la zona de estudio para la selección de las estaciones requeridas.
@@ -180,9 +180,9 @@ En la siguiente tabla preliminar desarrollada por [rcfdtools](https://github.com
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0CNEMap.png)
 
-> Tenga en cuenca que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE contiene integrado este sistema. En cuanto al número de estaciones, para la versión descargada a 20220731, el CNE se compone de 4476 estaciones.
+> Tenga en cuenta que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE contiene integrado este sistema. En cuanto al número de estaciones, para la versión descargada a 20220731, el CNE se compone de 4476 estaciones.
 
-4. Desde la carpeta _.datasets_, agregue el archivo _CNE_OE.xls_ que contiene la localización de estaciones de otras entidades de Colombia y abra la tabla de atributos, podrá observar que a fecha 20220731 la tabla contiene 4620 registros. Dando clic derecho en la tabla y seleccionando la opción _Display XY Data_, cree una tabla de eventos geográficos para representar la localización de estas estaciones. Utilice el sistema de coordenadas _GCS_WGS_1984_.
+4. Desde la carpeta _.datasets_, agregue el archivo _CNE_OE.xls_ que contiene la localización de estaciones de otras entidades de Colombia y abra la tabla de atributos, podrá observar que a fecha 20220731 la tabla contiene 4620 registros. Dando clic derecho en la tabla y seleccionando la opción _Display XY Data_, cree una capa de eventos geográficos para representar la localización de estas estaciones. Utilice el sistema de coordenadas _GCS_WGS_1984_.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0CNEOEDisplayXYData.png)
 
@@ -193,7 +193,7 @@ Como puede observar en la ilustración, en el polígono envolvente de la zona de
 
 ### Creación del polígono para selección de estaciones
 
-5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](../../Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales al rededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, al rededor de la envolvente se genera un buffer o área aferente, utilizando p. ej. 1/20 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
+5. El polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_ fue creado a partir del borde externo de la zona hidrográfica 28 - Cesar Colombia que corresponde al [caso de estudio](../../Section01/CaseStudy) con el cual se ejemplifica este curso. El proceso de selección de estaciones, generalmente requiere que sean incluidas estaciones adicionales alrededor de la envolvente de la zona a evaluar, lo anterior debido a que en los procesos de interpolación espacial de las variables climatológicas, es necesario disponer de información espacial dentro de los rangos de los valores evaluados en las series de datos y sin extrapolación. Para ello, alrededor de la envolvente se genera un buffer o área aferente, utilizando p. ej. 1/20 de la menor extensión horizontal o vertical del polígono que delimita la zona a evaluar.
 
 Para conocer el tamaño de la extensión de _ZonaEstudioEnvelope.shp_, clic derecho en la tabla de contenido y _Properties_, ir a la pestaña _Source_ y ampliar la información de _Extent_. Para esta capa los límites geográficos expresados en grados decimales son: norte 10.940833°, sur 8.662500°, oeste -74.315834° y este -72.808322°.  
 
@@ -216,10 +216,10 @@ El límite espacial del polígono buffer es:
 * Este (right): -72.732946°
 * Oeste (left): -74.391210°
 
-> Tenga en cuenta que utiliza métodos de filtrado o selección a partir de los límites del polígono buffer, se seleccionarán todas aquellas estaciones que estén cerca de las esquinas redondeadas y hasta su límite ortogonal proyectado.
+> Tenga en cuenta que si utiliza métodos de filtrado o selección a partir de los límites del polígono buffer, se seleccionarán todas aquellas estaciones que estén cerca de las esquinas redondeadas y hasta su límite ortogonal proyectado.
 
 
-### Selección, exportación e integración de estaciones dentro y al rededor de la zona de estudio
+### Selección, exportación e integración de estaciones dentro y alrededor de la zona de estudio
 
 7. Desde el menú _Map / Selection / Select By Location_, seleccione todas aquellas estaciones del catálogo nacional de estaciones y de otras entidades que se intersecan con la zona de estudio. Para la zona de estudio y la versión descargada de los catálogos, se han seleccionado 315 estaciones del CNE y 125 de otras entidades.
 
@@ -269,7 +269,7 @@ Para el correcto análisis de los campos fecha de instalación y fecha de suspen
 
 ![R.LTWB](Screenshot/Windows11ControlPanlRegionFormat.png)
 
-Para realizar correctamente este cálculo, es necesario considerar la fecha final de los registros de las estaciones que se encuentran en operación, para este ejemplo, la fecha de corte corresponde al último día del año inmediatamente anterior correspondiente a 2021.12.31 considerando que para el análisis climatológico, únicamente utilizaremos datos de años hidrologicamente completos. La longitud de series en años usando Python a través de Calculate Field para el campo LYearS, puede ser realizada a través de Code Block utilizando las siguientes instrucciones:
+Para realizar correctamente este cálculo, es necesario considerar la fecha final de los registros de las estaciones que se encuentran en operación, para este ejemplo, la fecha de corte corresponde al último día del año inmediatamente anterior correspondiente a 2021.12.31 considerando que para el análisis climatológico, únicamente utilizaremos datos de años cronológica o hidrológicamente completos. La longitud de series en años usando Python a través de Calculate Field para el campo LYearS, puede ser realizada a través de Code Block utilizando las siguientes instrucciones:
 
 Pre-Logic Script Code para Python 2 sobre ArcGIS for Desktop y Python 3 sobre ArcGIS Pro: 
 ```
@@ -312,7 +312,7 @@ De clic derecho en la cabecera del campo `LYearS` y seleccione la opción _Stati
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSStatistics.png)
 
-Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras correspondientes a los valores de la media y superiores, obtendrá que 158 estaciones contienen longitudes hipotéticas iguales o superiores a 38.3 años dentro y al rededor de la zona de estudio.    
+Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras correspondientes a los valores de la media y superiores, obtendrá que 158 estaciones contienen longitudes hipotéticas iguales o superiores a 38.3 años dentro y alrededor de la zona de estudio.    
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSStatisticsA.png)
 
@@ -406,7 +406,7 @@ Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definiti
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWDefinitionQuery.png)
 
-De clic derecho en la cabecera del campo `LYearSTW` y seleccione la opción _Statistics_, obtendrá un resúmen estadístico y una gráfica con las longitudes hipotéticas en años para cada estación dentro de la ventana de tiempo establecida. Como puede observar, la media de las longitudes hipotéticas es de 29.8 años con una desviación estándar de 16.1 años. Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras del histograma a partir de la media, obtendrá 174 de 263 estaciones con registros iguales o superiores a 29.5 años de registro y podrá observar simultáneamente su localización dentro y al rededor de la zona de estudio.
+De clic derecho en la cabecera del campo `LYearSTW` y seleccione la opción _Statistics_, obtendrá un resumen estadístico y una gráfica con las longitudes hipotéticas en años para cada estación dentro de la ventana de tiempo establecida. Como puede observar, la media de las longitudes hipotéticas es de 29.8 años con una desviación estándar de 16.1 años. Utilizando la tecla <kbd>Ctrl</kbd> + <kbd>clic</kbd>, seleccione las barras del histograma a partir de la media, obtendrá 174 de 263 estaciones con registros iguales o superiores a 29.5 años de registro y podrá observar simultáneamente su localización dentro y alrededor de la zona de estudio.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWStatistics.png)
 
@@ -436,7 +436,7 @@ Expresión SQL para series >= 10 años : `LYearSTW >= 10 And CATEGORIA IN ('Agro
 | Longitud hipotética en años >= 10<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 139<br>Media: 37.1 años<br>Mínimo: 10.3 años<br>Máximo: 42 años<br>Desv. Est.: 9 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain10.png)    | Longitud hipotética en años >= 15<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 132<br>Media: 38.4 años<br>Mínimo: 15 años<br>Máximo: 42 años<br>Desv. Est.: 7.1 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain15.png)    | Longitud hipotética en años >= 20<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 124<br>Media: 39.8 años<br>Mínimo: 22.1 años<br>Máximo: 42 años<br>Desv. Est.: 4.6 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain20.png)  |
 | Longitud hipotética en años >= 25<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 119<br>Media: 40.5 años<br>Mínimo: 26.6 años<br>Máximo: 42 años<br>Desv. Est.: 3.17 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain25.png) | Longitud hipotética en años >= 30<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 116<br>Media: 40.8 años<br>Mínimo: 30.5 años<br>Máximo: 42 años<br>Desv. Est.: 2.54 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain30.png) | Longitud hipotética en años >= 35<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 109<br>Media: 41.3 años<br>Mínimo: 35.1 años<br>Máximo: 42 años<br>Desv. Est.: 1.58 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRain35.png) |
 
-Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 10 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones pluviométricas y climáticas ordinarias son las que pueden contener los registros más extensos.
+Simbolice las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 10 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones pluviométricas y climáticas ordinarias son las que pueden contener los registros más extensos.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWRainQueryCategoryGraph.png)
 
@@ -449,7 +449,7 @@ Utilizando la herramienta _Geoprocessing / Conversion Tools / To Geodatabase / T
 
 ### Identificación de estaciones con datos de temperatura del aire cerca al suelo
 
-En el caso específico de la temperatura del aire cerca a la superficie del suelo, los registros pueden ser obtenidos de estaciones Agrometeorológicas, Climatológicas Ordinarias, Climatológicas Principales, Sinópticas Principales y Sinópticas Secundarias.
+En el caso específico de la temperatura del aire cerca de la superficie del suelo, los registros pueden ser obtenidos de estaciones Agrometeorológicas, Climatológicas Ordinarias, Climatológicas Principales, Sinópticas Principales y Sinópticas Secundarias.
 
 Desde las propiedades de la capa _CNE_IDEAM_OE_ZE.shp_ y a través del _Definition Query_, filtre las estaciones de las categorías indicadas y represente por símbolos graduados en 3 clases por cortes naturales a partir de las longitudes hipotéticas de series dentro de la ventana de tiempo calculada en el campo `LYearSTW`. Visualice a escala 1:2,250,000 (en monitores FHD 1920 x 1080p). Podrá observar que para las categorías indicadas se obtienen 71 estaciones.
 
@@ -465,9 +465,9 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrome
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 42<br>Media: 23.8 años<br>Mínimo: 5 años<br>Máximo: 42 años<br>Desv. Est.: 15.7 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWTemperatureAir5a.png) |
 
-Como observa, existen dentro y al rededor de la zona de estudio tan solo 42 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
+Como observa, existen dentro y alrededor de la zona de estudio tan solo 42 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
-> Es importante considerar que existen estaciones sobre y alrededor de la zona de estudio, sin embargo, un factor importante a considerar es el rango de elevaciones de las estaciones debido a la alta correlación que existe entre estos la temperatura del aire y la elevación.
+> Es importante considerar que existen estaciones sobre y alrededor de la zona de estudio, sin embargo, un factor importante a considerar es el rango de elevaciones de las estaciones debido a la alta correlación que existe entre la temperatura del aire y la elevación.
 
 Represente las estaciones por símbolos graduados a partir de la elevación, podrá observar que el rango disponible de elevaciones a partir del campo `altitud` registrado por el IDEAM, corresponde a valores entre 18 y 2256 m.s.n.m. y en la Serranía del Perijá al este de la zona de estudio, las elevaciones de terreno son mayores. De las 42 estaciones disponibles, tan solo 1 se encuentra por encima de los 2000 m.s.n.m.
 
@@ -500,7 +500,7 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Agrome
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 41<br>Media: 24.2 años<br>Mínimo: 5 años<br>Máximo: 42 años<br>Desv. Est.: 15.6 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWEvaporation5.png)  |
 
-Como observa, existen dentro y al rededor de la zona de estudio tan solo 41 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
+Como observa, existen dentro y alrededor de la zona de estudio tan solo 41 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 19 tienen longitudes por encima de la media.
 
 Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que mayoritariamente las estaciones climáticas ordinarias y climáticas principales son las que pueden contener los registros más extensos.
 
@@ -529,7 +529,7 @@ Expresión SQL para series >= 5 años : `LYearSTW >= 5 And CATEGORIA IN ('Limnim
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Longitud hipotética en años >= 5<br>Cubrimiento: sobre toda la zona de estudio<br>Estaciones encontradas: 65<br>Media: 37.3 años<br>Mínimo: 7.3 años<br>Máximo: 42 años<br>Desv. Est.: 10 años<br>![R.LTWB](Screenshot/ArcGISPro3.0.0LYearSTWWaterLevel5.png) |
 
-Como observa, existen dentro y al rededor de la zona de estudio 65 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 51 tienen longitudes por encima de la media.
+Como observa, existen dentro y alrededor de la zona de estudio 65 estaciones con longitudes hipotéticas de registro superiores a 5 años, de las cuales 51 tienen longitudes por encima de la media.
 
 Simboloce las estaciones por categorías y cree un gráfico de barras que represente las estaciones y la longitud hipotética de las series en la ventana de tiempo definida >= 5 años, ordene descendentemente. Podrá observar que las estaciones limnimétricas y limnigráficas poseen registros extensos.
 
