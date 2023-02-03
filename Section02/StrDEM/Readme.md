@@ -155,7 +155,7 @@ Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y
 
 </div>
 
-6. Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas en capa de nodos _ASTERStrNode.shp_ a partir del mapa _ASTERFac.tif_. Luego de finalizada su ejecución, en la tabla de atributos de la capa de puntos _ASTERStrNode.shp_ encontrará una nueva columna de atributos con el total de celdas acumuladas denominada `ASTERFac`. Ordene descendentemente el campo `ASTERFac` y seleccione y visualice los 10 nodos con mayores acumulaciones, 
+6. Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas en la capa de nodos _ASTERStrNode.shp_ a partir del mapa _ASTERFac.tif_. Luego de finalizada su ejecución, en la tabla de atributos de la capa de puntos _ASTERStrNode.shp_ encontrará una nueva columna de atributos con el total de celdas acumuladas denominada `ASTERFac`. Ordene descendentemente el campo `ASTERFac` y seleccione y visualice los 10 nodos con mayores acumulaciones, 
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
 
@@ -230,7 +230,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Compatibilidad
 
-* Se recomienda desarrollar la demarcación de celdas de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si la grilla de acumulación fué generada directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las celdas marcadas STR con las mismas herramientas.  
+* Se recomienda desarrollar la demarcación de celdas de drenaje con el mismo grupo de herramientas donde desarrollo el reacondicionamiento, p. ej. si la grilla de acumulación fue generada directamente con Arc Hydro Tools Pro de ArcGIS Pro, obtenga las celdas marcadas STR con las mismas herramientas.  
 
 
 ### Referencias
