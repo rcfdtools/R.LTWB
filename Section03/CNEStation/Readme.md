@@ -7,6 +7,8 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 
 > En la ilustración, _CNE_IDEAM_ corresponde a las estaciones del Catálogo Nacional de Estaciones del IDEAM y _CNE_IDEAM_ZE_ corresponde al grupo de estaciones prototipo en la zona de estudio. COD_ZH corresponde al código de la zona hidrográfica en estudio.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=Dz_awSowWcQ" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=Dz_awSowWcQ<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -564,6 +566,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                                                                                                                                                                                                                                                                  | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.02.04 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 | 2022.08.05 | Diagrama de procesos geográficos.                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  | 0.75  |
 | 2022.08.04 | Gráficos de análisis de estaciones con registros de precipitación para longitudes hipotéticas mayores a 10, 15, 20, 25, 30, 35 años. Análisis de temperatura, evaporación potencial y altura de lámina de agua para longitudes >= 5 años. Documentación. Solución de errores. Actividades complementarias.                                   | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 | 2022.08.03 | Cálculo de longitud hipotética de series dentro de la ventana de tiempo definida sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. Gráficas de análisis genera de series. Documentación.  Tabla con tipos de observaciones que pueden ser realizadas por las estaciones dependiendo de su categoría.                                    | [rcfdtools](https://github.com/rcfdtools)  |  4.5  |
