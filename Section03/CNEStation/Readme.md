@@ -1,4 +1,4 @@
-## Catálogo nacional de estaciones - CNE y selección para la zona de estudio
+## Catálogo nacional de estaciones - CNE y selección de estaciones para la zona de estudio
 Keywords: `IDEAM` `Weather-station` `Display-XY-Data` `Buffer` `Merge` `Bar-graph` `Select-By-Location` `Python` `LYearS` `LYearSTW` `Definition-Query` `Normal-distribution` `Statistics`
 
 ![R.LTWB](Graph/CNEStation.png)
