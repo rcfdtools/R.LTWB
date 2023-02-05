@@ -3,7 +3,7 @@ Keywords: `IDEAM` `Weather-station` `Bar-graph` `Select-By-Location` `Chart` `Sc
 
 ![R.LTWB](Graph/CNEStationElevation.svg)
 
-Los catálogos de estaciones terrestres contienen el atributo de elevación asociada a cada estación que debe ser validado a partir de los modelos digitales de elevación DEM para su uso posterior en la implementación de métodos de imputación de datos faltantes por relaciones espaciales.                       
+Los catálogos de estaciones terrestres contienen el atributo de elevación o altitud, que debe ser validado a partir de los modelos digitales de elevación DEM, para su uso posterior en la implementación de métodos de imputación de datos faltantes por relaciones espaciales.                       
 
 
 ### Objetivos
@@ -11,7 +11,7 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación asoc
 * Obtener las cotas de las estaciones a partir de los modelos satelitales digitales de elevación ASTER, SRTM y ALOS.
 * Analizar la correspondencia entre las elevaciones presentadas en el campo `altitud` del IDEAM y las elevaciones obtenidas a partir de modelos satelitales.
 * Utilizando Python, clasificar las estaciones terrestres por piso térmico a partir de cortes convencionales cada 1000 m.s.n.m y los cortes definidos por Caldas en 1802.
-* Estimar la densidad promedio de estaciones por km², el cubrimiento promedio en km² por estación y el radio de acción dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondientes al Cesar - Colombia.
+* Estimar la densidad promedio de estaciones por km², el cubrimiento promedio en km² por estación y el radio de acción dentro del área aferente de la zona de estudio y dentro del polígono de la zona hidrográfica 28 correspondiente al Cesar - Colombia.
 * Definir las elevaciones de las estaciones que posteriormente se utilizarán como referencia en los algoritmos de imputación o completado de datos faltantes a partir de relaciones geográficas. 
 
 
@@ -75,7 +75,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0SimboogyElevationConventional.png)
 
-En el panel de simbología, de clic en la pestaña _Histogram_, podrá observar las barras o bandas que representan las estacionen en cada clase y la localización del valor promedio.
+En el panel de simbología, de clic en la pestaña _Histogram_, podrá observar las barras o bandas que representan las estaciones en cada clase y la localización del valor promedio.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalHistogram.png)
 
@@ -83,7 +83,7 @@ En el panel de simbología, de clic en la pestaña _Histogram_, podrá observar 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0SimboogyElevationConventionalStatistic.png)
 
-4. Cargue al proyecto los modelos digitales de elevación ASTER (ASTGTMV003Mosaic.tif), SRTM (SRTMV003MosaicArcGISPro.tif) y ALOS (APFBSRT1MosaicArcGISPro.tif), represente estos modelos por relieve sombreado utilizando el esquema de color contínuo de negro a blanco.
+4. Cargue al proyecto los modelos digitales de elevación ASTER (ASTGTMV003Mosaic.tif), SRTM (SRTMV003MosaicArcGISPro.tif) y ALOS (APFBSRT1MosaicArcGISPro.tif), represente estos modelos por relieve sombreado utilizando el esquema de color continuo de negro a blanco.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0DEMShadedRelief.png)
 
@@ -93,7 +93,7 @@ En el panel de simbología, de clic en la pestaña _Histogram_, podrá observar 
 
 > El procedimiento anterior puede ser desarrollado manualmente para cada DEM a través de la herramienta Zonal Statistics As Table.
 
-6. Para cada uno de los campos de atributos `DEMASTER`, `DEMSRTM` y `DEMALOS`, genere estadísticas detalladas y evalue los rangos de valores.
+6. Para cada uno de los campos de atributos `DEMASTER`, `DEMSRTM` y `DEMALOS`, genere estadísticas detalladas y evalúe los rangos de valores.
 
 Las elevaciones de las estaciones obtenidas a partir del DEM ASTER, presentan valores entre 5 y 2567 m.s.n.m. con media en 214.7 m.s.n.m. y desviación estándar de 358.2 m.s.n.m. Seleccionando las 3 primeras bandas, podrá observar que de las 440 estaciones, 405 se encuentran entre 5 y 627 m.s.n.m. 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0StationASTERStatistic.png)
@@ -326,7 +326,7 @@ Valores de densidad y cobertura obtenidos
 |  DnStTemp   | Densidad en estaciones por km² para obtención de datos de temperatura del aire cerca del suelo | 0.000861708922316  |       1160.49       |        19.22        |
 |  DnStEvap   | Densidad en estaciones por km² para obtención de datos de evaporación potencial                |      0.000841      |       1189.06       |        19.46        |
 
-Como observa en la tabla, los valores de densidad corresponden a valores inferiores a 1e-3 lo cual dimensionalmente no permite obtener un indicio claro de sí el número de estaciones es suficiente para realizar un análisis espacial adecuado de los diferentes parámetros climatológicos, por otra parte, la cobertura es un indicado significativo a partir del cual se puede deducir que para la red completa de estaciones seleccionada, la cobertura en km² por cada estación es de 110.77 que visualmente en el mapa de localización corresponde a un área de cubrimiento significativamente grande. Para los parámetros climáticos particulares, las coberturas de cada estación son mucho mayores y de hasta 1189.06 km²/estación, lo que indica que respecto a la red completa su densidad es aproximadamente 10 veces menos. En el caso de los radios de acción, los valores obtenidos se ajustan a los lineamientos establecidos por la [Organización Meteorológica Munidal - OMM](https://public.wmo.int/es) que para datos puviométricos recomienda que el radio de acción sea de al menos 12.5 km y para las estaciones seleccionadas el valor obtenido es 10.57 km, con respecto a los datos de temperatura y evaporación correspondientes principalmente a estaciones climatológicas ordinarias, la recomendación de la OMM es de un radio de 25 km y para las estaciones de la zona de estudio el mayor valor obtenido para estos parámetros es de 19.46 km.
+Como observa en la tabla, los valores de densidad corresponden a valores inferiores a 1e-3 lo cual dimensionalmente no permite obtener un indicio claro de sí el número de estaciones es suficiente para realizar un análisis espacial adecuado de los diferentes parámetros climatológicos, por otra parte, la cobertura es un indicados significativo a partir del cual se puede deducir que para la red completa de estaciones seleccionada, la cobertura en km² por cada estación es de 110.77 que visualmente en el mapa de localización corresponde a un área de cubrimiento significativamente grande. Para los parámetros climáticos particulares, las coberturas de cada estación son mucho mayores y de hasta 1189.06 km²/estación, lo que indica que respecto a la red completa su densidad es aproximadamente 10 veces menos. En el caso de los radios de acción, los valores obtenidos se ajustan a los lineamientos establecidos por la [Organización Meteorológica Mundial - OMM](https://public.wmo.int/es) que para datos puviométricos recomienda que el radio de acción sea de al menos 12.5 km y para las estaciones seleccionadas el valor obtenido es 10.57 km, con respecto a los datos de temperatura y evaporación correspondientes principalmente a estaciones climatológicas ordinarias, la recomendación de la OMM es de un radio de 25 km y para las estaciones de la zona de estudio el mayor valor obtenido para estos parámetros es de 19.46 km.
 
 De acuerdo a la WMO, para las estaciones:
 
