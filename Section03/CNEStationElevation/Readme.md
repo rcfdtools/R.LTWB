@@ -5,6 +5,8 @@ Keywords: `IDEAM` `Weather-station` `Bar-graph` `Select-By-Location` `Chart` `Sc
 
 Los catálogos de estaciones terrestres contienen el atributo de elevación o altitud, que debe ser validado a partir de los modelos digitales de elevación DEM, para su uso posterior en la implementación de métodos de imputación de datos faltantes por relaciones espaciales.                       
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=9G8xZkG93PU" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=9G8xZkG93PU<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -372,6 +374,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                  | Autor                                      | Horas |
 |------------|:---------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.02.05 | Guión, audio, video, edición y publicación.                                                  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
 | 2022.08.11 | Diagrama general de procesos, revisión y complementación de documentación.                   | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
 | 2022.08.10 | Versión inicial con análisis por matriz de dispersión, densidad, cobertura, radio de acción. | [rcfdtools](https://github.com/rcfdtools)  |  8.5  |
 
