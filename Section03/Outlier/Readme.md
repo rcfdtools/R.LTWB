@@ -3,12 +3,12 @@ Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `numpy` `dtypes` `isnull` `
 
 <div align="center"><img alt="R.LTWB" src="Graph/Outlier.png" width="95%"></div> 
 
-En esta actividad se obtienen los parámetros estadísticos de cada parámetro hidroclimatológico en cada estación y se identifican, excluyen y completan los datos atípicos a través de métodos estadísticos.
+En esta actividad se obtienen los estadísticos característicos de cada parámetro hidroclimatológico en cada estación, y se identifican, excluyen y completan los valores atípicos a través de métodos estadísticos.
 
 Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
 * Método 1 - Rango intercuartílico - IQR[^1]: aplica para datos que no siguen una distribución normal y permite identificar valores atípicos a partir de valores que se encuentran por fuera del rango intercuartílico Q1 a Q3. El valor del primer cuartil puede corresponder al percentil 25 y el valor del tercer cuartil puede corresponder al percentil 75 del conjunto de datos, por lo que el rango intercuartílico se calcula como Q3-Q1.  
-* Método 2 - Regla empírica - ER[^2]: este método, también denominado regla 3-sigma o regla 68-5-99.7 correspondientes a una distribución normal, permiten identificar valores atípicos cuyas observaciones se encuentran fuera de la banda $\mu$ +- K * $\sigma$. 
+* Método 2 - Regla empírica - ER[^2]: este método, también denominado regla 3-sigma o regla 68-5-99.7 correspondientes a una distribución normal, permite identificar valores atípicos cuyas observaciones se encuentran fuera de la banda $\mu$ +- K * $\sigma$. 
 * Método 3 - núcleo estándar Z-score[^3]: este método, similar o idéntico al método 2, permite calificar cada observación a partir del valor Z = ( x - $\mu$ ) / $\sigma$. Valores fuera de un valor establecido, p.ej. Z-score=3, son identificados como atípicos.
 
 
@@ -466,7 +466,7 @@ print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analyt
           '\n[^3]: Adapted from: https://www.geeksforgeeks.org/z-score-for-outlier-detection-python/')
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hicroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
+2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hidroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
 
 > Para la identificación de valores atípicos no son requeridas las tablas de datos de correlaciones identificadas con nombre terminado en _correlation.csv.
 
@@ -474,8 +474,8 @@ print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analyt
 
 * `pivot_table_name = 'Pivot_PTPM_TT_M.csv'`: corresponde a la tabla dinámica (pivot table) a procesar, p.ej., Pivot_PTPM_TT_M.csv corresponde a datos de precipitación mensual total, Pivot_EV_TT_D.csv corresponde a datos de evaporación diaria total, Pivot_Q_MEDIA_M.csv corresponde a datos de caudal medio mensual, Pivot_TMN_CON.csv corresponde a datos de temperatura mínima diaria y Pivot_TMX_CON.csv corresponde a datos de temperatura máxima diaria.
 * `q1_val = 0.1`: cuartil inferior, el valor por defecto es 0.25 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.1 para excluir precipitaciones totales altas atípicas.
-* `q3_val = 0.9`: cuartil inferior, el valor por defecto es 0.75 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.9 para excluir precipitaciones totales bajas atípicas.
-* `cap_multiplier = 4.5`: multiplicado K-sigma, el valor por defecto es 3. En el método 1 este valor es usado para definir el límite de reemplazo de valores y en el método 2 para identificación de valores atípicos.
+* `q3_val = 0.9`: cuartil superior, el valor por defecto es 0.75 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.9 para excluir precipitaciones totales bajas atípicas.
+* `cap_multiplier = 4.5`: multiplicador K-sigma, el valor por defecto es 3. En el método 1 este valor es usado para definir el límite de reemplazo de valores y en el método 2 para identificación de valores atípicos.
 * `zscore_threshold = 4.5`: límite de exclusión en Z-score del método 3, el valor por defecto es 3.  
 
 > Para los datos ejemplo de precipitación mensual total, la identificación de valores atípicos en el rango intercuartílico 0.1 a 0.9 es similar a la obtenida en los métodos 2 y 3 definiendo K-sigma y el Z-score en 4.5.
@@ -555,7 +555,7 @@ Al revisar los estadísticos característicos, p. ej. de la estación 15015020, 
 
 **Conclusión general**
 
-De acuerdo a los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen similares los estadísticos característicos.  
+De acuerdo con los valores atípicos identificados para cada variable hidroclimatológica y evaluando las gráficas compuestas donde se representan todas las series de las estaciones objeto de estudio, se puede evidenciar y concluir que no existen en los conjuntos de datos, valores que deban ser necesariamente excluidos, reemplazados o imputados por métodos estadísticos. Para el desarrollo de las actividades posteriores, podrá trabajar con los datos originales o con las tablas de datos con valores atípicos limpiados y/o ajustados, toda vez que se mantienen similares los estadísticos característicos.  
 
 En este momento, dispone de reportes detallados de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
 
