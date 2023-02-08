@@ -5,11 +5,13 @@ Keywords: `IDEAM` `Weather-station` `DHIME` `Rain` `Air-temperature` `Evaporatio
 
 Para la creación de los mapas requeridos para la realización del balance hidrológico, es necesario a partir de las estaciones seleccionadas para la zona de estudio, obtener las series de valores discretos de precipitación total mensual, temperatura máxima diaria, temperatura mínima diaria y evaporación total diaria. Para la comparación de los caudales obtenidos, también son requeridas las series de caudal medio mensual.                       
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=9elIte7RYXg" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=9elIte7RYXg<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
 * A partir de las estaciones identificadas y seleccionadas para la zona de estudio, obtener las series o registros de las estaciones a partir de los datos disponibles en el portal DHIME del IDEAM - Colombia.
-* Utilizando Python y Pandas, integrar los archivos de datos comprimidos descargados que contienen archivos de texto separados por comas, en un único archivo .csv.
+* Utilizando Python y la librería Pandas, integrar los archivos de datos comprimidos descargados que contienen archivos de texto separados por comas, en un único archivo .csv.
 
 
 ### Requerimientos
@@ -119,7 +121,7 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 
 > Debido a que los datos se han copiado desde archivos .dbf, es posible que por la codificación de texto, no se visualicen correctamente las tildes y eñes.
 
-5. Ingrese al portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del [IDEAM - Colombia](http://www.ideam.gov.co/), acepte los términos de referencia y de clic en _Aceptar_.
+5. Ingrese al portal [DHIME](http://dhime.ideam.gov.co/atencionciudadano/) del [IDEAM - Colombia](http://www.ideam.gov.co/), acepte los términos de uso y de clic en _Aceptar_.
 
 ![R.LTWB](Screenshot/DHIMETerminos.png)
 
@@ -133,7 +135,7 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
   * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
 * Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos mensuales para los datos de precipitación.
 * Parámetro: `PRECIPITACIÓN`.
-* Variable: `Lista Completa` seleccionando `Precipitación total mensual` que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir de la sumatoria de los valores registrados horarios, diarios o de frecuencias inferiores. 
+* Variable: `Lista Completa` seleccionando `Precipitación total mensual` que de acuerdo con el Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir de la sumatoria de los valores registrados horarios, diarios o de frecuencias inferiores. 
 
 > Las descargas a partir de la definición de la fecha final, también pueden ser realizadas a partir de [años hidrológicos](https://es.wikipedia.org/wiki/A%C3%B1o_hidrol%C3%B3gico) que pueden corresponder a periodos del 01 de junio al 31 de mayo del año inmediatamente siguiente, fracciones de invierno a verano o ciclos estacionales dependiendo de la zona geográfica.
 
@@ -145,7 +147,7 @@ Glosario de variables del IDEAM - Series básicas
 Glosario de variables del IDEAM - Series derivadas
 ![R.LTWB](Screenshot/MicrosoftExcelGlosarioVariablesDerivadasPrecipitacion.png)
 
-7. En la sección _Datos Estación_ de DHIME, seleccione el departamento de Bolivar y todos sus municipios. Desde el archivo de Excel y la hoja _Precipitacion_, seleccione el código de la primera estación y oprima las teclas <kbd>Ctrl</kbd> + <kbd>c</kbd>; en el navegador de Internet oprima <kbd>Ctrl</kbd> + <kbd>f</kbd> para abrir el cuadro de búsqueda, con <kbd>Ctrl</kbd> + <kbd>v</kbd> pegue el código y de <kbd>Enter</kbd>. Automáticamente será dirigido a la estación, marque la casilla de selección ubicada en la parte izquierda y repita el procedimiento hasta marcar 10 estaciones si estas se encuentran en el mismo Departamento. En el libro de Excel, ingrese `Y` en la columna `Ready` si la estación se encuentra disponible en DHIME y `N` si no aparece en la búsqueda.
+7. En la sección _Datos Estación_ de DHIME, seleccione el departamento de Bolívar y todos sus municipios. Desde el archivo de Excel y la hoja _Precipitacion_, seleccione el código de la primera estación y oprima las teclas <kbd>Ctrl</kbd> + <kbd>c</kbd>; en el navegador de Internet oprima <kbd>Ctrl</kbd> + <kbd>f</kbd> para abrir el cuadro de búsqueda, con <kbd>Ctrl</kbd> + <kbd>v</kbd> pegue el código y de <kbd>Enter</kbd>. Automáticamente será dirigido a la estación, marque la casilla de selección ubicada en la parte izquierda y repita el procedimiento hasta marcar 10 estaciones si estas se encuentran en el mismo Departamento. En el libro de Excel, ingrese `Y` en la columna `Ready` si la estación se encuentra disponible en DHIME y `N` si no aparece en la búsqueda.
 
 > Para navegadores de Internet en español oprima <kbd>Ctrl</kbd> + <kbd>b</kbd> para realizar búsquedas.
 > 
@@ -153,7 +155,7 @@ Glosario de variables del IDEAM - Series derivadas
 
 ![R.LTWB](Screenshot/DHIMEPrecipitacionDescarga.png)
 
-Debido a que para el departamento de Bolivar solo descargaremos los datos de 7 estaciones, es necesario dar clic en el botón `Agregar a la Consulta` y luego dar clic en el botón `Agregar Otros` que permitirá agregar 3 estaciones más sin perder el periodo definido. Es necesario volver a seleccionar manualmente el parámetro para continuar la búsqueda y marcado de las estaciones.
+Debido a que para el departamento de Bolívar solo descargaremos los datos de 7 estaciones, es necesario dar clic en el botón `Agregar a la Consulta` y luego dar clic en el botón `Agregar Otros` que permitirá agregar 3 estaciones más sin perder el periodo definido. Es necesario volver a seleccionar manualmente el parámetro para continuar la búsqueda y marcado de las estaciones.
 
 ![R.LTWB](Screenshot/DHIMEPrecipitacionDescargaQueryAdd.png)
 
@@ -179,7 +181,7 @@ Resumen de datos obtenidos para precipitación total mensual
   * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
 * Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos diarios.
 * Parámetro: `TEMPERATURA`.
-* Variable: `Lista Completa` seleccionando y descargando primero `Temperatura máxima diaria` y luego `Temperatura mínima diaria`, que de acuerdo al Glosario de Variables del IDEAM, corresponden a _variables básicas_ debido a que no requieren de un proceso de cálculo y son obtenidas directamente de un registrador. 
+* Variable: `Lista Completa` seleccionando y descargando primero `Temperatura máxima diaria` y luego `Temperatura mínima diaria`, que de acuerdo con el Glosario de Variables del IDEAM, corresponden a _variables básicas_ debido a que no requieren de un proceso de cálculo y son obtenidas directamente de un registrador. 
 
 > DHIME no dispone de registros derivados de temperatura media mensual calculados a partir de los datos diarios, por lo que es necesario calcular los valores medios a partir de los datos máximos y mínimos.
 
@@ -209,7 +211,7 @@ Resumen de datos obtenidos para temperatura mínima diaria
   * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
 * Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos diarios.
 * Parámetro: `EVAPORACIÓN`.
-* Variable: `Lista Completa` seleccionando y descargando `Evaporación total diaria`, que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable básica_ debido a que no requieren de un proceso de cálculo y es obtenida directamente de un registrador. 
+* Variable: `Lista Completa` seleccionando y descargando `Evaporación total diaria`, que de acuerdo con el Glosario de Variables del IDEAM, corresponde a una _variable básica_ debido a que no requieren de un proceso de cálculo y es obtenida directamente de un registrador. 
 
 ![R.LTWB](Screenshot/DHIMEEvaporacionParametros.png)
 
@@ -235,7 +237,7 @@ Resumen de datos obtenidos para evaporación total diaria
   * Fecha Final: `01/01/2022`, para la obtención de series utilizaremos años cronológicos completos cuyo último registro corresponde al 31 de diciembre de cada año. Dentro del servicio DHIME, es necesario incluir el 01 de enero del año inmediatamente siguiente debido a que el proceso de filtrado se realiza para valores menores qué. 
 * Serie de Tiempo y Frecuencia: `Estándar`, debido a que la descarga a realizar corresponde a series de datos medios mensuales.
 * Parámetro: `CAUDAL`.
-* Variable: `Lista Completa` seleccionando y descargando `Caudal medio mensual`, que de acuerdo al Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir del promedio de los valores registrados a nivel horario. 
+* Variable: `Lista Completa` seleccionando y descargando `Caudal medio mensual`, que de acuerdo con el Glosario de Variables del IDEAM, corresponde a una _variable derivada_ debido a que requiere de un proceso de cálculo a partir del promedio de los valores registrados a nivel horario. 
 
 ![R.LTWB](Screenshot/DHIMECaudalParametros.png)
 
@@ -265,7 +267,7 @@ Diagrama de flujo
 
 Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio. Para este proceso utilizaremos Python y la librería Pandas a través del siguiente script localizado en la carpeta _.src_.
 
-Para la ejecución del script, previamente se requiere de la instalación previa de Python 3+ y la librería Pandas. [:mortar_board:Aprender.](../../Section01/Requirement)
+Para la ejecución del script, previamente se requiere de la instalación de Python 3+ y la librería Pandas. [:mortar_board:Aprender.](../../Section01/Requirement)
 
 Script [D:\R.LTWB\.src\CNEStationCSVJoin.py](../../.src/CNEStationCSVJoin.py)
 ```
@@ -313,7 +315,7 @@ for csv_file in csv_files:
 ![R.LTWB](Screenshot/Windows11PythonCNEStationCSVJoin1.png)
 ![R.LTWB](Screenshot/Windows11PythonCNEStationCSVJoin2.png)
 
-Como puede observar, se han integrado 514926 registros en el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.zip) que tiene un tamaño aproximado de 154 MB.
+Como puede observar, se han integrado 514927 registros en el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.zip) que tiene un tamaño aproximado de 154 MB.
 
 4. Desde en bloc de notas _Notepad++_, abra el archivo IDEAMJoined.csv y verifique el total de registros obtenidos.
 
@@ -347,11 +349,12 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                               | Autor                                      | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas. Diagrama de procesos CNEStationDatasetDownloadFlowchart.svg, diagrama de flujo CNEStationCSVJoinFlowchart.svg  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv.                                   | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |   7   |
+| Versión    | Descripción                                                                                                                                                                                              | Autor                                      | Horas |
+|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.02.07 | Guión, audio, video, edición y publicación.                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
+| 2022.08.17 | Complementación documentación para unión de series descargadas utilizando Python y Pandas. Diagrama de procesos CNEStationDatasetDownloadFlowchart.svg, diagrama de flujo CNEStationCSVJoinFlowchart.svg | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2022.08.16 | \.src\CNEStationCSVJoin.py: creación de script en Python para descomprimir y unir múltiples archivos .csv contenidos dentro de archivos .zip, en un único archivo .csv.                                  | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.08.15 | Versión inicial. Descarga completa de series para estaciones de la zona de estudio desde el portal DHIME                                                                                                 | [rcfdtools](https://github.com/rcfdtools)  |   7   |
 
 
 ##
