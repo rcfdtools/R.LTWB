@@ -12,8 +12,6 @@ CHIRPS permite descargar datos de precipitación diaria con resoluciones espacia
 Desde el año 1999, el Servicio Geológico de los Estados Unidos de América – USGS y los científicos del Grupo de Amenazas Climáticas - CHG, con el apoyo de la Agencia Internacional para el Desarrollo de los Estados Unidos – USAID, la NASA y la NOAA, han desarrollado técnicas para producir mapas de precipitación especialmente en zonas donde existen pocos datos. Estimar espacial y temporalmente las variaciones de la precipitación, es un aspecto importante para el monitoreo del medio ambiente y para mitigar las sequías.
 
 
-
-
 ### Objetivos
 
 * Descargar grillas de precipitación mensual total usando el servicio [CHIRPS](https://www.chc.ucsb.edu/data/chirps) - Climate hazards group infrared precipitation.
