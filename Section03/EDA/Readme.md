@@ -20,7 +20,7 @@ La exploración y análisis de datos o EDA por sus siglas en inglés, se refiere
 * Contar el número de registros por estación para cada parámetro.
 * Crear tablas dinámicas (pivot table) por parámetro.
 * Crear tablas de correlación por parámetro.
-* Realizar análisis segmentados generales de cada parámetro (visualización conjunta de series temporales y densidades KDE, estadísticos generales, matriz de correlación, estadísticos de correlación) y análisis individuales por estación (metadatos por estación, análisis estadístico para los valores registrados, gráficos de serie de tiempo, caja de vigotes, histograma y densidad).
+* Realizar análisis segmentados generales de cada parámetro (visualización conjunta de series temporales y densidades KDE, estadísticos generales, matriz de correlación, estadísticos de correlación) y análisis individuales por estación (metadatos por estación, análisis estadístico para los valores registrados, gráficos de serie de tiempo, caja de bigotes, histograma y densidad).
 
 
 ### Requerimientos
@@ -252,13 +252,16 @@ for parameter in parameter_list:
 ![R.LTWB](Screenshot/Windows11CMDEDA3.png)
 ![R.LTWB](Screenshot/Windows11CMDEDA4.png)
 ![R.LTWB](Screenshot/Windows11CMDEDA5.png)
-![R.LTWB](Screenshot/Windows11CMDEDA6.png)
 
 Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.datasets\IDEAM_EDA` se han generado diferentes archivos de resultados.
 
-![R.LTWB](Screenshot/Windows11CMDEDA7.png)
+![R.LTWB](Screenshot/Windows11CMDEDA6.png)
 
 Dentro de la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA\Graph`, han sido exportadas las diferentes gráficas generales y detalladas de análisis.
+
+![R.LTWB](Screenshot/Windows11CMDEDA7.png)
+
+
 
 ![R.LTWB](Screenshot/Windows11CMDEDA8.png)
 ![R.LTWB](Screenshot/Windows11CMDEDA9.png)
