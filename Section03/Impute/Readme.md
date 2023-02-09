@@ -21,10 +21,10 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
 ### Objetivos
 
-* Para cada parámetros hidroclimatológico, imputar los valores faltantes en series de datos a partir de diferentes métodos estadísticos.
+* Para cada parámetro hidroclimatológico, imputar los valores faltantes en series de datos a partir de diferentes métodos estadísticos.
 * Visualizar gráficamente los datos faltantes en las diferentes estaciones asociadas a cada parámetro hidroclimatológico.
 * Obtener y comparar los estadísticos característicos de los datos iniciales y completados.
-* Graficar las series de datos de estación para visualizar los datos iniciales y completados en cada método. 
+* Graficar las series de datos de cada estación para visualizar los datos iniciales y completados en cada método. 
 
 
 ### Requerimientos
@@ -53,7 +53,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 * Completado y extendido de series por 8 métodos estadísticos.
 * Permite definir la tabla dinámica (pivot table original o con valores atípicos identificados, eliminados y/o ajustados) del parámetro hidroclimatológico a evaluar.
 * El usuario puede excluir estaciones del análisis a través de la variable `station_exclude` o definir las estaciones a utilizar a través de las variables `station_include` y `only_included`.
-* Análisis masivo de estaciones por parámetro hidroclimatológico con estadísticos, parámetros de evaluación y gráficas generales y detalladas por estación con representación de datos completados y/o extendidos.
+* Análisis masivo de estaciones por parámetro hidroclimatológico, con estadísticos, parámetros de evaluación y gráficas generales y detalladas por estación con representación de datos completados y/o extendidos.
 * Generación de reportes detallados Markdown y reporte complementario gráfico por estación para cada parámetro hidroclimatológico evaluado. [IDEAM_Impute](../../.datasets/IDEAM_Impute).
 * Para cada método y cada parámetro hidroclimatológico analizado, crea tablas en formato de texto separado por comas .csv.
 
