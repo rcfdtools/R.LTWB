@@ -3,7 +3,7 @@ Keywords: `Impute` `matplotlib` `pandas` `tabulate` `numpy` `missingo` `sklearn`
 
 <div align="center"><img alt="R.LTWB" src="Graph/Impute.png" width="95%"></div> 
 
-Este procedimiento de completado se realiza a partir de la generación de datos sintéticos utilizando diferentes métodos estadísticos y su propósito general es la conformación de series homogéneas y continuas para las diferentes variables en estudio.
+El procedimiento de completado se realiza a partir de la generación de datos sintéticos utilizando diferentes métodos estadísticos y su propósito general, es la conformación de series homogéneas y continuas para las diferentes variables en estudio.
 
 Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
@@ -12,7 +12,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 | 1. Media                                               | Con la media de cada estación.                                                                                         | Toda la serie es completada.                                                                                 |
 | 2. Mediana                                             | Con la mediana de cada estación.                                                                                       | Toda la serie es completada.                                                                                 |
 | 3. Última observación anterior - LOCF                  | Es cada segmento faltante, la serie es rellenada con el valor inmediatamente anterior y hacia abajo.                   | Se completa desde los faltantes hasta el final de la serie. Valores faltantes al inicio se mantienen vacíos. |
-| 4. Última observación siguiente - NOCB                 | Es cada segmento faltante, la serie es rellenada con el valor inmediatamente siguiente y hacia arriba.                 | Se completa desde los faltantes hasta el inicio de la serie. Valores faltantes al final se mantienen vacíos. |
+| 4. Primera observación siguiente - NOCB                | Es cada segmento faltante, la serie es rellenada con el valor inmediatamente siguiente y hacia arriba.                 | Se completa desde los faltantes hasta el inicio de la serie. Valores faltantes al final se mantienen vacíos. |
 | 5. Interpolación lineal                                | Es cada segmento faltante, la serie es rellenada con los valores de interpolación lineal próximos.                     | Se completa desde los faltantes hasta el final de la serie. Valores faltantes al inicio se mantienen vacíos. |
 | 6. Media móvil - EWM                                   | Es cada segmento faltante, la serie es rellenada con los valores de la media móvil N y hacia abajo.                    | Se completa desde los faltantes hasta el final de la serie. Valores faltantes al inicio se mantienen vacíos. |
 | 7. Vecino natural - KNN                                | Completado con n vecinos naturales definidos, pesos uniformes y distancias euclidianas.                                | Toda la serie es completada.                                                                                 |
@@ -456,7 +456,7 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 > 
 > Dentro de cada reporte independiente por parámetro, se encuentran los enlaces a los archivos .csv generados por cada método.
 
-Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mmm, podrá observar los siguientes valores de media y desviación estándar:
+Al revisar los estadísticos característicos, p. ej. de la estación 15015020, correspondiente a datos de precipitación total mensual en mm, podrá observar los siguientes valores de media y desviación estándar:
 
 <div align='center'>
 
