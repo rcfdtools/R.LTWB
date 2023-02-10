@@ -5,6 +5,8 @@ Keywords: `ENSO` `ONI` `El-Niño` `La-Niña` `Neutro` `matplotlib` `pandas` `num
 
 En esta actividad se realiza la identificación de años asociados a fenómenos climatológicos de El Niño, La Niña y Neutro.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=bKJnQ2hzJU8" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=bKJnQ2hzJU8<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 El Niño es un fenómeno climático relacionado con el calentamiento del Pacífico oriental ecuatorial, el cual se manifiesta erráticamente como cíclico —Arthur Strahler habla de ciclos de entre tres y ocho años—, y consiste en realidad en la fase cálida del patrón climático del Pacífico ecuatorial, denominado El Niño-Oscilación del Sur (El Niño-Southern Oscillation, ENSO por sus siglas en inglés), donde la fase de enfriamiento recibe el nombre de La Niña.3 4. Este fenómeno, en sus manifestaciones más intensas, provoca estragos en la zona intertropical y ecuatorial debido a las intensas lluvias, afectando principalmente a la región costera del Pacífico de América del Sur.[^1]
 
 Para la clasificación de los años con eventos de Niño, Niña o Neutros, en esta actividad se utilizó el Índice Oceánico del Niño - ONI (Oceanic Nino Index). Este índice es calculado como la media móvil de tres puntos de la serie mensual de anomalías de la temperatura de la superficie del mar en la Región Niño 3-4. De acuerdo con este índice, en condiciones El Niño (La Niña), el ONI debe ser igual ó superior (igual o inferior) a medio grado Celsius de anomalía, se clasificó cada año desde 1950 para luego poder analizar separadamente los datos climatológicos recopilados de las estaciones terrestres de la zona de estudio. La zona usada para el estudio de las anomalías de temperatura corresponde a una franja alrededor de la línea del Ecuador, entre las latitudes 5º Norte a 5º Sur y entre las longitudes 170º a 120º al oeste.
@@ -405,12 +407,13 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                           | Autor                                       | Horas |
-|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|:-----:|
-| 2022.11.20 | Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                              | [rcfdtools](https://github.com/rcfdtools)   |   4   |
-| 2022.11.18 | Optimización de script. Inicio documentación.                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)   |   4   |
-| 2022.11.17 | Marcación de eventos por temporadas no consecutivas. Gráfica de análisis. Marcación de eventos por temporadas consecutivas. Gráfica de análisis. Generación de tablas en formato .csv | [rcfdtools](https://github.com/rcfdtools)   |   8   |
-| 2022.11.16 | Script versión inicial para marcación de eventos por temporadas no consecutivas.                                                                                                      | [rcfdtools](https://github.com/rcfdtools)   |   4   |
+| Versión    | Descripción                                                                                                                                                                           | Autor                                     | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2023.02.10 | Guión, audio, video, edición y publicación.                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools) |   2   |
+| 2022.11.20 | Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                              | [rcfdtools](https://github.com/rcfdtools) |   4   |
+| 2022.11.18 | Optimización de script. Inicio documentación.                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools) |   4   |
+| 2022.11.17 | Marcación de eventos por temporadas no consecutivas. Gráfica de análisis. Marcación de eventos por temporadas consecutivas. Gráfica de análisis. Generación de tablas en formato .csv | [rcfdtools](https://github.com/rcfdtools) |   8   |
+| 2022.11.16 | Script versión inicial para marcación de eventos por temporadas no consecutivas.                                                                                                      | [rcfdtools](https://github.com/rcfdtools) |   4   |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
