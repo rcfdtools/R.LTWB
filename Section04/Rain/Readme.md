@@ -5,11 +5,13 @@ Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
 A partir de la localización espacial de estaciones terrestres y de los valores obtenidos, validados, imputados y extendidos de las series de datos recopiladas, se generan los mapas continuos interpolados de precipitación para series compuestas y por fenómeno climatológico, necesarios para el balance hidrológico de largo plazo.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=tkg5Vz_myak" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=tkg5Vz_myak<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
 * Crear mapas interpolados de precipitación mensual total a partir de agregaciones compuestas por estación y por fenómeno climatológico.
-* Proyectar las grillas utilizando el sistema de coordenadas 9733, correspondiente a MAGNA-SIRGAS Origen-Nacional
+* Proyectar geográficamente las grillas generadas utilizando el sistema de coordenadas 9733, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 * Comparar el rango de los valores obtenidos de las grillas interpoladas, con los rangos de valores discretos de las estaciones. 
 
 
@@ -38,7 +40,7 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3CNEOEMap.png)
 
-> Tenga en cuenta que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE contiene integrado este sistema. En cuanto al número de estaciones, en actividades anteriores se seleccionaron 440 estaciones para la zona de estudio.
+> Tenga en cuenta que automáticamente ha sido asignado el sistema de coordenadas geográficas MAGNA al proyecto debido a que el Shapefile del CNE tiene integrado este sistema. En cuanto al número de estaciones, en actividades anteriores se seleccionaron 440 estaciones para la zona de estudio.
 
 3. Desde las propiedades del mapa (clic derecho en Contents / Map), busque y asigne el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 
@@ -86,7 +88,7 @@ Luego del proceso de exportación, será cargada la tabla .dbf al mapa. Remover 
 * Power: 2
 * Search radius: Variable
 * Number of points: 12
-* En la pestaña Environments, definir el sistema de proyección de coordenadas 9377, correspondiente a MAGNA-SIRGAS_Origen-Nacional de Colombia.
+* CRS: en la pestaña Environments, definir el sistema de proyección de coordenadas 9377, correspondiente a MAGNA-SIRGAS_Origen-Nacional de Colombia.
 
 > En el repositorio de datos, crear la carpeta `D:\R.LTWB\.grid` para el volcado de las grillas generadas.
 
@@ -97,7 +99,7 @@ Luego de terminada la ejecución de los mapas interpolados, estos serán cargado
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainIDWComposite.png)
 
-12. Desde la tabla de atributos y utilizando estadísticas de campo, verifique los valores obtenidos en las diferentes grillas y compare con los valores mínimos y máximos de las estaciones.
+12. Desde la tabla de atributos de la capa geográfica de estaciones y utilizando estadísticas de campo, verifique los valores obtenidos en las diferentes grillas y compare con los valores mínimos y máximos de las estaciones.
 
 Resultados para valores compuestos
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainCompositeStats.png)
@@ -122,7 +124,7 @@ Tabla de grillas obtenidas y comparación de resultados
 
 > Debido al tamaño de los archivos generados, cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 >
-> Si bien el método IDW no permite generar isoyetas con apariencia suavizada como el método de líneas espirales, permite obtener valores interpolados próximos al rango de valores de las estaciones utilizadas.
+> Si bien el método IDW no permite generar isoyetas con apariencia suavizada como las obtenidas con el método de líneas espirales o SPline, sí permite obtener valores interpolados próximos al rango de valores de las estaciones utilizadas.
 
 En este momento dispone de grillas interpoladas de precipitación total, requeridas para el balance hidrológico de largo plazo.
 
@@ -152,10 +154,11 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                    | Autor                                      | Horas |
-|------------|:-------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2022.12.03 | Comparación de rangos con valores mínimos y máximos de series de datos discretos. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
-| 2022.12.01 | Versión inicial interpolación de precipitación total.                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| Versión    | Descripción                                                                                                                    | Autor                                     | Horas |
+|------------|:-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2023.02.17 | Guión, audio, video, edición y publicación.                                                                                    | [rcfdtools](https://github.com/rcfdtools) |   2   |
+| 2022.12.03 | Comparación de rangos con valores mínimos y máximos de series de datos discretos. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |  2.5  |
+| 2022.12.01 | Versión inicial interpolación de precipitación total.                                                                          | [rcfdtools](https://github.com/rcfdtools) |   4   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
