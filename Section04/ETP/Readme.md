@@ -13,12 +13,14 @@ ETP = 1017.17 exp(-0,0002 h)
 
 Donde, 
 * ETP: evapotranspiración potencial, mm/año
-* h: elevación, m 
+* h: elevación, msnm 
 
 > Durante el proceso de recolección y análisis de información a partir de estaciones terrestres del IDEAM, se obtuvo la serie de evapotranspiración potencial solo en una estación, la cual no es suficiente para generar un mapa que cubra la totalidad de la zona de estudio. Por tal motivo se recurre a la expresión propuesta por Cenicafé para Colombia.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=XjtZiIHbXnY" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=XjtZiIHbXnY<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
 
-### Objetivos
+
+### Objetivo
 
 * A partir de la ecuación de Cenicafé y el modelo digital de elevación - DEM ALOS PALSAR, crear el mapa de evapotranspiración potencial de la zona de estudio.
 
@@ -52,7 +54,7 @@ Donde,
 
 > Debido al tamaño del archivo generado (aproximadamente 1.1 GB), la grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 
-Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
+Luego de creado el mapa, modifique la simbología de representación utilizando el esquema de color _Plasma_ y establezca transparencia en 50%.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETPCenicafe.png)
 
@@ -92,6 +94,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                         | Autor                                     | Horas |
 |------------|:--------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2023.02.17 | Guión, audio, video, edición y publicación.                         | [rcfdtools](https://github.com/rcfdtools) | 0.55  |
 | 2022.12.10 | Documentación general. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   2   |
 
 
