@@ -54,7 +54,7 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 
 > El proceso de conversión es requerido debido a que es necesario modificar la estructura de la tabla agregando un campo de atributos tipo texto que contendrá el código de la estación, lo anterior debido a que el campo Station es interpretado como un campo numérico entero y el código de las estaciones del catálogo del IDEAM ha sido definido como cadena de texto.
 
-Luego del proceso de exportación, serán cargadas la tabla .dbf al mapa. Remover los archivo .csv de la tabla de contenido y abrir los archivos .dbf.
+Luego del proceso de exportación, serán cargadas la tabla .dbf al mapa. Remover los archivos .csv de la tabla de contenido y abrir los archivos .dbf.
 
 6. Modifique la estructura de las tablas agregando un nuevo campo de atributos tipo texto de 255 caracteres con el nombre `CODIGO`.
 
@@ -154,7 +154,7 @@ El [Centro Nacional de Investigaciones de Café - Cenicafé](https://www.cenicaf
 
 Al comparar los valores estimados a partir de la ecuación regional de temperatura media de Cenicafé y la ecuación compuesta zonal obtenida a partir de 24 de las 25 estaciones de la zona de estudio, podemos observar una tendencia similar, sin embargo, las temperaturas de Cenicafé son inferiores en aproximadamente 1.25 °C respecto a las zonales evaluadas a partir de las series procesadas en este curso.
 
-> La diferencia de temperatura puede estar asociada a diferentes factores, por una parte, el análisis de temperatura media realizado por Cenicafé fué realizado a partir los registros de 239 estaciones, por otra parte, los análisis zonales realizados utilizan series hasta el año 2021 y pueden evidenciar el aumento en la temperatura media de la zona debida a los efectos del calentamiento global.
+> La diferencia de temperatura puede estar asociada a diferentes factores, por una parte, el análisis de temperatura media realizado por Cenicafé fue realizado a partir los registros de 239 estaciones, por otra parte, los análisis zonales realizados utilizan series hasta el año 2021 y pueden evidenciar el aumento en la temperatura media de la zona debida a los efectos del calentamiento global.
 
 En el libro de Microsoft Excel [Temperature.xlsx](Temperature.xlsx), hemos incluido un análisis comparativo entre datos proyectados utilizando la ecuación regional de Cenicafé y la ecuación zonal obtenida. Se puede observar que la pendiente de las gráficas es similar, así como la banda de diferencias para valores entre la cota 0 y 700 msnm.
 
