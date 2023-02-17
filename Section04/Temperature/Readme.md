@@ -5,6 +5,8 @@ Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line` `Cenicafé` `Ras
 
 A partir de las series agregadas de temperatura máxima y mínima a nivel anual, se estima la temperatura media anual en cada estación y se crea el mapa de temperatura requerido para la estimación de la evapotranspiración potencial.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=GZc38ji3c64" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=GZc38ji3c64<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 
 ### Objetivos
 
@@ -238,6 +240,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                                                                                                                                                                                                                                                                                              | Autor                                     | Horas |
 |------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2023.02.17 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                                                                                                              | [rcfdtools](https://github.com/rcfdtools) |  2.5  |
 | 2022.12.09 | Ecuaciones regionales y comparación con ecuaciones zonales obtenidas. Creación de mapas de temperatura compuesto y por fenómeno climatológico. Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                                                                  | [rcfdtools](https://github.com/rcfdtools) |  5.5  |
 | 2022.12.08 | Cargue de archivos .csv con valores agregados por estación para Tmax y Tmin, conversión a .dbf, creación de campo CODIGO, unión con estaciones, filtrado de estaciones con valores asociados, exportación a nuevo shapefile, exclusión de estaciones con datos atípicos, gráficos de dispersión, ecuaciones lineales para datos compuestos y por fenómeno climatológico. | [rcfdtools](https://github.com/rcfdtools) |  4.5  |
 | 2022.12.07 | Verificación de estadísticos de series originales de temperatura vs. series validadas, completadas y extendidas. Cálculo manual de temperatura media, identificación manual de estaciones con valores fuera de tendencia. Temperature.xlsx.                                                                                                                              | [rcfdtools](https://github.com/rcfdtools) |   3   |
