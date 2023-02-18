@@ -5,7 +5,7 @@ Keywords: `ETR` `Cenicafé` `Budyco` `Turc` `Dekop` `Raster-calculator`
 
 En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Dekop y Turc.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=XjtZiIHbXnY" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=XjtZiIHbXnY<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=fSYdHarefkQ" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=fSYdHarefkQ<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
 
 ### Objetivos
 
