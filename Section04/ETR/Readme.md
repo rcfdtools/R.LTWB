@@ -3,8 +3,9 @@ Keywords: `ETR` `Cenicafé` `Budyco` `Turc` `Dekop` `Raster-calculator`
 
 ![R.LTWB](Graph/ETR.png)
 
-En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Turc y Dekop.
+En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Dekop y Turc.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=XjtZiIHbXnY" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=XjtZiIHbXnY<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
 
 ### Objetivos
 
@@ -220,6 +221,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Versión    | Descripción                                                                                                                                         | Autor                                     | Horas |
 |------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
+| 2023.02.18 | Guión, audio, video, edición y publicación.                                                                                                         | [rcfdtools](https://github.com/rcfdtools) |   2   |
 | 2022.12.11 | Documentación general. Creación de mapas Budyko, Dekop y Turc compuestos y por fenómeno climatológico. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   5   |
 | 2022.12.10 | Revisión general de ecuaciones y definición de expresiones para la calculadora ráster.                                                              | [rcfdtools](https://github.com/rcfdtools) |   1   |
 
