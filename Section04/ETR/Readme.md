@@ -192,7 +192,7 @@ ETR Turc Neutro
 
 > Es importante tener en cuenta que los mapas obtenidos corresponden a estimaciones segmentadas por fenómeno climatológico (El Niño, La Niña, Neutro), sin embargo, el mapa de ETR potencial utilizado corresponde a valores compuestos.
 
-En este momento dispone de grillas de evapotranspiración potencial, requeridas para el balance hidrológico de largo plazo.
+En este momento dispone de las grillas de evapotranspiración real, requeridas para el balance hidrológico de largo plazo.
 
 
 ### Actividades complementarias:pencil2:
