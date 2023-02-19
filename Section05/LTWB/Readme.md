@@ -10,7 +10,7 @@ Spatial Analyst Tools de ArcGIS for Desktop y ArcGIS Pro, dispone de un grupo de
 
 ### Objetivos
 
-* Calcular el potencial de escurrimiento de cada celda del modelo digital de elevación - DEM, a partir de los mapas de precipitación total y evapotranspiración real compuesta y por fenómeno climatológico. Este potencial corresponde a los pesos que serán utilizadas en la acumulación de flujo - FAC.
+* Calcular el potencial de escurrimiento de cada celda del modelo digital de elevación - DEM, a partir de los mapas de precipitación total y evapotranspiración real compuesta y por fenómeno climatológico. Este potencial corresponde a los pesos que serán utilizados en la acumulación de flujo - FAC.
 * Realizar la acumulación de flujo y obtener los balances compuestos y por fenómeno climatológico.
 
 
@@ -45,7 +45,7 @@ Donde,
 * P: precipitación, mm/año
 * E: evapotranspiración real, mm/año
 * A: área de cada celda, m²
-* t: tiempo en segundos en un año, (365 dias x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
+* t: tiempo en segundos en un año, (365 días x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
 
 1. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection05.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
@@ -81,11 +81,11 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 
 </div>
 
-4. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 4 [Mapas de precipitación total](../../Section04/Rain) creados en la primera actividad de la sección 4 y que fueron nombrados como RainTotalComposite.tif, RainTotalNina.tif, RainTotalNino.tif y RainTotalNeutral.tif. Seleccione los 4 mapas y establezca transparencia del 50%. [:open_file_folder: Descargar archivos](../../.grid).
+4. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 4 [Mapas de precipitación total](../../Section04/Rain) creados en la primera actividad de la sección 4 y que fueron nombrados como RainTotalComposite.tif, RainTotalNina.tif, RainTotalNino.tif y RainTotalNeutral.tif. Seleccione los 4 mapas y establezca transparencia al 50%. [:open_file_folder: Descargar archivos](../../.grid).
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainGrid.png)
 
-5. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 12 [Mapas de evapotranspiración real - ETR](../../Section04/ETR) creados en la última actividad de la sección 4, correspondientes a series compuestas y por fenómeno climatológico usando las expresiones de Budyko, Dekop y Turc. Seleccione los 4 mapas y establezca transparencia del 50%. [:open_file_folder: Descargar archivos](../../.grid).
+5. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 12 [Mapas de evapotranspiración real - ETR](../../Section04/ETR) creados en la última actividad de la sección 4, correspondientes a series compuestas y por fenómeno climatológico usando las expresiones de Budyko, Dekop y Turc. Seleccione los mapas y establezca transparencia al 50%. [:open_file_folder: Descargar archivos](../../.grid).
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRGrid.png)
 
@@ -115,7 +115,7 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 
 Luego de creados los mapas, modifique la simbología de representación utilizando el esquema de color _Prediction_ y establezca transparencia en 50%.
 
-**Bydyko**
+**Budyko**
 
 Flujo potencial de escurrimiento Budyko Compuesto, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPBudykoComposite.png)
@@ -189,7 +189,7 @@ Luego de creadas las grillas de caudales medios, cambie la simbología de repres
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBSymbology.png)
 
-**Bydyko**
+**Budyko**
 
 Caudal medio Budyko Compuesto, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoComposite.png)
