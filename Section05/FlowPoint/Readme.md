@@ -3,7 +3,9 @@ Keywords: `LTWB` `Flow` `Extract-multi-values-to-points` `Linear-trend` `Histogr
 
 ![R.LTWB](Graph/FlowPoint.png)
 
-Una vez obtenida la red de puntos característicos para lectura de resultados que contienen el número de celdas aportantes y sus áreas de drenaje equivalentes, se procede a realizar la estadística zonal o la extracción de valores de mapas raster a nodos para la obtención de caudales y ecuaciones características.
+Una vez obtenida la red de puntos característicos que contienen el número de celdas acumuladas y sus áreas de drenaje aportantes, se procede a realizar la lectura de resultados, por medio de estadísticas zonales o por extracción de valores desde los mapas raster de caudal medio y se generan ecuaciones características que permiten estimar el caudal en función de un valor de área de aportación definido.
+
+para lectura de resultados
 
 ### Objetivos
 
