@@ -3,14 +3,13 @@ Keywords: `LTWB` `Flow` `Extract-multi-values-to-points` `Linear-trend` `Histogr
 
 ![R.LTWB](Graph/FlowPoint.png)
 
-Una vez obtenida la red de puntos característicos que contienen el número de celdas acumuladas y sus áreas de drenaje aportantes, se procede a realizar la lectura de resultados, por medio de estadísticas zonales o por extracción de valores desde los mapas raster de caudal medio y se generan ecuaciones características que permiten estimar el caudal en función de un valor de área de aportación definido.
-
+Una vez obtenida la red de puntos característicos que contienen el número de celdas acumuladas y sus áreas de drenaje aportantes, se procede a realizar la lectura de resultados, por medio de estadísticas zonales o por extracción de valores desde los mapas ráster de caudal medio y se generan ecuaciones características que permiten estimar el caudal en función de un valor de área de aportación definido.
 
 
 ### Objetivos
 
 * A partir de puntos característicos identificados sobre la red de drenaje de la zona de estudio, realizar la lectura o extracción de los valores obtenidos en las grillas de caudal medio.
-* A partir de las áreas de aportación estimadas en puntos característicos y los valores de caudal extraídos por punto, crear la matriz de dispersión y obtener ecuaciones características que permitan estimar el caudal compuesto y por fenómeno climatológico en función del área de aportación.
+* A partir de las áreas de aportación estimadas en puntos característicos y los valores de caudal extraídos por punto, crear matrices de dispersión y obtener ecuaciones características que permitan estimar el caudal compuesto y por fenómeno climatológico en función del área de aportación.
 
 
 ### Requerimientos
@@ -69,7 +68,7 @@ Acérquese a la red de drenaje y verifique que la localización de las líneas y
 
 6. A partir de la capa _ALOSStrNodeGDB_, cree gráficos de dispersión relacionando el área de aportación `Akm2` con los valores de caudal medio obtenidos. Obtenga los parámetros de la tendencia lineal y los valores del coeficiente de determinación R².
 
-**Bydyko**
+**Budyko**
 
 Matriz de dispersión Budyko Compuesto
 ![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoComposite.png)
@@ -139,6 +138,8 @@ Matriz de dispersión Turc Neutro
 
 ![R.LTWB](Screenshot/MicrosoftExcel365Table.png)
 ![R.LTWB](Screenshot/MicrosoftExcel365Graph.png)
+
+Como puede observar en las gráficas, los caudales obtenidos para el fenómeno de La Niña con diferentes áreas de aportación son mayores a los obtenidos para datos compuestos y los demás fenómenos. Con respecto a los métodos de evapotranspiración real utilizados, los caudales obtenidos por Dekop y Turc son similares, pero inferiores a los obtenidos por Budyko. 
 
 
 ### Caudales medios LTWB vs. Caudales medios IDEAM
