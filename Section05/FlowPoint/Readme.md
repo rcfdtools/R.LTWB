@@ -54,7 +54,7 @@ Acérquese a la red de drenaje y verifique que la localización de las líneas y
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ExtractMultiValuesToPoints.png)
 
-> Debido a que la extracción de los valores de las celdas correspondientes a cada nodo se realizará dentro de una clase de entidad alojada dentro de una base de datos espacial, el nombre de los campos podrá contener más de 10 caracteres. Para extracciones usando archivos Shapefile, asegúrese de que los nombres de campos no contengan más de 10 caracteres.
+> Debido a que la extracción de los valores de las celdas correspondientes a cada nodo se realiza dentro de una clase de entidad alojada dentro de una base de datos espacial, el nombre de los campos podrá contener más de 10 caracteres. Para extracciones usando archivos Shapefile, asegúrese de que los nombres de campos no contengan más de 10 caracteres.
 > 
 > En caso de ser necesario y utilizando la herramienta _Zonal Statistics As Table_, podrá obtener en una nueva tabla los valores en cada nodo característico a partir de una única grilla.   
 
