@@ -3,11 +3,12 @@ Keywords: `LTWB` `Flow` `Zonal-statistics-as-table` `Add-field` `Calculate-geome
 
 ![R.LTWB](Graph/LTWBBasin.png)
 
-Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediante estadísticos zonales, estimar manualmente el balance hidrológico a partir de los mapas de precipitación media y evapotranspiración real.
+Cuando existen zonas delimitadas tales como cuencas hidrográficas, es posible mediante estadísticos zonales, estimar manualmente el balance hidrológico a partir de los mapas de precipitación media y evapotranspiración real.
+
 
 ### Objetivos
 
-* A partir de los mapas de precipitación total y evapotranspiración real compuesta y por fenómeno climatológico, obtener los valores medios zonales y realizar el balance hidrológico de largo plazo para la zona 28 y subzonas hidrográfica IDEAM en estudio.
+* A partir de los mapas de precipitación total y evapotranspiración real compuesta y por fenómeno climatológico, obtener los valores medios zonales y estimar el balance hidrológico de largo plazo, para la zona 28 y subzonas hidrográficas asociadas definidas por el IDEAM.
 * Analizar los resultados obtenidos para series compuestas y por fenómeno climatológico.
 
 
@@ -41,7 +42,7 @@ Cuando existen zonas delimitadas como cuencas hidrográficas, es posible mediant
 
 3. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Zonal / Zonal Statistics as Table_, obtenga los estadísticos zonales para la zona de estudio a partir de los mapas de precipitación total y evapotranspiración real.
 
-Nombre los archivos de estadísticas zonales de acuerdo a las indicaciones de las siguientes tablas y almacene dentro de la Geodatabase del proyecto _ArcGISProSection05.aprx_ en `D:\R.LTWB\\.map`. Registre los valores medios obtenidos.
+Nombre los archivos de estadísticas zonales de acuerdo con las indicaciones de las siguientes tablas y almacene dentro de la Geodatabase del proyecto _ArcGISProSection05.aprx_ en `D:\R.LTWB\\.map`. Registre los valores zonales medios obtenidos.
 
 Ejemplo para precipitación total compuesta en zona de estudio
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ZonalStatisticsAsTableZE.png)
@@ -108,7 +109,7 @@ Ejemplo para evapotranspiración real por subzona hidrográfica
 
 </div>
 
-4. En las tablas de atributos de las capas ZonaEstudio.shp y Zonificacion_hidrografica_2013.shp, cree un campo de atributos numérico doble con el nombre `Am2` y a través del calculador de geometría de campo, calcule el área planar en m² de cada polígono. Utilice para la medición el sistema de coordenadas 9377.
+4. En las tablas de atributos de las capas ZonaEstudio.shp y Zonificacion_hidrografica_2013.shp, cree un campo de atributos numérico doble con el nombre `Am2` y a través del calculador de geometría de campo, calcule el área planar en m² de cada polígono. Utilice el sistema de proyección de coordenadas 9377.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3CalculateGeometryZE.png)
 
@@ -138,11 +139,11 @@ Resultados para el polígono de la zona de estudio - ZE
 Resultados en polígonos de subzonas hidrográficas - SZH
 ![R.LTWB](Screenshot/MicrosoftExcel365LTWBSZH.png)
 
-Como puede observar en los resultados, los caudales medios obtenidos por fenómeno a partir del mapa de evapotranspiración real de Budyko, son mayores a los obtenidos por el Dekop y Turc. Para el área de aportación de 22892.03 km² de la zona de estudio, se ha obtenido un caudal medio compuesto por Budyko de 356.51 m³/s.
+Como puede observar en los resultados, los caudales medios obtenidos por fenómeno a partir del mapa de evapotranspiración real de Budyko, son mayores a los obtenidos por Dekop y Turc. Para el área de aportación de 22892.03 km² de la zona de estudio, se ha obtenido un caudal medio compuesto por Budyko de 356.51 m³/s.
  
 Con respecto a las subzonas hidrográficas, Bajo Cesar identificada con el código 2805 y área de aportación de 5869.81 km², no es la subzona de mayor extensión pero si la subzona con mayor oferta hídrica superficial, con un caudal medio compuesto por Budyko de 121.52 m³/s. 
 
-En este momento dispone de valores de caudal medio obtenidos del balance hidrológico de largo plazo para el polígono que delimita la zona de estudio y por subzonas hidrográfica.
+En este momento dispone de valores de caudal medio obtenidos del balance hidrológico de largo plazo para el polígono que delimita la zona de estudio y por subzonas hidrográficas.
 
 
 ### Actividades complementarias:pencil2:
