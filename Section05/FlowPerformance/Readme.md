@@ -5,6 +5,8 @@ Keywords: `LTWB` `Flow` `Flow-performance` `Raster-calculator`
 
 Utilizando los valores de caudal medio, número de celdas y área de aportación en las diferentes localizaciones de la red de drenaje, se construye el mapa de isorendimientos medios y se obtienen ecuaciones características que permiten estimar rendimientos en función del área de aportación.
 
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=cPdVN_7Hha0" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=cPdVN_7Hha0<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+
 ### Objetivos
 
 * Utilizando algebra de mapas, generar el mapa de isorendimientos a partir de la grilla de acumulación de flujo y los mapas de caudal medio.
@@ -111,9 +113,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                     | Autor                                     | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2022.12.19 | Documentación. Generación mapa isorendimiento. Cálculo isorendimientos en puntos característicos. Histograma. Matriz de dispersión, ecuación de tendencia lineal.  Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   3   |
+| Versión    | Descripción                                                                                                                                                                                                     | Autor                                     | Horas  |
+|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:------:|
+| 2023.02.22 | Guión, audio, video, edición y publicación.                                                                                                                                                                     | [rcfdtools](https://github.com/rcfdtools) |  1.75  |
+| 2022.12.19 | Documentación. Generación mapa isorendimiento. Cálculo isorendimientos en puntos característicos. Histograma. Matriz de dispersión, ecuación de tendencia lineal.  Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   3    |
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
 
