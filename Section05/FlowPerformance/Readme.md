@@ -8,7 +8,7 @@ Utilizando los valores de caudal medio, número de celdas y área de aportación
 ### Objetivos
 
 * Utilizando algebra de mapas, generar el mapa de isorendimientos a partir de la grilla de acumulación de flujo y los mapas de caudal medio.
-* En cada punto característico y a partir de los valores previamente obtenidos de área y caudal medio, calcular el isorendimineto y a partir de matrices de dispersión, obtener ecuaciones características.
+* En cada punto característico y a partir de los valores previamente obtenidos de área y caudal medio, calcular el isorendimiento y a partir de matrices de dispersión, obtener ecuaciones características.
 
 
 ### Requerimientos
@@ -75,11 +75,11 @@ Como observa en la ilustración, se han obtenido valores de hasta 109.113 lps/km
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBFieldCalculator.png)
 
-7. A partir de los valores obtenidos en el campo `FlowPerfBudykoComposite`, cree un histograma con 12 bandas y analice los resultados obtenidos. Podrá observar que de 31879 nodos, 9697 presentan valores cercanos a la media en la banda comprendida entre 2.2 y 29 lps/km².
+7. A partir de los valores obtenidos en el campo `FlowPerfBudykoComposite`, cree un histograma con 12 bandas y analice los resultados obtenidos. Podrá observar que, de 32078 nodos, 9697 presentan valores cercanos a la media en la banda comprendida entre 20.2 y 29 lps/km².
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBHistogram.png)
 
-8. Utilizando los valores contenidos en la tabla, cree un gráfico de dispersión relacionando el área de aportación `Akm2` con los valores de isorendimiento medio obtenidos. Obtenga los parámetros de la tendencia lineal y el valor del coeficiente de determinación R². Filtre los valores de área inferiores o iguales a 1000 km² e isorendimientos medios mayores a cero, utilice la expresión SQL `Akm2 <= 1000 And FlowPerfBudykoComposite > 0`
+8. Utilizando los valores contenidos en la tabla, cree un gráfico de dispersión relacionando el área de aportación `Akm2` con los valores de isorendimientos medios obtenidos. Obtenga los parámetros de la tendencia lineal y el valor del coeficiente de determinación R². Filtre los valores de área inferiores o iguales a 1000 km² e isorendimientos medios mayores a cero, utilice la expresión SQL `Akm2 <= 1000 And FlowPerfBudykoComposite > 0`
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDBScatterPlot.png)
 
