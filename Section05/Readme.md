@@ -7,7 +7,7 @@
 
 ## Sección 5 - Balance hidrológico de largo plazo - LTWB
 
-En esta sección ejecutaremos el balance hidrológico distribuido, identificaremos los puntos para lectura de caudales medios y áreas de aportación, realizaremos el mapa de isorendimientos y un balance a partir de cuencas ya delimitadas.
+En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, crearemos el mapa de isorendimientos medios y desarrollaremos el balance a partir de cuencas o áreas de aportación delimitadas.
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
