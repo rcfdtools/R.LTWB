@@ -15,7 +15,7 @@ Este curso ha sido dividido en diferentes secciones y actividades secuenciales, 
 
 <div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src=".icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=6eu-mLKVcOw<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
 
-_“Un balance Hidrológico es una de las herramientas para la identificación de las condiciones del recurso hídrico en un lugar determinado, este permite relacionar las variables que intervienen en el ciclo hidrológico, tales como la precipitación, la evapotranspiración, el escurrimiento superficial, el almacenamiento superficial y subterráneo y el flujo de agua subterránea. El cálculo del balance hídrico en una cuenca o en una región determinada permite obtener información sobre: el volumen anual de escurrimiento o excedentes; el período en el que se produce el excedente; y el período en el que se produce un déficit de agua o sequía. El balance hídrico también permite la medición de flujos de agua es decir caudales y almacenamientos de la misma.”_ (Fattorelli & Fernández, 2011).[^1]
+_“Un balance Hidrológico es una de las herramientas para la identificación de las condiciones del recurso hídrico en un lugar determinado, este permite relacionar las variables que intervienen en el ciclo hidrológico, tales como la precipitación, la evapotranspiración, el escurrimiento superficial, el almacenamiento superficial y subterráneo y el flujo de agua subterránea. El cálculo del balance hídrico en una cuenca o en una región determinada permite obtener información sobre: el volumen anual de escurrimiento o excedentes; el período en el que se produce el excedente; y el período en el que se produce un déficit de agua o sequía. El balance hídrico también permite la medición de flujos de agua es decir caudales y almacenamientos de la misma.”_ (Fattorelli & Fernández, 2011).
 
 
 ## Objetivos generales
@@ -137,5 +137,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:sun_with_face: Iniciar curso](Section01) | [:infinity: Otros cursos](https://github.com/rcfdtools) | [:notebook: Referencias](References.md) | [:label: Abreviaturas y definiciones](Definitios.md) |
 |--------------------------------------------|---------------------------------------------------------|-----------------------------------------|------------------------------------------------------|
-
-[^1]: [Balance hídrico de largo plazo en las microcuencas abastecedoras de los acueductos comunitarios de la ciudad de Ibagué – Tolima – Colombia](https://repository.udistrital.edu.co/bitstream/handle/11349/15456/SanchezDiazJuanDavid2018.pdf?sequence=1&isAllowed=y)
