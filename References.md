@@ -40,6 +40,7 @@ Esta carpeta contiene documentos, artículos y enlaces de referencia relacionado
 * [Directrices de la Organización Meteorológica Mundial sobre el cálculo de las normales climáticas](https://library.wmo.int/doc_num.php?explnum_id=4167)
 * [Excel Avanzado: Graficar por fechas, por AltoCódigo](https://www.youtube.com/watch?v=dQ19rKbA05o)
 * https://blog.ciat.cgiar.org/es/rclimtool-una-aplicacion-libre-para-el-llenado-y-analisis-de-datos-de-clima/
+* [Balance hídrico de largo plazo en las microcuencas abastecedoras de los acueductos comunitarios de la ciudad de Ibagué – Tolima – Colombia](https://repository.udistrital.edu.co/bitstream/handle/11349/15456/SanchezDiazJuanDavid2018.pdf?sequence=1&isAllowed=y)
 
 
 ### Datos climatológicos
