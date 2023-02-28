@@ -174,11 +174,11 @@ En este momento dispone de grillas de acumulación de flujo para obtener las cel
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                                     |
-|:---------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                                                 |
-|     2     | Para 10 puntos de muestreo, estime el total de celdas acumuladas en los modelos SRTM y ALOS PALSAR y compare las áreas obtenidas en el modelo ASTER GDEM, presente un análisis descriptivo. |
-|     3     | En ArcGIS Pro, acumule la GRILLA Fil obtenida a partir del DEM ASTER utilizando los métodos D8, MDF y DINF y compare los resultados obtenidos en 10 puntos de confluencia diferentes.       |
+| Actividad | Alcance                                                                                                                                                                                                                                                                     |
+|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Realice el procedimiento presentado en esta clase en ArcGIS for Desktop, ArcGIS Pro y QGIS.                                                                                                                                                                                 |
+|     2     | Para 10 puntos de muestreo, obtenga el total de celdas acumuladas de los modelos de ASTER GDEM, SRTM, ALOS PALSAR, calcule las áreas de aportación y compare los resultados obtenidos. Presente un análisis descriptivo indicando las diferencias encontradas y sus causas. |
+|     3     | En ArcGIS Pro, acumule la GRILLA Fil obtenida a partir del DEM ASTER utilizando los métodos D8, MDF y DINF y compare los resultados obtenidos en 10 puntos de confluencia diferentes.                                                                                       |
 
 
 ### Compatibilidad
