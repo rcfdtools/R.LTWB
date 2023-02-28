@@ -124,7 +124,7 @@ Resultados, ventana de ejecución grilla ALOS con 72210 nodos (dt: 00'35.67")
 
 > Los nodos iniciales de cada tramo de drenaje son requeridos debido a que aguas arriba de estos nodos existen múltiples celdas que son acumuladas hasta el pixel o celda identificado a partir del cual se conforma la escorrentía para el área característica de aportación establecida. 
 > 
-> Debido a la alta densidad de la red de nodos, es posible que en escalas reducidas no se visualicen completamente los puntos en pantalla en ArcGIS for Desktop. Visualizar con ArcGIS Pro o con QGIS.
+> Debido a la alta densidad de la red de nodos, es posible que en escalas reducidas no se visualicen completamente los puntos en pantalla en ArcGIS for Desktop. Visualizar con ArcGIS Pro o con QGIS. Opcionalmente, puede crear una base de datos geográfica GDB e importar los nodos dentro de un dataset, lo que facilitará su visualización.
 >
 > Los nodos obtenidos en los puntos finales de los tramos de drenaje que confluyen en una misma localización estarán duplicados y en la misma localización obtendremos también un nodo adicional correspondiente al punto inicial del tramo aguas abajo de la unión. En las confluencias solo se requiere de 1 nodo para la lectura de los valores de celdas acumuladas y los posteriores procesos de lectura de caudal medio de largo plazo que desarrollaremos en este curso.
 
