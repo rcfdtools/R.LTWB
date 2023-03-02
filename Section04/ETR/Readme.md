@@ -202,8 +202,10 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Actividad | Alcance                                                                                                                                                                                                                                                                                       |
 |:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Investigue y documente otras ecuaciones a partir de las cuales se puedan construir mapas de evapotranspiración real, p.ej, Factor regional, Countagne, Thornthwaite, García y López.                                                                                                          |
+|     1     | Investigue y documente otras ecuaciones a partir de las cuales se puedan construir mapas de evapotranspiración real a nivel anual, p.ej, Factor regional, Countagne, Thornthwaite, García y López.                                                                                            |
 |     2     | A partir de las ecuaciones investigadas, cree los mapas de evapotranspiración real y con algebra de mapas realice el análisis de diferencias respecto a los mapas obtenidos en esta actividad. Evalúe e implemente en su caso de estudio, los mapas que mejor representen su zona de estudio. |
+|     3     | Utilizando algebra de mapas y a partir de los mapas de evapotranspiración potencial y real, cree un mapa de diferencias y explique en que zonas se encuentran los mayores y menores valores obtenidos y sus causas.                                                                           |
+
 
 
 ### Compatibilidad
