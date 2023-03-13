@@ -3,6 +3,10 @@
   <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.</b><br>Long-term water balance by r.cfdtools@gmail.com<br><br>  
 </div>
 
+<div align="center">
+  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" width="100%">
+</div>
+
 
 <div align="center">
 <br><img alt="R.LTWB" src=".icons/LTWB.png" width="75%"><br>
@@ -137,3 +141,7 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 | [:sun_with_face: Iniciar curso](Section01) | [:infinity: Otros cursos](https://github.com/rcfdtools) | [:notebook: Referencias](References.md) | [:label: Abreviaturas y definiciones](Definitios.md) |
 |--------------------------------------------|---------------------------------------------------------|-----------------------------------------|------------------------------------------------------|
+
+<div align="center">
+  <img alt="R.LTWB" src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBannerCertificado.jpg" width="100%">
+</div>
