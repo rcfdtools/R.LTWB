@@ -37,11 +37,13 @@ _“Un balance Hidrológico es una de las herramientas para la identificación d
 * Para las diferentes etapas de procesamiento de información hidroclimatológica, generar y publicar de forma automática, reportes detallados en formato Markdown.
 
 
-## Metodología
+## Metodología y requerimientos
 
 El curso inicia con una introducción y explicación general de la metodología, requerimientos y herramientas computacionales a emplear. Luego, cada estudiante procede al desarrollo de las diferentes actividades prácticas documentadas en cada sección a través de un caso de estudio general, correspondiente a la estimación del balance hidrológico en la Zona Hidrográfica 28 del IDEAM, de la cuenca del Río Cesar - Colombia - Suramérica.
 
 :1st_place_medal: Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas, las cuales son asignados por el instructor. Para el desarrollo de las diferentes entregas de avance, los estudiantes deben crear un repositorio siguiendo la misma estructura de este curso. Aprende como a través de la [:mortar_board:Guía para enseñanza e investigación colaborativa con GitHUB.](https://github.com/rcfdtools/R.TeachingResearchGuide)
+
+Encuentra la lista completa de requerimientos [aquí](Section01/Requirement/Readme.md).
 
 
 ## Dirigido a
