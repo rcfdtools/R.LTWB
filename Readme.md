@@ -43,7 +43,7 @@ El curso inicia con una introducción y explicación general de la metodología,
 
 :1st_place_medal: Estudiantes que aplicaron bajo el esquema de certificación, desarrollan casos de estudio individuales para zonas hidrográficas específicas, las cuales son asignados por el instructor. Para el desarrollo de las diferentes entregas de avance, los estudiantes deben crear un repositorio siguiendo la misma estructura de este curso. Aprende como a través de la [:mortar_board:Guía para enseñanza e investigación colaborativa con GitHUB.](https://github.com/rcfdtools/R.TeachingResearchGuide)
 
-Encuentra la lista completa de requerimientos [aquí](Section01/Requirement/Readme.md).
+Los requerimientos académicos y computacionales generales para el desarrollo de las diferentes actividades del curso, así como la estructura de directorios, la instalación y configuración de las principales herramientas requeridas, se encuentra [aquí](Section01/Requirement/Readme.md).
 
 
 ## Dirigido a
