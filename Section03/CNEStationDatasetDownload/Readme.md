@@ -347,6 +347,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://stackoverflow.com/questions/32834731/how-to-delete-a-file-by-extension-in-python
 * https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15
 * [Histórico de series hidrometeorológicas CAR Cundinamarca - Colombia](https://www.car.gov.co/vercontenido/2524)
+* [Descarga de datos Sistema de alerta de Bogotá - Colombia](https://www.sire.gov.co/web/sab/informacion-hidrometeorologica)
 
 
 ### Control de versiones
