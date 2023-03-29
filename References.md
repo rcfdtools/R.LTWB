@@ -73,6 +73,7 @@ Se recomienda revisar y validar a detalle los contenidos, modelos, datos y metod
 * [ArcPy - Evapotranspiracion Real Metodo de Turc - ETP](https://www.youtube.com/watch?v=Q5amoxRNZj0)
 * [Balance Hidrico Superficial Thornthwaite y Hargreaves](https://www.youtube.com/watch?v=a9DwqZESK68)
 * [Descargar datos meteorológicos (horarios, diarios) de la NASA de cualquier parte del mundo](https://youtu.be/aw-jtT9tmpE)
+* [Creación de videos primera persona con AI](https://studio.d-id.com/)
 
 
 ##
