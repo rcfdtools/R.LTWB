@@ -1,3 +1,5 @@
+<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+
 Balance hidrológico de largo plazo para estimación de caudales medios usando SIG.  
 Long-term water balance by r.cfdtools@gmail.com
 
@@ -13,4 +15,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Anterior](../Section03/Agg) | [:house: Inicio](../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/32) | [Siguiente](Rain) |
 |------------------------------|--------------------------------|-----------------------------------------------------------------------------------|-------------------|
 
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/LC_SA_MN.LC_FRM_ADM_EC_CMP.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+<div align="center"><a href="../HowToGetCertified.md" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>

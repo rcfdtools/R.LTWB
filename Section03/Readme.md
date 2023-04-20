@@ -1,3 +1,5 @@
+<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+
 <div align="center">
   <br>
   <img alt="R.LTWB" src="../.icons/R.LTWB.svg" width="250px">
@@ -19,4 +21,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Anterior](../Section02/StrDEM) | [:house: Inicio](../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/21) | [Siguiente](CNEStation) |
 |---------------------------------|--------------------------------|-----------------------------------------------------------------------------------|-------------------------|
 
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/LC_SA_MN.LC_FRM_ADM_EC_CMP.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+<div align="center"><a href="../HowToGetCertified.md" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
