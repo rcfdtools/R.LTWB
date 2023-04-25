@@ -76,8 +76,8 @@ def plot_impute(df_org, df_imputed, method, file_name):
     column_headers = df.columns.values.tolist()
     if plot_stations:
         for station in column_headers:
-            ax2 = df_imputed[station].plot(color='black', legend=True, alpha=1, figsize=(fig_size, fig_size), linewidth=0.5)
-            df_org[station].plot(ax=ax2, colormap=plot_colormap, alpha=1, legend=True, figsize=(fig_size, fig_size), linewidth=0.85)
+            ax2 = df_imputed[station].plot(color='black', legend=True, alpha=1, figsize=(fig_size, fig_size), linewidth=0.5, style='.-', markersize=3)
+            df_org[station].plot(ax=ax2, colormap=plot_colormap, alpha=1, legend=True, figsize=(fig_size, fig_size), linewidth=0.85, style='.-', markersize=3)
             ax2.legend(['Imputed', 'Value']);
             plt.title('%s - Station %s' % (method, station))
             ax2.set_ylabel('Values in %s (%d recs.)' % (pivot_table_name, ideam_regs))
