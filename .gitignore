@@ -6,12 +6,11 @@
 
 
 # General exclusions
-#.gitignore
-.git/
-#.github/
 .idea/
-venv/
+.git/
 .venv/
+.git/
+.github/
 .venvArcGISDesktop10.2.2/
 .venvPython3.10.5/
 Lib/
