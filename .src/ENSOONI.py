@@ -31,7 +31,7 @@ threshold = 0.5  # Temperature anomaly grader in °C
 consecutive_event = 5  # Number of consecutive events
 
 
-# Function for print and show results in a file
+# Function for print and show results in a log file
 def print_log(txt_print, on_screen=True, center_div=False):
     if on_screen:
         print(txt_print)
