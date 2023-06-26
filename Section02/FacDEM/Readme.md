@@ -1,11 +1,16 @@
 ##  Acumulación de Flujo - Flow Accumulation - FAC
 Keywords: `FAC-DEM` `Flow-accumulation` `Flow-direction` `Spatial-Analyst-Tools` `Arc-Hydro-Tools` `Display-XY-Data` `Extract-Multi-Values-to-Points`
 
+<div align="center">
+  <img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px">
+  <br>Balance hidrológico de largo plazo. Long-term water balance<br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
+</div><br>
+
 ![R.LTWB](Graph/FacDEM.png)
 
 Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje en cualquier celda puede calcularse multiplicando el valor de acumulación por el área de cada celda.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=lgiUaUkn1n4" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=lgiUaUkn1n4<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=uK3jkaW5n48" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -211,4 +216,9 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [Anterior](../FdrDEM) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/11) | [Siguiente](../StrDEM) |
 |-----------------------|-----------------------------------|-----------------------------------------------------------------------------------|------------------------|
 
-<div align="center"><a href="../../HowToGetCertified.md" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+
+
+##
+
+<div align="center"><a href="http://www.escuelaing.edu.co" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/Banner1.svg" alt="Support by" width="100%" border="0" /></a><sub><br>Este curso guía ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
