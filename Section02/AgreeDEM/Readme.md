@@ -1,11 +1,16 @@
 ## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
 Keywords: `AgreeDEM` `DEM-Reconditioning` `DEM-burning` `Buffer` `Feature-Envelope-To-Polygon` `Raster-Clip` `HEC-HMS` `HEC-GeoHMS` `Arc-Hydro-Tools-Pro` `Feature-to Raster`
 
+<div align="center">
+  <img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px">
+  <br>Balance hidrológico de largo plazo. Long-term water balance<br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
+</div>
+
 ![R.LTWB](Graph/AgreeDEM.png)
 
 Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar los modelos digitales de elevación DEM incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=erJAdeoRWYA" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=erJAdeoRWYA<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=VJgsJpyn-7M" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -313,4 +318,9 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 [^1]: Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
 [^2]: Arc Hydro Tools for ArcGIS Pro http://downloads.esri.com/archydro/archydro/setup/Pro/
 
-<div align="center"><a href="../../HowToGetCertified.md" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+
+
+##
+
+<div align="center"><a href="http://www.escuelaing.edu.co" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/Banner1.svg" alt="Support by" width="100%" border="0" /></a><sub><br>Este curso guía ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
