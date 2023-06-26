@@ -10,7 +10,7 @@ Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell-script-.sh` `Earthdata` 
 
 ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=WMpklIPEhC4" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=smDvgats7os" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 <div align="center">
 
