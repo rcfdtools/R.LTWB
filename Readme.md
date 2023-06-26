@@ -16,7 +16,7 @@ _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimaci
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas, que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="85%" border="0" /></a><sub><br>https://www.youtube.com/watch?v=6eu-mLKVcOw<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>https://www.youtube.com/watch?v=xajIIf5Kazo<br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 _“Un balance Hidrológico es una de las herramientas para la identificación de las condiciones del recurso hídrico en un lugar determinado, este permite relacionar las variables que intervienen en el ciclo hidrológico, tales como la precipitación, la evapotranspiración, el escurrimiento superficial, el almacenamiento superficial y subterráneo y el flujo de agua subterránea. El cálculo del balance hídrico en una cuenca o en una región determinada permite obtener información sobre: el volumen anual de escurrimiento o excedentes; el período en el que se produce el excedente; y el período en el que se produce un déficit de agua o sequía. El balance hídrico también permite la medición de flujos de agua es decir caudales y almacenamientos de la misma.”_ (Fattorelli & Fernández, 2011).
 
@@ -143,4 +143,9 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [:sun_with_face: Iniciar curso](Section01) | [:infinity: Otros cursos](https://github.com/rcfdtools) | [:notebook: Referencias](References.md) | [:label: Abreviaturas y definiciones](Definitios.md) |
 |--------------------------------------------|---------------------------------------------------------|-----------------------------------------|------------------------------------------------------|
 
-<div align="center"><a href="HowToGetCertified.md" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBannerCertificado.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBannerCertificado.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+
+
+##
+
+<div align="center"><a href="http://www.escuelaing.edu.co" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/Banner1.svg" alt="Support by" width="100%" border="0" /></a><sub><br>Este curso guía ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
