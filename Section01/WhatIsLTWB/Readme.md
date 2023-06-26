@@ -2,7 +2,7 @@
 Keywords: `Long-term-water-balance` `Hydrology` `Evapotranspiration` `Rain` `Area`
 
 <div align="center">
-  <img alt="R.LTWB" src=".icons/R.LTWB.svg" width="250px">
+  <img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px">
   <br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
 </div>
 
