@@ -6,6 +6,7 @@ Keywords: `NASA` `SRTM` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-R
   <br>Balance hidrológico de largo plazo. Long-term water balance<br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
 </div>
 
+
 <br>![R.LTWB](Graph/DEMSrtm.png)
 
 Shuttle Radar Topography Mission (SRTM), dispone de mapas topográficos de alta resolución para uso público desde el año 2015 y pueden ser utilizados para la creación de los mapas de dirección y acumulación de flujo.
