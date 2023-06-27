@@ -3,8 +3,8 @@ Keywords: `Case-study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona-hidrogeográfi
 
 <div align="center">
   <img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px">
-  <br>Balance hidrológico de largo plazo. Long-term water balance<br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
-</div>
+  <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG</b><br><br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
+</div><br>
 
 <br>Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia - Suramérica, con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en la creación y procesamiento de los diferentes mapas y capas geográficas.
 

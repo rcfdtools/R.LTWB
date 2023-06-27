@@ -3,7 +3,7 @@ Keywords: `FAC-DEM` `Flow-accumulation` `Flow-direction` `Spatial-Analyst-Tools`
 
 <div align="center">
   <img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px">
-  <br>Balance hidrológico de largo plazo. Long-term water balance<br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
+  <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG</b><br><br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
 </div><br>
 
 ![R.LTWB](Graph/FacDEM.png)
