@@ -1,11 +1,18 @@
+<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+
 ## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
 Keywords: `Remote-sensing` `CHIRPS` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter-plot` `pandas` `rasterio` `requests` `tabulate`
+
+<div align="center">
+  <img alt="R.LTWB" src="../../.icons/R.LTWB.svg" width="250px">
+  <br><b>Balance hidrológico de largo plazo para estimación de caudales medios usando SIG</b><br><br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
+</div><br>
 
 <div align="center"><img alt="R.LTWB" src="Graph/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br><br></div> 
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=hvo1r7ywov4" target="_blank"><img src="../../.icons/R.LTWB_PlayVideo.svg" alt="R.LTWB" width="240" border="0" /></a><sub><br>https://www.youtube.com/watch?v=hvo1r7ywov4<br>Playlist: https://youtube.com/playlist?list=PLZGvAjHkhphDKXvnhkp0oQb22EHWVd0W8</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=p7opzJ7FYLk" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 CHIRPS permite descargar datos de precipitación diaria con resoluciones espaciales de 0.05 y 0.25 grados (5.5 y 27.8 km aprox.) en formatos BIL, TIDD o NetCDF y con series de 30 o más años. La banda de descarga se ubica entre las latitudes 50°S a -50°N en todas las longitudes de la superficie terrestre, iniciando su captura desde 1981 y hasta la actualidad. CHIRPS combina imágenes satelitales (NASA y NOAA) con datos registrados en estaciones terrestres y es frecuentemente utilizado para análisis de tendencias y monitoreo de sequías debidas a cambios estacionales. Esta fusión de datos permite estimar valores en zonas en las que no existen estaciones terrestres, complementando valores obtenidos por otros métodos que tienen en cuenta la relación espacial entre estaciones próximas.
 
@@ -1016,4 +1023,9 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 [^1]: https://www.chc.ucsb.edu/data/chirps
 
-<div align="center"><a href="../../HowToGetCertified.md" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a></div>
+
+
+##
+
+<div align="center"><a href="http://www.escuelaing.edu.co" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/Banner1.svg" alt="Support by" width="100%" border="0" /></a><sub><br>Este curso guía ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
