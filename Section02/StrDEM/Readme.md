@@ -1,3 +1,5 @@
+<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+
 ## Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
 Keywords: `STR-DEM` `Stream-definition` `FAC-DEM` `Flow-accumulation` `Arc-Hydro-Tools` `Extract-Multi-Values-to-Points` `Raster-to-Polyline` `Add-Field` `Geometry-Calculator` `Delete-Identical` `Raster-Calculator`
 
