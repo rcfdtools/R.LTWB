@@ -5,13 +5,10 @@ R.LTWB
 https://github.com/rcfdtools/R.LTWB.git
 Clone local directory D:\R.LTWB
 
-R.LTWB.wiki
-https://github.com/rcfdtools/R.LTWB.wiki.git
-Clone local directory D:\R.LTWB.wiki
-(suspended, now is integrated in each class)
-
 Organization
-https://github.com/uecijg-ceh
+https://github.com/uescuelaing
+https://www.escuelaing.edu.co/es/programas/cursos-autocontenidos-sin-costo/
+
 
 # -*- coding: UTF-8 -*-
 # -*- coding: windows-1252 -*-
