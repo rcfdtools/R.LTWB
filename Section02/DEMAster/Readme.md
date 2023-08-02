@@ -130,7 +130,7 @@ Con el propósito de realizar la descarga desde la consola de comandos a través
 
 Desde https://www.cygwin.com/, descargue e instale _Cygwin_ para Windows en la ruta _C:\cygwin64_ y ejecute la aplicación _Cygwin64 Terminal_ e ingrese los siguientes comandos:
 
-* `chmod 777 'D:/R.LTWB/.src/downloadASTER.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo.
+* `chmod 777 'D:/R.LTWB/.src/downloadASTER.sh'` para establecer los permisos de lectura, escritura y ejecución por cualquier usuario con acceso a la consola y al archivo. Luego de ejecutar los permisos, podrá observar mediante el comando `ls` que en la carpeta donde se encuentra el script, se han creado los archivos `cookies.wC8` y `netrc.32c` requeridos para su ejecución.
 * `cd 'D:/R.LTWB/.dem/ASTER'` para ingresar al directorio ASTER de modelos digitales de elevación.
 * `ls` para listar el contenido del directorio. Podrá observar que no existen archivos GeoTiFF correspondientes al modelo de terreno ni archivos de cookies.
 * `'D:/R.LTWB/.src/downloadASTER.sh'` para ejecutar _download.sh_ y obtener los archivos del modelo de terreno y almacenarlos en el directorio _.dem/ASTER_
@@ -140,6 +140,8 @@ En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para
 ![R.LTWB](Screenshot/Cygwin64Commands.png)
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/ASTER_
+
+> Es recomendable descargar directamente desde el servidor https://search.earthdata.nasa.gov/, la última versión del script desde la opción `Download Script` disponible al hacer clic en `Download Data`.
 
 Shell script [donwloadASTER.sh](../../.src/downloadASTER.sh) de Earthdata
 ```
@@ -458,6 +460,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * Montenegro Gambini, Julio. El Modelo Digital Global ASTER GDEM, caracterización y aplicaciones en distintas áreas. Laboratorio Nacional de Hidráulica. Lima, Perú. Abril del 2012.
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/mosaic-to-new-raster.htm
 * https://pro.arcgis.com/en/pro-app/latest/help/analysis/raster-functions/hillshade-function.htm
+* [How to Uninstall Cygwin on Windows](https://www.partitionwizard.com/partitionmagic/uninstall-cygwin.html)
 
 
 ### Control de versiones
