@@ -277,7 +277,7 @@ Luego de los procesos de obtención de las imágenes satelitales, es necesaria l
 
 2. Utilizando la herramienta _ArcToolBox / Data Management Tools / Raster / Raster Dataset / Mosaic to New Raster_, cree el mosaico de terreno a partir de las 9 imágenes, seleccionando y arrastrando las imágenes desde la tabla de contenido hacia la herramienta de mosaico, establezca los siguientes parámetros:
 
-* Output Location: D:\R.LTWB\.dem\ASTER
+* Output Location: D:\R.LTWB\\.dem\ASTER
 * Raster Dataset Name with Extension: ASTGTMV003Mosaic.tif
 * Spatial Reference for Raster (optional): MAGNA_Colombia_CTM12
 * Pixel Type: 32_BIT_FLOAT (para conservar valores numéricos enteros puede utilizar el tipo original 16_BIT)
