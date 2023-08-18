@@ -324,7 +324,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/h-how-dissolve-data-management-works.htm
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-field.htm
 * https://docs.qgis.org/2.18/en/docs/user_manual/processing_algs/qgis/vector_geometry_tools.html
-* :lady_beetle: [PyCharm no sincroniza mis cambios en la nube - Archivos grandes rechazados en _Commit and Push_](https://github.com/rcfdtools/R.LTWB/discussions/40)
+* [PyCharm no sincroniza mis cambios en la nube - Archivos grandes rechazados en _Commit and Push_](https://github.com/rcfdtools/R.LTWB/discussions/40):lady_beetle:
 
 
 ### Control de versiones
