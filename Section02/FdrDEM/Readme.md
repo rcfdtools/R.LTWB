@@ -48,17 +48,17 @@ Existen diferentes codificaciones para la marcación de direcciones de flujo que
 
 <div align="center">
 
-| Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 | QGIS 3.0 | QGIS 2.6 | rcfdtools |
-|:-----------:|:------:|:------------:|:-------------:|:--------:|:--------:|:---------:|
-|    Este     |   1    |      6       |       1       |    2     |    1     |    20     |
-|   Sureste   |   2    |      3       |       8       |    3     |    8     |    21     |
-|     Sur     |   4    |      2       |       7       |    4     |    7     |    22     |
-|  Suroeste   |   8    |      1       |       6       |    5     |    6     |    23     |
-|    Oeste    |   16   |      4       |       5       |    6     |    5     |    24     |
-|  Noroeste   |   32   |      7       |       4       |    7     |    4     |    25     |
-|    Norte    |   64   |      8       |       3       |    0     |    3     |    26     |
-|  Nordeste   |  128   |      9       |       2       |    1     |    2     |    27     |
-|  No drena   |  255   |              |               |          |          |    255    |
+| Orientación | ArcGIS | HidroSIG 4.0 | MapWindow 4.5 / D8  | QGIS 3.0 | QGIS 2.6 | rcfdtools | Manifold |
+|:-----------:|:------:|:------------:|:-------------------:|:--------:|:--------:|:---------:|:--------:|
+|    Este     |   1    |      6       |          1          |    2     |    1     |    20     |    2     |
+|   Sureste   |   2    |      3       |          8          |    3     |    8     |    21     |    3     |
+|     Sur     |   4    |      2       |          7          |    4     |    7     |    22     |    4     |
+|  Suroeste   |   8    |      1       |          6          |    5     |    6     |    23     |    5     |
+|    Oeste    |   16   |      4       |          5          |    6     |    5     |    24     |    6     |
+|  Noroeste   |   32   |      7       |          4          |    7     |    4     |    25     |    7     |
+|    Norte    |   64   |      8       |          3          |    0     |    3     |    26     |    0     |
+|  Nordeste   |  128   |      9       |          2          |    1     |    2     |    27     |    1     |
+|  No drena   |  255   |              |                     |          |          |    255    |          |
 
 </div>
 
