@@ -64,7 +64,7 @@ geogrid_extension = '.tif'
 compress_format = '.gz'
 plot_colormap = 'tab20b'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 year_start = 1981  # Chirps values starts at 1981
-year_end = 2021  # This value have to correspond with the end of the IDEAM series
+year_end = 1982  # This value have to correspond with the end of the IDEAM series
 
 # Header
 print_log('## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres, IDEAM vs. CHIRPS')
