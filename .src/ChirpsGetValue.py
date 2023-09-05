@@ -39,10 +39,10 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 
 # General variables
-#station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
-station_file = 'C:/Temp/chirps/IDEAMJoinedJL.csv'  # Current IDEAM records file
-#path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
-path = 'C:/Temp/chirps'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
+station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
+#station_file = 'C:/Temp/chirps/IDEAMJoinedJL.csv'  # Current IDEAM records file
+path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
+#path = 'C:/Temp/chirps/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
 station_file_chirps = 'IDEAMJoinedChirps.csv'  # Output IDEAM records with the Chirps values
 station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv'  # Output IDEAM correlations with Chirps for each date
 station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv'  # Output IDEAM correlations with Chirps - mean
@@ -81,7 +81,10 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
 
 # Open the IDEAM station dataframe and show general information
 # Learn more about the IDEAM file in https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
-station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
+station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])  # , infer_datetime_format=True
+station_df[date_install] = pd.to_datetime(station_df[date_install], dayfirst=True, infer_datetime_format=True)  #, format='%d/%m/%Y'
+station_df[date_suspend] = pd.to_datetime(station_df[date_suspend], dayfirst=True, infer_datetime_format=True)
+station_df[date_record] = pd.to_datetime(station_df[date_record], dayfirst=False, infer_datetime_format=True)
 print_log('\n### General dataframe information\n')
 print(station_df.info())
 print('\nStation records sample\n')
@@ -128,6 +131,7 @@ for year in range(year_start, year_end+1, 1):
             show(raster)  # Plot the raster file
         # Slice the IDEAM file per year and month and get the Chirps values
         if os.path.isfile(path + chirps_file + '.csv') is False:
+            #station_df_filter = station_df[station_df[date_record].dt.strftime('%Y-%m') == year_month]
             station_df_filter = station_df[station_df[date_record].dt.strftime('%Y-%m') == year_month]
             stations = station_df_filter.shape[0]
             print('Slicing .csv serie for %s with %d records' % (year_month, stations))
@@ -142,7 +146,8 @@ for year in range(year_start, year_end+1, 1):
         correlation_kendall = df[value_name].corr(df['SatValue'], method='kendall')
         correlation_spearman = df[value_name].corr(df['SatValue'], method='spearman')
         print('Correlation analysis. Pearson = %f, Kendall = %f, Spearman = %f' % (correlation_pearson, correlation_kendall, correlation_spearman))
-        df2 = pd.DataFrame([[pd.to_datetime(date, format='%Y/%m/%d'), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns=cols)
+        #df2 = pd.DataFrame([[pd.to_datetime(date, format='%Y/%m/%d'), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns=cols)
+        df2 = pd.DataFrame([[pd.to_datetime(date, format='%Y-%m-%d'), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns=cols)
         # correlation_df = pd.concat([correlation_df, df2], ignore_index = True)
         correlation_df = pd.concat([correlation_df, df2])
 
