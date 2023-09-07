@@ -40,9 +40,7 @@ def print_log(txt_print, on_screen=True, center_div=False):
 
 # General variables
 station_file = 'D:/R.LTWB/.datasets/IDEAM/IDEAMJoined.csv'  # Current IDEAM records file
-#station_file = 'C:/Temp/chirps/IDEAMJoinedJL.csv'  # Current IDEAM records file
 path = 'D:/R.LTWB/.datasets/CHIRPS/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
-#path = 'C:/Temp/chirps/'  # Your local output path, use ../.datasets/CHIRPS/ for relative path
 station_file_chirps = 'IDEAMJoinedChirps.csv'  # Output IDEAM records with the Chirps values
 station_file_corr_date = 'IDEAMJoinedChirpsCorrelationDate.csv'  # Output IDEAM correlations with Chirps for each date
 station_file_corr_date_mean = 'IDEAMJoinedChirpsCorrelationDateMean.csv'  # Output IDEAM correlations with Chirps - mean
@@ -66,7 +64,7 @@ geogrid_extension = '.tif'
 compress_format = '.gz'
 plot_colormap = 'tab20b'  # Color theme for plot graphics, https://matplotlib.org/stable/tutorials/colors/colormaps.html
 year_start = 1981  # Chirps values starts at 1981
-year_end = 1982  # This value have to correspond with the end of the IDEAM series
+year_end = 2021  # This value have to correspond with the end of the IDEAM series
 
 # Header
 print_log('## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres, IDEAM vs. CHIRPS')
