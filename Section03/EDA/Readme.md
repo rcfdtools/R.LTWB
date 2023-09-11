@@ -339,6 +339,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://www.easytweaks.com/pandas-group-one-multiple-columns/
 * https://www.geeksforgeeks.org/display-the-pandas-dataframe-in-heatmap-style/
 * https://towardsdatascience.com/how-to-plot-time-series-86b5358197d6
+* https://faculty.washington.edu/yenchic/18W_425/Lec6_hist_KDE.pdf
 
 
 ### Control de versiones
