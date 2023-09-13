@@ -339,6 +339,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | Para las estaciones identificadas en la actividad complementaria [CNEStation](../CNEStation) relacionadas con brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad, descargue los registros disponibles en DHIME del IDEAM e integre las series a las presentadas en esta actividad. | 
 |     2     | En caso que no pueda descargar los registros de estaciones a partir del servicio DHIME del IDEAM - Colombia, busque el servicio de descarga de cada entidad y realice la descarga de los datos requeridos de las estaciones identificadas dentro de su zona de estudio.                                                                         | 
+|     3     | En el archivo integrado **IDEAMJoined.csv** verifique manualmente que en todos los registros el formato de fechas y horas sea consistente en los campos `FechaInstalacion`, `FechaSuspension` y `Fecha`.                                                                                                                                        | 
 
 
 ### Referencias
