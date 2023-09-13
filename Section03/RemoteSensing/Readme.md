@@ -144,7 +144,10 @@ print_log('\n* Archivo de resultados: ' + file_log_name +
 
 # Open the IDEAM station dataframe and show general information
 # Learn more about the IDEAM file in https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStationDatasetDownload
-station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])
+station_df = pd.read_csv(station_file, low_memory=False, parse_dates=[date_install, date_suspend, date_record])  # , infer_datetime_format=True
+station_df[date_install] = pd.to_datetime(station_df[date_install], dayfirst=True, infer_datetime_format=True)  #, format='%d/%m/%Y'
+station_df[date_suspend] = pd.to_datetime(station_df[date_suspend], dayfirst=True, infer_datetime_format=True)
+station_df[date_record] = pd.to_datetime(station_df[date_record], dayfirst=False, infer_datetime_format=True)
 print_log('\n### General dataframe information\n')
 print(station_df.info())
 print('\nStation records sample\n')
@@ -191,7 +194,8 @@ for year in range(year_start, year_end+1, 1):
             show(raster)  # Plot the raster file
         # Slice the IDEAM file per year and month and get the Chirps values
         if os.path.isfile(path + chirps_file + '.csv') is False:
-            station_df_filter = station_df[station_df['Fecha'].dt.strftime('%Y-%m') == year_month]
+            #station_df_filter = station_df[station_df[date_record].dt.strftime('%Y-%m') == year_month]
+            station_df_filter = station_df[station_df[date_record].dt.strftime('%Y-%m') == year_month]
             stations = station_df_filter.shape[0]
             print('Slicing .csv serie for %s with %d records' % (year_month, stations))
             station_df_filter['SatValue'] = chirps_value(chirps_file + geogrid_extension, station_df_filter[longitude_name], station_df_filter[latitude_name])
@@ -205,7 +209,8 @@ for year in range(year_start, year_end+1, 1):
         correlation_kendall = df[value_name].corr(df['SatValue'], method='kendall')
         correlation_spearman = df[value_name].corr(df['SatValue'], method='spearman')
         print('Correlation analysis. Pearson = %f, Kendall = %f, Spearman = %f' % (correlation_pearson, correlation_kendall, correlation_spearman))
-        df2 = pd.DataFrame([[pd.to_datetime(date, format='%Y/%m/%d'), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns=cols)
+        #df2 = pd.DataFrame([[pd.to_datetime(date, format='%Y/%m/%d'), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns=cols)
+        df2 = pd.DataFrame([[pd.to_datetime(date, format='%Y-%m-%d'), year, month + 1, correlation_pearson, correlation_kendall, correlation_spearman]], columns=cols)
         # correlation_df = pd.concat([correlation_df, df2], ignore_index = True)
         correlation_df = pd.concat([correlation_df, df2])
 
@@ -216,7 +221,7 @@ df = pd.concat(map(pd.read_csv, csv_files), ignore_index=True)
 df.to_csv(path + station_file_chirps, encoding='utf-8', index=False)
 df = pd.read_csv(path + station_file_chirps, low_memory=False)
 print_log('\nProcessed .csv file [%s](%s)\n' % (station_file_chirps, station_file_chirps))
-fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.25, figsize=(6, 6), c='black', cmap=None)
+fig = df.plot.scatter(x=value_name, y='SatValue', alpha=0.75, figsize=(6, 6), c='black', cmap=None)
 plt.title('IDEAM vs. CHIRPS - Scatter plot')
 fig.figure.savefig(path + 'PlotDateScatterIdeamChirps.png')
 plt.show()
