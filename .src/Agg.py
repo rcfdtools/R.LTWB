@@ -14,8 +14,8 @@ import tabulate  # required for print tables in Markdown using pandas
 
 
 # General variables
-station_file = 'Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
-station_path = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
+station_file = 'Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
+station_path = 'D:/R.LTWB/.datasets/IDEAM_Impute/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
 #path = 'D:/R.LTWB/.datasets/IDEAM_Agg/'  # Your local output files path, use ../.datasets/IDEAM_Agg/ for relative path
@@ -61,21 +61,20 @@ def plot_df(df, title='No assignment title', kind='line', plt_save_name='xxxxx',
 
 # Function for monthly to year aggregations
 def monthly_to_yearly_agg_func(df1):
-    df1['year'] = df1[date_record_name].dt.year
+    df1['Year'] = df1[date_record_name].dt.year
     df1 = df1.drop(columns=[date_record_name])
-    print(df1)
-    print(df1.dtypes)
-
+    #print(df1)
+    #print(df1.dtypes)
     match agg_func:
         case 'Sum':  # Typical for total monthly rain
             #df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).sum()
-            df_yearly_agg = df1.groupby('year').sum()
+            df_yearly_agg = df1.groupby('Year').sum()
         case 'Mean':  # Typical for average monthly flow
-            df_yearly_agg = df1.groupby('year').mean()
+            df_yearly_agg = df1.groupby('Year').mean()
         case 'Max':  # Typical for PMax24hr from total daily rain
-            df_yearly_agg = df1.groupby('year').max()
+            df_yearly_agg = df1.groupby('Year').max()
         case 'Min':  # Typical for average monthly flow
-            df_yearly_agg = df1.groupby('year').min()
+            df_yearly_agg = df1.groupby('Year').min()
     return df_yearly_agg
 
 
@@ -143,12 +142,17 @@ df_agg_std = df_agg_std.to_frame()  # List to frame
 print_log(df_agg_std.T.to_markdown())
 plot_df(df_agg, title='Composite - Aggregation value per station from yearly aggregations (mean)\n', kind='bar', plt_save_name='AggComposite_Station_Mean')
 print_log('\nComposite - Monthly values per station (mean)\n')
-df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
-df_monthly_val.index.name = 'Month'
+df['Month'] = df[date_record_name].dt.month
+df = df.drop(columns=[date_record_name])
+df = df.drop(columns=['Year'])
+#df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
+df_monthly_val = df.groupby('Month').mean()
+#df_monthly_val.index.name = 'Month'
 print_log(df_monthly_val.to_markdown())
 plot_df(df_monthly_val, title='Composite - Monthly values per station (mean)\n', kind='line', plt_save_name='AggComposite_Monthly_Mean')
 print_log('\nComposite - Zonal monthly values (mean)\n', center_div=True)
 df_monthly_zonal = df_monthly_val.mean(axis=1)
+#df_monthly_zonal = df_monthly_val.mean(axis=0)
 df_monthly_zonal.name = 'AggCompositeZonal'
 df_monthly_zonal = df_monthly_zonal.to_frame()
 print_log(df_monthly_zonal.to_markdown(), center_div=True)
@@ -182,6 +186,8 @@ for i in (-1, 1, 0):
     print_log('\n### %s events analysis (%d years identified)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
     print_log(df_ensooni_eval.to_markdown(), center_div=True)
     df_ensooni_unique = df_ensooni_eval['YR'].unique()
+    print(df)
+    #df_yearly_agg = monthly_to_yearly_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
     df_yearly_agg = monthly_to_yearly_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
     df_yearly_agg.index.name = 'Year'
     print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, agg_func))
