@@ -18,7 +18,8 @@ station_file = 'Pivot_PTPM_TT_M.csv'  # Current IDEAM records file
 station_path = 'D:/R.LTWB/.datasets/IDEAM_EDA/'  # Current IDEAM records path, use ../.datasets/IDEAM_Impute/ for relative path
 ENSOONI_file = 'ONI_Eval_Consecutive.csv'
 ENSOONI_path = 'D:/R.LTWB/.datasets/ENSOONI/'
-path = 'D:/R.LTWB/.datasets/IDEAM_Agg/'  # Your local output files path, use ../.datasets/IDEAM_Agg/ for relative path
+#path = 'D:/R.LTWB/.datasets/IDEAM_Agg/'  # Your local output files path, use ../.datasets/IDEAM_Agg/ for relative path
+path = 'C:/Temp/'  # Your local output files path, use ../.datasets/IDEAM_Agg/ for relative path
 file_log_name = path + 'Agg_' + station_file + '.md'
 file_log = open(file_log_name, 'w+')   # w+ create the file if it doesn't exist
 date_record_name = 'Fecha'  # IDEAM date field name for the record values
@@ -60,20 +61,27 @@ def plot_df(df, title='No assignment title', kind='line', plt_save_name='xxxxx',
 
 # Function for monthly to year aggregations
 def monthly_to_yearly_agg_func(df1):
+    df1['year'] = df1[date_record_name].dt.year
+    df1 = df1.drop(columns=[date_record_name])
+    print(df1)
+    print(df1.dtypes)
+
     match agg_func:
         case 'Sum':  # Typical for total monthly rain
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).sum()
+            #df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).sum()
+            df_yearly_agg = df1.groupby('year').sum()
         case 'Mean':  # Typical for average monthly flow
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).mean()
+            df_yearly_agg = df1.groupby('year').mean()
         case 'Max':  # Typical for PMax24hr from total daily rain
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).max()
+            df_yearly_agg = df1.groupby('year').max()
         case 'Min':  # Typical for average monthly flow
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).min()
+            df_yearly_agg = df1.groupby('year').min()
     return df_yearly_agg
 
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[date_record_name])
+df[date_record_name] = pd.to_datetime(df[date_record_name], dayfirst=True)  #, format='%d/%m/%Y'
 
 
 # Header
