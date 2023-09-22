@@ -92,7 +92,7 @@ df_agg_std_full = pd.DataFrame(columns=['Station'])  # Integrated dataframe aggr
 df_agg_zonal = pd.DataFrame(columns=['Month'])  # Integrated dataframe zonal aggregations
 daily_serie = False  # The stations series contain daily values
 agg_func = 'Sum'  # Aggregation function, E.G. 'Sum' for total monthly rain or evaporation values, 'Mean' for average monthly flow or max and min temperature values, 'Max' for PMax24hr from total daily rain.
-unit = 'Rain, mm'
+unit = 'Rain, mm'  # 'Rain, mm' 'Min temperature, °C' 'Max temperature, °C' 'Flow, m³/s' 'Potential evaporation, mm'
 
 # Function for print and show results in a file
 def print_log(txt_print, on_screen=True, center_div=False):
@@ -122,20 +122,26 @@ def plot_df(df, title='No assignment title', kind='line', plt_save_name='xxxxx',
 
 # Function for monthly to year aggregations
 def monthly_to_yearly_agg_func(df1):
+    df2 = df1
+    df2 = df2.drop(columns=['Month'])
     match agg_func:
         case 'Sum':  # Typical for total monthly rain
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).sum()
+            df_yearly_agg = df2.groupby('Year').sum()
         case 'Mean':  # Typical for average monthly flow
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).mean()
+            df_yearly_agg = df2.groupby('Year').mean()
         case 'Max':  # Typical for PMax24hr from total daily rain
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).max()
+            df_yearly_agg = df2.groupby('Year').max()
         case 'Min':  # Typical for average monthly flow
-            df_yearly_agg = df1.groupby(df1[date_record_name].dt.year).min()
+            df_yearly_agg = df2.groupby('Year').min()
     return df_yearly_agg
 
 
 # Open the IDEAM station pivot dataframe and show general information
 df = pd.read_csv(station_path + station_file, low_memory=False, parse_dates=[date_record_name])
+df[date_record_name] = pd.to_datetime(df[date_record_name], dayfirst=True)  #, format='%d/%m/%Y'
+df['Year'] = df[date_record_name].dt.year
+df['Month'] = df[date_record_name].dt.month
+df = df.drop(columns=[date_record_name])
 
 
 # Header
@@ -161,19 +167,11 @@ print_log('\n* Station records file: [%s](%s)' % (str(station_file), '../IDEAM_I
 if daily_serie:
     match agg_func:
         case 'Sum':  # Typical for total daily rain
-            df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).sum()
+            df = df.groupby([df['Year'], df['Month']]).sum()
         case 'Mean':  # Typical for average daily flow, daily temperature
-            df = df.groupby([df[date_record_name].dt.year, df[date_record_name].dt.month]).mean()
-    df.index.name = 'Group'
-    df['Aux'] = df.index
-    df[date_record_name] = df.Aux.str[0].astype(str) + '-' + df.Aux.str[1].astype(str) + '-01'
-    df[date_record_name] = df[date_record_name].astype('datetime64[ns]')
-    df = df.drop(['Aux'], axis=1)
-    df = df.reset_index(drop=True)
-    df.index.name = 'Id'
-    df.insert(0, date_record_name, df.pop(date_record_name))
+            df = df.groupby([df['Year'], df['Month']]).mean()
     df.to_csv(path + 'Agg_YM_' + station_file)  # YM means yearly and monthly
-
+    df = pd.read_csv(path + 'Agg_YM_' + station_file, low_memory=False)
 
 # Composite aggregations for monthly values
 print_log('\n\n## Composite - Yearly values per station from monthly values (%s)\n' % agg_func)
@@ -197,12 +195,13 @@ df_agg_std = df_agg_std.to_frame()  # List to frame
 print_log(df_agg_std.T.to_markdown())
 plot_df(df_agg, title='Composite - Aggregation value per station from yearly aggregations (mean)\n', kind='bar', plt_save_name='AggComposite_Station_Mean')
 print_log('\nComposite - Monthly values per station (mean)\n')
-df_monthly_val = df.groupby(df[date_record_name].dt.month).mean()
-df_monthly_val.index.name = 'Month'
+df_monthly_val = df.groupby('Month').mean()
+df_monthly_val = df_monthly_val.drop(columns=['Year'])
 print_log(df_monthly_val.to_markdown())
 plot_df(df_monthly_val, title='Composite - Monthly values per station (mean)\n', kind='line', plt_save_name='AggComposite_Monthly_Mean')
 print_log('\nComposite - Zonal monthly values (mean)\n', center_div=True)
 df_monthly_zonal = df_monthly_val.mean(axis=1)
+#df_monthly_zonal = df_monthly_val.mean(axis=0)
 df_monthly_zonal.name = 'AggCompositeZonal'
 df_monthly_zonal = df_monthly_zonal.to_frame()
 print_log(df_monthly_zonal.to_markdown(), center_div=True)
@@ -236,7 +235,7 @@ for i in (-1, 1, 0):
     print_log('\n### %s events analysis (%d years identified)\n' % (ensooni_tag, df_ensooni_eval.shape[0]))
     print_log(df_ensooni_eval.to_markdown(), center_div=True)
     df_ensooni_unique = df_ensooni_eval['YR'].unique()
-    df_yearly_agg = monthly_to_yearly_agg_func(df[df[date_record_name].dt.year.isin(df_ensooni_unique)])
+    df_yearly_agg = monthly_to_yearly_agg_func(df[df['Year'].isin(df_ensooni_unique)])
     df_yearly_agg.index.name = 'Year'
     print_log('\n%s - Table aggregations (%s)\n' % (ensooni_tag, agg_func))
     print_log(df_yearly_agg.to_markdown())
@@ -255,8 +254,9 @@ for i in (-1, 1, 0):
     print_log(df_agg_std.T.to_markdown())
     plot_df(df_agg, title='%s - Aggregation value per station from yearly aggregations (mean)\n' % ensooni_tag, kind='bar', plt_save_name='%s_Station_Mean' % agg_name)
     print_log('\n%s - Monthly values per station (mean)\n' % ensooni_tag)
-    df_monthly_filter = df[df[date_record_name].dt.year.isin(df_ensooni_unique)]
-    df_monthly_val = df.groupby(df_monthly_filter[date_record_name].dt.month).mean()
+    df_monthly_filter = df[df['Year'].isin(df_ensooni_unique)]
+    df_monthly_filter = df_monthly_filter.drop(columns=['Year'])
+    df_monthly_val = df_monthly_filter.groupby('Month').mean()
     df_monthly_val.index.name = 'Month'
     print_log(df_monthly_val.to_markdown())
     plot_df(df_monthly_val, title='%s - Monthly values per station (mean)\n' % ensooni_tag, kind='line', plt_save_name='%s_Monthly_Mean' % agg_name)
@@ -426,14 +426,15 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 ### Control de versiones
 
-| Versión    | Descripción                                                                                                                                                                                                                                                                                             | Autor                                     | Horas |
-|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2023.02.11 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools) |  2.5  |
-| 2022.11.30 | Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools) |   4   |
-| 2022.11.24 | Optimización de script. Creación de matriz de valores de desviación estándar. Inclusión de agregaciones para valores máximos y mínimos. Generación de archivos .csv. Agregación de precipitación total mensual, caudal medio mensual, temperatura mínima y temperatura máxima. Inicio de documentación. | [rcfdtools](https://github.com/rcfdtools) |  7.5  |
-| 2022.11.23 | Optimización de script. Agregación a partir de datos diarios. Cabecera de reporte. Agregación zonal con tabla y gráficos.                                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools) |   6   |
-| 2022.11.22 | Optimización de script. Conversión de listas de resultados a dataframes. Integración de dataframes en matriz unica de resultados por estación. Agregaciones mensuales multianuales por fenómeno climatológico.                                                                                          | [rcfdtools](https://github.com/rcfdtools) |   2   |
-| 2022.11.21 | Script inicial con análisis de series compuestas. Agregación multianual. Segmentación de series por fenómeno climatológico. Agregaciones mensuales a anuales a partir de sumatoria y media. Gráficas de análisis.                                                                                       | [rcfdtools](https://github.com/rcfdtools) |   6   |
+| Versión    | Descripción                                                                                                                                                                                                                                                                                             | Autor                                      | Horas |
+|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
+| 2023.09.22 | Actualización de script para compatibilidad con Python 3.11.5 y Pandas 2.1.1.                                                                                                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools)  |  3.0  |
+| 2023.02.11 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
+| 2022.11.30 | Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |   4   |
+| 2022.11.24 | Optimización de script. Creación de matriz de valores de desviación estándar. Inclusión de agregaciones para valores máximos y mínimos. Generación de archivos .csv. Agregación de precipitación total mensual, caudal medio mensual, temperatura mínima y temperatura máxima. Inicio de documentación. | [rcfdtools](https://github.com/rcfdtools)  |  7.5  |
+| 2022.11.23 | Optimización de script. Agregación a partir de datos diarios. Cabecera de reporte. Agregación zonal con tabla y gráficos.                                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)  |   6   |
+| 2022.11.22 | Optimización de script. Conversión de listas de resultados a dataframes. Integración de dataframes en matriz unica de resultados por estación. Agregaciones mensuales multianuales por fenómeno climatológico.                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
+| 2022.11.21 | Script inicial con análisis de series compuestas. Agregación multianual. Segmentación de series por fenómeno climatológico. Agregaciones mensuales a anuales a partir de sumatoria y media. Gráficas de análisis.                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
