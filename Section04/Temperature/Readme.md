@@ -33,7 +33,7 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 * Modelo digital de elevación ALOS PALSAR. [:mortar_board:Aprender.](../../Section02/DEMAlos)
 
 
-### Procedimiento general para interpolación de precipitación total
+### Procedimiento general para interpolación de temperatura media
 
 <div align="center">
 <br><img alt="R.LTWB" src="Graph/Temperature.svg" width="95%"><br>
