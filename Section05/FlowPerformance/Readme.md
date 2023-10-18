@@ -66,7 +66,7 @@ Donde,
 
 Expresión algebra de mapas: `FlowPerfBudykoComposite.tif = "LTWBBudykoComposite.tif"*1000/("ALOSFac.tif"*12.5*12.5/1000000)`
 
-Una vez obtenido elmapa, modifique la simbología de representación a _Classify_ utilizando la paleta de color _Spectrum by Wavelength - Fullbright_ y _Method: Quantile_ en 12 clases
+Una vez obtenido el mapa, modifique la simbología de representación a _Classify_ utilizando la paleta de color _Spectrum by Wavelength - Fullbright_ y _Method: Quantile_ en 12 clases
 
 Matriz de isorendimiento Budyko Compuesto
 ![R.LTWB](Screenshot/ArcGISPro3.0.3LTWBBudykoComposite.png)
