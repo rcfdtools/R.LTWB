@@ -138,6 +138,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [:sun_with_face: Iniciar curso](Section01) | [:infinity: Otros cursos](https://github.com/rcfdtools) | [:notebook: Referencias](References.md) | [:label: Abreviaturas y definiciones](Definitios.md) |
 |--------------------------------------------|---------------------------------------------------------|-----------------------------------------|------------------------------------------------------|
 
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBannerCertificado.jpg" alt="R.LTWB" width="100%" border="0" /></a></div><br>
-
-<div align="center"><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Universidad Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBannerCertificado.jpg" alt="R.LTWB" width="100%" border="0" /></a><br><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Universidad Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br></div>
