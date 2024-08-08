@@ -7,10 +7,6 @@
 # Balance hidrológico de largo plazo para estimación de caudales medios usando SIG
 
 <div align="center">
-  <br><b>Universidad Escuela Colombiana de Ingeniería Julio Garavito</b><br>William Ricardo Aguilar Piña<br>Profesor del Centro de Estudios Hidráulicos<br>william.aguilar@escuelaing.edu.co<br>
-</div>
-
-<div align="center">
 <br><img alt="R.LTWB" src=".icons/LTWB.png" width="75%"><br>
 <sub>Fuente: propia, creada con el catálogo de objetos de Microsoft Paint 3D.</sub><br><br>
 </div>
@@ -19,7 +15,7 @@ _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimaci
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas, que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
-<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioCurso.png" alt="R.LTWB" width="75%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><a href="http://www.youtube.com/watch?feature=player_embedded&v=6eu-mLKVcOw" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioCurso.png" alt="R.LTWB" width="35%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 _“Un balance Hidrológico es una de las herramientas para la identificación de las condiciones del recurso hídrico en un lugar determinado, este permite relacionar las variables que intervienen en el ciclo hidrológico, tales como la precipitación, la evapotranspiración, el escurrimiento superficial, el almacenamiento superficial y subterráneo y el flujo de agua subterránea. El cálculo del balance hídrico en una cuenca o en una región determinada permite obtener información sobre: el volumen anual de escurrimiento o excedentes; el período en el que se produce el excedente; y el período en el que se produce un déficit de agua o sequía. El balance hídrico también permite la medición de flujos de agua es decir caudales y almacenamientos de la misma.”_ (Fattorelli & Fernández, 2011).
 
@@ -151,4 +147,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 
 ##
 
-<div align="center"><a href="http://www.escuelaing.edu.co" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/Banner1.svg" alt="Support by" width="100%" border="0" /></a><sub><br>Este curso guía ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+<div align="center"><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Universidad Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
