@@ -1,6 +1,6 @@
 <div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
 
-# Balance hidrológico de largo plazo para estimación de caudales medios usando SIG
+# Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - LTWB
 
 <div align="center">
 <br><img alt="R.LTWB" src=".icons/LTWB.png" width="75%"><br>
