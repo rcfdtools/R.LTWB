@@ -32,7 +32,7 @@ Lib/
 *.tif.vat.dbf
 *Copia_de_seguridad_de*
 
-# Video exclusions
+# Video exclusions (old)
 Section02/FdrDEM/FdrDEM.mp4
 Section02/StrDEM/StrDEM.mp4
 Section03/CNEStation/CNEStation.mp4
@@ -51,6 +51,27 @@ Section04/Temperature/Temperature.mp4
 Section05/FlowPoint/FlowPoint.mp4
 #Section05/FlowPerformance/FlowPerformance.mp4
 #Section05/LTWBBasin/LTWBBasin.mp4
+
+# Video exclusions (new)
+activity/FdrDEM/FdrDEM.mp4
+activity/StrDEM/StrDEM.mp4
+activity/CNEStation/CNEStation.mp4
+activity/CNEStationElevation/CNEStationElevation.mp4
+activity/CNEStationDatasetDownload/CNEStationDatasetDownload.mp4
+#activity/RemoteSensing/RemoteSensing.mp4
+activity/EDA/EDA.mp4
+activity/Outlier/Outlier.mp4
+activity/Impute/Impute.mp4
+#activity/ENSOONI/ENSOONI.mp4
+activity/Agg/Agg.mp4
+#activity/Rain/Rain.mp4
+activity/Temperature/Temperature.mp4
+#activity/ETR/ETR.mp4
+#activity/LTWB/LTWB.mp4
+activity/FlowPoint/FlowPoint.mp4
+#activity/FlowPerformance/FlowPerformance.mp4
+#activity/LTWBBasin/LTWBBasin.mp4
+
 
 
 # Large files exclusions
