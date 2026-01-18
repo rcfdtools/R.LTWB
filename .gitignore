@@ -32,26 +32,6 @@ Lib/
 *.tif.vat.dbf
 *Copia_de_seguridad_de*
 
-# Video exclusions (old)
-Section02/FdrDEM/FdrDEM.mp4
-Section02/StrDEM/StrDEM.mp4
-Section03/CNEStation/CNEStation.mp4
-Section03/CNEStationElevation/CNEStationElevation.mp4
-Section03/CNEStationDatasetDownload/CNEStationDatasetDownload.mp4
-#Section03/RemoteSensing/RemoteSensing.mp4
-Section03/EDA/EDA.mp4
-Section03/Outlier/Outlier.mp4
-Section03/Impute/Impute.mp4
-#Section03/ENSOONI/ENSOONI.mp4
-Section03/Agg/Agg.mp4
-#Section04/Rain/Rain.mp4
-Section04/Temperature/Temperature.mp4
-#Section04/ETR/ETR.mp4
-#Section05/LTWB/LTWB.mp4
-Section05/FlowPoint/FlowPoint.mp4
-#Section05/FlowPerformance/FlowPerformance.mp4
-#Section05/LTWBBasin/LTWBBasin.mp4
-
 
 # Video exclusions (new)
 activity/FdrDEM/FdrDEM.mp4
@@ -74,7 +54,7 @@ activity/FlowPoint/FlowPoint.mp4
 #activity/LTWBBasin/LTWBBasin.mp4
 
 
-# Large files exclusions
+# Large files exclusions (old)
 .dem/ASTER/ASTGTMV003Mosaic.tif
 .dem/ASTER/ASTGTMV003Mosaic.tif.*
 .dem/ASTER/ASTGTMV003MosaicArcGISPro.tif
@@ -138,6 +118,73 @@ file/datasets/IDEAM/*.csv
 file/datasets/CHIRPS/IDEAMJoined.csv
 .grid/*.tif
 .grid/*.tif.*
+
+
+# Large files exclusions (new)
+file/dem/ASTER/ASTGTMV003Mosaic.tif
+file/dem/ASTER/ASTGTMV003Mosaic.tif.*
+file/dem/ASTER/ASTGTMV003MosaicArcGISPro.tif
+file/dem/ASTER/ASTGTMV003MosaicArcGISPro.tif.*
+file/dem/ASTER/ASTGTMV003MosaicQGIS.tif
+file/dem/ASTER/ASTGTMV003MosaicQGIS.tif.*
+file/dem/ASTER/ASTGTMV003MosaicHillshade.tif
+file/dem/ASTER/ASTGTMV003MosaicHillshade.tif.*
+file/dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif
+file/dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.tif.*
+file/dem/SRTM/SRTMV003MosaicArcGISPro.tif
+file/dem/SRTM/SRTMV003MosaicArcGISPro.tif.*
+file/dem/ALOS/APFBSRT1MosaicArcGISPro.tif
+file/dem/ALOS/APFBSRT1MosaicArcGISPro.tif.*
+file/dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif
+file/dem/ASTER/ASTGTMV003MosaicArcGISProZE.tif.*
+file/dem/SRTM/SRTMV003MosaicArcGISProZE.tif
+file/dem/SRTM/SRTMV003MosaicArcGISProZE.tif.*
+file/dem/ALOS/APFBSRT1MosaicArcGISProZE.tif
+file/dem/ALOS/APFBSRT1MosaicArcGISProZE.tif.*
+#file/hec/HECGeoHMS/Layers/
+file/hec/HECHMS/terrain/
+file/hec/HECHMS/gis/
+file/hec/HECGeoHMS/Layers/ALOSAgreeDEM.tif
+file/hec/HECGeoHMS/Layers/ALOSAgreeDEM.tif.*
+file/hec/HECGeoHMS/Layers/ASTERAgreeDEM.tif
+file/hec/HECGeoHMS/Layers/ASTERAgreeDEM.tif.*
+file/hec/HECGeoHMS/Layers/SRTMAgreeDEM.tif
+file/hec/HECGeoHMS/Layers/SRTMAgreeDEM.tif.*
+file/hec/HECGeoHMS/Layers/ASTERFil.tif
+file/hec/HECGeoHMS/Layers/ASTERFil.tif.*
+file/hec/HECGeoHMS/Layers/SRTMFil.tif
+file/hec/HECGeoHMS/Layers/SRTMFil.tif.*
+file/hec/HECGeoHMS/Layers/ALOSFil.tif
+file/hec/HECGeoHMS/Layers/ALOSFil.tif.*
+file/hec/HECGeoHMS/Layers/ASTERSinkLocations.tif
+file/hec/HECGeoHMS/Layers/ASTERSinkLocations.tif.*
+file/hec/HECGeoHMS/Layers/ASTERFdr.tif
+file/hec/HECGeoHMS/Layers/ASTERFdr.tif.*
+file/hec/HECGeoHMS/Layers/SRTMFdr.tif
+file/hec/HECGeoHMS/Layers/SRTMFdr.tif.*
+file/hec/HECGeoHMS/Layers/ALOSFdr.tif
+file/hec/HECGeoHMS/Layers/ALOSFdr.tif.*
+file/hec/HECGeoHMS/Layers/ASTERFdrrcfdtools.tif
+file/hec/HECGeoHMS/Layers/ASTERFdrrcfdtools.tif.*
+file/hec/HECGeoHMS/Layers/ASTERFdrQGIS.tif
+file/hec/HECGeoHMS/Layers/ASTERFdrQGIS.tif.*
+file/hec/HECGeoHMS/Layers/ASTERFac.tif
+file/hec/HECGeoHMS/Layers/ASTERFac.tif.*
+file/hec/HECGeoHMS/Layers/SRTMFac.tif
+file/hec/HECGeoHMS/Layers/SRTMFac.tif.*
+file/hec/HECGeoHMS/Layers/ALOSFac.tif
+file/hec/HECGeoHMS/Layers/ALOSFac.tif.*
+file/hec/HECGeoHMS/Layers/ASTERStr.tif
+file/hec/HECGeoHMS/Layers/ASTERStr.tif.*
+file/hec/HECGeoHMS/Layers/SRTMStr.tif
+file/hec/HECGeoHMS/Layers/SRTMStr.tif.*
+file/hec/HECGeoHMS/Layers/ALOSStr.tif
+file/hec/HECGeoHMS/Layers/ALOSStr.tif.*
+file/datasets/IDEAM/*.csv
+file/datasets/CHIRPS/IDEAMJoined.csv
+file/grid/*.tif
+file/grid/*.tif.*
+
 
 # Some samples
 # http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files
