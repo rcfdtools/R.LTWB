@@ -1,0 +1,47 @@
+Station files and parameters
+	D:/R.LTWB/.datasets/IDEAM_Impute/
+		Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv, daily_serie = False, agg_func = 'Sum', unit = 'Rain, mm'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv, daily_serie = True, agg_func = 'Mean', unit = 'Min temperature, °C'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv, daily_serie = True, agg_func = 'Mean', unit = 'Max temperature, °C'
+		Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv, daily_serie = False, agg_func = 'Mean', unit = 'Flow, m³/s'
+	D:/R.LTWB/.datasets/IDEAM_Outlier/
+		Outlier_IQR_Cap_Pivot_EV_TT_D.csv, daily_serie = True, monthly_to_year_agg = 'Sum', unit = 'Potential evaporation, mm'
+
+
+Aggregations for mean multianual values
+	Total monthly rain: sum per year, mean.
+	Mean monthly flow: mean per year, mean.
+	Daily max temperature: mean per month & per year, mean per year, mean.
+	Daily min temperature: mean per month & per year, mean per year, mean.
+	Total Daily Evaporation: sum per month per year, sum per year, mean.
+
+Aggregations for maximun multianual values
+	Total daily rain: max per month per year, max per year, mean. (correspond to PMax24hr)
+	Max monthly rain (max from total daily rain): max per year, mean. (correspond to PMax24hr)
+	
+
+Total monthly rain sample in 15015020
+	Composite 706.038
+	Niña 901.937
+	Niño 499.405
+	Neutral 690.832
+
+
+#print(station_df)
+#df = station_df.groupby('CodigoEstacion')
+#df = station_df.groupby('CodigoEstacion').mean()
+#print('\n' + df.to_markdown())
+
+date_record_name = 'Fecha'  # IDEAM date field name for the record values
+df_impute.index.name = 'Fecha'
+df_impute.index.name = date_record_name
+#print_log(df[date_record_name].dt.year)
+#print_log(df.groupby(df[date_record_name].dt.year).agg(['sum', 'mean', 'max']).to_markdown())
+
+
+#print_log('\n### Composite - Aggregation value per station from monthly aggregations (sum)\n')
+#df_agg = df_monthly_val.sum()
+#df_agg.index.name = 'Station'
+#df_agg.name = 'Agg'
+#print_log(df_agg.to_markdown())
+#plot_df(df_agg, 'Composite - Aggregation value per station from monthly aggregations (sum)\n', 'Values', kind='bar')
