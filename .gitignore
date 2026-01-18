@@ -52,6 +52,7 @@ Section05/FlowPoint/FlowPoint.mp4
 #Section05/FlowPerformance/FlowPerformance.mp4
 #Section05/LTWBBasin/LTWBBasin.mp4
 
+
 # Video exclusions (new)
 activity/FdrDEM/FdrDEM.mp4
 activity/StrDEM/StrDEM.mp4
@@ -71,7 +72,6 @@ activity/Temperature/Temperature.mp4
 activity/FlowPoint/FlowPoint.mp4
 #activity/FlowPerformance/FlowPerformance.mp4
 #activity/LTWBBasin/LTWBBasin.mp4
-
 
 
 # Large files exclusions
