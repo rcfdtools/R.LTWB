@@ -24,8 +24,8 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* Estaciones hidroclimatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../CNEStationElevation/Readme.md)
-* Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Agg/Readme.md)
+* Estaciones hidro-climatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../CNEStationElevation/Readme.md)
+* Tablas de valores agregados promedio multianual por parámetro hidro-climatológico. [:mortar_board:Aprender.](../Agg/Readme.md)
 
 
 ### Procedimiento general para interpolación de precipitación total
