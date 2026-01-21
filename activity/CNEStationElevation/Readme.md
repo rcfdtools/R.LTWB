@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Análisis de elevaciones, densidad, cobertura y radio de acción de estaciones terrestres
+# Análisis de elevaciones, densidad, cobertura y radio de acción de estaciones terrestres
 Keywords: `IDEAM` `Weather-station` `Bar-graph` `Select-By-Location` `Chart` `Scatter-Plot-Matrix` `Definition-Query` `Normal-distribution` `Statistics` `Extract-Multi-Values-to-Points` `Calculate-Geometry Attributes` `Calculate-Field`
 
 ![R.LTWB](Graph/CNEStationElevation.svg)
 
 Los catálogos de estaciones terrestres contienen el atributo de elevación o altitud, que debe ser validado a partir de los modelos digitales de elevación DEM, para su uso posterior en la implementación de métodos de imputación de datos faltantes por relaciones espaciales.                       
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=FfaeJ4jLRSU" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=FfaeJ4jLRSU" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -24,13 +22,13 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación o al
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Polígono que delimita la zona de estudio. ](../../.shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
-* [Polígono envolvente aferente que delimita la zona de estudio. ](../../.shp/ZonaEstudioBufferStation.zip)[:mortar_board:Aprender.](../CNEStation)
-* [Capa integrada de estaciones terrestres del IDEAM y otras entidades de la zona de estudio. ](../../.shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](../CNEStation)
-* Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](../../Section02/DEMAster)
-* Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](../../Section02/DEMSrtm)
-* Modelo digital de elevación ALOS PALSAR 12.5m. [:mortar_board:Aprender.](../../Section02/DEMAlos)
-* :open_file_folder: [Descargar mosaicos grillas DEM](../../.dem).
+* [Polígono que delimita la zona de estudio. ](../../file/shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../CaseStudy)
+* [Polígono envolvente aferente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioBufferStation.zip)[:mortar_board:Aprender.](../CNEStation)
+* [Capa integrada de estaciones terrestres del IDEAM y otras entidades de la zona de estudio. ](../../file/shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](../CNEStation)
+* Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](../DEMAster)
+* Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](../DEMSrtm)
+* Modelo digital de elevación ALOS PALSAR 12.5m. [:mortar_board:Aprender.](../DEMAlos)
+* :open_file_folder: [Descargar mosaicos grillas DEM](../../file/dem).
 
 
 ### Diagrama general de procesos
@@ -71,7 +69,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 ### Procedimiento general
 
-1. En ArcGIS Pro, abra el mapa _D:\R.LTWB\.map\ArcGISProSection03.aprx_ creado en la actividad de [selección de estaciones para la zona de estudio](../CNEStation) que contiene las estaciones integradas y los polígonos de la zona de estudio y su zona aferente. En caso de que este generando un proyecto nuevo, cargue directamente los archivos de formas geométricas [CNE_IDEAM_OE_ZE.shp](../../.shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](../../.shp/ZonaEstudio.zip) y [ZonaEstudioBufferStation.shp](../../.shp/ZonaEstudioBufferStation.zip). 
+1. En ArcGIS Pro, abra el mapa _D:\R.LTWB\.map\ArcGISProSection03.aprx_ creado en la actividad de [selección de estaciones para la zona de estudio](../CNEStation) que contiene las estaciones integradas y los polígonos de la zona de estudio y su zona aferente. En caso de que este generando un proyecto nuevo, cargue directamente los archivos de formas geométricas [CNE_IDEAM_OE_ZE.shp](../../file/shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](../../file/shp/ZonaEstudio.zip) y [ZonaEstudioBufferStation.shp](../../file/shp/ZonaEstudioBufferStation.zip). 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0MapProject.png)
 
@@ -349,7 +347,7 @@ De acuerdo a la WMO, para las estaciones:
 A partir de este momento, dispone de la red de estaciones de la zona de estudio con diferentes elevaciones, clasificación por diferentes pisos térmicos y análisis de densidad, que permiten establecer que las estaciones disponibles en la red son suficientes para el análisis a realizar.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -387,10 +385,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../CNEStation) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/15) | [Siguiente](../CNEStationDatasetDownload) |
+| [Anterior](../CNEStation/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/15) | [Siguiente](../CNEStationDatasetDownload/Readme.md) |
 |---------------------------|-----------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------|
 
 [^1]: https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste#:~:text=El%20R%2Dcuadrado%20es%20una,se%20trata%20de%20regresi%C3%B3n%20m%C3%BAltiple.
 [^2]: https://es.wikipedia.org/wiki/Coeficiente_de_correlaci%C3%B3n_de_Pearson
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
