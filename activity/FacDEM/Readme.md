@@ -44,9 +44,9 @@ La acumulación de flujo o de celdas puede ser realizada con Spatial Analyst Too
 
 #### Acumulación de flujo con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [direcciones de flujo](../FdrDEM) que contiene las grillas FDR. En caso de que este generando un mapa nuevo, cargue directamente las grillas FDR contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [direcciones de flujo](../FdrDEM) que contiene las grillas FDR. En caso de que este generando un mapa nuevo, cargue directamente las grillas FDR contenidas en el directorio _[D:\R.LTWB\file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Accumulation_ y cree la grilla de acumulación de flujo en formato GeoTIFF para los 3 modelos digitales de direcciones de flujo y asigne los nombres ASTERFac.tif, SRTMFac.tif y ALOSFac.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. Simbolice por visualización ajustada o _Stretched_ con una rampa de colores múltiple que contenga un color blanco o claro al inicio y el tipo _Histogram Equalize_.
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Accumulation_ y cree la grilla de acumulación de flujo en formato GeoTIFF para los 3 modelos digitales de direcciones de flujo y asigne los nombres ASTERFac.tif, SRTMFac.tif y ALOSFac.tif en la ruta D:\R.LTWB\file\hec\HECGeoHMS\Layers\. Simbolice por visualización ajustada o _Stretched_ con una rampa de colores múltiple que contenga un color blanco o claro al inicio y el tipo _Histogram Equalize_.
 
 Parámetros de entrada para acumulaciones de flujo ASTER
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERParameters.png)
