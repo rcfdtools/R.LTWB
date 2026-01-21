@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Identificación y procesamiento de datos atípicos - Outliers
+# Identificación y procesamiento de datos atípicos - Outliers
 Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `numpy` `dtypes` `isnull` `describe` `Drop` `Capped` `Impute` `Interquartile-range` `Empirical-rule` `Z-score`
 
 <div align="center"><img alt="R.LTWB" src="Graph/Outlier.png" width="95%"></div> 
 
 En esta actividad se obtienen los estadísticos característicos de cada parámetro hidroclimatológico en cada estación, y se identifican, excluyen y completan los valores atípicos a través de métodos estadísticos.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=0HclhJ1LoSA" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=0HclhJ1LoSA" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 
@@ -33,7 +31,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 * [Tabulate](https://pypi.org/project/tabulate/) para Python, requerido para impresión de tablas en formato Markdown desde pandas.
 * [numpy](https://numpy.org/) para python.
 * [Notepad++](https://notepad-plus-plus.org/), editor de texto y código.
-* Tablas dinámicas (pivot tables) con series de datos discretos de estaciones terrestres del IDEAM por parámetro hidroclimatológico. [:mortar_board:Aprender.](../EDA)
+* Tablas dinámicas (pivot tables) con series de datos discretos de estaciones terrestres del IDEAM por parámetro hidroclimatológico. [:mortar_board:Aprender.](../EDA/Readme.md)
 
 
 ### Procedimiento general
@@ -43,7 +41,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para realizar la identificación y procesamiento de datos atípicos, descargue el script [Outlier.py](../../.src/Outlier.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
+1. Para realizar la identificación y procesamiento de datos atípicos, descargue el script [Outlier.py](../../file/src/Outlier.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 **Funcionalidades del script**
 
@@ -54,7 +52,7 @@ Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
 * Definición manual del multiplicador `cap_multiplier` o K-sigma que permite definir los valores de reemplazo ( $\mu$ +- K * $\sigma$ ).  
 * Definición manual del límite de exclusión `zscore_threshold` en el método de exclusión por núcleo estándar.
 * Análisis masivo de estaciones por parámetro hidroclimatológico con estadísticos, parámetros de evaluación y gráficas con marcado de atípicos.
-* Generación de reportes detallados Markdown por cada parámetro hidroclimatológico evaluado. [IDEAM_Outlier](../../.datasets/IDEAM_Outlier).
+* Generación de reportes detallados Markdown por cada parámetro hidroclimatológico evaluado. [IDEAM_Outlier](../../file/datasets/IDEAM_Outlier).
 * Para cada método y cada parámetro hidroclimatológico analizado, crea las siguientes tablas: datos atípicos identificados, datos de entrada sin datos atípicos (drop), datos de entrada con datos atípicos reemplazados (cap) y datos de entrada con datos atípicos imputados (impute). 
 
 > En el Método 3 o núcleo estándar Z-score, se genera una tabla adicional para cada parámetro hidroclimatológico que contiene los puntajes a partir de los cuales se realiza la identificación de valores atípicos.   
@@ -325,10 +323,10 @@ outlier_file_impute = 'Outlier_IQR_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print results
 print_log('\n#### Identified and cleaning tables for %d IQR outliers founded' % df_concat['OlCount'].sum() +
-          '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
-          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
-          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
-          '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
+          '\n* Outliers identified file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
+          '\n* Outliers dropped file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
+          '\n* Outliers capped file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
+          '\n* Outliers imputed file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
 print_log('IQR - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
@@ -385,10 +383,10 @@ outlier_file_impute = 'Outlier_ER_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print results
 print_log('\n#### Identified and cleaning tables for %d ER or k-sigma outliers founded' % df_concat['OlCount'].sum() +
-          '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
-          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
-          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
-          '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
+          '\n* Outliers identified file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
+          '\n* Outliers dropped file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
+          '\n* Outliers capped file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
+          '\n* Outliers imputed file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
 print_log('ER - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
@@ -449,11 +447,11 @@ outlier_file_impute = 'Outlier_ZScore_Impute_' + pivot_table_name
 df_impute.to_csv(path + outlier_file_impute, index_label=date_record_name)
 # Print results
 print_log('\n#### Identified and cleaning tables for %d Z-score or standard core outliers founded' % df_concat['OlCount'].sum() +
-          '\n* Outliers Z-score values file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (zscore_file, zscore_file) +
-          '\n* Outliers identified file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
-          '\n* Outliers dropped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
-          '\n* Outliers capped file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
-          '\n* Outliers imputed file: [%s](../../.datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
+          '\n* Outliers Z-score values file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (zscore_file, zscore_file) +
+          '\n* Outliers identified file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file, outlier_file) +
+          '\n* Outliers dropped file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_drop, outlier_file_drop) +
+          '\n* Outliers capped file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_cap, outlier_file_cap) +
+          '\n* Outliers imputed file: [%s](../../file/datasets/IDEAM_Outlier/%s)' % (outlier_file_impute, outlier_file_impute))
 print_log('\n\n#### Statistical values for the capped and imputed file', center_div=False)
 print_log('Z-score - General statistics table - Capped file', center_div=True)
 print_log(df_capped.describe().T.to_markdown(), center_div=True) # .T for transpose
@@ -470,11 +468,11 @@ print_log('\n\n[^1]: Adapted from: https://careerfoundry.com/en/blog/data-analyt
           '\n[^3]: Adapted from: https://www.geeksforgeeks.org/z-score-for-outlier-detection-python/')
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hidroclimatológico [IDEAM_EDA](../../.datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
+2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Outlier` en su directorio de proyecto local `D:\R.LTWB\.datasets` y dentro de ella la carpeta `Graph`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA`, contenga los archivos de las tablas dinámicas de cada parámetro hidroclimatológico [IDEAM_EDA](../../file/datasets/IDEAM_EDA) que fueron obtenidas en la actividad denominada [EDA](../EDA).
 
 > Para la identificación de valores atípicos no son requeridas las tablas de datos de correlaciones identificadas con nombre terminado en _correlation.csv.
 
-3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\Outlier.py](../../.src/Outlier.py), y defina las siguientes variables:
+3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\file\src\Outlier.py](../../file/src/Outlier.py), y defina las siguientes variables:
 
 * `pivot_table_name = 'Pivot_PTPM_TT_M.csv'`: corresponde a la tabla dinámica (pivot table) a procesar, p.ej., Pivot_PTPM_TT_M.csv corresponde a datos de precipitación mensual total, Pivot_EV_TT_D.csv corresponde a datos de evaporación diaria total, Pivot_Q_MEDIA_M.csv corresponde a datos de caudal medio mensual, Pivot_TMN_CON.csv corresponde a datos de temperatura mínima diaria y Pivot_TMX_CON.csv corresponde a datos de temperatura máxima diaria.
 * `q1_val = 0.1`: cuartil inferior, el valor por defecto es 0.25 en el Método 1 de rango intercuartílico. Para este ejemplo utilizaremos 0.1 para excluir precipitaciones totales altas atípicas.
@@ -507,7 +505,7 @@ Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.data
 
 ![R.LTWB](Screenshot/Windows11CMDOutlier9.png)
 
-Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md).
+Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md).
 
 ![R.LTWB](Screenshot/Windows11CMDOutlier10.png)
 ![R.LTWB](Screenshot/Windows11CMDOutlier11.png)
@@ -529,11 +527,11 @@ Durante el proceso de ejecución del script, se generan automáticamente para ca
 
 | Reporte                                                                                                | Descripción                                                                 | Estaciones | Registros | 1.IQR | 2.ER | 3.Z-Score | 
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|:----------:|:---------:|:-----:|:----:|:---------:|
-| [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md) | Precipitación mensual total, mm. q1=0.1, q3=0.9, k-sigma=4.5, Z-score=4.5   |    130     |    504    |  94   |  92  |    92     |
-| [Outlier_IQR_Pivot_EV_TT_D.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_EV_TT_D.csv.md)     | Evaporación diaria total, mm. q1=0.25, q3=0.75, k-sigma=0.45, Z-score=0.45  |     1      |   4821    |  781  | 706  |    706    |
-| [Outlier_IQR_Pivot_Q_MEDIA_M.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_Q_MEDIA_M.csv.md) | Caudal medio mensual, m³/s. q1=0.1, q3=0.9, k-sigma=3.85, Z-score=3.85      |     46     |    504    |  126  | 123  |    123    |
-| [Outlier_IQR_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMN_CON.csv.md)     | Temperatura diaria mínima, °C. q1=0.175, q3=0.825, k-sigma=3.5, Z-score=3.5 |     25     |   15341   |  403  | 410  |    410    |
-| [Outlier_IQR_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMX_CON.csv.md)     | Temperatura diaria máxima, °C. q1=0.175, q3=0.825, k-sigma=3.6, Z-score=3.6 |     25     |   15341   |  225  | 216  |    216    |
+| [Outlier_IQR_Pivot_PTPM_TT_M.csv.md](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Pivot_PTPM_TT_M.csv.md) | Precipitación mensual total, mm. q1=0.1, q3=0.9, k-sigma=4.5, Z-score=4.5   |    130     |    504    |  94   |  92  |    92     |
+| [Outlier_IQR_Pivot_EV_TT_D.csv.md](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Pivot_EV_TT_D.csv.md)     | Evaporación diaria total, mm. q1=0.25, q3=0.75, k-sigma=0.45, Z-score=0.45  |     1      |   4821    |  781  | 706  |    706    |
+| [Outlier_IQR_Pivot_Q_MEDIA_M.csv.md](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Pivot_Q_MEDIA_M.csv.md) | Caudal medio mensual, m³/s. q1=0.1, q3=0.9, k-sigma=3.85, Z-score=3.85      |     46     |    504    |  126  | 123  |    123    |
+| [Outlier_IQR_Pivot_TMN_CON.csv.md](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMN_CON.csv.md)     | Temperatura diaria mínima, °C. q1=0.175, q3=0.825, k-sigma=3.5, Z-score=3.5 |     25     |   15341   |  403  | 410  |    410    |
+| [Outlier_IQR_Pivot_TMX_CON.csv.md](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Pivot_TMX_CON.csv.md)     | Temperatura diaria máxima, °C. q1=0.175, q3=0.825, k-sigma=3.6, Z-score=3.6 |     25     |   15341   |  225  | 216  |    216    |
 
 > En la tabla, 1.IQR: número de valores atípicos identificados en Método 1 - Rango intercuartílico, 2.ER: número de valores atípicos identificados en Método 2 - Regla empírica y 3.Z-score: número de valores atípicos identificados en Método 3 - Z-score. La columna _registros_ corresponde al número de registros de cada estación, incluidos los valores faltantes y/o nulos.
 >
@@ -564,14 +562,14 @@ De acuerdo con los valores atípicos identificados para cada variable hidroclima
 En este momento, dispone de reportes detallados de análisis por cada parámetro hidroclimatológico y diferentes tablas con el procesamiento de datos atípicos.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 | Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | A partir del script [Outlier.py](../../.src/Outlier.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad.                                                                                       |
-|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../.src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                                                                                                                       | 
+|     1     | A partir del script [Outlier.py](../../file/src/Outlier.py), realice el análisis de valores atípicos de los parámetros climatológicos definidos como actividad complementaria en [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload); correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad.                                                                                       |
+|     2     | Para todas los parámetros climatológicos y a partir de las gráficas y tablas de análisis generadas mediante el script [Outlier.py](../../file/src/Outlier.py), presente un análisis cuantitativo definiendo diferentes cuartiles q1 y q3, obtenga el valor K-sigma y Z-score que permita identificar un número similar de valores atípicos.                                                                                                                                       | 
 
 
 ### Referencias
@@ -604,11 +602,9 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../EDA) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/24) | [Actividad siguiente](../Impute) |
+| [Anterior](../EDA/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/24) | [Siguiente](../Impute/Readme.md) |
 |------------------------------|---------------------------|------------------------------------------------------------------------|----------------------------------|
 
 [^1]: Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
 [^2]: https://www.investopedia.com/terms/e/empirical-rule.asp
 [^3]: Adapted from: https://www.geeksforgeeks.org/z-score-for-outlier-detection-python/
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
