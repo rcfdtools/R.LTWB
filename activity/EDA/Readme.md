@@ -1,15 +1,13 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Exploración y análisis de series - EDA - Representación gráfica
+# Exploración y análisis de series - EDA - Representación gráfica
 Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `unique` `size` `correlation` `pivot-table` `stats` `histogram` `density` `boxplot` 
 
 <div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="95%"></div> 
 
 Durante el proceso de revisión, validación y comprensión de los datos, es necesario utilizar diferentes técnicas que permitan identificar discontinuidades, cambios en el comportamiento temporal y en general revisar los estadísticos característicos de cada serie por parámetro.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=sLP0ImJpzLM" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=sLP0ImJpzLM" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
-**¿Qué es y para que sirve la EDA?** [^1]
+**¿Qué es y para qué sirve la EDA?** [^1]
 
 La exploración y análisis de datos o EDA por sus siglas en inglés, se refiere al proceso de investigación, mejoramiento, descubrimiento de patrones de comportamiento e identificación de anomalías sobre conjuntos de datos; además, permite realizar pruebas de hipótesis y revisar las suposiciones que frecuentemente realizamos frente a ciertas variables climatológicas por medio de resúmenes estadísticos, tablas dinámicas y gráficas detalladas. Como buena práctica y antes de crear modelos complejos de análisis o pronóstico, se recomienda entender primero los datos para tener una idea de su comportamiento y relación. 
 
@@ -42,12 +40,12 @@ La exploración y análisis de datos o EDA por sus siglas en inglés, se refiere
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para realizar el análisis exploratorio de datos, descargue el script [EDA.py](../../.src/EDA.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
+1. Para realizar el análisis exploratorio de datos, descargue el script [EDA.py](../../file/src/EDA.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 Funcionalidades del script
 
 * Permite definir la ventana de tiempo para el análisis a partir de un año inicial y final.
-* Generación de reporte detallado Markdown [EDA.md](../../.datasets/IDEAM_EDA/EDA.md).
+* Generación de reporte detallado Markdown [EDA.md](../../file/datasets/IDEAM_EDA/EDA.md).
 * Análisis masivo de registros por parámetro generando tablas dinámicas y gráficas generales de análisis.
 * Análisis masivo de estaciones por parámetro generando estadísticos y gráficas detalladas de análisis.
 
@@ -243,7 +241,7 @@ for parameter in parameter_list:
     plt.close('all')
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `IDEAM_EDA` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
+2. Cree una nueva carpeta en blanco con el nombre `IDEAM_EDA` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../file/datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
 
 3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\IDEAM_EDA` ubíquese dentro de la carpeta IDEAM_EDA.
 
@@ -271,7 +269,7 @@ Dentro de la carpeta `D:\R.LTWB\.datasets\IDEAM_EDA\Graph`, han sido exportadas 
 ![R.LTWB](Screenshot/Windows11CMDEDA9.png)
 ![R.LTWB](Screenshot/Windows11CMDEDA10.png)
 
-Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [EDA.md](../../.datasets/IDEAM_EDA/EDA.md).
+Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [EDA.md](../../file/datasets/IDEAM_EDA/EDA.md).
 
 ![R.LTWB](Screenshot/Windows11CMDEDA11.png)
 ![R.LTWB](Screenshot/Windows11CMDEDA12.png)
@@ -284,35 +282,35 @@ Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los r
 
 ### Tablas de resultados y análisis generales
 
-Durante el proceso de ejecución del script, se genera automáticamente las gráficas de análisis que son almacenadas en la carpeta [IDEAM_EDA/Graph](../../.datasets/IDEAM_EDA/Graph), un reporte integrado de resultados en formato Markdown con el nombre [D:\R.LTWB\.datasets\IDEAM_EDA\EDA.md](../../.datasets/IDEAM_EDA/EDA.md) y las siguientes tablas en formato .csv:
+Durante el proceso de ejecución del script, se genera automáticamente las gráficas de análisis que son almacenadas en la carpeta [IDEAM_EDA/Graph](../../file/datasets/IDEAM_EDA/Graph), un reporte integrado de resultados en formato Markdown con el nombre [D:\R.LTWB\file\datasets\IDEAM_EDA\EDA.md](../../file/datasets/IDEAM_EDA/EDA.md) y las siguientes tablas en formato .csv:
 
 | Tabla                                                                                        | Descripción                                                      | Estaciones |
 |----------------------------------------------------------------------------------------------|------------------------------------------------------------------|:----------:|
-| [Pivot_EV_TT_D.csv](../../.datasets/IDEAM_EDA/Pivot_EV_TT_D.csv)                             | Tabla dinámica con series de evaporación diaria.                 |     1      |
-| [Pivot_EV_TT_D_Correlation.csv](../../.datasets/IDEAM_EDA/Pivot_EV_TT_D_Correlation.csv)     | Tabla de correlaciones para series de evaporación diaria.        |     1      |
-| [Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv)                         | Tabla dinámica con series de precipitación mensual.              |    130     |
-| [Pivot_PTPM_TT_M_Correlation.csv](../../.datasets/IDEAM_EDA/Pivot_PTPM_TT_M_Correlation.csv) | Tabla de correlaciones para series de precipitación mensual.     |    130     |
-| [Pivot_Q_MEDIA_M.csv](../../.datasets/IDEAM_EDA/Pivot_Q_MEDIA_M.csv)                         | Tabla dinámica con series de caudal mensual.                     |     57     |
-| [Pivot_Q_MEDIA_M_Correlation.csv](../../.datasets/IDEAM_EDA/Pivot_Q_MEDIA_M_Correlation.csv) | Tabla de correlaciones para series de caudal mensual.            |     57     |
-| [Pivot_TMN_CON.csv](../../.datasets/IDEAM_EDA/Pivot_TMN_CON.csv)                             | Tabla dinámica con series de temperatura mínima diaria.          |     25     |
-| [Pivot_TMN_CON_Correlation.csv](../../.datasets/IDEAM_EDA/Pivot_TMN_CON_Correlation.csv)     | Tabla de correlaciones para series de temperatura mínima diaria. |     25     |
-| [Pivot_TMX_CON.csv](../../.datasets/IDEAM_EDA/Pivot_TMX_CON.csv)                             | Tabla dinámica con series de temperatura máxima diaria.          |     25     |
-| [Pivot_TMX_CON_Correlation.csv](../../.datasets/IDEAM_EDA/Pivot_TMX_CON_Correlation.csv)     | Tabla de correlaciones para series de temperatura máxima diaria. |     25     |
+| [Pivot_EV_TT_D.csv](../../file/datasets/IDEAM_EDA/Pivot_EV_TT_D.csv)                             | Tabla dinámica con series de evaporación diaria.                 |     1      |
+| [Pivot_EV_TT_D_Correlation.csv](../../file/datasets/IDEAM_EDA/Pivot_EV_TT_D_Correlation.csv)     | Tabla de correlaciones para series de evaporación diaria.        |     1      |
+| [Pivot_PTPM_TT_M.csv](../../file/datasets/IDEAM_EDA/Pivot_PTPM_TT_M.csv)                         | Tabla dinámica con series de precipitación mensual.              |    130     |
+| [Pivot_PTPM_TT_M_Correlation.csv](../../file/datasets/IDEAM_EDA/Pivot_PTPM_TT_M_Correlation.csv) | Tabla de correlaciones para series de precipitación mensual.     |    130     |
+| [Pivot_Q_MEDIA_M.csv](../../file/datasets/IDEAM_EDA/Pivot_Q_MEDIA_M.csv)                         | Tabla dinámica con series de caudal mensual.                     |     57     |
+| [Pivot_Q_MEDIA_M_Correlation.csv](../../file/datasets/IDEAM_EDA/Pivot_Q_MEDIA_M_Correlation.csv) | Tabla de correlaciones para series de caudal mensual.            |     57     |
+| [Pivot_TMN_CON.csv](../../file/datasets/IDEAM_EDA/Pivot_TMN_CON.csv)                             | Tabla dinámica con series de temperatura mínima diaria.          |     25     |
+| [Pivot_TMN_CON_Correlation.csv](../../file/datasets/IDEAM_EDA/Pivot_TMN_CON_Correlation.csv)     | Tabla de correlaciones para series de temperatura mínima diaria. |     25     |
+| [Pivot_TMX_CON.csv](../../file/datasets/IDEAM_EDA/Pivot_TMX_CON.csv)                             | Tabla dinámica con series de temperatura máxima diaria.          |     25     |
+| [Pivot_TMX_CON_Correlation.csv](../../file/datasets/IDEAM_EDA/Pivot_TMX_CON_Correlation.csv)     | Tabla de correlaciones para series de temperatura máxima diaria. |     25     |
 
-Consulte el reporte detallado de resultados [EDA.md](../../.datasets/IDEAM_EDA/EDA.md).
+Consulte el reporte detallado de resultados [EDA.md](../../file/datasets/IDEAM_EDA/EDA.md).
 
 En este momento, dispone de un reporte detallado de análisis, tablas dinámicas (pivot tables) y tablas de correlaciones por parámetro.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 | Actividad | Alcance                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | A partir del conteo de registros por estación obtenido para cada grupo de parámetros dentro de la ventana de tiempo establecida, calcule la longitud del registro obtenido y compare con la longitud de registro hipotética de la estación. En la actividad https://github.com/rcfdtools/R.LTWB/tree/main/Section03/CNEStation se realizó el análisis de longitud hipotética.                                            | 
-|     2     | Utilizando el script [EDA.py](../../.src/EDA.py), realice el análisis de las variables definidas como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload), correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad.                                                             |
-|     3     | Para todas las variables y a partir de las gráficas y tablas de análisis generadas mediante el script [EDA.py](../../.src/EDA.py), presente un análisis cualitativo identificando y explicando posibles datos atípicos, datos fuera de rango y estaciones que deberían ser excluidas del arreglo geográfico de estaciones definido para la zona de estudio por no tener correspondencia espacial o estacional similares. | 
+|     2     | Utilizando el script [EDA.py](../../file/src/EDA.py), realice el análisis de las variables definidas como actividad complementaria en la actividad de [descarga de datos hidroclimatológicos](../CNEStationDatasetDownload), correspondientes a brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad.                                                             |
+|     3     | Para todas las variables y a partir de las gráficas y tablas de análisis generadas mediante el script [EDA.py](../../file/src/EDA.py), presente un análisis cualitativo identificando y explicando posibles datos atípicos, datos fuera de rango y estaciones que deberían ser excluidas del arreglo geográfico de estaciones definido para la zona de estudio por no tener correspondencia espacial o estacional similares. | 
 
 
 ### Referencias
@@ -353,9 +351,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../RemoteSensing) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/23) | [Actividad siguiente](../Outlier) |
+| [Actividad anterior](../RemoteSensing/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/23) | [Actividad siguiente](../Outlier/Readme.md) |
 |----------------------------------------|---------------------------|------------------------------------------------------------------------|-----------------------------------|
 
 [^1]: Tomado o adaptado de https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
