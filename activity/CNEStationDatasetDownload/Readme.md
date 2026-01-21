@@ -1,4 +1,4 @@
-# Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
+# 3.3. Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
 Keywords: `IDEAM` `Weather-station` `DHIME` `Rain` `Air-temperature` `Evaporation` `Water-flow` `Python` `Pandas` `os.path.isfile` `os.remove` `glob` `ZipFile` `os.rename` `pd.concat` `to_csv`
 
 ![R.LTWB](Graph/CNEStationDatasetDownload.png)
@@ -19,11 +19,11 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 * [Microsoft Excel from Office 64 bits.](https://aka.ms/office-install) 
 * [Python 3+](https://www.python.org/)
 * [Pandas para Python 3+](https://pandas.pydata.org/)
-* [Glosario de variables IDEAM.](../../file/datasets/GlosarioVariables.xlsx) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de precipitación en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de temperatura del aire en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de evaporación potencial en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de caudal en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf) [:mortar_board:Aprender.](../CNEStation)
+* [Glosario de variables IDEAM.](../../file/datasets/GlosarioVariables.xlsx) [:mortar_board:Aprender.](../CNEStation/Readme.md)
+* [Listado de estaciones seleccionadas de precipitación en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](../CNEStation/Readme.md)
+* [Listado de estaciones seleccionadas de temperatura del aire en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) [:mortar_board:Aprender.](../CNEStation/Readme.md)
+* [Listado de estaciones seleccionadas de evaporación potencial en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf) [:mortar_board:Aprender.](../CNEStation/Readme.md)
+* [Listado de estaciones seleccionadas de caudal en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf) [:mortar_board:Aprender.](../CNEStation/Readme.md)
 
 
 ### Diagrama general de procesos
