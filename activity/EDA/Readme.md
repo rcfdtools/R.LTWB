@@ -241,7 +241,7 @@ for parameter in parameter_list:
     plt.close('all')
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `IDEAM_EDA` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../file/datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
+2. Cree una nueva carpeta en blanco con el nombre `IDEAM_EDA` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../file/datasets/IDEAM/IDEAMJoined.zip) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
 
 3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\IDEAM_EDA` ubíquese dentro de la carpeta IDEAM_EDA.
 
