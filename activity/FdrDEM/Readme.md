@@ -1,4 +1,4 @@
-#  Direcciones de Flujo – Flow Direction – FDR
+# 2.8. Direcciones de Flujo – Flow Direction – FDR
 Keywords: `FDR-DEM` `Flow-direction` `Fill-DEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
 
 ![R.LTWB](Graph/FdrDEM.png)
@@ -20,7 +20,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FillDEM)
+* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FillDEM/Readme.md)
 
 > El libro de cálculo [FdrDEM.xlsx](FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
 
