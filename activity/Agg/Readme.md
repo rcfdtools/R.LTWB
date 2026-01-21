@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Agregación estadística para obtención de promedios multianuales compuestos y por fenómeno climatológico
+# Agregación estadística para obtención de promedios multianuales compuestos y por fenómeno climatológico
 Keywords: `Compuesto` `El-Niño` `La-Niña` `Neutro` `matplotlib` `pandas` `Statistical-aggregation`
 
 <div align="center"><img alt="R.LTWB" src="Graph/Agg.png" width="95%"></div> 
 
 Luego de validadas y completadas las series, y de realizada la marcación de años por fenómeno climatológico, se efectúa el proceso de agregación estadística para obtener los valores promedio multianuales requeridos en cada estación por parámetro hidro-climatológico y para su interpolación espacial.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=0uJuDqoNtGY" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=0uJuDqoNtGY" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -27,8 +25,8 @@ Luego de validadas y completadas las series, y de realizada la marcación de añ
 * [Pandas](https://pandas.pydata.org/docs/index.html) para Python
 * [Tabulate](https://pypi.org/project/tabulate/) para Python, requerido para impresión de tablas en formato Markdown desde pandas.
 * [Notepad++](https://notepad-plus-plus.org/), editor de texto y código.
-* Tablas con series de datos discretos completados y extendidos (por imputación) de estaciones terrestres del IDEAM por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Impute)
-* Tablas de marcación de años por fenómeno climatológico (Niño, Nina y Neutro). [:mortar_board:Aprender.](../Agg)
+* Tablas con series de datos discretos completados y extendidos (por imputación) de estaciones terrestres del IDEAM por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Impute/Readme.md)
+* Tablas de marcación de años por fenómeno climatológico (Niño, Nina y Neutro). [:mortar_board:Aprender.](../Agg/Readme.md)
 
 > Para el desarrollo de esta actividad, no realizaremos la agregación de datos de evaporación potencial debido a que solo existe información diaria en una estación de la zona de estudio. Es posible que actualmente estos registros ya estén disponibles en el servicio [DHIME](https://dhime.ideam.gov.co/) del [IDEAM - Colombia](http://www.ideam.gov.co/) para su descarga.
 > 
@@ -41,7 +39,7 @@ Luego de validadas y completadas las series, y de realizada la marcación de añ
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para realizar las agregaciones estadísticas, descargue el script [Agg.py](../../.src/Agg.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
+1. Para realizar las agregaciones estadísticas, descargue el script [Agg.py](../../file/src/Agg.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 **Funcionalidades del script**
 
@@ -281,17 +279,17 @@ plot_df(df_agg_zonal, title='Zonal aggregation values per month (mean)\n', kind=
 
 2. Cree una nueva carpeta en blanco con el nombre `IDEAM_Agg` en su directorio de proyecto local `D:\R.LTWB\.datasets`.
 
-3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\Agg.py](../../.src/Agg.py), verifique y defina las siguientes variables por parámetro:
+3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\file\src\Agg.py](../../file/src/Agg.py), verifique y defina las siguientes variables por parámetro:
 
 <div align="center">
 
 | Parámetro / Datos (station_file)                                                                                                                                | daily_serie  | agg_func  | unit                      |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------|:----------|:--------------------------|
-| Precipitación total mensual<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)  | False        | Sum       | Rain, mm                  |
-| Temperatura mínima diaria<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)        | True         | Mean      | Min temperature, °C       |
-| Temperatura máxima diaria<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)        | True         | Mean      | Max temperature, °C       |
-| Caudal medio mensual<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../.datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)         | False        | Mean      | Flow, m³/s                |
-| Evaporación total diaria<br>[Outlier_IQR_Cap_Pivot_EV_TT_D.csv](../../.datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_EV_TT_D.csv)                                | False        | Sum       | Potential evaporation, mm |
+| Precipitación total mensual<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../file/datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)  | False        | Sum       | Rain, mm                  |
+| Temperatura mínima diaria<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../file/datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)        | True         | Mean      | Min temperature, °C       |
+| Temperatura máxima diaria<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../file/datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)        | True         | Mean      | Max temperature, °C       |
+| Caudal medio mensual<br>[Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../file/datasets/IDEAM_Impute/Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)         | False        | Mean      | Flow, m³/s                |
+| Evaporación total diaria<br>[Outlier_IQR_Cap_Pivot_EV_TT_D.csv](../../file/datasets/IDEAM_Outlier/Outlier_IQR_Cap_Pivot_EV_TT_D.csv)                                | False        | Sum       | Potential evaporation, mm |
 
 </div>
 
@@ -336,7 +334,7 @@ Luego de la ejecución de todos los parámetros hidro-climatológicos en estudio
 ![R.LTWB](Screenshot/Windows11CMDAgg16.png)
 ![R.LTWB](Screenshot/Windows11CMDAgg17.png)
 
-Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar los reportes detallados en formato Markdown, p.ej., [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md).
+Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar los reportes detallados en formato Markdown, p.ej., [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md).
 
 ![R.LTWB](Screenshot/Windows11CMDAgg18.png)
 ![R.LTWB](Screenshot/Windows11CMDAgg19.png)
@@ -358,10 +356,10 @@ Durante el proceso de ejecución del script, se generaron automáticamente los s
 
 | Parámetro                   | Archivos :open_file_folder:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | 
 |:----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Precipitación total mensual | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)<br>                                                                                                                                         |
-| Temperatura mínima diaria   | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)<br>Tabla Agg YM: [Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Agg/Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv) |
-| Temperatura máxima diaria   | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../.datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)<br>Tabla Agg YM: [Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../.datasets/IDEAM_Agg/Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv) |
-| Caudal medio mensual        | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../.datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)<br>                                                                                                                                         |
+| Precipitación total mensual | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../file/datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv)<br>                                                                                                                                         |
+| Temperatura mínima diaria   | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../file/datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv)<br>Tabla Agg YM: [Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../file/datasets/IDEAM_Agg/Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv) |
+| Temperatura máxima diaria   | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../file/datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv)<br>Tabla Agg YM: [Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../file/datasets/IDEAM_Agg/Agg_YM_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv) |
+| Caudal medio mensual        | Reporte: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md)<br>Tabla Agg: [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)<br>Tabla Std: [Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv](../../file/datasets/IDEAM_Agg/Agg_Std_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv)<br>                                                                                                                                         |
 
 </div>
 
@@ -390,7 +388,7 @@ Los archivos de resultados .csv generados por el script con el prefijo `Agg_Impu
 En este momento, dispone de reportes detallados de valores agregados y de tablas en formato de texto separado por comas `.csv` para realizar los posteriores procesos de interpolación espacial.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -436,7 +434,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../ENSOONI) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/27) | [Actividad siguiente](../../Section04) |
-|----------------------------------|---------------------------|------------------------------------------------------------------------|----------------------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+| [Anterior](../ENSOONI/Readme.md) | [:house: Inicio](../../README.md)| [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/27) | [Siguiente](../../Section04/Readme.md) |
+|------------------------|---------------------------|------------------------------------------------------------------------|------------------------------|
