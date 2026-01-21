@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-##  Acumulación de Flujo - Flow Accumulation - FAC
+#  Acumulación de Flujo - Flow Accumulation - FAC
 Keywords: `FAC-DEM` `Flow-accumulation` `Flow-direction` `Spatial-Analyst-Tools` `Arc-Hydro-Tools` `Display-XY-Data` `Extract-Multi-Values-to-Points`
 
 ![R.LTWB](Graph/FacDEM.png)
 
 Esta grilla representa para una celda dada, el número de celdas acumuladas aguas arriba de dicha celda. El área de drenaje en cualquier celda puede calcularse multiplicando el valor de acumulación por el área de cada celda.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=uK3jkaW5n48" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=uK3jkaW5n48" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -21,7 +19,7 @@ Esta grilla representa para una celda dada, el número de celdas acumuladas agua
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](../../HECGeoHMS/Layers)[:mortar_board:Aprender.](../FdrDEM)
+* [Grillas de direcciones de Flujo – Flow Direction – FDR. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FdrDEM)
 
 > El libro de cálculo [FacDEM.xlsx](FacDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo de cálculo y conversión de áreas a partir de la resolución específica de una grilla DEM y el número de celdas acumuladas. 
 
@@ -46,7 +44,7 @@ La acumulación de flujo o de celdas puede ser realizada con Spatial Analyst Too
 
 #### Acumulación de flujo con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [direcciones de flujo](../FdrDEM) que contiene las grillas FDR. En caso de que este generando un mapa nuevo, cargue directamente las grillas FDR contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [direcciones de flujo](../FdrDEM) que contiene las grillas FDR. En caso de que este generando un mapa nuevo, cargue directamente las grillas FDR contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Accumulation_ y cree la grilla de acumulación de flujo en formato GeoTIFF para los 3 modelos digitales de direcciones de flujo y asigne los nombres ASTERFac.tif, SRTMFac.tif y ALOSFac.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\. Simbolice por visualización ajustada o _Stretched_ con una rampa de colores múltiple que contenga un color blanco o claro al inicio y el tipo _Histogram Equalize_.
 
@@ -74,13 +72,13 @@ Resultados, ventana de ejecución grilla ALOS (dt: 42'13")
 
 |    Grilla    | Descargar :open_file_folder:                                                                                                                                             |
 |:------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ASTERFac.tif | [.rar](../../HECGeoHMS/Layers/ASTERFac.rar)                                                                                                                              |
-| SRTMFac.tif  | [.rar](../../HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                               |
-| ALOSFac.tif  | [part1.rar, ](../../HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](../../HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](../../HECGeoHMS/Layers/ALOSFac.part03.rar) |
+| ASTERFac.tif | [.rar](../../file/hec/HECGeoHMS/Layers/ASTERFac.rar)                                                                                                                              |
+| SRTMFac.tif  | [.rar](../../file/hec/HECGeoHMS/Layers/SRTMFac.rar)                                                                                                                               |
+| ALOSFac.tif  | [part1.rar, ](../../file/hec/HECGeoHMS/Layers/ALOSFac.part01.rar)[part2.rar, ](../../file/hec/HECGeoHMS/Layers/ALOSFac.part02.rar)[part3.rar, ](../../file/hec/HECGeoHMS/Layers/ALOSFac.part03.rar) |
 
 </div>
 
-3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](../../.shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y Río Calenturitas, entre otros.
+3. Busque e identifique la localización de las celdas con el mayor número de celdas acumuladas, active la red de drenaje _[DrenajeSencilloIGAC100kZEMerge.shp](../../file/shp/DrenajeSencilloIGAC100kZEMerge.zip)_, rotule por el campo `NOMBRE_GEO` e identifique visualmente los drenajes principales obtenidos. En la simbología de representación de la grilla _ASTERFac.tif_, simbolice en 2 rangos manuales clasificados asignando como valor de corte el 5% del máximo valor acumulado, de esta forma podrá visualizar e identificar fácilmente varios de los drenajes con máximas acumulaciones, tales como el Río Cesar, Río Sicarare y Río Calenturitas, entre otros.
 
 Parámetros para representación  
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFacDEMASTERSymbologyClassified.png)  
@@ -106,7 +104,7 @@ Parámetros para representación
 
 </div>
 
-Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](../../.datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](../../.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
+Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](../../file/datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](../../.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
 
 ![R.LTWB](Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
 
@@ -115,17 +113,17 @@ En ArcGIS, cargue la hoja _TablaMuestra_ del libro de Microsoft Excel y dando cl
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2DisplayXYData.png)  
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2TablaMuestraEvents.png)
 
-Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _[D:\R.LTWB\\.shp](../../.shp)_ y nombre como _[FacDEMTablaMuestra.shp](../../.shp/FacDEMTablaMuestra.zip)_. Clic derecho en la capa de eventos, _Data / Export Data_.
+Exporte la capa de eventos a una capa geográfica en formato Shapefile dentro de la carpeta _[D:\R.LTWB\file\shp](../../.shp)_ y nombre como _[FacDEMTablaMuestra.shp](../../file/shp/FacDEMTablaMuestra.zip)_. Clic derecho en la capa de eventos, _Data / Export Data_.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ExporData.png)
 
-Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](../../.shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
+Utilizando la herramienta _ArcToolBox / Spatial Analyst Tools / Extraction / Extract Multi Values to Points_, obtenga el total de celdas acumuladas a partir del mapa _ASTERFac.tif_. En la tabla de atributos de la capa de puntos _[FacDEMTablaMuestra.shp](../../file/shp/FacDEMTablaMuestra.zip)_ encontrará una nueva columna de atributos con el total de celdas acumuladas.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPoints.png)
 
 > La herramienta _Extract Multi Values to Points_ permite obtener simultáneamente los valores de acumulación para diferentes grillas sobre una misma capa de puntos, sin embargo, este proceso no puede ser realizado debido a que los puntos de muestreo solo son válidos para las posiciones de las celdas del modelo ASTER. Se recomienda verificar cada posición definida y su correspondencia con las demás grillas, podrá observar que no en todos los casos corresponden a las mismas localizaciones específicas sobre la red de drenaje principal.
 
-En la tabla de atributos de la capa _[FacDEMTablaMuestra.shp](../../.shp/FacDEMTablaMuestra.zip)_, verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
+En la tabla de atributos de la capa _[FacDEMTablaMuestra.shp](../../file/shp/FacDEMTablaMuestra.zip)_, verifique los valores registrados en la columna _ASTERFac_ y ordene ascendentemente. Para las localizaciones de muestra, el cauce con menor acumulación corresponde al _Arroyo Garrapata_ con 27562 celdas y el cauce con la mayor acumulación al _Río Calenturitas_ con 1328240 celdas.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ExtractMultiValuestoPointsASTERFac.png)
 
@@ -172,7 +170,7 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 En este momento dispone de grillas de acumulación de flujo para obtener las celdas de los drenajes sobre los diferentes modelos digitales de elevación.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -210,7 +208,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../FdrDEM) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/11) | [Siguiente](../StrDEM) |
+| [Anterior](../FdrDEM/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/11) | [Siguiente](../StrDEM/Readme.md) |
 |-----------------------|-----------------------------------|-----------------------------------------------------------------------------------|------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
