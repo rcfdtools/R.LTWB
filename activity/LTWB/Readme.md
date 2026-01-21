@@ -54,7 +54,7 @@ Donde,
 * A: área de cada celda, m²
 * t: tiempo en segundos en un año, (365 días x 24 horas x 60 minutos x 60 segundos = 31.536.000.000)
 
-1. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\\.map_ y nómbrelo como _ArcGISProSection05.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
+1. En ArcGIS Pro, cree un proyecto nuevo en blanco en la ruta _D:\R.LTWB\file\map_ y nómbrelo como _ArcGISProSection05.aprx_. Automáticamente, serán generados el mapa de proyecto, la base de datos geográfica en formato .gdb, la carpeta para volcado de informes de registro de importación _ImportLog_ y la carpeta _Index_. Utilizando el Panel de catálogo y desde la sección Folders, realice la conexión a la carpeta D:\R.LTWB. 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3NewMapProject.png)
 
@@ -164,7 +164,7 @@ Flujo potencial de escurrimiento Turc El Niño, m³/s
 Flujo potencial de escurrimiento Turc Neutro, m³/s
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RunoffPTurcNeutral.png)
 
-7. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Hydrology / Flow Accumulation_, cree los mapas de caudales medios de largo plazo dentro de la carpeta `D:\R.LTWB\.grid`:
+7. Utilizando la herramienta _Geoprocessing / Spatial Analyst Tools / Hydrology / Flow Accumulation_, cree los mapas de caudales medios de largo plazo dentro de la carpeta `D:\R.LTWB\file\grid`:
 
 > En el parámetro _Input flow direction type_, seleccione la opción _D8_ correspondiente a las 8 posibles direcciones convencionales de flujo que han sido asignadas al mapa FDR.
 
