@@ -1,4 +1,4 @@
-# Agregación estadística para obtención de promedios multianuales compuestos y por fenómeno climatológico
+# 3.9. Agregación estadística para obtención de promedios multianuales compuestos y por fenómeno climatológico
 Keywords: `Compuesto` `El-Niño` `La-Niña` `Neutro` `matplotlib` `pandas` `Statistical-aggregation`
 
 <div align="center"><img alt="R.LTWB" src="Graph/Agg.png" width="95%"></div> 
