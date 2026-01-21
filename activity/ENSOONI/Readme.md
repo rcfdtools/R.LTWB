@@ -420,7 +420,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../Impute/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/26) | [Siguiente](../Agg/Readme.md) |
-|---------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------|
+| [Anterior](../Impute/Readme.md) | [:house: Inicio](../../README.md)  | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/26) | [Siguiente](../Agg/Readme.md) |
+|---------------------------------|------------------------------------|------------------------------------------------------------------------|-------------------------------|
 
 [^1]: https://es.wikipedia.org/
