@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rasterDisplayProperties schemaVersion="1.0" type="Classify" colorRamp="Default Identified Streams Ramp" method="Natural Breaks (Jenks)" min="4.001" max="2623.843" transparency="0.0" isHillShaded="false" isInverted="false">
+    <displayRangeList color="-27" min="-INF" max="11.731" label="&lt;=11.730729"/>
+    <displayRangeList color="-551" min="11.731" max="23.012" label="&lt;=23.012383"/>
+    <displayRangeList color="-1331" min="23.012" max="36.788" label="&lt;=36.78787"/>
+    <displayRangeList color="-1854" min="36.788" max="52.439" label="&lt;=52.43913"/>
+    <displayRangeList color="-2891" min="52.439" max="70.128" label="&lt;=70.1282"/>
+    <displayRangeList color="-4439" min="70.128" max="90.586" label="&lt;=90.58579"/>
+    <displayRangeList color="-71523" min="90.586" max="115.886" label="&lt;=115.88599"/>
+    <displayRangeList color="-73072" min="115.886" max="142.955" label="&lt;=142.9547"/>
+    <displayRangeList color="-75139" min="142.955" max="173.658" label="&lt;=173.65768"/>
+    <displayRangeList color="-77462" min="173.658" max="207.713" label="&lt;=207.71252"/>
+    <displayRangeList color="-79785" min="207.713" max="239.336" label="&lt;=239.33603"/>
+    <displayRangeList color="-82616" min="239.336" max="279.75" label="&lt;=279.75046"/>
+    <displayRangeList color="-85954" min="279.75" max="326.028" label="&lt;=326.02753"/>
+    <displayRangeList color="-89037" min="326.028" max="371.729" label="&lt;=371.729"/>
+    <displayRangeList color="-157656" min="371.729" max="433.378" label="&lt;=433.37802"/>
+    <displayRangeList color="-488414" min="433.378" max="481.562" label="&lt;=481.56174"/>
+    <displayRangeList color="-819172" min="481.562" max="533.689" label="&lt;=533.68915"/>
+    <displayRangeList color="-1149930" min="533.689" max="598.13" label="&lt;=598.1298"/>
+    <displayRangeList color="-1677039" min="598.13" max="659.569" label="&lt;=659.569"/>
+    <displayRangeList color="-2269429" min="659.569" max="712.476" label="&lt;=712.47565"/>
+    <displayRangeList color="-2927610" min="712.476" max="749.072" label="&lt;=749.0722"/>
+    <displayRangeList color="-3585278" min="749.072" max="791.177" label="&lt;=791.1772"/>
+    <displayRangeList color="-4504573" min="791.177" max="954.671" label="&lt;=954.67053"/>
+    <displayRangeList color="-5489405" min="954.671" max="1141.645" label="&lt;=1141.6454"/>
+    <displayRangeList color="-6474236" min="1141.645" max="1238.004" label="&lt;=1238.0043"/>
+    <displayRangeList color="-7458556" min="1238.004" max="1368.863" label="&lt;=1368.8625"/>
+    <displayRangeList color="-8377083" min="1368.863" max="1527.181" label="&lt;=1527.1807"/>
+    <displayRangeList color="-9361402" min="1527.181" max="1703.513" label="&lt;=1703.5128"/>
+    <displayRangeList color="-10083066" min="1703.513" max="2525.179" label="&lt;=2525.1792"/>
+    <displayRangeList color="-10083066" min="2525.179" max="2575.292" label="&lt;=2575.292"/>
+    <displayRangeList color="-10083066" min="2575.292" max="2628.954" label="&lt;=2628.954"/>
+</rasterDisplayProperties>
