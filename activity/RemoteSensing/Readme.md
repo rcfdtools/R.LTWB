@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
+# Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
 Keywords: `Remote-sensing` `CHIRPS` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter-plot` `pandas` `rasterio` `requests` `tabulate`
 
 <div align="center"><img alt="R.LTWB" src="Graph/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br><br></div> 
 
 Para la validación o el contraste de información terrestre, se pueden obtener datos satelitales de precipitación diaria total, temperatura y evapotranspiración sobre las localizaciones específicas de la red climatológica utilizada. A partir de la información recopilada y validada para la red estaciones a usar en la zona de estudio y la conformación de series a partir de datos satelitales en las localizaciones específicas de la red, se correlacionan estos datos para evaluar si existe correspondencia y homogeneidad entre ellos.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=p7opzJ7FYLk" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=p7opzJ7FYLk" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 CHIRPS permite descargar datos de precipitación diaria con resoluciones espaciales de 0.05 y 0.25 grados (5.5 y 27.8 km aprox.) en formatos BIL, TIDD o NetCDF y con series de 30 o más años. La banda de descarga se ubica entre las latitudes 50°S a -50°N en todas las longitudes de la superficie terrestre, iniciando su captura desde 1981 y hasta la actualidad. CHIRPS combina imágenes satelitales (NASA y NOAA) con datos registrados en estaciones terrestres y es frecuentemente utilizado para análisis de tendencias y monitoreo de sequías debidas a cambios estacionales. Esta fusión de datos permite estimar valores en zonas en las que no existen estaciones terrestres, complementando valores obtenidos por otros métodos que tienen en cuenta la relación espacial entre estaciones próximas.
 
@@ -38,25 +36,25 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
+1. Para la descarga, lectura y análisis de correlación, descargue el script [ChirpsGetValue.py](../../file/src/ChirpsGetValue.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 Funcionalidades del script
 
 * Descarga directa de archivos comprimidos de grillas CHIRPS de precipitación mensual total a partir de la definición de un rango de años, p.ej., entre 1981 y 2021.
 * Descompresión de grillas .tif.
 * Segmentación mensual por año del archivo integrado de registros discretos obtenidos del IDEAM para la Etiqueta = "PTPM_TT_M" correspondiente a datos de precipitación mensual total.
-* Lectura de valores CHIRPS por mes en cada año sobre las localizaciones específicas de la red de estaciones terrestres del IDEAM. Para cada mes en cada año, se crea un archivo .csv que contiene los valores IDEAM más los valores leídos CHIRPS, p.ej., [chirps-v2.0.1981.01.csv](../../.datasets/CHIRPS/chirps-v2.0.1981.01.csv).
-* Integración de archivos .csv en un único archivo, nombrado como [IDEAMJoinedChirps.csv](../../.datasets/CHIRPS/IDEAMJoinedChirps.csv).
-* Para cada mes de cada año, se calculan correlaciones utilizando los métodos de Pearson, Kendal y Spearman y se genera el archivo [IDEAMJoinedChirpsCorrelationDate.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDate.csv).
-* A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones y se genera el archivo [IDEAMJoinedChirpsCorrelationDateMean.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDateMean.csv) que contiene 3 valores.
-* A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones por año y se genera el archivo [IDEAMJoinedChirpsCorrelationYear.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationYear.csv) que contiene 3 valores por cada año. 
-* A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones por mes y se genera el archivo [IDEAMJoinedChirpsCorrelationMonth.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationMonth.csv) que contiene 3 valores para los 12 meses del año.
+* Lectura de valores CHIRPS por mes en cada año sobre las localizaciones específicas de la red de estaciones terrestres del IDEAM. Para cada mes en cada año, se crea un archivo .csv que contiene los valores IDEAM más los valores leídos CHIRPS, p.ej., [chirps-v2.0.1981.01.csv](../../file/datasets/CHIRPS/chirps-v2.0.1981.01.csv).
+* Integración de archivos .csv en un único archivo, nombrado como [IDEAMJoinedChirps.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirps.csv).
+* Para cada mes de cada año, se calculan correlaciones utilizando los métodos de Pearson, Kendal y Spearman y se genera el archivo [IDEAMJoinedChirpsCorrelationDate.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDate.csv).
+* A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones y se genera el archivo [IDEAMJoinedChirpsCorrelationDateMean.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDateMean.csv) que contiene 3 valores.
+* A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones por año y se genera el archivo [IDEAMJoinedChirpsCorrelationYear.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationYear.csv) que contiene 3 valores por cada año. 
+* A partir de los valores de correlación estimados en cada mes para cada año, se calculan los valores promedio de las correlaciones por mes y se genera el archivo [IDEAMJoinedChirpsCorrelationMonth.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationMonth.csv) que contiene 3 valores para los 12 meses del año.
 * Generación de 6 gráficas de análisis con análisis de series de correlación y cajas de bigotes.
-* Generación de reporte científico integrado en formato Markdown, nombrado como [RemoteSensingRainChirps.md](../../.datasets/CHIRPS/RemoteSensingRainChirps.md)
+* Generación de reporte científico integrado en formato Markdown, nombrado como [RemoteSensingRainChirps.md](../../file/datasets/CHIRPS/RemoteSensingRainChirps.md)
  
 > Atención: tenga en cuenta que para la correcta ejecución de este script, los valores almacenados en los campos fecha - hora deben mantener consistente el formato en todos los registros. Si la fecha de una columna específica está registrada en formato aaaa//mm/dd, todos los registros deben conservar el mismo formato.
 
-Contenido del script [ChirpsGetValue.py](../../.src/ChirpsGetValue.py)
+Contenido del script [ChirpsGetValue.py](../../file/src/ChirpsGetValue.py)
 
 ```
 # -*- coding: UTF-8 -*-
@@ -283,7 +281,7 @@ if remove_temp_file_csv:  # csv glob.glob created before
 print('\nProcess accomplished, check the results files like: %s' % (path + station_file_chirps))
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Dentro de la carpeta `D:\R.LTWB\Section03\RemoteSensing\`, cree una subcarpeta con el nombre Graph. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
+2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Dentro de la carpeta `D:\R.LTWB\Section03\RemoteSensing\`, cree una subcarpeta con el nombre Graph. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../file/datasets/IDEAM/IDEAMJoined.csv) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
 
 3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\CHIRPS` ubíquese dentro de la carpeta CHIRPS.
 
@@ -297,7 +295,7 @@ print('\nProcess accomplished, check the results files like: %s' % (path + stati
 ![R.LTWB](Screenshot/Windows11CMDChirpsGetValue4.png)
 ![R.LTWB](Screenshot/Windows11CMDChirpsGetValue5.png)
 
-Durante el proceso de ejecución del script, se genera automáticamente un reporte científico integrado de resultados en formato Markdown con el nombre [D:\R.LTWB\.datasets\CHIRPS\RemoteSensingRainChirps.md](../../.datasets/CHIRPS/RemoteSensingRainChirps.md) que contiene los siguientes resultados:
+Durante el proceso de ejecución del script, se genera automáticamente un reporte científico integrado de resultados en formato Markdown con el nombre [D:\R.LTWB\.datasets\CHIRPS\RemoteSensingRainChirps.md](../../file/datasets/CHIRPS/RemoteSensingRainChirps.md) que contiene los siguientes resultados:
 
 
 ### Resultados del análisis de precipitación mensual total IDEAM vs. CHIRPS
@@ -318,19 +316,19 @@ Durante el proceso de ejecución del script, se genera automáticamente un repor
 #### General IDEAM vs. CHIRPS - Plots
 
 
-Processed .csv file [IDEAMJoinedChirps.csv](../../.datasets/CHIRPS/IDEAMJoinedChirps.csv)
+Processed .csv file [IDEAMJoinedChirps.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirps.csv)
 
 
 <div align="center">
 
-![R.LTWB](../../.datasets/CHIRPS/PlotDateScatterIdeamChirps.png)
+![R.LTWB](../../file/datasets/CHIRPS/PlotDateScatterIdeamChirps.png)
 
 </div>
 
 
 <div align="center">
 
-![R.LTWB](../../.datasets/CHIRPS/PlotDateIdeamChirpsBoxplot.png)
+![R.LTWB](../../file/datasets/CHIRPS/PlotDateIdeamChirpsBoxplot.png)
 
 </div>
 
@@ -347,7 +345,7 @@ The correlation methods used for the analysis are:
 ##### Correlation values for the date records
 
 The following table, shows the monthly average correlation values obtained from the IDEAM records and the correspondent CHIRPS values.
-Get the table [IDEAMJoinedChirpsCorrelationDate.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDate.csv) 
+Get the table [IDEAMJoinedChirpsCorrelationDate.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDate.csv) 
 
 
 <div align="center">
@@ -850,13 +848,13 @@ Get the table [IDEAMJoinedChirpsCorrelationDate.csv](../../.datasets/CHIRPS/IDEA
 </div>
 
 
-![R.LTWB](../../.datasets/CHIRPS/PlotDateCorrelationTimeSerie.png)
+![R.LTWB](../../file/datasets/CHIRPS/PlotDateCorrelationTimeSerie.png)
 
 
 ##### Average correlations per method
 
 The values shown below, correspond to the average correlation values in each date processed.
-Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDateMean.csv) 
+Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationDateMean.csv) 
 
 
 <div align="center">
@@ -873,7 +871,7 @@ Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](../../.datasets/CHIRPS/
 <div align="center">
 
 
-![R.LTWB](../../.datasets/CHIRPS/PlotDateCorrelationBoxplot.png)
+![R.LTWB](../../file/datasets/CHIRPS/PlotDateCorrelationBoxplot.png)
 
 </div>
 
@@ -882,7 +880,7 @@ Get the table [IDEAMJoinedChirpsCorrelationDateMean.csv](../../.datasets/CHIRPS/
 ##### Average yearly correlation and method
 
 This table shows the average correlation values obtained for each method in every year in the record set.
-Get the table [IDEAMJoinedChirpsCorrelationYear.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationYear.csv) 
+Get the table [IDEAMJoinedChirpsCorrelationYear.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationYear.csv) 
 
 
 <div align="center">
@@ -934,12 +932,12 @@ Get the table [IDEAMJoinedChirpsCorrelationYear.csv](../../.datasets/CHIRPS/IDEA
 </div>
 
 
-![R.LTWB](../../.datasets/CHIRPS/PlotYearCorrelationTimeSerie.png)
+![R.LTWB](../../file/datasets/CHIRPS/PlotYearCorrelationTimeSerie.png)
 
 ##### Average monthly correlation and method
 
 This table shows the average correlation values obtained in every month in the record set.
-Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](../../.datasets/CHIRPS/IDEAMJoinedChirpsCorrelationMonth.csv) 
+Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](../../file/datasets/CHIRPS/IDEAMJoinedChirpsCorrelationMonth.csv) 
 
 <div align="center">
 
@@ -961,12 +959,12 @@ Get the table [IDEAMJoinedChirpsCorrelationMonth.csv](../../.datasets/CHIRPS/IDE
 </div>
 
 
-![R.LTWB](../../.datasets/CHIRPS/PlotMonthCorrelationTimeSerie.png)
+![R.LTWB](../../file/datasets/CHIRPS/PlotMonthCorrelationTimeSerie.png)
 
 En este momento, dispone de registros IDEAM de precipitación con el registro de valores CHIRPS y diferentes análisis de correlación.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -1020,9 +1018,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../CNEStationDatasetDownload) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/22) | [Actividad siguiente](../EDA) |
+| [Actividad anterior](../CNEStationDatasetDownload/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/22) | [Actividad siguiente](../EDA/Readme.md) |
 |----------------------------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------|
 
 [^1]: https://www.chc.ucsb.edu/data/chirps
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
