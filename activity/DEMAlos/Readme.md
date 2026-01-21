@@ -1,4 +1,4 @@
-# Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
+# 2.4. Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
 Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster`
 
 <br>![R.LTWB](Graph/DEMAlos.png)
@@ -40,8 +40,8 @@ Especificaciones técnicas y modos de captura
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
-* Cuenta de usuario [NASA Eathdata](../UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
+* Cuenta de usuario [NASA Eathdata](../UserCreation/Readme.md).
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
 
 
 ### Diagrama general de procesos
@@ -58,7 +58,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
-> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](../UserCreation)
+> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](../UserCreation/Readme.md)
 
 2. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
@@ -296,7 +296,7 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 </div>
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -342,7 +342,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../DEMSrtm/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/6) | [Siguiente](../GDB100k/Readme.md) |
+| [Anterior](../DEMSrtm/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/6) | [Siguiente](../GDB100k/Readme.md) |
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|-------------------------|
 
 [^1]: https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/
