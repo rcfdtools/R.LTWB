@@ -134,3 +134,67 @@ Youtube credits
 Removido:
 <div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
 
+
+
+.datasets by file/datasets
+../../.datasets/
+../../file/datasets/
+
+../../file/grid/
+
+.dem by file/dem
+../../.dem/
+../../file/dem/
+
+.gdb by file/gdb
+.icons by file/graph
+.icons/R.LTWB_Images by file/graph
+
+HECGeoHMS by file/hec/HECGeoHMS
+../../HECGeoHMS/
+../../file/hec/HECGeoHMS/
+
+HECHMS by file/hec/HECHMS
+.map by file/map
+.refs by file/ref
+
+.projectionfile by file/projectionfile
+../../.projectionfile
+ ../../file/projectionfile
+
+.shp by file/shp
+../../.shp/
+../../file/shp/
+
+/main/.shp/
+/main/file/shp/
+.temp by file/temp
+
+.src by file/src
+../../.src/
+../../file/src/
+
+.tts by file/temp/tts
+
+Readme.md by README.md
+[:house: Inicio](../../README.md)
+../../Readme.md
+../../README.md
+/Readme.md
+
+IconCEHYouTubeInicioActividad.png
+IconCEHYouTube.svg" alt="R.LTWB" width="120px"
+
+
+Actividades complementarias:pencil2:
+
+
+D:\R.LTWB\HECGeoHMS\
+D:\R.LTWB\file\hec\HECGeoHMS\
+
+Anterior
+Siguiente
+Remover iconos flechas
+Actividades complementarias :pencil2:
+/Readme.md
+Numeracion
