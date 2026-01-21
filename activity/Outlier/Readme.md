@@ -1,4 +1,4 @@
-# Identificación y procesamiento de datos atípicos - Outliers
+# 3.6. Identificación y procesamiento de datos atípicos - Outliers
 Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `numpy` `dtypes` `isnull` `describe` `Drop` `Capped` `Impute` `Interquartile-range` `Empirical-rule` `Z-score`
 
 <div align="center"><img alt="R.LTWB" src="Graph/Outlier.png" width="95%"></div> 
