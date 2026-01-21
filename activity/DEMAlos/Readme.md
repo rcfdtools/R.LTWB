@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
+# Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
 Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster`
 
 <br>![R.LTWB](Graph/DEMAlos.png)
 
 ALOS Phased Array type L-band Synthetic Aperture Radar, es uno de los instrumentos de observación avanzada de la superficie terrestre, que permite entre otros, obtener un modelo digital de la tierra en alta resolución.[^1]
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=smDvgats7os" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=smDvgats7os" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 <div align="center">
 
@@ -43,7 +41,7 @@ Especificaciones técnicas y modos de captura
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario [NASA Eathdata](../UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
 
 
 ### Diagrama general de procesos
@@ -76,7 +74,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 Para el caso de estudio, utilizaremos el método _File_ para definir la máscara de selección de elementos a descargar.
 
-Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](../../.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
+Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](../../file/shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
@@ -143,7 +141,7 @@ En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/ALOS_
 
-Shell script [downloadALOS.sh](../../.src/downloadALOS.sh) de Earthdata
+Shell script [downloadALOS.sh](../../file/src/downloadALOS.sh) de Earthdata
 ```
 #!/bin/bash
 
@@ -293,7 +291,7 @@ En este momento dispone de la grilla integrada de elevación ALOS PALSAR que cub
 
 | Aplicación / grilla | Descargar :open_file_folder:                                                                                                                                                                                                                                                                                                    |
 |:--------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS Pro / mosaic | [part1.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISPro.part1.rar), [part2.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISPro.part2.rar), [part3.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISPro.part3.rar), [part4.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISPro.part4.rar), [part5.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISPro.part5.rar), |
+| ArcGIS Pro / mosaic | [part1.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISPro.part1.rar), [part2.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISPro.part2.rar), [part3.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISPro.part3.rar), [part4.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISPro.part4.rar), [part5.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISPro.part5.rar), |
 
 </div>
 
@@ -344,9 +342,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../DEMSrtm) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/6) | [Siguiente](../GDB100k) |
+| [Anterior](../DEMSrtm/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/6) | [Siguiente](../GDB100k/Readme.md) |
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|-------------------------|
 
 [^1]: https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
