@@ -1,4 +1,4 @@
-# Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)
+# 2.2. Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)
 Keywords: `NASA` `jpl` `ASTER` `ArcScene` `3D-view` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster` `Profile-view` `Line-notes` `Merge` `Raster-layer-statistics` `Hillshade`
 
 <br>![R.LTWB](Graph/DEMAster.png)
@@ -31,8 +31,8 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * QGIS plugin: [Profile tool](https://plugins.qgis.org/plugins/profiletool/)
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
-* Cuenta de usuario [NASA Eathdata](../UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
+* Cuenta de usuario [NASA Eathdata](../UserCreation/Readme.md).
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
 
 
 ### Diagrama general de procesos
@@ -49,7 +49,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
-> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas.)](../UserCreation)
+> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas.)](../UserCreation/Readme.md)
 
 2. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
