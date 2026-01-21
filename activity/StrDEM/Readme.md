@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
+# Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
 Keywords: `STR-DEM` `Stream-definition` `FAC-DEM` `Flow-accumulation` `Arc-Hydro-Tools` `Extract-Multi-Values-to-Points` `Raster-to-Polyline` `Add-Field` `Geometry-Calculator` `Delete-Identical` `Raster-Calculator`
 
 ![R.LTWB](Graph/StrDEM.png)
 
 A partir de grillas de acumulación de flujo, se pueden identificar las celdas que hacen parte de la red de drenaje principal. Para ello se especifica el área de aportación, p. ej. entre 1 y 4 km² o el número equivalente de celdas en función de su resolución, considerando que a menor área de aportación, mayor será el número de corrientes obtenidas. El procedimiento general para la definición de drenajes incluye la creación de una grilla binarizada con celdas a las que se les asigna 1 como valor de pixel. Es importante tener en cuenta que algunos de los tramos obtenidos, corresponderán a áreas de aportación inferiores al valor de aportación definido, específicamente en cuencas intermedias o cuencas de tránsito entre dos puntos de unión próximos. En esta actividad, también se obtienen los nodos característicos de la red y sus áreas de aportación para la posterior lectura de caudales medios.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=om60bq3_VNA" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=om60bq3_VNA" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -24,7 +22,7 @@ A partir de grillas de acumulación de flujo, se pueden identificar las celdas q
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](../../HECGeoHMS/Layers)[:mortar_board:Aprender.](../FacDEM)
+* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FacDEM)
 
 > El libro de cálculo [StrDEM.xlsx](StrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo del número de celdas requeridas y subcuencas obtenidas para diferentes áreas de aportación en función del área de una cuenca principal y la resolución específica de una grilla DEM. 
 
@@ -51,9 +49,9 @@ La demarcación de drenajes a partir de un área de aportación definida puede s
 
 #### Demarcación de drenajes con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [acumulaciones de flujo](../FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\file\hec\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [acumulaciones de flujo](../FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio _[D:\R.LTWB\file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres [ASTERStr.tif](../../HECGeoHMS/Layers/ASTERStr.rar), [SRTMStr.tif](../../HECGeoHMS/Layers/SRTMStr.rar) y [ALOSStr.tif](../../HECGeoHMS/Layers/ALOSStr.rar) en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_. Como criterio de área de aportación utilice p. ej. 1 km², que para los modelos ASTER y SRTM corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 metros y para el modelo ALOS PALSAR, 6400 celdas de aportación, ya que su resolución es de 12.5 metros. Para la representación en pantalla, use como fondo la red de drenaje vectorial.
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres [ASTERStr.tif](../../file/hec/HECGeoHMS/Layers/ASTERStr.rar), [SRTMStr.tif](../../file/hec/HECGeoHMS/Layers/SRTMStr.rar) y [ALOSStr.tif](../../file/hec/HECGeoHMS/Layers/ALOSStr.rar) en la ruta _D:\R.LTWB\file\hec\HECGeoHMS\Layers\_. Como criterio de área de aportación utilice p. ej. 1 km², que para los modelos ASTER y SRTM corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 metros y para el modelo ALOS PALSAR, 6400 celdas de aportación, ya que su resolución es de 12.5 metros. Para la representación en pantalla, use como fondo la red de drenaje vectorial.
 
 Parámetros de entrada para demarcación de drenajes ASTER
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSStrDEMASTERParameters.png)
@@ -77,9 +75,9 @@ Resultados, ventana de ejecución grilla ALOS (dt: 42'24.63")
 
 |    Grilla    |        Descargar :open_file_folder:         |
 |:------------:|:-------------------------------------------:|
-| ASTERStr.tif | [.rar](../../HECGeoHMS/Layers/ASTERStr.rar) |
-| SRTMStr.tif  | [.rar](../../HECGeoHMS/Layers/SRTMStr.rar)  |
-| ALOSStr.tif  | [.rar](../../HECGeoHMS/Layers/ALOSStr.rar)  |
+| ASTERStr.tif | [.rar](../../file/hec/HECGeoHMS/Layers/ASTERStr.rar) |
+| SRTMStr.tif  | [.rar](../../file/hec/HECGeoHMS/Layers/SRTMStr.rar)  |
+| ALOSStr.tif  | [.rar](../../file/hec/HECGeoHMS/Layers/ALOSStr.rar)  |
 
 </div>
 
@@ -87,7 +85,7 @@ Resultados, ventana de ejecución grilla ALOS (dt: 42'24.63")
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2RasterCalculatorStrDEMASTER.png)
 
-3. Convierta las grillas de demarcación de drenajes a vectores con la herramienta _ArcToolBox / Conversion Tools / From Raster / Raster to Polyline_, nombre como _[ASTERStr.shp](../../.shp/asterstr.zip)_, _[SRTMStr.shp](../../.shp/srtmstr.zip)_ y _[ALOSStr.shp](../../.shp/alosstr.zip)_ en la carpeta _D:\R.LTWB\\.shp_. Desactive la casilla `Simplify polylines` para obtener líneas detalladas sobre cada celda horizontal, vertical y diagonal. Automáticamente, esta herramienta genera tramos de drenaje independientes manteniendo la correspondencia entre los puntos de unión de afluentes.
+3. Convierta las grillas de demarcación de drenajes a vectores con la herramienta _ArcToolBox / Conversion Tools / From Raster / Raster to Polyline_, nombre como _[ASTERStr.shp](../../file/shp/asterstr.zip)_, _[SRTMStr.shp](../../file/shp/srtmstr.zip)_ y _[ALOSStr.shp](../../file/shp/alosstr.zip)_ en la carpeta _D:\R.LTWB\\.shp_. Desactive la casilla `Simplify polylines` para obtener líneas detalladas sobre cada celda horizontal, vertical y diagonal. Automáticamente, esta herramienta genera tramos de drenaje independientes manteniendo la correspondencia entre los puntos de unión de afluentes.
 
 Parámetros de entrada para la conversión a polilíneas de grilla ASTER
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2RasterToPolylineStrDEMASTERParameters.png)
@@ -106,7 +104,7 @@ Resultados, ventana de ejecución grilla ALOS (dt: 06'52")
 
 > A diferencia de las líneas de drenaje utilizadas para el reacondicionamiento del modelo de terreno a partir de la red de drenaje del IGAC, las líneas de drenaje obtenidas a partir de la marcación de celdas de terreno, son localizadas a lo largo y en la diagonal de los píxeles, lo que permite obtener la localización exacta de los puntos de inicio, entrega y confluencia de toda la red, pero sobre las celdas específicas donde se realiza la acumulación principal del flujo.
 
-4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _[ASTERStrNode.shp](../../.shp/ASTERStrNode.zip)_, _[SRTMStrNode.shp](../../.shp/SRTMStrNode.zip)_ y _[ALOSStrNode.shp](../../.shp/ALOSStrNode.zip)_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
+4. Utilizando la herramienta _ArcToolBox / Data Management Tools / Features / Feature Vertices To Points_, obtenga los nodos inicio / fin de cada tramo de drenaje identificado, nombre como _[ASTERStrNode.shp](../../file/shp/ASTERStrNode.zip)_, _[SRTMStrNode.shp](../../file/shp/SRTMStrNode.zip)_ y _[ALOSStrNode.shp](../../file/shp/ALOSStrNode.zip)_ en la carpeta _D:\R.LTWB\\.shp_. En `Point Type` seleccione `BOTH_ENDS` para obtener el punto inicial y final de cada línea de drenaje.
 
 Parámetros de entrada para la obtención de nodos característicos en grilla ASTER
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2FeatureVerticesToPointsStrDEMASTERParameters.png)
@@ -151,11 +149,11 @@ Repita el procedimiento anterior para los puntos contenidos en SRTMStrNode.shp y
 
 <div align="center">
 
-|    Polilíneas Str :open_file_folder:    |          Nodos Str :open_file_folder:           | Total nodos | Total duplicados | Nodos finales |
-|:---------------------------------------:|:-----------------------------------------------:|:-----------:|:----------------:|:-------------:|
-| [ASTERStr.shp](../../.shp/asterstr.zip) | [ASTERStrNode.shp](../../.shp/ASTERStrNode.zip) |    65554    |      36429       |     30125     | 
-|  [SRTMStr.shp](../../.shp/srtmstr.zip)  |  [SRTMStrNode.shp](../../.shp/SRTMStrNode.zip)  |    65688    |      36046       |     29622     | 
-|  [ALOSStr.shp](../../.shp/alosstr.zip)  |  [ALOSStrNode.shp](../../.shp/ALOSStrNode.zip)  |    72210    |      40132       |     32078     | 
+|      Polilíneas Str :open_file_folder:      |            Nodos Str :open_file_folder:             | Total nodos | Total duplicados | Nodos finales |
+|:-------------------------------------------:|:---------------------------------------------------:|:-----------:|:----------------:|:-------------:|
+| [ASTERStr.shp](../../file/shp/asterstr.zip) | [ASTERStrNode.shp](../../file/shp/ASTERStrNode.zip) |    65554    |      36429       |     30125     | 
+|  [SRTMStr.shp](../../file/shp/srtmstr.zip)  |  [SRTMStrNode.shp](../../file/shp/SRTMStrNode.zip)  |    65688    |      36046       |     29622     | 
+|  [ALOSStr.shp](../../file/shp/alosstr.zip)  |  [ALOSStrNode.shp](../../file/shp/ALOSStrNode.zip)  |    72210    |      40132       |     32078     | 
 
 </div>
 
@@ -222,7 +220,7 @@ Ejemplo de raster calculator sobre QGIS
 En este momento, dispone de grillas de demarcación de drenajes, líneas de drenajes y puntos característicos de la red con el total de celdas convergentes y las áreas de aportación para la posterior lectura de los valores de caudal medio y cálculo de isorendimientos. 
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -260,7 +258,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../FacDEM) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/12) | [Siguiente](../../Section03) |
-|-----------------------|-----------------------------------|-----------------------------------------------------------------------------------|------------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+| [Anterior](../FacDEM/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/12) | [Siguiente](../../CNEStation/Readme.md) |
+|-----------------------|-----------------------------------|-----------------------------------------------------------------------------------|-------------------------------|
