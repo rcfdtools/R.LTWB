@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
+# Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
 Keywords: `IDEAM` `Weather-station` `DHIME` `Rain` `Air-temperature` `Evaporation` `Water-flow` `Python` `Pandas` `os.path.isfile` `os.remove` `glob` `ZipFile` `os.rename` `pd.concat` `to_csv`
 
 ![R.LTWB](Graph/CNEStationDatasetDownload.png)
 
 Para la creación de los mapas requeridos para la realización del balance hidrológico, es necesario a partir de las estaciones seleccionadas para la zona de estudio, obtener las series de valores discretos de precipitación total mensual, temperatura máxima diaria, temperatura mínima diaria y evaporación total diaria. Para la comparación de los caudales obtenidos, también son requeridas las series de caudal medio mensual.                       
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=iYFqYV0Q2bQ" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=iYFqYV0Q2bQ" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -21,11 +19,11 @@ Para la creación de los mapas requeridos para la realización del balance hidro
 * [Microsoft Excel from Office 64 bits.](https://aka.ms/office-install) 
 * [Python 3+](https://www.python.org/)
 * [Pandas para Python 3+](https://pandas.pydata.org/)
-* [Glosario de variables IDEAM.](../../.datasets/GlosarioVariables.xlsx) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de precipitación en la zona de estudio.](../../.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de temperatura del aire en la zona de estudio.](../../.datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de evaporación potencial en la zona de estudio.](../../.datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf) [:mortar_board:Aprender.](../CNEStation)
-* [Listado de estaciones seleccionadas de caudal en la zona de estudio.](../../.datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf) [:mortar_board:Aprender.](../CNEStation)
+* [Glosario de variables IDEAM.](../../file/datasets/GlosarioVariables.xlsx) [:mortar_board:Aprender.](../CNEStation)
+* [Listado de estaciones seleccionadas de precipitación en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf) [:mortar_board:Aprender.](../CNEStation)
+* [Listado de estaciones seleccionadas de temperatura del aire en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) [:mortar_board:Aprender.](../CNEStation)
+* [Listado de estaciones seleccionadas de evaporación potencial en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf) [:mortar_board:Aprender.](../CNEStation)
+* [Listado de estaciones seleccionadas de caudal en la zona de estudio.](../../file/datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf) [:mortar_board:Aprender.](../CNEStation)
 
 
 ### Diagrama general de procesos
@@ -43,7 +41,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 #### Glosario de variables IDEAM
 
-El libro de Excel del [glosario de variables del IDEAM - Colombia](../../.datasets/GlosarioVariables.xlsx), se compone de 3 hojas de cálculo que contienen el listado de etiquetas básicas de los diferentes parámetros de la red hidroclimatológica y las etiquetas de las series diarias derivadas que corresponden a datos que se calculan a partir de las series básicas. La versión utilizada para ejemplificar esta clase corresponde a la fecha 2022.07.31. 
+El libro de Excel del [glosario de variables del IDEAM - Colombia](../../file/datasets/GlosarioVariables.xlsx), se compone de 3 hojas de cálculo que contienen el listado de etiquetas básicas de los diferentes parámetros de la red hidroclimatológica y las etiquetas de las series diarias derivadas que corresponden a datos que se calculan a partir de las series básicas. La versión utilizada para ejemplificar esta clase corresponde a la fecha 2022.07.31. 
 
 
 #### Catálogo de datos de los registros discretos IDEAM
@@ -89,7 +87,7 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 
 ### Procedimiento general manual
 
-1. Dentro de la carpeta _D:\R.LTWB\\.datasets_, cree una nueva carpeta con el nombre _IDEAM_, y un nuevo libro de Microsoft Excel con el nombre _CNEStationDatasetDownload.xlsx_. Dentro del libro de Excel, crear 4 hojas y nombrar como: `Precipitacion`, `TemperaturaAire`, `EvaporacionPotencial` y `Caudal`.
+1. Dentro de la carpeta _D:\R.LTWB\file\datasets_, cree una nueva carpeta con el nombre _IDEAM_, y un nuevo libro de Microsoft Excel con el nombre _CNEStationDatasetDownload.xlsx_. Dentro del libro de Excel, crear 4 hojas y nombrar como: `Precipitacion`, `TemperaturaAire`, `EvaporacionPotencial` y `Caudal`.
 
 2. Desde Excel, abra los siguientes archivos de estaciones seleccionadas que fueron exportados a formato DBase File .dbf, copie y pegue todos los registros a las hojas del libro de Excel:
 
@@ -97,10 +95,10 @@ Tomados directamente de los archivos de texto separados por comas obtenidos del 
 
 | Parámetro             | Archivo .dbf estaciones                                                                    | Hoja Excel           | Estaciones |
 |-----------------------|--------------------------------------------------------------------------------------------|----------------------|------------|
-| Precipitación         | [CNE_IDEAM_OE_ZE_Precipitacion.dbf](../../.datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf)     | Precipitacion        | 139        |
-| Temperatura del aire  | [CNE_IDEAM_OE_ZE_TemperaturaAire.dbf](../../.datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) | TemperaturaAire      | 42         |
-| Evaporación potencial | [CNE_IDEAM_OE_ZE_Evaporacion.dbf](../../.datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf)         | EvaporacionPotencial | 41         |
-| Caudal                | [CNE_IDEAM_OE_ZE_NivelCaudal.dbf](../../.datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf)         | Caudal               | 65         |
+| Precipitación         | [CNE_IDEAM_OE_ZE_Precipitacion.dbf](../../file/datasets/CNE_IDEAM_OE_ZE_Precipitacion.dbf)     | Precipitacion        | 139        |
+| Temperatura del aire  | [CNE_IDEAM_OE_ZE_TemperaturaAire.dbf](../../file/datasets/CNE_IDEAM_OE_ZE_TemperaturaAire.dbf) | TemperaturaAire      | 42         |
+| Evaporación potencial | [CNE_IDEAM_OE_ZE_Evaporacion.dbf](../../file/datasets/CNE_IDEAM_OE_ZE_Evaporacion.dbf)         | EvaporacionPotencial | 41         |
+| Caudal                | [CNE_IDEAM_OE_ZE_NivelCaudal.dbf](../../file/datasets/CNE_IDEAM_OE_ZE_NivelCaudal.dbf)         | Caudal               | 65         |
 
 </div>
 
@@ -253,7 +251,7 @@ Resumen de datos obtenidos para caudal medio mensual
 * 65 seleccionadas, 57 descargables de IDEAM
 * Comprimidos de datos (22).zip a datos (27).zip
 
-Al finalizar la descarga de todos los registros para todos los parámetros requeridos, copie los archivos comprimidos en la carpeta _[D:\R.LTWB\\.datasets\IDEAM](../../.datasets/IDEAM)_.
+Al finalizar la descarga de todos los registros para todos los parámetros requeridos, copie los archivos comprimidos en la carpeta _[D:\R.LTWB\file\datasets\IDEAM](../../file/datasets/IDEAM)_.
 
 ![R.LTWB](Screenshot/DatasetsIDEAM.png)
 
@@ -269,9 +267,9 @@ Diagrama de flujo
 
 Para optimizar los procesos posteriores de exploración y análisis de datos ([Exploratory Data Analysis - EDA](https://towardsdatascience.com/exploratory-data-analysis-8fc1cb20fd15)), es necesario integrar todos los registros obtenidos para los diferentes parámetros de las estaciones seleccionadas para la zona de estudio. Para este proceso utilizaremos Python y la librería Pandas a través del siguiente script localizado en la carpeta _.src_.
 
-Para la ejecución del script, previamente se requiere de la instalación de Python 3+ y la librería Pandas. [:mortar_board:Aprender.](../../Section01/Requirement)
+Para la ejecución del script, previamente se requiere de la instalación de Python 3+ y la librería Pandas. [:mortar_board:Aprender.](../Requirement)
 
-Script [D:\R.LTWB\.src\CNEStationCSVJoin.py](../../.src/CNEStationCSVJoin.py)
+Script [D:\R.LTWB\file\src\CNEStationCSVJoin.py](../../file/src/CNEStationCSVJoin.py)
 ```
 # -*- coding: UTF-8 -*-
 # Name: CNEStationCSVJoin.py
@@ -308,16 +306,16 @@ for csv_file in csv_files:
 
 1. Utilizando un editor de texto (p. ej. Notepad o Notepad++), abra el script y defina en la variable `path` la ruta o el directorio de volcado, p. ej. `path = '../.datasets/IDEAM/'`, que corresponde a la ruta relativa o `path = 'D:/R.LTWB/.datasets/IDEAM/'` que corresponde a la ruta absoluta donde se encuentran los archivos .zip descargados desde el servicio DHIME de IDEAM.
 
-2. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\IDEAM` diríjase a la carpeta donde están contenidos los datos descargados. Usando el comando `DIR /W`, liste en una vista ancha, los archivos contenidos en la carpeta IDEAM y verifique que se encuentren los archivos comprimidos .zip obtenidos previamente.
+2. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\file\datasets\IDEAM` diríjase a la carpeta donde están contenidos los datos descargados. Usando el comando `DIR /W`, liste en una vista ancha, los archivos contenidos en la carpeta IDEAM y verifique que se encuentren los archivos comprimidos .zip obtenidos previamente.
 
 ![R.LTWB](Screenshot/Windows11CMDDir.png)
 
-3. Limpie la consola con el comando `CLS` y utilizando en el `CMD` la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\.src\CNEStationCSVJoin.py"`, ejecute el script que realizará la descompresión e integración de los archivos y creará o actualizará el archivo `IDEAMJoined.csv`.
+3. Limpie la consola con el comando `CLS` y utilizando en el `CMD` la instrucción `C:\Python3.10.5\python.exe "D:\R.LTWB\file\src\CNEStationCSVJoin.py"`, ejecute el script que realizará la descompresión e integración de los archivos y creará o actualizará el archivo `IDEAMJoined.csv`.
 
 ![R.LTWB](Screenshot/Windows11PythonCNEStationCSVJoin1.png)
 ![R.LTWB](Screenshot/Windows11PythonCNEStationCSVJoin2.png)
 
-Como puede observar, se han integrado 514927 registros en el archivo [IDEAMJoined.csv](../../.datasets/IDEAM/IDEAMJoined.zip) que tiene un tamaño aproximado de 154 MB.
+Como puede observar, se han integrado 514927 registros en el archivo [IDEAMJoined.csv](../../file/datasets/IDEAM/IDEAMJoined.zip) que tiene un tamaño aproximado de 154 MB.
 
 4. Desde en bloc de notas _Notepad++_, abra el archivo IDEAMJoined.csv y verifique el total de registros obtenidos.
 
@@ -326,15 +324,15 @@ Como puede observar, se han integrado 514927 registros en el archivo [IDEAMJoine
 A partir de este momento dispone de registros integrados de diferentes variables hidroclimatológicas.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
-| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                        |
-|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Para las estaciones identificadas en la actividad complementaria [CNEStation](./CNEStation) relacionadas con brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad, descargue los registros disponibles en DHIME del IDEAM e integre las series a las presentadas en esta actividad. |
-|     2     | En caso que no pueda descargar los registros de estaciones a partir del servicio DHIME del IDEAM - Colombia, busque el servicio de descarga de cada entidad y realice la descarga de los datos requeridos de las estaciones identificadas dentro de su zona de estudio.                                                                        |
-|     3     | En el archivo integrado _IDEAMJoined.csv_, verifique manualmente que en todos los registros el formato de fechas y horas sea consistente en los campos `FechaInstalacion`, `FechaSuspension` y `Fecha`. Si la fecha de una columna específica está registrada en formato aaaa//mm/dd, todos los registros deben conservar el mismo formato.    | 
+| Actividad | Alcance                                                                                                                                                                                                                                                                                                                                         |
+|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Para las estaciones identificadas en la actividad complementaria [CNEStation](../CNEStation) relacionadas con brillo solar, radiación solar, humedad del aire cerca al suelo y parámetros relacionados con viento y nubosidad, descargue los registros disponibles en DHIME del IDEAM e integre las series a las presentadas en esta actividad. |
+|     2     | En caso que no pueda descargar los registros de estaciones a partir del servicio DHIME del IDEAM - Colombia, busque el servicio de descarga de cada entidad y realice la descarga de los datos requeridos de las estaciones identificadas dentro de su zona de estudio.                                                                         |
+|     3     | En el archivo integrado _IDEAMJoined.csv_, verifique manualmente que en todos los registros el formato de fechas y horas sea consistente en los campos `FechaInstalacion`, `FechaSuspension` y `Fecha`. Si la fecha de una columna específica está registrada en formato aaaa//mm/dd, todos los registros deben conservar el mismo formato.     | 
 
 
 ### Referencias
@@ -369,9 +367,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../CNEStationElevation) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/16) | [Siguiente](../RemoteSensing) |
+| [Anterior](../CNEStationElevation/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/16) | [Siguiente](../RemoteSensing/Readme.md) |
 |------------------------------------|-----------------------------------|-----------------------------------------------------------------------------------|-------------------------------|
 
 [^1]: http://dhime.ideam.gov.co/atencionciudadano/
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
