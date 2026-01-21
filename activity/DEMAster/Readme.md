@@ -1,6 +1,4 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)
+# Descarga y procesamiento del modelo digital de elevación - DEM - NASA ASTER GDEM v3 (30 m)
 Keywords: `NASA` `jpl` `ASTER` `ArcScene` `3D-view` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster` `Profile-view` `Line-notes` `Merge` `Raster-layer-statistics` `Hillshade`
 
 <br>![R.LTWB](Graph/DEMAster.png)
@@ -9,7 +7,7 @@ Los sensores remotos japoneses Advanced Spaceborne Thermal Emission and Reflecti
 
 A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han sido reemplazados por la versión 3 integrada de todo el mundo, como novedad, la versión 3 no presenta problemas de sobre-elevaciones debidas a nubes.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=41cqQdkuOto" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=41cqQdkuOto" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -34,7 +32,7 @@ A partir del segundo semestre de 2019, los modelos de terreno ASTER GDEM v2 han 
 * QGIS plugin: [QGis2threejs](https://plugins.qgis.org/plugins/Qgis2threejs/)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
 * Cuenta de usuario [NASA Eathdata](../UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
 
 
 ### Diagrama general de procesos
@@ -67,7 +65,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 Para el caso de estudio, utilizaremos el método _File_ para definir la máscara de selección de elementos a descargar.
 
-Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](../../.shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
+Desde la carpeta _.shp_ contenida en _D:\R.LTWB_, seleccione y comprima en formato .zip los archivos _ZonaEstudioEnvelope.dbf, ZonaEstudioEnvelope.prj, ZonaEstudioEnvelope.shp_ y _ZonaEstudioEnvelope.shx_ que conforman el Shapefile del polígono envolvente de la zona de estudio. El archivo comprimido [ZonaEstudioEnvelope.zip](../../file/shp/ZonaEstudioEnvelope.zip) tendrá embebido el sistema de coordenadas geográfico GCS_MAGNA que podrá ser interpretado directamente por Earthdata.
 
 > Para archivos de formas que utilicen un sistema de coordenadas proyectado, será necesario crear un mapa nuevo en blanco en ArcGIS o QGIS, asignar el sistema de proyección de coordenadas geográfico WGS84 correspondiente al EPSG 4326, cargar y exportar la capa ZonaEstudioEnvelope.shp utilizando el sistema de coordenadas del proyecto, nombrando el archivo exportado como ZonaEstudioEnvelopeWGS84.shp
 
@@ -138,7 +136,7 @@ Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los ar
 
 > Es recomendable descargar directamente desde el servidor https://search.earthdata.nasa.gov/, la última versión del script desde la opción `Download Script` disponible al hacer clic en `Download Data`.
 
-Shell script [donwloadASTER.sh](../../.src/downloadASTER.sh) de Earthdata
+Shell script [donwloadASTER.sh](../../file/src/downloadASTER.sh) de Earthdata
 ```
 #!/bin/bash
 
@@ -264,9 +262,10 @@ EDSCEOF
 
 Luego de los procesos de obtención de las imágenes satelitales, es necesaria la construcción de un mosaico único a partir de las imágenes individuales obtenidas para cada modelo de terreno. El balance hidrológico de largo plazo podrá ser realizado utilizando diferentes modelos de terreno y permitirá comparar la oferta hídrica obtenida utilizando diferentes superficies.
 
+
 #### Instrucciones en ArcGIS for Desktop (10.2.2)
 
-1. Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](../../Section01/CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido como MAGNA_Colombia_CTM12. Desde las propiedades de cualquier imagen verifique su resolución, podrá observar que corresponde a 0.00027777778 x 0.00027777778 grados decimales debido a que el Datum es D_WGS_1984. 
+1. Abra el mapa _R.LTWB.mxd_ creado en la definición del [Caso de Estudio](../CaseStudy) localizado en la carpeta _.map_ y agregue las 9 imágenes del modelo de elevación ASTER v3 y agrupe como _DEM ASTER v3_. Verifique que el sistema de proyección de coordenadas del mapa esté establecido como MAGNA_Colombia_CTM12. Desde las propiedades de cualquier imagen verifique su resolución, podrá observar que corresponde a 0.00027777778 x 0.00027777778 grados decimales debido a que el Datum es D_WGS_1984. 
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2LoadResolution.png)
 
@@ -294,11 +293,11 @@ Una vez finalice el ensamble del mosaico, este será cargado automáticamente al
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2MosaicSymbology.png)
 
-4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono [ZonaEstudioEnvelope.shp](../../.shp/ZonaEstudioEnvelope.zip) y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
+4. En el menú _Customize / Toolbars_ active la barra de _3D Analyst_, seleccione el DEM correspondiente al mosaico, cree manualmente una línea interpolada de muestreo en la dirección NW - SE del polígono [ZonaEstudioEnvelope.shp](../../file/shp/ZonaEstudioEnvelope.zip) y visualice el gráfico de perfil. Rotule el gráfico de perfil como _Profile Graph NW - SE ASTER v3_
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ProfileGraph.png)
 
-5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los píxeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](../../.shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
+5. En ArcScene, agregue la grilla _ASTGTMV003Mosaic.tif_, simbolice como efecto de falso Hillshade y defina las elevaciones en Z a partir de los valores discretos de los píxeles de la misma grilla y en las propiedades de la escena establezca 20 como exageración vertical. Agregue el archivo de formas de la zona de estudio _[ZonaEstudio.shp](../../file/shp/ZonaEstudio.zip)_ y establezca la altura base a partir del DEM. Guarde la escena como _R.LTWB.sxd_ en la carpeta _.map_.
 
 ![R.LTWB](Screenshot/ArcSceneDesktop10.2.2Scene3D.png)
 
@@ -413,11 +412,11 @@ En este momento dispone de grillas integradas de elevación ASTER que cubren tod
 
 | Aplicación / grilla            | Descargar :open_file_folder:                                                                                                                           |
 |:-------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ArcGIS for Desktop / mosaic    | [part1.rar](../../.dem/ASTER/ASTGTMV003Mosaic.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003Mosaic.part2.rar)                                     |
-| ArcGIS for Desktop / hillshade | [part1.rar](../../.dem/ASTER/ASTGTMV003MosaicHillshade.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003MosaicHillshade.part2.rar)                   |
-| ArcGIS Pro / mosaic            | [part1.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISPro.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISPro.part2.rar)                   |
-| ArcGIS Pro / hillshade         | [part1.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part1.rar), [part2.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part2.rar) |
-| QGIS                           | [.rar](../../.dem/ASTER/ASTGTMV003MosaicQGIS.rar)                                                                                                      |
+| ArcGIS for Desktop / mosaic    | [part1.rar](../../file/dem/ASTER/ASTGTMV003Mosaic.part1.rar), [part2.rar](../../file/dem/ASTER/ASTGTMV003Mosaic.part2.rar)                                     |
+| ArcGIS for Desktop / hillshade | [part1.rar](../../file/dem/ASTER/ASTGTMV003MosaicHillshade.part1.rar), [part2.rar](../../file/dem/ASTER/ASTGTMV003MosaicHillshade.part2.rar)                   |
+| ArcGIS Pro / mosaic            | [part1.rar](../../file/dem/ASTER/ASTGTMV003MosaicArcGISPro.part1.rar), [part2.rar](../../file/dem/ASTER/ASTGTMV003MosaicArcGISPro.part2.rar)                   |
+| ArcGIS Pro / hillshade         | [part1.rar](../../file/dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part1.rar), [part2.rar](../../file/dem/ASTER/ASTGTMV003MosaicArcGISProHillshade.part2.rar) |
+| QGIS                           | [.rar](../../file/dem/ASTER/ASTGTMV003MosaicQGIS.rar)                                                                                                      |
 
 </div>
 
@@ -476,9 +475,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../UserCreation) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/4) | [Siguiente](../DEMSrtm) |
+| [Anterior](../UserCreation) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/4) | [Siguiente](../DEMSrtm) |
 |-----------------------------|-----------------------------------|----------------------------------------------------------------------------------|-------------------------|
 
 [^1]: Script .sh tomado de la ventana de descarga de https://search.earthdata.nasa.gov/ 
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
