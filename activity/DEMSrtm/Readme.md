@@ -1,4 +1,4 @@
-# Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30 m), SRTM v3.0 3 arcsec (90 m)
+# 2.3. Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30 m), SRTM v3.0 3 arcsec (90 m)
 Keywords: `NASA` `SRTM` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster`
 
 <br>![R.LTWB](Graph/DEMSrtm.png)
@@ -26,8 +26,8 @@ A partir del segundo semestre de 2019, el modelo de terreno SRTM v3, ya se encue
 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [Cygwin terminal for Windows](https://www.cygwin.com/)
-* Cuenta de usuario [NASA Eathdata](../UserCreation).
-* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
+* Cuenta de usuario [NASA Eathdata](../UserCreation/Readme.md).
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
 
 
 ### Diagrama general de procesos
@@ -44,7 +44,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 1. Ingresar al servicio web de la NASA: https://search.earthdata.nasa.gov y dar clic en Earthdata login.
 
-> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](../UserCreation)
+> Realizar el ingreso de usuario usando _LOG IN_ o realizar el registro de nuevo usuario dando clic en _REGISTER_ [(ver instrucciones detalladas)](../UserCreation/Readme.md)
 
 2. Delimitar en la vista satelital la extensión de la zona a descargar, para ello podrá utilizar diferentes métodos como:
 
