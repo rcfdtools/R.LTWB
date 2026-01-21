@@ -3,7 +3,7 @@
 En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, crearemos el mapa de isorendimientos medios y desarrollaremos el balance a partir de cuencas o áreas de aportación delimitadas.
 
 
-# Balance hidrológico distribuido usando SIG
+# 5.1. Balance hidrológico distribuido usando SIG
 Keywords: `ETR` `Precipitation` `FDR` `Budyko` `Turc` `Dekop` `Raster-calculator` `FAC`
 
 ![R.LTWB](Graph/LTWB.png)
