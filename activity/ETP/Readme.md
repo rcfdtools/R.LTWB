@@ -1,6 +1,4 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Mapa de evapotranspiración potencial - ETP
+# 4.3. Mapa de evapotranspiración potencial - ETP
 Keywords: `ETP` `Cenicafé` `Raster-calculator`
 
 ![R.LTWB](Graph/ETP.png)
@@ -19,7 +17,7 @@ Donde,
 
 > Durante el proceso de recolección y análisis de información a partir de estaciones terrestres del IDEAM, se obtuvo la serie de evapotranspiración potencial solo en una estación, la cual no es suficiente para generar un mapa que cubra la totalidad de la zona de estudio. Por tal motivo se recurre a la expresión propuesta por Cenicafé para Colombia.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=EoagZB5Y66c" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=EoagZB5Y66c" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivo
@@ -32,7 +30,7 @@ Donde,
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* Modelo digital de elevación ALOS PALSAR. [:mortar_board:Aprender.](../../Section02/DEMAlos)
+* Modelo digital de elevación ALOS PALSAR. [:mortar_board:Aprender.](../DEMAlos/Readme.md)
 
 
 ### Procedimiento general
@@ -52,7 +50,7 @@ Donde,
 
 * Expresión Raster Calculator: `1700.17*Exp((-0.0002*"APFBSRT1MosaicArcGISProZE.tif"))`
 * Mapa: ETPCenicafe.tif
-* Grilla :open_file_folder:: [Part1](../../.grid/ETPCenicafe.part01.rar), [Part2](../../.grid/ETPCenicafe.part02.rar), [Part3](../../.grid/ETPCenicafe.part03.rar)  
+* Grilla :open_file_folder:: [Part1](../../file/grid/ETPCenicafe.part01.rar), [Part2](../../file/grid/ETPCenicafe.part02.rar), [Part3](../../file/grid/ETPCenicafe.part03.rar)  
 
 > Debido al tamaño del archivo generado (aproximadamente 1.1 GB), la grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 
@@ -67,7 +65,7 @@ En el mapa creado, podrá observar que los valores de evapotranspiración obteni
 En este momento dispone de la grilla de evapotranspiración potencial, requerida para la generación de los mapas de evapotranspiración real.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -104,9 +102,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../Temperature) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/30) | [Actividad siguiente](../ETR) |
-|--------------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------|
+| [Anterior](../Temperature/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/30) | [Siguiente](../ETR/Readme.md) |
+|--------------------------------------|---------------------------|------------------------------------------------------------------------|---------------------|
 
 [^1]: http://julianrojo.weebly.com/uploads/1/2/0/0/12008328/metodos_estimacion_de_et.pdf
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
