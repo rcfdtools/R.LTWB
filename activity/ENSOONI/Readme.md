@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Análisis de cambio climático para segmentación de series
+# Análisis de cambio climático para segmentación de series
 Keywords: `ENSO` `ONI` `El-Niño` `La-Niña` `Neutro` `matplotlib` `pandas` `numpy` 
 
 <div align="center"><img alt="R.LTWB" src="Graph/ENSOONI.png" width="95%"></div> 
 
 En esta actividad se realiza la identificación de años asociados a fenómenos climatológicos de El Niño, La Niña y Neutro.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=oO48u2LopqY" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=oO48u2LopqY" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 El Niño es un fenómeno climático relacionado con el calentamiento del Pacífico oriental ecuatorial, el cual se manifiesta erráticamente como cíclico —Arthur Strahler habla de ciclos de entre tres y ocho años—, y consiste en realidad en la fase cálida del patrón climático del Pacífico ecuatorial, denominado El Niño-Oscilación del Sur (El Niño-Southern Oscillation, ENSO por sus siglas en inglés), donde la fase de enfriamiento recibe el nombre de La Niña.3 4. Este fenómeno, en sus manifestaciones más intensas, provoca estragos en la zona intertropical y ecuatorial debido a las intensas lluvias, afectando principalmente a la región costera del Pacífico de América del Sur.[^1]
 
@@ -40,7 +38,7 @@ Para la clasificación de los años con eventos de Niño, Niña o Neutros, en es
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. Para realizar la descarga, procesamiento y marcado de años por fenómeno climatológico, descargue el script [ENSOONI.py](../../.src/ENSOONI.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
+1. Para realizar la descarga, procesamiento y marcado de años por fenómeno climatológico, descargue el script [ENSOONI.py](../../file/src/ENSOONI.py) y guárdelo en la carpeta local `D:\R.LTWB\.src` de su equipo.
 
 **Funcionalidades del script**
 
@@ -317,7 +315,7 @@ print_log('\n[^1]: https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring
 
 2. Cree una nueva carpeta en blanco con el nombre `ENSOONI` en su directorio de proyecto local `D:\R.LTWB\.datasets`.
 
-3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\.src\ENSOONI.py](../../.src/ENSOONI.py), y verifique y defina las variables `consecutive_event = 5` y `threshold = 0.5`:
+3. Desde el editor de texto [Notepad++](https://notepad-plus-plus.org/), abra el archivo [D:\R.LTWB\file\src\ENSOONI.py](../../file/src/ENSOONI.py), y verifique y defina las variables `consecutive_event = 5` y `threshold = 0.5`:
 
 ![R.LTWB](Screenshot/NotepadPlusENSOONIpy.png)
 
@@ -350,7 +348,7 @@ Luego de la ejecución, podrá observar que en la carpeta local `D:\R.LTWB\.data
 
 ![R.LTWB](Screenshot/Windows11CMDENSOONI8.png)
 
-Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [ONI_Eval.md](../../.datasets/ENSOONI/ONI_Eval.md).
+Una vez finalizado el proceso de ejecución, podrá sincronizar en la nube los resultados en su repositorio de proyectos de GitHub y podrá observar el reporte detallado en formato Markdown [ONI_Eval.md](../../file/datasets/ENSOONI/ONI_Eval.md).
 
 ![R.LTWB](Screenshot/Windows11CMDENSOONI9.png)
 ![R.LTWB](Screenshot/Windows11CMDENSOONI10.png)
@@ -365,8 +363,8 @@ Durante el proceso de ejecución del script, se generan automáticamente dos tab
 
 | Tabla .csv :open_file_folder:                                                      | Descripción                                                                                                   |
 |------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [ONI_Eval_NonConsecutive.csv](../../.datasets/ENSOONI/ONI_Eval_NonConsecutive.csv) | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos no consecutivos identificados. |
-| [ONI_Eval_Consecutive.csv](../../.datasets/ENSOONI/ONI_Eval_Consecutive.csv)       | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos consecutivos identificados.    |
+| [ONI_Eval_NonConsecutive.csv](../../file/datasets/ENSOONI/ONI_Eval_NonConsecutive.csv) | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos no consecutivos identificados. |
+| [ONI_Eval_Consecutive.csv](../../file/datasets/ENSOONI/ONI_Eval_Consecutive.csv)       | Tabla de resultados con marcado de evento por año a partir de 5 o más periodos consecutivos identificados.    |
 
 Los archivos de resultados .csv generados por el script utilizan la siguiente estructura:
 
@@ -382,10 +380,10 @@ Los archivos de resultados .csv generados por el script utilizan la siguiente es
 
 > En la tabla anterior, el campo `Tipo` es asociado a los tipos obtenidos en el dataframe procesado por Pandas en Python.  
 
-En este momento, dispone del reporte detallado de marcación de años por evento climatológico [ONI_Eval.md](../../.datasets/ENSOONI/ONI_Eval.md) y dos tablas en formato de texto separado por comas `.csv` para la posterior segmentación de las series de parámetros hidroclimatológicos.
+En este momento, dispone del reporte detallado de marcación de años por evento climatológico [ONI_Eval.md](../../file/datasets/ENSOONI/ONI_Eval.md) y dos tablas en formato de texto separado por comas `.csv` para la posterior segmentación de las series de parámetros hidroclimatológicos.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -422,9 +420,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../Impute) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/26) | [Actividad siguiente](../Agg) |
+| [Actividad anterior](../Impute/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/26) | [Actividad siguiente](../Agg/Readme.md) |
 |---------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------|
 
 [^1]: https://es.wikipedia.org/
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
