@@ -1,6 +1,8 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+# :large_blue_circle:Sección 4 - Análisis espacial de variables climatológicas
 
-## Mapa de precipitación total
+Durante el proceso de conformación de información para el desarrollo del balance hidrológico, es necesaria la construcción de mapas continuos e interpolados que representen espacialmente el comportamiento de las diferentes variables requeridas y fenómenos climatológicos asociados a nivel multianual.
+
+# Mapa de precipitación total
 Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
 ![R.LTWB](Graph/Rain.png)

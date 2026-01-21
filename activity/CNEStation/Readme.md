@@ -1,3 +1,8 @@
+# :large_blue_circle:Sección 3 - Descarga, procesamiento y análisis de datos hidroclimatológicos
+
+En esta sección se obtienen, procesan y analizan los datos hidro-climatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico. Complementariamente, implementaremos scripts en Python para automatizar varias de las actividades desarrolladas, facilitando su replicación a otros casos de estudio o a proyectos particulares.
+
+
 # Catálogo nacional de estaciones - CNE y selección de estaciones para la zona de estudio
 Keywords: `IDEAM` `Weather-station` `Display-XY-Data` `Buffer` `Merge` `Bar-graph` `Select-By-Location` `Python` `LYearS` `LYearSTW` `Definition-Query` `Normal-distribution` `Statistics`
 
