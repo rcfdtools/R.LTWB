@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Mapa de evapotranspiración real - ETR
+# 4.4. Mapa de evapotranspiración real - ETR
 Keywords: `ETR` `Cenicafé` `Budyco` `Turc` `Dekop` `Raster-calculator`
 
 ![R.LTWB](Graph/ETR.png)
 
 En esta actividad y a partir de los mapas de precipitación total, temperatura y evapotranspiración potencial, generamos los mapas de evapotranspiración real utilizando las ecuaciones de Budyco, Dekop y Turc.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=Stl_vfzF0bo" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=Stl_vfzF0bo" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -22,9 +20,9 @@ En esta actividad y a partir de los mapas de precipitación total, temperatura y
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* Mapas de precipitación total. [:mortar_board:Aprender.](../../Section04/Rain)
-* Mapas de temperatura media. [:mortar_board:Aprender.](../../Section04/Rain)
-* Mapa de evapotranspiración potencial. [:mortar_board:Aprender.](../../Section04/ETP)
+* Mapas de precipitación total. [:mortar_board:Aprender.](../Rain/Readme.md)
+* Mapas de temperatura media. [:mortar_board:Aprender.](../Rain/Readme.md)
+* Mapa de evapotranspiración potencial. [:mortar_board:Aprender.](../ETP/Readme.md)
 
 
 ### Procedimiento general ETR Budyko
@@ -44,7 +42,7 @@ Donde,
 * ETP: evapotranspiración potencial, mm/año
 * P: precipitación total, mm/año 
 
-En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fué creado en la primera actividad de la sección 4 de este curso.
+En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fue creado en la primera actividad de la sección 4 de este curso.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenProject.png)
 
@@ -54,10 +52,10 @@ Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de
 
 | Mapa                   | Expresión Raster Calculator                                                                                                                                                                                               | Rango mm/año     | Grilla :open_file_folder:                                                                                                                                                                                      |
 |:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"* TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../.grid/ETRBudykoComposite.part01.rar), [Part2](../../.grid/ETRBudykoComposite.part02.rar), [Part3](../../.grid/ETRBudykoComposite.part03.rar), [Part4](../../.grid/ETRBudykoComposite.part04.rar) |
-| ETRBudykoNina.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNina.tif"* TanH("RainTotalNina.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNina.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNina.tif"))))`                     | 510.62 - 1568.72 | [Part1](../../.grid/ETRBudykoNina.part01.rar), [Part2](../../.grid/ETRBudykoNina.part02.rar), [Part3](../../.grid/ETRBudykoNina.part03.rar), [Part4](../../.grid/ETRBudykoNina.part04.rar)                     |
-| ETRBudykoNino.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNino.tif"* TanH("RainTotalNino.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNino.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNino.tif"))))`                     | 500.67 - 1543.08 | [Part1](../../.grid/ETRBudykoNino.part01.rar), [Part2](../../.grid/ETRBudykoNino.part02.rar), [Part3](../../.grid/ETRBudykoNino.part03.rar), [Part4](../../.grid/ETRBudykoNino.part04.rar)                     |
-| ETRBudykoNeutral.tif   | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNeutral.tif"* TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNeutral.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))))`         | 507.28 - 1553.99 | [Part1](../../.grid/ETRBudykoNeutral.part01.rar), [Part2](../../.grid/ETRBudykoNeutral.part02.rar), [Part3](../../.grid/ETRBudykoNeutral.part03.rar), [Part4](../../.grid/ETRBudykoNeutral.part04.rar)         |
+| ETRBudykoComposite.tif | `SquareRoot(("ETPCenicafe.tif"*"RainTotalComposite.tif"* TanH("RainTotalComposite.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalComposite.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalComposite.tif"))))` | 507.01 - 1555.29 | [Part1](../../file/grid/ETRBudykoComposite.part01.rar), [Part2](../../file/grid/ETRBudykoComposite.part02.rar), [Part3](../../file/grid/ETRBudykoComposite.part03.rar), [Part4](../../file/grid/ETRBudykoComposite.part04.rar) |
+| ETRBudykoNina.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNina.tif"* TanH("RainTotalNina.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNina.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNina.tif"))))`                     | 510.62 - 1568.72 | [Part1](../../file/grid/ETRBudykoNina.part01.rar), [Part2](../../file/grid/ETRBudykoNina.part02.rar), [Part3](../../file/grid/ETRBudykoNina.part03.rar), [Part4](../../file/grid/ETRBudykoNina.part04.rar)                     |
+| ETRBudykoNino.tif      | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNino.tif"* TanH("RainTotalNino.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNino.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNino.tif"))))`                     | 500.67 - 1543.08 | [Part1](../../file/grid/ETRBudykoNino.part01.rar), [Part2](../../file/grid/ETRBudykoNino.part02.rar), [Part3](../../file/grid/ETRBudykoNino.part03.rar), [Part4](../../file/grid/ETRBudykoNino.part04.rar)                     |
+| ETRBudykoNeutral.tif   | `SquareRoot(("ETPCenicafe.tif"*"RainTotalNeutral.tif"* TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif"))* ((1- CosH("ETPCenicafe.tif"/"RainTotalNeutral.tif")) +(SinH("ETPCenicafe.tif"/"RainTotalNeutral.tif"))))`         | 507.28 - 1553.99 | [Part1](../../file/grid/ETRBudykoNeutral.part01.rar), [Part2](../../file/grid/ETRBudykoNeutral.part02.rar), [Part3](../../file/grid/ETRBudykoNeutral.part03.rar), [Part4](../../file/grid/ETRBudykoNeutral.part04.rar)         |
 
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
@@ -99,10 +97,10 @@ Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de
 
 | Mapa                  | Expresión Raster Calculator                                            | Rango mm/año     | Grilla :open_file_folder:                                                                                                                                                                                  |
 |:----------------------|:-----------------------------------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ETRDekopComposite.tif | `"ETPCenicafe.tif" * TanH("RainTotalComposite.tif"/"ETPCenicafe.tif")` | 541.99 - 1686.86 | [Part1](../../.grid/ETRDekopComposite.part01.rar), [Part2](../../.grid/ETRDekopComposite.part02.rar), [Part3](../../.grid/ETRDekopComposite.part03.rar), [Part4](../../.grid/ETRDekopComposite.part04.rar) |
-| ETRDekopNina.tif      | `"ETPCenicafe.tif" * TanH("RainTotalNina.tif"/"ETPCenicafe.tif")`      | 542.43 - 1691.67 | [Part1](../../.grid/ETRDekopNina.part01.rar), [Part2](../../.grid/ETRDekopNina.part02.rar), [Part3](../../.grid/ETRDekopNina.part03.rar), [Part4](../../.grid/ETRDekopNina.part04.rar)                     |
-| ETRDekopNino.tif      | `"ETPCenicafe.tif" * TanH("RainTotalNino.tif"/"ETPCenicafe.tif")`      | 538.11 - 1680.25 | [Part1](../../.grid/ETRDekopNino.part01.rar), [Part2](../../.grid/ETRDekopNino.part02.rar), [Part3](../../.grid/ETRDekopNino.part03.rar), [Part4](../../.grid/ETRDekopNino.part04.rar)                     |
-| ETRDekopNeutral.tif   | `"ETPCenicafe.tif" * TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif")`   | 542.04 - 1686.36 | [Part1](../../.grid/ETRDekopNeutral.part01.rar), [Part2](../../.grid/ETRDekopNeutral.part02.rar), [Part3](../../.grid/ETRDekopNeutral.part03.rar), [Part4](../../.grid/ETRDekopNeutral.part04.rar)         |
+| ETRDekopComposite.tif | `"ETPCenicafe.tif" * TanH("RainTotalComposite.tif"/"ETPCenicafe.tif")` | 541.99 - 1686.86 | [Part1](../../file/grid/ETRDekopComposite.part01.rar), [Part2](../../file/grid/ETRDekopComposite.part02.rar), [Part3](../../file/grid/ETRDekopComposite.part03.rar), [Part4](../../file/grid/ETRDekopComposite.part04.rar) |
+| ETRDekopNina.tif      | `"ETPCenicafe.tif" * TanH("RainTotalNina.tif"/"ETPCenicafe.tif")`      | 542.43 - 1691.67 | [Part1](../../file/grid/ETRDekopNina.part01.rar), [Part2](../../file/grid/ETRDekopNina.part02.rar), [Part3](../../file/grid/ETRDekopNina.part03.rar), [Part4](../../file/grid/ETRDekopNina.part04.rar)                     |
+| ETRDekopNino.tif      | `"ETPCenicafe.tif" * TanH("RainTotalNino.tif"/"ETPCenicafe.tif")`      | 538.11 - 1680.25 | [Part1](../../file/grid/ETRDekopNino.part01.rar), [Part2](../../file/grid/ETRDekopNino.part02.rar), [Part3](../../file/grid/ETRDekopNino.part03.rar), [Part4](../../file/grid/ETRDekopNino.part04.rar)                     |
+| ETRDekopNeutral.tif   | `"ETPCenicafe.tif" * TanH("RainTotalNeutral.tif"/"ETPCenicafe.tif")`   | 542.04 - 1686.36 | [Part1](../../file/grid/ETRDekopNeutral.part01.rar), [Part2](../../file/grid/ETRDekopNeutral.part02.rar), [Part3](../../file/grid/ETRDekopNeutral.part03.rar), [Part4](../../file/grid/ETRDekopNeutral.part04.rar)         |
 
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
@@ -172,10 +170,10 @@ Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de
 
 | Mapa                 | Expresión Raster Calculator                                                                                                                                                                                                                                                                                                                         | Rango mm/año     | Grilla :open_file_folder:                                                                                                                                                                              |
 |:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ETRTurcComposite.tif | `Con((("RainTotalComposite.tif"/(300+(25*"TemperatureMedComposite.tif") +(0.05*(Power("TemperatureMedComposite.tif",3)))))>0.316), ("RainTotalComposite.tif"/(SquareRoot(0.9+(Power ("RainTotalComposite.tif",2)/Power((300+(25* "TemperatureMedComposite.tif")+(0.05*Power("TemperatureMedComposite.tif" ,3))),2))))),("RainTotalComposite.tif"))` | 296.83 - 2041.01 | [Part1](../../.grid/ETRTurcComposite.part01.rar), [Part2](../../.grid/ETRTurcComposite.part02.rar), [Part3](../../.grid/ETRTurcComposite.part03.rar), [Part4](../../.grid/ETRTurcComposite.part04.rar) |
-| ETRTurcNina.tif      | `Con((("RainTotalNina.tif"/(300+(25*"TemperatureMedNina.tif") +(0.05*(Power("TemperatureMedNina.tif",3)))))>0.316), ("RainTotalNina.tif"/(SquareRoot(0.9+(Power ("RainTotalNina.tif",2)/Power((300+(25* "TemperatureMedNina.tif ")+(0.05*Power("TemperatureMedNina.tif" ,3))),2))))),("RainTotalNina.tif"))`                                        | 297.42 - 2044.30 | [Part1](../../.grid/ETRTurcNina.part01.rar), [Part2](../../.grid/ETRTurcNina.part02.rar), [Part3](../../.grid/ETRTurcNina.part03.rar), [Part4](../../.grid/ETRTurcNina.part04.rar)                     |
-| ETRTurcNino.tif      | `Con((("RainTotalNino.tif"/(300+(25*"TemperatureMedNino.tif") +(0.05*(Power("TemperatureMedNino.tif",3)))))>0.316), ("RainTotalNino.tif"/(SquareRoot(0.9+(Power ("RainTotalNino.tif",2)/Power((300+(25* "TemperatureMedNino.tif ")+(0.05*Power("TemperatureMedNino.tif" ,3))),2))))),("RainTotalNino.tif"))`                                        | 295.58 - 2038.32 | [Part1](../../.grid/ETRTurcNino.part01.rar), [Part2](../../.grid/ETRTurcNino.part02.rar), [Part3](../../.grid/ETRTurcNino.part03.rar), [Part4](../../.grid/ETRTurcNino.part04.rar)                     |
-| ETRTurcNeutral.tif   | `Con((("RainTotalNeutral.tif"/(300+(25*"TemperatureMedNeutral.tif") +(0.05*(Power("TemperatureMedNeutral.tif",3)))))>0.316), ("RainTotalNeutral.tif"/(SquareRoot(0.9+(Power ("RainTotalNeutral.tif",2)/Power((300+(25* "TemperatureMedNeutral.tif ")+(0.05*Power("TemperatureMedNeutral.tif" ,3))),2))))),("RainTotalNeutral.tif"))`                | 296.88 - 2026.64 | [Part1](../../.grid/ETRTurcNeutral.part01.rar), [Part2](../../.grid/ETRTurcNeutral.part02.rar), [Part3](../../.grid/ETRTurcNeutral.part03.rar), [Part4](../../.grid/ETRTurcNeutral.part04.rar)         |
+| ETRTurcComposite.tif | `Con((("RainTotalComposite.tif"/(300+(25*"TemperatureMedComposite.tif") +(0.05*(Power("TemperatureMedComposite.tif",3)))))>0.316), ("RainTotalComposite.tif"/(SquareRoot(0.9+(Power ("RainTotalComposite.tif",2)/Power((300+(25* "TemperatureMedComposite.tif")+(0.05*Power("TemperatureMedComposite.tif" ,3))),2))))),("RainTotalComposite.tif"))` | 296.83 - 2041.01 | [Part1](../../file/grid/ETRTurcComposite.part01.rar), [Part2](../../file/grid/ETRTurcComposite.part02.rar), [Part3](../../file/grid/ETRTurcComposite.part03.rar), [Part4](../../file/grid/ETRTurcComposite.part04.rar) |
+| ETRTurcNina.tif      | `Con((("RainTotalNina.tif"/(300+(25*"TemperatureMedNina.tif") +(0.05*(Power("TemperatureMedNina.tif",3)))))>0.316), ("RainTotalNina.tif"/(SquareRoot(0.9+(Power ("RainTotalNina.tif",2)/Power((300+(25* "TemperatureMedNina.tif ")+(0.05*Power("TemperatureMedNina.tif" ,3))),2))))),("RainTotalNina.tif"))`                                        | 297.42 - 2044.30 | [Part1](../../file/grid/ETRTurcNina.part01.rar), [Part2](../../file/grid/ETRTurcNina.part02.rar), [Part3](../../file/grid/ETRTurcNina.part03.rar), [Part4](../../file/grid/ETRTurcNina.part04.rar)                     |
+| ETRTurcNino.tif      | `Con((("RainTotalNino.tif"/(300+(25*"TemperatureMedNino.tif") +(0.05*(Power("TemperatureMedNino.tif",3)))))>0.316), ("RainTotalNino.tif"/(SquareRoot(0.9+(Power ("RainTotalNino.tif",2)/Power((300+(25* "TemperatureMedNino.tif ")+(0.05*Power("TemperatureMedNino.tif" ,3))),2))))),("RainTotalNino.tif"))`                                        | 295.58 - 2038.32 | [Part1](../../file/grid/ETRTurcNino.part01.rar), [Part2](../../file/grid/ETRTurcNino.part02.rar), [Part3](../../file/grid/ETRTurcNino.part03.rar), [Part4](../../file/grid/ETRTurcNino.part04.rar)                     |
+| ETRTurcNeutral.tif   | `Con((("RainTotalNeutral.tif"/(300+(25*"TemperatureMedNeutral.tif") +(0.05*(Power("TemperatureMedNeutral.tif",3)))))>0.316), ("RainTotalNeutral.tif"/(SquareRoot(0.9+(Power ("RainTotalNeutral.tif",2)/Power((300+(25* "TemperatureMedNeutral.tif ")+(0.05*Power("TemperatureMedNeutral.tif" ,3))),2))))),("RainTotalNeutral.tif"))`                | 296.88 - 2026.64 | [Part1](../../file/grid/ETRTurcNeutral.part01.rar), [Part2](../../file/grid/ETRTurcNeutral.part02.rar), [Part3](../../file/grid/ETRTurcNeutral.part03.rar), [Part4](../../file/grid/ETRTurcNeutral.part04.rar)         |
 
 > Debido al tamaño de los archivos generados (aproximadamente 1.1 GB por cada grilla), las grillas han sido comprimidas en archivos .rar en partes de 95 MB.
 
@@ -198,7 +196,7 @@ ETR Turc Neutro
 En este momento dispone de las grillas de evapotranspiración real, requeridas para el balance hidrológico de largo plazo.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -235,7 +233,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../ETP) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/31) | [Actividad siguiente](../../Section05) |
-|------------------------------|---------------------------|------------------------------------------------------------------------|----------------------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+| [Anterior](../ETP/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/31) | [Siguiente](../LTWB/Readme.md) |
+|------------------------------|---------------------------|------------------------------------------------------------------------|--------------------------------|
