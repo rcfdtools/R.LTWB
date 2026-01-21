@@ -1,4 +1,4 @@
-# Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
+# 2.5. Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
 Keywords: `IGAC` `GDB` `1:100000` `Pairwise-Clip` `Clip` `Polygon-to-Centerline` `Merge` `HCMGIS` `Skeleton-Medial-Axis` `Edit` `Extend`
 
 <br>![R.LTWB](Graph/GDB100k.png)
@@ -26,7 +26,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
 * QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
-* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
 
 
 ### Diagrama general de procesos
@@ -231,7 +231,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../DEMAlos/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/7) | [Siguiente](../AgreeDEM/Readme.md) |
+| [Anterior](../DEMAlos/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/7) | [Siguiente](../AgreeDEM/Readme.md) |
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|--------------------------|
 
 [^1]: https://www.igac.gov.co/sites/igac.gov.co/files/anexo_1.1_catalogo_objetos_cartografiabasica_v1.0_.pdf
