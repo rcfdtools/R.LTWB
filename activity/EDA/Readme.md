@@ -1,4 +1,4 @@
-# Exploración y análisis de series - EDA - Representación gráfica
+# 3.5. Exploración y análisis de series - EDA - Representación gráfica
 Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `unique` `size` `correlation` `pivot-table` `stats` `histogram` `density` `boxplot` 
 
 <div align="center"><img alt="R.LTWB" src="Graph/EDA.png" width="95%"></div> 
@@ -30,7 +30,7 @@ La exploración y análisis de datos o EDA por sus siglas en inglés, se refiere
 * [Python 3+](https://www.python.org/)
 * [Pandas](https://pandas.pydata.org/docs/index.html) para Python
 * [Tabulate](https://pypi.org/project/tabulate/) para Python, requerido para impresión de tablas en formato Markdown desde pandas.
-* Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload)
+* Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload/Readme.md)
 
 
 ### Procedimiento general
