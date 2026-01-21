@@ -3,7 +3,7 @@
 En esta sección realizaremos la descarga y procesamiento de diferentes tipos de modelos digitales de elevación, incluido el reacondicionamiento o ajuste a partir de la incrustación de los vectores de drenaje.
 
 
-# Creación de usuario NASA Earthdata 
+# 2.1. Creación de usuario NASA Earthdata 
 Keywords: `NASA` `EarthData` `User-creation`
 
 <br>Para la descarga de los modelos digitales de elevación y la información climatológica obtenida mediante sensores remotos, es necesaria la creación de una cuenta de usuario en el servidor EarthData de la NASA o Agencia Nacional de Aeronáutica y Administración Espacial de los Estados Unidos de América. Para la descarga de imágenes de modelos de terreno ASTER GDEM con resolución 12.5 m, no es necesaria la creación de una cuenta independiente en el servidor Vertex de la Universidad de Alaska, se utiliza la misma cuenta del servicio EarthData.[^1]
