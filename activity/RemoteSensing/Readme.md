@@ -1,4 +1,4 @@
-# Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
+# 3.4. Obtención de series de datos discretos climatológicos satelitales y correlación con datos terrestres
 Keywords: `Remote-sensing` `CHIRPS` `Correlation` `Pearson` `Kendall` `Spearman` `Scatter-plot` `pandas` `rasterio` `requests` `tabulate`
 
 <div align="center"><img alt="R.LTWB" src="Graph/RemoteSensing.png" width="75%"><sub><br>Logo tomado de https://www.chc.ucsb.edu/data/chirps.</sub><br><br></div> 
@@ -26,7 +26,7 @@ Desde el año 1999, el Servicio Geológico de los Estados Unidos de América –
 * [Rasterio](https://pypi.org/project/rasterio/) para Python
 * [Requests](https://requests.readthedocs.io/) para Python
 * [Tabulate](https://pypi.org/project/tabulate/) para Python, requerido para impresión de tablas en formato Markdown desde pandas.
-* Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload)
+* Series de datos discretos climatológicos de estaciones terrestres del IDEAM. [:mortar_board:Aprender.](../CNEStationDatasetDownload/Readme.md)
 
 
 ### Procedimiento general - Precipitación CHIRPS [^1] 
@@ -1018,7 +1018,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../CNEStationDatasetDownload/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/22) | [Actividad siguiente](../EDA/Readme.md) |
+| [Anterior](../CNEStationDatasetDownload/Readme.md) | [Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/22) | [Siguiente](../EDA/Readme.md) |
 |----------------------------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------|
 
 [^1]: https://www.chc.ucsb.edu/data/chirps
