@@ -1,6 +1,4 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-##  Relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL
+#  Relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL
 Keywords: `Fill-DEM` `AgreeDEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
 
 ![R.LTWB](Graph/FillDEM.png)
@@ -9,7 +7,7 @@ Cuando una celda se encuentra rodeada por celdas de mayor elevación, la escorre
 
 Los modelos digitales de elevación obtenidos a partir de información satelital, contienen información relacionada con la superficie terrestre (Digital Surface model – DSM, cubiertas de construcciones, línea superior del canopy en vegetación) y no a las elevaciones más bajas en el terreno. Es por ello que al ejecutar el procedimiento de relleno de sumideros se pueden identificar múltiples localizaciones y áreas que pueden producir encharcamiento interrumpiendo el drenaje continuo a largo plazo.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=lr8RwhQWn-g" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=lr8RwhQWn-g" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -25,7 +23,7 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas DEM ASTER GDEM 30m, SRTM 30m y ALOS PALSAR 12.5m reacondicionadas. ](../../HECGeoHMS/Layers)[:mortar_board:Aprender.](../AgreeDEM)
+* [Grillas DEM ASTER GDEM 30m, SRTM 30m y ALOS PALSAR 12.5m reacondicionadas. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../AgreeDEM)
 
 
 ### Diagrama general de procesos
@@ -44,9 +42,9 @@ El relleno de sumideros puede ser realizado con Spatial Analyst Tools de ArcGIS 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) que contiene las grillas DEM reacondicionadas. En caso de que este generando un mapa nuevo, cargue directamente las grillas contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) que contiene las grillas DEM reacondicionadas. En caso de que este generando un mapa nuevo, cargue directamente las grillas contenidas en el directorio _[file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
-2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Fill Sinks_ y cree la grilla de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los nombres ASTERFil.tif, SRTMFil.tif y ALOSFil.tif en la ruta _D:\R.LTWB\HECGeoHMS\Layers\_
+2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Fill Sinks_ y cree la grilla de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los nombres ASTERFil.tif, SRTMFil.tif y ALOSFil.tif en la ruta _D:\R.LTWB\file\hec\HECGeoHMS\Layers\_
 
 > En esta herramienta puede establecer el límite de relleno con la opción _Fill Threshold_ y delimitar la zona a ser rellenada con la selección de un polígono mediante _Input Deranged Polygon Feature Class_.
 
@@ -67,9 +65,9 @@ Resultados, ventana de ejecución grilla ALOS (dt: 01h06'35")
 
 | MDE reacondicionado | Cota mínima, m | Cota máxima, m  | Relleno de sumideros | Cota mínima, m | Cota máxima, m |                                                                  Descargar FIL :open_file_folder:                                                                   |
 |:-------------------:|:--------------:|:---------------:|:--------------------:|:--------------:|:--------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|  ASTERAgreeDEM.tif  |     -1006      |      5687       |     ASTERFil.tif     |       0        |      5687      |                                                             [.rar](../../HECGeoHMS/Layers/ASTERFil.rar)                                                             |
-|  SRTMAgreeDEM.tif   |     -1044      |      5696       |     SRTMFil.tif      |       -4       |      5696      |                                                             [.rar](../../HECGeoHMS/Layers/SRTMFil.rar)                                                              |
-|  ALOSAgreeDEM.tif   |     -1046      |      5709       |     ALOSFil.tif      |       0        |      5687      | [part1.rar](../../HECGeoHMS/Layers/ALOSFil.part1.rar), [part2.rar](../../HECGeoHMS/Layers/ALOSFil.part2.rar), [part3.rar](../../HECGeoHMS/Layers/ALOSFil.part3.rar) |
+|  ASTERAgreeDEM.tif  |     -1006      |      5687       |     ASTERFil.tif     |       0        |      5687      |                                                             [.rar](../../file/hec/HECGeoHMS/Layers/ASTERFil.rar)                                                             |
+|  SRTMAgreeDEM.tif   |     -1044      |      5696       |     SRTMFil.tif      |       -4       |      5696      |                                                             [.rar](../../file/hec/HECGeoHMS/Layers/SRTMFil.rar)                                                              |
+|  ALOSAgreeDEM.tif   |     -1046      |      5709       |     ALOSFil.tif      |       0        |      5687      | [part1.rar](../../file/hec/HECGeoHMS/Layers/ALOSFil.part1.rar), [part2.rar](../../file/hec/HECGeoHMS/Layers/ALOSFil.part2.rar), [part3.rar](../../file/hec/HECGeoHMS/Layers/ALOSFil.part3.rar) |
 
 | Los valores de cotas mínimas pueden variar dependiendo de la versión de ArcGIS, la versión de HEC-GeoHMS o la herramienta utilizada para el relleno.
 
@@ -81,7 +79,7 @@ Resultados, ventana de ejecución grilla ALOS (dt: 01h06'35")
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERSinkLocations.png)
 
-4. Visualice la tabla de atributos de la grilla [ASTERSinkLocations.tif](../../HECGeoHMS/Layers/ASTERSinkLocations.rar) que contiene valores discretos contables de 1 a 50 metros de diferencia de elevación y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
+4. Visualice la tabla de atributos de la grilla [ASTERSinkLocations.tif](../../file/hec/HECGeoHMS/Layers/ASTERSinkLocations.rar) que contiene valores discretos contables de 1 a 50 metros de diferencia de elevación y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFillDEMASTERSinkLocationsGraph.png)
 
@@ -111,7 +109,7 @@ HEC-HMS grilla de resultados con localización de sumideros
 En este momento, dispone de grillas de relleno de sumideros para marcación de direcciones de flujo.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -150,7 +148,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../AgreeDEM) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/9) | [Siguiente](../FdrDEM) |
+| [Anterior](../AgreeDEM/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/9) | [Siguiente](../FdrDEM/Readme.md) |
 |-------------------------|-----------------------------------|----------------------------------------------------------------------------------|------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
