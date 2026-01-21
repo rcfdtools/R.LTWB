@@ -30,7 +30,7 @@ La siguiente expresión permite determinar el caudal medio en cada celda de terr
 
 <div align="center">
 
-Qm = (( P – E ) * A) / t
+$Qm = (( P – E ) * A) / t$
 
 </div>
 
