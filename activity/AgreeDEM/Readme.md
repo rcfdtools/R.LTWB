@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
+# Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
 Keywords: `AgreeDEM` `DEM-Reconditioning` `DEM-burning` `Buffer` `Feature-Envelope-To-Polygon` `Raster-Clip` `HEC-HMS` `HEC-GeoHMS` `Arc-Hydro-Tools-Pro` `Feature-to Raster`
 
 ![R.LTWB](Graph/AgreeDEM.png)
 
 Para garantizar que la acumulación del flujo se realice sobre las celdas del modelo de terreno y por los cauces o drenajes obtenidos o digitalizados, es necesario reacondicionar los modelos digitales de elevación DEM incrustando los drenajes. Este procedimiento es especialmente requerido en zonas predominantemente planas o en zonas donde no puedan ser identificadas las celdas correspondientes a los drenajes.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=VJgsJpyn-7M" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=VJgsJpyn-7M" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -28,12 +26,12 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/)
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
-* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
-* [Red de drenaje zona de estudio. ](../../.shp/DrenajeSencilloIGAC100kZEMerge.zip)[:mortar_board:Aprender.](../GDB100k).
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
+* [Red de drenaje zona de estudio. ](../../file/shp/DrenajeSencilloIGAC100kZEMerge.zip)[:mortar_board:Aprender.](../GDB100k).
 * Modelo digital de elevación ASTER GDEM 30 m. [:mortar_board:Aprender.](../DEMAster)
 * Modelo digital de elevación SRTM 30 m. [:mortar_board:Aprender.](../DEMSrtm)
 * Modelo digital de elevación ALOS PALSAR 12.5 m. [:mortar_board:Aprender.](../DEMAlos)
-* :open_file_folder: [Descargar mosaicos grillas DEM](../../.dem).
+* :open_file_folder: [Descargar mosaicos grillas DEM](../../file/dem).
 
 
 ### Diagrama general de procesos
@@ -88,9 +86,9 @@ Especificaciones de las grillas recortadas de la zona de estudio, referencia esp
 
 |              MDE               | Grilla mosaico recortada         |  Resolución, m  | Cols  | Filas  | Area, km² | Cota mín, m | Cota máx, m | Descargar :open_file_folder:                                                                                                                                                                         |
 |:------------------------------:|:---------------------------------|:---------------:|:-----:|:------:|:---------:|:-----------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [ASTER GDEM](../../.dem/ASTER) | ASTGTMV003MosaicArcGISProZE.tif  |      30.68      | 5408  |  8221  | 41860.42  |      0      |    5687     | [.rar](../../.dem/ASTER/ASTGTMV003MosaicArcGISProZE.rar)                                                                                                                                             |
-|    [SRTM](../../.dem/SRTM)     | SRTMV003MosaicArcGISProZE.tif    |      30.68      | 5408  |  8221  | 41860.42  |     -46     |    5696     | [.rar](../../.dem/SRTM/SRTMV003MosaicArcGISProZE.rar)                                                                                                                                                |
-| [ALOS PALSAR](../../.dem/ALOS) | APFBSRT1MosaicArcGISProZE.tif    |      12.5       | 13274 | 20179  | 41852.51  |     -48     |    5709     | [part1.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISProZE.part1.rar), [part2.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISProZE.part2.rar), [part3.rar](../../.dem/ALOS/APFBSRT1MosaicArcGISProZE.part3.rar) |
+| [ASTER GDEM](../../file/dem/ASTER) | ASTGTMV003MosaicArcGISProZE.tif  |      30.68      | 5408  |  8221  | 41860.42  |      0      |    5687     | [.rar](../../file/dem/ASTER/ASTGTMV003MosaicArcGISProZE.rar)                                                                                                                                             |
+|    [SRTM](../../file/dem/SRTM)     | SRTMV003MosaicArcGISProZE.tif    |      30.68      | 5408  |  8221  | 41860.42  |     -46     |    5696     | [.rar](../../file/dem/SRTM/SRTMV003MosaicArcGISProZE.rar)                                                                                                                                                |
+| [ALOS PALSAR](../../file/dem/ALOS) | APFBSRT1MosaicArcGISProZE.tif    |      12.5       | 13274 | 20179  | 41852.51  |     -48     |    5709     | [part1.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISProZE.part1.rar), [part2.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISProZE.part2.rar), [part3.rar](../../file/dem/ALOS/APFBSRT1MosaicArcGISProZE.part3.rar) |
 
 > El procedimiento anterior puede ser ejecutado en ArcGIS for Desktop utilizando las herramientas _ArcToolBox / Analysis Tools / Buffer_ y _ArcToolBox / Analysis Tools / Feature Envelope To Polygon_
 > 
@@ -178,7 +176,7 @@ En la ventana de edición de permisos, de clic en el botón _Add..._, busque su 
 
 ![R.LTWB](Screenshot/Windows11FolderPropertiesSecurity.png)
 
-2. En ArcGIS for Desktop 10.2.2, cree un mapa nuevo en blanco, guarde como _HECGeoHMS.mxd_ en la carpeta _D:\R.LTWB\HECGeoHMS_ y asigne el sistema de proyección de coordenadas _MAGNA_Colombia_CTM12_ disponible en la carpeta _D:\R.LTWB\\.ProjectionFile_ como _MAGNA_OrigenNacional.prj_.
+2. En ArcGIS for Desktop 10.2.2, cree un mapa nuevo en blanco, guarde como _HECGeoHMS.mxd_ en la carpeta _D:\R.LTWB\HECGeoHMS_ y asigne el sistema de proyección de coordenadas _MAGNA_Colombia_CTM12_ disponible en la carpeta _D:\R.LTWB\file\projectionfile_ como _MAGNA_OrigenNacional.prj_.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2NewMap.png)
 
@@ -229,9 +227,9 @@ Resultados en ventana de ejecución para ALOSAgreeDEM.tif (dt: 07'21")
 
 | MDE reacondicionado | Cota mínima, m | Cota máxima, m | Descargar :open_file_folder:                                                                                                                                                       |
 |---------------------|:--------------:|:--------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ASTERAgreeDEM.tif   |     -1006      |      5687      | [.rar](../../HECGeoHMS/Layers/ASTERAgreeDEM.rar)                                                                                                                                   |
-| SRTMAgreeDEM.tif    |     -1044      |      5696      | [.rar](../../HECGeoHMS/Layers/SRTMAgreeDEM.rar)                                                                                                                                    |
-| ALOSAgreeDEM.tif    |     -1046      |      5709      | [part1.rar](../../HECGeoHMS/Layers/ALOSAgreeDEM.part1.rar), [part2.rar](../../HECGeoHMS/Layers/ALOSAgreeDEM.part2.rar), [part3.rar](../../HECGeoHMS/Layers/ALOSAgreeDEM.part3.rar) |
+| ASTERAgreeDEM.tif   |     -1006      |      5687      | [.rar](../../file/hec/HECGeoHMS/Layers/ASTERAgreeDEM.rar)                                                                                                                                   |
+| SRTMAgreeDEM.tif    |     -1044      |      5696      | [.rar](../../file/hec/HECGeoHMS/Layers/SRTMAgreeDEM.rar)                                                                                                                                    |
+| ALOSAgreeDEM.tif    |     -1046      |      5709      | [part1.rar](../../file/hec/HECGeoHMS/Layers/ALOSAgreeDEM.part1.rar), [part2.rar](../../file/hec/HECGeoHMS/Layers/ALOSAgreeDEM.part2.rar), [part3.rar](../../file/hec/HECGeoHMS/Layers/ALOSAgreeDEM.part3.rar) |
 
 </div>
 
@@ -273,7 +271,7 @@ En este momento dispone de grillas de terreno reacondicionadas para relleno de s
 > Recuerde que los modelos reacondicionados, únicamente serán utilizados para resolver las direcciones y acumulaciones de flujo, por lo que no se recomienda utilizar estos modelos, para el cálculo de parámetros morfométricos en cuencas o en drenajes.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -309,10 +307,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../GDB100k) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/8) | [Siguiente](../FillDEM) |
+| [Anterior](../GDB100k/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/8) | [Siguiente](../FillDEM****) |
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|-------------------------|
  
 [^1]: Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
 [^2]: Arc Hydro Tools for ArcGIS Pro http://downloads.esri.com/archydro/archydro/setup/Pro/
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
