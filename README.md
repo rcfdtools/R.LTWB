@@ -1,8 +1,8 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/file/graph/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
+<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/file/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
 
 # Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - LTWB
 
-<div align="center"><br><img alt="R.LTWB" src=".icons/LTWB_WB.png" width="75%"><br><sub>Fuente: propia, creada con el catálogo de objetos de Microsoft Paint 3D.</sub><br><br></div>
+<div align="center"><br><img alt="R.LTWB" src="file/graph/LTWB_WB.png" width="75%"><br><sub>Fuente: propia, creada con el catálogo de objetos de Microsoft Paint 3D.</sub><br><br></div>
 
 _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. En este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
 
