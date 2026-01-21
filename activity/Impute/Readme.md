@@ -1,4 +1,4 @@
-# Completado y extendido de series - Imputación
+# 3.7. Completado y extendido de series - Imputación
 Keywords: `Impute` `matplotlib` `pandas` `tabulate` `numpy` `missingo` `sklearn` `dtypes` `isnull` `describe`  
 
 <div align="center"><img alt="R.LTWB" src="Graph/Impute.png" width="95%"></div> 
