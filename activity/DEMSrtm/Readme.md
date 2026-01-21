@@ -258,7 +258,7 @@ En este momento dispone del mapa grillado integrado de elevación SRTM que cubre
 </div>
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
