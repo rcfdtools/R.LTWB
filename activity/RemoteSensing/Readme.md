@@ -281,7 +281,7 @@ if remove_temp_file_csv:  # csv glob.glob created before
 print('\nProcess accomplished, check the results files like: %s' % (path + station_file_chirps))
 ```
 
-2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Dentro de la carpeta `D:\R.LTWB\Section03\RemoteSensing\`, cree una subcarpeta con el nombre Graph. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.csv](../../file/datasets/IDEAM/IDEAMJoined.zip) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
+2. Cree una nueva carpeta en blanco con el nombre `CHIRPS` en su directorio de proyecto local `D:\R.LTWB\.datasets`. Dentro de la carpeta `D:\R.LTWB\Section03\RemoteSensing\`, cree una subcarpeta con el nombre Graph. Verifique que la carpeta `D:\R.LTWB\.datasets\IDEAM`, contenga el archivo [IDEAMJoined.zip](../../file/datasets/IDEAM/IDEAMJoined.zip) que fue procesado en la actividad denominada [CNEStationDatasetDownload](../CNEStationDatasetDownload). 
 
 3. En Microsoft Windows, ejecute el _Command Prompt_ o _CMD_, ingrese `D:` y de <kbd>Enter</kbd> para cambiar a la unidad D:\ donde se encuentra el repositorio R.LTWB. Utilizando el comando  `CD D:\R.LTWB\.datasets\CHIRPS` ubíquese dentro de la carpeta CHIRPS.
 
