@@ -1,4 +1,4 @@
-# Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
+# 2.6. Reacondicionamiento de terreno - DEM Reconditioning – AgreeDEM
 Keywords: `AgreeDEM` `DEM-Reconditioning` `DEM-burning` `Buffer` `Feature-Envelope-To-Polygon` `Raster-Clip` `HEC-HMS` `HEC-GeoHMS` `Arc-Hydro-Tools-Pro` `Feature-to Raster`
 
 ![R.LTWB](Graph/AgreeDEM.png)
@@ -26,12 +26,12 @@ Para garantizar que la acumulación del flujo se realice sobre las celdas del mo
 * [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/)
 * [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
 * [Arc Hydro Tools Pro](http://downloads.esri.com/archydro/archydro/setup/Pro/)
-* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
-* [Red de drenaje zona de estudio. ](../../file/shp/DrenajeSencilloIGAC100kZEMerge.zip)[:mortar_board:Aprender.](../GDB100k).
-* Modelo digital de elevación ASTER GDEM 30 m. [:mortar_board:Aprender.](../DEMAster)
-* Modelo digital de elevación SRTM 30 m. [:mortar_board:Aprender.](../DEMSrtm)
-* Modelo digital de elevación ALOS PALSAR 12.5 m. [:mortar_board:Aprender.](../DEMAlos)
-* :open_file_folder: [Descargar mosaicos grillas DEM](../../file/dem).
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
+* [Red de drenaje zona de estudio. ](../../file/shp/DrenajeSencilloIGAC100kZEMerge.zip)[:mortar_board:Aprender.](../GDB100k/Readme.md).
+* Modelo digital de elevación ASTER GDEM 30 m. [:mortar_board:Aprender.](../DEMAster/Readme.md)
+* Modelo digital de elevación SRTM 30 m. [:mortar_board:Aprender.](../DEMSrtm/Readme.md)
+* Modelo digital de elevación ALOS PALSAR 12.5 m. [:mortar_board:Aprender.](../DEMAlos/Readme.md)
+* :open_file_folder: [Descargar mosaicos grillas DEM](../../file/dem/Readme.md).
 
 
 ### Diagrama general de procesos
@@ -48,7 +48,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 #### Recorte de modelos digitales de elevación DEM con ArcGIS Pro
 
-1. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente al rededor del polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio usaremos una distancia de 30 m x 2 = 60 m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30 m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer contiene esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
+1. Utilizando la herramienta _Geoprocessing / Analysis Tools / Proximity / Buffer_, cree un polígono aferente alrededor del polígono envolvente de la zona de estudio _ZonaEstudioEnvelope.shp_. Como criterio de aferencia, aplicar 2 veces el mayor tamaño de pixel o celda de los DEM, para el caso de estudio usaremos una distancia de 30 m x 2 = 60 m debido a que los modelos ASTER GDEM y SRTM han sido descargados en resoluciones de 30 m. Nombre el polígono resultante en la carpeta _.shp_ como _ZonaEstudioBufferDEM.shp_. Como puede observar, el buffer contiene esquinas redondeadas debido a que la aferencia se mantiene en todas las aristas.
 
 > La aferencia garantiza que el posterior recorte de los DEM incluya todas las celdas perimetrales dentro de la zona de estudio.
 
@@ -307,7 +307,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../GDB100k/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/8) | [Siguiente](../FillDEM/Readme.md) |
+| [Anterior](../GDB100k/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/8) | [Siguiente](../FillDEM/Readme.md) |
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|-------------------------|
  
 [^1]: Burning stream network into DEM layer in QGIS https://www.youtube.com/watch?v=ZyM1jnxFamU
