@@ -3,7 +3,7 @@
 En esta sección se obtienen, procesan y analizan los datos hidro-climatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico. Complementariamente, implementaremos scripts en Python para automatizar varias de las actividades desarrolladas, facilitando su replicación a otros casos de estudio o a proyectos particulares.
 
 
-# Catálogo nacional de estaciones - CNE y selección de estaciones para la zona de estudio
+# 3.1. Catálogo nacional de estaciones - CNE y selección de estaciones para la zona de estudio
 Keywords: `IDEAM` `Weather-station` `Display-XY-Data` `Buffer` `Merge` `Bar-graph` `Select-By-Location` `Python` `LYearS` `LYearSTW` `Definition-Query` `Normal-distribution` `Statistics`
 
 ![R.LTWB](Graph/CNEStation.png)
@@ -34,8 +34,8 @@ Luego de la definición del caso de estudio realizada en la Sección 1, es neces
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Polígono que delimita la zona de estudio. ](../../file/shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../CaseStudy)
-* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
+* [Polígono que delimita la zona de estudio. ](../../file/shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
 
 
 ### Diagrama general de procesos
