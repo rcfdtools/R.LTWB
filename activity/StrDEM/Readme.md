@@ -1,4 +1,4 @@
-# Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
+# 2.10. Demarcación de drenajes – Stream Definition - STR y localización de nodos característicos
 Keywords: `STR-DEM` `Stream-definition` `FAC-DEM` `Flow-accumulation` `Arc-Hydro-Tools` `Extract-Multi-Values-to-Points` `Raster-to-Polyline` `Add-Field` `Geometry-Calculator` `Delete-Identical` `Raster-Calculator`
 
 ![R.LTWB](Graph/StrDEM.png)
@@ -22,7 +22,7 @@ A partir de grillas de acumulación de flujo, se pueden identificar las celdas q
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FacDEM)
+* [Grillas de acumulaciones de Flujo – Flow Accumulation – FAC. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FacDEM/Readme.md)
 
 > El libro de cálculo [StrDEM.xlsx](StrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo del número de celdas requeridas y subcuencas obtenidas para diferentes áreas de aportación en función del área de una cuenca principal y la resolución específica de una grilla DEM. 
 
@@ -49,7 +49,7 @@ La demarcación de drenajes a partir de un área de aportación definida puede s
 
 #### Demarcación de drenajes con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\file\hec\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [acumulaciones de flujo](../FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio _[D:\R.LTWB\file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\file\hec\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM/Readme.md) y modificado en la clase de [acumulaciones de flujo](../FacDEM) que contiene las grillas FAC. En caso de que este generando un mapa nuevo, cargue directamente las grillas FAC contenidas en el directorio _[D:\R.LTWB\file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Stream Definition_ y cree la grilla de marcación de drenajes en formato GeoTIFF para los 3 modelos digitales de acumulación y asigne los nombres [ASTERStr.tif](../../file/hec/HECGeoHMS/Layers/ASTERStr.rar), [SRTMStr.tif](../../file/hec/HECGeoHMS/Layers/SRTMStr.rar) y [ALOSStr.tif](../../file/hec/HECGeoHMS/Layers/ALOSStr.rar) en la ruta _D:\R.LTWB\file\hec\HECGeoHMS\Layers\_. Como criterio de área de aportación utilice p. ej. 1 km², que para los modelos ASTER y SRTM corresponderá a 1062 celdas de aportación debido a que su resolución es de 30.68464585 metros y para el modelo ALOS PALSAR, 6400 celdas de aportación, ya que su resolución es de 12.5 metros. Para la representación en pantalla, use como fondo la red de drenaje vectorial.
 
