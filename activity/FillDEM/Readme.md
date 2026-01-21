@@ -1,4 +1,4 @@
-#  Relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL
+# 2.7. Relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL
 Keywords: `Fill-DEM` `AgreeDEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
 
 ![R.LTWB](Graph/FillDEM.png)
@@ -23,7 +23,7 @@ Los modelos digitales de elevación obtenidos a partir de información satelital
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas DEM ASTER GDEM 30m, SRTM 30m y ALOS PALSAR 12.5m reacondicionadas. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../AgreeDEM)
+* [Grillas DEM ASTER GDEM 30m, SRTM 30m y ALOS PALSAR 12.5m reacondicionadas. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../AgreeDEM/Readme.md)
 
 
 ### Diagrama general de procesos
@@ -42,7 +42,7 @@ El relleno de sumideros puede ser realizado con Spatial Analyst Tools de ArcGIS 
 
 #### Reacondicionamiento de modelos digitales de elevación DEM con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) que contiene las grillas DEM reacondicionadas. En caso de que este generando un mapa nuevo, cargue directamente las grillas contenidas en el directorio _[file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM/Readme.md) que contiene las grillas DEM reacondicionadas. En caso de que este generando un mapa nuevo, cargue directamente las grillas contenidas en el directorio _[file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Fill Sinks_ y cree la grilla de relleno de sumideros en formato GeoTIFF para los 3 modelos digitales de elevación reacondicionados y asigne los nombres ASTERFil.tif, SRTMFil.tif y ALOSFil.tif en la ruta _D:\R.LTWB\file\hec\HECGeoHMS\Layers\_
 
