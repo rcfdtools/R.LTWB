@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Saturday, July 9, 2022 07:39:39 a. m.</msg><msg code="539" type="100">ERROR 000539:   File "&lt;expression&gt;", line 1
+    ZH 2 - Cesar
+       ^
+SyntaxError: invalid syntax
+</msg><msg code="-2147467259" type="100">Failed to execute (CalculateField).</msg><msg code="0" type="3">Failed at Saturday, July 9, 2022 07:39:39 a. m. (Elapsed Time: 0.02 seconds)</msg></messages>

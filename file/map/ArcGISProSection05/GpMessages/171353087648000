@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><messages><msg code="0" type="2">Start Time: Tuesday, December 13, 2022 11:48:23</msg><msg code="0" type="0">((Raster(r"RainTotalNeutral.tif")-Raster(r"ETRDekopNeutral.tif"))/1000)*(12.5*12.5)/(365*24*60*60)</msg><msg code="0" type="3">Succeeded at Tuesday, December 13, 2022 11:48:44 (Elapsed Time: 21.07 seconds)</msg></messages>
