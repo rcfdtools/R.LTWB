@@ -114,7 +114,7 @@ En la consola deberá ingresar su nombre de usuario y contraseña Earthdata para
 
 Al finalizar la ejecución ejecute nuevamente el comando `ls` para listar los archivos descargados o verifique manualmente el directorio de descarga _.dem/SRTM_
 
-Shell script [downloadSRTM.sh](../../.src/downloadSRTM.sh) de Earthdata
+Shell script [downloadSRTM.sh](../../file/src/downloadSRTM.sh) de Earthdata
 ```
 #!/bin/bash
 
