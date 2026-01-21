@@ -1,4 +1,4 @@
-# Análisis de elevaciones, densidad, cobertura y radio de acción de estaciones terrestres
+# 3.2. Análisis de elevaciones, densidad, cobertura y radio de acción de estaciones terrestres
 Keywords: `IDEAM` `Weather-station` `Bar-graph` `Select-By-Location` `Chart` `Scatter-Plot-Matrix` `Definition-Query` `Normal-distribution` `Statistics` `Extract-Multi-Values-to-Points` `Calculate-Geometry Attributes` `Calculate-Field`
 
 ![R.LTWB](Graph/CNEStationElevation.svg)
@@ -22,13 +22,13 @@ Los catálogos de estaciones terrestres contienen el atributo de elevación o al
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Polígono que delimita la zona de estudio. ](../../file/shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../CaseStudy)
-* [Polígono envolvente aferente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioBufferStation.zip)[:mortar_board:Aprender.](../CNEStation)
-* [Capa integrada de estaciones terrestres del IDEAM y otras entidades de la zona de estudio. ](../../file/shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](../CNEStation)
-* Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](../DEMAster)
-* Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](../DEMSrtm)
-* Modelo digital de elevación ALOS PALSAR 12.5m. [:mortar_board:Aprender.](../DEMAlos)
-* :open_file_folder: [Descargar mosaicos grillas DEM](../../file/dem).
+* [Polígono que delimita la zona de estudio. ](../../file/shp/ZonaEstudio.zip)[:mortar_board:Aprender.](../CaseStudy/Readme.md)
+* [Polígono envolvente aferente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioBufferStation.zip)[:mortar_board:Aprender.](../CNEStation/Readme.md)
+* [Capa integrada de estaciones terrestres del IDEAM y otras entidades de la zona de estudio. ](../../file/shp/CNE_IDEAM_OE_ZE.zip)[:mortar_board:Aprender.](../CNEStation/Readme.md)
+* Modelo digital de elevación ASTER GDEM 30m. [:mortar_board:Aprender.](../DEMAster/Readme.md)
+* Modelo digital de elevación SRTM 30m. [:mortar_board:Aprender.](../DEMSrtm/Readme.md)
+* Modelo digital de elevación ALOS PALSAR 12.5m. [:mortar_board:Aprender.](../DEMAlos/Readme.md)
+* :open_file_folder: [Descargar mosaicos grillas DEM](../../file/dem/Readme.md).
 
 
 ### Diagrama general de procesos
@@ -69,7 +69,7 @@ El siguiente diagrama representa los procesos generales requeridos para el desar
 
 ### Procedimiento general
 
-1. En ArcGIS Pro, abra el mapa _D:\R.LTWB\.map\ArcGISProSection03.aprx_ creado en la actividad de [selección de estaciones para la zona de estudio](../CNEStation) que contiene las estaciones integradas y los polígonos de la zona de estudio y su zona aferente. En caso de que este generando un proyecto nuevo, cargue directamente los archivos de formas geométricas [CNE_IDEAM_OE_ZE.shp](../../file/shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](../../file/shp/ZonaEstudio.zip) y [ZonaEstudioBufferStation.shp](../../file/shp/ZonaEstudioBufferStation.zip). 
+1. En ArcGIS Pro, abra el mapa _D:\R.LTWB\.map\ArcGISProSection03.aprx_ creado en la actividad de [selección de estaciones para la zona de estudio](../CNEStation/Readme.md) que contiene las estaciones integradas y los polígonos de la zona de estudio y su zona aferente. En caso de que este generando un proyecto nuevo, cargue directamente los archivos de formas geométricas [CNE_IDEAM_OE_ZE.shp](../../file/shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](../../file/shp/ZonaEstudio.zip) y [ZonaEstudioBufferStation.shp](../../file/shp/ZonaEstudioBufferStation.zip). 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0MapProject.png)
 
