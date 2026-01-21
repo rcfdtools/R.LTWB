@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Mapa de temperatura media
+# Mapa de temperatura media
 Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line` `Cenicafé` `Raster-calculator`
 
 ![R.LTWB](Graph/Temperature.png)
 
 A partir de las series agregadas de temperatura máxima y mínima a nivel anual, se estima la temperatura media anual en cada estación y se crea el mapa de temperatura requerido para la estimación de la evapotranspiración potencial.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=aMNXbInEOKM" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=aMNXbInEOKM" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -23,9 +21,9 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* Estaciones hidroclimatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../../Section03/CNEStationElevation)
-* Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../../Section03/Agg)
-* Modelo digital de elevación ALOS PALSAR. [:mortar_board:Aprender.](../../Section02/DEMAlos)
+* Estaciones hidroclimatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../CNEStationElevation/Readme.md)
+* Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Agg/Readme.md)
+* Modelo digital de elevación ALOS PALSAR. [:mortar_board:Aprender.](../DEMAlos/Readme.md)
 
 
 ### Procedimiento general para interpolación de temperatura media
@@ -36,7 +34,7 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 </div>
 
 
-1. En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fué creado en la actividad anterior.
+1. En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fue creado en la actividad anterior.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenProject.png)
 
@@ -48,11 +46,11 @@ A partir de las series agregadas de temperatura máxima y mínima a nivel anual,
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TempMinMax.png)
 
-4. Desde la carpeta _.datasets/IDEAM_Agg_ disponible en el catálogo, agregue al mapa actual (botón derecho sobre el archivo / Add To Current Map) los archivos [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv) y [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv) correspondientes a las tablas de agregaciones multianuales de temperatura mínima y máxima por estación. Luego desde la tabla de contenido o Contents, abra los archivos; podrá observar que se componen de 25 registros o estaciones y que contienen datos compuestos y por fenómeno climatológico.
+4. Desde la carpeta _.datasets/IDEAM_Agg_ disponible en el catálogo, agregue al mapa actual (botón derecho sobre el archivo / Add To Current Map) los archivos [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.csv) y [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.csv) correspondientes a las tablas de agregaciones multianuales de temperatura mínima y máxima por estación. Luego desde la tabla de contenido o Contents, abra los archivos; podrá observar que se componen de 25 registros o estaciones y que contienen datos compuestos y por fenómeno climatológico.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3AddTemperatureCsv.png)
 
-5. Desde la tabla de contenido y dando clic derecho sobre cada tabla y mediante la opción _Data / Export Table_, exporte los archivos .csv a archivos dBase .dbf en la misma ruta original y con los nombres [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.dbf](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.dbf) y [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.dbf](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.dbf)
+5. Desde la tabla de contenido y dando clic derecho sobre cada tabla y mediante la opción _Data / Export Table_, exporte los archivos .csv a archivos dBase .dbf en la misma ruta original y con los nombres [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.dbf](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMN_CON.dbf) y [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.dbf](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_TMX_CON.dbf)
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3TemperatureCsvToDbf.png)
 
@@ -175,22 +173,22 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 > Opcionalmente, para la creación del mapa de temperatura podríamos utilizar la expresión de Cenicafé para altitudes iguales o superiores a 700 msnm y la expresión zonal para elevaciones inferiores a esta altitud, sin embargo, las series corresponden a periodos diferentes de análisis.
 
-1. En ArcGIS Pro, agregue desde la carpeta `D:\R.LTWB\.dem\ALOS` el modelo de terreno _APFBSRT1MosaicArcGISProZE.tif_, modifique la simbología de representación a _Shaded Relief_ con la rampa de color continua denominada _Greens_. Establezca el color de las estaciones en negro.  
+1. En ArcGIS Pro, agregue desde la carpeta `D:\R.LTWB\file\dem\ALOS` el modelo de terreno _APFBSRT1MosaicArcGISProZE.tif_, modifique la simbología de representación a _Shaded Relief_ con la rampa de color continua denominada _Greens_. Establezca el color de las estaciones en negro.  
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSPALSAR.png)
 
 > Previamente en la Sección 2 de este curso, realizamos la descarga y procesamiento del modelo de terreno y asignamos el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 
-2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de temperatura a partir del modelo digital de elevación ALOS PALSAR, utilice las siguientes expresiones y archivos dentro de la carpeta `D:\R.LTWB\.grid`:
+2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de temperatura a partir del modelo digital de elevación ALOS PALSAR, utilice las siguientes expresiones y archivos dentro de la carpeta `D:\R.LTWB\file\grid`:
 
 <div align="center">
 
 | Fenómeno  | Expresión Raster Calculator                                                                            | Mapa de temperatura         |  Rango °C   |                                            Grilla :open_file_folder:                                             |
 |-----------|--------------------------------------------------------------------------------------------------------|-----------------------------|:-----------:|:----------------------------------------------------------------------------------------------------------------:|
-| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../.grid/TemperatureMedComposite.part01.rar), [Part2](../../.grid/TemperatureMedComposite.part02.rar) |
-| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 |      [Part1](../../.grid/TemperatureMedNina.part01.rar), [Part2](../../.grid/TemperatureMedNina.part02.rar)      |
-| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 |      [Part1](../../.grid/TemperatureMedNino.part01.rar), [Part2](../../.grid/TemperatureMedNino.part02.rar)      |
-| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 |   [Part1](../../.grid/TemperatureMedNeutral.part01.rar), [Part2](../../.grid/TemperatureMedNeutral.part02.rar)   |
+| Compuesto | `Con((28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.9-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedComposite.tif | 0 - 29.1544 | [Part1](../../file/grid/TemperatureMedComposite.part01.rar), [Part2](../../file/grid/TemperatureMedComposite.part02.rar) |
+| Niña      | `Con((28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.7-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNina.tif      | 0 - 28.9592 |      [Part1](../../file/grid/TemperatureMedNina.part01.rar), [Part2](../../file/grid/TemperatureMedNina.part02.rar)      |
+| Niño      | `Con((29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif")>0,(29.1-0.0053*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNino.tif      | 0 - 29.3544 |      [Part1](../../file/grid/TemperatureMedNino.part01.rar), [Part2](../../file/grid/TemperatureMedNino.part02.rar)      |
+| Neutro    | `Con((28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif")>0,(28.8-0.0054*"APFBSRT1MosaicArcGISProZE.tif"),0)` | TemperatureMedNeutral.tif   | 0 - 29.0592 |   [Part1](../../file/grid/TemperatureMedNeutral.part01.rar), [Part2](../../file/grid/TemperatureMedNeutral.part02.rar)   |
 
 </div>
 
@@ -216,7 +214,7 @@ Mapa de temperatura media - Neutral
 En este momento dispone de grillas de temperatura media, requeridas para la generación de los mapas de evapotranspiración potencial.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -253,7 +251,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../Rain) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/29) | [Actividad siguiente](../ETP) |
-|-------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+| [Anterior](../Rain/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/29) | [Siguiente](../ETP/Readme.md) |
+|---------------------|---------------------------|------------------------------------------------------------------------|---------------------|
