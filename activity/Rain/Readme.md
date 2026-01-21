@@ -9,7 +9,7 @@ Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
 A partir de la localización espacial de estaciones terrestres y de los valores obtenidos, validados, imputados y extendidos de las series de datos recopiladas, se generan los mapas continuos interpolados de precipitación para series compuestas y por fenómeno climatológico, necesarios para el balance hidrológico de largo plazo.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=oKUBi4KH-3A" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=oKUBi4KH-3A" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -24,8 +24,8 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* Estaciones hidroclimatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../../Section03/CNEStationElevation)
-* Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../../Section03/Agg)
+* Estaciones hidroclimatológicas de la zona de estudio con validación de altitud a partir de información satelital. [:mortar_board:Aprender.](../CNEStationElevation/Readme.md)
+* Tablas de valores agregados promedio multianual por parámetro hidroclimatológico. [:mortar_board:Aprender.](../Agg/Readme.md)
 
 
 ### Procedimiento general para interpolación de precipitación total
@@ -40,7 +40,7 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3NewMapProject.png)
 
-2. Desde la carpeta _.shp_ disponible en el catálogo, agregue al mapa el archivo shapefile [CNE_IDEAM_OE_ZE.shp](../../.shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](../../.shp/ZonaEstudio.zip) y [ZonaEstudioEnvelopeBufferDEM.shp](../../.shp/ZonaEstudioEnvelopeBufferDEM.zip). Modifique la simbología de representación de _ZonaEstudioEnvelopeBufferDEM_ sin relleno - línea contorno rojo - grosor 3 y _ZonaEstudio_ sin relleno - línea contorno negro - grosor 2. Simbolice las estaciones con puntos color gris 30% - sin contorno - tamaño 6, rotular por el campo `CODIGO` y acercar a la zona de estudio. 
+2. Desde la carpeta _.shp_ disponible en el catálogo, agregue al mapa el archivo shapefile [CNE_IDEAM_OE_ZE.shp](../../file/shp/CNE_IDEAM_OE_ZE.zip), [ZonaEstudio.shp](../../file/shp/ZonaEstudio.zip) y [ZonaEstudioEnvelopeBufferDEM.shp](../../file/shp/ZonaEstudioEnvelopeBufferDEM.zip). Modifique la simbología de representación de _ZonaEstudioEnvelopeBufferDEM_ sin relleno - línea contorno rojo - grosor 3 y _ZonaEstudio_ sin relleno - línea contorno negro - grosor 2. Simbolice las estaciones con puntos color gris 30% - sin contorno - tamaño 6, rotular por el campo `CODIGO` y acercar a la zona de estudio. 
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3CNEOEMap.png)
 
@@ -52,11 +52,11 @@ A partir de la localización espacial de estaciones terrestres y de los valores 
 
 > Para la correcta interpolación espacial de los parámetros climatológicos, es necesario disponer de un sistema proyectado con unidades lineales en metros.
 
-4. Desde la carpeta _.datasets/IDEAM_Agg_ disponible en el catálogo, agregue al mapa actual (botón derecho sobre el archivo / Add To Current Map) el archivo [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv) correspondiente a la tabla de agregaciones multianuales de precipitación total por estación. Luego desde la tabla de contenido o Contents, abra el archivo; podrá observar que se compone de 130 registros o estaciones y que contiene datos de precipitación total compuesta y por fenómeno climatológico.
+4. Desde la carpeta _.datasets/IDEAM_Agg_ disponible en el catálogo, agregue al mapa actual (botón derecho sobre el archivo / Add To Current Map) el archivo [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.csv) correspondiente a la tabla de agregaciones multianuales de precipitación total por estación. Luego desde la tabla de contenido o Contents, abra el archivo; podrá observar que se compone de 130 registros o estaciones y que contiene datos de precipitación total compuesta y por fenómeno climatológico.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3AddRainCsv.png)
 
-5. Dando clic derecho sobre la tabla desde la tabla de contenido, y mediante la opción _Data / Export Table_, exporte el archivo a un archivo dBase .dbf en la misma ruta original y con el nombre [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf)
+5. Dando clic derecho sobre la tabla desde la tabla de contenido, y mediante la opción _Data / Export Table_, exporte el archivo a un archivo dBase .dbf en la misma ruta original y con el nombre [Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_PTPM_TT_M.dbf)
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3AddRainCsvToDbf.png)
 
@@ -121,10 +121,10 @@ Tabla de grillas obtenidas y comparación de resultados
 
 | Fenómeno  | Grilla                 | Mínimo en estación | Máximo en estación | Mínimo en grilla | Máximo en grilla |                                       Archivo :open_file_folder:                                       | Tamaño sin compresión |
 |-----------|:-----------------------|:------------------:|:------------------:|:----------------:|:----------------:|:------------------------------------------------------------------------------------------------------:|:---------------------:|
-| Compuesto | RainTotalComposite.tif |       363.2        |       4933.6       |     363.234      |     4933.619     | [Part1](../../.grid/RainTotalComposite.part01.rar), [Part2](../../.grid/RainTotalComposite.part02.rar) |        1.2 GB         |
-| Niña      | RainTotalNina.tif      |       536.3        |       5420.7       |      536.31      |     5420.688     |      [Part1](../../.grid/RainTotalNina.part01.rar), [Part2](../../.grid/RainTotalNina.part02.rar)      |        1.2 GB         |
-| Niño      | RainTotalNino.tif      |       252.7        |       4590.4       |     252.749      |     4590.447     |      [Part1](../../.grid/RainTotalNino.part01.rar), [Part2](../../.grid/RainTotalNino.part02.rar)      |        1.2 GB         |
-| Neutro    | RainTotalNeutral.tif   |       305.8        |       4891.5       |     305.754      |     4891.527     |   [Part1](../../.grid/RainTotalNeutral.part01.rar), [Part2](../../.grid/RainTotalNeutral.part02.rar)   |        1.2 GB         |
+| Compuesto | RainTotalComposite.tif |       363.2        |       4933.6       |     363.234      |     4933.619     | [Part1](../../file/grid/RainTotalComposite.part01.rar), [Part2](../../file/grid/RainTotalComposite.part02.rar) |        1.2 GB         |
+| Niña      | RainTotalNina.tif      |       536.3        |       5420.7       |      536.31      |     5420.688     |      [Part1](../../file/grid/RainTotalNina.part01.rar), [Part2](../../file/grid/RainTotalNina.part02.rar)      |        1.2 GB         |
+| Niño      | RainTotalNino.tif      |       252.7        |       4590.4       |     252.749      |     4590.447     |      [Part1](../../file/grid/RainTotalNino.part01.rar), [Part2](../../file/grid/RainTotalNino.part02.rar)      |        1.2 GB         |
+| Neutro    | RainTotalNeutral.tif   |       305.8        |       4891.5       |     305.754      |     4891.527     |   [Part1](../../file/grid/RainTotalNeutral.part01.rar), [Part2](../../file/grid/RainTotalNeutral.part02.rar)   |        1.2 GB         |
 
 > Debido al tamaño de los archivos generados, cada grilla ha sido comprimida en archivos .rar en partes de 95 MB.
 >
@@ -133,7 +133,7 @@ Tabla de grillas obtenidas y comparación de resultados
 En este momento dispone de grillas interpoladas de precipitación total, requeridas para el balance hidrológico de largo plazo.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -169,7 +169,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../../Section04) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/28) | [Actividad siguiente](../Temperature) |
-|---------------------------------------|---------------------------|------------------------------------------------------------------------|---------------------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+| [Anterior](../../Section04/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/28) | [Actividad siguiente](../Temperature/Readme.md) |
+|-----------------------------|---------------------------|------------------------------------------------------------------------|---------------------------------------|
