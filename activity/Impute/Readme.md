@@ -5,7 +5,7 @@ Keywords: `Impute` `matplotlib` `pandas` `tabulate` `numpy` `missingo` `sklearn`
 
 El procedimiento de completado se realiza a partir de la generación de datos sintéticos utilizando diferentes métodos estadísticos y su propósito general, es la conformación de series homogéneas y continuas para las diferentes variables en estudio.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=UYg4OmW_MTI" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=UYg4OmW_MTI" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 Para el desarrollo de esta actividad se utilizarán los siguientes métodos:
