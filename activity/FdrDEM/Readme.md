@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-##  Direcciones de Flujo – Flow Direction – FDR
+#  Direcciones de Flujo – Flow Direction – FDR
 Keywords: `FDR-DEM` `Flow-direction` `Fill-DEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
 
 ![R.LTWB](Graph/FdrDEM.png)
 
 Esta grilla define la dirección de la máxima pendiente del terreno para cada celda utilizando el modelo de relleno de sumideros - FIL. Esta capa es usada para a través del algoritmo de acumulación, crear el mapa discreto de acumulación de celdas que convergen hacia celdas más bajas y da como resultado ocho posibles direcciones en cada celda.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=caBueS9jBpo" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=caBueS9jBpo" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -22,7 +20,7 @@ Esta grilla define la dirección de la máxima pendiente del terreno para cada c
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/)
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](../../HECGeoHMS/Layers)[:mortar_board:Aprender.](../FillDEM)
+* [Grillas de relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL. ](../../file/hec/HECGeoHMS/Layers)[:mortar_board:Aprender.](../FillDEM)
 
 > El libro de cálculo [FdrDEM.xlsx](FdrDEM.xlsx) de Microsoft Excel disponible en esta actividad, contiene un ejemplo básico de direcciones de flujo usando diferentes codificaciones. 
 
@@ -71,7 +69,7 @@ La estimación de direcciones de flujo puede ser realizada con Spatial Analyst T
 
 #### Direcciones de flujo con HEC-GeoHMS sobre ArcGIS for Desktop
 
-1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [relleno de sumideros](../FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio _[D:\R.LTWB\HECGeoHMS\Layers](../../HECGeoHMS/Layers)_.
+1. En ArcGIS for Desktop, abra el mapa _D:\R.LTWB\HECGeoHMS\HECGeoHMS.mxd_ creado en la actividad de [reacondicionamiento de modelos digitales de elevación](../AgreeDEM) y modificado en la clase de [relleno de sumideros](../FillDEM) que contiene las grillas FIL. En caso de que este generando un mapa nuevo, cargue directamente las grillas FIL contenidas en el directorio _[D:\R.LTWB\file\hec\HECGeoHMS\Layers](../../file/hec/HECGeoHMS/Layers)_.
 
 2. En la barra de herramientas _HEC-GeoHMS_, vaya al menú _Preprocessing_, seleccione la opción _Flow Direction_ y cree la grilla de direcciones de flujo en formato GeoTIFF para los 3 modelos digitales de elevación con relleno de sumideros y asigne los nombres ASTERFdr.tif, SRTMFdr.tif y ALOSFdr.tif en la ruta D:\R.LTWB\HECGeoHMS\Layers\.
 
@@ -98,13 +96,13 @@ Resultados, ventana de ejecución grilla ALOS (dt: 09'08")
 
 |    Grilla    |        Descargar :open_file_folder:         |
 |:------------:|:-------------------------------------------:|
-| ASTERFdr.tif | [.rar](../../HECGeoHMS/Layers/ASTERFdr.rar) |
-| SRTMFdr.tif  | [.rar](../../HECGeoHMS/Layers/SRTMFdr.rar)  |
-| ALOSFdr.tif  | [.rar](../../HECGeoHMS/Layers/ALOSFdr.rar)  |
+| ASTERFdr.tif | [.rar](../../file/hec/HECGeoHMS/Layers/ASTERFdr.rar) |
+| SRTMFdr.tif  | [.rar](../../file/hec/HECGeoHMS/Layers/SRTMFdr.rar)  |
+| ALOSFdr.tif  | [.rar](../../file/hec/HECGeoHMS/Layers/ALOSFdr.rar)  |
 
 </div>
 
-3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](../../HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
+3. Visualice la tabla de atributos de la grilla [ASTERFdr.tif](../../file/hec/HECGeoHMS/Layers/ASTERFdr.rar) que contiene valores discretos contables de las 9 direcciones de flujo (incluida la 255 o no dirección) y cree una gráfica de barras desde el menú _View / Graphs / Create Graph_. 
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2HECGeoHMSFdrDEMASTERGraph.png)
 
@@ -137,7 +135,7 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 
 Para recodificar el mapa FDR en formato ArcGIS a QGIS 3, primero convierta a formato rcfdtools con la siguiente expresión:
 
-Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](../../HECGeoHMS/Layers/ASTERFdrrcfdtools.rar)
+Conversión de ArcGIS a rcfdtools (dt: 00'06.33") [ASTERFdrrcfdtools.tif](../../file/hec/HECGeoHMS/Layers/ASTERFdrrcfdtools.rar)
 
 ```
 Con("ASTERFdr.tif"==1, 20, Con("ASTERFdr.tif"==2, 21, Con("ASTERFdr.tif"==4, 22, Con("ASTERFdr.tif"==8, 23, Con("ASTERFdr.tif"==16, 24, Con("ASTERFdr.tif"==32, 25, Con("ASTERFdr.tif"==64, 26, Con("ASTERFdr.tif"==128, 27, 255))))))))
@@ -149,7 +147,7 @@ Con("ASTERFdr.tif"==1, 20, Con("ASTERFdr.tif"==2, 21, Con("ASTERFdr.tif"==4, 22,
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsLog.png)
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ConvertFdrArcGIS2rcdftoolsMap.png)
 
-Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](../../HECGeoHMS/Layers/ASTERFdrQGIS.rar)
+Conversión de rcfdtools a QGIS3 (dt: 00'06.70") [ASTERFdrQGIS.tif](../../file/hec/HECGeoHMS/Layers/ASTERFdrQGIS.rar)
 
 ```
 Con("ASTERFdrrcfdtools.tif"==20, 2, Con("ASTERFdrrcfdtools.tif"==21, 3, Con("ASTERFdrrcfdtools.tif"==22, 4, Con("ASTERFdrrcfdtools.tif"==23, 5, Con("ASTERFdrrcfdtools.tif"==24, 6, Con("ASTERFdrrcfdtools.tif"==25, 7, Con("ASTERFdrrcfdtools.tif"==26, 0, Con("ASTERFdrrcfdtools.tif"==27, 1, 255))))))))
@@ -164,7 +162,7 @@ Con("ASTERFdrrcfdtools.tif"==20, 2, Con("ASTERFdrrcfdtools.tif"==21, 3, Con("AST
 En este momento, dispone de grillas de direcciones para acumulación de flujo sobre todo el modelo digital de elevación.
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -204,7 +202,6 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../FillDEM) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/10) | [Siguiente](../FacDEM) |
+| [Anterior](../FillDEM/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/10) | [Siguiente](../FacDEM/Readme.md) |
 |------------------------|-----------------------------------|-----------------------------------------------------------------------------------|------------------------|
 
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
