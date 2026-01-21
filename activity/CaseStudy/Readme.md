@@ -1,11 +1,9 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Caso de estudio  
+# Caso de estudio  
 Keywords: `Case-study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona-hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature-Envelope-to-Polygon` `Add-Field` `Field-Calculator` `Bounding-boxes`
 
 <br>Definición de la zona de estudio a partir de la cobertura de subzonas hidrográficas de Colombia - Suramérica, con creación de polígono envolvente. En esta actividad se define el sistema de proyección de coordenadas a utilizar en la creación y procesamiento de los diferentes mapas y capas geográficas.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=2VRtGbhU72o" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=2VRtGbhU72o" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/**IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%"** border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 ![R.LTWB](Graph/CaseStudy.png)
 
@@ -76,7 +74,7 @@ La zonificación de cuencas hidrográficas corresponde a tres niveles de jerarqu
 
 </div>
 
-![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/Section01/CaseStudy/Graph/ZonaHidrografica2013.png)
+![R.LTWB](https://github.com/rcfdtools/R.LTWB/blob/main/activity/CaseStudy/Graph/ZonaHidrografica2013.png)
 
 Las cuencas hidrográficas que entregan o desembocan sus aguas superficiales directamente de una área hidrográfica se denominaran zonas hidrográficas. Agrupan varias cuencas que se presentan como un subsistema hídrico con características de relieve y drenaje homogéneo y sus aguas tributan a través de un afluente principal hacia un área hidrográfica. Están integradas por cuencas de las partes altas, medias o bajas de una zona hidrográfica que captan agua y sedimentos de los tributarios de diferente orden tales como nacimientos de agua, arroyos, quebradas y ríos. Las cuencas que tributan sus aguas a su vez a las zonas hidrográficas se denomina subzonas hidrográficas. Ahora bien, respecto a la toponimia con que se identifican zonas y subzonas hidrográficas, a estas unidades se les asignó la toponimia de acuerdo con el nombre de la corriente más representativa o río principal o con el nombre heredado de la zonificación del HIMAT, que puede corresponder al espacio geográfico o región a la cual drenan las aguas superficiales.[^2]
 
@@ -138,7 +136,7 @@ El proceso de delimitación se realiza a partir de la cobertura de Subzonas hidr
 
 1. Ingrese al portal http://www.ideam.gov.co/en/capas-geo y en el cuadro de búsqueda escriba _Zonificación Hidrográfica_, observará que a 2022.07.07 existen dos versiones de la capa de zonificación correspondientes al año 2010 y 2013. Realice la descarga del archivo de formas Shapefile del año 2013, consulte sus metadatos y el catálogo de objetos disponible.
 
-> La descarga permite obtener el archivo comprimido _[Zonificacion_Hidrografica_2013.zip](../../.shp/Zonificacion_Hidrografica_2013.zip)_ que contiene la capa geográfica en formato Shapefile, un mapa de muestra en formato .pdf, la ficha de representación gráfica y otros elementos complementarios. 
+> La descarga permite obtener el archivo comprimido _[Zonificacion_Hidrografica_2013.zip](../../file/shp/Zonificacion_Hidrografica_2013.zip)_ que contiene la capa geográfica en formato Shapefile, un mapa de muestra en formato .pdf, la ficha de representación gráfica y otros elementos complementarios. 
 
 ![R.LTWB](Screenshot/IDEAMZonificacionHidrograficaDescarga.png)
 
@@ -170,15 +168,15 @@ Catálogo de objetos en Subzonas [^4]
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Query.png)
 
-5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/.shp/ZonaEstudio.zip)_. Simbolice solo por contorno usando borde externo negro en grosor 3.
+5. Utilizando la herramienta _Dissolve_ disponible en el menú _Geoprocessing_, disuelva los polígonos de la zona de estudio para obtener un único polígono perimetral (no es necesario definir ningún campo de disolución). Nombrar como _[ZonaEstudio.shp](https://github.com/rcfdtools/R.LTWB/blob/main/file/shp/ZonaEstudio.zip)_. Simbolice solo por contorno usando borde externo negro en grosor 3.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaHidrografica2013Dissolve.png)
 
 6. En la Tabla de Contenido, asigne en las propiedades de Layers o Capas el sistema de proyección de coordenadas MAGNA_Colombia_CTM12 correspondiente al identificador EPSG 9377 o ESRI 103599.
 
-> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar los cálculos de áreas y perímetros en unidades del sistema internacional. En la carpeta _[.projectionfile](../../.projectionfile)_ de este repositorio se encuentran diferentes archivos de proyección, incluido _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
+> La versiones antiguas de ArcGIS for Desktop (p.ej, 10.2.2) no incluyen el sistema de proyección del origen único nacional CTM12 o 9377, por lo que la asignación debe ser realizada a través de un archivo de proyección de coordenadas .prj. La definición de un sistema proyectado permitirá realizar los cálculos de áreas y perímetros en unidades del sistema internacional. En la carpeta _[../projectionfile](../../file/projectionfile)_ de este repositorio se encuentran diferentes archivos de proyección, incluido _MAGNA_OrigenNacional.prj_ correspondiente al CRS requerido.
 
-Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](../../.projectionfile/MAGNA_OrigenNacional.prj)
+Parámetros del archivo de proyección origen único nacional de Colombia: [MAGNA_OrigenNacional.prj](../../file/projectionfile/MAGNA_OrigenNacional.prj)
 ```
 MAGNA_Colombia_Origen_Unico
 Authority: Custom
@@ -202,7 +200,7 @@ Datum: D_MAGNA
 ```
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2CRS9377.png)
 
-7. En la tabla de atributos de la capa geográfica _[ZonaEstudio.shp](../../.shp/ZonaEstudio.zip)_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
+7. En la tabla de atributos de la capa geográfica _[ZonaEstudio.shp](../../file/shp/ZonaEstudio.zip)_, cree dos campos de atributos numéricos dobles y nómbrelos como Akm2 y Pkm correspondientes al área en km² y perímetro en km, cree un campo de texto con longitud de 55 caracteres con el nombre ZH. Utilizando el calculador de geometría obtenga el área y el perímetro y asigne manualmente el código y nombre de la subzona en el campo ZH como _ZH 2 - Cesar_.
 
 > En ArcGIS, nuevos campos pueden ser creados desde las propiedades de la tabla de atributos utilizando la opción _Add Field_. 
 > Para el cálculo del área y perímetros, de clic derecho en la cabecera de los campos y seleccione la opción _Calculate Geometry_.
@@ -216,7 +214,7 @@ Rotule indicando la zona, área y perímetro utilizando las siguientes expresion
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaEstudioCalculateGeometry.png)
 
-8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _[ZonaEstudioEnvelope.shp](../../.shp/ZonaEstudioEnvelope.zip)_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
+8. Utilizando la herramienta _Data Management / Features / Feature Envelope to Polygon_, cree el polígono regular envolvente de la zona de estudio y nómbrelo como _[ZonaEstudioEnvelope.shp](../../file/shp/ZonaEstudioEnvelope.zip)_. Agregue los campos de atributos flotantes Akm2, Pkm y de texto ZHEnvelope, asigne la etiqueta _ZH envelope 2 - Cesar_ y rotule con estos 3 campos.
 
 ![R.LTWB](Screenshot/ArcGISDesktop10.2.2ZonaEstudioEnvelope.png)
 
@@ -266,7 +264,7 @@ Utilizando la herramienta _Data Management Tools / Features / Feature Envelope t
 
 #### Instrucciones en QGIS (3.26.0)
 
-Cree un mapa de proyecto, agregue la capa [Zonificacion_hidrografica_2013.shp](../../.shp/Zonificacion_Hidrografica_2013.zip) y guarde en la carpeta _.map_ como _R.LTWB.qgz_
+Cree un mapa de proyecto, agregue la capa [Zonificacion_hidrografica_2013.shp](../../file/shp/Zonificacion_Hidrografica_2013.zip) y guarde en la carpeta _.map_ como _R.LTWB.qgz_
 
 El filtrado de entidades se realiza a través de la ventana de propiedades de la capa desde la pestaña _Source_ y el _Query Builder_.
 
@@ -340,7 +338,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../Requirement) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/2) | [Siguiente](../../Section02) |
+| [Anterior](../Requirement) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/2) | [Siguiente](../UserCreation) |
 |----------------------------|-----------------------------------|----------------------------------------------------------------------------------|------------------------------|
 
 [^1]: http://www.ideam.gov.co/web/agua/zonificacion-hidrografica
@@ -348,4 +346,3 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 [^3]: http://geoservicios.ideam.gov.co/geonetwork/srv/eng/catalog.search#/metadata/7696695f-ae9c-4780-a6d0-d3cd1808819a
 [^4]: http://geoservicios.ideam.gov.co/CatalogoObjetos/queryByUUID?uuid=bcd645c9-0f11-4770-926e-1e1fdfbf5ce6
 
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
