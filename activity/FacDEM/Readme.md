@@ -104,7 +104,7 @@ Parámetros para representación
 
 </div>
 
-Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](../../file/datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\\.datasets](../../.datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
+Copie y pegue los valores de la tabla anterior en un libro de Microsoft Excel, nombre la hoja como _TablaMuestra_ y el libro como _[FacDEMTablaMuestra.xlsx](../../file/datasets/FacDEMTablaMuestra.xlsx)_ en la carpeta _[D:\R.LTWB\file\datasets](../../file/datasets)_. Renombre las columnas de atributos como se muestra en la siguiente ilustración.
 
 ![R.LTWB](Screenshot/MicrosoftExcel365FacDEMTablaMuestra.png)
 
