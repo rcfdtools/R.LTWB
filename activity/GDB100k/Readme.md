@@ -1,6 +1,4 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
+# Descarga de GDB nacional del IGAC en escala 1:100.000 y fotorrestitución de redes de drenaje
 Keywords: `IGAC` `GDB` `1:100000` `Pairwise-Clip` `Clip` `Polygon-to-Centerline` `Merge` `HCMGIS` `Skeleton-Medial-Axis` `Edit` `Extend`
 
 <br>![R.LTWB](Graph/GDB100k.png)
@@ -9,7 +7,7 @@ Para los procesos de reacondicionamiento del modelo de terreno que garantice el 
 
 Los drenajes corresponden al flujo de agua superficial que depende de la precipitación pluvial y/o afloramiento de aguas subterráneas y van a desembocar en otra corriente, en una laguna o en el mar. Los drenajes dispersos son aquellos que no desembocan en otro cuerpo de agua, o desaparecen al ser no fotointerpretables, por ejemplo, en corrientes subterráneas.[^1]
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=uLvu_J5hI3o" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=uLvu_J5hI3o" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -28,7 +26,7 @@ Los drenajes corresponden al flujo de agua superficial que depende de la precipi
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
 * QGIS plugin: [HCMGIS](https://plugins.qgis.org/plugins/HCMGIS/)
-* [Polígono envolvente que delimita la zona de estudio. ](../../.shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../../Section01/CaseStudy)
+* [Polígono envolvente que delimita la zona de estudio. ](../../file/shp/ZonaEstudioEnvelope.zip)[:mortar_board:Aprender.](../CaseStudy)
 
 
 ### Diagrama general de procesos
@@ -55,7 +53,7 @@ Para la obtención de la red de drenaje definitiva que será utilizada para el r
 
 > Tenga en cuenta que los drenajes restituídos pueden no estar actualizados de acuerdo a las condiciones particulares de la zona de estudio evaluada. Se recomienda verificar con imágenes satelitales recientes, la correspondencia entre las redes de drenaje digitalizadas por el IGAC y las redes de drenajes visibles en imágenes. Por ejemplo, en la zona de explotación minera a cielo abierto del Departamento del Cesar en Colombia, los drenajes sobre los polígonos de concesión pueden no corresponder a las condiciones actuales debido a realineamiento de cauces.
 
-3. Utilizando la herramienta de geoprocesamiento _Clip_, recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _[DrenajeSencilloIGAC100kZE.shp](../../.shp/DrenajeSencilloIGAC100kZE.zip)_. Para el recorte, use como máscara el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](../../.shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
+3. Utilizando la herramienta de geoprocesamiento _Clip_, recorte la clase de entidad _Drenaje_Sencillo_ y guarde en un archivo de formas en formato Shapefile dentro de la carpeta _.shp_ de _D:\R.LTWB_ con el nombre _[DrenajeSencilloIGAC100kZE.shp](../../file/shp/DrenajeSencilloIGAC100kZE.zip)_. Para el recorte, use como máscara el polígono envolvente de la zona de estudio denominado [ZonaEstudioEnvelope.shp](../../file/shp/ZonaEstudioEnvelope.zip). La versión recortada contiene 15342 tramos de drenaje dentro de la zona de estudio.
 
 > En ArcGIS Pro puede utilizar también la herramienta _Pairwise Clip_ que contiene funcionalidades extendidas de la herramienta _Clip_.
 >
@@ -92,13 +90,13 @@ Estado de drenajes - Subtipos
 | 5101               | Permanente   | 
 | 5102               | Intermitente |
 
-4. Desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Doble_ y con la herramienta _Clip_ realice el recorte hasta el polígono envolvente de la zona de estudio y nombre como _[DrenajeDobleIGAC100kZE.shp](../../.shp/DrenajeDobleIGAC100kZE.zip)_. Para el caso de estudio y la versión descargada hemos obtenido 61 polígonos.
+4. Desde el dataset _Superficies_Agua_, agregue la capa _Drenaje_Doble_ y con la herramienta _Clip_ realice el recorte hasta el polígono envolvente de la zona de estudio y nombre como _[DrenajeDobleIGAC100kZE.shp](../../file/shp/DrenajeDobleIGAC100kZE.zip)_. Para el caso de estudio y la versión descargada hemos obtenido 61 polígonos.
 
 > Los drenajes dobles corresponden a superficies de agua digitalizadas como polígonos y son requeridos para completar la red de drenajes sencillos que será utilizada en el reacondicionamiento del modelo digital de elevación. 
 
  ![R.LTWB](Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZEClip.png)
 
-5. A partir de los polígonos de los drenajes dobles y utilizando la herramienta de geoprocesamiento _Topographic Production Tools / Polygon to Centerline_ de ArcGIS Pro, cree las líneas centrales que demarcan cada drenaje sencillo y nombre la capa resultante como _DrenajeDobleIGAC100kZECenterline_ dentro de la GDB de ArcGIS Pro y seleccione en _Connecting Features_ la capa correspondiente a los drenajes sencillos de la zona de estudio, denominada previamente como _[DrenajeSencilloIGAC100kZE.shp](../../.shp/DrenajeSencilloIGAC100kZE.zip)_ para obtener líneas conectoras desde los drenajes sencillos hasta las líneas centrales.
+5. A partir de los polígonos de los drenajes dobles y utilizando la herramienta de geoprocesamiento _Topographic Production Tools / Polygon to Centerline_ de ArcGIS Pro, cree las líneas centrales que demarcan cada drenaje sencillo y nombre la capa resultante como _DrenajeDobleIGAC100kZECenterline_ dentro de la GDB de ArcGIS Pro y seleccione en _Connecting Features_ la capa correspondiente a los drenajes sencillos de la zona de estudio, denominada previamente como _[DrenajeSencilloIGAC100kZE.shp](../../file/shp/DrenajeSencilloIGAC100kZE.zip)_ para obtener líneas conectoras desde los drenajes sencillos hasta las líneas centrales.
 
 > Debido a que internamente esta herramienta debe crear campos de atributos que contienen los nombres de las capas de entrada, los nombres de atributos pueden contener más de 10 caracteres, lo que generará un error de ejecución. Para obtener las líneas centrales, primero genere una capa geográfica de líneas centrales en la GDB de ArcGIS Pro y luego exporte a un archivo de formas shapefile.
 >
@@ -108,11 +106,11 @@ Estado de drenajes - Subtipos
 
 > Para la obtención de líneas centrales en QGIS, instale el plugin _HCMGIS_, seleccione el drenaje doble y desde la barra de menús despliegue las opciones de _HCMGIS / Geometry Processing / Skeleton Medial Axis_. 
 
-6. Exporte la clase de entidad de líneas centrales de drenajes dobles a un archivo shapefile dentro de la carpeta _.shp_ nombrándolo como _[DrenajeDobleIGAC100kZECenterline.shp](../../.shp/DrenajeDobleIGAC100kZECenterline.zip)_, verifique que las líneas conectoras desde los drenajes sencillos hasta la línea central se encuentren a lo largo de toda la red. Podrá observar que no todas las conexiones laterales a los cuerpos dobles han sido trazadas.
+6. Exporte la clase de entidad de líneas centrales de drenajes dobles a un archivo shapefile dentro de la carpeta _.shp_ nombrándolo como _[DrenajeDobleIGAC100kZECenterline.shp](../../file/shp/DrenajeDobleIGAC100kZECenterline.zip)_, verifique que las líneas conectoras desde los drenajes sencillos hasta la línea central se encuentren a lo largo de toda la red. Podrá observar que no todas las conexiones laterales a los cuerpos dobles han sido trazadas.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0IGACDrenajeDoble100kZECenterlineExport.png)
 
-7. Realice la unión de la capa de drenajes sencillos y las líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Data Management Tools / Merge_ y nombre la capa como _[DrenajeSencilloIGAC100kZEMerge.shp](../../.shp/DrenajeSencilloIGAC100kZEMerge.zip)_.
+7. Realice la unión de la capa de drenajes sencillos y las líneas centrales obtenidas de polígonos de los drenajes dobles en una nueva capa geográfica, para ello utilice la herramienta de geoprocesamiento _Data Management Tools / Merge_ y nombre la capa como _[DrenajeSencilloIGAC100kZEMerge.shp](../../file/shp/DrenajeSencilloIGAC100kZEMerge.zip)_.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.0IGACDrenajeSencillo100kZEMerge.png)
 
@@ -180,15 +178,15 @@ En este momento ya dispone de la red de drenaje que será utilizada para la rect
 
 | Shapefile                            |              Descargar :open_file_folder:               |
 |:-------------------------------------|:-------------------------------------------------------:|
-| DrenajeSencilloIGAC100kZE.shp        |    [.zip](../../.shp/DrenajeSencilloIGAC100kZE.zip)     |
-| DrenajeDobleIGAC100kZE.shp           |      [.zip](../../.shp/DrenajeDobleIGAC100kZE.zip)      |
-| DrenajeDobleIGAC100kZECenterline.shp | [.zip](../../.shp/DrenajeDobleIGAC100kZECenterline.zip) |
-| DrenajeSencilloIGAC100kZEMerge.shp   |  [.zip](../../.shp/DrenajeSencilloIGAC100kZEMerge.zip)  |
+| DrenajeSencilloIGAC100kZE.shp        |    [.zip](../../file/shp/DrenajeSencilloIGAC100kZE.zip)     |
+| DrenajeDobleIGAC100kZE.shp           |      [.zip](../../file/shp/DrenajeDobleIGAC100kZE.zip)      |
+| DrenajeDobleIGAC100kZECenterline.shp | [.zip](../../file/shp/DrenajeDobleIGAC100kZECenterline.zip) |
+| DrenajeSencilloIGAC100kZEMerge.shp   |  [.zip](../../file/shp/DrenajeSencilloIGAC100kZEMerge.zip)  |
 
 </div>
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -233,10 +231,7 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../DEMAlos) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/7) | [Siguiente](../AgreeDEM) |
+| [Anterior](../DEMAlos/Readme.md) | [:house: Inicio](../../Readme.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/7) | [Siguiente](../AgreeDEM/Readme.md) |
 |------------------------|-----------------------------------|----------------------------------------------------------------------------------|--------------------------|
 
 [^1]: https://www.igac.gov.co/sites/igac.gov.co/files/anexo_1.1_catalogo_objetos_cartografiabasica_v1.0_.pdf
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
-
