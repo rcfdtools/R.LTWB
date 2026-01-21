@@ -1,13 +1,11 @@
-<div align="center"><a href="https://www.escuelaing.edu.co/es/investigacion-e-innovacion/centro-de-estudios-hidraulicos/" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBanner.jpg" alt="R.LTWB" width="100%" border="0" /></a></div>
-
-## Lectura y análisis de caudales y áreas de aportación en nodos característicos
+# 5.2. Lectura y análisis de caudales y áreas de aportación en nodos característicos
 Keywords: `LTWB` `Flow` `Extract-multi-values-to-points` `Linear-trend` `Histogram`
 
 ![R.LTWB](Graph/FlowPoint.png)
 
 Una vez obtenida la red de puntos característicos que contienen el número de celdas acumuladas y sus áreas de drenaje aportantes, se procede a realizar la lectura de resultados, por medio de estadísticas zonales o por extracción de valores desde los mapas ráster de caudal medio y se generan ecuaciones características que permiten estimar el caudal en función de un valor de área de aportación definido.
 
-<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=6k0KEhBrN08" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTubeInicioActividad.png" alt="R.LTWB" width="40%" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
+<div align="center"><br><a href="http://www.youtube.com/watch?feature=player_embedded&v=6k0KEhBrN08" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHYouTube.svg" alt="R.LTWB" width="120px" border="0" /></a><sub><br>Playlist: https://www.youtube.com/playlist?list=PLneiG4vC_8YupZFL2DtUEdcgtXyWT7Apt</sub><br><br></div>
 
 
 ### Objetivos
@@ -21,8 +19,8 @@ Una vez obtenida la red de puntos característicos que contienen el número de c
 * [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
 * [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (opcional)
 * [QGIS 3+](https://qgis.org/) (opcional)
-* Red hidrológica de drenaje y nodos característicos. [:mortar_board:Aprender.](../../Section02/StrDEM)
-* Mapas de caudal medio obtenidos del balance hidrológico de largo plazo. [:mortar_board:Aprender.](../../Section05/LTWB)
+* Red hidrológica de drenaje y nodos característicos. [:mortar_board:Aprender.](../StrDEM/Readme.md)
+* Mapas de caudal medio obtenidos del balance hidrológico de largo plazo. [:mortar_board:Aprender.](../LTWB/Readme.md)
 
 
 ### Procedimiento general
@@ -38,11 +36,11 @@ Una vez obtenida la red de puntos característicos que contienen el número de c
 
 > Tenga en cuenta que automáticamente fué asignado al proyecto, el sistema de coordenadas geográficas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 
-2. Desde la carpeta _R.LTWB/.shp_ disponible en el catálogo, agregue al mapa los archivos de formas [alosstr.shp](../../.shp/alosstr.zip) y [ALOSStrNode.shp](../../.shp/ALOSStrNode.zip). Modifique la simbología de representación de la red de drenaje _alosstr_ a líneas de color _Ultra Blue_ y los nodos característicos a color negro en tamaño 8.
+2. Desde la carpeta _R.LTWB/.shp_ disponible en el catálogo, agregue al mapa los archivos de formas [alosstr.shp](../../file/shp/alosstr.zip) y [ALOSStrNode.shp](../../file/shp/ALOSStrNode.zip). Modifique la simbología de representación de la red de drenaje _alosstr_ a líneas de color _Ultra Blue_ y los nodos característicos a color negro en tamaño 8.
 
 > Tenga en cuenta que la capa ALOSStrNode.shp contiene 32708 nodos característicos localizados en los puntos de inicio y unión de cada tramo de río. Debido al número de nodos, es posible que el visor de ArcGIS, no permita visualizar todos los nodos, realice un acercamiento a escala 1:510.000. 
 > 
-> La red de drenaje alosstr.shp corresponde a líneas hidrológicas trazadas en las celdas del modelo de terreno y no a líneas suavizadas. [:mortar_board:Mas información...](../../Section02/StrDEM)
+> La red de drenaje alosstr.shp corresponde a líneas hidrológicas trazadas en las celdas del modelo de terreno y no a líneas suavizadas. [:mortar_board:Mas información...](../StrDEM)
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3AlosStrNode.png)
 
@@ -150,7 +148,7 @@ Como puede observar en las gráficas, los caudales obtenidos para el fenómeno d
 
 En la siguiente tabla encontrará la lectura de los valores medios obtenidos en el balance hidrológico en las localizaciones específicas de algunas de las estaciones del IDEAM.
 
-| Estación<br>[Obtener catálogo](../../.shp/CNE_IDEAM_OE_ZE.zip) | Latitud, °  | Longitud, ° | Área Ap., km² | Qm<br>IDEAM, m³/s | Qm<br>Budyko, m³/s | Qm<br>Dekop, m³/s | Qm<br>Turc, m³/s |            :globe_with_meridians: Google Maps             | 
+| Estación<br>[Obtener catálogo](../../file/shp/CNE_IDEAM_OE_ZE.zip) | Latitud, °  | Longitud, ° | Área Ap., km² | Qm<br>IDEAM, m³/s | Qm<br>Budyko, m³/s | Qm<br>Dekop, m³/s | Qm<br>Turc, m³/s |            :globe_with_meridians: Google Maps             | 
 |----------------------------------------------------------------|:-----------:|:-----------:|:-------------:|:-----------------:|:------------------:|:-----------------:|:----------------:|:---------------------------------------------------------:|
 | BECERRIL [28027050]                                            |  9.686611   | -73.279194  |    538.274    |      10.159       |      9.569801      |     7.785855      |     8.092049     | [Ver](http://maps.google.com/maps?q=9.686611,-73.279194)  |
 | SANTA TERESA [28027040]                                        |  9.915944   | -73.283694  |    186.611    |       2.890       |      3.019509      |     2.396705      |     2.187955     | [Ver](http://maps.google.com/maps?q=9.915944,-73.283694)  |
@@ -163,14 +161,14 @@ En la siguiente tabla encontrará la lectura de los valores medios obtenidos en 
 | PUENTE CARRETERA [25027890]                                    |  9.342333   | -73.490889  |    378.691    |       2.474       |      9.268123      |     7.769629      |     7.421470     | [Ver](http://maps.google.com/maps?q=9.342333,-73.490889)  |
 | BELLEZA LA [28047080]                                          |  10.333333  |   -73.95    |    696.900    |      16.233       |     12.885714      |     10.540203     |    10.991765     |   [Ver](http://maps.google.com/maps?q=10.333333,-73.95)   |
  
-> Los caudales medios registrados en la tabla corresponden a caudales compuestos obtenidos del balance hidrológico de largo plazo y leídos a partir de las grillas LTWBBudykoComposite.tif, LTWBDekopComposite.tif y LTWBTurcComposite.tif. [Caudales medios IDEAM](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv) obtenidos por agregación estadística a partir de registros en estaciones.
+> Los caudales medios registrados en la tabla corresponden a caudales compuestos obtenidos del balance hidrológico de largo plazo y leídos a partir de las grillas LTWBBudykoComposite.tif, LTWBDekopComposite.tif y LTWBTurcComposite.tif. [Caudales medios IDEAM](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv) obtenidos por agregación estadística a partir de registros en estaciones.
 > 
-> Las áreas de aportación (Ap.) han sido obtenidas a partir de la lectura del número de celdas de la grilla [ALOSFac.tif](../../.grid) del modelo de acumulación FAC correspondientes al modelo digital de elevación ALOS PALSAR
+> Las áreas de aportación (Ap.) han sido obtenidas a partir de la lectura del número de celdas de la grilla [ALOSFac.tif](../../file/grid) del modelo de acumulación FAC correspondientes al modelo digital de elevación ALOS PALSAR
 
 En este momento dispone para la zona de estudio, de ecuaciones características a partir de las cuales se puede estimar el caudal medio en función del área de aportación en km².
 
 
-### Actividades complementarias:pencil2:
+### Actividades complementarias :pencil2:
 
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
@@ -179,7 +177,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 |:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1     | A partir de las áreas de aportación disponibles en cada nodo característico y de los valores extraídos de caudales, filtre por rangos de áreas y cree ecuaciones características segmentadas que permitan, por ejemplo, analizar caudales medios en cuencas inferiores a 25 km².                                                                                                                                                                                                                                                                     |
 |     2     | A partir de los mapas de caudal medio obtenidos para los métodos de evapotranspiración real investigados, realice la extracción de los caudales en nodos característicos, analice, cree ecuaciones y compare con los valores obtenidos en la presente actividad.                                                                                                                                                                                                                                                                                     |
-|     3     | A través de una matriz de dispersión, compare en 20 localizaciones diferentes, los [caudales medios multianuales agregados estadísticamente](../../.datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md) a partir de los datos registrados en estaciones limnimétricas, con los datos obtenidos a partir del balance hidrológico de largo plazo. Para esta comparación es necesario identificar el nodo característico más próximo a cada estación o realizar la lectura en el pixel más próximo de las grillas de resultados. |
+|     3     | A través de una matriz de dispersión, compare en 20 localizaciones diferentes, los [caudales medios multianuales agregados estadísticamente](../../file/datasets/IDEAM_Agg/Agg_Impute_MICE_Outlier_IQR_Cap_Pivot_Q_MEDIA_M.csv.md) a partir de los datos registrados en estaciones limnimétricas, con los datos obtenidos a partir del balance hidrológico de largo plazo. Para esta comparación es necesario identificar el nodo característico más próximo a cada estación o realizar la lectura en el pixel más próximo de las grillas de resultados. |
 
 
 ### Compatibilidad
@@ -205,7 +203,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Actividad anterior](../LTWB) | [Inicio](../../Readme.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/34) | [Actividad siguiente](../FlowPerformance) |
-|-------------------------------|---------------------------|------------------------------------------------------------------------|-------------------------------------------|
-
-<div align="center"><a href="https://enlace-academico.escuelaing.edu.co/psc/FORMULARIO/EMPLOYEE/SA/c/EC_LOCALIZACION_RE.LC_FRM_ADMEDCO_FL.GBL" target="_blank"><img src="https://github.com/rcfdtools/R.TeachingResearchGuide/blob/main/CaseUse/.icons/IconCEHBotonCertificado.png" alt="R.LTWB" width="260" border="0" /></a><sub><br>Este curso guía, ha sido desarrollado con el apoyo de la Escuela Colombiana de Ingeniería - Julio Garavito. Encuentra más contenidos en https://github.com/uescuelaing</sub><br><br></div>
+| [Anterior](../LTWB/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/34) | [Siguiente](../FlowPerformance/Readme.md) |
+|-------------------------------|---------------------------|------------------------------------------------------------------------|---------------------------------|
