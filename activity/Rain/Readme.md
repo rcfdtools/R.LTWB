@@ -2,7 +2,7 @@
 
 Durante el proceso de conformación de información para el desarrollo del balance hidrológico, es necesaria la construcción de mapas continuos e interpolados que representen espacialmente el comportamiento de las diferentes variables requeridas y fenómenos climatológicos asociados a nivel multianual.
 
-# Mapa de precipitación total
+# 4.1. Mapa de precipitación total
 Keywords: `DEM` `IDW` `Rain` `Interpolate`
 
 ![R.LTWB](Graph/Rain.png)
