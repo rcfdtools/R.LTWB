@@ -9,6 +9,9 @@ Organization
 https://github.com/uescuelaing
 https://www.escuelaing.edu.co/es/programas/cursos-autocontenidos-sin-costo/
 
+✓Δ°Σβρσθαπ∑√±πØμx●•∫≠≈≤≥´◄ ►
+
+
 Removido
 
 <div align="center"><img alt="R.LTWB" src=".icons/R.LTWB.svg" width="250px"></div>
@@ -194,15 +197,15 @@ D:\R.LTWB\file\hec\HECGeoHMS\
 
 Anterior
 Siguiente
-Remover iconos flechas
+Remover iconos flechas <<<<<<<<<<<<<<
 Actividades complementarias :pencil2:
 /Readme.md
 Numeracion
 
+
+
 | [:house: Inicio](../../README.md) |
 | [:house: Inicio](../../../README.md) |
-
-
 
 ../../activity/
 ../../../activity/
