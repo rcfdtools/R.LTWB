@@ -346,8 +346,9 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 | 2022.10.27 | Gráfica de análisis de densidad KDE por cada parámetro. Gráficas de análisis por parámetro para cada estación: serie tiempo, boxplot, histograma, densidad KDE. Generación de archivo Markdown EDA.md con análisis general por parámetro y detallado por estación.                                                                                                                                                                                   | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 | 2022.10.24 | Inicio creación script EDA.py. Creación de tablas pivot .csv para cada parámetro contenido en el archivo IDEAMJoined.csv: Pivot_EV_TT_D.csv, Pivot_PTPM_TT_M.csv, Pivot_Q_MEDIA_M.csv, Pivot_TMN_CON.csv, Pivot_TMX_CON.csv. Creación de gráficas de series temporales agrupadas para cada parámetro: Plot_EV_TT_D_TimeSerie.png, Plot_PTPM_TT_M_TimeSerie.png, Plot_Q_MEDIA_M_TimeSerie.png, Plot_TMN_CON_TimeSerie.png, Plot_TMX_CON_TimeSerie.png | [rcfdtools](https://github.com/rcfdtools)  |   8   |
 
+##
 
-_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
