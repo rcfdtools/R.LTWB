@@ -2,11 +2,11 @@
 
 Al consultar, descargar, descomprimir, instalar, usar o explorar las herramientas, scripts y guías de desarrollo contenidas en este repositorio, sus archivos y documentación, usted como empresa, individuo, investigador, estudiante, profesional, empleado o persona, acepta los siguientes términos de uso:
 
-* _r.cfdtools@gmail.com_ le concede una licencia de uso global, no exclusiva, de libre uso y revocable en cualquier momento, siempre y cuando sea única y exclusivamente para su uso personal o privado y no tenga como fin un uso comercial.
+* _rcfdtools_ le concede una licencia de uso global, no exclusiva, de libre uso y revocable en cualquier momento, siempre y cuando sea única y exclusivamente para su uso personal o privado y no tenga como fin un uso comercial.
 
-* Cláusula de exención de responsabilidad: _r.cfdtools@gmail.com_, No se responsabiliza de la aplicación y uso de los resultados obtenidos a través de sus modelos y herramientas. Es responsabilidad de los usuarios: verificar, comparar, evaluar y analizar Sí los scripts, algoritmos, funciones, objetos aplicados y los resultados obtenidos, cumplen con las metodologías y estándares de análisis aplicables en ingeniería, estadística, hidrología e hidráulica.
+* Cláusula de exención de responsabilidad: _rcfdtools_, No se responsabiliza de la aplicación y uso de los resultados obtenidos a través de sus modelos y herramientas. Es responsabilidad de los usuarios: verificar, comparar, evaluar y analizar Sí los scripts, algoritmos, funciones, objetos aplicados y los resultados obtenidos, cumplen con las metodologías y estándares de análisis aplicables en ingeniería, estadística, hidrología e hidráulica.
 
-* Se permite la reproducción digital de los documentos electrónicos con autorización expresa del autor (solicitar a r.cfdtools@gmail.com indicando el proyecto o caso de estudio), No se permite su reproducción impresa en medios físicos.
+* Se permite la reproducción digital de los documentos electrónicos con autorización expresa del autor (solicitar a rcfdtools indicando el proyecto o caso de estudio), No se permite su reproducción impresa en medios físicos.
 
 * Se acoge a todas las leyes de propiedad intelectual o de derechos de autor, bien sean locales, de su país de procedencia o globales internacionales. 
 
@@ -16,12 +16,12 @@ Al consultar, descargar, descomprimir, instalar, usar o explorar las herramienta
 
 * El autor no se hace responsable por el uso inadecuado de las herramientas computacionales que hacen parte de este repositorio, software o del proyecto _R.LTWB_, ni del uso inadecuado de los algoritmos, memorias de cálculo, guías de desarrollo y herramientas disponibles.
 
-* Se permite la modificación y mejora de los manuales, memorias de cálculo, guías de desarrollo, libros de cálculo electrónicos, scripts, algoritmos y demás herramientas propias incluidas en este repositorio, software o del proyecto _R.LTWB_, siempre y cuando se preserven las mismas libertades de distribución y copia de las modificaciones realizadas. Al realizar modificaciones, se compromete y obliga a publicarlas y a notificar al autor original a través del correo electrónico _r.cfdtools@gmail.com_ o a través de los mecanismos disponibles en GitHub (_Issues_, _Pull requests_), quién podrá incorporarlas a la versión oficial para su posterior distribución.
+* Se permite la modificación y mejora de los manuales, memorias de cálculo, guías de desarrollo, libros de cálculo electrónicos, scripts, algoritmos y demás herramientas propias incluidas en este repositorio, software o del proyecto _R.LTWB_, siempre y cuando se preserven las mismas libertades de distribución y copia de las modificaciones realizadas. Al realizar modificaciones, se compromete y obliga a publicarlas y a notificar al autor original a través de este repositorio o a través de los mecanismos disponibles en GitHub (_Issues_, _Pull requests_), quién podrá incorporarlas a la versión oficial para su posterior distribución.
 
 * No se permite la privatización, acaparamiento, venta o distribución comercial de este repositorio, software o del proyecto _R.LTWB_, ni ninguno de sus componentes, herramientas, memorias de cálculo, scripts, algoritmos y demás herramientas complementarias que se encuentran aquí publicadas o dentro de paquetes de instalación o liberaciones.
 
 
 ### Citación
 
-Se permite la reproducción digital parcial o total de estas actividades, scripts, guías de desarrollo, modelos de datos y documentación, siempre que se haga referencia como: "R.LTWB - Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - Long-term water balance", r.cfdtools@gmail.com, https://github.com/rcfdtools/R.LTWB, Bogotá - Colombia - Suramérica.".
+Se permite la reproducción digital parcial o total de estas actividades, scripts, guías de desarrollo, modelos de datos y documentación, siempre que se haga referencia como: "R.LTWB - Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - Long-term water balance", https://github.com/rcfdtools/R.LTWB, Bogotá - Colombia - Suramérica.".
 
