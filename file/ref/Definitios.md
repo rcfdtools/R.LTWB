@@ -1,4 +1,4 @@
-### Abreviaturas
+# Abreviaturas
 
 | Abreviatura | Significado                                                                                                                                                          |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -22,7 +22,7 @@
 | N/A         | No aplica                                                                                                                                                            |
 
 
-### Definiciones
+## Definiciones
 
 | Definición                                                       | Descripción                                                                                                                        |
 |------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -30,7 +30,7 @@
 | [Datum](https://en.wikipedia.org/wiki/Geodetic_datum)            | Un sistema de referencia geodésico es un recurso matemático que permite asignar coordenadas a puntos sobre la superficie terrestre |
 
 
-### Extensiones y tipos de archivos
+## Extensiones y tipos de archivos
 
 | Extensión                                  | Descripción                                                                      |
 |--------------------------------------------|----------------------------------------------------------------------------------|
