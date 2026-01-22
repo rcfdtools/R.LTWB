@@ -1,4 +1,6 @@
-# Abreviaturas
+# Abreviaturas, definiciones, extensiones e iconografía
+
+## Abreviaturas
 
 | Abreviatura | Significado                                                                                                                                                          |
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +58,6 @@
 | [.csv](https://fileinfo.com/extension/csv) | Comma separated values file                                                      |
 
 
-
 ## Iconografía [^1]
 
 Iconografía utilizada en este repositorio.
@@ -95,6 +96,7 @@ Iconografía utilizada en este repositorio.
 |           :date:           | `:date:`                     | Libro de Microsoft Excel                                                                             |
 
 Markdown emojis: https://gist.github.com/rxaviers/7360908
+
 
 ##
 
