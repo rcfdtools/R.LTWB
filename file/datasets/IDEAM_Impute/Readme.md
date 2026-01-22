@@ -1,4 +1,4 @@
-## Imputación y completado de datos IDEAM
+# Imputación y completado de datos IDEAM
 
 * Para más información, consulte la actividad [Impute](../../../activity/Impute/Readme.md).
 

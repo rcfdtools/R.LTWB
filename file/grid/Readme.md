@@ -1,10 +1,10 @@
-## Grillas de variables climatológicas
+# Grillas de variables climatológicas
 
 Esta carpeta contiene las grillas en formato GeoTIFF producidas en la Sección 4 y Sección 5 de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos.
 
 <div align="center">
 
-### [Precipitación total - P, mm/año](../../activity/Rain/Readme.md)
+## [Precipitación total - P, mm/año](../../activity/Rain/Readme.md)
 
 | Mapa por fenómeno      | Archivo :open_file_folder:                                                     |
 |------------------------|--------------------------------------------------------------------------------|
@@ -14,7 +14,7 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la Sección 4
 | RainTotalNeutral.tif   | [Part1](RainTotalNeutral.part01.rar), [Part2](RainTotalNeutral.part02.rar)     |
 
 
-### [Temperatura media - T, °C](../../activity/Temperature/Readme.md)
+## [Temperatura media - T, °C](../../activity/Temperature/Readme.md)
 
 | Mapa por fenómeno           | Archivo :open_file_folder:                                                               |
 |-----------------------------|------------------------------------------------------------------------------------------|
@@ -24,14 +24,14 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la Sección 4
 | TemperatureMedNeutral.tif   | [Part1](TemperatureMedNeutral.part01.rar), [Part2](TemperatureMedNeutral.part02.rar)     |
 
 
-### [Evapotranspiración potencial - ETP, mm/año](../../activity/ETP/Readme.md)
+## [Evapotranspiración potencial - ETP, mm/año](../../activity/ETP/Readme.md)
 
 | Mapa                         | Archivo :open_file_folder:                                                                                                            |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | ETPCenicafe.tif              | [Part1](ETPCenicafe.part01.rar), [Part2](ETPCenicafe.part02.rar), [Part3](ETPCenicafe.part03.rar) |
 
 
-### [Evapotranspiración real - ETR, mm/año](../../activity/ETR/Readme.md)
+## [Evapotranspiración real - ETR, mm/año](../../activity/ETR/Readme.md)
 
 | Mapa                   | Archivo :open_file_folder:                                                                                                                                     |
 |:-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,7 +52,7 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la Sección 4
 | ETRTurcNeutral.tif     | [Part1](ETRTurcNeutral.part01.rar), [Part2](ETRTurcNeutral.part02.rar), [Part3](ETRTurcNeutral.part03.rar), [Part4](ETRTurcNeutral.part04.rar)                 |
 
 
-### [Poencial de escurrimiento y caudal medio, m³/s](../Section05/LTWB/Readme.md)
+## [Poencial de escurrimiento y caudal medio, m³/s](../Section05/LTWB/Readme.md)
 
 Potencial de escurrimiento
 

@@ -1,4 +1,4 @@
-## Exploración y análisis de datos IDEAM
+# Exploración y análisis de datos IDEAM
 
 * Para más información, consulte la actividad [EDA](../../../activity/EDA/Readme.md).
 

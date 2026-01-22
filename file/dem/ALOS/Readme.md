@@ -1,4 +1,4 @@
-## DEM - ALOS PALSAR (12.5m) files
+# DEM - ALOS PALSAR (12.5m) files
 
 * Para más información, consulte la actividad [DEMAlos](../../../activity/DEMAlos/Readme.md).
 

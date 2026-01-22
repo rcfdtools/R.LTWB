@@ -1,4 +1,4 @@
-## Projection file
+# Projection file
 
 Esta carpeta contiene archivos independientes de proyección de coordenadas en formato .prj aplicables a Colombia - Suramérica.
 

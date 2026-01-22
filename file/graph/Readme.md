@@ -1,4 +1,4 @@
-## Icons
+# Graph & Icons
 
 Esta carpeta contiene la iconografía general de este repositorio.
 

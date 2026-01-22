@@ -1,4 +1,4 @@
-## Series de datos agregados IDEAM
+# Series de datos agregados IDEAM
 
 * Para más información, consulte la actividad [Agg](../../../activity/Agg/Readme.md).
 

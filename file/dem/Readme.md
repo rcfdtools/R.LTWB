@@ -1,4 +1,4 @@
-## Archivos de modelos digitales de elevación DEM
+# Archivos de modelos digitales de elevación DEM
 
 Esta carpeta contiene las grillas base y grillas producidas de los modelos digitales de elevación utilizadas en el desarrollo del caso de estudio.
 

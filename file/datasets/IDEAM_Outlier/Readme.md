@@ -1,4 +1,4 @@
-## Identificación y ajuste de datos atípicos IDEAM
+# Identificación y ajuste de datos atípicos IDEAM
 
 * Para más información, consulte la actividad [Outlier](../../../activity/Outlier/Readme.md).
 
