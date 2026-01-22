@@ -1,6 +1,6 @@
 ## ENSO-ONI
 
-* Para más información, consulte la actividad [ENSO ONI](../../Section03/ENSOONI).
+* Para más información, consulte la actividad [ENSO ONI](../../../activity/ENSOONI).
 * Reporte detallado: [NOAA - Oceanic Niño Index (ONI) classifier for climatological year events Niño, Niña and Neutral](ONI_Eval.md).
 
 
@@ -10,5 +10,5 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](../../Readme.md) |
-|-----------------------------------|
+| [:house: Inicio](../../../README.md) |
+|--------------------------------------|
