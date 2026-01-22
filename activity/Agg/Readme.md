@@ -429,6 +429,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 | 2022.11.22 | Optimización de script. Conversión de listas de resultados a dataframes. Integración de dataframes en matriz unica de resultados por estación. Agregaciones mensuales multianuales por fenómeno climatológico.                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
 | 2022.11.21 | Script inicial con análisis de series compuestas. Agregación multianual. Segmentación de series por fenómeno climatológico. Agregaciones mensuales a anuales a partir de sumatoria y media. Gráficas de análisis.                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   6   |
 
+##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
 
