@@ -2,9 +2,9 @@
 
 # Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - LTWB
 
-<div align="center"><br><img alt="R.LTWB" src="file/graph/LTWB_WB.png" width="75%"><br><sub>Fuente: propia, creada con el catálogo de objetos de Microsoft Paint 3D.</sub><br><br></div>
-
 _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. En este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica.
+
+<div align="center"><img src="file/graph/Gemini_Generated_Image_yifc6yifc6yifc6y.png" alt="R.SIGE" width="60%" border="0" /><sub><br>Generado con: <a href="https://gemini.google.com/app/92e5cd6681b03ac2">https://gemini.google.com</a></sub><br><br></div>
 
 Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas, que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
