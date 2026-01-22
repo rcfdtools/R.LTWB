@@ -605,8 +605,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../EDA/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda](https://github.com/rcfdtools/R.LTWB/discussions/24) | [Siguiente](../Impute/Readme.md) |
-|------------------------------|------------------------------------|------------------------------------------------------------------------|----------------------------------|
+| [◄ Anterior](../EDA/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/24) | [Siguiente ►](../Impute/Readme.md) |
+|--------------------------------|------------------------------------|------------------------------------------------------------------------|------------------------------------|
 
 [^1]: Adapted from: https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/
 [^2]: https://www.investopedia.com/terms/e/empirical-rule.asp

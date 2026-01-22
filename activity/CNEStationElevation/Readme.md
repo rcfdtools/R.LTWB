@@ -385,8 +385,8 @@ _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusu
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [Anterior](../CNEStation/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/15) | [Siguiente](../CNEStationDatasetDownload/Readme.md) |
-|---------------------------|-----------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------|
+| [◄ Anterior](../CNEStation/Readme.md) | [:house: Inicio](../../README.md) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/15) | [Siguiente ►](../CNEStationDatasetDownload/Readme.md) |
+|---------------------------------------|-----------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------------|
 
 [^1]: https://blog.minitab.com/es/analisis-de-regresion-como-puedo-interpretar-el-r-cuadrado-y-evaluar-la-bondad-de-ajuste#:~:text=El%20R%2Dcuadrado%20es%20una,se%20trata%20de%20regresi%C3%B3n%20m%C3%BAltiple.
 [^2]: https://es.wikipedia.org/wiki/Coeficiente_de_correlaci%C3%B3n_de_Pearson
