@@ -10,7 +10,7 @@ https://github.com/uescuelaing
 https://www.escuelaing.edu.co/es/programas/cursos-autocontenidos-sin-costo/
 
 ✓Δ°Σβρσθαπ∑√±πØμx●•∫≠≈≤≥´◄ ►
-
+ / Colabora
 
 Removido
 
@@ -214,3 +214,5 @@ Numeracion
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../../LICENSE.md)._
+
+remove e-mail from license
