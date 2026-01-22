@@ -23,5 +23,5 @@ Al consultar, descargar, descomprimir, instalar, usar o explorar las herramienta
 
 ### Citación
 
-Se permite la reproducción digital parcial o total de estas actividades, scripts, guías de desarrollo, modelos de datos y documentación, siempre que se haga referencia como: "R.LTWB - Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - Long-term water balance", https://github.com/rcfdtools/R.LTWB, Bogotá - Colombia - Suramérica.".
+Se permite la reproducción digital parcial o total de estas actividades, scripts, guías de desarrollo, modelos de datos y documentación, siempre que se haga referencia como: "CURSO - Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - Long-term water balance - LTWB", https://github.com/rcfdtools/R.LTWB, Bogotá - Colombia - Suramérica.".
 
