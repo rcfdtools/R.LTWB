@@ -1,10 +1,10 @@
 ## Grillas de variables climatológicas
 
-Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 4](../Section04) y [Sección 5](../Section05) de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos.
+Esta carpeta contiene las grillas en formato GeoTIFF producidas en la Sección 4 y Sección 5 de este curso, relacionadas con el análisis espacial de variables climatológicas y mapas de isorendimientos.
 
 <div align="center">
 
-### [Precipitación total - P, mm/año](../Section04/Rain)
+### [Precipitación total - P, mm/año](../../activity/Rain/Readme.md)
 
 | Mapa por fenómeno      | Archivo :open_file_folder:                                                     |
 |------------------------|--------------------------------------------------------------------------------|
@@ -14,7 +14,7 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 | RainTotalNeutral.tif   | [Part1](RainTotalNeutral.part01.rar), [Part2](RainTotalNeutral.part02.rar)     |
 
 
-### [Temperatura media - T, °C](../Section04/Temperature)
+### [Temperatura media - T, °C](../../activity/Temperature/Readme.md)
 
 | Mapa por fenómeno           | Archivo :open_file_folder:                                                               |
 |-----------------------------|------------------------------------------------------------------------------------------|
@@ -24,14 +24,14 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 | TemperatureMedNeutral.tif   | [Part1](TemperatureMedNeutral.part01.rar), [Part2](TemperatureMedNeutral.part02.rar)     |
 
 
-### [Evapotranspiración potencial - ETP, mm/año](../Section04/ETP)
+### [Evapotranspiración potencial - ETP, mm/año](../../activity/ETP/Readme.md)
 
 | Mapa                         | Archivo :open_file_folder:                                                                                                            |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | ETPCenicafe.tif              | [Part1](ETPCenicafe.part01.rar), [Part2](ETPCenicafe.part02.rar), [Part3](ETPCenicafe.part03.rar) |
 
 
-### [Evapotranspiración real - ETR, mm/año](../Section04/ETR)
+### [Evapotranspiración real - ETR, mm/año](../../activity/ETR/Readme.md)
 
 | Mapa                   | Archivo :open_file_folder:                                                                                                                                     |
 |:-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -52,7 +52,7 @@ Esta carpeta contiene las grillas en formato GeoTIFF producidas en la [Sección 
 | ETRTurcNeutral.tif     | [Part1](ETRTurcNeutral.part01.rar), [Part2](ETRTurcNeutral.part02.rar), [Part3](ETRTurcNeutral.part03.rar), [Part4](ETRTurcNeutral.part04.rar)                 |
 
 
-### [Poencial de escurrimiento y caudal medio, m³/s](../Section05/LTWB)
+### [Poencial de escurrimiento y caudal medio, m³/s](../Section05/LTWB/Readme.md)
 
 Potencial de escurrimiento
 
@@ -98,9 +98,9 @@ Caudal medio
 
 ##
 
-_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](https://github.com/rcfdtools/R.LTWB/wiki/License)._
+_R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
 
 _¡Encontraste útil este repositorio!, apoya su difusión marcando este repositorio con una ⭐ o síguenos dando clic en el botón Follow de [rcfdtools](https://github.com/rcfdtools) en GitHub._
 
-| [:house: Inicio](../Readme.md) |
-|--------------------------------|
+| [:house: Inicio](../../README.md) |
+|-----------------------------------|
