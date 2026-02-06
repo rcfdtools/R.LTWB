@@ -134,4 +134,4 @@ _¡Encontraste útil este repositorio!, apoya su difusión marcando este reposit
 | [:sun_with_face: Iniciar curso](activity/WhatIsLTWB/Readme.md) | [:infinity: Otros cursos y herramientas](https://github.com/rcfdtools) | [:beginner: Ayuda / Colabora](https://github.com/rcfdtools/R.LTWB/discussions/1) | [:notebook: Referencias](file/ref/Readme.md) | [:label: Abreviaturas y definiciones](file/ref/Definitios.md) |
 |----------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------|---------------------------------------------------------------|
 
-<div align="right"><img alt="rcfdtools" src="file/graph/R.LTWB.svg" height="28px"></div>
+<div align="center"><img alt="rcfdtools" src="file/graph/R.LTWB.svg" height="32px"></div>
