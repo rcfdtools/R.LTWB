@@ -1,4 +1,4 @@
-<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+<div align="center"><img alt="rcfdtools" src="file/graph/R.LTWB.svg" height="46px"></div>
 
 # Contribuye con este proyecto 
 
