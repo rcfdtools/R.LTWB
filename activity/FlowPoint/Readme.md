@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 5.2. Lectura y análisis de caudales y áreas de aportación en nodos característicos
 Keywords: `LTWB` `Flow` `Extract-multi-values-to-points` `Linear-trend` `Histogram`
 

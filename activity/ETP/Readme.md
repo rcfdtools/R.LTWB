@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 4.3. Mapa de evapotranspiración potencial - ETP
 Keywords: `ETP` `Cenicafé` `Raster-calculator`
 

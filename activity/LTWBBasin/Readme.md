@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 5.4. Balance hidrológico a partir de cuencas delimitadas
 Keywords: `LTWB` `Flow` `Zonal-statistics-as-table` `Add-field` `Calculate-geometry`
 

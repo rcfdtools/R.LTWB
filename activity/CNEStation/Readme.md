@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # :large_blue_circle:Sección 3 - Descarga, procesamiento y análisis de datos hidroclimatológicos
 
 En esta sección se obtienen, procesan y analizan los datos hidro-climatológicos requeridos para el balance y se realiza la segmentación de series por fenómeno climatológico. Complementariamente, implementaremos scripts en Python para automatizar varias de las actividades desarrolladas, facilitando su replicación a otros casos de estudio o a proyectos particulares.

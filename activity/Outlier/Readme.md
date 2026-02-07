@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 3.6. Identificación y procesamiento de datos atípicos - Outliers
 Keywords: `Outlier` `matplotlib` `pandas` `tabulate` `numpy` `dtypes` `isnull` `describe` `Drop` `Capped` `Impute` `Interquartile-range` `Empirical-rule` `Z-score`
 

@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 2.4. Descarga y procesamiento de modelo digital de elevación - DEM - ALOS PALSAR (12.5 m)
 Keywords: `NASA` `JAXA` `ALOS` `PALSAR` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster`
 

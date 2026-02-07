@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 4.2. Mapa de temperatura media
 Keywords: `Elevation` `Temperature` `Scatter-plot` `Trend-line` `Cenicafé` `Raster-calculator`
 

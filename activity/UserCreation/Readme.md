@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # :large_blue_circle:Sección 2 - Descarga y procesamiento de modelos digitales de elevación
 
 En esta sección realizaremos la descarga y procesamiento de diferentes tipos de modelos digitales de elevación, incluido el reacondicionamiento o ajuste a partir de la incrustación de los vectores de drenaje.

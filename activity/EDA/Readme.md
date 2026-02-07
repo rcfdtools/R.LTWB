@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 3.5. Exploración y análisis de series - EDA - Representación gráfica
 Keywords: `EDA` `matplotlib` `pandas` `tabulate` `dtypes` `isnull` `describe` `unique` `size` `correlation` `pivot-table` `stats` `histogram` `density` `boxplot` 
 

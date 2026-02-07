@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 3.3. Obtención y unión de series de datos discretos climatológicos de estaciones terrestres
 Keywords: `IDEAM` `Weather-station` `DHIME` `Rain` `Air-temperature` `Evaporation` `Water-flow` `Python` `Pandas` `os.path.isfile` `os.remove` `glob` `ZipFile` `os.rename` `pd.concat` `to_csv`
 

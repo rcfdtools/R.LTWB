@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 2.9. Acumulación de Flujo - Flow Accumulation - FAC
 Keywords: `FAC-DEM` `Flow-accumulation` `Flow-direction` `Spatial-Analyst-Tools` `Arc-Hydro-Tools` `Display-XY-Data` `Extract-Multi-Values-to-Points`
 

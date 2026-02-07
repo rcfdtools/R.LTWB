@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 2.3. Descarga y procesamiento de modelo digital de elevación - DEM - SRTM v3.0 1 arcsec (30 m), SRTM v3.0 3 arcsec (90 m)
 Keywords: `NASA` `SRTM` `Cygwin` `Shell-script-.sh` `Earthdata` `Mosaic-to-New-Raster`
 

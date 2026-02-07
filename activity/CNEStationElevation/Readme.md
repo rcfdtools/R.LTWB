@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 3.2. Análisis de elevaciones, densidad, cobertura y radio de acción de estaciones terrestres
 Keywords: `IDEAM` `Weather-station` `Bar-graph` `Select-By-Location` `Chart` `Scatter-Plot-Matrix` `Definition-Query` `Normal-distribution` `Statistics` `Extract-Multi-Values-to-Points` `Calculate-Geometry Attributes` `Calculate-Field`
 

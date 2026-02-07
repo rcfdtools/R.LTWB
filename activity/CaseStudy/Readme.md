@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 1.3. Caso de estudio  
 Keywords: `Case-study` `Colombia` `Cesar` `IDEAM` `Weather` `Zona-hidrogeográfica` `Station` `ArcGIS` `QGIS` `Dissolve` `Feature-Envelope-to-Polygon` `Add-Field` `Field-Calculator` `Bounding-boxes`
 

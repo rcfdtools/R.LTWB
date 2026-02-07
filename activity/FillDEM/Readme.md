@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 2.7. Relleno de sumideros o depresiones en modelos digitales de elevación – Fill Sinks – FIL
 Keywords: `Fill-DEM` `AgreeDEM` `Map-Algebra` `Raster-Calculator` `Spatial-Analyst-Tools` `Arc-Hydro-Tools`
 

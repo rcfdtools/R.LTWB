@@ -1,4 +1,6 @@
-### Cláusulas de autor
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
+# Cláusulas de autor
 
 Al consultar, descargar, descomprimir, instalar, usar o explorar las herramientas, scripts y guías de desarrollo contenidas en este repositorio, sus archivos y documentación, usted como empresa, individuo, investigador, estudiante, profesional, empleado o persona, acepta los siguientes términos de uso:
 
@@ -21,7 +23,7 @@ Al consultar, descargar, descomprimir, instalar, usar o explorar las herramienta
 * No se permite la privatización, acaparamiento, venta o distribución comercial de este repositorio, software o del proyecto _R.LTWB_, ni ninguno de sus componentes, herramientas, memorias de cálculo, scripts, algoritmos y demás herramientas complementarias que se encuentran aquí publicadas o dentro de paquetes de instalación o liberaciones.
 
 
-### Citación
+## Citación
 
 Se permite la reproducción digital parcial o total de estas actividades, scripts, guías de desarrollo, modelos de datos y documentación, siempre que se haga referencia como: "CURSO - Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - Long-term water balance - LTWB", https://github.com/rcfdtools/R.LTWB, Bogotá - Colombia - Suramérica.".
 

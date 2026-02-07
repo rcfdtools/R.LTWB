@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 3.8. Análisis de cambio climático para segmentación de series
 Keywords: `ENSO` `ONI` `El-Niño` `La-Niña` `Neutro` `matplotlib` `pandas` `numpy` 
 

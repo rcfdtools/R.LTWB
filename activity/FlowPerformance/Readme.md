@@ -1,3 +1,5 @@
+<div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
+
 # 5.3. Mapa de isorendimiento medio
 Keywords: `LTWB` `Flow` `Flow-performance` `Raster-calculator`
 
