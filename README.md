@@ -39,6 +39,13 @@ El curso inicia con una introducción y explicación general de la metodología,
 Los requerimientos académicos y computacionales generales para el desarrollo de las diferentes actividades del curso, así como la estructura de directorios, la instalación y configuración de las principales herramientas requeridas, se encuentra [aquí](activity/Requirement/Readme.md).
 
 
+### Configuración regional en ingeniería
+
+* **Sistema operativo**: en _Microsoft Windows / Panel de control / Region / Formats / Additional settings..._, establezca símbolo decimal (decimal symbol) como punto ` . `, símbolo de agrupación de miles (digit grouping symbol) como coma ` , ` y separador de listas (list separator) como coma ` , `.
+* **Microsoft Excel**: en el menú _Archivo / Opciones / Avanzado / Opciones de Edición_, desmarque la casilla de _Uso de Separadores del Sistema_ y establezca punto ` . ` como separador decimal y coma ` , ` como separador de miles. 
+* **QGIS**, desde el menú _Settings / General / Override System Locale_, establezca _User interface translation_ como _American English_ y _Locale (number, date and currency formats)_ como _English United States (en_US)_.
+
+
 ## Dirigido a
 
 Los contenidos presentados en este curso están dirigidos a estudiantes y profesionales de diferentes disciplinas que requieran aprender y/o fortalecer sus conocimientos en hidrología computacional y sistemas de información geográfica, tales como:
