@@ -38,6 +38,12 @@ El curso inicia con una introducción y explicación general de la metodología,
 
 Los requerimientos académicos y computacionales generales para el desarrollo de las diferentes actividades del curso, así como la estructura de directorios, la instalación y configuración de las principales herramientas requeridas, se encuentra [aquí](activity/Requirement/Readme.md).
 
+> **Pregrado**: acorde con el parágrafo del Artículo 38 del reglamento estudiantil, _“La asistencia a talleres y laboratorios es de carácter obligatorio. La inasistencia a estas actividades se califica con cero coma cero (0,0)”_.
+> 
+> **Posgrado**: acorde con el Literal b del Artículo 46 del reglamento estudiantil, los estudiantes de posgrado deben _“Asistir y participar cumplida y activamente en todas las actividades académicas contempladas en el plan de estudios”_.
+> 
+> **Informe técnico**: solo será válido si en cada una de las capturas de pantalla se observa su código de alumno en el título o nombre de archivo. Para las capturas de pantalla puede utilizar la Herramienta de Recortes o Snipping Tool, las teclas <kbd>Win</kbd>+<kbd>PrtScn</kbd> para guardar capturas de toda la ventana en la carpeta de imágenes, las teclas <kbd>Win</kbd>+<kbd>G</kbd> para obtener capturas desde la Game Bar, o las teclas <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> para capturas instantáneas. Una vez finalizada la elaboración del informe técnico, este debe ser convertido a formato Adobe Acrobat .pdf y adjuntado al Quiz.
+
 
 ### Configuración regional en ingeniería
 
