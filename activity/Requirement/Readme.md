@@ -31,6 +31,8 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 * [Notepad++](https://notepad-plus-plus.org) como editor de código complementario
 * [Python 3+ y extensiones](https://www.python.org/) indicadas en esta actividad
 * [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
+* [:package:Estructura de directorios](../../file/Readme.md) para el desarrollo del curso
+* [:memo:Plantilla informes técnicos](../..file/report/)
 
 > Requerimientos específicos, tales como librerías, complementos y sus versiones han sido indicadas en cada actividad del curso.
 
