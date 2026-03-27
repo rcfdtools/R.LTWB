@@ -92,14 +92,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * Esta actividad puede ser desarrollada con cualquier software SIG que disponga de herramientas de algebra de mapas.
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                         | Autor                                     | Horas |
-|------------|:--------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2023.02.17 | Guión, audio, video, edición y publicación.                         | [rcfdtools](https://github.com/rcfdtools) | 0.55  |
-| 2022.12.10 | Documentación general. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   2   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

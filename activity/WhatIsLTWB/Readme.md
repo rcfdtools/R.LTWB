@@ -75,15 +75,6 @@ En general cuando se aborda el tema de la evapotranspiración real, se hace refe
 * [Sociedad Geográfica de Lima. (2011). Balance hídrico superficial.](https://www.gwp.org/globalassets/global/gwp-sam_files/publicaciones/varios/balance_hidrico.pdf)
 
 
-### Control de versiones
-
-| Versión    | Descripción                                       | Autor                                      | Horas |
-|------------|:--------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.13 | Guión, audio, video, edición y publicación.       | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.12.23 | Lectura y revisión de referencias. Documentación. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.12.22 | Versión inicial, inicio documentación.            | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

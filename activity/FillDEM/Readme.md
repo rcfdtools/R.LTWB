@@ -136,14 +136,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                   | Autor                                      | Horas |
-|------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.31 | Guión, audio, video, edición y publicación.                                                                                                                                   | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
-| 2022.07.23 | Versión inicial con relleno de sumideros para DEM ASTER, SRTM y ALOS. Cálculo de diferencias de elevación para identificación de zonas rellenadas, visualización de perfiles. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

@@ -245,15 +245,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://docs.qgis.org/2.8/en/docs/user_manual/working_with_raster/raster_calculator.html 
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                                                                                                                       | Autor                                      | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.02.03 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   3   |
-| 2022.07.30 | Finalización documentación versión inicial. Procedimiento demarcación de drenajes - SRT con otras herramientas. Diagrama de procesos.                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.29 | Versión inicial demarcación de drenajes para áreas de aportación de 1km² para acumulaciones de flujo DEM ASTER, SRTM y ALOS. Conversión de celdas a vectores de drenaje y obtención de puntos característicos con lectura de valores acumulados y cálculo de áreas de aportación. | [rcfdtools](https://github.com/rcfdtools)  |   8   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

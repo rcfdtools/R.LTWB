@@ -569,18 +569,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [ArcGIS Pro tarda mucho tiempo en abrir mi proyecto](https://github.com/rcfdtools/R.LTWB/discussions/13):lady_beetle:
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                                                                                                                                                                                  | Autor                                      | Horas |
-|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.02.04 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                                                                                  | [rcfdtools](https://github.com/rcfdtools)  |   6   |
-| 2022.08.05 | Diagrama de procesos geográficos.                                                                                                                                                                                                                                                                                                            | [rcfdtools](https://github.com/rcfdtools)  | 0.75  |
-| 2022.08.04 | Gráficos de análisis de estaciones con registros de precipitación para longitudes hipotéticas mayores a 10, 15, 20, 25, 30, 35 años. Análisis de temperatura, evaporación potencial y altura de lámina de agua para longitudes >= 5 años. Documentación. Solución de errores. Actividades complementarias.                                   | [rcfdtools](https://github.com/rcfdtools)  |   7   |
-| 2022.08.03 | Cálculo de longitud hipotética de series dentro de la ventana de tiempo definida sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. Gráficas de análisis genera de series. Documentación.  Tabla con tipos de observaciones que pueden ser realizadas por las estaciones dependiendo de su categoría.                                    | [rcfdtools](https://github.com/rcfdtools)  |  4.5  |
-| 2022.08.02 | Definición de longitud de aferencia a partir de la menor dimensión horizontal o vertical, creación de buffer, selección de estaciones por localización, exportación de estaciones IDEAM y otras entidades, unión de estaciones en capa única, cálculo de longitud hipotética de serie sobre Python 2 y 3 en ArcGIS for Desktop y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   6   |
-| 2022.08.31 | Versión inicial con descarga CNE IDEAM y otras entidades, revisión catálogo de objetos.                                                                                                                                                                                                                                                      | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

@@ -459,18 +459,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [How to Uninstall Cygwin on Windows](https://www.partitionwizard.com/partitionmagic/uninstall-cygwin.html)
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                       | Autor                                      | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.25 | Guión, audio, video, edición y publicación.                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
-| 2022.07.20 | Inclusión de diagrama de procesos.                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.12 | Creación de mapa de sombreado de colinas - Hillshade.                                                                             | [rcfdtools](https://github.com/rcfdtools)  |   1   |
-| 2022.07.11 | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en QGIS.                                     | [rcfdtools](https://github.com/rcfdtools)  |   3   |
-| 2022.07.10 | Creación de mosaico, reproyección, visualización y representación 3D - Instrucciones en ArcGIS for Desktop (10.2.2) y ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
-| 2022.07.09 | Versión inicial con descarga manual y descarga desde consola utilizando Cygwin y el script download.sh de Earthdata.              | [rcfdtools](https://github.com/rcfdtools)  |  7.5  |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

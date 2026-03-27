@@ -408,17 +408,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://www.aoml.noaa.gov/phod/indexes/index.php
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                           | Autor                                     | Horas |
-|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2023.02.10 | Guión, audio, video, edición y publicación.                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools) |   2   |
-| 2022.11.20 | Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                              | [rcfdtools](https://github.com/rcfdtools) |   4   |
-| 2022.11.18 | Optimización de script. Inicio documentación.                                                                                                                                         | [rcfdtools](https://github.com/rcfdtools) |   4   |
-| 2022.11.17 | Marcación de eventos por temporadas no consecutivas. Gráfica de análisis. Marcación de eventos por temporadas consecutivas. Gráfica de análisis. Generación de tablas en formato .csv | [rcfdtools](https://github.com/rcfdtools) |   8   |
-| 2022.11.16 | Script versión inicial para marcación de eventos por temporadas no consecutivas.                                                                                                      | [rcfdtools](https://github.com/rcfdtools) |   4   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

@@ -322,18 +322,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [PyCharm no sincroniza mis cambios en la nube - Archivos grandes rechazados en _Commit and Push_](https://github.com/rcfdtools/R.LTWB/discussions/40):lady_beetle:
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                          | Autor                                      | Horas |
-|------------|:-----------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.25 | Guión, audio, video, edición y publicación.                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.08.11 | Inclusión de actividades complementarias.                                                            | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.20 | Inclusión de diagrama de procesos.                                                                   | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.09 | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS Pro.                | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.08 | Inclusión de procedimiento para delimitación de la zona de estudio usando ArcGIS for Desktop y QGIS. | [rcfdtools](https://github.com/rcfdtools)  |  2.5  | 
-| 2022.07.06 | Versión inicial con definición general del caso de estudio y mapas de referencia.                    | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

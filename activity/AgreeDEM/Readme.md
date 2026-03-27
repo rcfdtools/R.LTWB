@@ -294,16 +294,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                                                                                | Autor                                      | Horas |
-|------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.30 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
-| 2022.07.21 | Reacondicionamiento de grillas ASTER, SRTM y ALOS con HEC-GeoHMS. Visualización de perfiles con 3D Analyst sobre ArcGIS for Desktop. Documentación general de la actividad.                                                                | [rcfdtools](https://github.com/rcfdtools)  |  5.5  |
-| 2022.07.20 | Versión inicial con creación de polígono buffer a envolvente zona de estudio, recorte de grillas de terreno, creación de modelo HEC-HMS, creación de modelos de cuencas, asociación de modelos de terreno, reacondicionamiento ASTER GDEM. | [rcfdtools](https://github.com/rcfdtools)  |  6.5  |
-
-
-##
+#
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
 

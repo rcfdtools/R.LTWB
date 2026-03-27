@@ -372,15 +372,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [Propuesta Metodológica para el Rediseño de una Red Meteorológica en un Sector de la Región Andina Colombiana](https://hemeroteca.unad.edu.co/index.php/publicaciones-e-investigacion/article/view/1281/2031)
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                  | Autor                                      | Horas |
-|------------|:---------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.02.05 | Guión, audio, video, edición y publicación.                                                  | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-| 2022.08.11 | Diagrama general de procesos, revisión y complementación de documentación.                   | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
-| 2022.08.10 | Versión inicial con análisis por matriz de dispersión, densidad, cobertura, radio de acción. | [rcfdtools](https://github.com/rcfdtools)  |  8.5  |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

@@ -82,20 +82,6 @@ En la sección de Acuerdo de Uso o Agreements, marque las casillas correspondien
 Su cuenta ha sido creada, validada y está lista para ser utilizada en el buscador de Earthdata.
 
 
-### Compatibilidad
-
-* La creación de cuenta NASA EarthData puede ser realizada desde cualquier navegador actualizado de Internet.
-
-
-### Control de versiones
-
-| Versión    | Descripción                                           | Autor                                      | Horas |
-|------------|:------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.25 | Guión, audio, video, edición y publicación.           | [rcfdtools](https://github.com/rcfdtools)  |   1   |
-| 2022.07.20 | Inclusión de diagrama de procesos.                    | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.07 | Versión inicial creación de cuenta en NASA EarthData. | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

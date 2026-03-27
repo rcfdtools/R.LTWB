@@ -289,16 +289,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [NASA Shuttle Radar Topography Mission Global 1 arc second number V003](https://search.earthdata.nasa.gov/search/granules?p=C1000000260-LPDAAC_ECS)
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                       | Autor                                      | Horas |
-|------------|:------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.26 | Guión, audio, video, edición y publicación.                       | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
-| 2022.07.20 | Inclusión de diagrama de procesos.                                | [rcfdtools](https://github.com/rcfdtools)  |  0.5  |
-| 2022.07.13 | Creación y reproyección de mosaico - Instrucciones en ArcGIS Pro. | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.07.12 | Versión inicial con descarga manual y con script.                 | [rcfdtools](https://github.com/rcfdtools)  |   1   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

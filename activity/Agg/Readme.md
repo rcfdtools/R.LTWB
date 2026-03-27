@@ -419,19 +419,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://www.geeksforgeeks.org/how-to-move-a-column-to-first-position-in-pandas-dataframe/
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                                                                                                                                             | Autor                                      | Horas |
-|------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.09.22 | Actualización de script para compatibilidad con Python 3.11.5 y Pandas 2.1.1.                                                                                                                                                                                                                           | [rcfdtools](https://github.com/rcfdtools)  |  3.0  |
-| 2023.02.11 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                                                             | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
-| 2022.11.30 | Finalización documentación. Ilustración cabecera y diagrama de procesos.                                                                                                                                                                                                                                | [rcfdtools](https://github.com/rcfdtools)  |   4   |
-| 2022.11.24 | Optimización de script. Creación de matriz de valores de desviación estándar. Inclusión de agregaciones para valores máximos y mínimos. Generación de archivos .csv. Agregación de precipitación total mensual, caudal medio mensual, temperatura mínima y temperatura máxima. Inicio de documentación. | [rcfdtools](https://github.com/rcfdtools)  |  7.5  |
-| 2022.11.23 | Optimización de script. Agregación a partir de datos diarios. Cabecera de reporte. Agregación zonal con tabla y gráficos.                                                                                                                                                                               | [rcfdtools](https://github.com/rcfdtools)  |   6   |
-| 2022.11.22 | Optimización de script. Conversión de listas de resultados a dataframes. Integración de dataframes en matriz unica de resultados por estación. Agregaciones mensuales multianuales por fenómeno climatológico.                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |   2   |
-| 2022.11.21 | Script inicial con análisis de series compuestas. Agregación multianual. Segmentación de series por fenómeno climatológico. Agregaciones mensuales a anuales a partir de sumatoria y media. Gráficas de análisis.                                                                                       | [rcfdtools](https://github.com/rcfdtools)  |   6   |
-
-##
+#
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
 

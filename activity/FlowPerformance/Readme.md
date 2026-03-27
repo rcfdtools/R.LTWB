@@ -114,14 +114,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/raster-calculator.htm
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                                                     | Autor                                     | Horas  |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:------:|
-| 2023.02.22 | Guión, audio, video, edición y publicación.                                                                                                                                                                     | [rcfdtools](https://github.com/rcfdtools) |  1.75  |
-| 2022.12.19 | Documentación. Generación mapa isorendimiento. Cálculo isorendimientos en puntos característicos. Histograma. Matriz de dispersión, ecuación de tendencia lineal.  Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |   3    |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

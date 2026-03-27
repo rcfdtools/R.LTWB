@@ -218,15 +218,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * [Línea central de un polígono en QGIS](https://www.youtube.com/watch?v=aVWnMI-QdSs)
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                                                                                                                          | Autor                                      | Horas |
-|------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.01.29 | Guión, audio, video, edición y publicación.                                                                                                                                                                                                                          | [rcfdtools](https://github.com/rcfdtools)  |  2.5  |
-| 2022.07.18 | Identificación de bucles, digitalización de tramos faltantes, actualización general de ilustraciones. Incorporación de diagrama de procesos.                                                                                                                         | [rcfdtools](https://github.com/rcfdtools)  |  3.5  |
-| 2022.07.17 | Versión inicial con descarga manual GDB IGAC Colombia escala 1:100.000, extracción de drenajes sencillos y dobles de la zona de estudio, obtención de líneas centrales en drenajes dobles, integración, edición y conexión de tramos laterales a cauces principales. | [rcfdtools](https://github.com/rcfdtools)  |   5   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

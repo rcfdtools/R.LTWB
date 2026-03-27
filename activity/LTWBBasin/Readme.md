@@ -171,15 +171,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://pro.arcgis.com/en/pro-app/latest/tool-reference/data-management/calculate-geometry-attributes.htm
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                    | Autor                                     | Horas |
-|------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2023.02.22 | Guión, audio, video, edición y publicación.                                                                                                    | [rcfdtools](https://github.com/rcfdtools) | 1.75  |
-| 2022.12.21 | Libro de Microsoft Excel con balance hidrológico zona de estudio y por subzonas hidrográficas. Ilustración cabecera y diagrama de procesos.    | [rcfdtools](https://github.com/rcfdtools) |   3   |
-| 2022.12.20 | Documentación. Estadísticas zonales como tabla para precipitación total y evapotranspiración potencial compuesta y por fenómeno climatológico. | [rcfdtools](https://github.com/rcfdtools) |   4   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

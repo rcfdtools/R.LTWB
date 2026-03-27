@@ -158,15 +158,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://docs.qgis.org/3.22/en/docs/gentle_gis_introduction/spatial_analysis_interpolation.html
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                    | Autor                                     | Horas |
-|------------|:-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|:-----:|
-| 2023.02.17 | Guión, audio, video, edición y publicación.                                                                                    | [rcfdtools](https://github.com/rcfdtools) |   2   |
-| 2022.12.03 | Comparación de rangos con valores mínimos y máximos de series de datos discretos. Ilustración cabecera y diagrama de procesos. | [rcfdtools](https://github.com/rcfdtools) |  2.5  |
-| 2022.12.01 | Versión inicial interpolación de precipitación total.                                                                          | [rcfdtools](https://github.com/rcfdtools) |   4   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._

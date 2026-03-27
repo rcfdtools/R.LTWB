@@ -196,14 +196,6 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 * https://saga-gis.sourceforge.io/saga_tool_doc/2.2.1/ta_preprocessor_4.html
 
 
-### Control de versiones
-
-| Versión    | Descripción                                                                                                                                                     | Autor                                      | Horas |
-|------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|:-----:|
-| 2023.02.01 | Guión, audio, video, edición y publicación.                                                                                                                     | [rcfdtools](https://github.com/rcfdtools)  |  1.5  |
-| 2022.07.28 | Versión inicial con acumulaciones de flujo para DEM ASTER, SRTM y ALOS. Puntos de muestreo para lectura de valores acumulados y cálculo de áreas de aportación. | [rcfdtools](https://github.com/rcfdtools)  |   7   |
-
-
 ##
 
 _R.LTWB es de uso libre para fines académicos, conoce nuestra licencia, cláusulas, condiciones de uso y como referenciar los contenidos publicados en este repositorio, dando [clic aquí](../../LICENSE.md)._
