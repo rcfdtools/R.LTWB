@@ -1,7 +1,7 @@
 <div align="center"><a href="https://github.com/rcfdtools" target="_blank"><img src="https://github.com/rcfdtools/rcfdtools/blob/main/file/graph/rcfdtools_banner.png" alt="rcfdtools" width="100%" border="0" /></a></div>
 <div align="center"><sub><i>COURSE: Long-term hydrological water balance for estimating average flows using GIS - LTWB</i></sub></div>
 
-# CURSO: _“Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - LTWB”_
+# 🎓️CURSO: _“Balance hidrológico de largo plazo para estimación de caudales medios usando SIG - LTWB”_
 
 _Bienvenido al curso de Balance hidrológico de largo plazo - LTWB para estimación de caudales medios usando SIG_. En este curso aprenderá a generar grillas de caudales medios acumulados distribuidos de largo plazo y grillas de isorendimientos medios a partir de modelos de terreno, de grillas interpoladas de precipitación media y de mapas de evapotranspiración real, utilizando sistemas de información geográfica. Este curso ha sido dividido en diferentes secciones y actividades secuenciales, a través de las cuales el estudiante desarrollará diferentes habilidades computacionales y analíticas, que podrá aplicar en proyectos de ingeniería y casos de estudio propios.
 
