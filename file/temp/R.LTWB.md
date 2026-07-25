@@ -1,4 +1,5 @@
-LTWB: Long-term water balance
+## LTWB: Long-term water balance / Notes
+
 Fecha entrega: 2023.02.28
 
 R.LTWB
@@ -9,10 +10,16 @@ Organization
 https://github.com/uescuelaing
 https://www.escuelaing.edu.co/es/programas/cursos-autocontenidos-sin-costo/
 
-✓Δ°Σβρσθαπ∑√±πØμx●•∫≠≈≤≥´◄ ►
- / Colabora
 
-Removido
+## Pending tasks
+
+* Microsoft subsystem for Linux for run .sh DEM downloads instead of CGWIN.
+* Map layout with Hydrological zones and granules.
+* Hydrological scales: mundial, regional, zonal, local, puntual.
+* Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
+
+
+## Removido
 
 <div align="center"><img alt="R.LTWB" src=".icons/R.LTWB.svg" width="250px"></div>
 
@@ -30,20 +37,14 @@ Removido
 </div><br>
 
 
+'''
 # -*- coding: UTF-8 -*-
 # -*- coding: windows-1252 -*-
-
-✓✕
-:open_file_folder:
-
-Pending tasks
-	Microsoft subsystem for Linux for run .sh DEM downloads instead of CGWIN.
-    Map layout with Hydrological zones and granules.
-	Hydrological scales: mundial, regional, zonal, local, puntual.
-	Check the HEC-HMS 4.9 flow direction and relative values in ArcGIS format.
-
+'''
 
 Atención: la automatización Python ha sido integrada en diferentes secciones del curso. Los modeladores de procesos han sido asignados como actividad complementaria de investigación e implementación.
+
+
 ## Sección xxx - Automatización de procesos geográficos
 
 En esta sección implementaremos modeladores de procesos y scripts para automatizar algunas de las actividades desarrolladas a lo largo del curso que facilitaran su replicación a otros casos de estudio o a proyectos particulares.
@@ -58,6 +59,8 @@ Localización de puntos para lectura de caudales y áreas de aportación: Luego 
 Luego de la ejecución de diferentes geo-procesos durante el desarrollo del balance hidrológico, se pueden identificar diferentes etapas que pueden ser automatizadas mediante modeladores de procesos, simplificando su aplicación en otros casos de estudio.
 
 Nueva sección a implementar.
+
+
 ## Sección 6 - Modelos de pronóstico
 
 Para finalizar, en esta sección implementaremos modelos de pronóstico para evaluar el posible comportamiento futuro de las variables climatológicas utilizadas y su implicación en el balance.
@@ -66,9 +69,6 @@ Para finalizar, en esta sección implementaremos modelos de pronóstico para eva
 |----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Modelos de correlación lineal múltiple | A través del conocimiento adquirido en los diferentes procesos realizados para la obtención de los mapas de balance y el estudio de las series utilizadas, se puede evidenciar la correlación entre las variables y los fenómenos evaluados, permitiendo entender su dinámica para la implementación de un modelo de pronóstico. |
 | Modelos de inteligencia artificial     | Utilizando técnicas de inteligencia artificial para el análisis de series, implementar modelos que permitan realizar el pronóstico de las variables estudiadas para su posterior utilización en la realización de balances hidrológicos.                                                                                         |
-
-
-
 
 
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
@@ -95,8 +95,6 @@ TTS
 Text to Speech Converter - FREE & No Limits
 https://www.youtube.com/watch?v=kfqpFKdDVMU
 http://balabolka.site/balabolka.htm
-
-
 
 
 Create audio files from text - TTS using Microsoft Edge
