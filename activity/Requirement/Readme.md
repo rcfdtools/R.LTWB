@@ -32,7 +32,7 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 * [Python 3+ y extensiones](https://www.python.org/) indicadas en esta actividad
 * [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
 * [:construction_worker:Cuenta de usuario GitHub](https://github.com/) para acceso a recursos y actualizaciones del repositorio público del curso.
-* [:cloud_with_lightning:Repositorio personal de archivos](https://forms.gle/ee5uyfWwQEVifEpu9) creado y compartido para publicación de informes técnicos, datos y avances, nombrar carpeta como `/LTWB`. :blue_heart: El repositorio de proyecto deberá mantenerse durante la duración del curso, estableciendo permisos de lectura para el instructor |
+* [:cloud_with_lightning:Repositorio personal de archivos](https://forms.gle/ee5uyfWwQEVifEpu9) creado y compartido para publicación de informes técnicos, datos y avances, nombrar carpeta como `/LTWB`. :blue_heart: El repositorio de proyecto deberá mantenerse durante la duración del curso, estableciendo permisos de lectura para el instructor
 * [:package:Estructura de directorios](../../file/Readme.md) para el desarrollo del curso
 * [:memo:Plantilla informes técnicos](../..file/report/)
 
