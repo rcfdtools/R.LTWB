@@ -19,22 +19,31 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 * Establecer los requisitos académicos mínimos y listar algunos recursos complementarios para su nivelación.
 
 
-### Herramientas computacionales requeridas
+### Requerimientos y estructura de directorios
 
-* [ArcGIS Pro 2+](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm)
-* [ArcGIS for Desktop 10+](https://desktop.arcgis.com/es/desktop/) (recomendado 10.2.2)
-* [QGIS 3+](https://qgis.org/)
-* [Cygwin terminal for Windows](https://www.cygwin.com/) para la descarga por consola de los modelos digitales de elevación
-* [HEC-HMS 4.9+](https://www.hec.usace.army.mil/software/hec-hms/) 
-* [HEC-GeoHMS 10.2](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx) for ArcGIS for Desktop 10.2.2
-* [Microsoft Excel from Office 64 bits](https://aka.ms/office-install)
-* [Notepad++](https://notepad-plus-plus.org) como editor de código complementario
-* [Python 3+ y extensiones](https://www.python.org/) indicadas en esta actividad
-* [PyCharm Community](https://www.jetbrains.com/pycharm/) como entorno de desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)
-* [:construction_worker:Cuenta de usuario GitHub](https://github.com/) para acceso a recursos y actualizaciones del repositorio público del curso.
-* [:cloud_with_lightning:Repositorio personal de archivos](https://forms.gle/ee5uyfWwQEVifEpu9) creado y compartido para publicación de informes técnicos, datos y avances, nombrar carpeta como `/LTWB`. :blue_heart: El repositorio de proyecto deberá mantenerse durante la duración del curso, estableciendo permisos de lectura para el instructor
-* [:package:Estructura de directorios](../../file/Readme.md) para el desarrollo del curso
-* [:memo:Plantilla informes técnicos](../..file/report/)
+
+* [:memo:Plantilla informes técnicos]()
+
+<div align="center">
+
+| Requirement                                                                                   | Description                                                                                                                                                                                                                                                         |
+|:----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [:toolbox:Tool](https://pro.arcgis.com/en/pro-app/latest/get-started/download-arcgis-pro.htm) | ArcGIS Pro 2+                                                                                                                                                                                                                                                       |
+| [:toolbox:Tool](https://desktop.arcgis.com/es/desktop/)                                       | ArcGIS for Desktop 10+ (recomendado 10.2.2)                                                                                                                                                                                                                         |
+| [:toolbox:Tool](https://qgis.org/)                                                            | QGIS 3.44.12 & 4.2.0 or newers                                                                                                                                                                                                                                      |
+| [:toolbox:Tool](https://www.cygwin.com/)                                                      | Cygwin terminal for Windows para la descarga por consola de los modelos digitales de elevación                                                                                                                                                                      |
+| [:toolbox:Tool](https://www.hec.usace.army.mil/software/hec-geohms/downloads.aspx)            | HEC-GeoHMS 10.2 for ArcGIS for Desktop 10.2.2                                                                                                                                                                                                                       |
+| [:toolbox:Tool](https://www.office.com/)                                                      | Microsoft 365 (Word, Excel, OneDrive, Teams)                                                                                                                                                                                                                        |
+| [:toolbox:Tool](https://notepad-plus-plus.org/)                                               | Notepad++ (text editor)                                                                                                                                                                                                                                             |
+| [:toolbox:Tool](https://www.python.org/)                                                      | Python 3+ y extensiones indicadas en esta actividad                                                                                                                                                                                                                 |
+| [:toolbox:Tool](https://www.jetbrains.com/pycharm/)                                           | PyCharm Community como entorno de desarrollo y publicación en GitHub del caso de estudio propio asignado a estudiantes bajo esquema de certificación (opcional)                                                                                                     |
+| [:construction_worker:Cuenta de usuario GitHub](https://github.com/)                          | Acceso a recursos y actualizaciones del repositorio público del curso                                                                                                                                                                                               |
+| [:cloud_with_lightning:Repositorio personal de archivos](https://forms.gle/ee5uyfWwQEVifEpu9) | Repositorio creado y compartido para publicación de informes técnicos, datos y avances, nombrar carpeta como `/WREM`. :blue_heart: El repositorio de proyecto deberá mantenerse durante la duración del curso, estableciendo permisos de lectura para el instructor |
+| [:package:Estructura de directorios](../../file/Readme.md)                                    | Estructura de directorios requerida                                                                                                                                                                                                                                 |
+| [:memo:Plantilla informe técnico](../..file/report/)                                          | Plantilla para presentación de informes técnicos en quices de conocimiento y habilidad                                                                                                                                                                              |
+
+</div>
+
 
 > Requerimientos específicos, tales como librerías, complementos y sus versiones han sido indicadas en cada actividad del curso.
 
