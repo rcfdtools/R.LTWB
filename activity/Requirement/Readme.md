@@ -19,7 +19,7 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 * Establecer los requisitos académicos mínimos y listar algunos recursos complementarios para su nivelación.
 
 
-### Requerimientos y estructura de directorios
+### Herramientas computacionales y estructura de directorios
 
 <div align="center">
 
