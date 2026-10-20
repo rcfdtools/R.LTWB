@@ -21,9 +21,6 @@ En esta actividad se listan los requerimientos académicos y computacionales gen
 
 ### Requerimientos y estructura de directorios
 
-
-* [:memo:Plantilla informes técnicos]()
-
 <div align="center">
 
 | Requirement                                                                                   | Description                                                                                                                                                                                                                                                         |
