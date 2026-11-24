@@ -44,7 +44,7 @@ Donde,
 * ETP: evapotranspiración potencial, mm/año
 * P: precipitación total, mm/año 
 
-En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fue creado en la primera actividad de la sección 4 de este curso.
+En ArcGIS Pro, abra el proyecto _ArcGISProSection04.aprx_ que se encuentra en la ruta _D:\R.LTWB\\.map_ y que fue creado en la primera actividad del Módulo 4 de este curso.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenProject.png)
 

@@ -167,7 +167,7 @@ Los métodos para estimar el tipo de dirección de flujo en ArcGIS Pro son:
 | MFD    | The Multiple Flow Direction (MFD) algorithm, described by Qin (2007), partitions flow from a pixel to all downslope neighbors. A flow-partition exponent is created from an adaptive approach based on local terrain conditions and is used to determine the fraction of flow draining to each downslope neighbor.                                                                      |
 | DINF   | The D-Infinity (DINF) flow method, described by Tarboton (1997), determines flow direction as the steepest downward slope on eight triangular facets formed in a 3x3 pixel window centered on the pixel of interest. Flow direction output is a floating point raster represented as a single angle in degrees, progressing counterclockwise from 0 (due east) to 360 (again due east). |
 
-> La herramienta _Spatial Analyst Tools / Hydrology / Flow Accumulation_ será utilizada en la sección 5 de este curso para la realización del balance hidrológico de largo plazo distribuido debido a que permite incluir una grilla de pesos que corresponderá al potencial de escurrimiento obtenido de la diferencia entre la precipitación y la evaporación.
+> La herramienta _Spatial Analyst Tools / Hydrology / Flow Accumulation_ será utilizada en el Módulo 5 de este curso para la realización del balance hidrológico de largo plazo distribuido debido a que permite incluir una grilla de pesos que corresponderá al potencial de escurrimiento obtenido de la diferencia entre la precipitación y la evaporación.
 
 En este momento dispone de grillas de acumulación de flujo para obtener las celdas de los drenajes sobre los diferentes modelos digitales de elevación.
 

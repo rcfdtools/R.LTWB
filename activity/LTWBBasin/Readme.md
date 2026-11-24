@@ -34,7 +34,7 @@ Cuando existen zonas delimitadas tales como cuencas hidrográficas, es posible m
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. En ArcGIS Pro, abra el proyecto _ArcGISProSection05.aprx_ creado en la primera actividad de esta sección y almacenado en la ruta _D:\R.LTWB\file\map_.
+1. En ArcGIS Pro, abra el proyecto _ArcGISProSection05.aprx_ creado en la primera actividad de este Módulo y almacenado en la ruta _D:\R.LTWB\file\map_.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenMapProject.png)
 
@@ -156,7 +156,7 @@ En la siguiente tabla se listan las actividades complementarias que deben ser de
 
 | Actividad | Alcance                                                                                                                                                                                   |
 |:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Para los métodos de evapotranspiración real asignados como actividad complementaria en la sección 4, realice el balance hidrológico por cuencas delimitadas.                              |
+|     1     | Para los métodos de evapotranspiración real asignados como actividad complementaria en el Módulo 4, realice el balance hidrológico por cuencas delimitadas.                               |
 |     2     | Compare los valores de los métodos complementarios con los obtenidos en la presente actividad e indique y justifique cuales caudales utilizaría para el diseño de estructuras ecológicas. |
 
 

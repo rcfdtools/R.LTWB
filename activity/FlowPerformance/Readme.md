@@ -33,7 +33,7 @@ Utilizando los valores de caudal medio, número de celdas y área de aportación
 <sub>Convenciones generales en diagramas: clases de entidad en azul, dataset en gris oscuro, grillas en color verde, geo-procesos en rojo, procesos automáticos o semiautomáticos en guiones rojos y procesos manuales en amarillo. Líneas conectoras con guiones corresponden a procedimientos opcionales.</sub><br><br>
 </div>
 
-1. En ArcGIS Pro, abra el proyecto _ArcGISProSection05.aprx_ creado en la primera actividad de esta sección y almacenado en la ruta _D:\R.LTWB\file\map_.
+1. En ArcGIS Pro, abra el proyecto _ArcGISProSection05.aprx_ creado en la primera actividad de este Módulo y almacenado en la ruta _D:\R.LTWB\file\map_.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3OpenMapProject.png)
 
@@ -68,7 +68,7 @@ Matriz de isorendimiento Budyko Compuesto
 
 Como observa en la ilustración, se han obtenido valores de hasta 109.113 lps/km² y los rendimientos cercanos a este valor se encuentran localizados en la zona norte sobre la Sierra Nevada de Santa Marta y al sur-este en la zona de la cordillera oriental.
 
-4. Abra la tabla de atributos de la clase de entidad _ALOSStrNodeGDB_ contenida en la Geodatabase del proyecto, creado en ArcGIS Pro para la sección 5, podrá observar que contiene el número de celdas acumuladas, los valores de área de aportación calculados a partir de la resolución de la grilla y los valores leídos de las diferentes grillas de caudal.
+4. Abra la tabla de atributos de la clase de entidad _ALOSStrNodeGDB_ contenida en la Geodatabase del proyecto, creado en ArcGIS Pro en el Módulo 5, podrá observar que contiene el número de celdas acumuladas, los valores de área de aportación calculados a partir de la resolución de la grilla y los valores leídos de las diferentes grillas de caudal.
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSStrNodeGDB.png)
 

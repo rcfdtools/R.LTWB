@@ -179,7 +179,7 @@ Estimando, por las dos ecuaciones, valores hasta la cota 4000 msnm, es posible o
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ALOSPALSAR.png)
 
-> Previamente en la Sección 2 de este curso, realizamos la descarga y procesamiento del modelo de terreno y asignamos el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
+> Previamente en el Módulo 2 de este curso, realizamos la descarga y procesamiento del modelo de terreno y asignamos el sistema de coordenadas 9377 de Colombia, correspondiente a MAGNA-SIRGAS Origen-Nacional.
 
 2. Utilizando la herramienta _Geoprocessing / Raster Calculator_, cree los mapas de temperatura a partir del modelo digital de elevación ALOS PALSAR, utilice las siguientes expresiones y archivos dentro de la carpeta `D:\R.LTWB\file\grid`:
 
