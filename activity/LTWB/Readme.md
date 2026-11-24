@@ -1,8 +1,8 @@
 <div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
 
-# :large_blue_circle:Sección 5 - Balance hidrológico de largo plazo - LTWB
+# :large_blue_circle:Módulo 5 - Balance hidrológico de largo plazo - LTWB
 
-En esta sección ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, crearemos el mapa de isorendimientos medios y desarrollaremos el balance a partir de cuencas o áreas de aportación delimitadas.
+En este módulo ejecutaremos el balance hidrológico distribuido, realizaremos la lectura de caudales medios en los puntos característicos de la red de drenaje, crearemos el mapa de isorendimientos medios y desarrollaremos el balance a partir de cuencas o áreas de aportación delimitadas.
 
 
 # 5.1. Balance hidrológico distribuido usando SIG
@@ -90,11 +90,11 @@ Recuerde que las direcciones de flujo en ArcGIS se definen como:
 
 </div>
 
-4. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 4 [Mapas de precipitación total](../Rain/Readme.md) creados en la primera actividad de la sección 4 y que fueron nombrados como RainTotalComposite.tif, RainTotalNina.tif, RainTotalNino.tif y RainTotalNeutral.tif. Seleccione los 4 mapas y establezca transparencia al 50%. [:open_file_folder: Descargar archivos](../../file/grid).
+4. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 4 [Mapas de precipitación total](../Rain/Readme.md) creados en la primera actividad del Módulo 4 y que fueron nombrados como RainTotalComposite.tif, RainTotalNina.tif, RainTotalNino.tif y RainTotalNeutral.tif. Seleccione los 4 mapas y establezca transparencia al 50%. [:open_file_folder: Descargar archivos](../../file/grid).
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3RainGrid.png)
 
-5. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 12 [Mapas de evapotranspiración real - ETR](../ETR/Readme.md) creados en la última actividad de la sección 4, correspondientes a series compuestas y por fenómeno climatológico usando las expresiones de Budyko, Dekop y Turc. Seleccione los mapas y establezca transparencia al 50%. [:open_file_folder: Descargar archivos](../../file/grid).
+5. Desde la carpeta _.grid_ disponible en el catálogo, agregue al proyecto los 12 [Mapas de evapotranspiración real - ETR](../ETR/Readme.md) creados en la última actividad del Módulo 4, correspondientes a series compuestas y por fenómeno climatológico usando las expresiones de Budyko, Dekop y Turc. Seleccione los mapas y establezca transparencia al 50%. [:open_file_folder: Descargar archivos](../../file/grid).
 
 ![R.LTWB](Screenshot/ArcGISPro3.0.3ETRGrid.png)
 
@@ -250,11 +250,11 @@ En este momento dispone de grillas de potencial de escurrimiento o pesos distrib
 En la siguiente tabla se listan las actividades complementarias que deben ser desarrolladas y documentadas por el estudiante en un único archivo de Adobe Acrobat .pdf. El documento debe incluir portada (mostrar nombre completo, código y enlace a su cuenta de GitHub), numeración de páginas, tabla de contenido, lista de tablas, lista de ilustraciones, introducción, objetivo general, capítulos por cada ítem solicitado, conclusiones y referencias bibliográficas.
 
 
-| Actividad | Alcance                                                                                                                                                                                                                                                     |
-|:---------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     1     | Utilizando los mapas de direcciones de flujo - FDR generados en la sección 2 a partir de los modelos de terreno ASTER GDEM y SRTM, realice los balances hidrológicos de largo plazo y compare los resultados obtenidos con los obtenidos en esta actividad. |
-|     2     | Para los mapas complementarios de evapotranspiración real asignados como actividad complementaria en la sección 4, realice los balances hidrológicos y compare con los resultados obtenidos en esta actividad.                                              |
-|     3     | Para los mapas compuestos de evapotranspiración real - ETR, realice el balance hidrológico en ArcGIS for Desktop y en QGIS, compare los resultados con los obtenidos en esta actividad.                                                                     |
+| Actividad | Alcance                                                                                                                                                                                                                                                    |
+|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     1     | Utilizando los mapas de direcciones de flujo - FDR generados en el Módulo 2 a partir de los modelos de terreno ASTER GDEM y SRTM, realice los balances hidrológicos de largo plazo y compare los resultados obtenidos con los obtenidos en esta actividad. |
+|     2     | Para los mapas complementarios de evapotranspiración real asignados como actividad complementaria en el Módulo 4, realice los balances hidrológicos y compare con los resultados obtenidos en esta actividad.                                              |
+|     3     | Para los mapas compuestos de evapotranspiración real - ETR, realice el balance hidrológico en ArcGIS for Desktop y en QGIS, compare los resultados con los obtenidos en esta actividad.                                                                    |
 
 
 ### Compatibilidad

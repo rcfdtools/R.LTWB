@@ -1,8 +1,8 @@
 <div align="center"><img alt="rcfdtools" src="../../file/graph/R.LTWB.svg" height="46px"></div>
 
-# :large_blue_circle:Sección 2 - Descarga y procesamiento de modelos digitales de elevación
+# :large_blue_circle:Módulo 2 - Descarga y procesamiento de modelos digitales de elevación
 
-En esta sección realizaremos la descarga y procesamiento de diferentes tipos de modelos digitales de elevación, incluido el reacondicionamiento o ajuste a partir de la incrustación de los vectores de drenaje.
+En este módulo realizaremos la descarga y procesamiento de diferentes tipos de modelos digitales de elevación, incluido el reacondicionamiento o ajuste a partir de la incrustación de los vectores de drenaje.
 
 
 # 2.1. Creación de usuario NASA Earthdata 
